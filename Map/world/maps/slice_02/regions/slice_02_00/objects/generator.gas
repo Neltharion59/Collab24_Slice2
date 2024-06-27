@@ -1,0 +1,62 @@
+[t:generator_generic,n:0x0010005c]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r1_spider";
+	  x initial_command = 0x00100066;
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
+	  f spawn_period = 2;
+	}
+	[placement]
+	{
+	  p position = -2.20346,0,-0.361546,0x2183d3df;
+	}
+}
+[t:generator_generic,n:0x00100074]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r1_spider";
+	  x initial_command = 0x00100073;
+	  i max_alive_children = 6;
+	  i num_children_incubating = 6;
+	  f spawn_period = 2;
+	}
+	[placement]
+	{
+	  p position = 1.10656,0,-1.8304,0x46e9614e;
+	}
+}
+[t:generator_generic,n:0x00100075]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r1_spider";
+	  x initial_command = 0x00100072;
+	  i max_alive_children = 6;
+	  i num_children_incubating = 6;
+	  f spawn_period = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = 2.90456,0,3.884,0x46e9614e;
+	}
+}
+[t:generator_generic,n:0x00100076]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r1_spider";
+	  x initial_command = 0x00100071;
+	  i max_alive_children = 6;
+	  i num_children_incubating = 6;
+	  f spawn_period = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -3.36121,1,3.3039,0xe6a986fa;
+	}
+}

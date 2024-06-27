@@ -1,0 +1,132 @@
+[t:set_bool,n:0x00100222]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = 1.16476,0,-0.119415,0x5d2d045f;
+	}
+	[set_bool]
+	{
+		bool_variable = "flag_giant_quest_killed_insect";
+	}
+}
+[t:set_bool,n:0x00100147]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = 3.21888,0,-1.69601,0x825d8de7;
+	}
+	[set_bool]
+	{
+		bool_variable = "flag_giant_quest_barricade_smashed";
+	}
+}
+[t:trigger_generic,n:0x0010018c]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0010000A,0.2f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0010003E,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(5.000000,0x0010001D,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.9544,0,0.595512,0x825d8de7;
+	}
+}
+[t:use_point,n:0x0010003f]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -3.71314,0,-1.77844,0x0eeba287;
+	}
+}
+[t:trigger_generic,n:0x0010004d]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00100221,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -3.75396,0,-0.364861,0x587c1e4c;
+	}
+}
+[t:set_bool,n:0x0010018d]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = -1.54917,4,3.67119,0xd4923422;
+	}
+	[set_bool]
+	{
+		bool_variable = "flag_giant_quest_found_club";
+	}
+}
+[t:trigger_generic,n:0x00100077]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00100074,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00100075,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00100076,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0010005C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(4.500000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.75454,0,1.85461,0x82beae01;
+	}
+}

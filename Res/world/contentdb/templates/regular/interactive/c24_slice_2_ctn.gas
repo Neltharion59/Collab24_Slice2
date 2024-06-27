@@ -1,0 +1,26 @@
+[t:template,n:c24_slice_2_r1_ctn_rock]
+{
+	specializes		= container;
+	doc				= "c24 Slice 2 R1 Ctn Rock";
+
+	common:screen_name	= "Barrel";
+	common:		rollover_display = true;
+
+	[aspect]
+	{
+        is_selectable = false;
+        is_invincible = true;
+		is_usable	= false;
+		life_state	= LS_ALIVE_CONSCIOUS;
+		max_life	= 1;
+		material	= stone;
+		life		= 1;
+        model	= m_i_glb_rock-03;
+	}
+
+	[physics]
+	{
+		break_effect = mine_worm_die_dust;
+		[break_particulate] {}
+	}
+}

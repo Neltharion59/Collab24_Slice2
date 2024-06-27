@@ -1,0 +1,105 @@
+[t:template,n:c24_2_r1_spider]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R1 spider_red_blck";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 6, 0;
+			  intelligence = 4, 0;
+			  melee = 4,  0;
+			  strength = 9, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30;
+        life = 36;
+        mana = 17;
+        max_life = 36;
+        max_mana = 17;
+		model = m_c_edm_sp_pos_1;
+		scale_base = 0.70;
+		[textures]
+		{
+			0 = b_c_edm_sp_c24_1;
+		}
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_spider; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_spider; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 1;
+		damage_max = 19;
+		damage_min = 16;
+		reload_delay = 1;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.150000;
+		[bone_translator]
+		{
+			body_anterior = bone02;
+			body_mid = bone04;
+			body_posterior = bone04;
+			kill_bone = bone04;
+			shield_bone = bone01;
+			weapon_bone = bone02;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_sp_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common] { screen_name="Spider"; }
+	[mind]
+	{
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = spider_guts_black;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate] {}
+	}
+}

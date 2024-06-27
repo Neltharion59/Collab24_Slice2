@@ -1,0 +1,44 @@
+////////////////////////////////////////////////////////////////////////////////
+// $Header: $
+//
+//  Activates the rock under(in) which giant hid his brother's club to be selectable and destroyable
+////////////////////////////////////////////////////////////////////////////////
+
+property string _doc$                = "Make an item selectable and non-invincible";
+
+// exported properties
+property scid               target_container$                                        doc ="Scid of Container to Manipulate.";
+
+owner = GoSkritComponent;
+
+// wait until the object has entered the world.
+startup state WaitForEnter$
+{
+	trigger OnGoHandleMessage$( WE_ENTERED_WORLD )
+	{
+		// we will be sent a message when it is time to be made visible
+		SetState Waiting$;
+	}
+}
+
+state Waiting$
+{
+	// look at events that this objects recieve.
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{
+		// we receive an activation message when it is time to become visible.
+		// if we receive the picked_up world event then look to see if the person that picked us up is allowed to have us.
+		if ( e$ == WE_REQ_ACTIVATE )
+		{
+			if( !target_container$.goid.isvalid() )
+			{
+				report.Error( "Bad player when trying to award experience.\n" );
+			}
+			
+			target_container$.Go.Aspect.IsInvincible = false;
+			target_container$.Go.Aspect.SSetIsSelectable( true );
+
+			GoDb.SMarkForDeletion( owner.goid );
+		}
+	}
+}

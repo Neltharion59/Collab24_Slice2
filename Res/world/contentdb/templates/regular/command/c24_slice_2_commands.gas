@@ -1,0 +1,13 @@
+[t:template,n:c24_slice_2_cmd_activate_container]
+{
+	specializes = cmd_const;
+	doc			= "c24 Slice 2 Cmd Activate Container";
+	extra_doc	= "Use this command to make target_container selectable and not invincible.";
+    category_name       = "special";
+
+	[cmd_c24_activate_container]
+    {
+        target_container			= ;
+	}
+	[gizmo] { diffuse_color=0.000000,0.000000,0.700000; texture=; }
+}

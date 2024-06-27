@@ -1,0 +1,103 @@
+[t:cmd_ai_c_patrol,n:0x00100066]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x0010018B;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.929087,0,0.23555,0x4e5491a9;
+	}
+}
+[t:cmd_ai_t_equip,n:0x0010000a]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x0010018E;
+		slot = es_weapon_hand;
+	  x target1 = 0x00100007;
+	  x target2 = 0x0010001D;
+	}
+	[placement]
+	{
+	  p position = -3.20397,0,-1.04973,0x825d8de7;
+	}
+}
+[t:cmd_ai_t_attack_object,n:0x0010018e]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x00100007;
+	  x target2 = 0x00100030;
+	}
+	[placement]
+	{
+	  p position = -1.10784,0,-0.663986,0x825d8de7;
+	}
+}
+[t:c24_slice_2_cmd_activate_container,n:0x0010003e]
+{
+	[cmd_c24_activate_container]
+	{
+	  x target_container = 0x00100030;
+	}
+	[placement]
+	{
+	  p position = 1.45644,0,-0.138313,0x0481e863;
+	}
+}
+[t:c24_slice_2_cmd_activate_container,n:0x00100221]
+{
+	[cmd_c24_activate_container]
+	{
+	  x target_container = 0x0010001E;
+	}
+	[placement]
+	{
+	  p position = 0.434439,0,0.0305328,0xed7508e1;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00100071]
+{
+	[placement]
+	{
+	  p position = 0.897953,0,0.187813,0x82beae01;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00100069]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.497433,0,-1.03283,0xc56bdf97;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00100072]
+{
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = -1.62769,0,0.123371,0xc56bdf97;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x00100073]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.153671,0,0.48069,0xc56bdf97;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x0010018b]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x00100069;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.67265,-1.81051,-4.96692,0x88b5802b;
+	}
+}

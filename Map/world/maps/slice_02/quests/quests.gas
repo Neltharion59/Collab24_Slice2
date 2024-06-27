@@ -1,0 +1,52 @@
+[chapters]
+{
+}
+[quests]
+{
+	[c24_slice_2_quest_giants]
+	{
+		quest_image = b_i_glb_picture-01;
+		screen_name = Brotherly Feud;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = Speak with Notatakk to discover where Maashner's club is hidden;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Retrieve Maashner's club;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Return Maashner's club to its owner;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Destroy the creature;
+		  b is_consumable = true;
+		  i order = 3;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Speak with Maashner;
+		  b is_consumable = true;
+		  i order = 4;
+		  b required = true;
+			speaker = ;
+		}
+	}
+}

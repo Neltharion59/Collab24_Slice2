@@ -1,0 +1,85 @@
+[t:template,n:c24_slice_2_reed_des_base]
+{
+	category_name = "foliage";
+	doc = "des_reed_group_lg";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		[textures]
+        {
+            0 = b_i_des_reed_c24_black_n_red;
+        }
+	}
+}
+[t:template,n:c24_slice_2_reed_des_01]
+{
+	category_name = "foliage";
+	doc = "des_reed_group_lg";
+	specializes = c24_slice_2_reed_des_base;
+	[aspect]
+	{
+		lodfi_lower = 0.8;
+		lodfi_upper = 1;
+		model = m_i_des_reed-01;
+	}
+}
+[t:template,n:c24_slice_2_reed_des_02]
+{
+	category_name = "foliage";
+	doc = "des_reed_group_sm";
+	specializes = c24_slice_2_reed_des_base;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_des_reed-02;
+	}
+}
+[t:template,n:c24_slice_2_reed_des_03]
+{
+	category_name = "foliage";
+	doc = "des_reeds_sm";
+	specializes = c24_slice_2_reed_des_base;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.15;
+		model = m_i_des_reed-03;
+	}
+}
+[t:template,n:c24_slice_2_reed_des_04]
+{
+	category_name = "foliage";
+	doc = "des_reeds_med";
+	specializes = c24_slice_2_reed_des_base;
+	[aspect]
+	{
+		lodfi_lower = 0.8;
+		lodfi_upper = 1;
+		model = m_i_des_reed-01;
+	}
+}
+[t:template,n:c24_slice_2_reed_des_05]
+{
+	category_name = "foliage";
+	doc = "des_reeds_lg";
+	specializes = c24_slice_2_reed_des_base;
+	[aspect]
+	{
+		lodfi_lower = 0.7;
+		lodfi_upper = 1;
+		model = m_i_des_reed-02;
+	}
+}
+[t:template,n:c24_slice_2_reed_des_06]
+{
+	category_name = "foliage";
+	doc = "des_reed_group_med";
+	specializes = c24_slice_2_reed_des_base;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.15;
+		model = m_i_des_reed-03;
+	}
+}
