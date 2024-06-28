@@ -86,17 +86,19 @@
         actor_may_be_attacked = false;
 		
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
-		
-		melee_engage_range = 14;
-		personal_space_range = 0.7;
-		ranged_engage_range = 14.0;
-		sight_range = 14.0;
     }
 }
 [t:template,n:c24_2_giant_good_1]
 {
 	doc = "Bruhs Npc Giant Brother Pacifist";
 	specializes = c24_2_giant_good_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_ecm_cy_c24_good_01;
+		}
+	}
 	[common]
 	{
 		screen_name = "Notatakk";
@@ -106,17 +108,15 @@
 {
 	doc = "Bruhs Npc Giant Brother Pacifist";
 	specializes = c24_2_giant_good_base;
-	[actor]
+	[aspect]
 	{
-		alignment = aa_good;
+		[textures]
+		{
+			0 = b_c_ecm_cy_c24_good_02;
+		}
 	}
 	[common]
 	{
 		screen_name = "Maashner";
 	}
-	[mind]
-	{
-		actor_may_attack = true;
-        actor_may_be_attacked = true;
-    }
 }

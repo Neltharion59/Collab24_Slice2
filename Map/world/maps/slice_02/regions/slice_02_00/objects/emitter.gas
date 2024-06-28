@@ -29,6 +29,21 @@
 	  p position = -2.25118,-1.96695,-2.56599,0x3d2de0c9;
 	}
 }
+[t:emt_sound,n:0x00100231]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -2.2597,-1.97199,-2.70412,0x3d2de0c9;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_water_drip";
+	  f max_dist = 10;
+	  f min_dist = 4;
+	}
+}
 [t:emt_generic,n:0x00100031]
 {
 	[generic_emitter]
@@ -74,5 +89,20 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 0.272285,-3.41586,1.88975,0x250ed382;
+	}
+}
+[t:emt_sound,n:0x00100232]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,-0.382683;
+	  p position = 0.281532,-3.01501,1.68692,0x250ed382;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_water_drip";
+	  f max_dist = 10;
+	  f min_dist = 4;
 	}
 }

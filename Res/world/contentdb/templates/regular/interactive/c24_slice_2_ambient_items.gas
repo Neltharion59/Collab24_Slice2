@@ -1,0 +1,36 @@
+[t:template,n:c24_2_r1_dead_orthrac_youngling]
+{
+	category_name = "treasure";
+	doc = "c24 slice 2 r1 dead orthranc youngling";
+	specializes = treasure;
+	[aspect]
+	{
+        is_selectable = false;
+		model = m_c_edm_or_pos_1;
+		scale_base = 0.40;
+		[textures]
+		{
+			0 = b_c_edm_or-02;
+		}
+		[voice]
+		{
+			[put_down]
+			{
+				* = s_e_ds2_gen_orthrc_die1;
+				* = s_e_ds2_gen_orthrc_die2;
+			}
+		}
+	}
+	
+	[physics]
+	{
+		break_effect = spider_guts_yellow;
+
+		damage_all = TRUE;
+		explode_if_hit_go = TRUE;
+		explode_if_hit_terrain = TRUE;
+		explosion_magnitude = 4;
+
+		[break_particulate] {}
+	}
+}
