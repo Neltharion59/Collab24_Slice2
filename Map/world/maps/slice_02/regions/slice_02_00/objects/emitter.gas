@@ -106,3 +106,17 @@
 	  f min_dist = 4;
 	}
 }
+[t:emt_sound_act,n:0x00100e98]
+{
+	[placement]
+	{
+	  p position = -0.0550537,0,-1.17197,0x6e204a02;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_maniacal_laughter";
+	  b is_global = true;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}

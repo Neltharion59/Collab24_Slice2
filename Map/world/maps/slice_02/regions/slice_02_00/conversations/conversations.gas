@@ -93,3 +93,39 @@
 	  f scroll_rate = 10.000000;
 	}
 }
+[conv_giant_pass_start_quest_wishing_pond]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_pond,0;
+	  b quest_dialog = true;
+		screen_text = "You seem to take pleasure in investigating curious occurences, do you? Not a rare trait for a traveller, I presume. You see, there is this particular pond just a little bit along the way, located in an alcove to to your right. There are rumors that dropping a gold coin in it will grant you a wish of any kind. As tempting as it may sound, woe to those who try doing that. The gold coins attract attention of the Pond keeper. I do not know his name, but he certainly loves to challenge his summoners to a friendly potentially lethal duel. If you wish to prove your skills, you may try challenging him, too. Even one gold coin is enough. Be wary, for he does not return the offerings. You may need to drop a coin several times, as he sends his minions first to see if you're even worth duelling. I used to meet him in a friendly fight from time to time, but at some point I ran out of gold. I should not be visiting casinos, I guess. Oh, and I have another matter to discuss with you, if you'd care.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_pass_start_quest_third_brother]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_kill_brother,0;
+	  b quest_dialog = true;
+		screen_text = "My brother may have mentioned that we come from mating of an Ice Giant and a Cyclops, right? Well, mixed breed such as we are doomed to living far away from our people. What my brother may not have mentioned is that we also have a third brother, Nutlech. While we inherited the cyclop intelligence from our mother, Nutlech was not that lucky. Growing up with him was tough, but we loved him nevertheless. At some point, his aggressivity became unbearable, and we chased him out. We hoped this was the last time we had to deal with him. But rumours reached us that he frequently harasses passersby, terrorizes wild game, and generally causes genuine mayhem. You have most surely noticed that I avoid violence when possible, but Nutlech needs to be stopped. The local humans do not deserve to have such threat in their neighbourhood. I ask you to find him and destroy him. No doubt he has made his home in some sort of cave nearby.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_pass_third_brother_killed]
+{
+	[text*]
+	{
+		screen_text = "You took down Nutlech? My heart is saddened with his death, but there was no other way this could have ended. I thank you for your service, my dear friend.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_giant_pass_final]
+{
+	[text*]
+	{
+		screen_text = "I am quite sure you have forgotten the knowledge of this cave I had bestowed upon you before, right? Most intriguing, this cave. See, the tiger grass is an ideal place for the rats to take shelter in. It is also delicious for them to chew on, I noticed. Unfortunately for the rats, the locals spiders evolved to conceal themselves in the grass quite aptly. I wonder how many of them really live here? Nevertheless, the spiders love to munch on the rats. Just as much as the rats love to munch on the spiders' eggs. Their tiny battlefields leave behind enough organic matter for the tiger grass to slurp and grow even further. More grass means more nutrition for rats, just as more rats mean more nutrition for the spiders. This constant cycle of growth is just unbelievable. I am thinking of writing a book about it. How would I name the phenomenon? Growthloop? Feastmutuality? Ecosystem? None of it sounds right. I need to contemplate on this further. It's a pity I will not get to see how the new insect specimen fits into it.";
+	  f scroll_rate = 10.000000;
+	}
+}

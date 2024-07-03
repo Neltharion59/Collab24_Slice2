@@ -72,21 +72,39 @@ state Talk$
 	event OnEnterState$
 	{
 		
-		if ( GameAuditor.GetDb.GetBool( "flag_giant_quest_killed_insect" ) )
+		if ( GameAuditor.GetDb.GetBool( "flag_giant_pass_after_brother_killed_talked_to" ) )
 		{
-            // 
+			m_Go$.GetConversation.RSSelectConversation( "conv_giant_pass_final" );
+		} else if ( GameAuditor.GetDb.GetBool( "flag_giant_quest_killed_brother" ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( "conv_giant_pass_third_brother_killed" );
+			GameAuditor.GetDb.SetBool( "flag_giant_pass_after_brother_killed_talked_to", true );
+		} else if ( GameAuditor.GetDb.GetBool( "quest_wishing_pond_started" ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( "conv_giant_pass_start_quest_third_brother" );
+			GameAuditor.GetDb.SetBool( "quest_third_brother_started", true );
+		} else if ( GameAuditor.GetDb.GetBool( "flag_giant_pass_after_quest_talked_to" ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( "conv_giant_pass_start_quest_wishing_pond" );
+			GameAuditor.GetDb.SetBool( "quest_wishing_pond_started", true );
+			// Enable wishing pond
+			scid activate_rock_trigger_scid$ = MakeScid(0x00100E99);
+			Go activate_rock_trigger$ = GoDb.FindGoidByScid( activate_rock_trigger_scid$ ).Go;
+			SendWorldMessage( WE_REQ_ACTIVATE, activate_rock_trigger$.Goid, activate_rock_trigger$.Goid );
+		} else if ( GameAuditor.GetDb.GetBool( "flag_giant_quest_killed_insect" ) )
+		{
 			m_Go$.GetConversation.RSSelectConversation( "conv_giant_pass_killed_insect" );
+			GameAuditor.GetDb.SetBool( "flag_giant_pass_after_quest_talked_to", true );
 		}
 		else if ( GameAuditor.GetDb.GetBool( "flag_giant_quest_found_club" ) )
 		{
-            // 
 			m_Go$.GetConversation.RSSelectConversation( "conv_giant_pass_found_club" );
 		}
         else if ( GameAuditor.GetDb.GetBool( "flag_giant_quest_accepted" ) )
 		{
             // Quest was accepted
 			m_Go$.GetConversation.RSSelectConversation( "conv_giant_pass_after_quest" );
-
+			// Enable breaking the rock
 			scid activate_rock_trigger_scid$ = MakeScid(0x0010004D);
 			Go activate_rock_trigger$ = GoDb.FindGoidByScid( activate_rock_trigger_scid$ ).Go;
 			SendWorldMessage( WE_REQ_ACTIVATE, activate_rock_trigger$.Goid, activate_rock_trigger$.Goid );

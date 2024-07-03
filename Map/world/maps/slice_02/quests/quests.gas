@@ -61,4 +61,74 @@
 			speaker = Maashner;
 		}
 	}
+	[c24_slice_2_quest_pond]
+	{
+		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
+		screen_name = Wishing Pond;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			address = slice_02_00:conversations:conv_giant_pass_start_quest_wishing_pond;
+			description = Summon the Pond Keeper;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = Notatakk;
+		}
+		[*]
+		{
+			description = Defeat the Keeper;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = The Keeper Has Been Defeated;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = true;
+			speaker = ;
+		}
+	}
+	[c24_slice_2_quest_kill_brother]
+	{
+		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
+		screen_name = The Black Sheep;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			address = slice_02_00:conversations:conv_giant_pass_start_quest_third_brother;
+			description = Find Nutlech;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = Notatakk;
+		}
+		[*]
+		{
+			description = Seems like the cave where Nutlech resides;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Kill Nutlech;
+		  b is_consumable = true;
+		  i order = 3;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Nutlech was slain;
+		  b is_consumable = true;
+		  i order = 4;
+		  b required = true;
+			speaker = ;
+		}
+	}
 }
