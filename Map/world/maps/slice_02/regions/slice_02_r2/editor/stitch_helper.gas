@@ -2,4 +2,12 @@
 {
 	source_region_guid = 0x00000002;
 	source_region_name = slice_02_r2;
+	[t:stitch_editor,n:slice_02_00]
+	{
+		dest_region = slice_02_00;
+		[node_ids]
+		{
+			0x20000001 = 0xFC0875C9,7;
+		}
+	}
 }

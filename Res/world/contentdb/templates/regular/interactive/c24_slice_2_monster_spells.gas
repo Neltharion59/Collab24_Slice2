@@ -1,0 +1,32 @@
+[t:template,n:c24_r2_bortusk_spell_group_haste]
+{
+	category_name = "magic";
+	doc = "collab24 r2 spell bortusk group haste";
+	specializes = base_spell_monster;
+	[magic]
+    {
+        cast_range = 15;
+		one_use = true;
+        effect_duration = 10;
+        mana_cost = 0;
+        cast_reload_delay = 1;
+        requires_line_of_sight = true;
+        speed_bias = 1;
+        target_type_flags = tt_conscious_friend | tt_self;
+        usage_context_flags = uc_life_giving;
+        state_name = haste;
+        require_state_check = true;
+        updates_on_transformed = true;
+    }
+	[spell_speed_affector]
+    {
+        canStackDuration = true;
+        description = "Enraged";
+        effect_script = group_haste;
+        walkModifier = 1.25;
+        attackModifier = 0.8;
+        groupEffect = true;
+        radius	= 15.0;
+        effectPartyMembers = true;
+    }
+}

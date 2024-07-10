@@ -1,0 +1,226 @@
+[t:template,n:c24_2_r2_bortusk_base]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 bortusk base";
+	specializes = actor_evil;
+	[actor]
+	{
+		race = krug;
+	}
+	[aspect]
+	{
+		model = m_c_edm_bt_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_collab24_bt;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_gen_brtsk_atk1;
+				* = s_e_ds2_gen_brtsk_atk2;
+				* = s_e_ds2_gen_brtsk_atk3;
+				* = s_e_ds2_gen_brtsk_atk4;
+				* = s_e_ds2_gen_brtsk_atk5;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_brtsk_die1;
+				* = s_e_ds2_gen_brtsk_die2;
+			}
+			[enemy_spotted]	{ priority = high; * = s_e_ds2_gen_brtsk_sgt; }
+			[hit_critical]	{ priority = low; * = s_e_ds2_gen_brtsk_hit; }
+			[hit_glance]	{ priority = low; * = s_e_ds2_gen_brtsk_hit; }
+			[hit_solid]		{ priority = low; * = s_e_ds2_gen_brtsk_hit; }
+			[move]			{ priority = low; * = s_e_ds2_gen_brtsk_mve_lp; }
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine;
+			shield_bone = bip01_L_hand;
+			weapon_bone = bip01_r_hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_bt_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+					02=at-03;
+					03=at-04;
+					04=at-05;
+				}
+				[anim_durations] { fs0 = 2.000; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00=di;
+					01=di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+					02=at-03;
+					03=at-04;
+					04=at-05;
+				}
+				[anim_durations] { fs0 = 2.000; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00=wl-02;
+				}
+			}
+		}
+	}
+	[common]
+	{
+        membership = krug, party_krug_shaman, monster;
+	}
+	[mind]
+	{
+		com_channels						= dyn_party, krug;
+		com_range							= 12.0;
+        
+		on_enemy_spotted_alert_friends = true;
+
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:c24_2_r2_bortusk_melee]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 bortusk melee";
+	specializes = c24_2_r2_bortusk_base;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 6, 0;
+			  intelligence = 4, 0;
+			  melee = 4,  0;
+			  strength = 9, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30;
+        life = 54;
+        mana = 17;
+        max_life = 54;
+        max_mana = 17;
+		scale_base = 1.00;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 19;
+		damage_min = 16;
+		reload_delay = 1;
+	}
+	[common] { screen_name="Bortusk"; }
+	[defend] { defense=40; }
+    [mind]
+    {
+        jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true;
+    }
+}
+[t:template,n:c24_2_r2_bortusk_enrager]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 bortusk enrager";
+	specializes = c24_2_r2_bortusk_base;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 6, 0;
+			  intelligence = 4, 0;
+			  melee = 4,  0;
+			  strength = 9, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30;
+        life = 36;
+        mana = 17;
+        max_life = 36;
+        max_mana = 17;
+		scale_base = 1.20;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 19;
+		damage_min = 16;
+		reload_delay = 1;
+	}
+	[common] { screen_name="Bortusk Enrager"; }
+	[defend] { defense=40; }
+    [inventory]
+    {
+        spew_equipped_kill_count = <ignore>;
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r2_bortusk_spell_group_haste;
+        }
+    }
+    [mind]
+    {
+        actor_auto_heals_self_life = true;
+        actor_auto_heals_others_life = true;
+        actor_auto_switches_to_magic = true;
+        actor_auto_switches_to_melee = true;
+        actor_weapon_preference			= WP_MAGIC;
+
+        jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true;
+    }
+}
