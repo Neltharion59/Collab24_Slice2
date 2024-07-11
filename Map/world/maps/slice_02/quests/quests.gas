@@ -10,7 +10,7 @@
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
-			address = slice_02_00:conversations:conv_giant_agg_start_quest;
+			address = 1_0_passage:conversations:conv_giant_agg_start_quest;
 			description = Speak with Notatakk to discover where Maashner's club is hidden;
 		  b is_consumable = true;
 		  i order = 0;
@@ -19,7 +19,7 @@
 		}
 		[*]
 		{
-			address = slice_02_00:conversations:conv_giant_pass_after_quest;
+			address = 1_0_passage:conversations:conv_giant_pass_after_quest;
 			description = Retrieve Maashner's club;
 		  b is_consumable = true;
 		  i order = 1;
@@ -36,7 +36,7 @@
 		}
 		[*]
 		{
-			address = slice_02_00:conversations:conv_giant_agg_barricade_smashed;
+			address = 1_0_passage:conversations:conv_giant_agg_barricade_smashed;
 			description = Destroy the creature;
 		  b is_consumable = true;
 		  i order = 3;
@@ -53,7 +53,7 @@
 		}
 		[*]
 		{
-			address = slice_02_00:conversations:conv_giant_agg_killed_insect_first;
+			address = 1_0_passage:conversations:conv_giant_agg_killed_insect_first;
 			description = You have helped the giants resolve their dispute. Perhaps Notatakk would like to speak with you as well.;
 		  b is_consumable = true;
 		  i order = 5;
@@ -68,7 +68,7 @@
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
-			address = slice_02_00:conversations:conv_giant_pass_start_quest_wishing_pond;
+			address = 1_0_passage:conversations:conv_giant_pass_start_quest_wishing_pond;
 			description = Summon the Pond Keeper;
 		  b is_consumable = true;
 		  i order = 0;
@@ -99,7 +99,7 @@
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
-			address = slice_02_00:conversations:conv_giant_pass_start_quest_third_brother;
+			address = 1_0_passage:conversations:conv_giant_pass_start_quest_third_brother;
 			description = Find Nutlech;
 		  b is_consumable = true;
 		  i order = 0;

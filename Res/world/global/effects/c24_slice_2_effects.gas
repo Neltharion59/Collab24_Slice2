@@ -1,0 +1,158 @@
+[effect_script*]
+{
+	name	=c24_slice_02_bortusk_projectile_roar;
+
+	script	=[[
+			sound play s_e_ds2_gen_brtsk_roar at #SOURCE_POSITION dist 3 20;
+
+			set $pause_time .10;
+
+			call c24_slice_02_bortusk_projectile_roar_base;
+			pause $pause_time;
+
+			call c24_slice_02_bortusk_projectile_roar_base;
+			pause $pause_time;
+
+			call c24_slice_02_bortusk_projectile_roar_base;
+			pause $pause_time;
+
+			call c24_slice_02_bortusk_projectile_roar_base;
+			pause $pause_time;
+
+			call c24_slice_02_bortusk_projectile_roar_base;
+			
+			pause 8;
+			
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+[effect_script*]
+{
+	name	=c24_slice_02_bortusk_projectile_roar_base;
+
+	script	=[[
+
+			/////////////////////////////////////////
+			// This is the main trackball for the effect, everything is based off of this.
+			sfx create trackball #TARGET_KB 
+				"must_update()scale(0.25)texture(b_sfx_ring_01)
+				dur(#DEFAULT_TIMEOUT)afterlife(2)accel(0)velocity(8)";
+			set $trackball #POP;
+			sfx position_at $trackball @weapon_bone source;
+			sfx friendly party $trackball;
+
+			////////////////////////////////////////////
+			//// Create a light to attach to our trackball
+			sfx create lightsource #SOURCE 
+				"must_update()color0(1,1,.7)color1(0,0,1)";
+			set $light #POP;
+			sfx rat $light;
+			sfx target $light $trackball;
+			sfx attach $trackball $light;
+
+			sfx start $trackball;
+
+			waitfor collision $trackball #DEFAULT_TIMEOUT;
+
+			set $collision_type #POP;
+
+			if ( ( $collision_type == #OBJECT_COLLISION ) || ( $collision_type == #TERRAIN_COLLISION ) )
+			{
+				get collision point $trackball;
+
+				sfx create explosion #POP 
+					"dur(1)scale(3)offset(0,0,0)color0(1,1,.7)color1(.0,.0,.0)
+					omni_dir()";
+				sfx attach_point #PEEK @weapon_bone target;
+				sfx start #POP;
+
+				get target_position $trackball target;
+				sound play s_e_ds2_sp_cd_blind at #POP dist 3 20;
+			}
+
+			sfx destroy $trackball;
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+[effect_script*] // -ET
+{
+	name	=c24_slice_02_bortusk_shock_wave;
+
+	script	=[[
+			sound play s_e_ds2_gen_brtsk_roar at #TARGET_POSITION dist 5 35;
+
+			set $radius1 0,3,6;
+			set $radius2 0,4,8;
+
+			sfx create flurry #TARGET
+			"must_update()count(50)tin(0)tout(0)dur(0.2)color0(1,1,.7)
+			grow_params(.5,.5,0)";
+			
+			sfx freeze_targets #PEEK;
+			sfx start #POP;
+
+//			pause .2;
+
+			worldmsg WE_SPELL_SYNC_MID #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+
+			sfx create flurry #TARGET
+			"must_update()count(50)tin(0)tout(.5)dur(0.5)color0(1,1,.7)
+			grow_params(0,4,5)delay(.2)";
+			
+			
+			sfx freeze_targets #PEEK;
+			sfx start #POP;
+
+			sfx create explosion #TARGET 
+				"must_update()texture(b_sfx_sparkle01)omni_dir()vmin(10)
+				vmax(12)ts(.5)count(100)dur(3)scale(.75)color0(1,1,.7)
+				color1(0,0,0)rvel(0,2,0)ivel(0,0,0)delay(.2)";
+
+			sfx freeze_targets #PEEK;
+			sfx start #POP;
+
+			camerashake camera_stomp s<frequency=20&magnitude_x=0&magnitude_y=.1&magnitude_z=0&duration=1&epicenter=#TARGET_GOID>;
+
+			sfx create cylinder #TARGET
+			"must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)alpha(1)
+			hp0(0,0,0)hp1(0,0,0)spin(16)rp0($radius1)rp1($radius2)
+			dur(.5)color0(1,1,.7)segments(24)delay(.2)";
+			
+			sfx freeze_targets #PEEK;
+			sfx start #POP;
+
+//			pause .1;
+
+			sfx create cylinder #TARGET
+			"must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)alpha(1)
+			hp0(0,0,0)hp1(0,0,0)spin(16)rp0($radius1)rp1($radius2)
+			dur(.5)color0(1,1,.7)segments(24)delay(.3)";
+			
+			sfx freeze_targets #PEEK;
+			sfx start #POP;
+
+//			pause .1;
+
+			sfx create cylinder #TARGET
+			"must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)alpha(1)
+			hp0(0,0,0)hp1(0,0,0)spin(16)rp0($radius1)rp1($radius2)
+			dur(.5)color0(1,1,.7)segments(24)delay(.4)";
+			
+			sfx freeze_targets #PEEK;
+			sfx start #POP;
+			]];
+}
+[effect_script*]
+{
+	name	=c24_slice_02_effect_bortusk_hat;
+	script	=[[
+			// offset(L/R, HEIGHT, FRONT/BACK)
+			sfx create orbiter #TARGET
+				"must_update()scale(1)offset(0,.5,.5)model(c24_slice_2_bortusk_hat)ts(0)
+				phi(0)
+				radius(0)";
+			sfx attach_point #PEEK bip01_head target;
+			sfx start #POP;
+
+	]];
+}

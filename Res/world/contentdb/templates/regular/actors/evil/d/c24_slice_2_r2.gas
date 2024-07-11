@@ -170,6 +170,59 @@
 			?actor_joins_existing_party		= true;
     }
 }
+[t:template,n:c24_2_r2_bortusk_mele_boss_01]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 bortusk melee boss 01";
+	specializes = c24_2_r2_bortusk_base;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 6, 0;
+			  intelligence = 4, 0;
+			  melee = 7,  0;
+			  strength = 9, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30;
+        life = 54;
+        mana = 17;
+        max_life = 54;
+        max_mana = 17;
+		scale_base = 1.60;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 19;
+		damage_min = 16;
+		reload_delay = 1;
+	}
+	[common]
+	{
+		screen_name="Impressive Bortusk";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+
+			}
+		}
+	}
+	[defend] { defense=40; }
+    [mind]
+    {
+        jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true;
+    }
+}
 [t:template,n:c24_2_r2_bortusk_enrager]
 {
 	category_name = "1W_evil_d";
@@ -181,6 +234,7 @@
 		{
 			  dexterity = 6, 0;
 			  intelligence = 4, 0;
+			  nature_magic = 4,  0;
 			  melee = 4,  0;
 			  strength = 9, 0;
 		}
@@ -209,18 +263,152 @@
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
-            il_active_primary_spell = c24_r2_bortusk_spell_group_haste;
+            il_active_primary_spell = c24_r2_bortusk_spell_freeze;
+            il_active_secondary_spell = c24_r2_bortusk_spell_group_haste;
         }
     }
     [mind]
     {
-        actor_auto_heals_self_life = true;
-        actor_auto_heals_others_life = true;
+        actor_auto_heals_self_life = false;
+        actor_auto_heals_others_life = false;
         actor_auto_switches_to_magic = true;
-        actor_auto_switches_to_melee = true;
+        actor_auto_switches_to_melee = false;
         actor_weapon_preference			= WP_MAGIC;
 
-        jat_brain							= world\ai\jobs\common\brain_hero.skrit
-			?actor_joins_existing_party		= true;
+        jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		 = true
+			&party_template					 = "party_krug_shaman";
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+    }
+}
+[t:template,n:c24_2_r2_bortusk_roar]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 bortusk roar";
+	specializes = c24_2_r2_bortusk_base;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 6, 0;
+			  intelligence = 4, 0;
+			  nature_magic = 4,  0;
+			  strength = 9, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30;
+        life = 36;
+        mana = 17;
+        max_life = 36;
+        max_mana = 17;
+		scale_base = 1.20;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 19;
+		damage_min = 16;
+		reload_delay = 1;
+	}
+	[common] { screen_name="Roaring Bortusk"; }
+	[defend] { defense=40; }
+    [inventory]
+    {
+        spew_equipped_kill_count = <ignore>;
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r2_bortusk_spell_roar_projectile;
+            il_active_secondary_spell = c24_r2_bortusk_spell_roar_volume;
+        }
+    }
+    [mind]
+    {
+        actor_auto_heals_self_life = false;
+        actor_auto_heals_others_life = false;
+        actor_auto_switches_to_magic = true;
+        actor_auto_switches_to_melee = false;
+        actor_weapon_preference			= WP_MAGIC;
+
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+    }
+}
+[t:template,n:c24_2_r2_bortusk_wizard_boss_01]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 bortusk wizard boss 01";
+	specializes = c24_2_r2_bortusk_base;
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 6, 0;
+			  intelligence = 4, 0;
+			  nature_magic = 4,  0;
+			  strength = 9, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30;
+        life = 36;
+        mana = 17;
+        max_life = 36;
+        max_mana = 17;
+		scale_base = 1.80;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 19;
+		damage_min = 16;
+		reload_delay = 1;
+	}
+	[common]
+	{
+		screen_name="Trithoneus of the Bortusk";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("c24_slice_02_effect_bortusk_hat");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_red(sgx)");
+
+			}
+		}
+	}
+	[defend] { defense=40; }
+    [inventory]
+    {
+        spew_equipped_kill_count = <ignore>;
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r2_bortusk_spell_roar_projectile;
+            il_active_secondary_spell = c24_r2_bortusk_spell_roar_volume;
+        }
+    }
+    [mind]
+    {
+        actor_auto_heals_self_life = false;
+        actor_auto_heals_others_life = false;
+        actor_auto_switches_to_magic = true;
+        actor_auto_switches_to_melee = false;
+        actor_weapon_preference			= WP_MAGIC;
+
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
     }
 }
