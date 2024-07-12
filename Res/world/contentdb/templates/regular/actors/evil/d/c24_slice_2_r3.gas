@@ -1,0 +1,399 @@
+[t:template,n:c24_2_r3_snow_boar]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R3 snow_boar";
+	specializes = base_boar;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  13, 0;
+			intelligence =  4, 0;
+			dexterity =  10, 0;
+            melee =  7,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 132;
+		life = 240;
+        max_life = 240;
+        mana = 8;
+		max_mana = 8;
+		model = m_c_edm_hb_pos_1;
+		[textures]		{ 0 = b_c_edm_hb-02; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 46;
+		damage_min = 38;
+	}
+	[common] { screen_name="Snow Boar"; }
+    	[defend] { defense=52; }
+	[mind]
+	{
+		melee_engage_range = 10;
+		personal_space_range = 0.7;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+	}
+}
+[t:template,n:c24_2_r3_furok]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R3 furok";
+	specializes = base_furok;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  16, 0;
+			intelligence =  8, 0;
+			dexterity =  10, 0;
+            melee =  9,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 174;
+		life = 225;
+        max_life = 225;
+        mana = 14;
+        max_mana = 14;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 68;
+		damage_min = 60;
+	}
+	[common]
+	{
+		screen_name="Furok";
+		membership = party_furok_boss, monster;
+	}
+	[defend] { defense=84; }
+	[inventory]
+	{
+   		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/7-11;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/30-36;
+					il_main = #armor/13-73;
+	                il_main = #weapon/30-36;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	            	il_main = #weapon/-rare(1)/34-44;
+	                il_main = #armor/-rare(1)/34-117;
+                    il_main = #*/-rare(1)/34-44;
+                }
+				[oneof*]
+                {
+					chance = 0.002;
+	                il_main = #weapon/-unique(2)/34-44;
+	                il_main = #armor/-unique(2)/34-117;
+                    il_main = #*/-unique(2)/34-44;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 149;
+					min = 91;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+	}
+}
+[t:template,n:c24_2_r3_furok_boss_01]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_2_r3_Bruhs Slice 2 R3 furok boss";
+	specializes = base_furok;
+	[actor]
+	{
+		[skills]
+		{
+			strength 	=  16, 0;
+			intelligence =  8, 0;
+			dexterity 	=  12, 0;
+            melee 		=  10,  0;
+		}
+	}
+	[aspect]
+	{
+		textures:0 = b_c_edm_fr-03;
+		experience_value = 254;
+		life = 263;
+        max_life = 263;
+        mana = 14;
+        max_mana = 14;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 72;
+		damage_min = 68;
+	}
+	[common]
+	{
+		screen_name="Grizzly Furok";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			}
+		}
+	}
+	[defend] { defense=114; }
+	[inventory]
+	{
+   		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #armor,f/100-115;
+	                il_main = #weapon/35-38;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/41-46;
+	                il_main = #armor/-rare(1)/122-139;
+                    il_main = #*/-rare(1)/41-46;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/41-46;
+	                il_main = #armor/-unique(2)/122-139;
+                    il_main = #*/-unique(2)/41-46;
+	            }
+				[gold*]
+				{
+					max = 374;
+					min = 211;
+					min_pile = 35;
+					piles = 3 - 5;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget			= world\ai\jobs\common\job_fidget.skrit
+			?social				= 0.9
+			&friend_template	= false
+			&friends			= party_furok_boss
+			&still				= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&party_template						= "party_furok_boss";
+	}
+}
+[t:template,n:c24_2_r3_furok_slasher]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R3 furok slasher";
+	specializes = base_furok;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  18, 0;
+			intelligence =  8, 0;
+			dexterity =  10, 0;
+            melee =  10,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 265;
+		life = 313;
+        max_life = 313;
+        mana = 14;
+        max_mana = 14;
+        [textures] { 0 = b_c_edm_fr-02; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 84;
+		damage_min = 70;
+	}
+	[common] { screen_name="Furok Slasher"; }
+	[defend] { defense=78; }
+	[inventory]
+	{
+   		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/7-11;
+				}
+				[oneof*]
+				{
+					chance = 0.4;
+					il_main = #*/34-39;
+					il_main = #armor/16-85;
+	                il_main = #weapon/34-39;
+				}
+				[oneof*]
+				{
+	                   chance = 0.004;
+	                   il_main = #weapon/-rare(1)/38-44;
+	                   il_main = #armor/-rare(1)/67-123;
+                       il_main = #*/-rare(1)/38-44;
+                }
+				[oneof*]
+				{
+                       chance = 0.002;
+	                   il_main = #weapon/-unique(2)/38-44;
+	                   il_main = #armor/-unique(2)/67-123;
+                       il_main = #*/-unique(2)/38-44;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 194;
+					min = 151;
+					min_pile = 39;
+					piles = 1 - 3;
+				}
+			}
+		}
+	}
+}
+[t:template,n:c24_2_r3_ice_mage]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R3 Ice Mage Boss";
+	specializes = base_swamp_witch;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  8, 0;
+			intelligence =  13, 0;
+			dexterity =  9, 0;
+			combat_magic =  8,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 261;
+		life = 100;
+		max_life = 100;
+		mana = 56;
+		max_mana = 56;
+		textures:0 = b_c_edm_img;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 60;
+		damage_min = 55;
+	}
+	[common]
+    {
+        screen_name="Mirabelle Stoutbread";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			}
+		}
+    }
+    [defend] { defense=74; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.1;
+                    il_main = #cmagic/3-15;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+                    il_main = #*/36-44;
+                    il_main = #body,ro/70-88;
+				}
+
+			}
+		}
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell=spell_ice_mage_iceblast;
+			il_spell_1=spell_summon_ice_warriors_monster;
+		}
+	}
+	[mind]
+	{
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?meander						= false
+			&still							= false;
+
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+
+		actor_life_ratio_low_threshold  = 0.25;
+		on_life_ratio_low_flee = true;
+		flee_count = 1;
+		flee_distance = 20;
+	}
+}
