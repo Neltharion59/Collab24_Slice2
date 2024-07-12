@@ -1,0 +1,145 @@
+
+[t:template,n:c24_2_r4_krusk]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R4 krusk";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 8, 0;
+			dexterity = 13, 0;
+			intelligence = 6, 0;
+			melee = 3, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30;
+		life = 72;
+		max_life = 72;
+		mana = 12;
+		max_mana = 12;
+		model = m_c_xeam_007_pos_1;
+		[textures]
+		{
+			0 = b_c_xeam_007_c24_01;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_gen_x_krusk_atk1;
+				* = s_e_ds2_gen_x_krusk_atk2;
+				* = s_e_ds2_gen_x_krusk_atk3;
+			}
+			[die]			{ priority = high; * = s_e_ds2_gen_x_krusk_die; }
+			[enemy_spotted]	{ priority = high; * = s_e_ds2_gen_x_krusk_sgt; }
+			[hit_critical]	{ priority = low; * = s_e_ds2_gen_x_krusk_hit; }
+			[hit_glance]	{ priority = low; * = s_e_ds2_gen_x_krusk_hit; }
+			[hit_solid]		{ priority = low; * = s_e_ds2_gen_x_krusk_hit; }
+	     	[move]			{ priority = low; * = s_e_ds2_gen_x_krusk_mve_lp; }
+	     	[revive]		{ priority = low; * = s_e_ds2_gen_x_krusk_revive; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 15;
+		damage_min = 12;
+	}
+	[body]
+	{
+		min_move_velocity = 2.0;
+		avg_move_velocity = 3.0;
+		max_move_velocity = 3.7;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = Bip01_Pelvis;
+			body_posterior = Bip01_Tail;
+			kill_bone = Bip01_Spine1;
+			shield_bone = Bip01_L_Hand;
+			weapon_bone = Bip01_R_Hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_xeam_007_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+					02=at-03;
+				}
+				[anim_durations]
+				{
+					fs0 = 2.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00=dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00=di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00=dff;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					res1 = a_c_xeam_007_fs0_rsct;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00=rl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+        membership = monster;
+		screen_name="Furbolg";
+	}
+	[defend] { defense=60; }
+	[mind]
+	{
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}

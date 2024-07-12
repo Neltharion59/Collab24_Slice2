@@ -396,8 +396,11 @@
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
-            il_active_primary_spell = c24_r2_bortusk_spell_roar_projectile;
-            il_active_secondary_spell = c24_r2_bortusk_spell_roar_volume;
+            il_active_primary_spell = c24_r2_bortusk_spell_ice_storm;
+            il_active_secondary_spell = c24_r2_bortusk_spell_summon;
+            il_spell_1 = c24_r2_bortusk_spell_ice_orb;
+            il_spell_2 = c24_r2_bortusk_spell_debuff;
+            il_spell_3 = c24_r2_bortusk_spell_buff;
         }
     }
     [mind]
@@ -411,4 +414,450 @@
 		jat_cast 						= world\ai\jobs\common\job_cast.skrit
 			?rand_spell					= true;
     }
+}
+[t:template,n:c24_2_r2_ice_fly]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 ice fly";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 6,0;
+			intelligence = 1,0;
+			dexterity = 15,0;
+            melee =  3,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 10;
+		life = 21;
+		max_life = 21;
+		mana = 2;
+		max_mana = 2;
+		model = m_c_edm_if_pos_1;
+		material = ice;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_ice_warrior; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 22;
+		damage_min = 14;
+	}
+	[body]
+	{
+		avg_move_velocity = 4.080000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_if_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=ds; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=fl; }
+			}
+		}
+	}
+	[common]
+	{ 
+		screen_name="Ice Fly";
+		membership=monster,immune_freeze;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("ice_fly");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	 }
+    [defend] { defense=58; }
+	[mind]
+	{
+		personal_space_range = 0.5;
+		melee_engage_range = 14.0;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = ice_explosion;
+		explode_when_killed = true;
+		gib_gore_good = true;
+	}
+	[self_destruct] 
+	{
+		delete_time = 20.0;
+		explode = true;
+	}
+}
+[t:template,n:c24_2_r2_spider_frostnid]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 spider_frostnid";
+	specializes = spider_frostnid_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  10, 0;
+			intelligence =  4, 0;
+			dexterity =  15, 0;
+            melee =  8,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 15;
+		life = 177;
+        max_life = 177;
+        mana = 8;
+		max_mana = 8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 36;
+		damage_min = 30;
+	}
+	[common] { screen_name="Frostnid"; }
+    [defend] { defense=60; }
+	[physics]
+	{
+		break_effect = ice_explosion;
+		explode_when_killed = true;
+		gib_gore_good = true;
+	}
+	[self_destruct] 
+	{
+		delete_time = 20.0;
+		explode = true;
+	}
+}
+[t:template,n:c24_2_r2_golem_frost]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 golem_frost";
+	specializes = golem_frost_base;
+	[physics]
+	{
+		break_effect = ice_explosion;
+		explode_when_killed = true;
+		gib_gore_good = true;
+	}
+	[self_destruct] 
+	{
+		delete_time = 20.0;
+		explode = true;
+	}
+}
+[t:template,n:c24_2_r2_wolf_white]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 wolf_white";
+	specializes = base_wolf;
+
+	[body]
+	{
+		max_move_velocity = 4.4;
+	}
+	[actor]
+	{
+		[skills]
+		{
+			strength =  11, 0;
+			intelligence =  6, 0;
+			dexterity =  12, 0;
+            melee =  11,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 87;
+		life = 153;
+        max_life = 153;
+        mana = 12;
+        max_mana = 12;
+        textures:0 = b_c_edm_wf-03;
+        scale_base = 0.75;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 37;
+		damage_min = 33;
+	}
+
+	[defend] { defense=55; }
+	[common]
+	{
+		screen_name="White Wolf";
+		membership = monster, party_wolf_gray_boss;
+	}
+	[mind]
+	{
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true
+			&actor_creates_own_party	= true
+			&party_template				= "party_wolf_gray_boss";
+
+		jat_attack_object_melee	= world\ai\jobs\common\job_attack_object_melee.skrit
+			?cautious_chance	= 0.9
+			&min_cautious_distance = 2.00
+			&cautious_approach_distance = 1.25;
+	}
+}
+[t:template,n:c24_2_r2_wolf_white_boss_01]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 wolf_white boss 01";
+	specializes = base_wolf;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  5, 0;
+			intelligence =  2, 0;
+			dexterity =  8, 0;
+            melee =  2,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 20;
+		life = 30;
+        max_life = 30;
+        mana = 2;
+        max_mana = 2;
+        textures:0 = b_c_edm_wf-03;
+        scale_base = 0.9;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 11;
+		damage_min = 8;
+	}
+
+	[defend] { defense=32; }
+	[common]
+	{
+		screen_name="Alpha White Wolf";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* 	= receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* 	= call_sfx_script("unique_ray_red(sgx)");
+				action* 	= call_sfx_script("unique_light_red(sgx)");
+			}
+
+		}
+
+	}
+
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					  max = 40;
+					  min = 30;
+				}
+			}
+		}
+	}
+
+
+	[mind]
+	{
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?still							= false;
+
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&form_party_on_friend_entered_OCZ	= true
+			&form_party_on_friend_entered_ICZ	= true
+			&party_template						= "party_wolf_gray_boss";
+	}
+}
+[t:template,n:c24_2_r2_lertisk]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 lertisk";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 8, 0;
+			dexterity = 13, 0;
+			intelligence = 6, 0;
+			melee = 3, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30;
+		life = 72;
+		max_life = 72;
+		mana = 12;
+		max_mana = 12;
+		model = m_c_edm_041_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_041;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_gen_lrtsk_atk1;
+				* = s_e_ds2_gen_lrtsk_atk2;
+				* = s_e_ds2_gen_lrtsk_atk3;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_lrtsk_die1;
+				* = s_e_ds2_gen_lrtsk_die2;
+			}
+			[enemy_spotted]	{ priority = high; * = s_e_ds2_gen_lrtsk_sgt; }
+			[hit_critical]	{ priority = low; * = s_e_ds2_gen_lrtsk_hit; }
+			[hit_glance]	{ priority = low; * = s_e_ds2_gen_lrtsk_hit; }
+			[hit_solid]		{ priority = low; * = s_e_ds2_gen_lrtsk_hit; }
+	        [move]			{ priority = low; * = s_e_ds2_gen_lrtsk_mve_lp; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 15;
+		damage_min = 12;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine1;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_head;
+			shield_bone = bip01_L_hand;
+			weapon_bone = bip01_R_hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_041_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+					02=at-03;
+				}
+				[anim_durations] { fs0 = 3.000; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00=di;
+					01=di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=rl; }
+			}
+		}
+	}
+	[common]
+	{
+        membership = monster;
+		screen_name="Lertisk";
+	}
+	[defend] { defense=2; }
+	[mind]
+	{
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
 }

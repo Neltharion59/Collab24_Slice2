@@ -14,12 +14,6 @@
 			pause $pause_time;
 
 			call c24_slice_02_bortusk_projectile_roar_base;
-			pause $pause_time;
-
-			call c24_slice_02_bortusk_projectile_roar_base;
-			pause $pause_time;
-
-			call c24_slice_02_bortusk_projectile_roar_base;
 			
 			pause 8;
 			
@@ -36,9 +30,9 @@
 			// This is the main trackball for the effect, everything is based off of this.
 			sfx create trackball #TARGET_KB 
 				"must_update()scale(0.25)texture(b_sfx_ring_01)
-				dur(#DEFAULT_TIMEOUT)afterlife(2)accel(0)velocity(8)";
+				dur(#DEFAULT_TIMEOUT)afterlife(2)accel(0)velocity(8)color0(1,1,.7)";
 			set $trackball #POP;
-			sfx position_at $trackball @weapon_bone source;
+			sfx position_at $trackball bip01_head source;
 			sfx friendly party $trackball;
 
 			////////////////////////////////////////////
@@ -61,7 +55,7 @@
 				get collision point $trackball;
 
 				sfx create explosion #POP 
-					"dur(1)scale(3)offset(0,0,0)color0(1,1,.7)color1(.0,.0,.0)
+					"dur(1)scale(.25)offset(0,0,0)color0(1,1,.7)color1(.0,.0,.0)
 					omni_dir()";
 				sfx attach_point #PEEK @weapon_bone target;
 				sfx start #POP;
@@ -91,8 +85,6 @@
 			sfx freeze_targets #PEEK;
 			sfx start #POP;
 
-//			pause .2;
-
 			worldmsg WE_SPELL_SYNC_MID #INVALID_GOID #OWNER_GOID #TARGET_GOID;
 
 			sfx create flurry #TARGET
@@ -121,8 +113,6 @@
 			sfx freeze_targets #PEEK;
 			sfx start #POP;
 
-//			pause .1;
-
 			sfx create cylinder #TARGET
 			"must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)alpha(1)
 			hp0(0,0,0)hp1(0,0,0)spin(16)rp0($radius1)rp1($radius2)
@@ -130,8 +120,6 @@
 			
 			sfx freeze_targets #PEEK;
 			sfx start #POP;
-
-//			pause .1;
 
 			sfx create cylinder #TARGET
 			"must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)alpha(1)
@@ -155,4 +143,54 @@
 			sfx start #POP;
 
 	]];
+}
+[effect_script*]
+{
+	name	=c24_slice_02_effect_group_haste;
+		
+	//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	//This effect was created before the spell itself was created,
+	//so all you have to do is hook it up! - BPM
+	//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+	script	=[[
+			set $color 0,0,1;
+			set $height 4;
+			set $width  4;
+			set $detail 10;
+			set $texture b_sfx_010;
+			set $spin 20;
+			
+			set $delay .04;
+			set $dur .40;
+						
+			
+			
+			sfx create cylinder #TARGET
+				"spin($spin)texture($texture)color0(1,0,0)rp0(.1,.1,0)
+				rp1(.1,.1,0)hp0(-.1,-.1,0)hp1(0,0,0)tin(.50)tout(.3)
+				bone_orient()rotate(0,0,90)segments($detail)";
+			sfx attach_point #PEEK @weapon_bone target;
+			sfx start #POP;
+			
+			sfx create cylinder #TARGET
+				"spin($spin)texture($texture)color0(1,0,0)rp0(.1,.1,0)
+				rp1(.1,.1,0)hp0(-.1,-.1,0)hp1(0,0,0)tin(.50)tout(.3)
+				bone_orient()rotate(0,0,90)segments($detail)";
+			sfx attach_point #PEEK @shield_bone target;
+			sfx start #POP;
+			
+			sfx create sray #TARGET 
+				"count(20)color0(.8,.2,.1)color1(1,0,0)lmin(0.25)
+				lmax(0.25)alpha(1,1,1)";
+			sfx attach_point #PEEK @weapon_bone target;
+			sfx start #POP;
+			
+			sfx create sray #TARGET 
+				"count(20)color0(.8,.2,.1)color1(1,0,0)lmin(0.25)
+				lmax(0.25)alpha(1,1,1)";
+			sfx attach_point #PEEK @shield_bone target;
+			sfx start #POP;
+			
+			]];
 }
