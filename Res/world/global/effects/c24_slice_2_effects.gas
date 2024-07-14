@@ -194,3 +194,99 @@
 			
 			]];
 }
+[effect_script*]
+{
+	name	=c24_slice_02_effect_broom_flyer;
+	script	=[[
+			// offset(L/R, HEIGHT, FRONT/BACK)
+			sfx create orbiter #TARGET
+				"must_update()scale(1)offset(0,0,0)model(broom_glb)ts(3.14)
+				phi(0)
+				radius(0)";
+			sfx attach_point #PEEK bip01_head target;
+			sfx start #POP;
+
+			sfx create orbiter #TARGET
+				"must_update()scale(1)offset(0,0,0)model(ice_mage)ts(0)
+				phi(0)
+				radius(0)";
+			sfx attach_point #PEEK bip01_head target;
+			sfx start #POP;
+	]];
+}
+[effect_script*]
+{
+	name	=c24_slice_02_effect_snowflake_monster;
+
+	script	=[[
+			
+			sfx create flurry #TARGET 
+				"offset(0,0.1,0)texture(b_sfx_031)scale(0.85)radius(.45)count(40)";
+			sfx start #POP;
+
+			]];
+}
+[effect_script*]  // -ET
+{
+	name	=c24_slice_02_effect_snowflake_monster_projectile_spell;
+
+	script	=[[
+
+			///////////////////////////////////////////////////
+			// create the trackball to base the whole effect on
+			sfx create trackball #TARGET_KB 
+				"must_update()delay(.66)
+				ts(2)accel(0)invisible()dur(#DEFAULT_TIMEOUT)scale(2.1)afterlife(0)rvel_max(0)";
+
+			sfx position_at #PEEK @weapon_bone source;
+			set $trackball #POP;
+			sfx friendly party $trackball;
+			sfx start $trackball;
+
+			sfx create orbiter #TARGET 
+				"must_update()scale(2)dur(10)radius(0)theta(0)iphi(0)
+				itheta(0)rotate(90,0,0)rot_inc(0,1000,0)invisible()";
+			set $skull #POP;
+			sfx rat $skull;
+			sfx target $skull $trackball;
+			sfx start $skull;
+
+			sfx create flurry #TARGET 
+				"offset(0,0.1,0)texture(b_sfx_031)scale(0.25)radius(.10)count(20)grow_params(0,1.2,1.5)";
+			set $charge #POP;
+			sfx rat $charge;
+			sfx target $charge $trackball;
+			sfx start $charge;
+
+			pause .27;
+
+			sound play s_e_spell_orb_ice_shoot at #SOURCE_POSITION dist 3 20;
+
+			waitfor collision $trackball #DEFAULT_TIMEOUT;
+			set $collision_type #POP;
+			if ( ( $collision_type == #OBJECT_COLLISION ) || ( $collision_type == #TERRAIN_COLLISION ) )
+			{
+				get collision point $trackball;
+				sfx create lightsource #POP
+					"radius(1.5)color0(0,0,.8)dur(1)tin(.2)tout(.1)";
+				set $fire3 #POP;
+				sfx start $fire3;
+
+				get collision point $trackball;
+				sfx create explosion #POP
+					"must_update()omni_dir()ivel(0,1,0)vmin(3)vmax(5)ts(.6)
+					texture(b_sfx_031)dur(3)color0(0,0,.8)color1(0,0,0)
+					count(45)";
+				set $exp #POP;
+				sfx start $exp;
+
+				get target_position $exp target;
+				sound play s_e_hit_water_elemental at #POP dist 3 30;
+
+			}
+			
+			pause 2;
+			
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}

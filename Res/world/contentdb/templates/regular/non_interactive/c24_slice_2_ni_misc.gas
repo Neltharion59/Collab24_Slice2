@@ -13,3 +13,20 @@
         }
 	}
 }
+[t:template,n:c24_slice_2_ice_star]
+{
+	category_name = "misc";
+	doc = "beach_shell_seastar";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.05;
+		model = m_i_glb_seashells-01;
+        scale_base = 2.00;
+        [textures]
+        {
+            0 = b_i_glb_ice_star;
+        }
+	}
+}

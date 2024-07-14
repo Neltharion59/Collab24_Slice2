@@ -1,0 +1,600 @@
+[t:template,n:c24_2_r5_snowflake_swarm]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R5 Snowflake swarm";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		= 20, 0;
+			intelligence 	= 20, 0;
+			dexterity 		= 20, 0;
+			melee 	        = 115, 0;
+		}			
+	}
+	[aspect]
+	{
+		experience_value	= 50111222;
+		force_no_render		= true;
+		force_no_render_click = true;
+		life				= 1047;
+		max_life			= 1047;
+		mana				= 20;
+		max_mana			= 20;
+		megamap_icon	= b_gui_ig_mnu_eyes_whelnar;
+		megamap_orient = true;
+		draw_shadow = false;
+		model = m_c_edm_ga_pos_1;
+		scale_base = 1; 
+		material = stone;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_darkling; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_darkling_SED; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 311;
+		damage_min = 294;
+	}
+	[body]
+	{
+		avg_move_velocity = 4;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_ga_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+                    00 = at;
+					01 = at-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+                    00 = mg;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = ds;
+					wake = rv;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = basic_walk;
+				[anim_files] { 00=fl; }
+			}
+		}
+	}		
+	[common]
+	{
+		forced_expiration_class=immediate;
+		auto_expiration_class=immediate;
+		screen_name = "Frost Wisp";
+		membership = krug, party_krug_shaman, party_krug_scout_boss, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("c24_slice_02_effect_snowflake_monster");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+
+	[defend] { defense = 200; }
+
+    [inventory]
+    {
+        spew_equipped_kill_count = <ignore>;
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r5_snowflake_spell_attack;
+        }
+    }
+
+	[mind]
+	{
+		com_channels						= dyn_party, krug;
+		com_range							= 13.0;
+		on_enemy_spotted_alert_friends		= true;
+
+		actor_weapon_preference              = WP_MAGIC;
+		actor_auto_switches_to_magic         = true;
+		actor_auto_switches_to_karate         = false;
+		actor_auto_switches_to_melee         = false;
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		 = true
+			&party_template					 = "party_krug_shaman";
+
+		melee_engage_range = 24;
+		personal_space_range = 0.7;
+		ranged_engage_range = 24.0;
+		sight_range = 24.0;
+
+		outer_comfort_zone_range      = 8;
+		inner_comfort_zone_range      = 3;
+	}
+
+	[physics]
+	{
+		explode_when_killed = true;
+		explosion_magnitude = .045;
+		fire_effect = human_physics_fire;
+		fire_resistance = 0.0;
+		fire_burn_threshold = 20;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_bone_01 = 1;
+			frag_glb_bone_02 = 1;
+			frag_glb_bone_03 = 1;
+			frag_glb_bone_04 = 4;
+			frag_glb_bone_05 = 1;
+			frag_glb_bone_06 = 1;
+		}
+	}
+}
+[t:template,n:c24_2_r5_naldrun_base]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R5 Naldrun Base";
+	specializes = actor_evil;
+	[aspect]
+	{
+		model = m_c_edm_054_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_054-04;
+		}
+		[voice]
+		{
+			[cast]		{ priority = high; * = s_e_ds2_gen_naldrn_atk; }
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_naldrn_die1;
+				* = s_e_ds2_gen_naldrn_die2;
+			}
+			[enemy_spotted]	{ priority = high; * = s_e_ds2_gen_naldrn_sgt; }
+			[hit_critical]	{ priority = low; * = s_e_ds2_gen_naldrn_hit; }
+			[hit_glance]	{ priority = low; * = s_e_ds2_gen_naldrn_hit; }
+			[hit_solid]		{ priority = low; * = s_e_ds2_gen_naldrn_hit; }
+	        [move]			{ priority = low; * = s_e_ds2_gen_naldrn_mve_lp; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 15;
+		damage_min = 12;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine1;
+			shield_bone = Bip01_L_Hand;
+			weapon_bone = Bip01_Spine1;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_054_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=mg; }
+				[anim_durations] { fs0 = 2.000; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00=di;
+					01=di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=mg; }
+				[anim_durations] { fs0 = 2.000; }
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					eat1 = a_c_edm_054_fs0_eat;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=fl; }
+			}
+		}
+	}
+	[common]
+	{
+		membership = krug, party_krug_shaman, party_krug_scout_boss, monster;
+		screen_name="Naldrun";
+	}
+	[defend] { defense=2; }
+	[mind]
+	{
+		com_channels						= dyn_party, krug;
+		com_range							= 13.0;
+		on_enemy_spotted_alert_friends		= true;
+
+		actor_weapon_preference              = WP_MAGIC;
+		actor_auto_switches_to_magic         = true;
+		actor_auto_switches_to_karate         = false;
+		actor_auto_switches_to_melee         = false;
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		 = true
+			&party_template					 = "party_krug_shaman";
+
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:c24_2_r5_naldrun_01]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R5 Naldrun 01";
+	specializes = c24_2_r5_naldrun_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 8, 0;
+			dexterity = 13, 0;
+			intelligence = 6, 0;
+			nature_magic = 3, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30;
+		life = 72;
+		max_life = 72;
+		mana = 12;
+		max_mana = 12;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 15;
+		damage_min = 12;
+	}
+	[common]
+	{
+		screen_name="Frost Fae";
+	}
+	[defend] { defense=2; }
+    [inventory]
+    {
+        spew_equipped_kill_count = <ignore>;
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r5_naldrun_spell_iceshard;
+            il_active_secondary_spell = c24_r5_naldrun_spell_ice_orb;
+			il_spell_1 = c24_r5_naldrun_spell_iceshard_2;
+        }
+    }
+	[mind]
+	{
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:c24_2_r5_pixie_base]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R5 pixie Base";
+	specializes = actor_evil;
+	[aspect]
+	{
+		model = m_c_gbn_fy_pos_1;
+		[voice]
+		{
+			[cast]		{ priority = high; * = s_e_ds2_gen_naldrn_atk; }
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_naldrn_die1;
+				* = s_e_ds2_gen_naldrn_die2;
+			}
+			[enemy_spotted]	{ priority = high; * = s_e_ds2_gen_naldrn_sgt; }
+			[hit_critical]	{ priority = low; * = s_e_ds2_gen_naldrn_hit; }
+			[hit_glance]	{ priority = low; * = s_e_ds2_gen_naldrn_hit; }
+			[hit_solid]		{ priority = low; * = s_e_ds2_gen_naldrn_hit; }
+	        [move]			{ priority = low; * = s_e_ds2_gen_naldrn_mve_lp; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 15;
+		damage_min = 12;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = neck1;
+			body_mid = root_bone01;
+			body_posterior = spine3;
+			kill_bone = spine2;
+			shield_bone = lt.hand;
+			weapon_bone = rt.hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gbn_fy_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=fl; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=ds; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=fl; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=ds; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=fl; }
+			}
+		}
+	}
+	[common]
+	{
+        membership = krug, party_krug_shaman, party_krug_scout_boss, monster;
+		screen_name="Frost Pixie";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("pixie_dust");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+	[defend] { defense=2; }
+	[mind]
+	{
+		com_channels						= dyn_party, krug;
+		com_range							= 13.0;
+		on_enemy_spotted_alert_friends		= true;
+
+		actor_weapon_preference              = WP_MAGIC;
+		actor_auto_switches_to_magic         = true;
+		actor_auto_switches_to_karate         = false;
+		actor_auto_switches_to_melee         = false;
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		 = true
+			&party_template					 = "party_krug_shaman";
+
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:c24_2_r5_pixie_caster]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R5 pixie Caster";
+	specializes = c24_2_r5_pixie_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 8, 0;
+			dexterity = 13, 0;
+			intelligence = 6, 0;
+			nature_magic = 3, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30;
+		life = 72;
+		max_life = 72;
+		mana = 12;
+		max_mana = 12;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 15;
+		damage_min = 12;
+	}
+	[common]
+	{
+		screen_name="Frost Pixie";
+	}
+	[defend] { defense=2; }
+    [inventory]
+    {
+        spew_equipped_kill_count = <ignore>;
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r5_pixie_spell_rip_mana;
+            il_active_secondary_spell = c24_r5_pixie_spell_ice_orb;
+			il_spell_1 = c24_r5_pixie_spell_buff_magic_dmg;
+			il_spell_2 = c24_r5_pixie_spell_buff_dodge;
+			il_spell_3 = c24_r5_pixie_spell_buff_block_magic;
+        }
+    }
+	[mind]
+	{
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:c24_2_r5_pixie_healer]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R5 Pixie Healer";
+	specializes = c24_2_r5_pixie_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 8, 0;
+			dexterity = 13, 0;
+			intelligence = 6, 0;
+			nature_magic = 3, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30;
+		life = 72;
+		max_life = 72;
+		mana = 12;
+		max_mana = 12;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 15;
+		damage_min = 12;
+	}
+	[common]
+	{
+		screen_name="Frost Pixie";
+	}
+	[defend] { defense=2; }
+    [inventory]
+    {
+        spew_equipped_kill_count = <ignore>;
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r5_pixie_spell_rip_mana;
+            il_active_secondary_spell = c24_r5_pixie_spell_healing_wind;
+			il_spell_1 = c24_r5_pixie_spell_ressurect;
+        }
+    }
+	[mind]
+	{
+		actor_auto_reanimates_friends        = true;
+		actor_auto_heals_others_life		 = true;
+		actor_auto_heals_self_life		 	 = true;
+
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}

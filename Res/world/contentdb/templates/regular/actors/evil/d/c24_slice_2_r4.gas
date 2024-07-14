@@ -143,3 +143,130 @@
 		sight_range = 16.0;
 	}
 }
+[t:template,n:c24_2_r4_leopard]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R4 leopard";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 8, 0;
+			dexterity = 13, 0;
+			intelligence = 6, 0;
+			melee = 3, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30;
+		life = 72;
+		max_life = 72;
+		mana = 12;
+		max_mana = 12;
+		model = m_c_edm_068_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_068_c24_2;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_rac_skthcat_atk1;
+				* = s_e_ds2_rac_skthcat_atk2;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_rac_skthcat_die1;
+				* = s_e_ds2_rac_skthcat_die2;
+			}
+			[enemy_spotted]	{ priority = high; * = s_e_ds2_rac_skthcat_sgt; }
+			[hit_critical]	{ priority = low; * = s_e_ds2_rac_skthcat_hit; }
+			[hit_glance]	{ priority = low; * = s_e_ds2_rac_skthcat_hit; }
+			[hit_solid]		{ priority = low; * = s_e_ds2_rac_skthcat_hit; }
+			[move]			{ priority = low; * = s_e_ds2_rac_skthcat_mve_lp; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 15;
+		damage_min = 12;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine1;
+			shield_bone = bip01_L_hand;
+			weapon_bone = bip01_r_hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_068_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+				}
+				[anim_durations] { fs0 = 1.333; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00=di;
+					01=di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00=rl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+        membership = monster;
+		screen_name="Snow Panther";
+	}
+	[defend] { defense=2; }
+	[mind]
+	{
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}

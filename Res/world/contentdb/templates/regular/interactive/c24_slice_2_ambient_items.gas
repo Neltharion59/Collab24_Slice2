@@ -32,3 +32,25 @@
 		[break_particulate] {}
 	}
 }
+[dev,t:template,n:c24_2_r5_ice_tree]
+{
+	specializes	= base_tree;
+	doc	= "c24 r5 ice tree";
+	[aspect]
+	{
+
+		is_collidable = true;
+		is_selectable = true;
+		is_invincible = true;
+		does_block_path = true;
+
+		model			 = m_i_glb_tree-03;
+		scale_multiplier = 0.7;
+		textures:0		 = b_i_glb_ice_area;
+	}
+	[common]
+	{
+		rollover_display = TRUE;
+		screen_name = "Frost Tree";
+	}
+}
