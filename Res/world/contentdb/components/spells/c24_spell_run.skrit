@@ -1,0 +1,64 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  c24_spell_run.skrit
+// Author(s):  Emir Ghanawa
+//
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//
+// The caster flees (as when casting multiple summon)
+//
+//////////////////////////////////////////////////////////////////////////////
+
+owner = GoSkritComponent;
+
+Goid caster$;
+
+////////////////////////////////////////
+//	State Machine
+			
+startup state CastBegin$
+{
+ 	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{
+		if( e$ == WE_REQ_CAST ) {
+			caster$ = msg$.GetSendFrom();
+			
+			if( caster$.IsValid )
+            {
+                caster$.Go.Mind.TempQtColl1.Clear;
+                caster$.Go.Mind.TempQtColl1.Add( QT_ENEMY  );
+                caster$.Go.Mind.TempQtColl1.Add( QT_ALIVE_CONSCIOUS );
+            
+                Go temp_enemy$ = caster$.Go.Mind.GetClosestVisible( caster$.Go.Mind.TempQtColl1 );
+            
+                if (temp_enemy$ != NULL)
+                {
+                    caster$.Go.Mind.SDoJob( MakeJobReq( JAT_FLEE_FROM_OBJECT, JQ_ACTION, QP_CLEAR, AO_COMMAND, temp_enemy$.Goid ) );
+                }
+            }
+
+			SetState Finish$;
+		} 
+	}
+}
+
+
+state Finish$
+{
+	trigger OnGoHandleMessage$( WE_SPELL_SYNC_END )
+	{
+		SetState Finished$;
+	}
+}
+
+state Finished$
+{
+	event OnEnterState$
+	{
+		SiegeFx.ClearVariables( owner.goid );
+		
+		PostWorldMessage( WE_REQ_DELETE, owner.Goid, owner.Goid, 1 );
+	}
+}

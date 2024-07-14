@@ -577,7 +577,7 @@
 	[magic]
 	{
 		cast_range = 12;
-		cast_reload_delay = 0.15;
+		cast_reload_delay = 2;
 		mana_cost = 0;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -620,7 +620,7 @@
 	[magic]
 	{
 		cast_range = 12;
-		cast_reload_delay = 1;
+		cast_reload_delay = 2;
 
 		effect_duration = 20;
 
@@ -647,7 +647,7 @@
 	{
 		apply_enchantments = false;
 		cast_range = 22;
-		cast_reload_delay = 0.15;
+		cast_reload_delay = 2;
 		effect_duration = 7;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -693,7 +693,7 @@
 	{
 		apply_enchantments = false;
 		cast_range = 12;
-		cast_reload_delay = 0.15;
+		cast_reload_delay = 2;
 		effect_duration = 7;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -736,7 +736,7 @@
 	{
 		apply_enchantments = false;
 		cast_range = 12;
-		cast_reload_delay = 0.15;
+		cast_reload_delay = 2;
 		effect_duration = 7;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -773,14 +773,14 @@
 [t:template,n:c24_r5_pixie_spell_healing_wind]
 {
 	category_name = "magic";
-	doc = "collab24 r5 spell pixie ressurect";
+	doc = "collab24 r5 spell pixie healing wind";
 	specializes = base_spell_monster_nm;
 
 	[magic]
 	{
 		apply_enchantments = false;
 		cast_range = 20;
-		cast_reload_delay = 1;
+		cast_reload_delay = 2;
 		effect_duration = 6;
 		mana_cost = 0;
 		requires_line_of_sight = false;
@@ -814,12 +814,12 @@
 [t:template,n:c24_r5_pixie_spell_ressurect]
 {
 	category_name = "magic";
-	doc = "Lyottia 16 Shail spell full resurrect";
+	doc = "collab24 r5 spell pixie ressurect";
 	specializes = base_spell_monster_nm;
 	[magic]
 	{
 		cast_range = 17;
-		cast_reload_delay = 1;
+		cast_reload_delay = 2;
 		mana_cost = 0;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -830,5 +830,92 @@
 	{
 		effect_script	= full_resurrect;
 		heal_ratio		= 1.0;
+	}
+}
+[t:template,n:c24_r5_dragon_spell_fireball]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell dragon fireball";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		area_damage_radius = 3;
+		damage_max = 48;
+		damage_min = 42;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("c24_slice_02_effect_dragon_firebomb");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 17;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
+		usage_context_flags = uc_offensive;
+	}
+	[physics]
+	{
+		explosion_magnitude = 3;
+	}
+	[spell_default] {}
+}
+[t:template,n:c24_r5_dragon_spell_breath]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell dragon breath";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 34;
+		damage_min = 31;
+	}
+	[magic]
+	{
+		cast_range = 8;
+		cast_reload_delay = 1;
+		effect_duration = 5;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_fire]
+	{
+		effect_script = drake_frost;
+		ignite = false;
+		particle_fit = 0.2;
+		watch_caster = true;
+	}
+}
+[t:template,n:c24_r5_dragon_spell_run]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell dragon run";
+	specializes = base_spell_monster_nm;
+
+	[magic]
+	{
+		cast_range = 20;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = false;
+		speed_bias = 1;
+		target_type_flags = tt_self;
+		usage_context_flags = uc_offensive;
+	}
+	[c24_spell_run]
+	{
 	}
 }

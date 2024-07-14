@@ -221,7 +221,7 @@
 	script	=[[
 			
 			sfx create flurry #TARGET 
-				"offset(0,0.1,0)texture(b_sfx_031)scale(0.85)radius(.45)count(40)";
+				"offset(0,0.1,0)texture(b_sfx_031)scale(0.85)radius(.45)count(40)color0(0,0,0)";
 			sfx start #POP;
 
 			]];
@@ -288,5 +288,257 @@
 			pause 2;
 			
 			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+[effect_script*] // - ET
+{
+	name	=c24_slice_02_effect_dragon_firebomb;
+
+	script	=[[
+			///////////////////////////////////////
+			// all we do is call the base firebomb
+			call c24_slice_02_effect_dragon_firebomb_base v<0 0 0> u<1>;
+			waitfor script #POP #DEFAULT_TIMEOUT;
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+
+[effect_script*] // - ET
+{
+	name	=c24_slice_02_effect_dragon_firebomb_base;
+
+	script	=[[
+	
+			sfx create orbiter #TARGET_KB 
+				"radius(0)dur(10)invisible()";
+			sfx snap_to_ground #PEEK;              
+			set $orb #PEEK;
+			sfx start #POP;  
+			
+			pause .01;                                     
+	        
+			/////////////////////////////////////////
+			// This is the main trackball for the effect, everything is based off of this.
+			sfx create trackball #TARGET_KB 
+				"must_update()dir(0,1,0)dur(#DEFAULT_TIMEOUT)afterlife(2)scale(.45)
+				ts(1.4)homing()damped()kdamp(0)accel(1)color0(0,0,.4)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			set $trackball #POP;
+			sfx position_at $trackball @weapon_bone source;
+			sfx offset_bone $trackball [0] target;
+//			sfx freeze_targets $trackball;
+			sfx friendly party $trackball;
+			sfx start $trackball;
+			
+			pause .01;                                     
+	        
+			////////////////////
+			// choose a different starting point if we are fireball storm.
+			if ( [1] == 3 )
+			{
+				sfx position_at $trackball @kill_bone source;
+			}
+			else
+			{
+				sfx position_at $trackball @weapon_bone source;
+			} // ( [1] == 3 )
+
+			//////////////////////////////////////////
+			// Create a light to attach to our trackball
+			sfx create lightsource #SOURCE 
+				"must_update()color0(0,0,.4)color1(0,0,0)";
+			set $firelight #POP;
+			sfx rat $firelight;
+			sfx target $firelight $trackball;
+			sfx start $firelight;
+
+
+			//////////////////////////////////////////
+			// create the flames, the is supposed to be a fireball after all.
+			sfx create fire #SOURCE
+				"must_update()count(20)color0(0,0,.4)ts(1.5)
+				velocity(0,0,0)accel(0,0,0)alphafade(1)scale(.5)max_radius(10)
+				min_displace(-1)max_displace(1)bone_orient()texture(b_sfx_fireball-01)";	
+			set $fire #POP;
+			sfx rat $fire;
+			sfx target $fire $trackball;
+			sfx start $fire;
+			
+
+			sfx create fire #SOURCE
+				"must_update()count(30)color0(0,0,.4)ts(2.5)
+				velocity(0,0,0)accel(0,0,0)alphafade(1)scale(1.33)max_radius(3)
+				min_displace(-1)max_displace(1)bone_orient()texture(b_sfx_fireball-02)";	
+			set $fire2 #POP;
+			sfx rat $fire2;
+			sfx target $fire2 $trackball;
+			sfx start $fire2;
+			
+			sound play s_e_FBfireball_launch at #SOURCE_POSITION dist 3 20;
+			waitfor collision $trackball #DEFAULT_TIMEOUT;
+			
+			set $collision_type #POP;
+			if ( ( $collision_type == #OBJECT_COLLISION ) || ( $collision_type == #TERRAIN_COLLISION ) )
+			{
+				get target_position $trackball target;
+				sound play s_e_FBfireball_hit at #POP dist 3 20;
+				
+				if ( [1] == 1 )
+				{// if we are a plain old fireball
+					set $scale .7;
+					set $detail 20;
+				}
+				else
+				{
+					set $scale .4;
+					set $detail 16;
+				} // ( [1] == 1 )
+	
+				frandrange 10 40; frandrange 10 40; set $r1a #POP; set $r2a #POP;
+				frandrange 10 40; frandrange 10 40; set $r1b #POP; set $r2b #POP;
+				frandrange 10 40; frandrange 10 40; set $r1c #POP; set $r2c #POP;
+	
+				get collision point $trackball;
+				sfx create sphere #POP 
+					"must_update()scale($scale)color0(0,0,.4)dur(.5)tin(.2)
+					tout(.5)irotate($r1a,$r1b,$r1c)grow_params(.1,1.5,3)";
+				sfx start #POP;
+	
+				get collision point $trackball;
+				sfx create sphere #POP 
+					"must_update()scale($scale)color0(0,0,.4)dur(.5)tin(.2)
+					tout(.5)irotate($r2a,$r2b,$r2c)grow_params(.1,1.5,3)";
+				sfx start #POP;
+	
+				get collision point $trackball;
+				sfx create cylinder #POP 
+					"must_update()scale($scale)texture(b_sfx_cyl_03)hp0(.1,.1,.1)
+					hp1(.1,.1,.1)rp0(0,8,5)rp1(.75,8.75,8)tin(.20)tout(.5)
+					dur(.65)color0(0,0,.4)spin(15)segments($detail)";
+				sfx start #POP;
+	
+				//////////////////////////////////
+				// create a little explosion where the ball hits.
+				get collision point $trackball;
+				sfx create explosion #POP 
+					"must_update()count($detail)color0(0,0,.4)rvel(8,0,8)
+					vmin(2)vmax(4)";
+				sfx start #POP;
+	
+				get collision point $trackball;
+				sfx create explosion #POP 
+					"must_update()count($detail)color0(0,0,.4)rvel(8,0,8)
+					texture(b_sfx_031)vmin(2)vmax(4)";
+				sfx start #POP;
+	
+				get collision point $trackball;
+				sfx create flurry #POP
+					"must_update()count(40)tin(0)tout(.5)dur(0.5)color0(0,0,.4)
+					grow_params(-.3,1.6,1.9)scale(1.55)delay(.07)";
+				sfx start #POP;
+	
+				//////////////////////////////////
+				// some tracer lookin things
+				get collision point $trackball;
+				sfx create sray #POP 
+					"must_update()count($detail)ts(5)offset(0,.5,0)dur(.2)
+					scale($scale)radius(.5)lmin(2)lmax(5)color0(0,0,0)color1(0,0,.4)
+					theta(0,0,0)phi(0,0,0)wsmin(0)wsmax(0)wemin(.1)wemax(.1)";
+				sfx start #POP;
+				
+				////////////////////////////
+				// clean up
+				sfx destroy $trackball;
+			}
+			
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+						
+			]];
+}
+[effect_script*]
+{
+	name	=c24_slice_02_effect_fairy_queen_spark_multi;
+
+	script	=[[
+			sound play s_e_spell_iceshard_cast at #SOURCE_POSITION dist 3 25;
+
+			frandrange 4 5; frandrange 3 4;
+			call c24_slice_02_effect_fairy_queen_spark_base <accel(#POP)velocity(#POP)dir(.2,0,0)>;
+			frandrange 4 5; frandrange 3 4;
+			call c24_slice_02_effect_fairy_queen_spark_base <accel(#POP)velocity(#POP)dir(0,0,-.2)>;
+			frandrange 4 5; frandrange 3 4;
+			call c24_slice_02_effect_fairy_queen_spark_base <accel(#POP)velocity(#POP)dir(-.2,0,0)>;
+			frandrange 4 5; frandrange 3 4;
+			call c24_slice_02_effect_fairy_queen_spark_base <accel(#POP)velocity(#POP)dir(0,0,.2)>;
+
+			pause 5;
+
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+
+[effect_script*]
+{
+	name	=c24_slice_02_effect_fairy_queen_spark_base;
+
+	script	=[[
+			set $size .3;
+
+			/////////////////////////////////////////
+			// This is the main trackball for the effect, everything is based off of this.
+			sfx create trackball #TARGET_KB 
+				"invisible()must_update()scale(1.65)
+				homing()damped()kdamp(.01)dur(#DEFAULT_TIMEOUT)afterlife(2)[0]";
+			set $trackball #POP;
+			sfx position_at $trackball @weapon_bone source;
+			sfx friendly party $trackball;
+			sfx start $trackball;
+
+			randrange 0 6;
+			set $temp #POP;
+			if ( $temp == 1 )
+			{
+				set $orb_model chunks_ice_01;
+			} else if ($temp == 2)
+			{
+				set $orb_model chunks_ice_02;
+			} else if ($temp == 3)
+			{
+				set $orb_model chunks_ice_03;
+			} else if ($temp == 4)
+			{
+				set $orb_model chunks_ice_04;
+			} else
+			{
+				set $orb_model chunks_ice_05;
+			}
+
+			sfx create orbiter #TARGET 
+				"must_update()scale(2)dur(10)radius(0)theta(0)iphi(0)
+				itheta(0)rotate(90,0,0)rot_inc(0,1000,0)model($orb_model)";
+			set $skull #POP;
+			sfx rat $skull;
+			sfx target $skull $trackball;
+			sfx start $skull;
+
+			waitfor collision $trackball #DEFAULT_TIMEOUT;
+
+			set $collision_type #POP;
+
+			if ( ( $collision_type == #OBJECT_COLLISION ) || ( $collision_type == #TERRAIN_COLLISION ) )
+			{
+				get collision point $trackball;
+				sfx create explosion #POP 
+					"must_update()texture(b_sfx_sparkle01)color0(.5,.5,1)
+					radius(0)dur(2)omni_dir()";
+				sfx start #POP;
+
+				get target_position $trackball target;
+				sound play s_e_die_shard_small at #POP dist 3 20;
+			}
+
+			sfx destroy $trackball;
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
 			]];
 }
