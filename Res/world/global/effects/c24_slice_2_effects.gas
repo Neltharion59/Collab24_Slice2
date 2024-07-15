@@ -302,7 +302,6 @@
 			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
 			]];
 }
-
 [effect_script*] // - ET
 {
 	name	=c24_slice_02_effect_dragon_firebomb_base;
@@ -327,7 +326,7 @@
 			set $trackball #POP;
 			sfx position_at $trackball @weapon_bone source;
 			sfx offset_bone $trackball [0] target;
-//			sfx freeze_targets $trackball;
+
 			sfx friendly party $trackball;
 			sfx start $trackball;
 			
@@ -477,7 +476,6 @@
 			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
 			]];
 }
-
 [effect_script*]
 {
 	name	=c24_slice_02_effect_fairy_queen_spark_base;
@@ -539,6 +537,503 @@
 			}
 
 			sfx destroy $trackball;
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+[effect_script*]
+{
+	name	=c24_slice_02_effect_ice_element_dragon_fire;
+
+	script	=[[
+			sound play s_e_ds2_power_ice_elemental at #TARGET_POSITION dist 3 25;
+		
+			set $velocity 0,0,40;
+			set $accel 0,0,0;
+
+			set $flames1 60;
+			set $flames2 80;
+
+			sfx create fireb #SOURCE 
+				"offset(0,.2,.5)fctrl(0,0,7)flamesize(1)alphafade(.5)ts(.6)color0(.28,.6,1)
+				velocity($velocity)accel($accel)cvel(1)lower_r0(0)lower_r1(0)
+				upper_r0(0)upper_r1(20)count(80)texture(b_sfx_fireball-01)max_displace(2)min_displace(-2)";
+			sfx friendly party #PEEK;
+			set $fire1 #PEEK;
+			sfx start #POP;
+
+			sfx create fireb #SOURCE 
+				"offset(0,.2,.5)fctrl(0,0,7)flamesize(2)alphafade(.5)ts(.6)color0(.28,.6,1)
+				velocity($velocity)accel($accel)cvel(1)lower_r0(0)lower_r1(0)start_rate(10)
+				upper_r0(0)upper_r1(20)count(30)texture(b_sfx_fireball-02)max_displace(3)min_displace(-3)";
+			sfx friendly party #PEEK;
+			set $fire2 #PEEK;
+			sfx start #POP;
+
+			sfx create fireb #SOURCE 
+				"offset(0,.2,.5)fctrl(0,0,0)flamesize(1)alphafade(.5)ts(1.6)color0(.28,.6,1)
+				velocity(-10,0,5)accel(0,0,-10)cvel(1)lower_r0(0)lower_r1(0)max_displace(3)min_displace(-3)
+				upper_r0(10)upper_r1(20)count(30)start_rate(10)texture(b_sfx_fireball-01)";
+			sfx friendly party #PEEK;
+			set $fire3 #PEEK;
+			sfx start #POP;
+			
+			sfx create fireb #SOURCE 
+				"offset(0,.2,.5)fctrl(0,0,0)flamesize(1)alphafade(.5)ts(1.6)color0(.28,.6,1)
+				velocity(10,0,5)accel(0,0,-10)cvel(1)lower_r0(0)lower_r1(0)max_displace(3)min_displace(-3)
+				upper_r0(10)upper_r1(20)count(30)start_rate(10)texture(b_sfx_fireball-01)";
+			sfx friendly party #PEEK;
+			set $fire4 #PEEK;
+			sfx start #POP;
+			
+			sfx create fireb #SOURCE 
+				"offset(0,.2,.5)fctrl(0,0,2)flamesize(.1)alphafade(.45)ts(.6)color0(.28,.6,1)
+				velocity($velocity)accel($accel)cvel(1)lower_r0(4)lower_r1(4)max_displace(6)min_displace(-6)
+				upper_r0(10)upper_r1(30)count(80)texture(b_sfx_sparkle01)[0]";
+			sfx friendly party #PEEK;
+			set $fire5 #PEEK;
+			sfx start #POP;
+			
+			sfx create fireb #SOURCE 
+				"offset(0,.2,.5)fctrl(0,0,2)flamesize(.2)alphafade(.45)ts(.6)color0(0,0,0)
+				velocity($velocity)accel($accel)cvel(1)lower_r0(3)lower_r1(3)max_displace(3)min_displace(-3)
+				upper_r0(10)upper_r1(30)count(80)dark()";
+			sfx friendly party #PEEK;
+			set $fire6 #PEEK;
+			sfx start #POP;
+			
+			pause [2];
+			
+			sfx finish $fire1;
+			sfx finish $fire2;
+			sfx finish $fire3;
+			sfx finish $fire4;
+			sfx finish $fire5;
+			sfx finish $fire6;
+			
+			pause 6.5;
+			
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+[effect_script*]
+{
+	name	=c24_slice_02_effect_ice_element_ice_mage_balls;
+
+	script	=[[
+			
+			sfx create orbiter #SOURCE 
+				"dur(1.3)scale(.3)radius(1)iphi(18)color0(.400,.839,1.000)";
+			sfx attach_point #PEEK @shield_bone target;
+			sfx start #POP;
+			
+			pause .2;
+			
+			sfx create orbiter #SOURCE 
+				"dur(1.3)scale(.3)radius(1)iphi(18)color0(.400,.839,1.000)";
+			sfx attach_point #PEEK @weapon_bone target;
+			sfx start #POP;
+			
+			pause .2;
+			
+			sfx create orbiter #SOURCE 
+				"dur(1.3)scale(.3)radius(1)iphi(18)color0(.400,.839,1.000)";
+			sfx attach_point #PEEK @shield_bone target;
+			sfx start #POP;
+			
+			pause .2;
+			
+			sfx create orbiter #SOURCE 
+				"dur(1.3)scale(.3)radius(1)iphi(18)color0(.400,.839,1.000)";
+			sfx attach_point #PEEK @weapon_bone target;
+			sfx start #POP;
+			
+			pause .2;
+			
+			sfx create orbiter #SOURCE 
+				"dur(1.3)scale(.3)radius(1)iphi(18)color0(.400,.839,1.000)";
+			sfx attach_point #PEEK @shield_bone target;
+			sfx start #POP;
+			
+			pause .2;
+			
+			sfx create trackball #TARGET_KB 
+				"invisible()velocity(10)texture(b_sfx_sparkle_02)scale(.4)
+				color0(.400,.839,1.000)dur(6)afterlife(0)";
+			sfx position_at #PEEK @weapon_bone source;
+			sfx friendly party #PEEK;
+			set $trackball #PEEK;
+			sfx start $trackball;
+			
+			get target_position $trackball target;
+			sound play s_e_ds2_icebolt_fire at #POP dist 10 30;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(1)radius(0)phi(0)iphi(8)color0(.400,.839,1.000)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.8)radius(.5)phi(.7)iphi(8)color0(.400,.839,1.000)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.6)radius(1.25)phi(1)iphi(8)color0(.400,.839,1.000)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+
+			if( #LODFI > .5 )
+			{			
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.4)radius(2.5)phi(1.3)iphi(8)color0(.400,.839,1.000)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+				
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.2)radius(6)phi(1.6)iphi(8)color0(.400,.839,1.000)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+			}
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.8)radius(.5)phi(3.84)iphi(8)color0(.400,.839,1.000)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.6)radius(1.25)phi(4.14)iphi(8)
+				color0(.400,.839,1.000)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			if( #LODFI > .5 )
+			{
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.4)radius(2.5)phi(4.44)iphi(8)color0(.400,.839,1.000)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+				
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.2)radius(6)phi(4.74)iphi(8)color0(.400,.839,1.000)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+			}
+			////
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.8)radius(.5)phi(2.27)iphi(8)color0(.400,.839,1.000)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.6)radius(1.25)phi(2.57)iphi(8)
+				color0(.400,.839,1.000)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			if( #LODFI > .5 )
+			{
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.4)radius(2.5)phi(2.87)iphi(8)color0(.400,.839,1.000)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+				
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.2)radius(6)phi(3.17)iphi(8)color0(.400,.839,1.000)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+			}
+				
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.8)radius(.5)phi(5.41)iphi(8)color0(.400,.839,1.000)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()free()dur(1.3)scale(.6)radius(1.25)phi(5.71)iphi(8)
+				color0(.400,.839,1.000)";
+			sfx rat #PEEK;
+			sfx target #PEEK $trackball;
+			sfx start #POP;
+			if( #LODFI > .5 )
+			{		
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.4)radius(2.5)phi(6.01)iphi(8)color0(.400,.839,1.000)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+				
+				sfx create orbiter #SOURCE 
+					"must_update()free()dur(1.3)scale(.2)radius(6)phi(6.31)iphi(8)color0(.400,.839,1.000)";
+				sfx rat #PEEK;
+				sfx target #PEEK $trackball;
+				sfx start #POP;
+				
+				sfx create orbiter #SOURCE 
+					"must_update()dur(1.3)scale(.3)radius(1)iphi(18)color0(.400,.839,1.000)";
+				sfx attach_point #PEEK @weapon_bone target;
+				sfx start #POP;
+			}
+			pause .2;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()dur(1.3)scale(.3)radius(1)iphi(18)color0(.400,.839,1.000)";
+			sfx attach_point #PEEK @shield_bone target;
+			sfx start #POP;
+			
+			pause .2;
+			
+			sfx create orbiter #SOURCE 
+				"must_update()dur(1.3)scale(.3)radius(1)iphi(18)color0(.400,.839,1.000)";
+			sfx attach_point #PEEK @weapon_bone target;
+			sfx start #POP;
+			
+			waitfor collision $trackball #DEFAULT_TIMEOUT;
+
+			set $collision_type #POP;
+
+			if ( $collision_type != #NO_COLLISION )
+			{
+				get collision point $trackball;
+
+				sfx create spe #POP 
+					"tin(1)tout(1)ts(1)color0(.400,.839,1.000)radius(.6)scale(.2)
+					count(20)dur(1)index0(0,-1.57,1.57)index1(0,-1.57,1.57)
+					speed0(11,0,11)speed1(10,0,10)space0(.5,.1,.5)space1(.5,.1,.5)";
+				sfx freeze_targets #PEEK;
+				sfx start #POP;
+
+				get collision point $trackball;
+
+				sfx create explosion #POP 
+					"texture(b_sfx_sparkle01)color0(.400,.839,1.0002)radius(0)dur(2)
+					omni_dir()";
+				set $exp #POP;
+				sfx start $exp;
+
+				get target_position $exp target;
+				sound play s_e_ds2_icebolt_hit at #POP dist 3 30;
+			}
+
+			sfx destroy $trackball;
+
+			pause 2;
+			
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+[effect_script*]
+{
+	name	=c24_slice_02_effect_ice_element_explosion;
+
+	script	=[[
+
+			set $dur 2;
+			set $alpha .1;
+
+			// Pestilence
+
+			sfx create orbiter #TARGET 
+				"must_update()iphi(0)radius(0)invisible()dur($dur)";
+			set $base #POP;
+			sfx snap_to_ground $base;
+			sfx start $base;
+
+			sfx create orbiter #TARGET 
+				"must_update()offset(0,.3,0)iphi(0)radius(0)invisible()
+				dur($dur)";
+			set $orb #POP;
+			sfx rat $orb;
+			sfx target $orb $base;
+			sfx start $orb;
+
+			sfx create orbiter #TARGET 
+				"must_update()iphi(2)radius(3)invisible()dur($dur)";
+			set $orb2 #POP;
+			sfx rat $orb2;
+			sfx target $orb2 $orb;
+			sfx start $orb2;
+
+			sfx create orbiter #TARGET 
+				"must_update()iphi(-3)radius(3)invisible()dur($dur)";
+			set $orb3 #POP;
+			sfx rat $orb3;
+			sfx target $orb3 $orb;
+			sfx start $orb3;
+
+			sfx create orbiter #TARGET 
+				"must_update()iphi(1)radius(2)invisible()dur($dur)";
+			set $orb4 #POP;
+			sfx rat $orb4;
+			sfx target $orb4 $orb;
+			sfx start $orb4;
+
+			sfx create fire #TARGET 
+				"must_update()dark()grey_tex()color0(.400,.839,1.000)dur($dur)
+				count(90)velocity(0,.5,0)accel(0,0,0)alphafade(.1)flamesize(8)
+				max_radius(30)min_displace(.4)max_displace(.5)";
+			set $pcloud #POP;
+			sfx rat $pcloud;
+			sfx target $pcloud $orb;
+			sfx start $pcloud;
+
+			sfx create fire #TARGET 
+				"must_update()dark()grey_tex()color0(.400,.839,1.000)dur($dur)
+				count(40)velocity(0,8,0)accel(0,0,0)alphafade(.3)flamesize(6)
+				max_radius(3)min_displace(.1)max_displace(.2)";
+			set $pcloud2 #POP;
+			sfx rat $pcloud2;
+			sfx target $pcloud2 $orb2;
+			sfx start $pcloud2;
+
+			sfx create fire #TARGET 
+				"must_update()line()color0(.400,.839,1.000)dur($dur)count(40)velocity(0,15,0)
+				accel(0,15,0)alphafade(.8)flamesize(4)max_radius(6)min_displace(.1)
+				max_displace(1.8)[0]";
+			set $pcloud3 #POP;
+			sfx rat $pcloud3;
+			sfx target $pcloud3 $orb3;
+			sfx target $pcloud3 $orb2;
+			sfx start $pcloud3;
+
+			sfx create fire #TARGET 
+				"must_update()color0(.400,.839,1.000)dur($dur)count(7)velocity(0,2,0)
+				accel(0,0,0)alphafade(.4)flamesize(.3)max_radius(30)
+				min_displace(.4)max_displace(.5)";
+			set $speckle1 #POP;
+			sfx rat $speckle1;
+			sfx target $speckle1 $orb;
+			sfx start $speckle1;
+
+			sfx create fire #TARGET 
+				"must_update()color0(.400,.839,1.000)dur($dur)count(7)velocity(0,2,0)
+				accel(0,0,0)alphafade(.4)flamesize(.1)min_radius(25)
+				max_radius(30)min_displace(.4)max_displace(.5)";
+			set $speckle2 #POP;
+			sfx rat $speckle2;
+			sfx target $speckle2 $orb;
+			sfx start $speckle2;
+
+			sfx create fireb  #TARGET 
+				"must_update()dur($dur)color0(.400,.839,1.000)velocity(0,10,0)
+				accel(0,0,0)alphafade(.2)lower_r0(0)lower_r1(0)upper_r0(-2)
+				upper_r1(-4)count(20)flamesize(2)";
+			set $spurt #POP;
+			sfx rat $spurt;
+			sfx target $spurt $orb4;
+			sfx start $spurt;
+
+			// Explosion
+			
+			sfx create cylinder #TARGET
+				"alpha($alpha)scale(1)texture(b_sfx_cyl_03)hp0(-.5,-.5,0)
+				hp1(0,0,0)rp0(1.25,4.25,3)rp1(.25,3.25,3)tin(.20)tout(.5)
+				dur($dur)color0(.400,.839,1.000)spin(15)segments(10)";
+			sfx freeze_targets #PEEK;
+			set $ring #PEEK;
+			sfx start #POP;
+			
+			get target_position $ring target;
+			sound play s_e_FBFireball_hit at #POP dist 5 40;
+			
+			sfx create cylinder #TARGET
+				"alpha($alpha)scale(.66)texture(b_sfx_cyl_03)hp0(-.5,-.5,0)
+				hp1(0,0,0)rp0(1.25,4.25,3)rp1(.25,3.25,3)tin(.20)tout(.5)
+				dur($dur)color0(.400,.839,1.000)spin(20)segments(8)";
+			sfx freeze_targets #PEEK;
+			sfx start #POP;
+
+			sfx create cylinder #TARGET
+				"alpha($alpha)scale(.33)texture(b_sfx_cyl_03)hp0(-.5,-.5,0)
+				hp1(0,0,0)rp0(1.25,4.25,3)rp1(.25,3.25,3)tin(.20)tout(.5)
+				dur($dur)color0(.400,.839,1.000)spin(25)segments(6)";
+			sfx freeze_targets #PEEK;
+			sfx start #POP;
+			
+			// create a small explosion of particles with a sparkle texture
+			sfx create explosion #TARGET 
+				"dur(1)scale(1)texture(b_sfx_sparkle01)offset(0,.2,0)
+				color0(.400,.839,1.000)color1(0,0,0)omni_dir()";
+			sfx start #POP;
+			
+			// create a small explosion of particles
+			sfx create explosion #TARGET 
+				"dur(1)scale(1.2)offset(0,.2,0)color0(.400,.839,1.000)color1(0,0,0)
+				omni_dir()";
+			sfx start #POP;
+			
+			pause .15;
+			
+			// create a small explosion of particles with a sparkle texture
+			sfx create explosion #TARGET 
+				"dur(1)scale(1)texture(b_sfx_sparkle01)offset(0,.2,0)
+				color0(.400,.839,1.000)color1(0,0,0)omni_dir()";
+			sfx start #POP;
+			
+			// create a small explosion of particles
+			sfx create explosion #TARGET 
+				"dur(1)scale(1.2)offset(0,.2,0)color0(.400,.839,1.000)color1(0,0,0)
+				omni_dir()";
+			sfx start #POP;
+			
+			pause .15;
+			
+			// create a small explosion of particles with a sparkle texture
+			sfx create explosion #TARGET 
+				"dur(1)scale(1)texture(b_sfx_sparkle01)offset(0,.2,0)
+				color0(.400,.839,1.000)color1(0,0,0)omni_dir()";
+			sfx start #POP;
+			
+			// create a small explosion of particles
+			sfx create explosion #TARGET 
+				"dur(1)scale(1.2)offset(0,.2,0)color0(.400,.839,1.000)color1(0,0,0)
+				omni_dir()";
+			sfx start #POP;
+			
+			pause .15;
+			
+			// create a small explosion of particles with a sparkle texture
+			sfx create explosion #TARGET 
+				"dur(1)scale(1)texture(b_sfx_sparkle01)offset(0,.2,0)
+				color0(.400,.839,1.000)color1(0,0,0)omni_dir()";
+			sfx start #POP;
+			
+			// create a small explosion of particles
+			sfx create explosion #TARGET 
+				"dur(1)scale(1.2)offset(0,.2,0)color0(.400,.839,1.000)color1(0,0,0)
+				omni_dir()";
+			sfx start #POP;
+			]];
+}
+[effect_script*] // -ET
+{
+	name	=c24_slice_02_effect_ice_element_ring_fire;
+
+	script =[[
+			sound play s_e_ds2_power_ice_elemental at #TARGET_POSITION dist 3 25;
+			
+			sfx create fire #SOURCE
+			"must_update()flamesize(1)count(100)color0(.400,.839,1.000)color1(0,0,0)
+			velocity(0,-10,0)accel(0,16,0)alphafade(.65)min_displace(0)
+			max_displace(0)radius([3])min_radius(.5)max_radius(3)
+			[0][1]";
+			
+			sfx start #POP;
+			
 			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
 			]];
 }

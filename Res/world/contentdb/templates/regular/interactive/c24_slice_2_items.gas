@@ -1,0 +1,402 @@
+[t:template,n:c24_sd_ice]
+{
+	doc = "c24 wpn Ice Sword";
+	specializes = base_sword;
+	[aspect]
+	{
+		model = m_w_swd_003;
+		[textures]
+		{
+			0 = b_i_glb_ice;
+		}
+	}
+	[attack]
+	{
+		damage_max = 30;
+		damage_min = 24;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+		screen_name = "Ice Sword";
+	}
+	[gui]
+	{
+		active_icon = b_gui_ig_i_ic_swd_005;
+		equip_requirements = strength:15;
+		inventory_height = 4;
+		inventory_icon = b_gui_ig_i_w_swd_068;
+		inventory_width = 1;
+	}
+    [magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+                alteration			= alter_custom_damage_chance_melee;
+                custom_damage		= cold;
+                value				= 15;
+                description			= "+15% Chance to Freeze and";
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_melee;
+                custom_damage		= cold;
+                value				= 2;
+                max_value			= 4;
+                description			= "Adds 2 to 4 Cold Damage";
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+                effect_script_equip	= dam_ice_7_wh;
+                effect_script_hit	= hit_flash_10_lbl;
+                custom_damage_skrit = world\global\skrits\weapon_cold.skrit?freeze_time=2.0;
+			}
+		}
+	}
+}
+[t:template,n:c24_ax_ice]
+{
+	doc = "c24 wpn Ice Axe";
+	specializes = base_axe;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_w_axe_029;
+		[textures]
+		{
+			0 = b_i_glb_ice;
+		}
+	}
+	[attack]
+	{
+		damage_max = 34;
+		damage_min = 22;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+		screen_name = "Ice Axe";
+	}
+	[gui]
+	{
+		is_droppable = false;
+	}
+    [magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+                alteration			= alter_custom_damage_chance_melee;
+                custom_damage		= cold;
+                value				= 15;
+                description			= "+15% Chance to Freeze and";
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_melee;
+                custom_damage		= cold;
+                value				= 2;
+                max_value			= 4;
+                description			= "Adds 2 to 4 Cold Damage";
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+                effect_script_equip	= dam_ice_7_wh;
+                effect_script_hit	= hit_flash_10_lbl;
+                custom_damage_skrit = world\global\skrits\weapon_cold.skrit?freeze_time=2.0;
+			}
+		}
+	}
+}
+[t:template,n:c24_mc_ice]
+{
+	doc = "c24 wpn Ice Mace";
+	specializes = base_mace;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_w_mce_064;
+		[textures]
+		{
+			0 = b_i_glb_ice;
+		}
+	}
+	[attack]
+	{
+		damage_max = 38;
+		damage_min = 20;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+		screen_name = "Ice Mace";
+	}
+	[gui]
+	{
+		is_droppable = false;
+	}
+    [magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+                alteration			= alter_custom_damage_chance_melee;
+                custom_damage		= cold;
+                value				= 15;
+                description			= "+15% Chance to Freeze and";
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_melee;
+                custom_damage		= cold;
+                value				= 2;
+                max_value			= 4;
+                description			= "Adds 2 to 4 Cold Damage";
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+                effect_script_equip	= dam_ice_7_wh;
+                effect_script_hit	= hit_flash_10_lbl;
+                custom_damage_skrit = world\global\skrits\weapon_cold.skrit?freeze_time=2.0;
+			}
+		}
+	}
+}
+[t:template,n:c24_st_ice]
+{
+	doc = "c24 wpn Ice Staff";
+	specializes = base_staff;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_w_stf_013;
+	}
+	[attack]
+	{
+		damage_max = 35;
+		damage_min = 20;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+	}
+	[gui]
+	{
+		is_droppable = false;
+	}
+    [magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+                alteration			= alter_custom_damage_chance_melee;
+                custom_damage		= cold;
+                value				= 15;
+                description			= "+15% Chance to Freeze and";
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_melee;
+                custom_damage		= cold;
+                value				= 2;
+                max_value			= 4;
+                description			= "Adds 2 to 4 Cold Damage";
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+                effect_script_equip	= dam_ice_7_wh;
+                effect_script_hit	= hit_flash_10_lbl;
+                custom_damage_skrit = world\global\skrits\weapon_cold.skrit?freeze_time=2.0;
+			}
+		}
+	}
+}
+[t:template,n:c24_st_ice_thrown_ammo]
+{
+	specializes = base_arrow;
+	[aspect]
+	{
+		material = ice;
+		model=m_w_stf_013;
+		is_selectable	= false;
+		[voice]
+		{
+			[attack] { * = s_e_swing_01; }
+		}
+	}
+	[attack]
+	{
+		damage_max = 0;
+		damage_min = 0;
+	}
+	[common]
+	{
+		is_pcontent_allowed = FALSE;
+		screen_name = "Ice Spear";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("rock_tracer");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+
+	[physics]
+	{
+		angular_velocity = 0,0,30.0;
+		gravity = 3;
+		orient_to_trajectory = true;
+	}
+}
+[t:template,n:c24_st_ice_thrown]
+{
+	doc = "c24 wpn thrown Ice Staf";
+	specializes = base_bow;
+	[aspect]
+	{
+		material = ice;
+		is_selectable = false;
+		model = m_w_stf_013;
+		[voice]
+		{
+			[attack]
+			{
+				* = s_e_swing_01;
+				* = s_e_swing_03;
+			}
+		}
+	}
+	[attack]
+	{
+		ammo_appears_jit = true;
+		ammo_template = c24_st_thrown_ammo;
+		damage_max = 32;
+		damage_min = 28;
+		attack_range = 12;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+		screen_name = "Ice Spear";
+	}
+	[gui]
+	{
+		is_droppable = false;
+	}
+	[physics]
+	{
+		velocity = 11;
+	}
+}
+[t:template,n:c24_bw_ice]
+{
+	category_name = "weapon";
+	doc = "c24 wpn Ice Bow";
+	specializes = base_bow;
+	[aspect]
+	{
+		model = m_w_bow_009;
+	}
+	[attack]
+	{
+		ammo_template = arrow_ice;
+		attack_range = 11;
+		damage_max = 34;
+		damage_min = 28;
+		reload_delay = 0.15;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+		screen_name = "Ice Bow";
+	}
+	[gui]
+	{
+		active_icon = b_gui_ig_i_ic_bow_004;
+		equip_requirements = strength:12,dexterity:16;
+		inventory_height = 3;
+		inventory_icon = b_gui_ig_i_w_bow_087;
+		inventory_width = 1;
+	}
+    [magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+                alteration			= alter_custom_damage_chance_ranged;
+                custom_damage		= cold;
+                value				= 15;
+                description			= "+15% Chance to Freeze and";
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_ranged;
+                custom_damage		= cold;
+                value				= 2;
+                max_value			= 4;
+                description			= "Adds 2 to 4 Cold Damage";
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+                effect_script_hit	= bow_frost_10_lbl;
+                custom_damage_skrit = world\global\skrits\weapon_cold.skrit?freeze_time=2.0;
+			}
+		}
+	}
+}
+[t:template,n:c24_spike_mine_worm]
+{
+	specializes = base_arrow;
+	[aspect]
+	{
+		model=m_w_misc_014;
+		scale_base = 0.5;
+	}
+	[attack]
+	{
+		damage_max = 2;
+		damage_min = 1;
+	}
+	[common]
+	{
+		screen_name = "Spike";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("mine_worm_spike_dust");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+	[physics]
+	{
+		angular_velocity = 0,0,10.0;
+		gravity = 3;
+	}
+}

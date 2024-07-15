@@ -375,6 +375,71 @@
 		effect_script = spirit_armor;
 	}
 }
+[t:template,n:c24_r4_scorpion_spell_spikes]
+{
+	category_name = "magic";
+	doc = "collab24 r4 spell scorpion spikes";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		aiming_error_range_x = 2.5;
+		aiming_error_range_y = 2.5;
+		ammo_attach_bone = ap_flame;
+		ammo_template = spike_mine_worm;
+		damage_max = 24;
+		damage_min = 22;
+		use_aiming_error = true;
+	}
+	[magic]
+	{
+		cast_range = 12;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+		skill_class = Ranged;
+	}
+	[physics]
+	{
+		velocity = 25;
+	}
+	[spell_launch]
+	{
+		number = 1;
+	}
+}
+[t:template,n:c24_r4_googore_spell_gas]
+{
+	category_name = "magic";
+	doc = "collab24 r4 spell googore gas";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 72;
+		damage_min = 68;
+	}
+	[magic]
+	{
+		cast_range = 8;
+		cast_reload_delay = 0;
+		effect_duration = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+		magic_class = mc_nature_magic;
+		skill_class = "Nature Magic";
+	}
+	[spell_fire]
+	{
+		effect_script = dsx_skatwyrm_gas;
+		particle_fit = 0.2;
+		watch_caster = true;
+	}
+}
 [t:template,n:c24_r5_snowflake_spell_attack]
 {
 	category_name = "magic";
@@ -558,10 +623,10 @@
 		casterDescription = "Orb of Frost";
 	}
 }
-[t:template,n:c24_r5_pixie_spell_rip_mana]
+[t:template,n:c24_r5_naldrun_spell_rip_mana]
 {
 	category_name = "magic";
-	doc = "collab24 r5 spell pixie rip mana";
+	doc = "collab24 r5 spell naldrun rip mana";
 	specializes = base_spell_monster_nm;
 	[common]
 	{
@@ -603,45 +668,10 @@
 	}
 	[spell_default] {}
 }
-[t:template,n:c24_r5_pixie_spell_ice_orb]
+[t:template,n:c24_r5_naldrun_spell_buff_magic_dmg]
 {
 	category_name = "magic";
-	doc = "collab24 r5 spell pixie ice orb";
-	specializes = base_spell_monster_nm;
-	[attack]
-	{
-		damage_max = 12;
-		damage_min = 10;
-	}
-	[common]
-	{
-		screen_name = "Orb of Ice";
-	}
-	[magic]
-	{
-		cast_range = 12;
-		cast_reload_delay = 2;
-
-		effect_duration = 20;
-
-		target_type_flags = tt_self;
-		usage_context_flags = uc_offensive;
-		caster_state_name = "Orb_spell_orbiting";
-		require_state_check = true;
-	}
-	[spell_orb]
-	{
-		orbEffect = orb_ice_orbiter;
-		orbSoundEffect = orb_ice_sound;
-		shotEffect = orb_ice_projectile;
-		isLightning = true;
-		casterDescription = "Orb of Frost";
-	}
-}
-[t:template,n:c24_r5_pixie_spell_buff_magic_dmg]
-{
-	category_name = "magic";
-	doc = "collab24 r5 spell pixie Buff Magic Dmg";
+	doc = "collab24 r5 spell naldrun Buff Magic Dmg";
 	specializes = base_spell_monster;
 	[magic]
 	{
@@ -684,10 +714,10 @@
 		description		= "Wrath of Magic";
 	}
 }
-[t:template,n:c24_r5_pixie_spell_buff_dodge]
+[t:template,n:c24_r5_naldrun_spell_buff_dodge]
 {
 	category_name = "magic";
-	doc = "collab24 r5 spell pixie Buff Dodge";
+	doc = "collab24 r5 spell naldrun Buff Dodge";
 	specializes = base_spell_monster;
 	[magic]
 	{
@@ -727,10 +757,10 @@
 		description		= "Wind Embrace";
 	}
 }
-[t:template,n:c24_r5_pixie_spell_buff_block_magic]
+[t:template,n:c24_r5_naldrun_spell_buff_block_magic]
 {
 	category_name = "magic";
-	doc = "collab24 r5 spell pixie Buff Block Magic";
+	doc = "collab24 r5 spell naldrun Buff Block Magic";
 	specializes = base_spell_monster;
 	[magic]
 	{
@@ -770,10 +800,10 @@
 		description		= "Spirit Embrace";
 	}
 }
-[t:template,n:c24_r5_pixie_spell_healing_wind]
+[t:template,n:c24_r5_naldrun_spell_healing_wind]
 {
 	category_name = "magic";
-	doc = "collab24 r5 spell pixie healing wind";
+	doc = "collab24 r5 spell naldrun healing wind";
 	specializes = base_spell_monster_nm;
 
 	[magic]
@@ -811,10 +841,10 @@
 		effect_delay	= 10;
 	}
 }
-[t:template,n:c24_r5_pixie_spell_ressurect]
+[t:template,n:c24_r5_naldrun_spell_ressurect]
 {
 	category_name = "magic";
-	doc = "collab24 r5 spell pixie ressurect";
+	doc = "collab24 r5 spell naldrun ressurect";
 	specializes = base_spell_monster_nm;
 	[magic]
 	{
@@ -830,6 +860,33 @@
 	{
 		effect_script	= full_resurrect;
 		heal_ratio		= 1.0;
+	}
+}
+[t:template,n:c24_r5_naldrun_spell_respite]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell naldrun Respite";
+	specializes = base_spell_monster_nm;
+	[magic]
+	{
+		//for the transformed monster/buff spell bug
+		updates_on_transformed = false;
+		cast_range = 14;
+		effect_duration = 3;
+		mana_cost = 0;
+		apply_enchantments = false;
+		cast_reload_delay = 0.15;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_self;
+		
+		caster_state_name = "Respite";
+	}
+	[spell_respite]
+	{
+		state_name = "Respite";
+		target_script = "respite_effect";
+		state_description = "Resting";
 	}
 }
 [t:template,n:c24_r5_dragon_spell_fireball]
@@ -917,5 +974,130 @@
 	}
 	[c24_spell_run]
 	{
+	}
+}
+[t:template,n:c24_r5_fairy_queen_spell_multishard]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell fairy queen multishard";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 21;
+		damage_min = 17;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("c24_slice_02_effect_fairy_queen_spark_multi");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 17;
+		cast_reload_delay = 2;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_default] {}
+}
+[t:template,n:c24_r6_ice_elemental_spell_ice_mage_balls]
+{
+	category_name = "magic";
+	doc = "collab24 r6 spell ice elemental Ice_Mage_Balls";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		 damage_max = 47;
+		 damage_min = 35;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script( "c24_slice_02_effect_ice_element_ice_mage_balls" );
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 12;
+		cast_reload_delay = 3;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_default] { }
+}
+[t:template,n:c24_r6_ice_elemental_spell_dragon_fire]
+{
+	category_name = "magic";
+	doc = "collab24 r6 spell ice elemental dragon_fire";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 131;
+		damage_min = 120;
+	}
+	[magic]
+	{
+		cast_range = 6;
+		cast_reload_delay = 1;
+		effect_duration = 3;
+		does_damage_per_second = true;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_fire]
+	{
+		effect_script = c24_slice_02_effect_ice_element_dragon_fire;
+		particle_fit = 0.1;
+		ignite = false;
+	}
+}
+[t:template,n:c24_r6_ice_elemental_spell_fire_ring]
+{
+	category_name = "magic";
+	doc = "collab24 r6 spell ice elemental fire_ring";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 120;
+		damage_min = 100;
+	}
+	[magic]
+	{
+		cast_range = 17;
+		cast_reload_delay = 0;
+		effect_duration = 10000;
+		does_damage_per_second = true;
+		requires_line_of_sight = false;
+		speed_bias = 1;
+		target_type_flags = tt_self;
+		usage_context_flags = uc_offensive;
+		one_use = true;
+	}
+	[spell_fire]
+	{
+		effect_script = c24_slice_02_effect_ice_element_ring_fire;
+		particle_fit = 0.1;
+		description = "Ice ring";
+		radius = 1.5;
+		ignite = false;
 	}
 }

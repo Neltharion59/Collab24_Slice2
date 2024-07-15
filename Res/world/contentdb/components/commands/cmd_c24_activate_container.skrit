@@ -4,10 +4,11 @@
 //  Activates the rock under(in) which giant hid his brother's club to be selectable and destroyable
 ////////////////////////////////////////////////////////////////////////////////
 
-property string _doc$                = "Make an item selectable and non-invincible";
-
+property string _doc$                = "Set object's Selectable and Invincible properties.";
 // exported properties
 property scid               target_container$                                        doc ="Scid of Container to Manipulate.";
+property    bool        selectable$   = false                 doc = "Value to set Selectable to.";
+property    bool        invincible$   = false                 doc = "Value to set Invincible to.";
 
 owner = GoSkritComponent;
 
@@ -32,11 +33,11 @@ state Waiting$
 		{
 			if( !target_container$.goid.isvalid() )
 			{
-				report.Error( "Bad player when trying to award experience.\n" );
+				report.Error( "Bad command target - cmd_c24_activate_container.\n" );
 			}
 			
-			target_container$.Go.Aspect.IsInvincible = false;
-			target_container$.Go.Aspect.SSetIsSelectable( true );
+			target_container$.Go.Aspect.IsInvincible = selectable$;
+			target_container$.Go.Aspect.SSetIsSelectable( invincible$ );
 
 			GoDb.SMarkForDeletion( owner.goid );
 		}

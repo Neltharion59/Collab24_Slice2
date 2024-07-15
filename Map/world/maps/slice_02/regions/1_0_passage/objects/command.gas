@@ -19,6 +19,10 @@
 	  x target1 = 0x02100007;
 	  x target2 = 0x0210001D;
 	}
+	[common]
+	{
+		dev_instance_text = "MAKE THE GIANT EQUIP THE CLUB";
+	}
 	[placement]
 	{
 	  p position = -3.20397,0,-1.04973,0x825d8de7;
@@ -31,9 +35,13 @@
 	  x target1 = 0x02100007;
 	  x target2 = 0x02100030;
 	}
+	[common]
+	{
+		dev_instance_text = "MAKE THE GIANT DESTROY THE ROCK";
+	}
 	[placement]
 	{
-	  p position = -1.10784,0,-0.663986,0x825d8de7;
+	  p position = -1.03202,0,-0.470062,0x825d8de7;
 	}
 }
 [t:c24_slice_2_cmd_activate_container,n:0x0210003e]
@@ -42,9 +50,13 @@
 	{
 	  x target_container = 0x02100030;
 	}
+	[common]
+	{
+		dev_instance_text = "MAKE THE ROCK NON INVINCIBLE";
+	}
 	[placement]
 	{
-	  p position = 1.45644,0,-0.138313,0x0481e863;
+	  p position = 0.797676,0,-0.0760727,0x0481e863;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x021004c9]
@@ -73,11 +85,12 @@
 {
 	[cmd_c24_activate_container]
 	{
+	  b selectable = true;
 	  x target_container = 0x0210001E;
 	}
 	[placement]
 	{
-	  p position = 0.434439,0,0.0305328,0xed7508e1;
+	  p position = 0.742277,0,0.0604553,0xed7508e1;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x02100071]
@@ -190,5 +203,22 @@
 	{
 	  q orientation = 0,-0.382683,0,0.92388;
 	  p position = 1.59055,0,1.09531,0x06ea7621;
+	}
+}
+[t:c24_slice_2_cmd_activate_container,n:0x02100e9b]
+{
+	[cmd_c24_activate_container]
+	{
+	  b invincible = true;
+	  b selectable = false;
+	  x target_container = 0x0210001D;
+	}
+	[common]
+	{
+		dev_instance_text = "MAKE CLUB UNSELECTABLE";
+	}
+	[placement]
+	{
+	  p position = 0.942745,0,-1.70621,0x0481e863;
 	}
 }

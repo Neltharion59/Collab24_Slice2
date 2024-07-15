@@ -1,0 +1,80 @@
+[t:template,n:c24_2_r2_cyclops]
+{
+	category_name = "1W_evil_c";
+	doc = "Bruhs Slice 2 R2 cyclops";
+	specializes = base_cyclops;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	24, 0;
+			intelligence =  10, 0;
+			dexterity =  	11, 0;
+            melee =  		24,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 12446;
+		life = 1240;
+		max_life = 1240;
+		mana = 18;
+		max_mana = 18;
+        scale_base = 1.60;
+        [textures]
+        {
+            0 = b_c_ecm_cy_c24_01;
+        }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 95;
+		damage_min = 85;
+		reload_delay = 0;
+	}
+	[common] { screen_name="Cyclops"; }
+    [defend] { defense=255; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+   			[oneof*]
+			{
+				[oneof*]
+				{
+					es_weapon_hand = cb_un_2h_cyclops;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #*/75-103;
+					il_main = #armor/46-235;
+                	il_main = #nmagic/15-30;
+                	il_main = #cmagic/15-30;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/90-110;
+	                il_main = #armor/-rare(1)/289-343;
+                    il_main = #*/-rare(1)/90-110;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/90-110;
+	                il_main = #armor/-unique(2)/289-343;
+                    il_main = #*/-unique(2)/90-110;
+	            }
+			}
+        }
+	}
+	[mind]
+	{
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}

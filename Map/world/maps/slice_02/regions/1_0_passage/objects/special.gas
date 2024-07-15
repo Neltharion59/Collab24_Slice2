@@ -39,6 +39,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x0210000A,0.2f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x0210003E,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02100E9B,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = go_within_sphere(5.000000,0x0210001D,"","on_first_enter");
 			  f delay = 0.000000;

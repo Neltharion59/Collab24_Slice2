@@ -27,7 +27,7 @@
 		draw_shadow = false;
 		model = m_c_edm_ga_pos_1;
 		scale_base = 1; 
-		material = stone;
+		material = ice;
 		[voice]
 		{
 			[die]			{ priority = high; * = s_e_die_darkling; }
@@ -340,7 +340,7 @@
 	}
 	[common]
 	{
-		screen_name="Frost Fae";
+		screen_name="Frost Fae Ravager";
 	}
 	[defend] { defense=2; }
     [inventory]
@@ -352,6 +352,7 @@
             il_active_primary_spell = c24_r5_naldrun_spell_iceshard;
             il_active_secondary_spell = c24_r5_naldrun_spell_ice_orb;
 			il_spell_1 = c24_r5_naldrun_spell_iceshard_2;
+			il_spell_2 = c24_r5_naldrun_spell_respite;
         }
     }
 	[mind]
@@ -396,7 +397,7 @@
 	}
 	[common]
 	{
-		screen_name="Frost Pixie";
+		screen_name="Frost Fae Enchanter";
 	}
 	[defend] { defense=2; }
     [inventory]
@@ -405,11 +406,12 @@
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
-            il_active_primary_spell = c24_r5_pixie_spell_rip_mana;
-            il_active_secondary_spell = c24_r5_pixie_spell_ice_orb;
-			il_spell_1 = c24_r5_pixie_spell_buff_magic_dmg;
-			il_spell_2 = c24_r5_pixie_spell_buff_dodge;
-			il_spell_3 = c24_r5_pixie_spell_buff_block_magic;
+            il_active_primary_spell = c24_r5_naldrun_spell_rip_mana;
+            il_active_secondary_spell = c24_r5_naldrun_spell_ice_orb;
+			il_spell_1 = c24_r5_naldrun_spell_buff_magic_dmg;
+			il_spell_2 = c24_r5_naldrun_spell_buff_dodge;
+			il_spell_3 = c24_r5_naldrun_spell_buff_block_magic;
+			il_spell_4 = c24_r5_naldrun_spell_respite;
         }
     }
 	[mind]
@@ -454,7 +456,7 @@
 	}
 	[common]
 	{
-		screen_name="Frost Pixie";
+		screen_name="Frost Fae Nourisher";
 	}
 	[defend] { defense=2; }
     [inventory]
@@ -463,9 +465,9 @@
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
-            il_active_primary_spell = c24_r5_pixie_spell_rip_mana;
-            il_active_secondary_spell = c24_r5_pixie_spell_healing_wind;
-			il_spell_1 = c24_r5_pixie_spell_ressurect;
+            il_active_primary_spell = c24_r5_naldrun_spell_rip_mana;
+            il_active_secondary_spell = c24_r5_naldrun_spell_healing_wind;
+			il_spell_1 = c24_r5_naldrun_spell_ressurect;
         }
     }
 	[mind]
@@ -656,9 +658,9 @@
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
-            il_active_primary_spell = c24_r5_naldrun_spell_iceshard;
+            il_active_primary_spell = c24_r5_fairy_queen_spell_multishard;
             il_active_secondary_spell = c24_r5_naldrun_spell_ice_orb;
-			il_spell_1 = c24_r5_naldrun_spell_iceshard_2;
+			il_spell_1 = c24_r5_naldrun_spell_respite;
         }
     }
 	[mind]

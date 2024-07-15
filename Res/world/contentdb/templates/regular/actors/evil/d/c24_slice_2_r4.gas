@@ -270,3 +270,392 @@
 		sight_range = 16.0;
 	}
 }
+[t:template,n:c24_2_r4_scorpion_base]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R4 scorpion base";
+	specializes = actor_evil;
+	[aspect]
+	{
+		model = m_c_edm_sc_pos_1;
+		scale_base = 0.50;
+		[textures]
+		{
+			0 = b_c_edm_sc_c24_01;
+		}
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_scorpion; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED;  }
+			[hit_critical]	{ priority = low; * = s_e_hit_scorpion_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_scorpion_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_scorpion_SED; }
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 2.350000;
+		max_move_velocity = 4.75;
+		[bone_translator]
+		{
+			body_anterior = Bone01;
+			body_mid = Bone01;
+			body_posterior = Bone01;
+			kill_bone = Bone01;
+			shield_bone = lt_pincher;
+			weapon_bone = rt_pincher;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_sc_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common]
+	{
+		screen_name="Arachnoid";
+		membership = party_scorpion_boss, monster;
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?approach_dist		= 2.5
+			&min_distance		= 3.5
+			&wander_limit_dist	= 2.1
+			&still				= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+
+		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 					= 1.0;
+
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+[t:template,n:c24_2_r4_scorpion_melee]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R4 scorpion melee";
+	specializes = c24_2_r4_scorpion_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  13, 0;
+			intelligence =  3, 0;
+			dexterity =  9, 0;
+			melee =  5,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 73;
+		life = 73;
+		max_life = 73;
+		mana = 6;
+		max_mana = 6;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 42;
+		damage_min = 40;
+	}
+	[defend] { defense=62; }
+	[inventory]
+	{
+   		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #armor/20-60;
+	                il_main = #weapon/24-30;
+				}
+			}
+		}
+	}
+}
+[t:template,n:c24_2_r4_scorpion_ranged]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R4 scorpion ranged";
+	specializes = c24_2_r4_scorpion_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  13, 0;
+			intelligence =  3, 0;
+			dexterity =  9, 0;
+			ranged =  5,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 73;
+		life = 73;
+		max_life = 73;
+		mana = 6;
+		max_mana = 6;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 42;
+		damage_min = 40;
+	}
+	[defend] { defense=62; }
+    [inventory]
+	{
+        spew_equipped_kill_count = <ignore>;
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r4_scorpion_spell_spikes;
+        }
+   		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #armor/20-60;
+	                il_main = #weapon/24-30;
+				}
+			}
+		}
+	}
+}
+[t:template,n:c24_2_r4_googore]
+{
+	doc = "Bruhs Slice 2 R4 googore";
+	specializes = actor_evil;
+    category_name = "1W_evil_d";
+
+	[actor]
+	{
+		race	= other;
+
+		[skills]
+		{
+			strength =  	18, 0;
+			intelligence =  7, 0;
+			dexterity =  	10, 0;
+			melee =  		40, 0;
+		}
+	}
+
+	[aspect]
+	{
+		draw_shadow 		= false;
+		model				= m_c_edm_gg_pos_1;
+		experience_value	= 17000;
+		life				= 1330;
+		max_life			= 1330;
+		mana				= 10;
+		max_mana			= 10;
+		[textures]
+		{
+			0 = b_c_edm_gg_c24_01;
+		}
+		[voice]
+		{
+			[enemy_spotted]	{ priority = high; * = s_e_call_googore_SED;  }
+		}
+	}
+
+	[attack]
+	{
+		attack_range	= 0.5;
+		damage_min		= 160;
+		damage_max		= 180;
+	}
+
+	[body]
+	{
+		avg_move_velocity = 1.0;
+        [bone_translator]
+		{
+			 kill_bone			= bone16;
+			 weapon_bone		= bone07;
+			 shield_bone		= bone07;
+			 body_anterior		= bone07;
+			 body_mid			= bone16;
+			 body_posterior		= bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_gg_fs;
+
+			[chore_attack]
+			{
+				skrit = select_attack;
+				chore_stances = 0;
+
+				anim_files:00 = at;
+			}
+			[chore_magic]
+			{
+				skrit = select_attack;
+				chore_stances = 0;
+
+				anim_files:00 = at-02;
+			}
+			[chore_die]
+			{
+				skrit = select_transition;
+				chore_stances = 0;
+
+				anim_files:00 = di;
+			}
+
+			[chore_default]
+			{
+				skrit = infinite_loop;
+				chore_stances = 0;
+
+				anim_files:00 = dfs;
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = ds;
+					wake = rv;
+				}
+			}
+			[chore_fidget]
+			{
+				skrit = select_fidget;
+				chore_stances = 0;
+
+				anim_files:00 = dff;
+			}
+
+			[chore_walk]
+			{
+				skrit = select_walk;
+				chore_stances = 0;
+
+				anim_files:00 = rv;
+			}
+		}
+	}
+	[generator_in_object]
+	{
+		child_template_name = hole_cav_01;
+		spawn_event = WE_ENEMY_SPOTTED;
+		spawn_chance = 1.0;
+		spawn_delay = 0.5;
+		fade_kid = true;
+	}
+    [inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=c24_r4_googore_spell_gas; }
+	}
+	[common]
+	{
+		screen_name="Googore";
+		membership=monster,immune_freeze;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("googore_goo");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+
+			[*]
+			{
+				action* = call_sfx_script("googore_goo");
+				condition* = receive_world_message("we_anim_die");
+			}
+		}
+	}
+	[defend] { defense=380; }
+	[mind]
+	{
+		actor_weapon_preference					= WP_MAGIC;
+		actor_auto_switches_to_magic			= true;
+		actor_auto_switches_to_karate			= true;
+		actor_auto_switches_to_melee			= true;
+
+		jat_startup 							= world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible 							= true;
+
+		jat_die 								= world\ai\jobs\actors\evil\job_die_delete.skrit;
+
+		jat_flee_from_object					= jat_none;
+		jat_guard         						= jat_none;
+		jat_move          						= jat_none;
+		jat_patrol         						= jat_none;
+
+		on_enemy_entered_icz_switch_to_melee	= true;
+
+		actor_auto_fidgets 						= false;
+		movement_orders							= mo_hold;
+		inner_comfort_zone_range				= 1.9;
+		melee_engage_range 						= 2.0;
+		personal_space_range					= 1.5;
+		ranged_engage_range 					= 14.0;
+		sight_range								= 14.0;
+		sight_origin_height						= 2;
+	}
+
+}
