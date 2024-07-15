@@ -32,6 +32,22 @@
 		[break_particulate] {}
 	}
 }
+[t:template,n:c24_2_r3_hairy_tree]
+{
+	category_name = "trees";
+	doc = "c24 r3 hairy tree";
+	specializes = base_tree;
+	[aspect]
+	{
+		lodfi_lower = 0.5;
+		lodfi_upper = 0.6;
+		model = m_i_grs_tree-sequioa;
+		[textures]
+		{
+			0 = b_i_grs_tree-sequioa_c24_hairy;
+		}
+	}
+}
 [dev,t:template,n:c24_2_r5_ice_tree]
 {
 	specializes	= base_tree;

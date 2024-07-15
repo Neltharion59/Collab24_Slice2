@@ -1,0 +1,59 @@
+[t:template,n:c24_2_r3_npc_naldrun]
+{
+    // To love the tree
+	category_name = "1W_evil_d";
+	doc = "c24 npc naldrun r3 friend of tree";
+	specializes = c24_2_r5_naldrun_base;
+    [actor]
+    {
+        alignment = aa_good;
+    }
+	[aspect]
+	{
+        is_invincible = true;
+		[textures]
+		{
+			0 = b_c_edm_054-04;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 15;
+		damage_min = 12;
+	}
+	[common]
+	{
+		screen_name="Zaireen";
+	}
+    [conversation]
+    {
+    }
+	[defend] { defense=2; }
+    [inventory]
+    {
+        spew_equipped_kill_count = <ignore>;
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r2_naldrun_spell_freak;
+        }
+    }
+	[mind]
+	{
+		actor_weapon_preference              = WP_MAGIC;
+		actor_auto_switches_to_magic         = true;
+		actor_auto_switches_to_karate         = false;
+		actor_auto_switches_to_melee         = false;
+
+        movement_orders = mo_hold;
+        disposition_orders = ad_offensive;
+            
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}

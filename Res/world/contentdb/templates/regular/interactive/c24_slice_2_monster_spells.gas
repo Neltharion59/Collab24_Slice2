@@ -375,6 +375,28 @@
 		effect_script = spirit_armor;
 	}
 }
+[t:template,n:c24_r2_naldrun_spell_freak]
+{
+	category_name = "magic";
+	doc = "collab24 r2 spell naldrun freak";
+	specializes = base_spell_monster_nm;
+	[magic]
+	{
+		cast_range = 15;
+		cast_reload_delay = 0.15;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_freak]
+	{
+		effect_script = "freak";
+		script_params = "";
+		immunity = "";
+	}
+}
 [t:template,n:c24_r4_scorpion_spell_spikes]
 {
 	category_name = "magic";
