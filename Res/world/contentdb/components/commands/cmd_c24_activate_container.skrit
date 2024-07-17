@@ -36,8 +36,8 @@ state Waiting$
 				report.Error( "Bad command target - cmd_c24_activate_container.\n" );
 			}
 			
-			target_container$.Go.Aspect.IsInvincible = selectable$;
-			target_container$.Go.Aspect.SSetIsSelectable( invincible$ );
+			target_container$.Go.Aspect.IsInvincible = invincible$;
+			target_container$.Go.Aspect.SSetIsSelectable( selectable$ );
 
 			GoDb.SMarkForDeletion( owner.goid );
 		}

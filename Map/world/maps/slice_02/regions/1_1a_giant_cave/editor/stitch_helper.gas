@@ -2,4 +2,12 @@
 {
 	source_region_guid = 0x00000027;
 	source_region_name = 1_1a_giant_cave;
+	[t:stitch_editor,n:1_1_pilgrim_hut]
+	{
+		dest_region = 1_1_pilgrim_hut;
+		[node_ids]
+		{
+			0x00000022 = 0x4171A7BB,7;
+		}
+	}
 }

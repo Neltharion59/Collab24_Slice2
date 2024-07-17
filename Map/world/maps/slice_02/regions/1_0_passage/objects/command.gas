@@ -59,6 +59,22 @@
 	  p position = 0.797676,0,-0.0760727,0x0481e863;
 	}
 }
+[t:c24_slice_2_cmd_activate_container,n:0x02100e9b]
+{
+	[cmd_c24_activate_container]
+	{
+	  b invincible = true;
+	  x target_container = 0x0210001D;
+	}
+	[common]
+	{
+		dev_instance_text = "MAKE CLUB UNSELECTABLE";
+	}
+	[placement]
+	{
+	  p position = 0.942745,0,-1.70621,0x0481e863;
+	}
+}
 [t:cmd_ai_c_patrol,n:0x021004c9]
 {
 	[placement]
@@ -203,22 +219,5 @@
 	{
 	  q orientation = 0,-0.382683,0,0.92388;
 	  p position = 1.59055,0,1.09531,0x06ea7621;
-	}
-}
-[t:c24_slice_2_cmd_activate_container,n:0x02100e9b]
-{
-	[cmd_c24_activate_container]
-	{
-	  b invincible = true;
-	  b selectable = false;
-	  x target_container = 0x0210001D;
-	}
-	[common]
-	{
-		dev_instance_text = "MAKE CLUB UNSELECTABLE";
-	}
-	[placement]
-	{
-	  p position = 0.942745,0,-1.70621,0x0481e863;
 	}
 }
