@@ -20,8 +20,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 22;
-		damage_min = 17;
+		damage_max = 18;
+		damage_min = 16;
 	}
 	[magic]
 	{
@@ -66,7 +66,7 @@
         description = "Enraged";
         effect_script = group_haste;
         walkModifier = 2.5;
-        attackModifier = 0.1;
+        attackModifier = 0.10;
         groupEffect = true;
         radius	= 15.0;
     }
@@ -79,8 +79,9 @@
 	[attack]
 	{
 		area_damage_radius = 3;
-		damage_max = 12;
-		damage_min = 8;
+		// Has 3 Projectiles
+		damage_max = 8;
+		damage_min = 6;
 	}
 	[common]
 	{
@@ -117,20 +118,9 @@
 	[attack]
 	{
 		area_damage_radius = 3;
-		damage_max = 40;
-		damage_min = 33;
+		damage_max = 25;
+		damage_min = 20;
 
-	}
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				action* = call_sfx_script( "shock_wave_charge" );
-				condition* = receive_world_message("we_req_cast_charge");
-			}
-		}
 	}
 	[magic]
 	{
@@ -163,8 +153,8 @@
 	[attack]
 	{
 		area_damage_radius = 4;
-		damage_max = 20;
-		damage_min = 15;
+		damage_max = 5;
+		damage_min = 3;
 	}
 	[magic]
 	{
@@ -199,17 +189,17 @@
 			{
 				[all*]
 				{
-					chance = 0.60;
+					chance = 0.70;
 					il_main = c24_2_r2_ice_fly;
 				}
 				[all*]
 				{
-					chance = 0.30;
+					chance = 0.25;
 					il_main = c24_2_r2_spider_frostnid;
 				}
 				[all*]
 				{
-					chance = 0.10;
+					chance = 0.05;
 					il_main = c24_2_r2_golem_frost;
 				}
 			}
@@ -248,8 +238,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 16;
-		damage_min = 12;
+		damage_max = 11;
+		damage_min = 8;
 	}
 	[common]
 	{
@@ -350,7 +340,7 @@
 		apply_enchantments = false;
 		cast_range = 8;
 		cast_reload_delay = 0.15;
-		effect_duration = 8;
+		effect_duration = 5;
 		mana_cost = 0;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -364,7 +354,7 @@
 			{
 				alteration = alter_armor;
 				description = "Magic Armor";
-				duration = 8;
+				duration = 5;
 				value = 60;
 			}
 		}
@@ -404,12 +394,12 @@
 	specializes = base_spell_monster;
 	[attack]
 	{
-		aiming_error_range_x = 2.5;
-		aiming_error_range_y = 2.5;
+		aiming_error_range_x = 0.5;
+		aiming_error_range_y = 0.5;
 		ammo_attach_bone = ap_flame;
 		ammo_template = spike_mine_worm;
-		damage_max = 24;
-		damage_min = 22;
+		damage_max = 16;
+		damage_min = 13;
 		use_aiming_error = true;
 	}
 	[magic]
@@ -439,8 +429,8 @@
 	specializes = base_spell_monster;
 	[attack]
 	{
-		damage_max = 72;
-		damage_min = 68;
+		damage_max = 24;
+		damage_min = 22;
 	}
 	[magic]
 	{
@@ -452,8 +442,6 @@
 		speed_bias = 1;
 		target_type_flags = tt_conscious_enemy;
 		usage_context_flags = uc_offensive;
-		magic_class = mc_nature_magic;
-		skill_class = "Nature Magic";
 	}
 	[spell_fire]
 	{
@@ -461,44 +449,6 @@
 		particle_fit = 0.2;
 		watch_caster = true;
 	}
-}
-[t:template,n:c24_r5_snowflake_spell_attack]
-{
-	category_name = "magic";
-	doc = "collab24 r5 spell snowflake attack";
-	specializes = base_spell_monster_nm;
-	[attack]
-	{
-		damage_max = 33;
-		damage_min = 21;
-	}
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				action* = call_sfx_script("c24_slice_02_effect_snowflake_monster_projectile_spell");
-				condition* = receive_world_message("we_req_cast");
-			}
-			[*]
-			{
-				action* = call_sfx_script( "spark_charge" );
-				condition* = receive_world_message("we_req_cast_charge");
-			}
-		}
-	}
-	[magic]
-	{
-		cast_range = 12;
-		cast_reload_delay = 1;
-		mana_cost = 0;
-		requires_line_of_sight = true;
-		speed_bias = 1;
-		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
-		usage_context_flags = uc_offensive;
-	}
-	[spell_default] {}
 }
 [t:template,n:c24_r5_naldrun_spell_iceshard]
 {
@@ -509,8 +459,8 @@
 	{
 		ammo_attach_bone = weapon_grip;
 		ammo_template = ice_shard_06;
-		damage_max = 10;
-		damage_min = 7;
+		damage_max = 5;
+		damage_min = 3;
 	}
 	[common]
 	{
@@ -562,8 +512,8 @@
 	{
 		ammo_attach_bone = weapon_grip;
 		ammo_template = ice_shard_06;
-		damage_max = 28;
-		damage_min = 25;
+		damage_max = 18;
+		damage_min = 15;
 		
 		use_aiming_error = true;
 		aiming_error_range_x = 3.5;
@@ -617,8 +567,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 20;
-		damage_min = 17;
+		damage_max = 11;
+		damage_min = 9;
 	}
 	[common]
 	{
@@ -664,7 +614,7 @@
 	[magic]
 	{
 		cast_range = 12;
-		cast_reload_delay = 2;
+		cast_reload_delay = 0.15;
 		mana_cost = 0;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -684,7 +634,7 @@
 				is_target_transfer = false;
 				is_offensive_transfer = true;
 				transfer_efficiency = 1;
-				value = 20;
+				value = 15;
 			}
 		}
 	}
@@ -699,7 +649,7 @@
 	{
 		apply_enchantments = false;
 		cast_range = 22;
-		cast_reload_delay = 2;
+		cast_reload_delay = 1;
 		effect_duration = 7;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -716,7 +666,7 @@
 				description = "raise magic damage";
 				duration = 7;
 				frequency = 0;
-				value = 8;
+				value = 3;
 			}
 			[*]
 			{
@@ -724,7 +674,7 @@
 				description = "raise magic damage";
 				duration = 7;
 				frequency = 0;
-				value = 10;
+				value = 3;
 			}
 		}
 	}
@@ -745,7 +695,7 @@
 	{
 		apply_enchantments = false;
 		cast_range = 12;
-		cast_reload_delay = 2;
+		cast_reload_delay = 1;
 		effect_duration = 7;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -788,7 +738,7 @@
 	{
 		apply_enchantments = false;
 		cast_range = 12;
-		cast_reload_delay = 2;
+		cast_reload_delay = 1;
 		effect_duration = 7;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -832,7 +782,7 @@
 	{
 		apply_enchantments = false;
 		cast_range = 20;
-		cast_reload_delay = 2;
+		cast_reload_delay = 1;
 		effect_duration = 6;
 		mana_cost = 0;
 		requires_line_of_sight = false;
@@ -871,7 +821,7 @@
 	[magic]
 	{
 		cast_range = 17;
-		cast_reload_delay = 2;
+		cast_reload_delay = 1;
 		mana_cost = 0;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -901,7 +851,7 @@
 		requires_line_of_sight = true;
 		speed_bias = 1;
 		target_type_flags = tt_self;
-		
+		usage_context_flags = uc_offensive;
 		caster_state_name = "Respite";
 	}
 	[spell_respite]
@@ -919,8 +869,8 @@
 	[attack]
 	{
 		area_damage_radius = 3;
-		damage_max = 48;
-		damage_min = 42;
+		damage_max = 30;
+		damage_min = 25;
 	}
 	[common]
 	{
@@ -935,7 +885,7 @@
 	}
 	[magic]
 	{
-		cast_range = 17;
+		cast_range = 22;
 		cast_reload_delay = 1;
 		mana_cost = 0;
 		requires_line_of_sight = true;
@@ -956,8 +906,8 @@
 	specializes = base_spell_monster;
 	[attack]
 	{
-		damage_max = 34;
-		damage_min = 31;
+		damage_max = 21;
+		damage_min = 17;
 	}
 	[magic]
 	{
@@ -987,7 +937,7 @@
 	[magic]
 	{
 		cast_range = 20;
-		cast_reload_delay = 1;
+		cast_reload_delay = 2;
 		mana_cost = 0;
 		requires_line_of_sight = false;
 		speed_bias = 1;
@@ -1005,8 +955,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 21;
-		damage_min = 17;
+		damage_max = 19;
+		damage_min = 12;
 	}
 	[common]
 	{
@@ -1022,7 +972,7 @@
 	[magic]
 	{
 		cast_range = 17;
-		cast_reload_delay = 2;
+		cast_reload_delay = 1;
 		requires_line_of_sight = true;
 		speed_bias = 1;
 		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
@@ -1037,8 +987,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		 damage_max = 47;
-		 damage_min = 35;
+		 damage_max = 24;
+		 damage_min = 20;
 	}
 	[common]
 	{
@@ -1070,8 +1020,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 131;
-		damage_min = 120;
+		damage_max = 28;
+		damage_min = 24;
 	}
 	[magic]
 	{
@@ -1099,8 +1049,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 120;
-		damage_min = 100;
+		damage_max = 12;
+		damage_min = 10;
 	}
 	[magic]
 	{

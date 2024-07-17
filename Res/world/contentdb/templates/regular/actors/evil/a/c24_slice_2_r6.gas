@@ -118,38 +118,36 @@
 }
 [t:template,n:c24_2_r6_ice_warrior_melee]
 {
+	// Stats based on Krug Guard - Increased Skill and AMR
 	category_name = "1W_evil_a";
 	doc = "Bruhs Slice 2 R6 ice warrior melee";
 	specializes = c24_2_r6_ice_warrior_base;
-	[actor]
+	[skills]
 	{
-		[skills]
-		{
-			strength 	=  18, 0;
-			intelligence =  4, 0;
-			dexterity 	=  10, 0;
-            melee 		=  7,  0;
-		}
+		dexterity = 11,  0;
+		intelligence = 7,  0;
+		melee = 6,  0;
+		strength = 13, 0;
 	}
 	[aspect]
 	{
-		experience_value = 348;
-		life = 288;
-        max_life = 288;
+		experience_value = 61;
+		life = 71;
+        max_life = 71;
         mana = 8;
 		max_mana = 8;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 33;
-		damage_min = 29;
+		damage_max = 12;
+		damage_min = 10;
 	}
 	[common]
 	{
 		screen_name="Ice Warrior";
 	}
-    [defend] { defense=98; }
+    [defend] { defense=80; }
    	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
@@ -180,31 +178,31 @@
 	{
 		[skills]
 		{
-			strength 	=  16, 0;
-			intelligence =  4, 0;
-			dexterity 	=  16, 0;
-            ranged 		=  7,  0;
+			dexterity = 11,  0;
+			intelligence = 7,  0;
+			ranged = 6,  0;
+			strength = 13, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 348;
-		life = 288;
-        max_life = 288;
+		experience_value = 61;
+		life = 71;
+        max_life = 71;
         mana = 8;
 		max_mana = 8;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 33;
-		damage_min = 29;
+		damage_max = 12;
+		damage_min = 10;
 	}
 	[common]
 	{
 		screen_name="Ice Pilum";
 	}
-    [defend] { defense=98; }
+    [defend] { defense=80; }
    	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
@@ -237,17 +235,17 @@
 	{
 		[skills]
 		{
-			strength =  13, 0;
-			intelligence =  5, 0;
-			dexterity =  16, 0;
-            ranged =  6,  0;
+			dexterity = 11,  0;
+			intelligence = 7,  0;
+			ranged = 6,  0;
+			strength = 13, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 261;
-		life = 243;
-        max_life = 243;
+		experience_value = 61;
+		life = 55;
+        max_life = 55;
         mana = 10;
 		max_mana = 10;
 		model = m_c_edm_ia_pos_1;
@@ -261,8 +259,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 51;
-		damage_min = 48;
+		damage_max = 12;
+		damage_min = 10;
 	}
 	[body]
 	{
@@ -329,7 +327,7 @@
 			}
 		}
 	}
-    [defend] { defense=75; }
+    [defend] { defense=80; }
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;

@@ -8,19 +8,19 @@
 	{
 		[skills]
 		{
-			strength = 30, 0;
-			dexterity = 30, 0;
-			intelligence = 60, 0;
-			nature_magic = 91, 0;
+			strength = 5, 0;
+			dexterity = 2, 0;
+			intelligence = 10, 0;
+			nature_magic = 8, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 10111000;
-		life = 2136;
-		max_life = 2136;
-		mana = 9000;
-		max_mana = 9000;
+		experience_value = 100;
+		life = 147;
+		max_life = 147;
+		mana = 900;
+		max_mana = 900;
 		material = ice;
         model = m_c_edm_062_pos_1;
 		[voice]
@@ -53,8 +53,8 @@
 	{
 		area_damage_radius = 4.25;
 		attack_range = 0.5;
-		damage_max = 400;
-		damage_min = 400;
+		damage_max = 30;
+		damage_min = 20;
 	}
     [body]
 	{
@@ -131,7 +131,7 @@
 	}
 	[defend]
 	{
-		defense = 900;
+		defense = 120;
 	}
 	[inventory]
 	{
@@ -154,10 +154,10 @@
 			?rand_spell					= true
 			&rand_target				= true;
 
-		melee_engage_range = 12.0;
+		melee_engage_range = 14.0;
 		personal_space_range = 0.1;
-		ranged_engage_range = 12.0;
-		sight_range = 12.0;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
 	}
 	[physics]
 	{

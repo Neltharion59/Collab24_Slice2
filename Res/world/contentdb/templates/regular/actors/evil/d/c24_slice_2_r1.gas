@@ -1,5 +1,6 @@
 [t:template,n:c24_2_r1_spider]
 {
+	// Stats based on Krug Grunt
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R1 spider_red_blck";
 	specializes = actor_evil;
@@ -7,18 +8,18 @@
 	{
 		[skills]
 		{
-			  dexterity = 6, 0;
-			  intelligence = 4, 0;
-			  melee = 4,  0;
-			  strength = 9, 0;
+			dexterity = 6, 0;
+			intelligence = 4, 0;
+			melee = 4,  0;
+			strength = 9, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 30;
-        life = 36;
+		experience_value = 19;
+        life = 31;
         mana = 17;
-        max_life = 36;
+        max_life = 31;
         max_mana = 17;
 		model = m_c_edm_sp_pos_1;
 		scale_base = 0.70;
@@ -35,8 +36,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 19;
-		damage_min = 16;
+		damage_max = 34;
+		damage_min = 29;
 		reload_delay = 1;
 	}
 	[body]
@@ -87,7 +88,7 @@
 		}
 	}
 	[common] { screen_name="Spider"; }
-	[defend] { defense=25; }
+	[defend] { defense=30; }
 	[mind]
 	{
 		melee_engage_range = 14.0;
@@ -247,6 +248,7 @@
 }
 [t:template,n:c24_2_r1_rat]
 {
+	// Stats based on Yellow Spider, HP, DMG, AMR increased
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R1 Rat";
 	specializes = actor_evil;
@@ -254,15 +256,15 @@
 	{
 		[skills]
 		{
-			strength =  7, 0;
-			intelligence =  2, 0;
-			dexterity =  9, 0;
-            melee =  4,  0;
+			strength =  4, 0;
+			intelligence =  1, 0;
+			dexterity =  6, 0;
+			melee =  3, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 17;
+		experience_value = 5;
 		life = 12;
 		max_life = 12;
 		mana = 4;
@@ -293,8 +295,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 24;
-		damage_min = 22;
+		damage_max = 5;
+		damage_min = 5;
 	}
 	[body]
 	{
@@ -345,10 +347,10 @@
 		}
 	}
 	[common]
-	{	screen_name="Rat";
+	{	screen_name="Cave Rat";
 		membership = rat, monster;
 	}
-	[defend] { defense=15; }
+	[defend] { defense=10; }
 	[mind]
 	{
 		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
@@ -403,7 +405,7 @@
 			strength =     19, 0;
 			intelligence = 8, 0;
 			dexterity =    12, 0;
-			melee =        4, 0;
+			melee =        3, 0;
 		}
 	}
 	[aspect]
@@ -464,7 +466,7 @@
 			strength =     30, 0;
 			intelligence = 8, 0;
 			dexterity =    20, 0;
-			melee =        5, 0;
+			melee =        4, 0;
 		}
 	}
 	[aspect]

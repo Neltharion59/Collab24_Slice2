@@ -1,6 +1,7 @@
 
 [t:template,n:c24_2_r4_krusk]
 {
+	// Stats based on Mucosa Bossed - Strengthened
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R4 krusk";
 	specializes = actor_evil;
@@ -8,17 +9,17 @@
 	{
 		[skills]
 		{
-			strength = 8, 0;
-			dexterity = 13, 0;
-			intelligence = 6, 0;
-			melee = 3, 0;
+			strength 	 =  12, 0;
+			intelligence =  6, 0;
+			dexterity 	 =  13, 0;
+            melee 		 =  6, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 30;
-		life = 72;
-		max_life = 72;
+		experience_value = 75;
+		life = 86;
+		max_life = 86;
 		mana = 12;
 		max_mana = 12;
 		model = m_c_xeam_007_pos_1;
@@ -47,8 +48,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 15;
-		damage_min = 12;
+		damage_max = 24;
+		damage_min = 22;
 	}
 	[body]
 	{
@@ -134,7 +135,7 @@
         membership = monster;
 		screen_name="Furbolg";
 	}
-	[defend] { defense=60; }
+	[defend] { defense=70; }
 	[mind]
 	{
 		melee_engage_range = 16.0;
@@ -145,6 +146,7 @@
 }
 [t:template,n:c24_2_r4_leopard]
 {
+	// Stats based on Giant Rat - Strengthened
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R4 leopard";
 	specializes = actor_evil;
@@ -152,17 +154,17 @@
 	{
 		[skills]
 		{
-			strength = 8, 0;
-			dexterity = 13, 0;
-			intelligence = 6, 0;
-			melee = 3, 0;
+			strength =  7, 0;
+			intelligence =  2, 0;
+			dexterity =  9, 0;
+			melee =  6,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 30;
-		life = 72;
-		max_life = 72;
+		experience_value = 42;
+		life = 73;
+		max_life = 73;
 		mana = 12;
 		max_mana = 12;
 		model = m_c_edm_068_pos_1;
@@ -194,8 +196,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 15;
-		damage_min = 12;
+		damage_max = 32;
+		damage_min = 30;
 	}
 	[body]
 	{
@@ -261,7 +263,7 @@
         membership = monster;
 		screen_name="Snow Panther";
 	}
-	[defend] { defense=2; }
+	[defend] { defense=35; }
 	[mind]
 	{
 		melee_engage_range = 16.0;
@@ -371,6 +373,7 @@
 }
 [t:template,n:c24_2_r4_scorpion_melee]
 {
+	// Stats based on Walking Corpse - Strengthened
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R4 scorpion melee";
 	specializes = c24_2_r4_scorpion_base;
@@ -378,51 +381,31 @@
 	{
 		[skills]
 		{
-			strength =  13, 0;
-			intelligence =  3, 0;
-			dexterity =  9, 0;
-			melee =  5,  0;
+			strength =  	9,0;
+			intelligence =  	3,0;
+			dexterity =  	4,0;
+			melee =  		6,0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 73;
-		life = 73;
-		max_life = 73;
+		experience_value = 31;
+		life = 36;
+		max_life = 36;
 		mana = 6;
 		max_mana = 6;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 42;
-		damage_min = 40;
+		damage_max = 14;
+		damage_min = 12;
 	}
-	[defend] { defense=62; }
-	[inventory]
-	{
-   		[pcontent]
-		{
-			[oneof*]
-			{
-				[oneof*]
-				{
-				   chance = 0.05;
-				   il_main = potion_health_small;
-				   il_main = potion_mana_small;
-				}
-				[oneof*]
-				{
-					chance = 0.2;
-					il_main = #armor/20-60;
-	                il_main = #weapon/24-30;
-				}
-			}
-		}
-	}
+	[defend] { defense=40; }
 }
 [t:template,n:c24_2_r4_scorpion_ranged]
 {
+	// Stats based on Walking Corpse - Strengthened
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R4 scorpion ranged";
 	specializes = c24_2_r4_scorpion_base;
@@ -430,27 +413,27 @@
 	{
 		[skills]
 		{
-			strength =  13, 0;
-			intelligence =  3, 0;
-			dexterity =  9, 0;
-			ranged =  5,  0;
+			strength =  	9,0;
+			intelligence =  	3,0;
+			dexterity =  	4,0;
+			ranged =  		6,0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 73;
-		life = 73;
-		max_life = 73;
+		experience_value = 31;
+		life = 36;
+		max_life = 36;
 		mana = 6;
 		max_mana = 6;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 42;
-		damage_min = 40;
+		damage_max = 14;
+		damage_min = 12;
 	}
-	[defend] { defense=62; }
+	[defend] { defense=40; }
     [inventory]
 	{
         spew_equipped_kill_count = <ignore>;
@@ -459,24 +442,6 @@
         { 
             il_active_primary_spell = c24_r4_scorpion_spell_spikes;
         }
-   		[pcontent]
-		{
-			[oneof*]
-			{
-				[oneof*]
-				{
-				   chance = 0.05;
-				   il_main = potion_health_small;
-				   il_main = potion_mana_small;
-				}
-				[oneof*]
-				{
-					chance = 0.2;
-					il_main = #armor/20-60;
-	                il_main = #weapon/24-30;
-				}
-			}
-		}
 	}
 }
 [t:template,n:c24_2_r4_googore]
@@ -484,7 +449,6 @@
 	doc = "Bruhs Slice 2 R4 googore";
 	specializes = actor_evil;
     category_name = "1W_evil_d";
-
 	[actor]
 	{
 		race	= other;
@@ -494,7 +458,7 @@
 			strength =  	18, 0;
 			intelligence =  7, 0;
 			dexterity =  	10, 0;
-			melee =  		40, 0;
+			combat_magic =  6, 0;
 		}
 	}
 
@@ -502,11 +466,11 @@
 	{
 		draw_shadow 		= false;
 		model				= m_c_edm_gg_pos_1;
-		experience_value	= 17000;
-		life				= 1330;
-		max_life			= 1330;
-		mana				= 10;
-		max_mana			= 10;
+		experience_value	= 71;
+		life				= 95;
+		max_life			= 95;
+		mana				= 40;
+		max_mana			= 40;
 		[textures]
 		{
 			0 = b_c_edm_gg_c24_01;
@@ -520,8 +484,8 @@
 	[attack]
 	{
 		attack_range	= 0.5;
-		damage_min		= 160;
-		damage_max		= 180;
+		damage_min		= 14;
+		damage_max		= 12;
 	}
 
 	[body]
@@ -628,7 +592,7 @@
 			}
 		}
 	}
-	[defend] { defense=380; }
+	[defend] { defense=40; }
 	[mind]
 	{
 		actor_weapon_preference					= WP_MAGIC;
@@ -657,5 +621,4 @@
 		sight_range								= 14.0;
 		sight_origin_height						= 2;
 	}
-
 }

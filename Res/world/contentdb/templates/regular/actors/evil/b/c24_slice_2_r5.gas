@@ -138,10 +138,6 @@
 			}
 		}
 	}
-	[common]
-	{
-		screen_name="Dragon";
-	}
 }
 [t:template,n:c24_2_r5_dragon_boss]
 {
@@ -155,16 +151,17 @@
 			strength = 8, 0;
 			dexterity = 13, 0;
 			intelligence = 6, 0;
-			nature_magic = 9, 0;
+			nature_magic = 7, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 30;
-		life = 417;
-		max_life = 417;
+		life = 218;
+		max_life = 218;
 		mana = 1200;
 		max_mana = 1200;
+		scale_base = 0.60;
 	}
 	[attack]
 	{
@@ -175,8 +172,9 @@
 	[common]
 	{
         membership = monster;
+		screen_name="Phrymallix the Dragon";
 	}
-	[defend] { defense=2; }
+	[defend] { defense=100; }
     [inventory]
     {
         spew_equipped_kill_count = <ignore>;
@@ -192,21 +190,19 @@
 	{
         actor_life_ratio_low_threshold 	= .33;
 		on_life_ratio_low_flee 			= true;
-        b on_enemy_entered_ocz_flee = true;
-        b on_enemy_entered_icz_flee = true;
-	    b on_enemy_entered_weapon_engage_range_attack = false;
 		on_engaged_lost_consciousness_abort_attack	= true;
-		on_engaged_fled_abort_attack	= true;
+		on_engaged_fled_abort_attack	= false;
 		flee_count						= 9999;
-		flee_distance					= 12;
-        job_travel_distance_limit					= 1000;
+		flee_distance					= 6;
+        job_travel_distance_limit					= 50;
 
         jat_cast 						= world\ai\jobs\common\job_cast.skrit
-			?rand_spell					= true;
+			?rand_spell					= true
+			&rand_target					= true;
 
-		melee_engage_range = 16.0;
+		melee_engage_range = 20.0;
 		personal_space_range = 0.7;
-		ranged_engage_range = 16.0;
-		sight_range = 16.0;
+		ranged_engage_range = 20.0;
+		sight_range = 20.0;
 	}
 }

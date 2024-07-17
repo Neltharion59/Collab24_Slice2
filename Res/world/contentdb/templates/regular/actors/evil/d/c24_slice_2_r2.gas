@@ -133,6 +133,7 @@
 }
 [t:template,n:c24_2_r2_bortusk_melee]
 {
+	// Stats based on Arakun Spider
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R2 bortusk melee";
 	specializes = c24_2_r2_bortusk_base;
@@ -140,30 +141,30 @@
 	{
 		[skills]
 		{
-			  dexterity = 6, 0;
-			  intelligence = 4, 0;
-			  melee = 4,  0;
-			  strength = 9, 0;
+			strength =  6, 0;
+			intelligence =  2, 0;
+			dexterity =  7, 0;
+			melee =  3, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 30;
-        life = 54;
+		experience_value = 33;
+        life = 52;
         mana = 17;
-        max_life = 54;
+        max_life = 52;
         max_mana = 17;
 		scale_base = 1.00;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 19;
-		damage_min = 16;
+		damage_max = 17;
+		damage_min = 15;
 		reload_delay = 1;
 	}
 	[common] { screen_name="Bortusk"; }
-	[defend] { defense=40; }
+	[defend] { defense=25; }
     [mind]
     {
         jat_brain							= world\ai\jobs\common\brain_hero.skrit
@@ -172,6 +173,7 @@
 }
 [t:template,n:c24_2_r2_bortusk_mele_boss_01]
 {
+	// Stats based on Arakun Spider - Bossified
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R2 bortusk melee boss 01";
 	specializes = c24_2_r2_bortusk_base;
@@ -179,26 +181,26 @@
 	{
 		[skills]
 		{
-			  dexterity = 6, 0;
-			  intelligence = 4, 0;
-			  melee = 7,  0;
-			  strength = 9, 0;
+			strength =  6, 0;
+			intelligence =  2, 0;
+			dexterity =  7, 0;
+			melee =  3, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 30;
-        life = 54;
-        mana = 17;
-        max_life = 54;
-        max_mana = 17;
-		scale_base = 1.60;
+		experience_value = 70;
+        life = 97;
+        mana = 22;
+        max_life = 97;
+        max_mana = 22;
+		scale_base = 1.50;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 19;
-		damage_min = 16;
+		damage_max = 22;
+		damage_min = 19;
 		reload_delay = 1;
 	}
 	[common]
@@ -225,6 +227,7 @@
 }
 [t:template,n:c24_2_r2_bortusk_enrager]
 {
+	// Stats based on Arakun Spider - A bit stronger
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R2 bortusk enrager";
 	specializes = c24_2_r2_bortusk_base;
@@ -232,20 +235,19 @@
 	{
 		[skills]
 		{
-			  dexterity = 6, 0;
-			  intelligence = 4, 0;
-			  nature_magic = 4,  0;
-			  melee = 4,  0;
-			  strength = 9, 0;
+			strength =  6, 0;
+			intelligence =  5, 0;
+			dexterity =  7, 0;
+			nature_magic =  3, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 30;
-        life = 36;
-        mana = 17;
-        max_life = 36;
-        max_mana = 17;
+		experience_value = 40;
+        life = 57;
+        mana = 50;
+        max_life = 57;
+        max_mana = 50;
 		scale_base = 1.20;
 	}
 	[attack]
@@ -256,7 +258,7 @@
 		reload_delay = 1;
 	}
 	[common] { screen_name="Bortusk Enrager"; }
-	[defend] { defense=40; }
+	[defend] { defense=25; }
     [inventory]
     {
         spew_equipped_kill_count = <ignore>;
@@ -284,6 +286,7 @@
 }
 [t:template,n:c24_2_r2_bortusk_roar]
 {
+	// Stats based on Rector
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R2 bortusk roar";
 	specializes = c24_2_r2_bortusk_base;
@@ -291,30 +294,30 @@
 	{
 		[skills]
 		{
-			  dexterity = 6, 0;
-			  intelligence = 4, 0;
-			  nature_magic = 4,  0;
-			  strength = 9, 0;
+			strength =  	12, 0;
+			intelligence =  7, 0;
+			dexterity =  	2, 0;
+			nature_magic = 4,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 30;
-        life = 36;
-        mana = 17;
-        max_life = 36;
-        max_mana = 17;
+		experience_value = 44;
+        life = 41;
+        mana = 56;
+        max_life = 41;
+        max_mana = 56;
 		scale_base = 1.20;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 19;
-		damage_min = 16;
+		damage_max = 18;
+		damage_min = 14;
 		reload_delay = 1;
 	}
 	[common] { screen_name="Roaring Bortusk"; }
-	[defend] { defense=40; }
+	[defend] { defense=25; }
     [inventory]
     {
         spew_equipped_kill_count = <ignore>;
@@ -339,6 +342,7 @@
 }
 [t:template,n:c24_2_r2_bortusk_wizard_boss_01]
 {
+	// So this is practically super boss - Suit him for lvl 6
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R2 bortusk wizard boss 01";
 	specializes = c24_2_r2_bortusk_base;
@@ -346,19 +350,19 @@
 	{
 		[skills]
 		{
-			  dexterity = 6, 0;
-			  intelligence = 4, 0;
-			  nature_magic = 4,  0;
-			  strength = 9, 0;
+			dexterity = 6, 0;
+			intelligence = 4, 0;
+			nature_magic = 5,  0;
+			strength = 9, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 30;
-        life = 36;
-        mana = 17;
-        max_life = 36;
-        max_mana = 17;
+		experience_value = 120;
+        life = 136;
+        mana = 320;
+        max_life = 136;
+        max_mana = 320;
 		scale_base = 1.80;
 	}
 	[attack]
@@ -389,7 +393,7 @@
 			}
 		}
 	}
-	[defend] { defense=40; }
+	[defend] { defense=30; }
     [inventory]
     {
         spew_equipped_kill_count = <ignore>;
@@ -417,6 +421,7 @@
 }
 [t:template,n:c24_2_r2_ice_fly]
 {
+	// Stats based on Skeleton Guard
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R2 ice fly";
 	specializes = actor_evil;
@@ -424,19 +429,19 @@
 	{
 		[skills]
 		{
-			strength = 6,0;
-			intelligence = 1,0;
-			dexterity = 15,0;
-            melee =  3,  0;
+			strength =  14, 0;
+			intelligence =  2, 0;
+			dexterity =  6, 0;
+			melee =  3,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 10;
-		life = 21;
-		max_life = 21;
-		mana = 2;
-		max_mana = 2;
+		experience_value = 20;
+		life = 28;
+		max_life = 28;
+		mana = 6;
+		max_mana = 6;
 		model = m_c_edm_if_pos_1;
 		material = ice;
 		[voice]
@@ -447,8 +452,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 22;
-		damage_min = 14;
+		damage_max = 27;
+		damage_min = 22;
 	}
 	[body]
 	{
@@ -511,7 +516,7 @@
 			}
 		}
 	 }
-    [defend] { defense=58; }
+    [defend] { defense=37; }
 	[mind]
 	{
 		personal_space_range = 0.5;
@@ -533,6 +538,7 @@
 }
 [t:template,n:c24_2_r2_spider_frostnid]
 {
+	// Stats based on Arakun Spider
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R2 spider_frostnid";
 	specializes = spider_frostnid_base;
@@ -540,28 +546,28 @@
 	{
 		[skills]
 		{
-			strength =  10, 0;
-			intelligence =  4, 0;
-			dexterity =  15, 0;
-            melee =  8,  0;
+			strength =  6, 0;
+			intelligence =  2, 0;
+			dexterity =  7, 0;
+			melee =  3, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 15;
-		life = 177;
-        max_life = 177;
+		experience_value = 33;
+		life = 48;
+        max_life = 48;
         mana = 8;
 		max_mana = 8;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 36;
-		damage_min = 30;
+		damage_max = 17;
+		damage_min = 15;
 	}
 	[common] { screen_name="Frostnid"; }
-    [defend] { defense=60; }
+    [defend] { defense=25; }
 	[physics]
 	{
 		break_effect = ice_explosion;
@@ -576,9 +582,34 @@
 }
 [t:template,n:c24_2_r2_golem_frost]
 {
+	// Stats based on Skeleton Guard Boss
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R2 golem_frost";
 	specializes = golem_frost_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  16, 0;
+			intelligence =  3, 0;
+			dexterity =  7, 0;
+			melee =  5,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 40;
+		life = 68;
+		max_life = 68;
+		mana = 4;
+		max_mana = 4;
+	}
+	[attack]
+	{
+		damage_max = 23;
+		damage_min = 17;
+	}
+	[defend] { defense=46; }
 	[physics]
 	{
 		break_effect = ice_explosion;
@@ -593,6 +624,7 @@
 }
 [t:template,n:c24_2_r2_wolf_white]
 {
+	// Stats based on Walking Corpse
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R2 wolf_white";
 	specializes = base_wolf;
@@ -605,30 +637,30 @@
 	{
 		[skills]
 		{
-			strength =  11, 0;
-			intelligence =  6, 0;
-			dexterity =  12, 0;
-            melee =  11,  0;
+			strength =  	9,0;
+			intelligence =  	3,0;
+			dexterity =  	4,0;
+			melee =  		3,0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 87;
-		life = 153;
-        max_life = 153;
-        mana = 12;
-        max_mana = 12;
+		experience_value = 22;
+		life = 36;
+        max_life = 36;
+        mana = 6;
+        max_mana = 6;
         textures:0 = b_c_edm_wf-03;
         scale_base = 0.75;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 37;
-		damage_min = 33;
+		damage_max = 13;
+		damage_min = 9;
 	}
 
-	[defend] { defense=55; }
+	[defend] { defense=41; }
 	[common]
 	{
 		screen_name="White Wolf";
@@ -649,6 +681,7 @@
 }
 [t:template,n:c24_2_r2_wolf_white_boss_01]
 {
+	// Stats based on Walking Corpse Boss
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R2 wolf_white boss 01";
 	specializes = base_wolf;
@@ -656,17 +689,17 @@
 	{
 		[skills]
 		{
-			strength =  5, 0;
-			intelligence =  2, 0;
-			dexterity =  8, 0;
-            melee =  2,  0;
+			strength =  	12,0;
+			intelligence =  4,0;
+			dexterity =  	6,0;
+			melee =  		5,0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 20;
-		life = 30;
-        max_life = 30;
+		experience_value = 40;
+		life = 66;
+        max_life = 66;
         mana = 2;
         max_mana = 2;
         textures:0 = b_c_edm_wf-03;
@@ -675,11 +708,11 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 11;
-		damage_min = 8;
+		damage_max = 16;
+		damage_min = 14;
 	}
 
-	[defend] { defense=32; }
+	[defend] { defense=57; }
 	[common]
 	{
 		screen_name="Alpha White Wolf";
@@ -699,22 +732,6 @@
 
 	}
 
-	[inventory]
-	{
-		[pcontent]
-		{
-			[all*]
-			{
-				[gold*]
-				{
-					  max = 40;
-					  min = 30;
-				}
-			}
-		}
-	}
-
-
 	[mind]
 	{
 		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
@@ -729,6 +746,7 @@
 }
 [t:template,n:c24_2_r2_lertisk]
 {
+	// Stats based on Krug Raider
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R2 lertisk";
 	specializes = actor_evil;
@@ -736,17 +754,17 @@
 	{
 		[skills]
 		{
-			strength = 8, 0;
-			dexterity = 13, 0;
-			intelligence = 6, 0;
-			melee = 3, 0;
+			dexterity = 8,  0;
+			intelligence = 6,  0;
+			melee = 3,  0;
+			strength = 11, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 30;
-		life = 72;
-		max_life = 72;
+		experience_value = 36;
+		life = 30;
+		max_life = 30;
 		mana = 12;
 		max_mana = 12;
 		model = m_c_edm_041_pos_1;
@@ -779,8 +797,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 15;
-		damage_min = 12;
+		damage_max = 33;
+		damage_min = 26;
 	}
 	[body]
 	{
@@ -852,7 +870,7 @@
         membership = monster;
 		screen_name="Lertisk";
 	}
-	[defend] { defense=2; }
+	[defend] { defense=42; }
 	[mind]
 	{
 		melee_engage_range = 16.0;
