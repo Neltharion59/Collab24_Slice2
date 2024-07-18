@@ -1,8 +1,14 @@
 [t:accumulate_trigger,n:0x02400011]
 {
+	[generic_accumtrigger]
+	{
+	  i num_til_send = 2;
+	  x send_to_scid = 0x02400013;
+	}
 	[placement]
 	{
-	  p position = 0.0670509,0,1.51083,0x90dde1c9;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.79647,0,-1.55699,0x65521048;
 	}
 }
 [t:trigger_generic,n:0x024000b1]

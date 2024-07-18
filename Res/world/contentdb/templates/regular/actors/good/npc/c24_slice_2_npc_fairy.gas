@@ -49,6 +49,8 @@
         movement_orders = mo_hold;
         disposition_orders = ad_offensive;
             
+        jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_target				= true;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 
 		melee_engage_range = 16.0;

@@ -84,3 +84,18 @@
 	  p position = 3.60907,0,-0.764404,0x930b72d0;
 	}
 }
+[t:generator_generic,n:0x023000b4]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r2_ice_fly";
+	  x initial_command = 0x023000A6;
+	  i max_alive_children = 20;
+	  i num_children_incubating = 9999;
+	  f spawn_period = 3;
+	}
+	[placement]
+	{
+	  p position = -2.38217,5.975,2.36813,0x11d31c5b;
+	}
+}

@@ -387,6 +387,71 @@
 		immunity = "";
 	}
 }
+[t:template,n:c24_r3_broom_flyer_spell_chubby_rain]
+{
+	category_name = "magic";
+	doc = "collab24 r2 spell broom_flyer chubby_rain";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		area_damage_radius = 4;
+		damage_max = 8;
+		damage_min = 4;
+	}
+	[magic]
+	{
+		cast_range = 12;
+		cast_reload_delay = 0.15;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_deathrain]
+	{
+		drop_freq_max = .05;
+		drop_freq_min = .025;
+		drop_script = "dsx_sj_chubby_rain";
+		max_drops = 20;
+		spawn_height = 15.0;
+		spawn_radius = 6.0;
+	}
+	[physics]
+	{
+		explosion_magnitude = 4;
+	}
+}
+[t:template,n:c24_r3_broom_flyer_spell_snowstorm]
+{
+	category_name = "magic";
+	doc = "collab24 r2 spell broom_flyer snowstorm";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 7;
+		damage_min = 5;
+	}
+	[magic]
+	{
+		cast_range = 14;
+		cast_reload_delay = 2;
+		effect_duration = 2;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+		cast_sub_animation = 2;
+	}
+	[spell_turret]
+	{
+		initial_delay = 0.4;
+		shot_rate = 0.2;
+		effect_script = dsx_sj_snowstorm_fire;
+		charge_effect = dsx_sj_snowstorm_charge;
+	}
+}
 [t:template,n:c24_r4_scorpion_spell_spikes]
 {
 	category_name = "magic";

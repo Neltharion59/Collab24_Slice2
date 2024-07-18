@@ -32,6 +32,31 @@
 		[break_particulate] {}
 	}
 }
+[t:template,n:c24_2_r3_static_ice_witch]
+{
+	category_name = "indoor";
+	doc = "c24 slice 2 r3 static ice witch";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		model=m_c_edm_sw_pos_1;
+		scale_base = 0.75;
+		[textures]
+		{
+			0 = b_c_edm_img;
+		}
+	}
+}
+[t:template,n:c24_2_r3_static_broom]
+{
+	category_name = "indoor";
+	doc = "c24 slice 2 r3 static broom";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		model = m_i_glb_broom;
+	}
+}
 [t:template,n:c24_2_r3_hairy_tree]
 {
 	category_name = "trees";
@@ -48,7 +73,7 @@
 		}
 	}
 }
-[dev,t:template,n:c24_2_r5_ice_tree]
+[t:template,n:c24_2_r5_ice_tree]
 {
 	specializes	= base_tree;
 	doc	= "c24 r5 ice tree";

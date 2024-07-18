@@ -375,6 +375,7 @@
 	[common]
 	{
 		screen_name="Trithoneus of the Bortusk";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
 			[*]
@@ -415,6 +416,8 @@
         actor_auto_switches_to_melee = false;
         actor_weapon_preference			= WP_MAGIC;
 
+		movement_orders = mo_hold;
+
 		jat_cast 						= world\ai\jobs\common\job_cast.skrit
 			?rand_spell					= true;
     }
@@ -437,7 +440,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 20;
+		experience_value = 8;
 		life = 28;
 		max_life = 28;
 		mana = 6;
@@ -554,7 +557,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 33;
+		experience_value = 15;
 		life = 48;
         max_life = 48;
         mana = 8;
@@ -598,7 +601,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 40;
+		experience_value = 22;
 		life = 68;
 		max_life = 68;
 		mana = 4;

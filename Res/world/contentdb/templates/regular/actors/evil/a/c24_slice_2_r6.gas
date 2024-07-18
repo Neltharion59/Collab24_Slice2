@@ -122,12 +122,15 @@
 	category_name = "1W_evil_a";
 	doc = "Bruhs Slice 2 R6 ice warrior melee";
 	specializes = c24_2_r6_ice_warrior_base;
-	[skills]
+	[actor]
 	{
-		dexterity = 11,  0;
-		intelligence = 7,  0;
-		melee = 6,  0;
-		strength = 13, 0;
+		[skills]
+		{
+			dexterity = 11,  0;
+			intelligence = 7,  0;
+			melee = 6,  0;
+			strength = 13, 0;
+		}
 	}
 	[aspect]
 	{

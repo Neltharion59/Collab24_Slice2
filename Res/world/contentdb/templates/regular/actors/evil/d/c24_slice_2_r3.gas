@@ -282,16 +282,16 @@
 			strength = 8, 0;
 			dexterity = 13, 0;
 			intelligence = 6, 0;
-			combat_magic = 3, 0;
+			nature_magic = 5, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 30;
-		life = 72;
-		max_life = 72;
-		mana = 12;
-		max_mana = 12;
+		experience_value = 70;
+		life = 96;
+		max_life = 96;
+		mana = 1200;
+		max_mana = 1200;
 		model = m_c_edm_ma_pos_1;
 
 		force_no_render = true;
@@ -409,7 +409,7 @@
 	[common]
 	{
         membership = monster;
-		screen_name="Baba Yaga";
+		screen_name="Yaganna Wheatpicker";
 		[template_triggers]
 		{
 			[*]
@@ -420,14 +420,21 @@
 			}
 		}
 	}
-	[defend] { defense=2; }
+	[defend] { defense=60; }
+	[generator_in_object]
+	{
+		child_template_name = swamp_switch_skeleton;
+		spawn_event = WE_KILLED;
+		spawn_chance = 1.0;
+	}
     [inventory]
     {
         spew_equipped_kill_count = <ignore>;
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
-            il_active_primary_spell = c24_r2_bortusk_spell_ice_storm;
+            il_active_primary_spell = c24_r3_broom_flyer_spell_chubby_rain;
+            il_active_secondary_spell = c24_r3_broom_flyer_spell_snowstorm;
         }
     }
 	[mind]
@@ -435,6 +442,9 @@
         actor_auto_switches_to_magic = true;
         actor_auto_switches_to_melee = false;
         actor_weapon_preference			= WP_MAGIC;
+
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
 
 		melee_engage_range = 16.0;
 		personal_space_range = 0.7;
