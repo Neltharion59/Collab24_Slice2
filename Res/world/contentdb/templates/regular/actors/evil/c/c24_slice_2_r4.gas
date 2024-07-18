@@ -1,0 +1,153 @@
+[t:template,n:c24_2_r4_braak_melee]
+{
+	category_name = "1W_evil_c";
+	doc = "Bruhs Slice 2 R4 braak melee";
+	specializes = base_braak;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	12, 0;
+			intelligence =  9, 0;
+			dexterity =  11, 0;
+            melee =  5,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 48;
+		life = 102;
+        max_life = 102;
+		mana = 10;
+		max_mana = 10;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 22;
+		damage_min = 18;
+	}
+	[common]
+	{
+		screen_name="Braak";
+		membership = party_braak_boss, monster;
+	}
+	[defend] { defense=44; }
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+	}
+}
+[t:template,n:c24_2_r4_braak_melee_boss_01]
+{
+	category_name = "1W_evil_c";
+	doc = "Bruhs Slice 2 R4 braak melee boss 01";
+	specializes = base_braak;
+	[actor]
+	{
+		[skills]
+		{
+			strength 	=  	13, 0;
+			intelligence =  10, 0;
+			dexterity 	=  11, 0;
+            melee 		=  6,  0;
+		}
+	}
+	[aspect]
+	{
+		textures:0 = b_c_ecm_bk-03;
+		experience_value = 90;
+		life = 127;
+        max_life = 127;
+		mana = 40;
+		max_mana = 40;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 28;
+		damage_min = 26;
+	}
+	[common]
+	{
+		screen_name="Pitiful Braak";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			}
+		}
+	}
+	[defend] { defense=51; }
+	[mind]
+	{
+		jat_fidget			= world\ai\jobs\common\job_fidget.skrit
+			?social				= 0.75
+			&friend_template 	= false
+			&friends			= party_braak_boss
+			&still				= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&party_template						= "party_braak_boss";
+	}
+}
+[t:template,n:c24_2_r4_braak_magic]
+{
+	category_name = "1W_evil_c";
+	doc = "Bruhs Slice 2 R4 braak magic";
+	specializes = base_braak;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  9, 0;
+			intelligence =  10, 0;
+			dexterity =  10, 0;
+            nature_magic =  5,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 44;
+		life = 81;
+        max_life = 81;
+		mana = 400;
+		max_mana = 400;
+        [voice]
+		{
+			[die]			{ priority = high; * = s_e_die_braak; }
+			[hit_glance]	{ priority = low; * = s_e_hit_braak; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 28;
+		damage_min = 24;
+	}
+	[common] { screen_name="Braak Hurler"; }
+	[defend] { defense=36; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=c24_r4_braak_spell_boulder; }
+	}
+	[mind]
+	{
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.5
+			&meander						= false
+			&still							= false;
+	}
+}

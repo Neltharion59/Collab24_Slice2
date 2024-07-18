@@ -444,181 +444,309 @@
         }
 	}
 }
-[t:template,n:c24_2_r4_googore]
+[t:template,n:c24_2_r4_shagor]
 {
-	doc = "Bruhs Slice 2 R4 googore";
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R4 shagor";
 	specializes = actor_evil;
-    category_name = "1W_evil_d";
 	[actor]
 	{
-		race	= other;
-
 		[skills]
 		{
-			strength =  	18, 0;
-			intelligence =  7, 0;
-			dexterity =  	10, 0;
-			combat_magic =  6, 0;
+			dexterity = 8,  0;
+			intelligence = 6,  0;
+			ranged = 7,  0;
+			strength = 11, 0;
 		}
 	}
-
 	[aspect]
 	{
-		draw_shadow 		= false;
-		model				= m_c_edm_gg_pos_1;
-		experience_value	= 71;
-		life				= 95;
-		max_life			= 95;
-		mana				= 40;
-		max_mana			= 40;
+		experience_value = 71;
+		life = 95;
+		max_life = 95;
+		mana = 40;
+		max_mana = 40;
+		model = m_c_edm_sa_pos_1;
+		scale_base = 1.5;
 		[textures]
 		{
-			0 = b_c_edm_gg_c24_01;
+			0 = b_c_edm_sa;
 		}
 		[voice]
 		{
-			[enemy_spotted]	{ priority = high; * = s_e_call_googore_SED;  }
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_gen_shgr_rng_atk1;
+				* = s_e_ds2_gen_shgr_rng_atk2;
+				* = s_e_ds2_gen_shgr_rng_atk3;
+			}
+			[die]			{ priority = high; * = s_e_ds2_gen_shgr_die1; }
+			[enemy_spotted]	{ priority = high; * = s_e_ds2_gen_shgr_sgt; }
+			[hit_critical]	{ priority = low; * = s_e_ds2_gen_shgr_hit; }
+			[hit_glance]	{ priority = low; * = s_e_ds2_gen_shgr_hit; }
+			[hit_solid]		{ priority = low; * = s_e_ds2_gen_shgr_hit; }
+	        [move]			{ priority = low; * = s_e_ds2_gen_shgr_mve_lp; }
 		}
 	}
-
 	[attack]
 	{
-		attack_range	= 0.5;
-		damage_min		= 14;
-		damage_max		= 12;
+		attack_range = 0.5;
+		damage_max = 33;
+		damage_min = 26;
 	}
-
 	[body]
 	{
-		avg_move_velocity = 1.0;
-        [bone_translator]
+		avg_move_velocity = 3.650000;
+		[bone_translator]
 		{
-			 kill_bone			= bone16;
-			 weapon_bone		= bone07;
-			 shield_bone		= bone07;
-			 body_anterior		= bone07;
-			 body_mid			= bone16;
-			 body_posterior		= bone01;
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_neck;
+			shield_bone = shield_grip;
+			weapon_bone = bip01_r_hand;
 		}
 		[chore_dictionary]
 		{
-			chore_prefix = a_c_edm_gg_fs;
-
+			chore_prefix = a_c_edm_sa_fs;
 			[chore_attack]
 			{
+				chore_stances = 6;
 				skrit = select_attack;
-				chore_stances = 0;
-
-				anim_files:00 = at;
+				[anim_files]
+				{
+					0mid=at-med;
+					high=at-high;
+					loww=at-low;
+					qffg=dff;
+				}
+				[anim_durations] { fs6 = 2.000; }
 			}
-			[chore_magic]
+			[chore_default]
 			{
-				skrit = select_attack;
-				chore_stances = 0;
-
-				anim_files:00 = at-02;
+				chore_stances = 6;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
 			}
 			[chore_die]
 			{
+				chore_stances = 6;
 				skrit = select_transition;
-				chore_stances = 0;
-
-				anim_files:00 = di;
-			}
-
-			[chore_default]
-			{
-				skrit = infinite_loop;
-				chore_stances = 0;
-
-				anim_files:00 = dfs;
-			}
-			[chore_misc]
-			{
-				chore_stances = 0;
-				skrit = select_transition;
-				[anim_files]
-				{
-					slep = ds;
-					wake = rv;
-				}
+				[anim_files] { 00=di; }
 			}
 			[chore_fidget]
 			{
+				chore_stances = 6;
 				skrit = select_fidget;
-				chore_stances = 0;
-
-				anim_files:00 = dff;
+				[anim_files] { 00=dff; }
 			}
-
 			[chore_walk]
 			{
+				chore_stances = 6;
 				skrit = select_walk;
-				chore_stances = 0;
-
-				anim_files:00 = rv;
+				[anim_files] { 00=wl; }
 			}
 		}
-	}
-	[generator_in_object]
-	{
-		child_template_name = hole_cav_01;
-		spawn_event = WE_ENEMY_SPOTTED;
-		spawn_chance = 1.0;
-		spawn_delay = 0.5;
-		fade_kid = true;
-	}
-    [inventory]
-	{
-		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=c24_r4_googore_spell_gas; }
 	}
 	[common]
 	{
-		screen_name="Googore";
-		membership=monster,immune_freeze;
-		[template_triggers]
+        membership = monster;
+		screen_name="Snow Beast";
+	}
+	[defend] { defense=80; }
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		[equipment] { es_shield_hand = c24_shagor_boulder; }
+	}
+	[mind]
+	{
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:c24_2_r4_flaypick_base]
+{
+	// Stats based on Krug Raider
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R4 Flaypick base";
+	specializes = actor_evil;
+	[aspect]
+	{
+		model = m_c_edm_ip_pos_1;
+		[voice]
 		{
-			[*]
+			[attack]
 			{
-				action* = call_sfx_script("googore_goo");
-				condition* = receive_world_message("we_anim_sfx",1);
+				priority = high;
+				* = s_e_ds2_gen_flpk_atk1;
+				* = s_e_ds2_gen_flpk_atk2;
+				* = s_e_ds2_gen_flpk_atk3;
 			}
-
-			[*]
+			[break] { priority = high; * = s_en_obj_monster_gib; }
+			[die]			{ priority = high; * = s_e_ds2_gen_flpk_die1; }
+			[enemy_spotted]	{ priority = high; * = s_e_ds2_gen_flpk_sgt; }
+			[hit_critical]	{ priority = low; * = s_e_ds2_gen_flpk_hit; }
+			[hit_glance]	{ priority = low; * = s_e_ds2_gen_flpk_hit; }
+			[hit_solid]		{ priority = low; * = s_e_ds2_gen_flpk_hit; }
+			[move]			{ priority = low; * = s_e_ds2_gen_flpk_mve_lp; }
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 3.20000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine1;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine1;
+			shield_bone = bip01_L_forearm;
+			weapon_bone = bip01_R_forearm;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_ip_fs;
+			[chore_attack]
 			{
-				action* = call_sfx_script("googore_goo");
-				condition* = receive_world_message("we_anim_die");
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+					02=at-03;
+				}
+				[anim_durations] { fs0 = 1.333; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff;}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					//wake=a_c_edm_rr_fs0_smn;
+					slep=a_c_edm_ip_fs0_smn;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=rl; }
 			}
 		}
 	}
-	[defend] { defense=40; }
+	[common]
+	{
+        membership = monster;
+	}
 	[mind]
 	{
-		actor_weapon_preference					= WP_MAGIC;
-		actor_auto_switches_to_magic			= true;
-		actor_auto_switches_to_karate			= true;
-		actor_auto_switches_to_melee			= true;
-
-		jat_startup 							= world\ai\jobs\common\job_startup_reveal.skrit
-			?invisible 							= true;
-
-		jat_die 								= world\ai\jobs\actors\evil\job_die_delete.skrit;
-
-		jat_flee_from_object					= jat_none;
-		jat_guard         						= jat_none;
-		jat_move          						= jat_none;
-		jat_patrol         						= jat_none;
-
-		on_enemy_entered_icz_switch_to_melee	= true;
-
-		actor_auto_fidgets 						= false;
-		movement_orders							= mo_hold;
-		inner_comfort_zone_range				= 1.9;
-		melee_engage_range 						= 2.0;
-		personal_space_range					= 1.5;
-		ranged_engage_range 					= 14.0;
-		sight_range								= 14.0;
-		sight_origin_height						= 2;
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
 	}
+}
+[t:template,n:c24_2_r4_flaypick_melee_01]
+{
+	// Stats based on Krug Raider
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R4 Flaypick melee 01";
+	specializes = c24_2_r4_flaypick_base;
+	[actor]
+	{
+		[skills]
+		{
+			dexterity = 8,  0;
+			intelligence = 6,  0;
+			melee = 5,  0;
+			strength = 11, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 63;
+		life = 112;
+		max_life = 112;
+		mana = 27;
+		max_mana = 27;
+		[textures]
+		{
+			0 = b_c_edm_ip;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 20;
+		damage_min = 16;
+	}
+	[common]
+	{
+		screen_name="Flaypick";
+	}
+	[defend] { defense=34; }
+}
+[t:template,n:c24_2_r4_flaypick_melee_02]
+{
+	// Stats based on Krug Raider
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R4 Flaypick melee 02";
+	specializes = c24_2_r4_flaypick_base;
+	[actor]
+	{
+		[skills]
+		{
+			dexterity = 8,  0;
+			intelligence = 6,  0;
+			melee = 7,  0;
+			strength = 11, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 75;
+		life = 127;
+		max_life = 127;
+		mana = 27;
+		max_mana = 27;
+		[textures]
+		{
+			0 = b_c_edm_ip-02;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 23;
+		damage_min = 19;
+	}
+	[common]
+	{
+		screen_name="Murky Flaypick";
+	}
+	[defend] { defense=39; }
 }

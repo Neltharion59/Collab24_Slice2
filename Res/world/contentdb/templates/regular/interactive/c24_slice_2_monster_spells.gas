@@ -391,7 +391,7 @@
 {
 	category_name = "magic";
 	doc = "collab24 r2 spell broom_flyer chubby_rain";
-	specializes = base_spell_monster;
+	specializes = base_spell_monster_nm;
 	[attack]
 	{
 		area_damage_radius = 4;
@@ -426,7 +426,7 @@
 {
 	category_name = "magic";
 	doc = "collab24 r2 spell broom_flyer snowstorm";
-	specializes = base_spell_monster;
+	specializes = base_spell_monster_nm;
 	[attack]
 	{
 		damage_max = 7;
@@ -450,6 +450,107 @@
 		shot_rate = 0.2;
 		effect_script = dsx_sj_snowstorm_fire;
 		charge_effect = dsx_sj_snowstorm_charge;
+	}
+}
+[t:template,n:c24_r3_vaarth_spell_shock]
+{
+	category_name = "magic";
+	doc = "collab24 r3 spell vaarth shock";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		area_damage_radius = 2;
+		damage_max = 12;
+		damage_min = 9;
+	}
+	[magic]
+	{
+		cast_range = 15;
+		cast_reload_delay = 1;
+		effect_duration = 2;
+		does_damage_per_second = true;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_damage_volume]
+	{
+		caster_center = false;
+		effect_script = c24_slice_02_effects_shock;
+	}
+}
+[t:template,n:c24_r3_vaarth_spell_ice_orb]
+{
+	category_name = "magic";
+	doc = "collab24 r3 spell va'arth ice orb";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 10;
+		damage_min = 8;
+	}
+	[common]
+	{
+		screen_name = "Orb of Ice";
+	}
+	[magic]
+	{
+		cast_range = 12;
+		cast_reload_delay = 1;
+
+		effect_duration = 20;
+
+		target_type_flags = tt_self;
+		usage_context_flags = uc_offensive;
+		caster_state_name = "Orb_spell_orbiting";
+		require_state_check = true;
+	}
+	[spell_orb]
+	{
+		orbEffect = orb_ice_orbiter;
+		orbSoundEffect = orb_ice_sound;
+		shotEffect = orb_ice_projectile;
+		isLightning = true;
+		casterDescription = "Orb of Frost";
+	}
+}
+[t:template,n:c24_r3_vaarth_spell_debuff]
+{
+	category_name = "magic";
+	doc = "collab24 r3 spell va'arth debuff";
+	specializes = base_spell_monster_nm;
+	[magic]
+	{
+		cast_range = 15;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+		apply_enchantments = false;
+		state_name = curse;
+		require_state_check = true;
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life_recovery_unit;
+				description = "Slowly die";
+				duration = 8;
+				frequency = 0;
+				initial_delay = 0.25;
+				value = -0.10;
+				multiply_value = true;
+			}
+		}
+	}
+	[spell_mass_enchant]
+	{
+		enchant_script	= curse;
+		radius			= 20.0;
+		description = "Cursed";
 	}
 }
 [t:template,n:c24_r4_scorpion_spell_spikes]
@@ -513,6 +614,40 @@
 		effect_script = dsx_skatwyrm_gas;
 		particle_fit = 0.2;
 		watch_caster = true;
+	}
+}
+[t:template,n:c24_r4_braak_spell_boulder]
+{
+	category_name = "magic";
+	doc = "collab24 r4 spell braak boulder";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		aiming_error_range_x = 2;
+		aiming_error_range_y = 2;
+		ammo_attach_bone = weapon_grip;
+		ammo_template = c24_braak_boulder_ice;
+		damage_max = 23;
+		damage_min = 21;
+		use_aiming_error = true;
+	}
+	[magic]
+	{
+		cast_range = 15;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[physics]
+	{
+		velocity = 16;
+	}
+	[spell_launch]
+	{
+		number = 1;
 	}
 }
 [t:template,n:c24_r5_naldrun_spell_iceshard]

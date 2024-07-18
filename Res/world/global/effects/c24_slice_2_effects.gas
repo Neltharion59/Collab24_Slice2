@@ -212,6 +212,113 @@
 			sfx start #POP;
 	]];
 }
+[effect_script*] // -ET
+{
+	name	=c24_slice_02_effects_shock;
+
+	script	=[[
+			sound play s_e_spell_gom_icesnake_cast at #TARGET_POSITION dist 3 20;
+
+			set $radius1 -.3,-.1,.5;
+			set $radius2 0,3,3;
+			set $scale .85;
+
+			sfx create orbiter #TARGET 
+				"must_update()offset(0,.5,0)iphi(0)radius(0)invisible()
+				dur(30)";
+			set $orb #POP;
+			sfx snap_to_ground $orb;
+			sfx start $orb;
+
+			sfx create cylinder #TARGET
+			"must_update()alpha(.3)texture(b_sfx_armor_freeze)hp0(0,0,0)
+			hp1(1,1,0)spin(19)rp0($radius1)rp1($radius2)dur(1)scale($scale)
+			color0(1,1,1)offset(0,-.5,0)";
+			
+				
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx start #POP;
+
+			sfx create cylinder #TARGET
+			"must_update()alpha(.3)texture(b_sfx_armor_freeze)hp0(.25,.25,0)
+			hp1(.75,.75,0)spin(14)rp0($radius1)rp1($radius2)dur(1)
+			scale($scale)color0(1,1,1)offset(0,-.5,0)";
+			
+				
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx start #POP;
+
+			pause .1;
+
+			sfx create cylinder #TARGET
+			"must_update()alpha(.3)texture(b_sfx_armor_freeze)hp0(1,1,0)
+			hp1(0,0,0)spin(-17)rp0($radius1)rp1($radius2)dur(1)
+			scale($scale)color0(1,1,1)offset(0,-.5,0)";
+			
+					
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx start #POP;
+
+			sfx create cylinder #TARGET
+			"must_update()alpha(.3)texture(b_sfx_armor_freeze)hp0(.75,.75,0)
+			hp1(.25,.25,0)spin(-12)rp0($radius1)rp1($radius2)dur(1)
+			scale($scale)color0(1,1,1)offset(0,-.5,0)";
+			
+					
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx start #POP;
+
+			pause .2;
+
+			sfx create cylinder #TARGET
+			"must_update()alpha(.3)texture(b_sfx_armor_freeze)hp0(0,0,0)
+			hp1(1,1,0)spin(11)rp0($radius1)rp1($radius2)dur(1)scale($scale)
+			color0(1,1,1)offset(0,-.5,0)";
+			
+				
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx start #POP;
+
+			sfx create cylinder #TARGET
+			"must_update()alpha(.3)texture(b_sfx_armor_freeze)hp0(.25,.25,0)
+			hp1(.75,.75,0)spin(16)rp0($radius1)rp1($radius2)dur(1)
+			scale($scale)color0(1,1,1)offset(0,-.5,0)";
+			
+				
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx start #POP;
+
+			pause .1;
+
+			sfx create cylinder #TARGET
+			"must_update()alpha(.3)texture(b_sfx_armor_freeze)hp0(1,1,0)
+			hp1(0,0,0)spin(-17)rp0($radius1)rp1($radius2)dur(1)
+			scale($scale)color0(1,1,1)offset(0,-.5,0)";
+			
+				
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx start #POP;
+
+			sfx create cylinder #TARGET
+			"must_update()alpha(.3)texture(b_sfx_armor_freeze)hp0(.75,.75,0)
+			hp1(.25,.25,0)spin(-10)rp0($radius1)rp1($radius2)dur(1)
+			scale($scale)color0(1,1,1)offset(0,-.5,0)";
+			
+				
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx start #POP;
+
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
 [effect_script*] // - ET
 {
 	name	=c24_slice_02_effect_dragon_firebomb;

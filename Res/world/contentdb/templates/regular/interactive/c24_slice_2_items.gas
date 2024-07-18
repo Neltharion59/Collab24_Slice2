@@ -400,3 +400,196 @@
 		gravity = 3;
 	}
 }
+[t:template,n:c24_vaarth_cannon]
+{
+	doc = "c24 slice 2 wpn va'arth cannon";
+	specializes = base_projectile;
+	[aspect]
+	{
+		model = m_w_misc_mcannon;
+		is_selectable = false;
+		[textures] { 0=b_w_misc_mcannon-02; }
+	}
+	[attack]
+	{
+		ammo_template = grenade;
+		attack_range = 15;
+	  f damage_max = 23.000000;
+	  f damage_min = 18.000000;
+		reload_delay = 0.5;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+	  b allow_modifiers = false;
+	}
+	[gui]
+	{
+		is_droppable = false;
+	}
+	[physics]
+	{
+		velocity = 33;
+	}
+}
+[t:template,n:c24_vaarth_club]
+{
+	specializes = base_club;
+	doc = "c24 slice 2 wpn va'arth club";
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_w_clb_009;
+	}
+	[attack]
+	{
+		damage_max = 17;
+		damage_min = 10;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+		screen_name = "Va'arth Club";
+	}
+	[gui]
+	{
+		is_droppable = false;
+	}
+}
+[t:template,n:c24_braak_boulder_ice]
+{
+	specializes = base_arrow;
+	[aspect]
+	{
+		material = ice;
+		model=m_i_ice_chunks-01;
+		is_selectable	= false;
+		scale_base = 1.0;
+	}
+	[attack]
+	{
+		damage_max = 2;
+		damage_min = 2;
+		skill_class = "Nature Magic";
+	}
+	[common]
+	{
+		is_pcontent_allowed = FALSE;
+		screen_name = "Ice Shard";
+
+		[template_triggers]
+		{
+			[*]
+			{
+				  action* = call_sfx_script("boulder_dust");
+				  condition* = receive_world_message("WE_ENTERED_WORLD");
+				  single_shot = true;
+			}
+		}
+	}
+
+	[physics]
+	{
+		angular_velocity = 8,8,8;
+		randomize_velocity = TRUE;
+		elasticity = 0.9;
+		deflection_angle = 1;
+		orient_to_trajectory = FALSE;
+		break_effect = ice_explosion;
+		break_sound = s_e_die_shard_small;
+		explode_if_hit_go = true;
+		explode_if_hit_terrain = false;
+		explode_when_expired = false;
+		explosion_magnitude = 3.5;
+		fire_resistance = 1;
+	}
+}
+[t:template,n:c24_shagor_boulder]
+{
+	doc = "c24 slice 2 shagor boulder";
+	specializes = base_bow;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_i_glb_rock-05;
+		scale_base = 2.0;
+		[voice]
+		{
+			[attack]
+			{
+				* = s_e_swing_01;
+				* = s_e_swing_03;
+			}
+		}
+	}
+	[attack]
+	{
+		ammo_appears_jit = true;
+		ammo_template = c24_shagor_boulder_ammo;
+		damage_max = 19;
+		damage_min = 16;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+		screen_name = "Rock";
+	}
+	[gui]
+	{
+		is_droppable = false;
+	}
+	[physics]
+	{
+		velocity = 10;
+	}
+}
+[t:template,n:c24_shagor_boulder_ammo]
+{
+	specializes = base_arrow;
+	[aspect]
+	{
+		material = stone;
+		model=m_i_glb_rock-05;
+		is_selectable	= false;
+		scale_base = 2.0;
+		[voice]
+		{
+			[attack] { * = s_e_swing_01; }
+		}
+	}
+	[attack]
+	{
+		damage_max = 0;
+		damage_min = 0;
+	}
+	[common]
+	{
+		is_pcontent_allowed = FALSE;
+		screen_name = "Boulder";
+		[template_triggers]
+		{
+			[*]
+			{
+				  action* = call_sfx_script("boulder_dust");
+				  condition* = receive_world_message("WE_ENTERED_WORLD");
+				  single_shot = true;
+			}
+		}
+	}
+
+	[physics]
+	{
+		angular_velocity = 8,8,8;
+		randomize_velocity = TRUE;
+		elasticity = 0.9;
+		deflection_angle = 1;
+		orient_to_trajectory = FALSE;
+		break_effect = boulder_explosion;
+		break_sound = s_e_explode_rockbeast;
+		explode_if_hit_go = true;
+		explode_if_hit_terrain = false;
+		explode_when_expired = false;
+		explosion_magnitude = 3.5;
+		fire_resistance = 1;
+	}
+}

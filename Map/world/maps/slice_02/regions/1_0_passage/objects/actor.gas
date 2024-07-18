@@ -1,9 +1,77 @@
-[t:c24_2_r3_broom_flyer,n:0x02100e9d]
+[t:jonn,n:0x02100ea2]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = shop;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
 	[placement]
 	{
-	  q orientation = 0,-0.707106,0,-0.707107;
-	  p position = 1.03025,0.717695,1.79982,0xda5403ec;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.32932,-9.53674e-007,0.957127,0xcf394da6;
+	}
+}
+[t:jonn,n:0x02100ea6]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = shop;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.53836,-9.53674e-007,-0.246277,0xcf394da6;
+	}
+}
+[t:jonn,n:0x02100ea7]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = shop;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.65569,-9.53674e-007,-1.30554,0xcf394da6;
+	}
+}
+[t:adwana,n:0x02100ea5]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = shop;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = -2.65513,-0.94786,-2.75312,0x2fa898d3;
 	}
 }
 [t:c24_2_r1_spider,n:0x02100022]
