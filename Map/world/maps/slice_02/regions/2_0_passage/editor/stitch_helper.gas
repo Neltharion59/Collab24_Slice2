@@ -1,0 +1,13 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x00000021;
+	source_region_name = 2_0_passage;
+	[t:stitch_editor,n:2_1_pilgrim_hut]
+	{
+		dest_region = 2_1_pilgrim_hut;
+		[node_ids]
+		{
+			0x00000021 = 0x8E6C250B,7;
+		}
+	}
+}

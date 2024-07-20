@@ -1,0 +1,46 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x00000024;
+	source_region_name = 2_3_town_and_outskirts;
+	[t:stitch_editor,n:2_2_snow_canyon]
+	{
+		dest_region = 2_2_snow_canyon;
+		[node_ids]
+		{
+			0x00000029 = 0xA260A286,8;
+			0x00000030 = 0xA260A286,9;
+			0x00000031 = 0x63D00388,3;
+			0x00000032 = 0xA1BA4C52,3;
+			0x00000033 = 0xE193D251,3;
+			0x00000034 = 0x3510D24B,5;
+			0x00000035 = 0x3510D24B,6;
+		}
+	}
+	[t:stitch_editor,n:2_3_town_and_outskirts]
+	{
+		dest_region = 2_3_town_and_outskirts;
+		[node_ids]
+		{
+			0x00000037 = 0xDA37CD0A,2;
+		}
+	}
+	[t:stitch_editor,n:2_3a_pasture_lands]
+	{
+		dest_region = 2_3a_pasture_lands;
+		[node_ids]
+		{
+			0x00000036 = 0xCF10A150,3;
+			0x00000038 = 0x6728D56E,2;
+			0x00000039 = 0xD16A22C6,8;
+			0x00000040 = 0xD16A22C6,7;
+		}
+	}
+	[t:stitch_editor,n:2_4_ice_fields]
+	{
+		dest_region = 2_4_ice_fields;
+		[node_ids]
+		{
+			0x00000041 = 0x064639B0,7;
+		}
+	}
+}

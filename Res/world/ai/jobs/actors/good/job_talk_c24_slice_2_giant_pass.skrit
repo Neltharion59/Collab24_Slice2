@@ -87,7 +87,7 @@ state Talk$
 			m_Go$.GetConversation.RSSelectConversation( "conv_giant_pass_start_quest_third_brother" );
 			GameAuditor.GetDb.SetBool( "quest_third_brother_started", true );
 
-			scid enable_cave_trigger_scid$ = MakeScid(0x02200008);
+			scid enable_cave_trigger_scid$ = MakeScid(0x02100E9D);
 			Go enable_cave_trigger$ = GoDb.FindGoidByScid( enable_cave_trigger_scid$ ).Go;
 			SendWorldMessage( WE_REQ_ACTIVATE, enable_cave_trigger$.Goid, enable_cave_trigger$.Goid );
 		} else if ( GameAuditor.GetDb.GetBool( "flag_giant_pass_after_quest_talked_to" ) )
