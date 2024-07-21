@@ -139,6 +139,26 @@
 	  p position = 8.45158,-1.96807,-7.03449,0x1576ddc6;
 	}
 }
+[t:c24_slice_2_r2_hermit,n:0x02200041]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_c24_r2_hermit_first;
+			* = conv_c24_r2_hermit_next;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_hermit_r2.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = -0.603195,-1.5,-0.320091,0x1576ddc6;
+	}
+}
 [t:c24_2_r2_wolf_white,n:0x02200079]
 {
 	[placement]
@@ -227,6 +247,14 @@
 	  p position = -1.78821,0,-0.454514,0xfb8ddb88;
 	}
 }
+[t:c24_2_r2_wolf_white_boss_01,n:0x02200083]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.38829,0,-0.890585,0x09d82106;
+	}
+}
 [t:c24_2_r2_wolf_white,n:0x0220007a]
 {
 	[placement]
@@ -301,7 +329,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707106;
-	  p position = 0.351566,0,0.0633087,0x63eb97bb;
+	  p position = 0.2925,0,0.290695,0x63eb97bb;
 	}
 }
 [t:c24_2_r2_bortusk_melee,n:0x0220002c]
@@ -454,13 +482,5 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 0.267994,0,1.28029,0x231d0777;
-	}
-}
-[t:c24_2_r2_wolf_white_boss_01,n:0x02200083]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -1.38829,0,-0.890585,0x09d82106;
 	}
 }

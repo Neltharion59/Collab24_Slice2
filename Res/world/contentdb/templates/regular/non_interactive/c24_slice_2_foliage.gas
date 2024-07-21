@@ -83,54 +83,19 @@
 		model = m_i_des_reed-03;
 	}
 }
-[t:template,n:c24_slice_2_ds2x_scr01_log_05]
+[t:template,n:c24_slice_2_hairy_tree]
 {
-	category_name = "ds2x_logs";
- 	doc = "scrub01_birch_log_04m";
-	specializes = non_interactive_blocking;
+	category_name = "trees";
+	doc = "c24 slice2 r3 hairy tree";
+	specializes = base_tree;
 	[aspect]
 	{
 		lodfi_lower = 0;
 		lodfi_upper = 0;
-		model = m_i_glb_ds2bw_log-01;
+		model = m_i_glb_tree-sequoia-01;
 		[textures]
 		{
-			0 = b_i_glb_ds2bw_tree-a;
-			1 = b_i_glb_ds2bw_tree-b;
-		}
-	}
-}
-[t:template,n:c24_slice_2_ds2x_scr01_log_06]
-{
-	category_name = "ds2x_logs";
- 	doc = "scrub01_birch_log_08m_branchy";
-	specializes = non_interactive_blocking;
-	[aspect]
-	{
-		lodfi_lower = 0;
-		lodfi_upper = 0;
-		model = m_i_glb_ds2bw_log-02;
-		[textures]
-		{
-			0 = b_i_glb_ds2bw_tree-a;
-			1 = b_i_glb_ds2bw_tree-b;
-		}
-	}
-}
-[t:template,n:c24_slice_2_ds2x_scr01_log_07]
-{
-	category_name = "ds2x_logs";
- 	doc = "scrub01_birch_log_10m";
-	specializes = non_interactive_blocking;
-	[aspect]
-	{
-		lodfi_lower = 0;
-		lodfi_upper = 0;
-		model = m_i_glb_ds2bw_log-03;
-		[textures]
-		{
-			0 = b_i_glb_ds2bw_tree-a;
-			1 = b_i_glb_ds2bw_tree-b;
+			0 = b_i_grs_tree-sequioa_c24_hairy_1;
 		}
 	}
 }

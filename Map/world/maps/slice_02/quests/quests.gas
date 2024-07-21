@@ -163,7 +163,7 @@
 		}
 		[*]
 		{
-			description = Apply the Scroll on the Tree;
+			description = Drop the Scroll Near the Tree;
 		  b is_consumable = true;
 		  i order = 3;
 		  b required = true;
@@ -185,6 +185,30 @@
 		  i order = 5;
 		  b required = true;
 			speaker = Zaireen;
+		}
+	}
+	[c24_slice_2_quest_krug_merchant]
+	{
+		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
+		screen_name = Path of the Merchant;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			address = 2_0_passage:conversations:conv_c24_r1_krug_start_quest;
+			description = Speak with the Hermit;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = Dartakk;
+		}
+		[*]
+		{
+			address = 2_1_pilgrim_hut:conversations:conv_c24_r2_hermit_first;
+			description = Harvest wood beyond the fence by hermit's house;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = Talak;
 		}
 	}
 }

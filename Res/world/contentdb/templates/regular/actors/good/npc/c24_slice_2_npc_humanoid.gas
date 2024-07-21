@@ -1,4 +1,24 @@
-
+[t:template,n:c24_slice_2_r2_hermit]
+{
+	category_name = "1W_townsperson";
+	doc = "c24 slice2 r2 hermit";
+	specializes = base_npc_fb;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_12;
+			1 = b_c_pos_a1_027;
+		}
+	}
+	[common]
+	{
+		screen_name = "Talak";
+	}
+	[conversation]
+	{
+	}
+}
 [t:template,n:c24_slice_2_r4_shop]
 {
 	category_name = "1W_shopkeep";

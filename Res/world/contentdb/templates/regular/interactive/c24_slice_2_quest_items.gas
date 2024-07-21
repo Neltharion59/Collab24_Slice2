@@ -56,3 +56,29 @@
 		inventory_icon = b_gui_ig_i_ic_dead_orthrac;
 	}
 }
+[t:template,n:c24_2_r3_scroll_heal_tree]
+{
+	category_name = "treasure";
+	doc = "c24 slice2 r3 dead scroll to heal the tree";
+	specializes = treasure;
+	[aspect]
+	{
+		model = m_i_glb_scroll;
+		[voice]
+		{
+			[put_down]
+			{
+				* = s_e_gui_put_down_scroll;
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Nourishing Scroll";
+	}
+	[gui]
+	{
+		can_sell = false;
+		inventory_icon = b_gui_ig_i_ic_sc_001-inv;
+	}
+}

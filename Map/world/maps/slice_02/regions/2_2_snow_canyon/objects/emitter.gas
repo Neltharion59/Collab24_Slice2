@@ -1,3 +1,28 @@
+[t:emt_sound,n:0x02300084]
+{
+	[placement]
+	{
+	  p position = -1.03628,0,-3.74035,0x78169ad7;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_moaning";
+	  b stop_instantly = true;
+	}
+}
+[t:emt_generic_act,n:0x02300086]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "major_heal";
+	  x target = 0x02300004;
+	}
+	[placement]
+	{
+	  p position = -1.01598,0,-1.99229,0x4b693d61;
+	}
+}
 [t:emt_glow,n:0x0230012d]
 {
 	[glow_emitter]

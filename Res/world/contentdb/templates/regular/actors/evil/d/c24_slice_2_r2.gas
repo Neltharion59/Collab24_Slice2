@@ -149,7 +149,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 33;
+		experience_value = 19;
         life = 52;
         mana = 17;
         max_life = 52;
@@ -189,7 +189,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 70;
+		experience_value = 35;
         life = 97;
         mana = 22;
         max_life = 97;
@@ -243,7 +243,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 40;
+		experience_value = 22;
         life = 57;
         mana = 50;
         max_life = 57;
@@ -302,7 +302,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 44;
+		experience_value = 22;
         life = 41;
         mana = 56;
         max_life = 41;
@@ -358,7 +358,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 120;
+		experience_value = 45;
         life = 136;
         mana = 320;
         max_life = 136;
@@ -383,14 +383,6 @@
 				action* = call_sfx_script("c24_slice_02_effect_bortusk_hat");
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				single_shot = true;
-				no_trig_bits = true;
-				action* = call_sfx_script("unique_ray_red(sgx)");
-
 			}
 		}
 	}
@@ -440,7 +432,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 8;
+		experience_value = 0;
 		life = 28;
 		max_life = 28;
 		mana = 6;
@@ -557,7 +549,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 15;
+		experience_value = 4;
 		life = 48;
         max_life = 48;
         mana = 8;
@@ -601,7 +593,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 22;
+		experience_value = 12;
 		life = 68;
 		max_life = 68;
 		mana = 4;
@@ -648,7 +640,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 22;
+		experience_value = 18;
 		life = 36;
         max_life = 36;
         mana = 6;
@@ -700,7 +692,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 40;
+		experience_value = 30;
 		life = 66;
         max_life = 66;
         mana = 2;
@@ -757,15 +749,15 @@
 	{
 		[skills]
 		{
-			dexterity = 8,  0;
+			dexterity = 50,  0;
 			intelligence = 6,  0;
-			melee = 3,  0;
+			melee = 5,  0;
 			strength = 11, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 36;
+		experience_value = 32;
 		life = 30;
 		max_life = 30;
 		mana = 12;

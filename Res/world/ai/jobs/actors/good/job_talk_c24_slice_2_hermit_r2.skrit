@@ -71,18 +71,18 @@ state Talk$
 	
 	event OnEnterState$
 	{
-		if ( GameAuditor.GetDb.GetBool( "c24_slice2_r1_krug_talked_to" ) )
+		if ( GameAuditor.GetDb.GetBool( "c24_slice2_r2_hermit_quest_started" ) )
 		{
             // After the quest was completed
-			m_Go$.GetConversation.RSSelectConversation( "conv_c24_r1_krug_start_quest_next" );
+			m_Go$.GetConversation.RSSelectConversation( "conv_c24_r2_hermit_first_next" );
 		}
 		else
 		{
             // Before quest
-            m_Go$.GetConversation.RSSelectConversation( "conv_c24_r1_krug_start_quest" );
-            GameAuditor.GetDb.SetBool( "c24_slice2_r1_krug_talked_to", true );
+            m_Go$.GetConversation.RSSelectConversation( "conv_c24_r2_hermit_first" );
+            GameAuditor.GetDb.SetBool( "c24_slice2_r2_hermit_quest_started", true );
 
-			scid quest_activated_trigger_scid$ = MakeScid(0x02100EA1);
+			scid quest_activated_trigger_scid$ = MakeScid(0x02200040);
 			Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
 			SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
 		}

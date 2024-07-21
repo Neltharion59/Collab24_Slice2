@@ -1,9 +1,9 @@
 [conv_c24_r3_fairy_start_quest]
 {
-    activate_quest* = c24_slice_2_quest_heal_tree,2;
-    b quest_dialog = true;
 	[text*]
 	{
+		activate_quest* = c24_slice_2_quest_heal_tree,2;
+		b quest_dialog = true;
 		screen_text = "That was a hideous doing, stranger, killing nature's creatures. Yet, it served justice, for their crimes are not redeemable. They would hurt Rethoros, one of the flesh trees, and feast upon his tortured body. His flesh flowing out of the wound, with no ability to act against it, imagine his torture. Now, his screams of agony shall haunt these woods until I am able to recover my healing scroll. Hear my plea, stranger, find the scroll, and bring it to me, so that I may nourish his flesh. I shall try to ease his pain with my nourishing song untile then.";
 	  f scroll_rate = 10.000000;
 	}

@@ -217,6 +217,35 @@
 	  p position = -3.71314,0,-1.77844,0x0eeba287;
 	}
 }
+[t:trigger_generic,n:0x02100e9d]
+{
+	[common]
+	{
+		dev_instance_text = "on quest to kill brother activated";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02200008,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.173622,2,1.76731,0xfb9687a8;
+	}
+}
 [t:trigger_generic,n:0x0210004d]
 {
 	[common]
@@ -503,16 +532,45 @@
 	  p position = 0.00242615,0,-0.859589,0x8bc5650e;
 	}
 }
-[t:trigger_generic,n:0x02100e9d]
+[t:trigger_generic,n:0x02100ea0]
 {
 	[common]
 	{
-		dev_instance_text = "on quest to kill brother activated";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x02200008,0f,"default","every",0);
+				action* = send_world_message("we_req_talk_begin",0x02100E9E,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,1.500000,1.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-4.69147e-008,0,1;
+	  p position = -1.25892,4.41227,-2.70181,0x9e084e28;
+	}
+}
+[t:trigger_generic,n:0x02100ea1]
+{
+	[common]
+	{
+		dev_instance_text = "ON QUEST ACTIVATED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_deactivate",0x02100EA0,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -529,6 +587,6 @@
 	}
 	[placement]
 	{
-	  p position = -0.173622,2,1.76731,0xfb9687a8;
+	  p position = -0.406013,6,-1.61678,0x282eabe3;
 	}
 }

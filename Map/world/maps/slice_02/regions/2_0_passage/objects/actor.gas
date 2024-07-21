@@ -490,3 +490,23 @@
 	  p position = -0.821762,0,-0.527386,0x3206f535;
 	}
 }
+[t:c24_slice_2_npc_krug_storeless,n:0x02100e9e]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_c24_r1_krug_start_quest;
+			* = conv_c24_r1_krug_start_quest_next;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_krug_r1.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -2.70354,4.00571,-4.97718,0x9e084e28;
+	}
+}
