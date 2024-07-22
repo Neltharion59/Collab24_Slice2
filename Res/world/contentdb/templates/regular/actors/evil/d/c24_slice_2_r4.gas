@@ -1,7 +1,7 @@
 
 [t:template,n:c24_2_r4_krusk]
 {
-	// Stats based on Mucosa Bossed - Strengthened
+	// Stats based on Mucosa Boss - Strengthened
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R4 krusk";
 	specializes = actor_evil;
@@ -10,16 +10,16 @@
 		[skills]
 		{
 			strength 	 =  12, 0;
-			intelligence =  6, 0;
-			dexterity 	 =  13, 0;
-            melee 		 =  6, 0;
+			intelligence =  20, 0;
+			dexterity 	 =  1, 0;
+            melee 		 =  7, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 75;
-		life = 86;
-		max_life = 86;
+		experience_value = 48;
+		life = 71;
+		max_life = 71;
 		mana = 12;
 		max_mana = 12;
 		model = m_c_xeam_007_pos_1;
@@ -48,8 +48,9 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 24;
-		damage_min = 22;
+		damage_max = 19;
+		damage_min = 17;
+		reload_delay = 0.1;
 	}
 	[body]
 	{
@@ -80,7 +81,7 @@
 				}
 				[anim_durations]
 				{
-					fs0 = 2.000;
+					fs0 = 0.100;
 				}
 			}
 			[chore_default]
@@ -135,7 +136,7 @@
         membership = monster;
 		screen_name="Furbolg";
 	}
-	[defend] { defense=70; }
+	[defend] { defense=20; }
 	[mind]
 	{
 		melee_engage_range = 16.0;
@@ -162,7 +163,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 42;
+		experience_value = 37;
 		life = 73;
 		max_life = 73;
 		mana = 12;
@@ -280,7 +281,7 @@
 	[aspect]
 	{
 		model = m_c_edm_sc_pos_1;
-		scale_base = 0.50;
+		scale_base = 0.40;
 		[textures]
 		{
 			0 = b_c_edm_sc_c24_01;
@@ -338,6 +339,15 @@
 				skrit = select_fidget;
 				[anim_files] { 00=dff; }
 			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+				}
+			}
 			[chore_walk]
 			{
 				chore_stances = 0;
@@ -382,16 +392,16 @@
 		[skills]
 		{
 			strength =  	9,0;
-			intelligence =  	3,0;
-			dexterity =  	4,0;
+			intelligence =  	40,0;
+			dexterity =  	40,0;
 			melee =  		6,0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 31;
-		life = 36;
-		max_life = 36;
+		experience_value = 7;
+		life = 11;
+		max_life = 11;
 		mana = 6;
 		max_mana = 6;
 	}
@@ -401,7 +411,7 @@
 		damage_max = 14;
 		damage_min = 12;
 	}
-	[defend] { defense=40; }
+	[defend] { defense=20; }
 }
 [t:template,n:c24_2_r4_scorpion_ranged]
 {
@@ -414,16 +424,16 @@
 		[skills]
 		{
 			strength =  	9,0;
-			intelligence =  	3,0;
-			dexterity =  	4,0;
+			intelligence =  	40,0;
+			dexterity =  	40,0;
 			ranged =  		6,0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 31;
-		life = 36;
-		max_life = 36;
+		experience_value = 7;
+		life = 7;
+		max_life = 7;
 		mana = 6;
 		max_mana = 6;
 	}
@@ -433,7 +443,7 @@
 		damage_max = 14;
 		damage_min = 12;
 	}
-	[defend] { defense=40; }
+	[defend] { defense=20; }
     [inventory]
 	{
         spew_equipped_kill_count = <ignore>;
@@ -461,7 +471,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 71;
+		experience_value = 42;
 		life = 95;
 		max_life = 95;
 		mana = 40;
@@ -562,10 +572,12 @@
 	}
 	[mind]
 	{
-		melee_engage_range = 16.0;
+		movement_orders = mo_hold;
+
+		melee_engage_range = 24.0;
 		personal_space_range = 0.7;
-		ranged_engage_range = 16.0;
-		sight_range = 16.0;
+		ranged_engage_range = 24.0;
+		sight_range = 24.0;
 	}
 }
 [t:template,n:c24_2_r4_flaypick_base]
@@ -680,15 +692,15 @@
 	{
 		[skills]
 		{
-			dexterity = 8,  0;
-			intelligence = 6,  0;
+			dexterity = 1,  0;
+			intelligence = 1,  0;
 			melee = 5,  0;
 			strength = 11, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 63;
+		experience_value = 39;
 		life = 112;
 		max_life = 112;
 		mana = 27;
@@ -720,15 +732,15 @@
 	{
 		[skills]
 		{
-			dexterity = 8,  0;
-			intelligence = 6,  0;
+			dexterity = 1,  0;
+			intelligence = 1,  0;
 			melee = 7,  0;
 			strength = 11, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 75;
+		experience_value = 43;
 		life = 127;
 		max_life = 127;
 		mana = 27;
@@ -749,4 +761,257 @@
 		screen_name="Murky Flaypick";
 	}
 	[defend] { defense=39; }
+}
+[t:template,n:c24_2_r4_gargoyle_base]
+{
+	category_name = "1W_evil_d";
+	doc = "c24 Slice2 R4 gargoyle_melee";
+	specializes = actor_evil;
+	[aspect]
+	{
+		material = stone;
+		model = m_c_edm_ga_pos_1;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_gargoyle;  }
+			[enemy_spotted]	{ priority = high; * = s_e_call_gargoyle_small_SED; }
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 4.990000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_ga_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+                    00 = at;
+					01 = at-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+                    00 = mg;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = ds;
+					wake = rv;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = basic_walk;
+				[anim_files] { 00=fl; }
+			}
+		}
+	}
+	[common]
+	{
+		membership = gargoyle, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("we_anim_sfx",1);
+				action* = call_sfx_script("gargoyle_hand_glow");
+
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				action* = call_sfx_script("c24_slice_02_gargoyle_eye_glow");
+
+			}
+
+		}
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+
+		melee_engage_range 		= 14;
+		personal_space_range 	= 0.5;
+		ranged_engage_range 	= 14.0;
+		sight_range 			= 14.0;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = ice_explosion;
+		explosion_magnitude = .05;
+		fire_resistance = 0.0;
+        fire_burn_threshold = 20;
+        gib_gore_good = true;
+		[break_particulate]
+		{
+		}
+	}
+}
+[t:template,n:c24_2_r4_gargoyle_melee_base]
+{
+	category_name = "1W_evil_d";
+	doc = "c24 Slice2 R4 gargoyle melee base";
+	specializes = c24_2_r4_gargoyle_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  7, 0;
+			intelligence =  30, 0;
+			dexterity =  30, 0;
+            melee =  5,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 15;
+		life = 15;
+		max_life = 15;
+		mana = 26;
+        max_mana = 26;
+		[textures]
+		{
+			0 = b_c_edm_ga-04;
+		}
+	}
+	[attack]
+	{
+		attack_range = .5;
+		damage_max = 19;
+		damage_min = 17;
+	}
+	[common]
+	{
+		screen_name="Cold Gargoyle";
+	}
+    [defend] { defense=120; }
+}
+[t:template,n:c24_2_r4_gargoyle_melee_reveal]
+{
+	category_name = "1W_evil_d";
+	doc = "c24 Slice2 R4 gargoyle melee reveal";
+	specializes = c24_2_r4_gargoyle_melee_base;
+	[mind]
+    {
+    	jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?activate					= true;
+
+    	melee_engage_range 		= 5;
+		personal_space_range 	= 0.5;
+		sight_range 			= 5.5;
+		com_range 				= 4.0;
+		ranged_engage_range 	= 5.1;
+        outer_comfort_zone_range= 5.0;
+		actor_auto_fidgets		= false;
+    }
+}
+[t:template,n:c24_2_r4_gargoyle_magic_base]
+{
+	category_name = "1W_evil_d";
+	doc = "c24 Slice2 R4 gargoyle melee base";
+	specializes = c24_2_r4_gargoyle_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  7, 0;
+			intelligence =  30, 0;
+			dexterity =  30, 0;
+            nature_magic =  5,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 15;
+		life = 11;
+		max_life = 11;
+		mana = 60;
+        max_mana = 60;
+		[textures]
+		{
+			0 = b_c_edm_ga-05;
+		}
+	}
+	[attack]
+	{
+		attack_range = .5;
+		damage_max = 19;
+		damage_min = 17;
+	}
+	[common]
+	{
+		screen_name="Frigid Gargoyle";
+	}
+    [defend] { defense=120; }
+    [inventory]
+    {
+        spew_equipped_kill_count = <ignore>;
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r4_gargoyle_spell_freeze;
+        }
+    }
+}
+[t:template,n:c24_2_r4_gargoyle_magic_reveal]
+{
+	category_name = "1W_evil_d";
+	doc = "c24 Slice2 R4 gargoyle magic reveal";
+	specializes = c24_2_r4_gargoyle_magic_base;
+	[mind]
+    {
+    	jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?activate					= true;
+
+    	melee_engage_range 		= 10;
+		personal_space_range 	= 0.5;
+		sight_range 			= 10.5;
+		com_range 				= 10;
+		ranged_engage_range 	= 10;
+        outer_comfort_zone_range= 3.0;
+		actor_auto_fidgets		= false;
+    }
 }

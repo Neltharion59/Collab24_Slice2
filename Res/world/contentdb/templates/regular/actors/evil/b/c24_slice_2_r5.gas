@@ -154,14 +154,14 @@
 			strength = 8, 0;
 			dexterity = 13, 0;
 			intelligence = 6, 0;
-			nature_magic = 7, 0;
+			nature_magic = 8, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 30;
-		life = 218;
-		max_life = 218;
+		experience_value = 100;
+		life = 417;
+		max_life = 417;
 		mana = 1200;
 		max_mana = 1200;
 		scale_base = 0.60;
@@ -185,7 +185,7 @@
         [other] 
         { 
             il_active_primary_spell = c24_r5_dragon_spell_fireball;
-            //il_active_secondary_spell = c24_r5_dragon_spell_breath;
+            il_active_secondary_spell = c24_r5_dragon_spell_breath;
 			il_spell_1 = c24_r5_dragon_spell_run;
         }
     }

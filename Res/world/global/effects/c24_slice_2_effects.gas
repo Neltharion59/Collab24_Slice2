@@ -1063,3 +1063,74 @@
 			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
 			]];
 }
+[effect_script*]
+{
+	name	=c24_slice_02_gargoyle_eye_glow;
+
+	script	=[[	
+			if ( #LODFI > 0.4 )
+			{
+				sfx create fireb  #TARGET 
+					"offset(.08,.07,.03)velocity(20,-15,40)scale(.07)color0(0,.3,.9)
+					alphafade(4)lower_r0(0)lower_r1(0)upper_r0(0)upper_r1(0)
+					count(30)fctrl(0,0,-.1)flamesize(1.5)bone_orient()";
+				sfx attach_point #PEEK Bip01_Head target;
+				sfx start #POP;
+				
+				sfx create fireb  #TARGET 
+					"offset(.08,.07,-.03)velocity(20,-15,-40)scale(.07)color0(0,.3,.9)
+					alphafade(4)lower_r0(0)lower_r1(0)upper_r0(0)upper_r1(0)
+					count(30)fctrl(0,0,-.1)flamesize(1.5)bone_orient()";
+				sfx attach_point #PEEK Bip01_Head target;
+				sfx start #POP;
+			}
+			]];
+}
+[effect_script*]
+{
+	name	=c24_slice_02_effect_spell_drake_frost;
+
+	script	=[[
+			set $texture b_sfx_sparkle01;
+
+			set $velocity 0,-40,-50;
+			set $accel 0,0,15;
+
+			set $flames1 100;
+			set $flames2 100;
+
+			set $width1 20;
+			set $width2 40;
+
+			sfx create fireb #SOURCE 
+				"must_update()texture($texture)fctrl(0,0,15)flamesize(1)alphafade(.5)
+				ts(.6)dur(2)color0(.3,.3,1)velocity($velocity)accel($accel)
+				cvel(1)lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)
+				count($flames2)bone_orient()[0]";
+			sfx attach_point #PEEK @weapon_bone target;
+			sfx friendly party #PEEK;
+			sfx start #POP;
+
+			sfx create fireb #SOURCE 
+				"must_update()texture($texture)fctrl(0,0,10)flamesize(1)alphafade(.5)
+				ts(.6)dur(2)color0(.7,.7,1)velocity($velocity)accel($accel)
+				cvel(1)lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)
+				count($flames2)bone_orient()";
+			sfx attach_point #PEEK @weapon_bone target;
+			sfx friendly party #PEEK;
+			sfx start #POP;
+
+			sfx create fireb #SOURCE 
+				"must_update()fctrl(0,0,15)flamesize(2)alphafade(.5)ts(.6)dur(2)color0(.3,.5,1)
+				velocity($velocity)accel($accel)cvel(1)lower_r0(0)lower_r1(0)
+				upper_r0($width1)upper_r1($width2)count($flames2)bone_orient()";
+			sfx attach_point #PEEK @weapon_bone target;
+			sfx friendly party #PEEK;
+			sfx start #POP;
+
+			sound play s_e_attack_drake_white at #SOURCE_POSITION dist 10 30;
+			
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+
+			]];
+}

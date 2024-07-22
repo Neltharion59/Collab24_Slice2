@@ -81,6 +81,51 @@
 		jat_brain							= world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party			= true;
 	}
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #weapon/19-21;
+                    il_main = #armor/40-50;
+					il_main = #*/19-21;
+					il_main = #nmagic/4-8;
+					il_main = #cmagic/4-8;
+					chance = 0.33;
+				}
+				[oneof*]
+				{
+					il_main = potion_health_small;
+					il_main = potion_mana_small;
+					chance = 0.40;
+				}
+				[oneof*]
+				{
+	                   chance = 0.02;
+	                   il_main = #weapon/-rare(1)/25-31;
+	                   il_main = #armor/-rare(1)/48-59;
+                       il_main = #*/-rare(1)/25-31;
+                }
+				[oneof*]
+				{
+	                   chance = 0.01;
+	                   il_main = #weapon/-unique(2)/25-31;
+	                   il_main = #armor/-unique(2)/48-59;
+                       il_main = #*/-unique(2)/25-31;
+                }
+				[gold*]
+				{
+					max = 154;
+					min = 91;
+					min_pile = 21;
+					piles = 2 - 4;
+				}
+			}
+		}
+	}
 }
 [t:template,n:c24_2_r3_furok_slasher]
 {
@@ -115,6 +160,51 @@
 	}
 	[common] { screen_name="Furok Slasher"; }
 	[defend] { defense=17; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #weapon/19-21;
+                    il_main = #armor/40-50;
+					il_main = #*/19-21;
+					il_main = #nmagic/4-8;
+					il_main = #cmagic/4-8;
+					chance = 0.33;
+				}
+				[oneof*]
+				{
+					il_main = potion_health_small;
+					il_main = potion_mana_small;
+					chance = 0.40;
+				}
+				[oneof*]
+				{
+	                   chance = 0.02;
+	                   il_main = #weapon/-rare(1)/25-31;
+	                   il_main = #armor/-rare(1)/48-59;
+                       il_main = #*/-rare(1)/25-31;
+                }
+				[oneof*]
+				{
+	                   chance = 0.01;
+	                   il_main = #weapon/-unique(2)/25-31;
+	                   il_main = #armor/-unique(2)/48-59;
+                       il_main = #*/-unique(2)/25-31;
+                }
+				[gold*]
+				{
+					max = 154;
+					min = 91;
+					min_pile = 21;
+					piles = 2 - 4;
+				}
+			}
+		}
+	}
 }
 [t:template,n:c24_2_r3_furok_boss_01]
 {
@@ -163,6 +253,51 @@
 		}
 	}
 	[defend] { defense=17; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #weapon/19-21;
+                    il_main = #armor/40-50;
+					il_main = #*/19-21;
+					il_main = #nmagic/4-8;
+					il_main = #cmagic/4-8;
+				}
+				[oneof*]
+				{
+					il_main = potion_health_small;
+					il_main = potion_mana_small;
+					min = 2;
+					max = 2;
+				}
+				[oneof*]
+				{
+	                   chance = 0.2;
+	                   il_main = #weapon/-rare(1)/25-31;
+	                   il_main = #armor/-rare(1)/48-59;
+                       il_main = #*/-rare(1)/25-31;
+                }
+				[oneof*]
+				{
+	                   chance = 0.1;
+	                   il_main = #weapon/-unique(2)/25-31;
+	                   il_main = #armor/-unique(2)/48-59;
+                       il_main = #*/-unique(2)/25-31;
+                }
+				[gold*]
+				{
+					max = 200;
+					min = 120;
+					min_pile = 40;
+					piles = 2 - 4;
+				}
+			}
+		}
+	}
 	[mind]
 	{
 		jat_fidget			= world\ai\jobs\common\job_fidget.skrit
@@ -486,12 +621,6 @@
 	        [move]			{ priority = low; * = s_e_ds2_gen_kurgn_mve_lp; }
 		}
 	}
-	[attack]
-	{
-		attack_range = 0.5;
-		damage_max = 15;
-		damage_min = 12;
-	}
 	[body]
 	{
 		avg_move_velocity = 3.650000;
@@ -580,16 +709,16 @@
 		[skills]
 		{
 			strength =  10, 0;
-			intelligence =  5, 0;
+			intelligence =  25, 0;
 			dexterity =  11, 0;
             melee =  		5,0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 45;
-		life = 58;
-		max_life = 58;
+		experience_value = 28;
+		life = 54;
+		max_life = 54;
 		mana = 10;
 		max_mana = 10;
 	}
@@ -616,6 +745,7 @@
 		personal_space_range = 0.7;
 		ranged_engage_range = 12.0;
 		sight_range = 12.0;
+		flee_count						= 9999;
 	}
 }
 [t:template,n:c24_2_r3_kurgan_melee_boss_01]
@@ -628,14 +758,14 @@
 		[skills]
 		{
 			strength 	 =  12, 0;
-			intelligence =  6, 0;
+			intelligence =  50, 0;
 			dexterity 	 =  13, 0;
             melee 		 =  6, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 65;
+		experience_value = 37;
 		life = 102;
 		max_life = 102;
 		mana = 12;
@@ -676,5 +806,6 @@
 		personal_space_range = 0.7;
 		ranged_engage_range = 12.0;
 		sight_range = 12.0;
+		flee_count						= 9999;
 	}
 }
