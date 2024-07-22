@@ -6,7 +6,7 @@
 	  x initial_command = 0x02200035;
 	  i max_alive_children = 1;
 	  i num_children_incubating = 1;
-	  f spawn_period = 1;
+	  f spawn_period = 0.1;
 	  f spawn_range = 0;
 	}
 	[placement]
@@ -55,7 +55,7 @@
 	  x initial_command = 0x02200038;
 	  i max_alive_children = 1;
 	  i num_children_incubating = 1;
-	  f spawn_period = 1;
+	  f spawn_period = 0.1;
 	  f spawn_range = 0;
 	}
 	[placement]

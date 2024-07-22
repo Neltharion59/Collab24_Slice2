@@ -92,10 +92,6 @@ state Talk$
             // Before quest
             m_Go$.GetConversation.RSSelectConversation( "conv_c24_r3_fairy_start_quest" );
             GameAuditor.GetDb.SetBool( "flag_fairy_tree_quest_accepted", true );
-
-			scid activate_quest_trigger_scid$ = MakeScid(0x0230001B);
-			Go activate_quest_trigger$ = GoDb.FindGoidByScid( activate_quest_trigger_scid$ ).Go;
-			SendWorldMessage( WE_REQ_ACTIVATE, activate_quest_trigger$.Goid, activate_quest_trigger$.Goid );
 		}
 
 		m_Go$.GetConversation.RSActivateDialogue();

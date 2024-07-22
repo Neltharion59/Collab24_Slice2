@@ -9,8 +9,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-9.88904e-009,0,1;
-	  p position = 2.13225,0,-1.50513,0xa403f032;
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 2.24794,0,-1.45105,0xa403f032;
 	}
 }
 [t:generator_bush_02,n:0x0230008a]
@@ -39,49 +39,7 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,-4.69147e-008;
-	  p position = -2.83051,-17.5,-6.6282,0xb531cec8;
-	}
-}
-[t:generator_bush_02,n:0x02300088]
-{
-	[generator_advanced_a2]
-	{
-		child_template_name = "c24_2_r3_kurgan_melee";
-	  f spawn_period = 1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.382683,0,0.923879;
-	  p position = 0.0298462,0,0.673355,0xd6b0fb9a;
-	}
-}
-[t:generator_bush_02,n:0x0230008c]
-{
-	[generator_advanced_a2]
-	{
-		child_template_name = "c24_2_r3_kurgan_melee_boss_01";
-	  f spawn_period = 1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.382683,0,0.923879;
-	  p position = 5.28668,-17.7724,0.68605,0x05f4270c;
-	}
-}
-[t:generator_bush_02,n:0x02300089]
-{
-	[generator_advanced_a2]
-	{
-		child_template_name = "c24_2_r3_kurgan_melee";
-	  f spawn_period = 1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,-0.707107;
-	  p position = 3.60907,0,-0.764404,0x930b72d0;
+	  p position = -0.616272,-17.5,-5.24859,0xb531cec8;
 	}
 }
 [t:generator_generic,n:0x02300129]

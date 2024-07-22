@@ -208,7 +208,7 @@
 	[magic]
 	{
 		cast_range = 10;
-		cast_reload_delay = 0;
+		cast_reload_delay = 0.15;
 		effect_duration = 20;
 		requires_line_of_sight = true;
 		require_state_check = true;
@@ -248,7 +248,7 @@
 	[magic]
 	{
 		cast_range = 12;
-		cast_reload_delay = 1;
+		cast_reload_delay = 0.15;
 
 		effect_duration = 20;
 
@@ -296,7 +296,7 @@
 			}
 			[*]
 			{
-				alteration = alter_dexterity;
+				alteration = alter_ranged;
 				description = "Decrease Ranged";
 				duration = 5;
 				frequency = 0;
@@ -352,16 +352,16 @@
 		{
 			[*]
 			{
-				alteration = alter_armor;
-				description = "Magic Armor";
+				alteration = alter_dexterity;
+				description = "Agile";
 				duration = 5;
-				value = 60;
+				value = 50;
 			}
 		}
 	}
 	[spell_status_effect]
 	{
-		description = "Armored";
+		description = "Agile";
 		effect_script = spirit_armor;
 	}
 }

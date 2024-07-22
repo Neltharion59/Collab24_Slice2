@@ -1,32 +1,3 @@
-[t:trigger_generic,n:0x0230001b]
-{
-	[common]
-	{
-		dev_instance_text = "ON QUEST ACCEPTED";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02800007,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -3.62419,0,-3.53522,0x78169ad7;
-	}
-}
 [t:trigger_generic,n:0x02300009]
 {
 	[common]
@@ -35,7 +6,6 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x02300008,0f,"default","every",0);
 				action* = change_quest_state("c24_slice_2_quest_heal_tree","active",1);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -53,7 +23,7 @@
 	}
 	[placement]
 	{
-	  p position = 1.36252,0,1.34227,0x4b693d61;
+	  p position = 0.748838,0,1.49414,0x4b693d61;
 	}
 }
 [t:trigger_generic,n:0x0230005f]
@@ -145,7 +115,7 @@
 	}
 	[placement]
 	{
-	  p position = -1.4689,0,2.54965,0x4b693d61;
+	  p position = -1.77522,0,3.00413,0x4b693d61;
 	}
 }
 [t:accumulate_trigger,n:0x023000dd]
@@ -376,9 +346,6 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0230008C,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x02300088,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x02300089,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x02300087,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x0230008B,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x0230008A,0f,"default","every",0);
@@ -399,6 +366,33 @@
 	[placement]
 	{
 	  p position = -1.81671,0,-1.26607,0x930b72d0;
+	}
+}
+[t:trigger_generic,n:0x02300006]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.563673,0,-2.2493,0xcac65f2c;
 	}
 }
 [t:blocking_object,n:0x0230019f]

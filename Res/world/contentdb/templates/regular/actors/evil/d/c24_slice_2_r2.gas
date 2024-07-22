@@ -380,7 +380,8 @@
 		{
 			[*]
 			{
-				action* = call_sfx_script("c24_slice_02_effect_bortusk_hat");
+				//action* = call_sfx_script("c24_slice_02_effect_bortusk_hat");
+				action* = call_sfx_script("eyes_whelnar")
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
 			}
@@ -792,7 +793,7 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 33;
+		damage_max = 29;
 		damage_min = 26;
 	}
 	[body]

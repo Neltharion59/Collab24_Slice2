@@ -16,7 +16,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 13;
+		experience_value = 12;
         life = 31;
         mana = 17;
         max_life = 31;
@@ -36,8 +36,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 34;
-		damage_min = 29;
+		damage_max = 26;
+		damage_min = 23;
 		reload_delay = 1;
 	}
 	[body]
@@ -117,14 +117,14 @@
 			strength = 8, 0;
 			dexterity = 13, 0;
 			intelligence = 6, 0;
-			melee = 6, 0;
+			melee = 5, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 40;
-		life = 241;
-		max_life = 241;
+		life = 107;
+		max_life = 107;
 		mana = 40;
 		max_mana = 40;
 		model = m_c_edm_or_pos_1;
@@ -158,8 +158,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 38;
-		damage_min = 32;
+		damage_max = 31;
+		damage_min = 29;
 	}
 	[body]
 	{
@@ -229,7 +229,7 @@
 			}
 		}
 	}
-	[defend] { defense=45; }
+	[defend] { defense=55; }
 	[common]
 	{
 		membership = monster;
@@ -295,8 +295,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 5;
-		damage_min = 5;
+		damage_max = 6;
+		damage_min = 6;
 	}
 	[body]
 	{
@@ -410,7 +410,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 50;
+		experience_value = 15;
 		life             = 67;
 		max_life         = 67;
 		mana             = 50;
@@ -471,7 +471,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 80;
+		experience_value = 20;
 		life             = 113;
 		max_life         = 113;
 		mana             = 80;
