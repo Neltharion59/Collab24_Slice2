@@ -15,7 +15,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 100;
+		experience_value = 80;
 		life = 147;
 		max_life = 147;
 		mana = 900;
@@ -52,8 +52,8 @@
 	{
 		area_damage_radius = 4.25;
 		attack_range = 0.5;
-		damage_max = 30;
-		damage_min = 20;
+		damage_max = 40;
+		damage_min = 40;
 	}
     [body]
 	{
@@ -176,6 +176,64 @@
 			frag_glb_ice_06 = 1;
 			frag_glb_ice_07 = 1;
 			frag_glb_ice_08 = 3;
+		}
+	}
+}
+[t:template,n:c24_slice_2_r6_shard_ice]  // = shard_teal
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R6 shard ice";
+	specializes = base_shard;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  12, 0;
+			intelligence =  5, 0;
+			dexterity =  5, 0;
+            nature_magic =  8,  0;
+		}
+	}
+	[aspect]
+	{
+		scale_base = 0.15;
+		[textures] { 0 = b_c_edm_iw; }
+		experience_value = 44;
+		life = 97;
+        max_life = 97;
+        mana = 80;
+        max_mana = 80;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 45;
+		damage_min = 38;
+	}
+    [common]
+    {
+        screen_name = "Ice Shard";
+    }
+	[defend] { defense=125; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=c24_r6_ice_shard_spell_shard; }
+	}
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?activate = true;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			c24_frag_glb_gr_shard_ice_sm_01 = 1;
+			c24_frag_glb_gr_shard_ice_sm_02 = 1;
+			c24_frag_glb_gr_shard_ice_sm_03 = 2;
+			c24_frag_glb_gr_shard_ice_sm_04 = 3;
+			c24_frag_glb_gr_shard_ice_sm_05 = 3;
 		}
 	}
 }

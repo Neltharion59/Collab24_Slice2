@@ -395,8 +395,8 @@
 	[attack]
 	{
 		area_damage_radius = 4;
-		damage_max = 8;
-		damage_min = 4;
+		damage_max = 11;
+		damage_min = 10;
 	}
 	[magic]
 	{
@@ -429,8 +429,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 7;
-		damage_min = 5;
+		damage_max = 9;
+		damage_min = 6;
 	}
 	[magic]
 	{
@@ -567,7 +567,7 @@
 		damage_max = 22;
 		damage_min = 20;
 		use_aiming_error = true;
-		attack_class = ranged;
+		skill_class = ranged;
 	}
 	[magic]
 	{
@@ -665,7 +665,7 @@
 	{
 		ammo_attach_bone = weapon_grip;
 		ammo_template = ice_shard_06;
-		damage_max = 5;
+		damage_max = 4;
 		damage_min = 3;
 	}
 	[common]
@@ -687,7 +687,7 @@
 	[magic]
 	{
 		cast_range = 12;
-		cast_reload_delay = 1;
+		cast_reload_delay = 0.15;
 		mana_cost = 0;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -718,8 +718,8 @@
 	{
 		ammo_attach_bone = weapon_grip;
 		ammo_template = ice_shard_06;
-		damage_max = 18;
-		damage_min = 15;
+		damage_max = 25;
+		damage_min = 25;
 		
 		use_aiming_error = true;
 		aiming_error_range_x = 3.5;
@@ -744,7 +744,7 @@
 	[magic]
 	{
 		cast_range = 12;
-		cast_reload_delay = 1;
+		cast_reload_delay = 0.15;
 		mana_cost = 0;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -757,7 +757,7 @@
 	}
 	[spell_launch]
 	{
-		number = 3;
+		number = 1;
 		use_offsets = true;
 		x_offset = .5;
 		y_offset = .5;
@@ -773,8 +773,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 11;
-		damage_min = 9;
+		damage_max = 30;
+		damage_min = 27;
 	}
 	[common]
 	{
@@ -783,7 +783,7 @@
 	[magic]
 	{
 		cast_range = 12;
-		cast_reload_delay = 1;
+		cast_reload_delay = 0.15;
 
 		effect_duration = 20;
 
@@ -840,7 +840,7 @@
 				is_target_transfer = false;
 				is_offensive_transfer = true;
 				transfer_efficiency = 1;
-				value = 15;
+				value = 8;
 			}
 		}
 	}
@@ -855,7 +855,7 @@
 	{
 		apply_enchantments = false;
 		cast_range = 22;
-		cast_reload_delay = 1;
+		cast_reload_delay = 0.15;
 		effect_duration = 7;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -872,7 +872,7 @@
 				description = "raise magic damage";
 				duration = 7;
 				frequency = 0;
-				value = 3;
+				value = 5;
 			}
 			[*]
 			{
@@ -880,7 +880,7 @@
 				description = "raise magic damage";
 				duration = 7;
 				frequency = 0;
-				value = 3;
+				value = 5;
 			}
 		}
 	}
@@ -901,8 +901,8 @@
 	{
 		apply_enchantments = false;
 		cast_range = 12;
-		cast_reload_delay = 1;
-		effect_duration = 7;
+		cast_reload_delay = 0.15;
+		effect_duration = 3;
 		requires_line_of_sight = true;
 		speed_bias = 1;
 		target_type_flags = tt_self | tt_conscious_friend | tt_unconscious_friend;
@@ -916,14 +916,14 @@
 			{
 				alteration = alter_chance_to_dodge_hit_melee;
 				description = "Dodge Melee";
-				duration = 7;
+				duration = 3;
 				value = 66;
 			}
 			[*]
 			{
 				alteration = alter_chance_to_dodge_hit_ranged;
 				description = "Dodge Ranged";
-				duration = 7;
+				duration = 3;
 				value = 66;
 			}
 		}
@@ -944,8 +944,8 @@
 	{
 		apply_enchantments = false;
 		cast_range = 12;
-		cast_reload_delay = 1;
-		effect_duration = 7;
+		cast_reload_delay = 0.15;
+		effect_duration = 3;
 		requires_line_of_sight = true;
 		speed_bias = 1;
 		target_type_flags = tt_self | tt_conscious_friend | tt_unconscious_friend;
@@ -959,15 +959,15 @@
 			{
 				alteration = alter_block_nature_magic_damage;
 				description = "Reduce Nature Magic";
-				duration = 7;
-				value = 50;
+				duration = 3;
+				value = 66;
 			}
 			[*]
 			{
 				alteration = alter_block_combat_magic_damage;
 				description = "Reduce Combat Magic";
-				duration = 7;
-				value = 50;
+				duration = 3;
+				value = 66;
 			}
 		}
 	}
@@ -988,7 +988,7 @@
 	{
 		apply_enchantments = false;
 		cast_range = 20;
-		cast_reload_delay = 1;
+		cast_reload_delay = 0.15;
 		effect_duration = 6;
 		mana_cost = 0;
 		requires_line_of_sight = false;
@@ -1004,9 +1004,9 @@
 				alteration = alter_life;
 				description = "healing windspell";
 				duration = 6.0;
-				frequency = 0.5;
+				frequency = 0.25;
 				initial_delay = 1.0;
-				value = 6;
+				value = 1;
 			}
 		}
 	}
@@ -1027,7 +1027,7 @@
 	[magic]
 	{
 		cast_range = 17;
-		cast_reload_delay = 1;
+		cast_reload_delay = 0.15;
 		mana_cost = 0;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -1075,8 +1075,8 @@
 	[attack]
 	{
 		area_damage_radius = 3;
-		damage_max = 30;
-		damage_min = 25;
+		damage_max = 50;
+		damage_min = 45;
 	}
 	[common]
 	{
@@ -1112,8 +1112,8 @@
 	specializes = base_spell_monster;
 	[attack]
 	{
-		damage_max = 21;
-		damage_min = 17;
+		damage_max = 48;
+		damage_min = 44;
 	}
 	[magic]
 	{
@@ -1161,8 +1161,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 19;
-		damage_min = 12;
+		damage_max = 37;
+		damage_min = 34;
 	}
 	[common]
 	{
@@ -1178,7 +1178,7 @@
 	[magic]
 	{
 		cast_range = 17;
-		cast_reload_delay = 1;
+		cast_reload_delay = 0.15;
 		requires_line_of_sight = true;
 		speed_bias = 1;
 		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
@@ -1193,8 +1193,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		 damage_max = 24;
-		 damage_min = 20;
+		 damage_max = 54;
+		 damage_min = 50;
 	}
 	[common]
 	{
@@ -1226,8 +1226,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 28;
-		damage_min = 24;
+		damage_max = 42;
+		damage_min = 38;
 	}
 	[magic]
 	{
@@ -1255,8 +1255,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 12;
-		damage_min = 10;
+		damage_max = 42;
+		damage_min = 38;
 	}
 	[magic]
 	{
@@ -1277,5 +1277,52 @@
 		description = "Ice ring";
 		radius = 1.5;
 		ignite = false;
+	}
+}
+[t:template,n:c24_r6_ice_shard_spell_shard]
+{
+	category_name = "magic";
+	doc = "c24 r6 spell ice shard throw shard";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		ammo_attach_bone = weapon_grip;
+		ammo_template = c24_shard_ice_ammo;
+		damage_max = 40;
+		damage_min = 37;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script( "dust_explosion_cast" );
+				condition* = receive_world_message("we_req_cast");
+			}
+			[*]
+			{
+				action* = call_sfx_script( "metal_shards_charge" );
+				condition* = receive_world_message("we_req_cast_charge");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 17;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
+		usage_context_flags = uc_offensive;
+	}
+	[physics]
+	{
+		velocity = 14;
+	}
+	[spell_launch]
+	{
+		number = 1;
 	}
 }

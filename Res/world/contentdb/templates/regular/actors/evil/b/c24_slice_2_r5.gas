@@ -151,20 +151,20 @@
 	{
 		[skills]
 		{
-			strength = 8, 0;
-			dexterity = 13, 0;
-			intelligence = 6, 0;
-			nature_magic = 8, 0;
+			strength = 100, 0;
+			dexterity = 15, 0;
+			intelligence = 15, 0;
+			nature_magic = 9, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 100;
-		life = 417;
-		max_life = 417;
+		life = 419;
+		max_life = 419;
 		mana = 1200;
 		max_mana = 1200;
-		scale_base = 0.60;
+		scale_base = 0.40;
 	}
 	[attack]
 	{
@@ -196,7 +196,7 @@
 		on_engaged_lost_consciousness_abort_attack	= true;
 		on_engaged_fled_abort_attack	= false;
 		flee_count						= 9999;
-		flee_distance					= 6;
+		flee_distance					= 13;
         job_travel_distance_limit					= 50;
 
         jat_cast 						= world\ai\jobs\common\job_cast.skrit

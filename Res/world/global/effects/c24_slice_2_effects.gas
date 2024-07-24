@@ -346,7 +346,7 @@
 			// This is the main trackball for the effect, everything is based off of this.
 			sfx create trackball #TARGET_KB 
 				"must_update()dir(0,1,0)dur(#DEFAULT_TIMEOUT)afterlife(2)scale(.45)
-				ts(1.4)homing()damped()kdamp(0)accel(1)color0(0,0,.4)";
+				ts(1.4)homing()damped()kdamp(0)accel(6)color0(0,0,.4)";
 			sfx rat #PEEK;
 			sfx target #PEEK $orb;
 			set $trackball #POP;
@@ -1093,8 +1093,8 @@
 	script	=[[
 			set $texture b_sfx_sparkle01;
 
-			set $velocity 0,-40,-50;
-			set $accel 0,0,15;
+			set $velocity 0,0,0;
+			set $accel 0,0,0;
 
 			set $flames1 100;
 			set $flames2 100;
@@ -1132,5 +1132,30 @@
 			
 			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
 
+			]];
+}
+[effect_script*]
+{
+	name	=c24_slice_02_gargoyle_hand_glow;
+
+	script	=[[
+			sfx create fire #SOURCE
+			"dur(.5)count(20)scale(.5)color0(.1,.1,.9)velocity(0,-3,0)
+			accel(0,-2,0)alphafade(4)instant()";
+			
+			sfx friendly party #PEEK;
+			sfx attach_point #PEEK weapon_grip target;
+			set $flame1 #POP;
+			sfx start $flame1;
+			
+			sfx create fire #SOURCE
+			"dur(.5)count(20)scale(.5)color0(.1,.1,.9)velocity(0,-3,0)
+			accel(0,-2,0)alphafade(4)instant()";
+			
+			sfx friendly party #PEEK;
+			sfx attach_point #PEEK shield_grip target;
+			set $flame2 #POP;
+			sfx start $flame2;
+			
 			]];
 }

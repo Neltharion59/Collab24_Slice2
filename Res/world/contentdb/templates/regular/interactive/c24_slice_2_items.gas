@@ -12,8 +12,8 @@
 	}
 	[attack]
 	{
-		damage_max = 30;
-		damage_min = 24;
+		damage_max = 31;
+		damage_min = 26;
 	}
 	[common]
 	{
@@ -133,7 +133,7 @@
 	[attack]
 	{
 		damage_max = 32;
-		damage_min = 20;
+		damage_min = 30;
 	}
 	[common]
 	{
@@ -186,8 +186,8 @@
 	}
 	[attack]
 	{
-		damage_max = 32;
-		damage_min = 20;
+		damage_max = 30;
+		damage_min = 27;
 	}
 	[common]
 	{
@@ -321,8 +321,8 @@
 	{
 		ammo_template = arrow_ice;
 		attack_range = 11;
-		damage_max = 34;
-		damage_min = 28;
+		damage_max = 35;
+		damage_min = 31;
 		reload_delay = 0.15;
 	}
 	[common]
@@ -364,6 +364,61 @@
                 is_single_instance	= false;
                 effect_script_hit	= bow_frost_10_lbl;
                 custom_damage_skrit = world\global\skrits\weapon_cold.skrit?freeze_time=2.0;
+			}
+		}
+	}
+}
+[t:template,n:c24_sh_ice]
+{
+	doc = "c24 wpn Ice Shield";
+	specializes = base_shield;
+	[aspect]
+	{
+		model = m_a_shd_16;
+		[textures]
+		{
+			0 = b_i_glb_ice;
+		}
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+		screen_name = "Ice Shield";
+	}
+	[defend]
+	{
+	  f defense = 12.000000;
+	}
+	[gui]
+	{
+		equip_requirements = strength:16;
+		inventory_height = 3;
+		inventory_icon = b_gui_ig_i_a_shd_075;
+		inventory_width = 2;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_chance_to_block_melee_damage;
+				description = "20% Chance to Block Melee Attack";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 20;
+			}
+			[*]
+			{
+				alteration = alter_chance_to_block_ranged_damage;
+				description = "15% Chance to Block Ranged Attack";
+				duration = #infinite;
+				innate_enchantment = true;
+				is_permanent = true;
+				is_single_instance = false;
+				value = 15;
 			}
 		}
 	}
@@ -592,5 +647,39 @@
 		explode_when_expired = false;
 		explosion_magnitude = 3.5;
 		fire_resistance = 1;
+	}
+}
+[t:template,n:c24_shard_ice_ammo]
+{
+	doc = "c24 slice 2 ice Shard Ammo";
+	specializes = base_arrow;
+	[aspect]
+	{
+		material = ice;
+		scale_base = 0.15;
+		model = m_i_glb_frag-shard-05; 
+		[textures] { 0 = b_c_edm_iw; }
+	}
+	[attack]
+	{
+		damage_max = 1;
+		damage_min = 1;
+		skill_class = "Nature Magic";
+	}
+	[common]
+	{
+		is_pcontent_allowed = FALSE;
+		screen_name = "Ice Crystal Shard";
+	}
+	[physics]
+	{
+		orient_to_trajectory = true;
+		angular_velocity = 0,0,20.0;
+		break_effect = melee_hit_2;
+		break_sound = s_e_die_shard_small;
+		explode_if_hit_go		= true;
+		explode_if_hit_terrain	= true;
+		explode_when_expired 	= true;
+		gravity = 3;
 	}
 }

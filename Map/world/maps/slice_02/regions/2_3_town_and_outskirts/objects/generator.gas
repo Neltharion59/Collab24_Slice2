@@ -100,6 +100,21 @@
 	  p position = 0.0855102,0,-0.853889,0x8d4fa469;
 	}
 }
+[t:generator_bush_02,n:0x02400169]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_2_r4_flaypick_melee_02";
+	  x initial_command = 0x02400183;
+	  f spawn_period = 0.1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.895721,0,-3.30751,0x779defe2;
+	}
+}
 [t:generator_bush_02,n:0x0240017e]
 {
 	[generator_advanced_a2]
@@ -156,20 +171,5 @@
 	{
 	  q orientation = 0,-1.66939e-007,0,-1;
 	  p position = 0.298096,0,-0.606606,0x1b77ab61;
-	}
-}
-[t:generator_bush_02,n:0x02400169]
-{
-	[generator_advanced_a2]
-	{
-		child_template_name = "c24_2_r4_flaypick_melee_02";
-	  x initial_command = 0x02400183;
-	  f spawn_period = 0.1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.895721,0,-3.30751,0x779defe2;
 	}
 }
