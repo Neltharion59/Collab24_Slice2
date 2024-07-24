@@ -1159,3 +1159,61 @@
 			
 			]];
 }
+
+[effect_script*]
+{
+	name	=c24_ice_geyser;
+
+	script	=[[
+			call c24_ice_geyser_base s<color0(0,0,.7)> s<color0(0,0,.4)color1(0,0,0)> s<color0(0,0,0)color1(0,0,.9)> s<color0(0,0,0)color1(0,0,.4)>;
+			]];
+}
+[effect_script*]
+{
+	name	=c24_ice_geyser_base;
+
+	script	=[[
+			sound play s_e_env_geyser_lava at #TARGET_POSITION dist 5 30;
+	
+			set $dur 1.5;
+			
+			set $height 2;
+			
+			set $radius 6;
+			set $speed -3;
+			
+			set $fade .35;
+			
+			set $size 8;
+			set $offset1 0,1,0;
+			
+			sfx create fireb #TARGET 
+				"delay(.1)dur(1.5)fctrl(4,7,40)offset($offset1)scale(.7)
+				velocity(0,0,180)accel(0,0,-50)alphafade(1)lower_r0(1)
+				lower_r1(1)upper_r0(0)upper_r1(0)count(40)flamesize(3)
+				[0]";
+			sfx start #POP;
+		
+			sfx create explosion #TARGET
+			"offset($offset1)dir(0,1,0)dur($dur)count(40)srate(.01)
+			vmin(3)vmax(5)ivel(0,,3)rvel(3,3,3)rand_scale()scale_range(.2,.8,0)
+			radius(.4)[1]";
+			 
+			
+			sfx start #POP;
+			
+			sfx create explosion #TARGET
+			"offset($offset1)dir(0,0,1)dur($dur)count(34)srate(.01)
+			vmin(3)vmax(5)ivel(0,0,6)rvel(3,3,3)rand_scale()scale_range(.2,.8,0)
+			radius(.4)[2]";
+			 
+
+			sfx start #POP;
+			
+			sfx create fire #TARGET 
+				"count(40)radius($radius)dur($dur)alphafade($fade)flamesize($size)
+				max_radius(2)velocity(0,0,$speed)accel(0,0,$speed)min_displace(0)
+				max_displace($height)max_radius(8)[3]";
+			sfx start #POP;
+			]];
+}

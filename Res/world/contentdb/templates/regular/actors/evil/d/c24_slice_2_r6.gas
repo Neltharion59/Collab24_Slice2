@@ -1,4 +1,4 @@
-[t:template,n:c24_2_r6_ice_elemental]
+[t:template,n:c24_2_r6_ice_elemental_base]
 {
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R6 Ice Elemental";
@@ -176,6 +176,38 @@
 			frag_glb_ice_06 = 1;
 			frag_glb_ice_07 = 1;
 			frag_glb_ice_08 = 3;
+		}
+	}
+}
+[t:template,n:c24_2_r6_ice_elemental]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R6 Ice Elemental";
+	specializes = c24_2_r6_ice_elemental_base;
+}
+[t:template,n:c24_2_r6_ice_elemental_from_skull]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R6 Ice Elemental from skull";
+	specializes = c24_2_r6_ice_elemental_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x0260005E,0f,"default","every",0), doc("");
+				b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("[*converted to one-shot*]");
+				f delay = 0.000000;
+				b flip_flop = false;
+				b multi_player = true;
+				occupants_group = ;
+				f reset_duration = 0.000000;
+				b single_player = true;
+				b single_shot = true;
+				b start_active = true;
+			}
 		}
 	}
 }

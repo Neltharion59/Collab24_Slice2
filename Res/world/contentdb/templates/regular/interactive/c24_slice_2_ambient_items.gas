@@ -57,6 +57,23 @@
 		model = m_i_glb_broom;
 	}
 }
+[t:template,n:c24_2_r6_blocking_ice_door]
+{
+	specializes	= non_interactive_blocking;
+	doc	= "c24 r6 blocking ice door";
+	[aspect]
+	{
+
+		is_collidable = true;
+		is_selectable = false;
+		is_invincible = true;
+		does_block_path = true;
+
+		model 		= m_i_csl_door-dungeon-07;
+		scale_base = 2.0;
+		[textures] { 0 = b_t_ic01_flr_stg-08x08-c;}
+	}
+}
 [t:template,n:c24_2_r5_ice_tree]
 {
 	specializes	= base_tree;
