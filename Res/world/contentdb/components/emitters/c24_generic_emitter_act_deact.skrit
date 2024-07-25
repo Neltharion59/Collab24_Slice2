@@ -1,0 +1,251 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  c24_generic_emitter_act_deact.skrit
+// Author(s):  Eric Tams
+//
+// Copyright � 2001 Gas Powered Games, Inc.  All rights reserved.
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+//
+// Scid Bits Key
+// 0 = Changed.
+// 1 = State. true = active, false = inactive.
+//
+
+property bool   _server_only$			= false;
+
+property scid   target$                             doc = "Scid of Object to play the effect on."; 
+property scid   target2$                            doc = "Scid of Second Object to play the effect on."; 
+
+property bool	start_on_creation$		= false		doc = "Start Emitter when it enters the world, otherwise must be controlled by activate/deactivate.";
+property bool	maintain_state$			= true		doc = "Remember state if we exit the world and come back. False allows effect to be run each time an activate is recieved, True the effect will only run once, until deactivated, then it can be run again.";
+
+property float  rep_freq_min$			= -1.0		doc = "minimum time before repeating the effect, must be positive or effect won't play multiple times, be careful that the effect isn't a continuos effect if you use this.";
+property float  rep_freq_max$			= -1.0		doc = "maximum time before repeating the effect, must be positive or effect won't play multiple times";
+
+property float	time_scale$				= 1			doc = "Time scalar - factor to scale time by, won't work for all effects.";
+property float	scale$		  			= 1			doc = "Scale factor - factor to scale size of effect by, won't work for all effects.";
+
+property string event_sound$						doc = "Name of voice event sound to play";
+property float  min_dist$				= 1.0		doc = "Minimum sound distance";
+property float  max_dist$				= 50.0		doc = "Maximum sound distance";
+
+property string other_effect$			= ""		doc = "put any effect in here to use it instead of a selected effect.";
+property string other_params$			= ""		doc = "put any aditional params in here, will not work unless effect is made to handle this.";
+property bool	geyser$					= false		doc = "use a blue geyser effect";
+property bool	geyser_red$				= false		doc = "use a red geyser effect";
+property bool	geyser_white$			= false		doc = "use a white geyser effect";
+property bool	geyser_green$			= false		doc = "use a green geyser effect";
+property bool	geyser_orange$			= false		doc = "use a orange geyser effect";
+property bool	geyser_dorange$			= false		doc = "use a dark orange geyser effect";
+property bool	geyser_yellow$			= false		doc = "use a yellow geyser effect";
+property bool	geyser_purple$			= false		doc = "use a purple geyser effect";
+property bool	geyser_drizzle$			= false		doc = "use a constant blue geyser effect";
+property bool	geyser_drizzle_red$		= false		doc = "use a constant red geyser effect";
+property bool	geyser_drizzle_white$	= false		doc = "use a constant white geyser effect";
+property bool	geyser_drizzle_green$	= false		doc = "use a constant green geyser effect";
+property bool	geyser_drizzle_orange$	= false		doc = "use a constant orange geyser effect";
+property bool	geyser_drizzle_dorange$	= false		doc = "use a constant dark orange geyser effect";
+property bool	geyser_drizzle_yellow$	= false		doc = "use a constant yellow geyser effect";
+property bool	geyser_drizzle_purple$	= false		doc = "use a constant purple geyser effect";
+property bool	water_splash$			= false		doc = "use a water splash effect";
+property bool	water_wave$				= false		doc = "use a water wave effect";
+property bool	ice_explosion$			= false		doc = "use an ice explosion effect";
+property bool	dust_explosion$			= false		doc = "use a dust explosion effect";
+property bool	dust_explosion_small$	= false		doc = "use a small dust explosion effect";
+property bool	generic_explosion$		= false		doc = "use a generic explosion effect";
+property bool	coil_explosion$			= false		doc = "use the tessla coil's explosion effect";
+property bool	barrel_explosion$		= false		doc = "use the barrel explosion effect";
+property bool	pebbles$				= false		doc = "use the pebble effect";
+property bool	pebbles_directional$	= false		doc = "use the directional pebble effect";
+property bool	swamp_gas_puff$			= false		doc = "use the swamp gas puff effect";
+
+owner = GoSkritComponent;
+
+#include "k_inc_generic_emitter" 
+
+SFxSID active_script_id$ = 0;
+
+startup state Constructed$
+{
+}
+
+trigger OnGoHandleMessage$( WE_ENTERED_WORLD )
+{
+	SetState Setup$;	
+}
+
+trigger OnGoHandleMessage$( WE_SCIDBITS_CHANGED )
+{
+	SetState Setup$;
+}
+
+state Setup$
+{
+	event OnEnterState$
+	{
+		if( StringTool.IsEmpty( effect$ ) )
+		{
+			PackParams$();
+		}	
+		
+		if( StringTool.IsEmpty( effect$ ) )
+		{
+			report.ErrorF( "Missing Effect in Emitter 0x%08x\n", MakeInt( owner.scid ) );
+			SetState Finished$;
+			return;
+		}
+		
+		if( !Godb.GetScidBit( owner.scid, 0 ) ) // nothing has changed. In the default state.
+		{
+			if( IsServerLocal )
+			{
+				if ( start_on_creation$ )
+				{
+					// It appears that we can't bit shift in Skrit... The following code is supposed to try and set the 0 and 1 ScidBits to true.
+					// would just do it with 2 different calls, but this should be cheaper network wise.
+					int Bits$ = Godb.GetScidBits( owner.scid );
+//					report.genericf("Bits: %d\n", bits$ );					
+					Bits$ |= 1;
+					Bits$ |= 2;					
+					Godb.SSetScidBits( owner.scid, Bits$ );	
+					SetState Active$;
+					return;
+				}
+				else
+				{
+					Godb.SSetScidBit( owner.scid, 0, true );
+				}
+			}
+		}
+		else if ( Godb.GetScidBit( owner.scid, 1 ) ) // emitter was active when it streamed out turn it back on.
+		{
+			SetState Active$;
+			return;
+		} 
+		else 
+		{
+			if (active_script_id$ != 0)
+			{
+//				report.genericf("deactivating effect$ %s\n",effect$);
+				
+				// Let the effect know that it should finish what it is doing and not spawn anything else
+				SiegeFx.FinishScript( active_script_id$ );
+			
+				// Clear the script id
+				active_script_id$ = null;
+			}
+		}
+		
+		// We didn't get started, just go to the Idle state and wait for an activate.
+		SetState Idle$;
+	}
+}
+
+trigger OnGoHandleMessage$( WE_REQ_DEACTIVATE )
+{
+	// set the deactivated bits
+	if( IsServerLocal )
+	{
+		Godb.SSetScidBit( owner.scid, 1, false );
+//		report.genericf("trying to deactivate effect$ %s\n",effect$);
+	}
+}
+
+state Idle$
+{
+	trigger OnGoHandleMessage$( WE_REQ_ACTIVATE )
+	{
+		// Set the active Bits
+		if( IsServerLocal )
+		{
+			Godb.SSetScidBit( owner.scid, 1, true );
+		}
+	}
+}
+
+state Active$
+{
+	trigger OnGoHandleMessage$( WE_REQ_ACTIVATE )
+	{
+		report.genericf("POSSIBLE CONTENT PROBLEM: Trying to activate generic_emmiter_act 0x%x which is already active. Set maintain_state = false if you want to play an effect each time an activate is recieved\n", MakeInt( owner.scid ) );
+	}
+
+	trigger OnGoHandleMessage$( WE_REQ_DEACTIVATE )
+	{
+		report.genericf("C24: Deactivating 0x%x.\n", MakeInt( owner.scid ) );
+        SetState Deactivated$;
+		report.genericf("C24: Deactivated 0x%x.\n", MakeInt( owner.scid ) );
+	}
+	
+	trigger OnTimer$( 1 )
+	{
+		SetState Active$;
+	}
+	
+	event OnEnterState$
+	{
+		if( ( !maintain_state$ ) || ( active_script_id$ == 0 ) || ( ( rep_freq_min$ > 0.0 ) && ( rep_freq_max$ > 0.0 ) ) )
+		{
+			// Run the generic script
+			if ( target$.goid.isvalid() )
+			{
+				if ( target2$.goid.isvalid() )
+				{
+					active_script_id$ =	SiegeFx.RunScript( effect$, target2$.goid, target$.goid, params$, owner.Goid, WE_REQ_ACTIVATE );
+				}
+				else
+				{
+					active_script_id$ =	SiegeFx.RunScript( effect$, target$.goid, target$.goid, params$, owner.Goid, WE_REQ_ACTIVATE );
+				}
+			}
+			else
+			{
+				active_script_id$ =	SiegeFx.RunScript( effect$, owner.Goid, owner.Goid, params$, owner.Goid, WE_REQ_ACTIVATE );
+			}
+			
+//			report.genericf("effect$ %s is Active!\nId is %d\n",effect$,active_script_id$ );
+			
+			if( !StringTool.IsEmpty( event_sound$ ) )
+			{
+				owner.Go.PlayVoiceSound( event_sound$, min_dist$, max_dist$, false );
+			}
+			
+			if( ( rep_freq_min$ > 0.0 ) && ( rep_freq_max$ > 0.0 ))
+			{
+				float random_delay$ = Math.RandomFloat( rep_freq_min$, rep_freq_max$ );
+				this.CreateTimer( 1, random_delay$ );
+			}
+			else
+			{
+				if( !maintain_state$ && !start_on_creation$ )
+				{
+					// Clear the script ID we aren't supposed to remember it
+					active_script_id$ = null;
+				
+					Godb.SetScidBit( owner.scid, 1, false );
+				}
+			}
+		}
+	}
+}
+
+state Deactivated$
+{
+    event OnEnterState$
+	{
+        if ( active_script_id$ != 0 )
+        {
+            SiegeFx.FinishScript( active_script_id$ );
+            active_script_id$ = null;
+            SetState Finished$;
+        }
+    }
+}
+
+state Finished$
+{
+}

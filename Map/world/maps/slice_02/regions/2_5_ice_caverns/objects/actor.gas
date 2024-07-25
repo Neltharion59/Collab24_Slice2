@@ -149,7 +149,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.811722,0.746041,1.63487,0xd9dc9440;
+	  p position = -0.804779,0.747344,1.63633,0xd9dc9440;
 	}
 }
 [t:c24_slice_2_r6_shard_ice,n:0x0260007a]
@@ -380,120 +380,6 @@
 	  p position = 0.7155,0.794077,2.15483,0x7f0549aa;
 	}
 }
-[t:c24_slice_2_r6_shard_ice,n:0x02600084]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02600069,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 3.97794,-1,-2.45125,0x7f0549aa;
-	}
-}
-[t:c24_slice_2_r6_shard_ice,n:0x02600085]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02600069,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 1.63406,0.964606,3.32303,0x7f0549aa;
-	}
-}
-[t:c24_slice_2_r6_shard_ice,n:0x02600086]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02600069,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 2.16583,0.143598,0.287195,0x7f0549aa;
-	}
-}
-[t:c24_slice_2_r6_shard_ice,n:0x0260006b]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02600069,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.815491,0.771151,2.06437,0x1a1f0f7c;
-	}
-}
 [t:c24_slice_2_r6_shard_ice,n:0x0260006c]
 {
 	[common]
@@ -519,7 +405,7 @@
 	}
 	[placement]
 	{
-	  p position = -1.46173,-0.815382,-1.49801,0x1a1f0f7c;
+	  p position = -2.80823,0.272664,0.545328,0x1a1f0f7c;
 	}
 }
 [t:c24_slice_2_r6_shard_ice,n:0x0260005f]
@@ -604,10 +490,10 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 2.80934,-1,0.183731,0xec75d486;
+	  p position = 2.92926,-1,1.23663,0xec75d486;
 	}
 }
-[t:c24_slice_2_r6_shard_ice,n:0x02600082]
+[t:c24_slice_2_r6_shard_ice,n:0x0260006b]
 {
 	[common]
 	{
@@ -615,7 +501,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x02600060,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02600069,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_killed",0,"on_first_message");
 			  f delay = 0.000000;
@@ -632,7 +518,7 @@
 	}
 	[placement]
 	{
-	  p position = 1.45153,-0.725765,-0.31192,0xec75d486;
+	  p position = -2.65111,-1,-2.89853,0x08a04bdf;
 	}
 }
 [t:ice_mage,n:0x0260005c]
@@ -663,10 +549,14 @@
 			}
 		}
 	}
+	[mind]
+	{
+		movement_orders = mo_hold;
+	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -3.38187,1,3.69646,0xdeec1970;
+	  p position = -3.57462,1,3.59557,0xdeec1970;
 	}
 }
 [t:c24_slice_2_r6_shard_ice,n:0x02600063]

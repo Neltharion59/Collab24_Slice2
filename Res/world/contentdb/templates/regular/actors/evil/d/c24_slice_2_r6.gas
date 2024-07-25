@@ -196,9 +196,9 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_trigger_activate",0x0260005E,0f,"default","every",0), doc("");
+				action* = send_world_message("we_req_activate",0x0260005E,0f,"default","every",0), doc("");
 				b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("[*converted to one-shot*]");
+				condition* = receive_world_message("we_exploded",0,"on_first_message"), doc("[*converted to one-shot*]");
 				f delay = 0.000000;
 				b flip_flop = false;
 				b multi_player = true;
@@ -209,6 +209,13 @@
 				b start_active = true;
 			}
 		}
+	}
+	[mind]
+	{
+		melee_engage_range = 28.0;
+		personal_space_range = 0.1;
+		ranged_engage_range = 28.0;
+		sight_range = 28.0;
 	}
 }
 [t:template,n:c24_slice_2_r6_shard_ice]  // = shard_teal

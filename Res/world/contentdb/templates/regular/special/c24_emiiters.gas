@@ -1,0 +1,10 @@
+[t:template,n:c24_emt_generic_act_deact]
+{
+	specializes	=	emitter;
+    category_name = "emitter";
+
+	doc			=	"c24 t_emt_generic_act Deactivable";
+    extra_doc = "requires trigger activation";
+	[on_client] {}
+	[c24_generic_emitter_act_deact] {}
+}
