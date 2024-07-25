@@ -30,6 +30,19 @@
 		use_point_scids = 0x02200004, 0x0220002d;
 	}
 }
+[t:barrier_breakable_01,n:0x0220009a]
+{
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.84061,-2,1.27591,0xe7706d4d;
+	}
+}
 [t:c24_generator_ice_door,n:0x02200073]
 {
 	[aspect]
@@ -45,6 +58,32 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -2.04745,0,0.0203018,0x41fa851d;
+	}
+}
+[t:barrier_breakable_01,n:0x0220009b]
+{
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.7586,0,1.30653,0x0c2c603b;
+	}
+}
+[t:barrier_breakable_01,n:0x02200099]
+{
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.91249,-1.98747,-0.956966,0xe63b31d8;
 	}
 }
 [t:c24_generator_ice_door,n:0x02200037]

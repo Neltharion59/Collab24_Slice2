@@ -9,8 +9,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.382683,0,0.92388;
-	  p position = -1.31502,0,-1.81356,0x0f3cfe26;
+	  q orientation = 0,-0.707107,0,0.707106;
+	  p position = -4.13741,-4.5,-6.48704,0x05f7ab9c;
 	}
 }
 [t:c24_2_r4_braak_melee,n:0x02400167]
@@ -1467,5 +1467,65 @@
 	{
 	  q orientation = 0,0.382683,0,0.92388;
 	  p position = 0.319153,4.57016,1.46922,0x47258526;
+	}
+}
+[t:c24_slice_2_r4_mayor,n:0x024000ab]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_r4_mayor_b4_cart_is_dropped;
+			* = conv_r4_mayor_b4_cellar_quest_first;
+			* = conv_r4_mayor_b4_cellar_quest_next;
+			* = conv_r4_mayor_b4_hassat_quest_first;
+			* = conv_r4_mayor_b4_hassat_quest_next;
+			* = conv_r4_mayor_b4_braak_quest_first;
+			* = conv_r4_mayor_b4_braak_quest_next;
+			* = conv_r4_mayor_last;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_mayor_r4.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 3.96332,0,-1.39249,0xc8850d47;
+	}
+}
+[t:c24_slice_2_r2_hermit,n:0x02400142]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_r4_hermit_b4_cart_is_dropped_first;
+			* = conv_r4_hermit_b4_cart_is_dropped_next;
+			* = conv_r4_hermit_after_cart_is_dropped;
+			* = conv_r4_hermit_after_hassat_quest;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_hermit_r4.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.66939e-007;
+	  p position = 2.66361,0,0.614383,0xc8850d47;
+	}
+}
+[t:c24_slice_2_npc_krug_storeless,n:0x02400143]
+{
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_krug_r4.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.683461,0,-0.83844,0xc8850d47;
 	}
 }

@@ -1,7 +1,7 @@
 [t:template,n:c24_slice_2_r2_hermit]
 {
 	category_name = "1W_townsperson";
-	doc = "c24 slice2 r2 hermit";
+	doc = "c24 slice2 npc r2 hermit";
 	specializes = base_npc_fb;
 	[aspect]
 	{
@@ -14,6 +14,27 @@
 	[common]
 	{
 		screen_name = "Talak";
+	}
+	[conversation]
+	{
+	}
+}
+[t:template,n:c24_slice_2_r4_mayor]
+{
+	category_name = "1W_townsperson";
+	doc = "c24 slice2 npc r4 Mayor";
+	specializes = base_npc_fb;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_14;
+			1 = b_c_pos_a1_055;
+		}
+	}
+	[common]
+	{
+		screen_name = "Mayor Quillbee";
 	}
 	[conversation]
 	{

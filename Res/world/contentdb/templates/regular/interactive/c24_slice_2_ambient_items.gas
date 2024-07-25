@@ -32,6 +32,47 @@
 		[break_particulate] {}
 	}
 }
+[t:template,n:c24_2_r2_breakable_tree]
+{
+	specializes		= container;
+	doc				= "c24 slice2 r2 breakable tree";
+
+	[aspect]
+	{
+		// Similar to barrel
+		is_usable	= false;
+		life_state	= LS_ALIVE_CONSCIOUS;
+		max_life	= 1;
+		material	= wood;
+		life		= 1;
+		voice:die:	* =	s_e_env_break_container_wood;
+
+		// Make it a tree
+		model = m_i_glb_tree-pine-giant;
+		scale_multiplier = 3;
+		[textures]
+		{
+			0 = b_i_ice_tree-pine-giant;
+		}
+	}
+
+	[common]
+	{
+		screen_name	= "Tree for Felling";
+		rollover_display = true;
+	}
+
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_wood_01	= 5;
+			frag_glb_wood_02	= 5;
+			frag_glb_wood_03	= 5;
+			frag_glb_wood_04	= 5;
+		}
+	}
+}
 [t:template,n:c24_2_r3_static_ice_witch]
 {
 	category_name = "indoor";

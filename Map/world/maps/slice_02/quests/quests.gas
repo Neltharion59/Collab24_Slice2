@@ -210,5 +210,37 @@
 		  b required = true;
 			speaker = Talak;
 		}
+		[*]
+		{
+			description = Collect the Wood;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Drop the Wood Near Tools by the Hermit's House to Build A Cart;
+		  b is_consumable = true;
+		  i order = 3;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Collect the Cart;
+		  b is_consumable = true;
+		  i order = 4;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Speak with the Hermit;
+		  b is_consumable = true;
+		  i order = 5;
+		  b required = true;
+			speaker = ;
+		}
 	}
 }
