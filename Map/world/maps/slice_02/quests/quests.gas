@@ -363,4 +363,98 @@
 			speaker = ;
 		}
 	}
+	[c24_slice_2_quest_braak_barricade]
+	{
+		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
+		screen_name = Braaks on the Bridge;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_mayor_b4_braak_quest_first;
+			description = Destroy the Braak blocking the Bridge;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = Mayor Quillbee;
+		}
+		[*]
+		{
+			description = Report Back to Mayor Quillbee;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_mayor_last;
+			description = The Path TODO is now clear;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = true;
+			speaker = Mayor Quillbee;
+		}
+	}
+	[c24_slice_2_quest_vaarth_barricade]
+	{
+		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
+		screen_name = Braaks on the Bridge;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = Investigate TODO to Find Some Way around the Barricade;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Pick Up the Explosive Keg to Blow Up The Barricade;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Search the Library for Something to Detonate the Keg;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = false;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Drop the Keg Near the Barricade;
+		  b is_consumable = true;
+		  i order = 3;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Detonate the Keg from safe Distance with Distance attack;
+		  b is_consumable = true;
+		  i order = 4;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Speak with the Dwarf;
+		  b is_consumable = true;
+		  i order = 5;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = You Have Successfully Cleared the Road;
+		  b is_consumable = true;
+		  i order = 6;
+		  b required = true;
+			speaker = ;
+		}
+	}
 }

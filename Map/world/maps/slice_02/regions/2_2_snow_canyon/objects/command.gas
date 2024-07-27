@@ -34,6 +34,33 @@
 	  p position = 1.73811,0,-0.0340099,0x8870b6a9;
 	}
 }
+[t:c24_slice_2_cmd_activate_container,n:0x02300092]
+{
+	[cmd_c24_activate_container]
+	{
+	  b selectable = true;
+	  x target_container = 0x02800003;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-5.64831e-007;
+	  p position = 1.54909,0,-0.338905,0x3361f325;
+	}
+}
+[t:c24_slice_2_cmd_activate_container,n:0x02300093]
+{
+	[cmd_c24_activate_container]
+	{
+	  b invincible = true;
+	  b selectable = true;
+	  x target_container = 0x02800003;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-5.64831e-007;
+	  p position = -0.768929,0,-0.243536,0x3361f325;
+	}
+}
 [t:cmd_ai_c_patrol,n:0x0230008e]
 {
 	[placement]

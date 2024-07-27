@@ -51,3 +51,31 @@
 		[break_particulate] {}
 	}
 }
+[t:template,n:c24_slice_2_r3_ctn_ice_rocks]
+{
+	specializes		= container;
+	doc				= "c24 Slice 2 R3 Ctn Ice Rocks";
+
+	common:screen_name	= "Rock";
+	common:		rollover_display = true;
+
+	[aspect]
+	{
+		does_block_path = true;
+        is_selectable = false;
+        is_invincible = true;
+		is_usable	= false;
+		life_state	= LS_ALIVE_CONSCIOUS;
+		max_life	= 25000;
+		material	= stone;
+		life		= 25000;
+        model	= m_i_glb_rock-06;
+		scale_base = 4.0;
+	}
+
+	[physics]
+	{
+		break_effect = mine_worm_die_dust;
+		[break_particulate] {}
+	}
+}

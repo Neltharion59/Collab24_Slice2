@@ -19,6 +19,32 @@
 	{
 	}
 }
+[t:template,n:c24_slice_2_r3_master_miner]
+{
+	category_name = "1W_townsperson";
+	doc = "c24 slice2 npc r3 master_miner";
+	specializes = base_dwarf;
+	[aspect]
+	{
+		is_collidable = TRUE;
+		[textures]
+		{
+			0 = b_c_gan_df_skin_03;
+			1 = b_c_pos_a1_006;
+		}
+	}
+	[common]
+	{
+		screen_name = "Dharaith the Master Miner";
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
 [t:template,n:c24_slice_2_r4_mayor]
 {
 	category_name = "1W_townsperson";

@@ -29,10 +29,6 @@
 }
 [t:c24_2_r3_npc_naldrun,n:0x0230006f]
 {
-	[aspect]
-	{
-	  b is_selectable = false;
-	}
 	[conversation]
 	{
 		[conversations]
@@ -245,6 +241,26 @@
 	{
 	  q orientation = 0,0.92388,0,0.382683;
 	  p position = 0.423691,0,1.2034,0xcb22f4fa;
+	}
+}
+[t:c24_slice_2_r3_master_miner,n:0x02300095]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_c24_r3_dwarf_miner_first;
+			* = conv_c24_r3_dwarf_miner_next;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice2_dwarf_miner_r3.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -2.91608,0,-1.16793,0xffd4917b;
 	}
 }
 [t:c24_2_r3_vaarth_ranged,n:0x02300007]

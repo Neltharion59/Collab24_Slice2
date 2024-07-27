@@ -71,29 +71,18 @@ state Talk$
 	
 	event OnEnterState$
 	{
-		if ( GameAuditor.GetDb.GetBool( "flag_fairy_tree_quest_finished_talked_to" ) )
+		if ( GameAuditor.GetDb.GetBool( "c24_slice2_r1_flag_dwarf_talked_to" ) )
 		{
             // After the quest was completed
-			m_Go$.GetConversation.RSSelectConversation( "conv_c24_r3_fairy_finish_quest_next" );
-		}
-		else if ( GameAuditor.GetDb.GetBool( "flag_fairy_tree_quest_finished" ) )
-		{
-            // To complete the quest
-			m_Go$.GetConversation.RSSelectConversation( "conv_c24_r3_fairy_finish_quest" );
-            GameAuditor.GetDb.SetBool( "flag_fairy_tree_quest_finished_talked_to", true );
-		}
-		else if ( GameAuditor.GetDb.GetBool( "flag_fairy_tree_quest_accepted" ) )
-		{
-            // Quest was accepted
-			m_Go$.GetConversation.RSSelectConversation( "conv_c24_r3_fairy_start_quest_next" );
+			m_Go$.GetConversation.RSSelectConversation( "conv_c24_r3_dwarf_miner_next" );
 		}
 		else
 		{
             // Before quest
-            m_Go$.GetConversation.RSSelectConversation( "conv_c24_r3_fairy_start_quest" );
-            GameAuditor.GetDb.SetBool( "flag_fairy_tree_quest_accepted", true );
-			
-			scid quest_activated_trigger_scid$ = MakeScid(0x0230009B);
+            m_Go$.GetConversation.RSSelectConversation( "conv_c24_r3_dwarf_miner_first" );
+            GameAuditor.GetDb.SetBool( "c24_slice2_r1_flag_dwarf_talked_to", true );
+
+			scid quest_activated_trigger_scid$ = MakeScid(0x02300096);
 			Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
 			SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
 		}

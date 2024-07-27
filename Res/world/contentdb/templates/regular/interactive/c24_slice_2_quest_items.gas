@@ -178,3 +178,78 @@
 		inventory_icon = b_gui_ig_i_ic_sc_001-inv;
 	}
 }
+[t:template,n:c24_2_r3_dynamite]
+{
+	specializes			= treasure;
+	doc					= "c24 slice2 r3 dynamite";
+    category_name       = "treasure";
+
+	[aspect]
+	{
+		life_state	= LS_ALIVE_CONSCIOUS;
+		max_life	= 1;
+		material	= wood;
+		life		= 1;
+		voice:die:	* =	s_e_env_break_container_wood;
+
+		is_collidable				= true;
+		is_invincible				= true;
+		is_usable					= false;
+		draw_selection_indicator	= false;
+
+		model		= m_i_glb_keg-powder;
+	}
+
+	[attack]
+	{
+		area_damage_radius = 8;
+		damage_min = 1;
+		damage_max = 1;
+	}
+	[common]
+	{
+		screen_name	= "Dynamite";
+		forced_expiration_class = immediate;
+		auto_expiration_class = immediate;
+		is_pcontent_allowed = false;
+		[template_triggers]
+		{
+			[*]
+			{
+				action*	= start_camera_fx("camera_barrel_explode");
+				condition* = receive_world_message("we_exploded");
+				flip_flop =	false;
+				reset_duration = 0.000000;
+				single_shot	= true;
+			}
+		}
+	}
+	[gui]
+	{
+		can_sell = false;
+		inventory_icon	= b_gui_ig_i_it_keg_explosive;
+		inventory_width 	= 1;
+		inventory_height 	= 1;
+	}
+	[inventory]		{  }
+	[physics]
+	{
+		explosion_magnitude		= 8;
+		break_effect			= barrel_explosion;
+		explode_when_killed		= true;
+		explode_if_hit_go		= false;
+		explode_if_hit_terrain	= false;
+		damage_all				= true;
+		gravity			=	9.80665;
+		sim_duration	=	2.75;
+		elasticity		=	0.25;
+		[break_particulate]
+		{
+			frag_glb_wood_01	= 1;
+			frag_glb_wood_02	= 1;
+			frag_glb_wood_03	= 1;
+			frag_glb_wood_04	= 1;
+			frag_glb_metal_01	= 2;
+		}
+	}
+}
