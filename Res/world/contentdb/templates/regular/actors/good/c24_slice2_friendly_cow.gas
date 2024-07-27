@@ -1,0 +1,81 @@
+[t:template,n:c24_slice2_friendly_cow]
+{
+	doc = "c24 slice2 friendly cow";
+	specializes = actor_evil;
+	[actor]
+    {
+        alignment = aa_good;
+        race=other;
+		[skills]
+		{
+			strength = 3, 0;
+			dexterity = 1, 0;
+			intelligence = 1, 0;
+			melee = 9, 0;
+		}
+    }
+	[aspect]
+	{
+		life = 80;
+		max_life = 80;
+		mana = 40;
+		max_mana = 40;
+		model = m_c_na_cw_pos_1;
+	}
+	[body]
+	{
+		avg_move_velocity = 2.660000;
+		[bone_translator]
+		{
+			body_anterior = shld_cntr_bone10;
+			body_mid = root_bone01;
+			body_posterior = tail_base_bone40;
+			kill_bone = head_bone22;
+			shield_bone = ear_r_bone23;
+			weapon_bone = ear_l_bone25;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_na_cw_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=gz; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=gz; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common] { screen_name="Cow"; }
+    [defend] { defense = 50; }
+	[mind]
+	{
+		on_enemy_entered_icz_flee = true;
+		on_enemy_entered_ocz_flee = true;
+        flee_distance = 5;
+        flee_count = 500;
+	}
+}

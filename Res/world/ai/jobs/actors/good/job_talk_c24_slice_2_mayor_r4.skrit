@@ -71,54 +71,63 @@ state Talk$
 	
 	event OnEnterState$
 	{
-		if ( GameAuditor.GetDb.GetBool( "c24_flag_r4_braak_completed" ) )
+		if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_braak_done" ) )
 		{
             m_Go$.GetConversation.RSSelectConversation( "conv_r4_mayor_last" );
+
+			if ( !GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_gate_to_fae_opened" ) )
+			{
+				scid quest_activated_trigger_scid$ = MakeScid(0x0240024B);
+				Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
+				SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
+
+                GameAuditor.GetDb.SetBool( "c24_slice2_r4_flag_gate_to_fae_opened", true );
+			}
 		}
-		else if ( GameAuditor.GetDb.GetBool( "c24_flag_r4_hassat_completed" ) )
+		else if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_hassat_done" ) )
 		{
-            if ( GameAuditor.GetDb.GetBool( "c24_flag_r4_mayor_b4_braak_talked_to" ) )
+            if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_hassat_completed_by_mayor" ) )
             {
                 m_Go$.GetConversation.RSSelectConversation( "conv_r4_mayor_b4_braak_quest_next" );
             }
             else
             {
                 m_Go$.GetConversation.RSSelectConversation( "conv_r4_mayor_b4_braak_quest_first" );
-                GameAuditor.GetDb.SetBool( "c24_flag_r4_mayor_b4_braak_talked_to", true );
+                GameAuditor.GetDb.SetBool( "c24_slice2_r4_flag_quest_hassat_completed_by_mayor", true );
+
+				scid quest_activated_trigger_scid$ = MakeScid(0x02400247);
+				Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
+				SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
             }
 		}
-		else if ( GameAuditor.GetDb.GetBool( "c24_flag_r4_cellar_completed" ) )
+		else if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_cellar_completed_by_sommelier" ) )
 		{
-            if ( GameAuditor.GetDb.GetBool( "c24_flag_r4_mayor_b4_hassat_talked_to" ) )
+            if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_hassat_started_by_mayor" ) )
             {
                 m_Go$.GetConversation.RSSelectConversation( "conv_r4_mayor_b4_hassat_quest_next" );
             }
             else
             {
                 m_Go$.GetConversation.RSSelectConversation( "conv_r4_mayor_b4_hassat_quest_first" );
-                GameAuditor.GetDb.SetBool( "c24_flag_r4_mayor_b4_hassat_talked_to", true );
+                GameAuditor.GetDb.SetBool( "c24_slice2_r4_flag_quest_hassat_started_by_mayor", true );
             }
 		}
 		else if ( GameAuditor.GetDb.GetBool( "c24_flag_r4_cart_was_dropped" ) )
 		{
-            if ( GameAuditor.GetDb.GetBool( "c24_flag_r4_mayor_b4_cellar_talked_to" ) )
+            if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_cellar_started_by_mayor" ) )
             {
                 m_Go$.GetConversation.RSSelectConversation( "conv_r4_mayor_b4_cellar_quest_next" );
             }
             else
             {
                 m_Go$.GetConversation.RSSelectConversation( "conv_r4_mayor_b4_cellar_quest_first" );
-                GameAuditor.GetDb.SetBool( "c24_flag_r4_mayor_b4_cellar_talked_to", true );
+                GameAuditor.GetDb.SetBool( "c24_slice2_r4_flag_quest_cellar_started_by_mayor", true );
             }
 		}
 		else
 		{
             // Before quest
             m_Go$.GetConversation.RSSelectConversation( "conv_r4_mayor_b4_cart_is_dropped" );
-
-			scid quest_activated_trigger_scid$ = MakeScid(TODO);
-			Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
-			SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
 		}
 
 		m_Go$.GetConversation.RSActivateDialogue();

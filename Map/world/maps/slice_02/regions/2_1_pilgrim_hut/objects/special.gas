@@ -92,6 +92,14 @@
 	  p position = -6.15937,-1.51594,-6.82945,0x1576ddc6;
 	}
 }
+[t:use_point,n:0x0220009c]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.479782,0,0.190193,0xf8126dd7;
+	}
+}
 [t:trigger_generic,n:0x022000c3]
 {
 	[common]
@@ -100,11 +108,12 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0220007D,0f,"16385","go_within_sphere",0), doc("delete_wood");
+				action* = send_world_message("we_req_activate",0x0220007D,0f,"16389","go_within_sphere",0), doc("delete_wood");
 				action* = send_world_message("we_req_use",0x02200098,0f,"default","every",0), doc("spawn_wagon");
 				action* = send_world_message("we_req_activate",0x02200030,0f,"default","every",0), doc("allow progress further");
+				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",4);
 			  b can_self_destruct = true;
-				condition* = go_within_sphere(3.000000,0x00000000,"","on_first_enter");
+				condition* = go_within_sphere(3.000000,0x00000000,"c24_2_r2_wood_pile","on_first_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -119,7 +128,7 @@
 	}
 	[placement]
 	{
-	  p position = -0.210999,0,1.10674,0xf8126dd7;
+	  p position = -0.190659,0,1.10536,0xf8126dd7;
 	}
 }
 [t:blocking_object,n:0x02200091]
@@ -508,13 +517,5 @@
 	[placement]
 	{
 	  p position = 3.12586,0,1.66284,0x6356babd;
-	}
-}
-[t:use_point,n:0x0220009c]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.164871,0,1.07635,0xf8126dd7;
 	}
 }

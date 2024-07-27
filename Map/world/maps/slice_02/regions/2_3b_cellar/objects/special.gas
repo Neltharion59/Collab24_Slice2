@@ -1,0 +1,53 @@
+[t:accumulate_trigger,n:0x02a00001]
+{
+	[generic_accumtrigger]
+	{
+	  i num_til_send = 5;
+	  x send_to_scid = 0x02A0002F;
+	}
+	[placement]
+	{
+	  p position = 0.285236,0,1.53881,0x21fb2383;
+	}
+}
+[t:trigger_generic,n:0x02a0002f]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02A00030,0f,"default","every",0), doc("set_bool");
+				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",10);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.306171,0,-0.13908,0x21fb2383;
+	}
+}
+[t:set_bool,n:0x02a00030]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.256908,-1.5,-2.79339,0x6a2f0a0e;
+	}
+	[set_bool]
+	{
+		bool_variable = "c24_slice2_r4_flag_quest_cellar_done";
+	}
+}

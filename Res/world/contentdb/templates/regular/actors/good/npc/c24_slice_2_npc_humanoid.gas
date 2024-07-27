@@ -40,6 +40,53 @@
 	{
 	}
 }
+[t:template,n:c24_slice_2_r4_sommelier]
+{
+	category_name = "1W_townsperson";
+	doc = "c24 slice2 npc r4 Sommelier";
+	specializes = base_npc_fg;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_14;
+			1 = b_c_pos_a1_033;
+		}
+	}
+	[common]
+	{
+		screen_name = "Thylea the Sommelier";
+	}
+	[conversation]
+	{
+	}
+}
+[t:template,n:c24_slice_2_r4_sheppard]
+{
+	category_name = "1W_townsperson";
+	doc = "c24 slice2 npc r4 Sheppard";
+	specializes = base_giant;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_hg_skin_03;
+			1 = b_c_pos_a1_200;
+		}
+	}
+	[common]
+	{
+		screen_name = "Thosius";
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+	}
+}
 [t:template,n:c24_slice_2_r4_shop]
 {
 	category_name = "1W_shopkeep";

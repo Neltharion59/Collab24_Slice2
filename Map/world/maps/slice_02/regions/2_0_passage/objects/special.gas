@@ -569,7 +569,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("WE_MCP_FACING_LOCKEDON",0x02100E9E,0f,"default","every",0);
+				action* = send_world_message("we_req_talk_begin",0x02100E9E,0f,"0x4002","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,1.500000,1.000000,"on_first_enter");
 			  f delay = 0.000000;

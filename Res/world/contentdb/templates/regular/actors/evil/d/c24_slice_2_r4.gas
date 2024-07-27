@@ -197,12 +197,12 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 32;
-		damage_min = 30;
+		damage_max = 35;
+		damage_min = 32;
 	}
 	[body]
 	{
-		avg_move_velocity = 3.650000;
+		avg_move_velocity = 4.650000;
 		[bone_translator]
 		{
 			body_anterior = bip01_head;
@@ -263,6 +263,23 @@
 	{
         membership = monster;
 		screen_name="Snow Panther";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02900025,0f,"default","every",0), doc("");
+				b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("[*converted to one-shot*]");
+				f delay = 0.000000;
+				b flip_flop = false;
+				b multi_player = true;
+				occupants_group = ;
+				f reset_duration = 0.000000;
+				b single_player = true;
+				b single_shot = true;
+				b start_active = true;
+			}
+		}
 	}
 	[defend] { defense=35; }
 	[mind]
@@ -938,14 +955,6 @@
     {
     	jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
 			?activate					= true;
-
-    	melee_engage_range 		= 5;
-		personal_space_range 	= 0.5;
-		sight_range 			= 5.5;
-		com_range 				= 4.0;
-		ranged_engage_range 	= 5.1;
-        outer_comfort_zone_range= 5.0;
-		actor_auto_fidgets		= false;
     }
 }
 [t:template,n:c24_2_r4_gargoyle_magic_base]
@@ -1005,13 +1014,5 @@
     {
     	jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
 			?activate					= true;
-
-    	melee_engage_range 		= 10;
-		personal_space_range 	= 0.5;
-		sight_range 			= 10.5;
-		com_range 				= 10;
-		ranged_engage_range 	= 10;
-        outer_comfort_zone_range= 3.0;
-		actor_auto_fidgets		= false;
     }
 }
