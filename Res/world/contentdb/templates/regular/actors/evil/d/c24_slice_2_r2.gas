@@ -413,8 +413,8 @@
 		{
 			[*]
 			{
-				//action* = call_sfx_script("c24_slice_02_effect_bortusk_hat");
-				action* = call_sfx_script("eyes_whelnar");
+				action* = call_sfx_script("c24_slice_02_effect_bortusk_hat");
+				//action* = call_sfx_script("eyes_whelnar");
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
 			}
