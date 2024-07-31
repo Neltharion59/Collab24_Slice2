@@ -688,7 +688,7 @@
 	specializes = base_arrow;
 	[aspect]
 	{
-		material = ice;
+		material = steel;
 		model=m_w_dag_fourthwind;
 		is_selectable	= false;
 		[textures]
@@ -733,7 +733,7 @@
 	specializes = base_bow;
 	[aspect]
 	{
-		material = ice;
+		material = steel;
 		is_selectable = false;
 		model = m_w_dag_fourthwind;
 		[textures]
@@ -921,4 +921,93 @@
 		explosion_magnitude = 3;
 	}
 	[spell_default] {}
+}
+[t:template,n:c24_ice_lance]
+{
+	specializes = base_arrow;
+	[aspect]
+	{
+		model=m_w_misc_023;
+		scale_base = 1.0;
+		force_no_render = true;
+		draw_selection_indicator = false;
+		[textures] { 0 = b_c_edm_iw; }
+	}
+	[attack]
+	{
+		damage_max = 2;
+		damage_min = 1;
+		skill_class = "Nature Magic";
+	}
+	[body]
+	{
+		[bone_translator]
+		{
+			handle = ap_grip;
+			middle = ap_tip;
+			tip = ap_tip;
+		}
+	}
+	[common]
+	{
+		screen_name = "Lance";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("soul_lance_dust");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+	[physics]
+	{
+		angular_velocity = 0,0,20.0;
+		gravity = 0;
+		explode_if_hit_go = true;
+		explode_if_hit_terrain = true;
+		explode_when_expired = true;
+		break_effect = ice_explosion;
+		sim_duration = 10;
+	}
+}
+[t:template,n:c24_ice_fist]
+{
+	doc = "c24 slice2 ice fist";
+	specializes = base_arrow;
+	[aspect]
+	{
+		model = m_w_misc_028;
+		scale_base = 0.66;
+		[textures] { 0 = b_c_edm_iw; }
+	}
+	[attack]
+	{
+		skill_class = "Nature Magic";
+	}
+	[common]
+	{
+		is_pcontent_allowed = FALSE;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("rock_fist_dust");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+	[physics]
+	{
+		angular_velocity = 0,0,0;
+		orient_to_trajectory = true;
+		break_effect = ice_explosion;
+		break_sound = s_e_die_shard_small;
+		explode_if_hit_go		= true;
+		explode_if_hit_terrain	= true;
+		explode_when_expired 	= true;
+		gravity = 3;
+	}
 }

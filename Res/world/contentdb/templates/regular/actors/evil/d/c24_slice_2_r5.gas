@@ -161,6 +161,51 @@
 			il_spell_1 = c24_r5_naldrun_spell_iceshard_2;
 			il_spell_2 = c24_r5_naldrun_spell_respite;
         }
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.15;
+					max = 41;
+					min = 23;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #staff/-mod(1)/10-25;
+					il_main = #staff/-mod(2)/10-25;
+					il_main = #body,ro/25-60;
+				}
+				[oneof*]
+				{
+					chance = 0.20;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+					il_main = potion_rejuvenation_small;
+				}
+				[oneof*]
+				{
+					chance = 0.02;
+					il_main = #ring/2-17;
+					il_main = #amulet/2-17;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #staff/-rare(1)/10-25;
+					il_main = #body,ro/-rare(1)/25-60;
+				}
+				[oneof*]
+				{
+					chance = 0.005;
+					il_main = #staff/-unique(2)/11-22;
+					il_main = #body,ro/-unique(2)/25-60;
+    	        	il_main = #spellbook/16-35;
+				}
+			}
+		}
     }
 	[mind]
 	{
@@ -195,6 +240,51 @@
 			il_spell_3 = c24_r5_naldrun_spell_buff_block_magic;
 			il_spell_4 = c24_r5_naldrun_spell_respite;
         }
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.15;
+					max = 41;
+					min = 23;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #staff/-mod(1)/10-25;
+					il_main = #staff/-mod(2)/10-25;
+					il_main = #body,ro/25-60;
+				}
+				[oneof*]
+				{
+					chance = 0.20;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+					il_main = potion_rejuvenation_small;
+				}
+				[oneof*]
+				{
+					chance = 0.02;
+					il_main = #ring/2-17;
+					il_main = #amulet/2-17;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #staff/-rare(1)/10-25;
+					il_main = #body,ro/-rare(1)/25-60;
+				}
+				[oneof*]
+				{
+					chance = 0.005;
+					il_main = #staff/-unique(2)/11-22;
+					il_main = #body,ro/-unique(2)/25-60;
+    	        	il_main = #spellbook/16-35;
+				}
+			}
+		}
     }
 	[mind]
 	{
@@ -226,6 +316,51 @@
             il_active_secondary_spell = c24_r5_naldrun_spell_healing_wind;
 			il_spell_1 = c24_r5_naldrun_spell_ressurect;
         }
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.15;
+					max = 41;
+					min = 23;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #staff/-mod(1)/10-25;
+					il_main = #staff/-mod(2)/10-25;
+					il_main = #body,ro/25-60;
+				}
+				[oneof*]
+				{
+					chance = 0.20;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+					il_main = potion_rejuvenation_small;
+				}
+				[oneof*]
+				{
+					chance = 0.02;
+					il_main = #ring/2-17;
+					il_main = #amulet/2-17;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #staff/-rare(1)/10-25;
+					il_main = #body,ro/-rare(1)/25-60;
+				}
+				[oneof*]
+				{
+					chance = 0.005;
+					il_main = #staff/-unique(2)/11-22;
+					il_main = #body,ro/-unique(2)/25-60;
+    	        	il_main = #spellbook/16-35;
+				}
+			}
+		}
     }
 	[mind]
 	{
@@ -419,6 +554,53 @@
             il_active_secondary_spell = c24_r5_naldrun_spell_ice_orb;
 			il_spell_1 = c24_r5_naldrun_spell_respite;
         }
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 200;
+					min = 50;
+					piles = 2 - 4;
+					min_pile = 24;
+				}
+				[oneof*]
+				{
+					il_main = #staff/-mod(1)/10-25;
+					il_main = #staff/-mod(2)/10-25;
+					il_main = #body,ro/25-60;
+					min = 1;
+					max = 2;
+				}
+				[oneof*]
+				{
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+					il_main = potion_rejuvenation_medium;
+					min = 1;
+					max = 3;
+				}
+				[oneof*]
+				{
+					il_main = #ring/2-17;
+					il_main = #amulet/2-17;
+				}
+				[oneof*]
+				{
+					chance = 0.66;
+					il_main = #staff/-rare(1)/10-25;
+					il_main = #body,ro/-rare(1)/25-60;
+				}
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = #staff/-unique(2)/11-22;
+					il_main = #body,ro/-unique(2)/25-60;
+    	        	il_main = #spellbook/16-35;
+				}
+			}
+		}
     }
 	[mind]
 	{

@@ -1326,3 +1326,262 @@
 		number = 1;
 	}
 }
+[t:template,n:c24_r6_ice_mage_spell_ice_lance]
+{
+	category_name = "magic";
+	doc = "c24 r6 spell ice mage ice lance";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		aiming_error_range_x = 15;
+		aiming_error_range_y = 5;
+		ammo_attach_bone = weapon_grip;
+		ammo_template = c24_ice_lance;
+		damage_max = 52;
+		damage_min = 40;
+		use_aiming_error = true;
+	}
+	[magic]
+	{
+		cast_range = 25;
+		cast_reload_delay = 0.15;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[physics]
+	{
+		velocity = 12.5;
+	}
+	[spell_launch]
+	{
+		delay_between_shots = false;
+		number = 10;
+		randomize_offsets = true;
+		use_offsets = true;
+		x_offset = 25;
+		y_offset = 25;
+		z_offset = 25;
+	}
+}
+[t:template,n:c24_r6_ice_mage_spell_shared_pain]
+{
+	category_name = "magic";
+	doc = "c24 r6 spell ice mage shared pain";
+	specializes = base_spell_monster_nm;
+	[magic]
+	{
+		apply_enchantments = false;
+		cast_range = 25;
+		cast_reload_delay = 0.15;
+		effect_duration = 7;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_self;
+		usage_context_flags = uc_offensive;
+		state_name = reflect;
+		require_state_check = false;
+
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_reflect_damage;
+				description = "Symp Damage";
+				duration = 7;
+				value = 100;
+			}
+			[*]
+			{
+				alteration = alter_reflect_damage_chance;
+				description = "Reflect Damage chance";
+				duration = 7;
+				value = 100;
+			}
+		}
+	}
+	[spell_status_effect]
+	{
+		description = "Mirror";
+		effect_script = sympathy_damage;
+	}
+}
+[t:template,n:c24_r6_ice_mage_spell_ice_orb]
+{
+	category_name = "magic";
+	doc = "collab24 r6 spell ice mage ice orb";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 75;
+		damage_min = 66;
+	}
+	[magic]
+	{
+		cast_range = 12;
+		cast_reload_delay = 0.15;
+
+		effect_duration = 10;
+
+		target_type_flags = tt_self;
+		usage_context_flags = uc_offensive;
+		caster_state_name = "Orb_spell_orbiting";
+		require_state_check = true;
+	}
+	[spell_orb]
+	{
+		orbEffect = orb_ice_orbiter;
+		orbSoundEffect = orb_ice_sound;
+		shotEffect = orb_ice_projectile;
+		isLightning = true;
+		casterDescription = "Orb of Frost";
+	}
+}
+[t:template,n:c24_r6_ice_mage_spell_turret]
+{
+	category_name = "magic";
+	doc = "collab24 r6 spell ice mage turret";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 61;
+		damage_min = 55;
+	}
+	[magic]
+	{
+		cast_range = 25;
+		cast_reload_delay = 0.15;
+		effect_duration = 5;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+		cast_sub_animation = 0;
+		state_name = "Calling Ice";
+	}
+	[spell_turret]
+	{
+		initial_delay = 0.4;
+		shot_rate = 1.0;
+		effect_script = ice_mage_balls;
+	}
+}
+[t:template,n:c24_r6_ice_mage_spell_killing_fist]
+{
+	category_name = "magic";
+	doc = "collab24 r6 spell ice mage killing fist";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		ammo_attach_bone = weapon_grip;
+		ammo_template = c24_ice_fist;
+		damage_max = 69;
+		damage_min = 60;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script( "killing_fist" );
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 25;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
+		usage_context_flags = uc_offensive;
+	}
+	[physics]
+	{
+		velocity = 12;
+	}
+	[spell_launch]
+	{
+		number = 1;
+	}
+}
+[t:template,n:c24_r6_ice_mage_spell_snowstorm]
+{
+	category_name = "magic";
+	doc = "collab24 r6 spell ice_mage snowstorm";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 50;
+		damage_min = 40;
+	}
+	[magic]
+	{
+		cast_range = 14;
+		cast_reload_delay = 2;
+		effect_duration = 2;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_turret]
+	{
+		initial_delay = 0.4;
+		shot_rate = 0.2;
+		effect_script = dsx_sj_snowstorm_fire;
+		charge_effect = dsx_sj_snowstorm_charge;
+	}
+}
+[t:template,n:c24_r6_ice_mage_spell_summon]
+{
+	category_name = "magic";
+	doc = "collab24 r6 spell ice_mage summon";
+	specializes = base_spell_monster_nm;
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+					chance = 1.00;
+					il_main = c24_2_r6_ice_fly;
+				}
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 10;
+		cast_reload_delay = 0.15;
+		effect_duration = 20;
+		requires_line_of_sight = true;
+		require_state_check = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+		cast_sub_animation = 4;
+		state_name = "Controlling";
+		caster_state_name = "Controlling";
+	}
+	[spell_summon_multiple]
+	{
+		flee = false;
+		watch_summoned  = true;
+		spawn_num		= 4;
+		effect_script	= "fire_summon";
+		spawn_radius	= 10.0;
+		spawn_rate		= .75;
+		description = "Summoned Creature";
+		caster_description = "Controlling Summoned";
+	}
+}

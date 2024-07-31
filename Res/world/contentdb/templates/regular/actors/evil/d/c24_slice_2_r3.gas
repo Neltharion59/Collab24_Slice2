@@ -89,39 +89,18 @@
 			{
 				[oneof*]
 				{
-					il_main = #weapon/19-21;
-                    il_main = #armor/40-50;
-					il_main = #*/19-21;
-					il_main = #nmagic/4-8;
-					il_main = #cmagic/4-8;
-					chance = 0.33;
+					il_main = #weapon/14-25;
+                    il_main = #armor/25-60;
+					il_main = #*/14-25;
+					il_main = #nmagic/4-7;
+					il_main = #cmagic/4-7;
+					chance = 0.10;
 				}
 				[oneof*]
 				{
 					il_main = potion_health_small;
 					il_main = potion_mana_small;
-					chance = 0.40;
-				}
-				[oneof*]
-				{
-	                   chance = 0.02;
-	                   il_main = #weapon/-rare(1)/25-31;
-	                   il_main = #armor/-rare(1)/48-59;
-                       il_main = #*/-rare(1)/25-31;
-                }
-				[oneof*]
-				{
-	                   chance = 0.01;
-	                   il_main = #weapon/-unique(2)/25-31;
-	                   il_main = #armor/-unique(2)/48-59;
-                       il_main = #*/-unique(2)/25-31;
-                }
-				[gold*]
-				{
-					max = 154;
-					min = 91;
-					min_pile = 21;
-					piles = 2 - 4;
+					chance = 0.20;
 				}
 			}
 		}
@@ -168,39 +147,18 @@
 			{
 				[oneof*]
 				{
-					il_main = #weapon/19-21;
-                    il_main = #armor/40-50;
-					il_main = #*/19-21;
-					il_main = #nmagic/4-8;
-					il_main = #cmagic/4-8;
-					chance = 0.33;
+					il_main = #weapon/14-25;
+                    il_main = #armor/25-60;
+					il_main = #*/14-25;
+					il_main = #nmagic/4-7;
+					il_main = #cmagic/4-7;
+					chance = 0.15;
 				}
 				[oneof*]
 				{
 					il_main = potion_health_small;
 					il_main = potion_mana_small;
-					chance = 0.40;
-				}
-				[oneof*]
-				{
-	                   chance = 0.02;
-	                   il_main = #weapon/-rare(1)/25-31;
-	                   il_main = #armor/-rare(1)/48-59;
-                       il_main = #*/-rare(1)/25-31;
-                }
-				[oneof*]
-				{
-	                   chance = 0.01;
-	                   il_main = #weapon/-unique(2)/25-31;
-	                   il_main = #armor/-unique(2)/48-59;
-                       il_main = #*/-unique(2)/25-31;
-                }
-				[gold*]
-				{
-					max = 154;
-					min = 91;
-					min_pile = 21;
-					piles = 2 - 4;
+					chance = 0.25;
 				}
 			}
 		}
@@ -261,11 +219,11 @@
 			{
 				[oneof*]
 				{
-					il_main = #weapon/19-21;
-                    il_main = #armor/40-50;
-					il_main = #*/19-21;
-					il_main = #nmagic/4-8;
-					il_main = #cmagic/4-8;
+					il_main = #weapon/14-25;
+                    il_main = #armor/25-60;
+					il_main = #*/14-25;
+					il_main = #nmagic/4-7;
+					il_main = #cmagic/4-7;
 				}
 				[oneof*]
 				{
@@ -274,24 +232,10 @@
 					min = 2;
 					max = 2;
 				}
-				[oneof*]
-				{
-	                   chance = 0.2;
-	                   il_main = #weapon/-rare(1)/25-31;
-	                   il_main = #armor/-rare(1)/48-59;
-                       il_main = #*/-rare(1)/25-31;
-                }
-				[oneof*]
-				{
-	                   chance = 0.1;
-	                   il_main = #weapon/-unique(2)/25-31;
-	                   il_main = #armor/-unique(2)/48-59;
-                       il_main = #*/-unique(2)/25-31;
-                }
 				[gold*]
 				{
-					max = 200;
-					min = 120;
+					max = 140;
+					min = 100;
 					min_pile = 40;
 					piles = 2 - 4;
 				}
@@ -309,100 +253,6 @@
 		jat_brain							= world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party			= true
 			&party_template						= "party_furok_boss";
-	}
-}
-[t:template,n:c24_2_r3_ice_mage]
-{
-	category_name = "1W_evil_d";
-	doc = "Bruhs Slice 2 R3 Ice Mage Boss";
-	specializes = base_swamp_witch;
-	[actor]
-	{
-		[skills]
-		{
-			strength =  8, 0;
-			intelligence =  13, 0;
-			dexterity =  9, 0;
-			combat_magic =  8,  0;
-		}
-	}
-	[aspect]
-	{
-		experience_value = 261;
-		life = 100;
-		max_life = 100;
-		mana = 56;
-		max_mana = 56;
-		textures:0 = b_c_edm_img;
-	}
-	[attack]
-	{
-		attack_range = 0.5;
-		damage_max = 60;
-		damage_min = 55;
-	}
-	[common]
-    {
-        screen_name="Mirabelle Stoutbread";
-		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				single_shot = true;
-				no_trig_bits = true;
-				action* = call_sfx_script("unique_ray_blue(sgx)");
-			}
-		}
-    }
-    [defend] { defense=74; }
-	[inventory]
-	{
-		[pcontent]
-		{
-			[oneof*]
-			{
-				[oneof*]
-				{
-				   chance = 0.05;
-				   il_main = potion_health_small;
-				   il_main = potion_mana_small;
-				}
-				[all*]
-				{
-       				chance = 0.1;
-                    il_main = #cmagic/3-15;
-				}
-				[oneof*]
-				{
-					chance = 0.15;
-                    il_main = #*/36-44;
-                    il_main = #body,ro/70-88;
-				}
-
-			}
-		}
-		selected_active_location = il_active_primary_spell;
-		[other]
-		{
-			il_active_primary_spell=spell_ice_mage_iceblast;
-			il_spell_1=spell_summon_ice_warriors_monster;
-		}
-	}
-	[mind]
-	{
-		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
-			?meander						= false
-			&still							= false;
-
-		jat_cast 						= world\ai\jobs\common\job_cast.skrit
-			?rand_spell					= true;
-
-		actor_life_ratio_low_threshold  = 0.25;
-		on_life_ratio_low_flee = true;
-		flee_count = 1;
-		flee_distance = 20;
 	}
 }
 [t:template,n:c24_2_r3_broom_flyer]
@@ -571,6 +421,46 @@
             il_active_primary_spell = c24_r3_broom_flyer_spell_chubby_rain;
             il_active_secondary_spell = c24_r3_broom_flyer_spell_snowstorm;
         }
+    	[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #nmagic/4-7;
+					il_main = #cmagic/4-7;
+					min = 2;
+					max = 3;
+				}
+				[oneof*]
+				{
+					il_main = potion_health_small;
+					il_main = potion_mana_small;
+					min = 2;
+					max = 2;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/14-25;
+					il_main = #armor/-rare(1)/25-60;
+					il_main = #*/-rare(1)/14-25;
+                }
+				[oneof*]
+				{
+					chance = 0.20;
+					il_main = #weapon/-unique(2)/14-25;
+					il_main = #armor/-unique(2)/25-60;
+					il_main = #*/-unique(2)/14-25;
+                }
+				[gold*]
+				{
+					max = 200;
+					min = 120;
+					min_pile = 40;
+					piles = 2 - 4;
+				}
+			}
+		}
     }
 	[mind]
 	{
@@ -794,6 +684,22 @@
 		}
 	}
 	[defend] { defense=45; }
+
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 120;
+					min = 70;
+				}
+			}
+		}
+	}
+
 	[mind]
 	{
 		jat_brain						= world\ai\jobs\common\brain_hero.skrit

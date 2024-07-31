@@ -521,7 +521,7 @@
 	  p position = -2.65111,-1,-2.89853,0x08a04bdf;
 	}
 }
-[t:ice_mage,n:0x0260005c]
+[t:c24_slice_2_r6_ice_mage_boss,n:0x0260005c]
 {
 	[aspect]
 	{
@@ -548,10 +548,6 @@
 			  b start_active = true;
 			}
 		}
-	}
-	[mind]
-	{
-		movement_orders = mo_hold;
 	}
 	[placement]
 	{
@@ -677,8 +673,8 @@
 {
 	[placement]
 	{
-	  q orientation = 0,-1,0,-1.66939e-007;
-	  p position = -0.136658,0,-0.824263,0xc8aba8ff;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.46133,0,0.10231,0xcf9132b9;
 	}
 }
 [t:c24_2_r6_ice_elemental,n:0x02600093]

@@ -219,6 +219,39 @@
 		}
 	}
 	[defend] { defense=40; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 90;
+					min = 50;
+					piles = 2 - 4;
+					min_pile = 21;
+				}
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.70;
+					il_main = #weapon/-rare(1)/11-22;
+					il_main = #armor/-rare(1)/25-60;
+					il_main = #*/-rare(1)/11-22;
+				}
+				[oneof*]
+				{
+					chance = 0.30;
+					il_main = #weapon/-unique(2)/11-22;
+					il_main = #armor/-unique(2)/25-60;
+					il_main = #*/-unique(2)/11-22;
+				}
+			}
+		}
+	}
     [mind]
     {
         jat_brain							= world\ai\jobs\common\brain_hero.skrit
@@ -400,6 +433,48 @@
             il_spell_2 = c24_r2_bortusk_spell_debuff;
             il_spell_3 = c24_r2_bortusk_spell_buff;
         }
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 130;
+					min = 80;
+					piles = 3 - 5;
+					min_pile = 21;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/11-22;
+					il_main = #armor/-rare(1)/25-60;
+					il_main = #*/-rare(1)/11-22;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/11-22;
+					il_main = #armor/25-60;
+					il_main = #*/11-22;
+				}
+				[all*]
+				{
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+				[all*]
+				{
+					il_main = #nmagic/5-8;
+					il_main = #cmagic/5-8;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #weapon/-unique(2)/11-22;
+					il_main = #armor/-unique(2)/25-60;
+					il_main = #*/-unique(2)/11-22;
+				}
+			}
+		}
     }
     [mind]
     {
@@ -726,6 +801,21 @@
 
 		}
 
+	}
+
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					  max = 90;
+					  min = 50;
+				}
+			}
+		}
 	}
 
 	[mind]

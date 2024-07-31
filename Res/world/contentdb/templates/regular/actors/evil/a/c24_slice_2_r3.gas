@@ -147,6 +147,48 @@
 					es_weapon_hand = c24_vaarth_club;
 				}
 			}
+			[all*]
+			{
+				[oneof*]
+				{
+					chance = 0.75;
+					il_main = #weapon/14-25;
+                    il_main = #armor/25-60;
+					il_main = #*/14-25;
+					il_main = #nmagic/4-7;
+					il_main = #cmagic/4-7;
+				}
+				[oneof*]
+				{
+					chance = 0.60;
+					il_main = potion_health_small;
+					il_main = potion_mana_small;
+					min = 1;
+					max = 2;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/14-25;
+					il_main = #armor/-rare(1)/25-60;
+					il_main = #*/-rare(1)/14-25;
+                }
+				[oneof*]
+				{
+					chance = 0.02;
+					il_main = #weapon/-unique(2)/14-25;
+					il_main = #armor/-unique(2)/25-60;
+					il_main = #*/-unique(2)/14-25;
+                }
+				[gold*]
+				{
+					chance = 0.33;
+					max = 90;
+					min = 50;
+					min_pile = 15;
+					piles = 3 - 5;
+				}
+			}
         }
 	}
 	[mind]
@@ -296,6 +338,48 @@
 					es_weapon_hand = c24_vaarth_cannon;
 				}
 			}
+			[all*]
+			{
+				[oneof*]
+				{
+					chance = 0.75;
+					il_main = #weapon/14-25;
+                    il_main = #armor/25-60;
+					il_main = #*/14-25;
+					il_main = #nmagic/4-7;
+					il_main = #cmagic/4-7;
+				}
+				[oneof*]
+				{
+					chance = 0.60;
+					il_main = potion_health_small;
+					il_main = potion_mana_small;
+					min = 1;
+					max = 2;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/14-25;
+					il_main = #armor/-rare(1)/25-60;
+					il_main = #*/-rare(1)/14-25;
+                }
+				[oneof*]
+				{
+					chance = 0.02;
+					il_main = #weapon/-unique(2)/14-25;
+					il_main = #armor/-unique(2)/25-60;
+					il_main = #*/-unique(2)/14-25;
+                }
+				[gold*]
+				{
+					chance = 0.33;
+					max = 90;
+					min = 50;
+					min_pile = 15;
+					piles = 3 - 5;
+				}
+			}
         }
 	}
 	[mind]
@@ -435,6 +519,51 @@
             il_active_secondary_spell = c24_r3_vaarth_spell_ice_orb;
             il_spell_1 = c24_r3_vaarth_spell_debuff;
         }
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					chance = 0.75;
+					il_main = #weapon/14-25;
+                    il_main = #armor/25-60;
+					il_main = #*/14-25;
+					il_main = #nmagic/4-7;
+					il_main = #cmagic/4-7;
+				}
+				[oneof*]
+				{
+					chance = 0.60;
+					il_main = potion_health_small;
+					il_main = potion_mana_small;
+					min = 1;
+					max = 2;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/14-25;
+					il_main = #armor/-rare(1)/25-60;
+					il_main = #*/-rare(1)/14-25;
+                }
+				[oneof*]
+				{
+					chance = 0.02;
+					il_main = #weapon/-unique(2)/14-25;
+					il_main = #armor/-unique(2)/25-60;
+					il_main = #*/-unique(2)/14-25;
+                }
+				[gold*]
+				{
+					chance = 0.33;
+					max = 90;
+					min = 50;
+					min_pile = 15;
+					piles = 3 - 5;
+				}
+			}
+		}
 	}
 	[mind]
 	{

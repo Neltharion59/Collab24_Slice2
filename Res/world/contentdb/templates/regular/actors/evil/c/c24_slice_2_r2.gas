@@ -36,6 +36,29 @@
 	}
 	[common] { screen_name="Nutlech"; }
     [defend] { defense=57; }
+    [inventory]
+    {
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.70;
+					il_main = #weapon/-rare(1)/11-22;
+					il_main = #armor/-rare(1)/25-60;
+					il_main = #*/-rare(1)/11-22;
+				}
+				[oneof*]
+				{
+					chance = 0.30;
+					il_main = #weapon/-unique(2)/11-22;
+					il_main = #armor/-unique(2)/25-60;
+					il_main = #*/-unique(2)/11-22;
+				}
+			}
+		}
+    }
 	[mind]
 	{
 		melee_engage_range = 14;

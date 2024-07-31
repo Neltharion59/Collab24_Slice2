@@ -33,6 +33,53 @@
 		membership = party_braak_boss, monster;
 	}
 	[defend] { defense=44; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.40;
+					max = 44;
+					min = 31;
+				}
+				[oneof*]
+				{
+					chance = 0.40;
+					il_main = #weapon/14-24;
+					il_main = #armor/30-63;
+					il_main = #*/14-24;
+					il_main = #spell/5-9;
+					min = 1;
+					max = 2;
+				}
+				[oneof*]
+				{
+					chance = 0.66;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+					min = 1;
+					max = 2;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/14-24;
+					il_main = #armor/-rare(1)/30-63;
+					il_main = #*/-rare(1)/14-24;
+				}
+				[oneof*]
+				{
+					chance = 0.005;
+					il_main = #weapon/-unique(2)/14-24;
+					il_main = #armor/-unique(2)/30-63;
+					il_main = #*/-unique(2)/14-24;
+				}
+			}
+		}
+	}
 	[mind]
 	{
 		jat_brain							= world\ai\jobs\common\brain_hero.skrit
@@ -85,6 +132,50 @@
 		}
 	}
 	[defend] { defense=51; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 171;
+					min = 86;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/14-24;
+					il_main = #armor/30-63;
+					il_main = #*/14-24;
+					il_main = #spell/5-9;
+					min = 1;
+					max = 2;
+				}
+				[oneof*]
+				{
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+					min = 1;
+					max = 2;
+				}
+				[oneof*]
+				{
+					chance = 0.10;
+					il_main = #weapon/-rare(1)/14-24;
+					il_main = #armor/-rare(1)/30-63;
+					il_main = #*/-rare(1)/14-24;
+				}
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = #weapon/-unique(2)/14-24;
+					il_main = #armor/-unique(2)/30-63;
+					il_main = #*/-unique(2)/14-24;
+				}
+			}
+		}
+	}
 	[mind]
 	{
 		jat_fidget			= world\ai\jobs\common\job_fidget.skrit
@@ -138,6 +229,50 @@
 	{
 		selected_active_location = il_active_primary_spell;
 		[other] { il_active_primary_spell=c24_r4_braak_spell_boulder; }
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.40;
+					max = 44;
+					min = 31;
+				}
+				[oneof*]
+				{
+					chance = 0.40;
+					il_main = #weapon/14-24;
+					il_main = #armor/30-63;
+					il_main = #*/14-24;
+					il_main = #spell/5-9;
+					min = 1;
+					max = 2;
+				}
+				[oneof*]
+				{
+					chance = 0.66;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+					min = 1;
+					max = 2;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/14-24;
+					il_main = #armor/-rare(1)/30-63;
+					il_main = #*/-rare(1)/14-24;
+				}
+				[oneof*]
+				{
+					chance = 0.005;
+					il_main = #weapon/-unique(2)/14-24;
+					il_main = #armor/-unique(2)/30-63;
+					il_main = #*/-unique(2)/14-24;
+				}
+			}
+		}
 	}
 	[mind]
 	{
