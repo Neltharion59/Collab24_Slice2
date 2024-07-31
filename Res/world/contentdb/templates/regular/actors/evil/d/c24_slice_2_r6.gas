@@ -15,7 +15,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 80;
+		experience_value = 40;
 		life = 147;
 		max_life = 147;
 		mana = 900;
@@ -196,7 +196,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0260005E,0f,"default","every",0), doc("");
+				action* = send_world_message("we_req_activate",0x0260005A,0f,"default","every",0), doc("");
 				b can_self_destruct = true;
 				condition* = receive_world_message("we_exploded",0,"on_first_message"), doc("[*converted to one-shot*]");
 				f delay = 0.000000;
@@ -237,7 +237,7 @@
 	{
 		scale_base = 0.15;
 		[textures] { 0 = b_c_edm_iw; }
-		experience_value = 44;
+		experience_value = 38;
 		life = 97;
         max_life = 97;
         mana = 80;
@@ -294,7 +294,7 @@
 	[aspect]
 	{
 		material = ice;
-		experience_value = 111;
+		experience_value = 75;
 		life = 271;
 		max_life = 271;
 		mana = 5600;
@@ -408,7 +408,7 @@
 		}
 	}
 }
-[t:template,n:c24_2_r6_ice_fly]
+[t:template,n:c24_2_r6_ice_fly_base]
 {
 	// Stats based on Skeleton Guard
 	category_name = "1W_evil_d";
@@ -519,9 +519,153 @@
 		explode_when_killed = true;
 		gib_gore_good = true;
 	}
+}
+[t:template,n:c24_2_r6_ice_fly]
+{
+	// Stats based on Skeleton Guard
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice62 R6 ice fly";
+	specializes = c24_2_r6_ice_fly_base;
+}
+[t:template,n:c24_2_r6_ice_fly_summon]
+{
+	// Stats based on Skeleton Guard
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice62 R6 ice fly";
+	specializes = c24_2_r6_ice_fly_base;
 	[self_destruct] 
 	{
 		delete_time = 20.0;
 		explode = true;
+	}
+}
+[t:template,n:c24_2_r6_unguis]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice62 R6 unguis";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	24, 0;
+			intelligence =  2, 0;
+			dexterity =  	17, 0;
+			melee =  		10,  0;
+		}
+	}
+	[aspect]
+	{
+		draw_shadow = false;
+		experience_value = 20;
+		life = 90;
+		max_life = 90;
+		max_mana = 10;
+		mana = 10;
+		model = m_c_edm_ug_pos_1;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_unguis; }
+			[hit_critical]	{ priority = low; * = s_e_hit_unguis_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_unguis_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_unguis_SED; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 3;
+		damage_max = 48;
+		damage_min = 44;
+	}
+	[body]
+	{
+		avg_move_velocity = 0;
+		[bone_translator]
+		{
+			body_anterior = bone20;
+			body_mid = bone13;
+			body_posterior = bone04;
+			kill_bone = bone09;
+			shield_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			initial_chore = chore_none;
+			chore_prefix = a_c_edm_ug_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = ds;
+					wake = rv;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=dfs; }
+			}
+		}
+	}
+	[common] 	
+	{ 
+		screen_name="Tentacle"; 
+		membership=monster,immune_freeze;
+	}
+   	[defend] { defense=100; }
+	[mind]
+	{
+		jat_die 					= world\ai\jobs\actors\evil\job_die_delete.skrit;
+		jat_startup 							= world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible 							= true;
+		
+		jat_flee_from_object		= jat_none;
+		jat_guard         			= jat_none;
+		jat_move          			= jat_none;
+		jat_patrol         			= jat_none;
+
+		actor_auto_fidgets 			= false;
+		movement_orders 			= mo_hold;
+		melee_engage_range 			= 3.0;
+		personal_space_range 		= 0.7;
+		on_enemy_entered_ocz_attack = true;
+		sight_origin_height			= 2.5;
+		melee_engage_range 			= 3;
+		ranged_engage_range 		= 3.0;
+		sight_range 				= 3.0;
+		inner_comfort_zone_range 	= 3.0;
+		outer_comfort_zone_range 	= 3.0;
+		com_range				 	= 3.0;
 	}
 }

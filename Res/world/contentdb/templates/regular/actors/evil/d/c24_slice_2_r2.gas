@@ -490,7 +490,7 @@
 			?rand_spell					= true;
     }
 }
-[t:template,n:c24_2_r2_ice_fly]
+[t:template,n:c24_2_r2_ice_fly_base]
 {
 	// Stats based on Skeleton Guard
 	category_name = "1W_evil_d";
@@ -601,6 +601,20 @@
 		explode_when_killed = true;
 		gib_gore_good = true;
 	}
+}
+[t:template,n:c24_2_r2_ice_fly]
+{
+	// Stats based on Skeleton Guard
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 ice fly";
+	specializes = c24_2_r2_ice_fly_base;
+}
+[t:template,n:c24_2_r2_ice_fly_summon]
+{
+	// Stats based on Skeleton Guard
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R2 ice fly";
+	specializes = c24_2_r2_ice_fly_base;
 	[self_destruct] 
 	{
 		delete_time = 20.0;

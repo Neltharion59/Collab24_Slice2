@@ -16,7 +16,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 41;
+		experience_value = 31;
 		life = 24;
 		max_life = 24;
 		mana = 700;
@@ -135,6 +135,8 @@
 			?actor_creates_own_party		 = true
 			&party_template					 = "party_krug_shaman";
 
+		actor_life_ratio_low_threshold = 0.60;
+
 		melee_engage_range = 16.0;
 		personal_space_range = 0.7;
 		ranged_engage_range = 16.0;
@@ -173,14 +175,15 @@
 				}
 				[oneof*]
 				{
-					chance = 0.25;
+					chance = 0.15;
 					il_main = #staff/-mod(1)/10-25;
 					il_main = #staff/-mod(2)/10-25;
-					il_main = #body,ro/25-60;
+					il_main = #body,ro/-mod(1)/25-60;
+					il_main = #body,ro/-mod(2)/25-60;
 				}
 				[oneof*]
 				{
-					chance = 0.20;
+					chance = 0.15;
 					il_main = potion_mana_small;
 					il_main = potion_health_small;
 					il_main = potion_rejuvenation_small;
@@ -252,14 +255,15 @@
 				}
 				[oneof*]
 				{
-					chance = 0.25;
+					chance = 0.15;
 					il_main = #staff/-mod(1)/10-25;
 					il_main = #staff/-mod(2)/10-25;
-					il_main = #body,ro/25-60;
+					il_main = #body,ro/-mod(1)/25-60;
+					il_main = #body,ro/-mod(2)/25-60;
 				}
 				[oneof*]
 				{
-					chance = 0.20;
+					chance = 0.15;
 					il_main = potion_mana_small;
 					il_main = potion_health_small;
 					il_main = potion_rejuvenation_small;
@@ -328,14 +332,15 @@
 				}
 				[oneof*]
 				{
-					chance = 0.25;
+					chance = 0.15;
 					il_main = #staff/-mod(1)/10-25;
 					il_main = #staff/-mod(2)/10-25;
-					il_main = #body,ro/25-60;
+					il_main = #body,ro/-mod(1)/25-60;
+					il_main = #body,ro/-mod(2)/25-60;
 				}
 				[oneof*]
 				{
-					chance = 0.20;
+					chance = 0.15;
 					il_main = potion_mana_small;
 					il_main = potion_health_small;
 					il_main = potion_rejuvenation_small;
@@ -527,7 +532,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 74;
+		experience_value = 45;
 		life = 167;
 		max_life = 167;
 		mana = 1200;
