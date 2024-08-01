@@ -1,10 +1,26 @@
 [chapters]
 {
+	[chapter_02]
+	{
+		chapter_image = b_gui_ig_mnu_jnl_chapter_02;
+		screen_name = chapter ii: the path of the merchant;
+		[*]
+		{
+			description = becoming a merchant is a windy road. Especially so for the unlucky in birth.;
+		  i order = 0;
+		}
+		[*]
+		{
+			description = becoming a merchant is a windy road. Especially so for the unlucky in birth.;
+		  i order = 1;
+		}
+	}
 }
 [quests]
 {
 	[c24_slice_2_quest_giants]
 	{
+		chapter			= chapter_02;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = Brotherly Feud;
 		victory_sample = s_e_level_up_quest;
@@ -63,6 +79,7 @@
 	}
 	[c24_slice_2_quest_pond]
 	{
+		chapter			= chapter_02;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = Wishing Pond;
 		victory_sample = s_e_level_up_quest;
@@ -94,6 +111,7 @@
 	}
 	[c24_slice_2_quest_kill_brother]
 	{
+		chapter			= chapter_02;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = The Outcast of the Family;
 		victory_sample = s_e_level_up_quest;
@@ -133,6 +151,7 @@
 	}
 	[c24_slice_2_quest_heal_tree]
 	{
+		chapter			= chapter_02;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = The Tree that Bled;
 		victory_sample = s_e_level_up_quest;
@@ -189,6 +208,7 @@
 	}
 	[c24_slice_2_quest_krug_merchant]
 	{
+		chapter			= chapter_02;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = Path of the Merchant;
 		victory_sample = s_e_level_up_quest;
@@ -365,6 +385,7 @@
 	}
 	[c24_slice_2_quest_braak_barricade]
 	{
+		chapter			= chapter_02;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = Braaks on the Bridge;
 		victory_sample = s_e_level_up_quest;
@@ -397,6 +418,7 @@
 	}
 	[c24_slice_2_quest_vaarth_barricade]
 	{
+		chapter			= chapter_02;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = Artificial Landslide;
 		victory_sample = s_e_level_up_quest;
