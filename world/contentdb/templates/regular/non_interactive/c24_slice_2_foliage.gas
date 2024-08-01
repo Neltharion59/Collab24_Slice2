@@ -99,3 +99,323 @@
 		}
 	}
 }
+[t:template,n:collab24_slice2_bush_ice_rhod_02]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 ice_bush_rhod_lg";
+	specializes = base_bush;
+	[aspect]
+	{
+		lodfi_lower = 0.15;
+		lodfi_upper = 0.7;
+		model = m_i_glb_bush-10;
+		[textures]
+		{
+			0 = b_i_ice_bush-rhod;
+		}
+	}
+}
+[t:template,n:collab24_slice2_bush_ice_rhod_03]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 ice_bush_rhod_med";
+	specializes = base_bush;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.7;
+		model = m_i_glb_bush-02;
+		[textures]
+		{
+			0 = b_i_ice_bush-rhod;
+		}
+	}
+}
+[t:template,n:collab24_slice2_bush_ice_rhod_04]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 ice_bush_rhod_sm";
+	specializes = base_bush;
+	[aspect]
+	{
+		lodfi_lower = 0.05;
+		lodfi_upper = 0.7;
+		model = m_i_glb_bush-03;
+		[textures]
+		{
+			0 = b_i_ice_bush-rhod;
+		}
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_base]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage base";
+	specializes = base_bush;
+	[aspect]
+	{
+		lodfi_lower = 1.0;
+		lodfi_upper = 1.0;
+		[textures] { 0 = b_c_edm_iw; }
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_01]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 01 Bush Rhod 1";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_glb_bush-01;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_02]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 02 Bush Rhod 2";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_glb_bush-10;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_03]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 03 Bush Rhod 3";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_glb_bush-02;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_04]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 04 Bush Rhod 4";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_glb_bush-03;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_05]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 05 aloe_des";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_des_aloe-01;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_06]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 06 fern 1";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_grs_fern-01;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_07]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 07 fern 2";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_grs_fern-02;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_08]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 08 fern 3";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_grs_fern-03;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_09]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 09 fern 4";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_grs_fern-04;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_10]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 10 Shroom 1";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_glb_mushrooms-07;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_11]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 11 Shroom 2";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_glb_mushrooms-08;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_12]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 12 Shroom 3";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_glb_mushrooms-09;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_13]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 13 Bush hosta";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_grs_bush-04;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_14]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 14 Web 01";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_csl_cobweb-01;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_15]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 15 Web 02";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_csl_cobweb-02;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_16]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 16 Web 03";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_csl_cobweb-03;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_17]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 17 Web 04";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_csl_cobweb-04;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_18]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 18 Web 05";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_csl_cobweb-05;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_19]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 19 Web 06";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_csl_cobweb-06;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_20]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 20 Web 07";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_csl_cobweb-07;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_21]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 21 Web 08";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_csl_cobweb-08;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_22]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 22 Web 10";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_csl_cobweb-10;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_23]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 23 Jungle Plant 1";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_jng_plant-01;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_24]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 24 Jungle Plant 2";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_jng_plant-02;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_25]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 25 Jungle Plant 3";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_jng_plant-03;
+	}
+}
+[t:template,n:collab24_slice2_icy_foliage_26]
+{
+	category_name = "foliage";
+	doc = "collab24 slice2 icy foliage 26 Jungle Plant 4";
+	specializes = collab24_slice2_icy_foliage_base;
+	[aspect]
+	{
+		model = m_i_jng_plant-04;
+	}
+}

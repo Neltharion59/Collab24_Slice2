@@ -351,14 +351,14 @@
 				[oneof*]
 				{
 					il_main = #weapon/-rare(1)/23-35;
-					il_main = #armor/-rare(1)/45-90;
+					il_main = #armor/-rare(1)/55-90;
 					il_main = #*/-rare(1)/23-35;
                 }
 				[oneof*]
 				{
 					chance = 0.10;
 					il_main = #weapon/-unique(2)/23-35;
-					il_main = #armor/-unique(2)/45-90;
+					il_main = #armor/-unique(2)/55-90;
 					il_main = #*/-unique(2)/23-35;
                 }
 				[gold*]
@@ -557,7 +557,7 @@
 	[aspect]
 	{
 		draw_shadow = false;
-		experience_value = 20;
+		experience_value = 12;
 		life = 90;
 		max_life = 90;
 		max_mana = 10;

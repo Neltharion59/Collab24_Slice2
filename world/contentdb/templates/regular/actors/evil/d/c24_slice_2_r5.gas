@@ -9,8 +9,8 @@
 		[skills]
 		{
 			strength = 8, 0;
-			dexterity = 20, 0;
-			intelligence = 20, 0;
+			dexterity = 17, 0;
+			intelligence = 17, 0;
 			nature_magic = 7, 0;
 		}
 	}
@@ -19,8 +19,8 @@
 		experience_value = 31;
 		life = 24;
 		max_life = 24;
-		mana = 700;
-		max_mana = 700;
+		mana = 70;
+		max_mana = 70;
 		model = m_c_edm_054_pos_1;
 		[textures]
 		{
@@ -136,6 +136,8 @@
 			&party_template					 = "party_krug_shaman";
 
 		actor_life_ratio_low_threshold = 0.60;
+		flee_count = 9999;
+		flee_distance = 8;
 
 		melee_engage_range = 16.0;
 		personal_space_range = 0.7;
@@ -162,6 +164,7 @@
             il_active_secondary_spell = c24_r5_naldrun_spell_ice_orb;
 			il_spell_1 = c24_r5_naldrun_spell_iceshard_2;
 			il_spell_2 = c24_r5_naldrun_spell_respite;
+			il_spell_3 = c24_r5_naldrun_spell_run;
         }
 		[pcontent]
 		{
@@ -175,11 +178,11 @@
 				}
 				[oneof*]
 				{
-					chance = 0.15;
-					il_main = #staff/-mod(1)/10-25;
-					il_main = #staff/-mod(2)/10-25;
-					il_main = #body,ro/-mod(1)/25-60;
-					il_main = #body,ro/-mod(2)/25-60;
+					chance = 0.10;
+					il_main = #staff/-mod(1)/20-33;
+					il_main = #staff/-mod(2)/20-33;
+					il_main = #body,ro/-mod(1)/50-80;
+					il_main = #body,ro/-mod(2)/50-80;
 				}
 				[oneof*]
 				{
@@ -197,14 +200,14 @@
 				[oneof*]
 				{
 					chance = 0.01;
-					il_main = #staff/-rare(1)/10-25;
-					il_main = #body,ro/-rare(1)/25-60;
+					il_main = #staff/-rare(1)/20-33;
+					il_main = #body,ro/-rare(1)/50-80;
 				}
 				[oneof*]
 				{
-					chance = 0.005;
-					il_main = #staff/-unique(2)/11-22;
-					il_main = #body,ro/-unique(2)/25-60;
+					chance = 0.01;
+					il_main = #staff/-unique(2)/20-33;
+					il_main = #body,ro/-unique(2)/50-80;
     	        	il_main = #spellbook/16-35;
 				}
 			}
@@ -242,6 +245,9 @@
 			il_spell_2 = c24_r5_naldrun_spell_buff_dodge;
 			il_spell_3 = c24_r5_naldrun_spell_buff_block_magic;
 			il_spell_4 = c24_r5_naldrun_spell_respite;
+			il_spell_5 = c24_r5_naldrun_spell_mana_shield_mass;
+			il_spell_6 = c24_r5_naldrun_spell_iceshard_2;
+			il_spell_7 = c24_r5_naldrun_spell_run;
         }
 		[pcontent]
 		{
@@ -255,11 +261,11 @@
 				}
 				[oneof*]
 				{
-					chance = 0.15;
-					il_main = #staff/-mod(1)/10-25;
-					il_main = #staff/-mod(2)/10-25;
-					il_main = #body,ro/-mod(1)/25-60;
-					il_main = #body,ro/-mod(2)/25-60;
+					chance = 0.10;
+					il_main = #staff/-mod(1)/20-33;
+					il_main = #staff/-mod(2)/20-33;
+					il_main = #body,ro/-mod(1)/50-80;
+					il_main = #body,ro/-mod(2)/50-80;
 				}
 				[oneof*]
 				{
@@ -277,14 +283,14 @@
 				[oneof*]
 				{
 					chance = 0.01;
-					il_main = #staff/-rare(1)/10-25;
-					il_main = #body,ro/-rare(1)/25-60;
+					il_main = #staff/-rare(1)/20-33;
+					il_main = #body,ro/-rare(1)/50-80;
 				}
 				[oneof*]
 				{
-					chance = 0.005;
-					il_main = #staff/-unique(2)/11-22;
-					il_main = #body,ro/-unique(2)/25-60;
+					chance = 0.01;
+					il_main = #staff/-unique(2)/20-33;
+					il_main = #body,ro/-unique(2)/50-80;
     	        	il_main = #spellbook/16-35;
 				}
 			}
@@ -332,11 +338,11 @@
 				}
 				[oneof*]
 				{
-					chance = 0.15;
-					il_main = #staff/-mod(1)/10-25;
-					il_main = #staff/-mod(2)/10-25;
-					il_main = #body,ro/-mod(1)/25-60;
-					il_main = #body,ro/-mod(2)/25-60;
+					chance = 0.10;
+					il_main = #staff/-mod(1)/20-33;
+					il_main = #staff/-mod(2)/20-33;
+					il_main = #body,ro/-mod(1)/50-80;
+					il_main = #body,ro/-mod(2)/50-80;
 				}
 				[oneof*]
 				{
@@ -354,14 +360,14 @@
 				[oneof*]
 				{
 					chance = 0.01;
-					il_main = #staff/-rare(1)/10-25;
-					il_main = #body,ro/-rare(1)/25-60;
+					il_main = #staff/-rare(1)/20-33;
+					il_main = #body,ro/-rare(1)/50-80;
 				}
 				[oneof*]
 				{
-					chance = 0.005;
-					il_main = #staff/-unique(2)/11-22;
-					il_main = #body,ro/-unique(2)/25-60;
+					chance = 0.01;
+					il_main = #staff/-unique(2)/20-33;
+					il_main = #body,ro/-unique(2)/50-80;
     	        	il_main = #spellbook/16-35;
 				}
 			}
@@ -484,7 +490,7 @@
 				}
 				[anim_durations]
 				{
-					fs0 = 2.000;
+					fs0 = 1.2500;
 				}
 			}
 		}
@@ -525,18 +531,18 @@
 		[skills]
 		{
 			strength = 8, 0;
-			dexterity = 30, 0;
-			intelligence = 30, 0;
-			nature_magic = 8, 0;
+			dexterity = 22, 0;
+			intelligence = 22, 0;
+			nature_magic = 9, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 45;
-		life = 167;
-		max_life = 167;
-		mana = 1200;
-		max_mana = 1200;
+		life = 267;
+		max_life = 267;
+		mana = 300;
+		max_mana = 300;
 	}
 	[attack]
 	{
@@ -558,6 +564,9 @@
             il_active_primary_spell = c24_r5_fairy_queen_spell_multishard;
             il_active_secondary_spell = c24_r5_naldrun_spell_ice_orb;
 			il_spell_1 = c24_r5_naldrun_spell_respite;
+			il_spell_2 = c24_r5_fairy_queen_spell_rip_mana;
+			il_spell_3 = c24_r5_fairy_queen_spell_mana_shield;
+			il_spell_4 = c24_r5_fairy_queen_spell_mana_debuff;
         }
 		[pcontent]
 		{
@@ -572,9 +581,9 @@
 				}
 				[oneof*]
 				{
-					il_main = #staff/-mod(1)/10-25;
-					il_main = #staff/-mod(2)/10-25;
-					il_main = #body,ro/25-60;
+					il_main = #staff/-mod(1)/20-33;
+					il_main = #staff/-mod(2)/20-33;
+					il_main = #body,ro/55-90;
 					min = 1;
 					max = 2;
 				}
@@ -594,14 +603,14 @@
 				[oneof*]
 				{
 					chance = 0.66;
-					il_main = #staff/-rare(1)/10-25;
-					il_main = #body,ro/-rare(1)/25-60;
+					il_main = #staff/-rare(1)/20-33;
+					il_main = #body,ro/-rare(1)/55-90;
 				}
 				[oneof*]
 				{
 					chance = 0.33;
-					il_main = #staff/-unique(2)/11-22;
-					il_main = #body,ro/-unique(2)/25-60;
+					il_main = #staff/-unique(2)/20-33;
+					il_main = #body,ro/-unique(2)/55-90;
     	        	il_main = #spellbook/16-35;
 				}
 			}

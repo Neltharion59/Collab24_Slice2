@@ -185,7 +185,7 @@
         [other] 
         { 
             il_active_primary_spell = c24_r5_dragon_spell_fireball;
-            //il_active_secondary_spell = c24_r5_dragon_spell_breath;
+            il_active_secondary_spell = c24_r5_dragon_spell_breath;
 			il_spell_1 = c24_r5_dragon_spell_run;
         }
 		[pcontent]
@@ -201,20 +201,20 @@
 				}
 				[oneof*]
 				{
-					il_main = #weapon/20-35;
-					il_main = #armor/40-90;
-					il_main = #*/20-35;
+					il_main = #weapon/28-35;
+					il_main = #armor/60-90;
+					il_main = #*/28-35;
 					min = 1;
 					max = 2;
 				}
 				[oneof*]
 				{
-					il_main = #weapon/-rare(1)/20-35;
-					il_main = #armor/-rare(1)/40-90;
-					il_main = #*/-rare(1)/20-35;
-					il_main = #weapon/-unique(2)/20-35;
-					il_main = #armor/-unique(2)/40-90;
-					il_main = #*/-unique(2)/20-35;
+					il_main = #weapon/-rare(1)/28-35;
+					il_main = #armor/-rare(1)/60-90;
+					il_main = #*/-rare(1)/28-35;
+					il_main = #weapon/-unique(2)/28-35;
+					il_main = #armor/-unique(2)/60-90;
+					il_main = #*/-unique(2)/28-35;
 
 					min = 2;
 					max = 2;

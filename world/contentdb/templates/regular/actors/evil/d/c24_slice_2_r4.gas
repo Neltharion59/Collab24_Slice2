@@ -1,4 +1,3 @@
-
 [t:template,n:c24_2_r4_krusk]
 {
 	// Stats based on Mucosa Boss - Strengthened
@@ -10,8 +9,8 @@
 		[skills]
 		{
 			strength 	 =  12, 0;
-			intelligence =  20, 0;
-			dexterity 	 =  1, 0;
+			intelligence =  16, 0;
+			dexterity 	 =  16, 0;
             melee 		 =  7, 0;
 		}
 	}
@@ -136,7 +135,7 @@
         membership = monster;
 		screen_name="Furbolg";
 	}
-	[defend] { defense=20; }
+	[defend] { defense=60; }
 	[mind]
 	{
 		melee_engage_range = 16.0;
@@ -156,16 +155,16 @@
 		[skills]
 		{
 			strength =  7, 0;
-			intelligence =  2, 0;
-			dexterity =  9, 0;
-			melee =  6,  0;
+			intelligence =  15, 0;
+			dexterity =  15, 0;
+			melee =  7,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 37;
-		life = 73;
-		max_life = 73;
+		life = 117;
+		max_life = 117;
 		mana = 12;
 		max_mana = 12;
 		model = m_c_edm_068_pos_1;
@@ -197,8 +196,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 35;
-		damage_min = 32;
+		damage_max = 38;
+		damage_min = 34;
 	}
 	[body]
 	{
@@ -411,7 +410,7 @@
 			strength =  	9,0;
 			intelligence =  	40,0;
 			dexterity =  	40,0;
-			melee =  		6,0;
+			melee =  		7,0;
 		}
 	}
 	[aspect]
@@ -425,8 +424,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 14;
-		damage_min = 12;
+		damage_max = 26;
+		damage_min = 20;
 	}
 	[defend] { defense=20; }
 }
@@ -482,7 +481,7 @@
 		{
 			dexterity = 8,  0;
 			intelligence = 6,  0;
-			ranged = 7,  0;
+			ranged = 8,  0;
 			strength = 11, 0;
 		}
 	}
@@ -581,7 +580,7 @@
         membership = monster;
 		screen_name="Snow Beast";
 	}
-	[defend] { defense=80; }
+	[defend] { defense=120; }
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
@@ -711,7 +710,7 @@
 		{
 			dexterity = 1,  0;
 			intelligence = 1,  0;
-			melee = 5,  0;
+			melee = 7,  0;
 			strength = 11, 0;
 		}
 	}
@@ -730,14 +729,14 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 20;
-		damage_min = 16;
+		damage_max = 40;
+		damage_min = 36;
 	}
 	[common]
 	{
 		screen_name="Flaypick";
 	}
-	[defend] { defense=34; }
+	[defend] { defense=74; }
 }
 [t:template,n:c24_2_r4_flaypick_melee_02]
 {
@@ -751,7 +750,7 @@
 		{
 			dexterity = 1,  0;
 			intelligence = 1,  0;
-			melee = 7,  0;
+			melee = 8,  0;
 			strength = 11, 0;
 		}
 	}
@@ -770,14 +769,14 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 23;
-		damage_min = 19;
+		damage_max = 44;
+		damage_min = 40;
 	}
 	[common]
 	{
 		screen_name="Murky Flaypick";
 	}
-	[defend] { defense=39; }
+	[defend] { defense=99; }
 }
 [t:template,n:c24_2_r4_gargoyle_base]
 {
@@ -937,8 +936,8 @@
 	[attack]
 	{
 		attack_range = .5;
-		damage_max = 19;
-		damage_min = 17;
+		damage_max = 14;
+		damage_min = 12;
 	}
 	[common]
 	{
@@ -960,7 +959,7 @@
 [t:template,n:c24_2_r4_gargoyle_magic_base]
 {
 	category_name = "1W_evil_d";
-	doc = "c24 Slice2 R4 gargoyle melee base";
+	doc = "c24 Slice2 R4 gargoyle magic base";
 	specializes = c24_2_r4_gargoyle_base;
 	[actor]
 	{
@@ -971,6 +970,7 @@
 			dexterity =  30, 0;
             nature_magic =  5,  0;
 		}
+		drops_spellbook = false;
 	}
 	[aspect]
 	{
@@ -997,7 +997,6 @@
     [defend] { defense=120; }
     [inventory]
     {
-        spew_equipped_kill_count = <ignore>;
         selected_active_location = il_active_primary_spell;
         [other] 
         { 

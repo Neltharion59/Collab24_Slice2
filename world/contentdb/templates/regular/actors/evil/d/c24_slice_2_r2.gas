@@ -144,7 +144,7 @@
 			strength =  6, 0;
 			intelligence =  2, 0;
 			dexterity =  7, 0;
-			melee =  3, 0;
+			melee =  4, 0;
 		}
 	}
 	[aspect]
@@ -159,12 +159,12 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 17;
-		damage_min = 15;
+		damage_max = 30;
+		damage_min = 27;
 		reload_delay = 1;
 	}
 	[common] { screen_name="Bortusk"; }
-	[defend] { defense=25; }
+	[defend] { defense=45; }
     [mind]
     {
         jat_brain							= world\ai\jobs\common\brain_hero.skrit
@@ -182,9 +182,9 @@
 		[skills]
 		{
 			strength =  6, 0;
-			intelligence =  2, 0;
-			dexterity =  7, 0;
-			melee =  3, 0;
+			intelligence =  10, 0;
+			dexterity =  10, 0;
+			melee =  6, 0;
 		}
 	}
 	[aspect]
@@ -199,8 +199,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 22;
-		damage_min = 19;
+		damage_max = 32;
+		damage_min = 28;
 		reload_delay = 1;
 	}
 	[common]
@@ -218,7 +218,7 @@
 			}
 		}
 	}
-	[defend] { defense=40; }
+	[defend] { defense=80; }
 	[inventory]
 	{
 		[pcontent]
@@ -238,16 +238,16 @@
 				[oneof*]
 				{
 					chance = 0.70;
-					il_main = #weapon/-rare(1)/11-22;
-					il_main = #armor/-rare(1)/25-60;
-					il_main = #*/-rare(1)/11-22;
+					il_main = #weapon/-rare(1)/15-24;
+					il_main = #armor/-rare(1)/40-60;
+					il_main = #*/-rare(1)/15-24;
 				}
 				[oneof*]
 				{
 					chance = 0.30;
-					il_main = #weapon/-unique(2)/11-22;
-					il_main = #armor/-unique(2)/25-60;
-					il_main = #*/-unique(2)/11-22;
+					il_main = #weapon/-unique(2)/15-24;
+					il_main = #armor/-unique(2)/40-60;
+					il_main = #*/-unique(2)/15-24;
 				}
 			}
 		}
@@ -271,7 +271,7 @@
 			strength =  6, 0;
 			intelligence =  5, 0;
 			dexterity =  7, 0;
-			nature_magic =  3, 0;
+			nature_magic =  5, 0;
 		}
 	}
 	[aspect]
@@ -291,7 +291,7 @@
 		reload_delay = 1;
 	}
 	[common] { screen_name="Bortusk Enrager"; }
-	[defend] { defense=25; }
+	[defend] { defense=55; }
     [inventory]
     {
         spew_equipped_kill_count = <ignore>;
@@ -330,7 +330,7 @@
 			strength =  	12, 0;
 			intelligence =  7, 0;
 			dexterity =  	2, 0;
-			nature_magic = 4,  0;
+			nature_magic = 5,  0;
 		}
 	}
 	[aspect]
@@ -350,7 +350,7 @@
 		reload_delay = 1;
 	}
 	[common] { screen_name="Roaring Bortusk"; }
-	[defend] { defense=25; }
+	[defend] { defense=55; }
     [inventory]
     {
         spew_equipped_kill_count = <ignore>;
@@ -420,7 +420,7 @@
 			}
 		}
 	}
-	[defend] { defense=30; }
+	[defend] { defense=100; }
     [inventory]
     {
         spew_equipped_kill_count = <ignore>;
@@ -446,15 +446,15 @@
 				}
 				[oneof*]
 				{
-					il_main = #weapon/-rare(1)/11-22;
-					il_main = #armor/-rare(1)/25-60;
-					il_main = #*/-rare(1)/11-22;
+					il_main = #weapon/-rare(1)/20-29;
+					il_main = #armor/-rare(1)/50-70;
+					il_main = #*/-rare(1)/20-29;
 				}
 				[oneof*]
 				{
-					il_main = #weapon/11-22;
-					il_main = #armor/25-60;
-					il_main = #*/11-22;
+					il_main = #weapon/20-29;
+					il_main = #armor/50-70;
+					il_main = #*/20-29;
 				}
 				[all*]
 				{
@@ -468,10 +468,10 @@
 				}
 				[oneof*]
 				{
-					chance = 0.25;
-					il_main = #weapon/-unique(2)/11-22;
-					il_main = #armor/-unique(2)/25-60;
-					il_main = #*/-unique(2)/11-22;
+					chance = 0.10;
+					il_main = #weapon/-unique(2)/20-29;
+					il_main = #armor/-unique(2)/50-70;
+					il_main = #*/-unique(2)/20-29;
 				}
 			}
 		}
@@ -503,7 +503,7 @@
 			strength =  14, 0;
 			intelligence =  2, 0;
 			dexterity =  6, 0;
-			melee =  3,  0;
+			melee =  4,  0;
 		}
 	}
 	[aspect]
@@ -632,9 +632,9 @@
 		[skills]
 		{
 			strength =  6, 0;
-			intelligence =  2, 0;
+			intelligence =  4, 0;
 			dexterity =  7, 0;
-			melee =  3, 0;
+			melee =  5, 0;
 		}
 	}
 	[aspect]
@@ -648,11 +648,11 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 17;
-		damage_min = 15;
+		damage_max = 23;
+		damage_min = 20;
 	}
 	[common] { screen_name="Frostnid"; }
-    [defend] { defense=25; }
+    [defend] { defense=65; }
 	[physics]
 	{
 		break_effect = ice_explosion;
@@ -691,10 +691,10 @@
 	}
 	[attack]
 	{
-		damage_max = 23;
-		damage_min = 17;
+		damage_max = 25;
+		damage_min = 23;
 	}
-	[defend] { defense=46; }
+	[defend] { defense=76; }
 	[physics]
 	{
 		break_effect = ice_explosion;
@@ -723,9 +723,9 @@
 		[skills]
 		{
 			strength =  	9,0;
-			intelligence =  	3,0;
+			intelligence =  	10,0;
 			dexterity =  	4,0;
-			melee =  		3,0;
+			melee =  		5,0;
 		}
 	}
 	[aspect]
@@ -741,8 +741,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 13;
-		damage_min = 9;
+		damage_max = 24;
+		damage_min = 21;
 	}
 
 	[defend] { defense=41; }
@@ -775,9 +775,9 @@
 		[skills]
 		{
 			strength =  	12,0;
-			intelligence =  4,0;
+			intelligence =  20,0;
 			dexterity =  	6,0;
-			melee =  		5,0;
+			melee =  		7,0;
 		}
 	}
 	[aspect]
@@ -793,8 +793,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 16;
-		damage_min = 14;
+		damage_max = 28;
+		damage_min = 25;
 	}
 
 	[defend] { defense=57; }
@@ -855,7 +855,7 @@
 		[skills]
 		{
 			dexterity = 50,  0;
-			intelligence = 6,  0;
+			intelligence = 20,  0;
 			melee = 5,  0;
 			strength = 11, 0;
 		}

@@ -11,7 +11,7 @@
 			strength =  6, 0;
 			intelligence =  2, 0;
 			dexterity =  7, 0;
-			melee =  4, 0;
+			melee =  6, 0;
 		}
 	}
 	[aspect]
@@ -27,11 +27,11 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 17;
-		damage_min = 15;
+		damage_max = 22;
+		damage_min = 20;
 	}
 	[common] { screen_name="Snow Boar"; }
-    	[defend] { defense=25; }
+    	[defend] { defense=35; }
 	[mind]
 	{
 		melee_engage_range = 12;
@@ -53,7 +53,7 @@
 			strength =  6, 0;
 			intelligence =  2, 0;
 			dexterity =  7, 0;
-			melee =  4, 0;
+			melee =  5, 0;
 		}
 	}
 	[aspect]
@@ -89,9 +89,9 @@
 			{
 				[oneof*]
 				{
-					il_main = #weapon/14-25;
-                    il_main = #armor/25-60;
-					il_main = #*/14-25;
+					il_main = #weapon/19-29
+                    il_main = #armor/50-65;
+					il_main = #*/19-29
 					il_main = #nmagic/4-7;
 					il_main = #cmagic/4-7;
 					chance = 0.10;
@@ -119,7 +119,7 @@
 			strength =  6, 0;
 			intelligence =  2, 0;
 			dexterity =  7, 0;
-			melee =  5, 0;
+			melee =  6, 0;
 		}
 	}
 	[aspect]
@@ -147,9 +147,9 @@
 			{
 				[oneof*]
 				{
-					il_main = #weapon/14-25;
-                    il_main = #armor/25-60;
-					il_main = #*/14-25;
+					il_main = #weapon/19-29
+                    il_main = #armor/50-65;
+					il_main = #*/19-29
 					il_main = #nmagic/4-7;
 					il_main = #cmagic/4-7;
 					chance = 0.15;
@@ -177,7 +177,7 @@
 			strength =  6, 0;
 			intelligence =  2, 0;
 			dexterity =  7, 0;
-			melee =  6, 0;
+			melee =  8, 0;
 		}
 	}
 	[aspect]
@@ -219,9 +219,9 @@
 			{
 				[oneof*]
 				{
-					il_main = #weapon/14-25;
-                    il_main = #armor/25-60;
-					il_main = #*/14-25;
+					il_main = #weapon/19-29
+                    il_main = #armor/50-65;
+					il_main = #*/19-29
 					il_main = #nmagic/4-7;
 					il_main = #cmagic/4-7;
 				}
@@ -267,7 +267,7 @@
 			strength = 8, 0;
 			dexterity = 13, 0;
 			intelligence = 6, 0;
-			nature_magic = 5, 0;
+			nature_magic = 6, 0;
 		}
 	}
 	[aspect]
@@ -405,7 +405,7 @@
 			}
 		}
 	}
-	[defend] { defense=60; }
+	[defend] { defense=90; }
 	[generator_in_object]
 	{
 		child_template_name = swamp_switch_skeleton;
@@ -441,16 +441,16 @@
 				}
 				[oneof*]
 				{
-					il_main = #weapon/-rare(1)/14-25;
-					il_main = #armor/-rare(1)/25-60;
-					il_main = #*/-rare(1)/14-25;
+					il_main = #weapon/-rare(1)/19-29
+					il_main = #armor/-rare(1)/50-65;
+					il_main = #*/-rare(1)/19-29
                 }
 				[oneof*]
 				{
 					chance = 0.20;
-					il_main = #weapon/-unique(2)/14-25;
-					il_main = #armor/-unique(2)/25-60;
-					il_main = #*/-unique(2)/14-25;
+					il_main = #weapon/-unique(2)/19-29
+					il_main = #armor/-unique(2)/50-65;
+					il_main = #*/-unique(2)/19-29
                 }
 				[gold*]
 				{
@@ -601,7 +601,7 @@
 			strength =  10, 0;
 			intelligence =  25, 0;
 			dexterity =  11, 0;
-            melee =  		5,0;
+            melee =  		6,0;
 		}
 	}
 	[aspect]
@@ -615,8 +615,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 22;
-		damage_min = 18;
+		damage_max = 27;
+		damage_min = 24;
 	}
 	[common]
 	{
@@ -650,7 +650,7 @@
 			strength 	 =  12, 0;
 			intelligence =  50, 0;
 			dexterity 	 =  13, 0;
-            melee 		 =  6, 0;
+            melee 		 =  8, 0;
 		}
 	}
 	[aspect]
@@ -665,8 +665,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 22;
-		damage_min = 20;
+		damage_max = 36;
+		damage_min = 30;
 	}
 	[common]
 	{

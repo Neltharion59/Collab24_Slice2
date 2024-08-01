@@ -116,7 +116,7 @@
 		{
 			strength = 8, 0;
 			dexterity = 13, 0;
-			intelligence = 6, 0;
+			intelligence = 25, 0;
 			melee = 5, 0;
 		}
 	}
@@ -158,8 +158,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 31;
-		damage_min = 29;
+		damage_max = 46;
+		damage_min = 42;
 	}
 	[body]
 	{
@@ -259,7 +259,7 @@
 			strength =  4, 0;
 			intelligence =  1, 0;
 			dexterity =  6, 0;
-			melee =  3, 0;
+			melee =  4, 0;
 		}
 	}
 	[aspect]
@@ -295,8 +295,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 6;
-		damage_min = 6;
+		damage_max = 10;
+		damage_min = 7;
 	}
 	[body]
 	{
@@ -403,9 +403,9 @@
 		[skills]
 		{
 			strength =     19, 0;
-			intelligence = 8, 0;
-			dexterity =    12, 0;
-			melee =        3, 0;
+			intelligence = 15, 0;
+			dexterity =    15, 0;
+			melee =        5, 0;
 		}
 	}
 	[aspect]
@@ -431,8 +431,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 33; 
-		damage_min = 27;
+		damage_max = 38; 
+		damage_min = 33;
 	}
 	
 	[common]
@@ -464,9 +464,9 @@
 		[skills]
 		{
 			strength =     30, 0;
-			intelligence = 8, 0;
+			intelligence = 20, 0;
 			dexterity =    20, 0;
-			melee =        4, 0;
+			melee =        5, 0;
 		}
 	}
 	[aspect]
@@ -489,8 +489,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 40; 
-		damage_min = 33;
+		damage_max = 44; 
+		damage_min = 39;
 	}
 	[body]
 	{
@@ -583,5 +583,354 @@
 	[water_elemental_manager]
 	{
 		sphere_radius = 13.5;
+	}
+}
+[t:template,n:c24_2_r1_voadyk]
+{
+	category_name = "1W_evil_d";
+	doc = "collab24 Slice 2 R1 voadyk";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength 	 =  12, 0;
+			intelligence =  12, 0;
+			dexterity 	 =  12, 0;
+            nature_magic 		 =  5, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 25;
+		life = 47;
+		max_life = 47;
+		mana = 12;
+		max_mana = 12;
+		model = m_c_xeam_005_pos_1;
+		textures:0 = b_c_edm_we-static;	
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_gen_x_bss_vdyk_atk1;
+				* = s_e_ds2_gen_x_bss_vdyk_atk2;
+				* = s_e_ds2_gen_x_bss_vdyk_atk3;
+			}
+			[die]			{ priority = high; * = s_e_ds2_gen_x_bss_vdyk_die; }
+			[enemy_spotted]	{ priority = high; * = s_e_ds2_gen_x_bss_vdyk_sgt; }
+			[hit_critical]	{ priority = low; * = s_e_ds2_gen_x_bss_vdyk_hit; }
+			[hit_glance]	{ priority = low; * = s_e_ds2_gen_x_bss_vdyk_hit; }
+			[hit_solid]		{ priority = low; * = s_e_ds2_gen_x_bss_vdyk_hit; }
+	     	[move]			{ priority = low; * = s_e_ds2_gen_x_bss_vdyk_mve_lp; }
+	     	[revive]		{ priority = low; * = s_e_ds2_gen_x_bss_vdyk_revive; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 24;
+		damage_min = 22;
+		reload_delay = 0.1;
+	}
+	[body]
+	{
+		min_move_velocity = 3.0;
+		avg_move_velocity = 3.5;
+		max_move_velocity = 4.0;
+		terrain_movement_permissions = lf_mist | lf_dirt;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_neck;
+			shield_bone = bip01_L_hand;
+			weapon_bone = bip01_neck;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_xeam_005_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+					02=at-03;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.500;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00=dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00=di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00=dff;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00=rl;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+					02=at-03;
+				}
+				[anim_durations]
+				{
+					fs0 = 2.000;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					res1 = a_c_xeam_005_fs0_rsct;
+					atk1 = a_c_xeam_005_fs0_at;    //Attack 1
+					atk2 = a_c_xeam_005_fs0_at-02; //Attack 2
+					atk3 = a_c_xeam_005_fs0_at-03; //Attack 3
+
+				}
+			}
+		}
+	}
+	[common]
+	{
+        membership = monster;
+		screen_name="Minor Water Deity";
+	}
+	[defend] { defense=70; }
+    [inventory]
+    {
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r1_voadyk_spell_water_splash;
+            il_active_secondary_spell = c24_r1_voadyk_spell_watershot_single;
+        }
+	}
+	[mind]
+	{
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:c24_2_r1_mercrus_base]
+{
+	category_name = "1W_evil_d";
+	doc = "collab24 Slice 2 R1 mercrus";
+	specializes = actor_evil;
+	[aspect]
+	{
+		model = m_c_edm_034_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_034;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_gen_mercrs_atk1;
+				* = s_e_ds2_gen_mercrs_atk2;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_mercrs_die1;
+				* = s_e_ds2_gen_mercrs_die2;
+			}
+			[enemy_spotted]	{ priority = high; * = s_e_ds2_gen_mercrs_sgt; }
+			[hit_critical]	{ priority = low; * = s_e_ds2_gen_mercrs_hit; }
+			[hit_glance]	{ priority = low; * = s_e_ds2_gen_mercrs_hit; }
+			[hit_solid]		{ priority = low; * = s_e_ds2_gen_mercrs_hit; }
+			[move]		{ priority = low; * = s_e_ds2_gen_mercrs_mve_lp; }
+		}
+	}
+	[body]
+	{
+		min_move_velocity = 4.5;
+		avg_move_velocity = 4.7;
+		max_move_velocity = 5.0;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_neck;
+			shield_bone = bip01_L_hand;
+			weapon_bone = bip01_R_hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_034_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+				}
+				[anim_durations] { fs0 = 2.000; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00=di;
+					01=di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+				}
+				[anim_durations] { fs0 = 1.000; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=rl; }
+			}
+		}
+	}
+	[common]
+	{
+		membership = monster;
+		screen_name="Mercrus";
+	}
+	[mind]
+	{
+		melee_engage_range = 17;
+		personal_space_range = 1.4;
+		ranged_engage_range = 17.0;
+		sight_range = 17.0;
+	}
+    [inventory]
+    {
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r1_mercrus_spell_watershot_sequence;
+            il_active_secondary_spell = c24_r1_mercrus_spell_watershot_multi;
+        }
+	}
+	[mind]
+	{
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+	}
+}
+[t:template,n:c24_2_r1_mercrus]
+{
+	category_name = "1W_evil_d";
+	doc = "collab24 slice2 Mercrus";
+	specializes = c24_2_r1_mercrus_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 8, 0;
+			dexterity = 17, 0;
+			intelligence = 17, 0;
+			nature_magic = 6, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 27;
+		life = 89;
+		max_life = 89;
+		mana = 50;
+		max_mana = 50;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 15;
+		damage_min = 12;
+	}
+	[defend] { defense=80; }
+    [inventory]
+    {
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r1_mercrus_spell_watershot_sequence;
+            il_active_secondary_spell = c24_r1_mercrus_spell_watershot_multi;
+            il_spell_1 = c24_r1_mercrus_spell_debuff;
+        }
+	}
+	[mind]
+	{
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
 	}
 }

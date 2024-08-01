@@ -469,8 +469,8 @@
 	{
 		ammo_template = grenade;
 		attack_range = 15;
-	  f damage_max = 23.000000;
-	  f damage_min = 18.000000;
+	    damage_max = 48;
+	    damage_min = 46;
 		reload_delay = 0.5;
 	}
 	[common]
@@ -498,8 +498,8 @@
 	}
 	[attack]
 	{
-		damage_max = 17;
-		damage_min = 10;
+		damage_max = 40;
+		damage_min = 40;
 	}
 	[common]
 	{
@@ -523,8 +523,8 @@
 	}
 	[attack]
 	{
-		damage_max = 2;
-		damage_min = 2;
+		damage_max = 26;
+		damage_min = 23;
 		skill_class = "Nature Magic";
 	}
 	[common]
@@ -579,11 +579,12 @@
 	}
 	[attack]
 	{
+		area_damage_radius = 6;
 		attack_range = 24;
 		ammo_appears_jit = true;
 		ammo_template = c24_shagor_boulder_ammo;
-		damage_max = 19;
-		damage_min = 16;
+		damage_max = 2;
+		damage_min = 2;
 	}
 	[common]
 	{
@@ -688,7 +689,7 @@
 	specializes = base_arrow;
 	[aspect]
 	{
-		material = steel;
+		material = metal;
 		model=m_w_dag_fourthwind;
 		is_selectable	= false;
 		[textures]
@@ -722,9 +723,13 @@
 
 	[physics]
 	{
-		angular_velocity = 0,0,30.0;
-		gravity = 3;
-		orient_to_trajectory = true;
+		gravity = 4;
+		angular_velocity = 0,60,0;
+		elasticity = 0.95;
+		break_effect = star_sparks;
+		explode_if_hit_go = true;
+		explode_if_hit_terrain = false;
+		explode_when_expired = false;
 	}
 }
 [t:template,n:c24_frthwnd_thrown]
@@ -733,7 +738,7 @@
 	specializes = base_bow;
 	[aspect]
 	{
-		material = steel;
+		material = metal;
 		is_selectable = false;
 		model = m_w_dag_fourthwind;
 		[textures]
@@ -753,8 +758,8 @@
 	{
 		ammo_appears_jit = true;
 		ammo_template = c24_frthwnd_thrown_ammo;
-		damage_max = 120;
-		damage_min = 90;
+		damage_max = 97;
+		damage_min = 70;
 		attack_range = 15;
 	}
 	[common]

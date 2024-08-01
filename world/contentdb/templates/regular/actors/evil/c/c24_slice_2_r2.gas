@@ -9,9 +9,9 @@
 		[skills]
 		{
 			strength =  	12,0;
-			intelligence =  4,0;
-			dexterity =  	6,0;
-			melee =  		5,0;
+			intelligence =  8,0;
+			dexterity =  	8,0;
+			melee =  		6,0;
 		}
 	}
 	[aspect]
@@ -30,12 +30,12 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 20;
-		damage_min = 17;
+		damage_max = 41;
+		damage_min = 39;
 		reload_delay = 0;
 	}
 	[common] { screen_name="Nutlech"; }
-    [defend] { defense=57; }
+    [defend] { defense=97; }
     [inventory]
     {
 		[pcontent]
@@ -45,16 +45,16 @@
 				[oneof*]
 				{
 					chance = 0.70;
-					il_main = #weapon/-rare(1)/11-22;
-					il_main = #armor/-rare(1)/25-60;
-					il_main = #*/-rare(1)/11-22;
+					il_main = #weapon/-rare(1)/17-25;
+					il_main = #armor/-rare(1)/48-64;
+					il_main = #*/-rare(1)/17-25;
 				}
 				[oneof*]
 				{
 					chance = 0.30;
-					il_main = #weapon/-unique(2)/11-22;
-					il_main = #armor/-unique(2)/25-60;
-					il_main = #*/-unique(2)/11-22;
+					il_main = #weapon/-unique(2)/17-25;
+					il_main = #armor/-unique(2)/48-64;
+					il_main = #*/-unique(2)/17-25;
 				}
 			}
 		}

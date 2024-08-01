@@ -171,6 +171,12 @@
 					max = 3;
 					min = 3;
 				}
+				[all*]
+				{
+					il_main = #body/65-85;
+					max = 1;
+					min = 1;
+				}
 
 
 				[all*]
@@ -190,6 +196,12 @@
 					il_main = #gloves/44-60;
 					max = 4;
 					min = 4;
+				}
+				[all*]
+				{
+					il_main = #gloves/65-85;
+					max = 1;
+					min = 1;
 				}
 
 
@@ -230,6 +242,12 @@
 					max = 4;
 					min = 4;
 				}
+				[all*]
+				{
+					il_main = #boots/65-85;
+					max = 1;
+					min = 1;
+				}
 			}
 			[shields]
 			{
@@ -250,6 +268,12 @@
 					il_main = #shield/44-60;
 					max = 4;
 					min = 4;
+				}
+				[all*]
+				{
+					il_main = #shield/65-85;
+					max = 1;
+					min = 1;
 				}
 			}
 
@@ -275,6 +299,12 @@
 				}
 				[all*]
 				{
+					il_main = #melee/30-40;
+					max = 1;
+					min = 1;
+				}
+				[all*]
+				{
 					il_main = #ranged/7-9;
 					max = 8;
 					min = 8;
@@ -291,10 +321,22 @@
 					max = 6;
 					min = 6;
 				}
+				[all*]
+				{
+					il_main = #ranged/30-40;
+					max = 1;
+					min = 1;
+				}
 			}
 
 			[magic]
 			{
+				[all*]
+				{
+					il_main = #spell/10-15;
+					max = 3;
+					min = 3;
+				}
 				[all*]
 				{
 					il_main = #spell/4-9;

@@ -9,7 +9,7 @@
 		{
 			dexterity = 8,  0;
 			intelligence = 6,  0;
-			melee = 4,  0;
+			melee = 6,  0;
 			strength = 11, 0;
 		}
 	}
@@ -134,7 +134,7 @@
         membership = monster;
 		screen_name="Snow Va'arth Brute";
 	}
-	[defend] { defense=50; }
+	[defend] { defense=70; }
    	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
@@ -152,9 +152,9 @@
 				[oneof*]
 				{
 					chance = 0.75;
-					il_main = #weapon/14-25;
-                    il_main = #armor/25-60;
-					il_main = #*/14-25;
+					il_main = #weapon/18-29;
+                    il_main = #armor/35-60;
+					il_main = #*/18-29;
 					il_main = #nmagic/4-7;
 					il_main = #cmagic/4-7;
 				}
@@ -169,16 +169,16 @@
 				[oneof*]
 				{
 					chance = 0.01;
-					il_main = #weapon/-rare(1)/14-25;
-					il_main = #armor/-rare(1)/25-60;
-					il_main = #*/-rare(1)/14-25;
+					il_main = #weapon/-rare(1)/18-29;
+					il_main = #armor/-rare(1)/35-60;
+					il_main = #*/-rare(1)/18-29;
                 }
 				[oneof*]
 				{
 					chance = 0.02;
-					il_main = #weapon/-unique(2)/14-25;
-					il_main = #armor/-unique(2)/25-60;
-					il_main = #*/-unique(2)/14-25;
+					il_main = #weapon/-unique(2)/18-29;
+					il_main = #armor/-unique(2)/35-60;
+					il_main = #*/-unique(2)/18-29;
                 }
 				[gold*]
 				{
@@ -210,7 +210,7 @@
 		{
 			dexterity = 8,  0;
 			intelligence = 6,  0;
-			ranged = 4,  0;
+			ranged = 6,  0;
 			strength = 11, 0;
 		}
 	}
@@ -325,7 +325,7 @@
         membership = monster;
 		screen_name="Snow Va'arth Bombardier";
 	}
-	[defend] { defense=46; }
+	[defend] { defense=70; }
    	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
@@ -343,9 +343,9 @@
 				[oneof*]
 				{
 					chance = 0.75;
-					il_main = #weapon/14-25;
-                    il_main = #armor/25-60;
-					il_main = #*/14-25;
+					il_main = #weapon/18-29;
+                    il_main = #armor/35-60;
+					il_main = #*/18-29;
 					il_main = #nmagic/4-7;
 					il_main = #cmagic/4-7;
 				}
@@ -360,16 +360,16 @@
 				[oneof*]
 				{
 					chance = 0.01;
-					il_main = #weapon/-rare(1)/14-25;
-					il_main = #armor/-rare(1)/25-60;
-					il_main = #*/-rare(1)/14-25;
+					il_main = #weapon/-rare(1)/18-29;
+					il_main = #armor/-rare(1)/35-60;
+					il_main = #*/-rare(1)/18-29;
                 }
 				[oneof*]
 				{
 					chance = 0.02;
-					il_main = #weapon/-unique(2)/14-25;
-					il_main = #armor/-unique(2)/25-60;
-					il_main = #*/-unique(2)/14-25;
+					il_main = #weapon/-unique(2)/18-29;
+					il_main = #armor/-unique(2)/35-60;
+					il_main = #*/-unique(2)/18-29;
                 }
 				[gold*]
 				{
@@ -401,7 +401,7 @@
 		{
 			dexterity = 8,  0;
 			intelligence = 6,  0;
-			nature_magic = 4,  0;
+			nature_magic = 6,  0;
 			strength = 11, 0;
 		}
 	}
@@ -508,7 +508,7 @@
         membership = monster;
 		screen_name="Snow Va'arth Avalancher";
 	}
-	[defend] { defense=42; }
+	[defend] { defense=70; }
    	[inventory]
 	{
         spew_equipped_kill_count = <ignore>;
@@ -526,9 +526,9 @@
 				[oneof*]
 				{
 					chance = 0.75;
-					il_main = #weapon/14-25;
-                    il_main = #armor/25-60;
-					il_main = #*/14-25;
+					il_main = #weapon/18-29;
+                    il_main = #armor/35-60;
+					il_main = #*/18-29;
 					il_main = #nmagic/4-7;
 					il_main = #cmagic/4-7;
 				}
@@ -543,16 +543,16 @@
 				[oneof*]
 				{
 					chance = 0.01;
-					il_main = #weapon/-rare(1)/14-25;
-					il_main = #armor/-rare(1)/25-60;
-					il_main = #*/-rare(1)/14-25;
+					il_main = #weapon/-rare(1)/18-29;
+					il_main = #armor/-rare(1)/35-60;
+					il_main = #*/-rare(1)/18-29;
                 }
 				[oneof*]
 				{
 					chance = 0.02;
-					il_main = #weapon/-unique(2)/14-25;
-					il_main = #armor/-unique(2)/25-60;
-					il_main = #*/-unique(2)/14-25;
+					il_main = #weapon/-unique(2)/18-29;
+					il_main = #armor/-unique(2)/35-60;
+					il_main = #*/-unique(2)/18-29;
                 }
 				[gold*]
 				{

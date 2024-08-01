@@ -10,7 +10,7 @@
 			strength =  	12, 0;
 			intelligence =  9, 0;
 			dexterity =  11, 0;
-            melee =  5,  0;
+            melee =  6,  0;
 		}
 	}
 	[aspect]
@@ -24,15 +24,15 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 22;
-		damage_min = 18;
+		damage_max = 25;
+		damage_min = 23;
 	}
 	[common]
 	{
 		screen_name="Braak";
 		membership = party_braak_boss, monster;
 	}
-	[defend] { defense=44; }
+	[defend] { defense=74; }
 	[inventory]
 	{
 		[pcontent]
@@ -48,9 +48,9 @@
 				[oneof*]
 				{
 					chance = 0.40;
-					il_main = #weapon/14-24;
-					il_main = #armor/30-63;
-					il_main = #*/14-24;
+					il_main = #weapon/19-26;
+					il_main = #armor/48-63;
+					il_main = #*/19-26;
 					il_main = #spell/5-9;
 					min = 1;
 					max = 2;
@@ -66,16 +66,16 @@
 				[oneof*]
 				{
 					chance = 0.01;
-					il_main = #weapon/-rare(1)/14-24;
-					il_main = #armor/-rare(1)/30-63;
-					il_main = #*/-rare(1)/14-24;
+					il_main = #weapon/-rare(1)/19-26;
+					il_main = #armor/-rare(1)/48-63;
+					il_main = #*/-rare(1)/19-26;
 				}
 				[oneof*]
 				{
 					chance = 0.005;
-					il_main = #weapon/-unique(2)/14-24;
-					il_main = #armor/-unique(2)/30-63;
-					il_main = #*/-unique(2)/14-24;
+					il_main = #weapon/-unique(2)/19-26;
+					il_main = #armor/-unique(2)/48-63;
+					il_main = #*/-unique(2)/19-26;
 				}
 			}
 		}
@@ -98,7 +98,7 @@
 			strength 	=  	13, 0;
 			intelligence =  10, 0;
 			dexterity 	=  11, 0;
-            melee 		=  6,  0;
+            melee 		=  8,  0;
 		}
 	}
 	[aspect]
@@ -131,7 +131,7 @@
 			}
 		}
 	}
-	[defend] { defense=51; }
+	[defend] { defense=130; }
 	[inventory]
 	{
 		[pcontent]
@@ -145,9 +145,9 @@
 				}
 				[oneof*]
 				{
-					il_main = #weapon/14-24;
-					il_main = #armor/30-63;
-					il_main = #*/14-24;
+					il_main = #weapon/19-26;
+					il_main = #armor/48-63;
+					il_main = #*/19-26;
 					il_main = #spell/5-9;
 					min = 1;
 					max = 2;
@@ -162,16 +162,16 @@
 				[oneof*]
 				{
 					chance = 0.10;
-					il_main = #weapon/-rare(1)/14-24;
-					il_main = #armor/-rare(1)/30-63;
-					il_main = #*/-rare(1)/14-24;
+					il_main = #weapon/-rare(1)/19-26;
+					il_main = #armor/-rare(1)/48-63;
+					il_main = #*/-rare(1)/19-26;
 				}
 				[oneof*]
 				{
 					chance = 0.05;
-					il_main = #weapon/-unique(2)/14-24;
-					il_main = #armor/-unique(2)/30-63;
-					il_main = #*/-unique(2)/14-24;
+					il_main = #weapon/-unique(2)/19-26;
+					il_main = #armor/-unique(2)/48-63;
+					il_main = #*/-unique(2)/19-26;
 				}
 			}
 		}
@@ -201,7 +201,7 @@
 			strength =  9, 0;
 			intelligence =  10, 0;
 			dexterity =  10, 0;
-            nature_magic =  5,  0;
+            nature_magic =  6,  0;
 		}
 	}
 	[aspect]
@@ -224,7 +224,7 @@
 		damage_min = 24;
 	}
 	[common] { screen_name="Braak Hurler"; }
-	[defend] { defense=36; }
+	[defend] { defense=66; }
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
@@ -242,9 +242,9 @@
 				[oneof*]
 				{
 					chance = 0.40;
-					il_main = #weapon/14-24;
-					il_main = #armor/30-63;
-					il_main = #*/14-24;
+					il_main = #weapon/19-26;
+					il_main = #armor/48-63;
+					il_main = #*/19-26;
 					il_main = #spell/5-9;
 					min = 1;
 					max = 2;
@@ -260,16 +260,16 @@
 				[oneof*]
 				{
 					chance = 0.01;
-					il_main = #weapon/-rare(1)/14-24;
-					il_main = #armor/-rare(1)/30-63;
-					il_main = #*/-rare(1)/14-24;
+					il_main = #weapon/-rare(1)/19-26;
+					il_main = #armor/-rare(1)/48-63;
+					il_main = #*/-rare(1)/19-26;
 				}
 				[oneof*]
 				{
 					chance = 0.005;
-					il_main = #weapon/-unique(2)/14-24;
-					il_main = #armor/-unique(2)/30-63;
-					il_main = #*/-unique(2)/14-24;
+					il_main = #weapon/-unique(2)/19-26;
+					il_main = #armor/-unique(2)/48-63;
+					il_main = #*/-unique(2)/19-26;
 				}
 			}
 		}

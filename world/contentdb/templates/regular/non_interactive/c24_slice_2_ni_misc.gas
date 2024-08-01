@@ -30,3 +30,68 @@
         }
 	}
 }
+[t:template,n:collab24_slice2_jug_glb_base]
+{
+	category_name = "indoor";
+	doc = "collab24 slice2 jug_small";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.8;
+		lodfi_upper = 1.0;
+		[textures]
+		{
+			0 = b_i_glb_jugs-01;
+		}
+	}
+}
+[t:template,n:collab24_slice2_jug_glb_01]
+{
+	category_name = "indoor";
+	doc = "collab24 slice2 jug 01";
+	specializes = collab24_slice2_jug_glb_base;
+	[aspect]
+	{
+		model = m_i_glb_jug-01;
+	}
+}
+[t:template,n:collab24_slice2_jug_glb_02]
+{
+	category_name = "indoor";
+	doc = "collab24 slice2 jug 02";
+	specializes = collab24_slice2_jug_glb_base;
+	[aspect]
+	{
+		model = m_i_glb_jug-02;
+	}
+}
+[t:template,n:collab24_slice2_jug_glb_03]
+{
+	category_name = "indoor";
+	doc = "collab24 slice2 jug 03";
+	specializes = collab24_slice2_jug_glb_base;
+	[aspect]
+	{
+		model = m_i_glb_jug-03;
+	}
+}
+[t:template,n:collab24_slice2_jug_glb_04]
+{
+	category_name = "indoor";
+	doc = "collab24 slice2 jug 04";
+	specializes = collab24_slice2_jug_glb_base;
+	[aspect]
+	{
+		model = m_i_glb_jug-04;
+	}
+}
+[t:template,n:collab24_slice2_jug_glb_05]
+{
+	category_name = "indoor";
+	doc = "collab24 slice2 jug 05";
+	specializes = collab24_slice2_jug_glb_base;
+	[aspect]
+	{
+		model = m_i_glb_jug-05;
+	}
+}

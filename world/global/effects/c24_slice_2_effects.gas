@@ -1093,7 +1093,7 @@
 	script	=[[
 			set $texture b_sfx_sparkle01;
 
-			set $velocity 0,0,0;
+			set $velocity 0,100,0;
 			set $accel 0,0,0;
 
 			set $flames1 100;
@@ -1215,5 +1215,332 @@
 				max_radius(2)velocity(0,0,$speed)accel(0,0,$speed)min_displace(0)
 				max_displace($height)max_radius(8)[3]";
 			sfx start #POP;
+			]];
+}
+[effect_script*]  // original RS modified MM maintaining ET
+{
+	name	=collab24_slice2_effect_watershot_base;  // This script supports three spells (1 == fireshot) (2 == firespray) (3 == firestorm)
+
+	script	=[[
+			///////////////////////////////////////////////////
+			// create the trackball to base the whole effect on
+			sfx create trackball #TARGET_KB 
+				"must_update()ts(1.35)accel(0)color0(.141,.518,1)dur(4)scale(.25)texture(b_sfx_splotches_01)
+				afterlife(.5)rvel_max(0)";
+			set $trackball #POP;
+
+			///////////////////////////////////////////////////
+			// if we are calling this as part of the fireshot spell then we want to have the
+			// model of a skull some times instead of just a ball. we also want some sparks.
+			if ([1] == 1)
+			{
+
+				////////////////////////////////////////////
+				// create some sparks
+				sfx create explosion #TARGET 
+					"must_update()texture(b_sfx_splotches_01)radius(0)color0(.141,.518,1)
+					color1(0,0,0)vmin(1)vmax(2)srate(.05)omni_dir()fade_range(0,1,0)
+					scale(.25)ts(.66)ivel(0,1,0)dur(2.5)";
+				set $spark #POP;
+
+				/////////////////////////////////////////////
+				// link everything to the trackball
+				sfx rat $spark;
+				sfx target $spark $trackball;
+				sfx attach $trackball $spark;
+
+			} // ([1] == 1)
+
+			/////////////////////////////////////////////////
+			// if we are using the firestorm spell we want the shots to come from the heavens.
+			if ( [1] != 3 )
+			{
+				sfx position_at $trackball @weapon_bone source;
+			}
+			else
+			{
+				sound play s_e_env_raft_arrive at #SOURCE_POSITION dist 1 40;
+				sfx position_at $trackball @kill_bone source;
+			} // ( [1] != 3 )
+
+
+			///////////////////////////////////////////
+			// this adds some variance to where the trackball is aiming
+			sfx offset_bone $trackball [0] target;
+			sfx freeze_targets $trackball;
+
+			///////////////////////////////////////////////
+			// create a fire effect with a blobby looking texture
+			sfx create fire #SOURCE		
+				"must_update()ts(2)count(10)scale(1.1)color0(.141,.518,1)alphafade(2.25)
+				velocity(0,0,0)accel(0,0,0)min_displace(-1)max_displace(1)max_radius(2)
+				texture(b_sfx_splotches_01)dur(3)";
+			set $fire #POP;
+			sfx rat $fire;
+
+			/////////////////////////////////////////////
+			// link everything to the trackball
+			sfx target $fire $trackball;
+			sfx start $fire;
+
+
+			///////////////////////////////////////////////
+			// create a fire effect with a blobby looking texture
+			sfx create fire #SOURCE		
+				"must_update()ts(2)count(25)scale(.5)color0(.141,.518,1)alphafade(.8)
+				velocity(0,0,0)accel(0,0,0)min_displace(-1)max_displace(1)max_radius(7)
+				texture(b_sfx_splotches_01)";
+			set $fire2 #POP;
+			sfx rat $fire2;
+
+			/////////////////////////////////////////////
+			// link everything to the trackball
+			sfx target $fire2 $trackball;
+			sfx start $fire2;
+
+
+			//////////////////////////////////
+			// you can pick your friends and you can pick your nose, but you
+			// don't want to hit the in the back of the head with a fireball
+			sfx friendly party $trackball;
+
+			sfx start $trackball;
+			
+			sfx attach $trackball $fire2;
+
+			waitfor collision $trackball #DEFAULT_TIMEOUT;
+			set $collision_type #POP;
+
+			if ( ( $collision_type == #OBJECT_COLLISION ) || ( $collision_type == #TERRAIN_COLLISION ) )
+			{
+				if ([1] == 1)
+				{
+					get target_position $trackball target;
+					sound play s_e_env_raft_arrive at #POP dist 3 30;
+				}
+
+				if ([1] == 2)
+				{
+					get target_position $trackball target;
+					sound play s_e_env_raft_arrive at #POP dist 3 30;
+				}
+
+				if ([1] == 3)
+				{
+					get target_position $trackball target;
+					sound play s_e_env_raft_arrive at #POP dist 3 30;
+				}
+			}
+
+
+			if ( $collision_type == #OBJECT_COLLISION )
+			{
+
+				sfx create fire #TARGET_KB
+					"must_update()ts(1.25)scale(.75)color0(.141,.518,1)color1(.1,.1,0)
+					dur(.5)count(15)radius(.2)";
+				sfx start #POP;
+
+				sfx create explosion #TARGET_KB
+					"must_update()radius(0)texture(b_sfx_splotches_01)color0(.141,.518,1)
+					color1(0,.2,.2)ivel(0,.25,0)vmin(3)vmax(5)omni_dir()
+					fade_range(0,1,0)scale(.3)";
+				sfx start #POP;
+			}
+
+
+			if ( $collision_type == #TERRAIN_COLLISION )
+			{
+
+				get collision point $trackball target;
+
+				sfx create fire #POP
+					"must_update()ts(1.25)scale(.75)color0(.141,.518,1)color1(.1,.1,0)
+					dur(.5)count(15)radius(.2)";
+				sfx start #POP;
+
+				get collision point $trackball target;
+
+				sfx create explosion #POP
+					"must_update()radius(0)texture(b_sfx_splotches_01)color0(.141,.518,1)
+					color1(0,.2,.2)ivel(0,.25,0)vmin(3)vmax(5)omni_dir()
+					fade_range(0,1,0)scale(.3)";
+				sfx start #POP;
+			}
+
+			///////////////////////////////////
+			// clean up.
+
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+[effect_script*] // - ET
+{
+	name	=collab24_slice2_effect_watershot_single;
+
+	script	=[[
+			sound play s_e_ds2_icebolt_fire at #SOURCE_POSITION dist 3 20;
+			
+			call collab24_slice2_effect_watershot_base v<0 0 0> u<1>;
+			waitfor script #POP #DEFAULT_TIMEOUT;
+						
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+
+			]];
+}
+[effect_script*]
+{
+	name	=collab24_slice2_effect_watershot_multi_fan;
+
+	script	=[[	///////////////////////////////////////////////////////////////////////////////
+			// we call the base fireshot with some random offsets to make it shoot in a fan.
+			sound play s_e_spell_firespray_cast at #SOURCE_POSITION dist 3 20;
+
+			set $offset 1.2;
+
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			
+			call collab24_slice2_effect_watershot_base v<#POP 0 #POP> u<2>;
+			set $shot1 #POP;
+
+			call collab24_slice2_effect_watershot_base v<#POP 0 #POP> u<2>;
+			set $shot2 #POP;
+
+			call collab24_slice2_effect_watershot_base v<#POP 0 #POP> u<2>;
+			set $shot3 #POP;
+
+			call collab24_slice2_effect_watershot_base v<#POP 0 #POP> u<2>;
+			set $shot4 #POP;
+
+			call collab24_slice2_effect_watershot_base v<#POP 0 #POP> u<2>;
+			set $shot5 #POP;
+
+			pause 5;
+
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+
+			]];
+}
+[effect_script*]
+{
+	name	=collab24_slice2_effect_watershot_multi_sequence;
+
+	script	=[[	///////////////////////////////////////////////////////////////////////////////
+			// we call the base fireshot with some random offsets to make it shoot in a fan.
+			sound play s_e_spell_firespray_cast at #SOURCE_POSITION dist 3 20;
+
+			set $offset 0.2;
+
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			call collab24_slice2_effect_watershot_base v<#POP 0 #POP> u<2>;
+			set $shot1 #POP;
+
+			pause 0.15;
+
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			call collab24_slice2_effect_watershot_base v<#POP 0 #POP> u<2>;
+			set $shot2 #POP;
+
+			pause 0.15;
+
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			call collab24_slice2_effect_watershot_base v<#POP 0 #POP> u<2>;
+			set $shot3 #POP;
+
+			pause 0.15;
+
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			call collab24_slice2_effect_watershot_base v<#POP 0 #POP> u<2>;
+			set $shot4 #POP;
+
+			pause 0.15;
+
+			frandrange f<-$offset> f<$offset>; frandrange f<-$offset> f<$offset>;
+			call collab24_slice2_effect_watershot_base v<#POP 0 #POP> u<2>;
+			set $shot5 #POP;
+
+			pause 5;
+
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+
+			]];
+}
+[effect_script*]
+{
+	name	=collab24_slice2_effect_22_splash;
+
+	script	=[[
+			sound play s_e_env_raft_arrive at #TARGET_POSITION dist 3 25;
+		
+			set $velocity 0,0,80;
+			set $accel 0,0,0;
+
+			set $flames1 60;
+			set $flames2 80;
+
+			sfx create fireb #SOURCE 
+				"offset(0,.2,.5)fctrl(0,0,7)flamesize(1)alphafade(.5)ts(.6)color0(.141,.518,1)
+				velocity($velocity)accel($accel)cvel(1)lower_r0(0)lower_r1(0)
+				upper_r0(0)upper_r1(20)count(80)texture(b_sfx_splotches_01)max_displace(2)min_displace(-2)";
+			sfx friendly party #PEEK;
+			set $fire1 #PEEK;
+			sfx start #POP;
+
+			sfx create fireb #SOURCE 
+				"offset(0,.2,.5)fctrl(0,0,7)flamesize(2)alphafade(.5)ts(.6)color0(.141,.518,1)
+				velocity($velocity)accel($accel)cvel(1)lower_r0(0)lower_r1(0)start_rate(10)
+				upper_r0(0)upper_r1(20)count(30)texture(b_sfx_splotches_01)max_displace(3)min_displace(-3)";
+			sfx friendly party #PEEK;
+			set $fire2 #PEEK;
+			sfx start #POP;
+
+			sfx create fireb #SOURCE 
+				"offset(0,.2,.5)fctrl(0,0,0)flamesize(1)alphafade(.5)ts(1.6)color0(.141,.518,1)
+				velocity(-10,0,5)accel(0,0,-10)cvel(1)lower_r0(0)lower_r1(0)max_displace(3)min_displace(-3)
+				upper_r0(10)upper_r1(20)count(30)start_rate(10)texture(b_sfx_splotches_01)";
+			sfx friendly party #PEEK;
+			set $fire3 #PEEK;
+			sfx start #POP;
+			
+			sfx create fireb #SOURCE 
+				"offset(0,.2,.5)fctrl(0,0,0)flamesize(1)alphafade(.5)ts(1.6)color0(.141,.518,1)
+				velocity(10,0,5)accel(0,0,-10)cvel(1)lower_r0(0)lower_r1(0)max_displace(3)min_displace(-3)
+				upper_r0(10)upper_r1(20)count(30)start_rate(10)texture(b_sfx_splotches_01)";
+			sfx friendly party #PEEK;
+			set $fire4 #PEEK;
+			sfx start #POP;
+			
+			sfx create fireb #SOURCE 
+				"offset(0,.2,.5)fctrl(0,0,2)flamesize(.1)alphafade(.45)ts(.6)color0(.141,.518,1)
+				velocity($velocity)accel($accel)cvel(1)lower_r0(4)lower_r1(4)max_displace(6)min_displace(-6)
+				upper_r0(10)upper_r1(30)count(80)texture(b_sfx_splotches_01)[0]";
+			sfx friendly party #PEEK;
+			set $fire5 #PEEK;
+			sfx start #POP;
+			
+			sfx create fireb #SOURCE 
+				"offset(0,.2,.5)fctrl(0,0,2)flamesize(.2)alphafade(.45)ts(.6)color0(0,0,0)
+				velocity($velocity)accel($accel)cvel(1)lower_r0(3)lower_r1(3)max_displace(3)min_displace(-3)
+				upper_r0(10)upper_r1(30)count(80)dark()";
+			sfx friendly party #PEEK;
+			set $fire6 #PEEK;
+			sfx start #POP;
+			
+			pause [2];
+			
+			sfx finish $fire1;
+			sfx finish $fire2;
+			sfx finish $fire3;
+			sfx finish $fire4;
+			sfx finish $fire5;
+			sfx finish $fire6;
+			
+			pause 6.5;
+			
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
 			]];
 }

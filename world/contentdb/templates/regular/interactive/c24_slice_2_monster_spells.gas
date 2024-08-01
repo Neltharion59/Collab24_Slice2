@@ -13,15 +13,180 @@
 		skill_class = "Nature Magic";
 	}
 }
-[t:template,n:c24_r2_bortusk_spell_freeze]
+
+[t:template,n:c24_r1_voadyk_spell_water_splash]
 {
 	category_name = "magic";
-	doc = "collab24 r2 spell bortusk  freeze";
+	doc = "collab24 r1 spell mercrus spell Water Splash";
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 18;
-		damage_min = 16;
+		damage_max = 20;
+		damage_min = 18;
+	}
+	[magic]
+	{
+		cast_range = 6;
+		cast_reload_delay = 1;
+		effect_duration = 1;
+		does_damage_per_second = true;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_fire]
+	{
+		effect_script = collab24_slice2_effect_22_splash;
+		particle_fit = 0.1;
+	}
+}
+[t:template,n:c24_r1_voadyk_spell_watershot_single]
+{
+	category_name = "magic";
+	doc = "collab24 r1 spell voadyk watershot single";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 22;
+		damage_min = 20;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("collab24_slice2_effect_watershot_single");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 17;
+		cast_reload_delay = 0.15;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_default] {}
+}
+[t:template,n:c24_r1_mercrus_spell_debuff]
+{
+	category_name = "magic";
+	doc = "collab24 r2 spell mercrus debuff";
+	specializes = base_spell_monster;
+	[magic]
+	{
+		apply_enchantments = false;
+		cast_range = 30;
+		cast_reload_delay = 0.15;
+		effect_duration = 3;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+		state_name = malign;
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_armor;
+				description = "Lower Armor";
+				duration = 3;
+				frequency = 0;
+				initial_delay = 0.25;
+				value = 0;
+				multiply_value = true;
+			}
+		}
+	}
+	[spell_status_effect]
+	{
+		description = "Exposed";
+		effect_script = malign;
+	}
+}
+[t:template,n:c24_r1_mercrus_spell_watershot_multi]
+{
+	category_name = "magic";
+	doc = "collab24 r1 spell mercrus watershot multi";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 24;
+		damage_min = 21;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("collab24_slice2_effect_watershot_multi_fan");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 17;
+		cast_reload_delay = 0.15;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_default] {}
+}
+[t:template,n:c24_r1_mercrus_spell_watershot_sequence]
+{
+	category_name = "magic";
+	doc = "collab24 r1 spell mercrus watershot sequence";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 19;
+		damage_min = 17;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("collab24_slice2_effect_watershot_multi_fan");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 17;
+		cast_reload_delay = 0.15;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_default] {}
+}
+[t:template,n:c24_r2_bortusk_spell_freeze]
+{
+	category_name = "magic";
+	doc = "collab24 r2 spell bortusk freeze";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 41;
+		damage_min = 40;
 	}
 	[magic]
 	{
@@ -80,8 +245,8 @@
 	{
 		area_damage_radius = 3;
 		// Has 3 Projectiles
-		damage_max = 8;
-		damage_min = 6;
+		damage_max = 20;
+		damage_min = 15;
 	}
 	[common]
 	{
@@ -118,8 +283,8 @@
 	[attack]
 	{
 		area_damage_radius = 3;
-		damage_max = 25;
-		damage_min = 20;
+		damage_max = 40;
+		damage_min = 35;
 
 	}
 	[magic]
@@ -153,8 +318,8 @@
 	[attack]
 	{
 		area_damage_radius = 4;
-		damage_max = 5;
-		damage_min = 3;
+		damage_max = 12;
+		damage_min = 10;
 	}
 	[magic]
 	{
@@ -238,8 +403,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 11;
-		damage_min = 8;
+		damage_max = 40;
+		damage_min = 33;
 	}
 	[common]
 	{
@@ -373,7 +538,7 @@
 	[magic]
 	{
 		cast_range = 15;
-		cast_reload_delay = 0.15;
+		cast_reload_delay = 4;
 		mana_cost = 0;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -395,8 +560,8 @@
 	[attack]
 	{
 		area_damage_radius = 4;
-		damage_max = 11;
-		damage_min = 10;
+		damage_max = 21;
+		damage_min = 20;
 	}
 	[magic]
 	{
@@ -429,8 +594,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 9;
-		damage_min = 6;
+		damage_max = 19;
+		damage_min = 17;
 	}
 	[magic]
 	{
@@ -460,8 +625,8 @@
 	[attack]
 	{
 		area_damage_radius = 2;
-		damage_max = 12;
-		damage_min = 9;
+		damage_max = 50;
+		damage_min = 40;
 	}
 	[magic]
 	{
@@ -487,8 +652,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 10;
-		damage_min = 8;
+		damage_max = 40;
+		damage_min = 35;
 	}
 	[common]
 	{
@@ -541,7 +706,11 @@
 				duration = 8;
 				frequency = 0;
 				initial_delay = 0.25;
+<<<<<<< Updated upstream
 				value = 0;
+=======
+				value = -0.50;
+>>>>>>> Stashed changes
 				multiply_value = true;
 			}
 		}
@@ -564,8 +733,8 @@
 		aiming_error_range_y = 0.5;
 		ammo_attach_bone = ap_flame;
 		ammo_template = spike_mine_worm;
-		damage_max = 22;
-		damage_min = 20;
+		damage_max = 32;
+		damage_min = 28;
 		use_aiming_error = true;
 		skill_class = ranged;
 	}
@@ -596,8 +765,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 23;
-		damage_min = 21;
+		damage_max = 19;
+		damage_min = 17;
 	}
 	[common]
 	{
@@ -633,8 +802,8 @@
 		aiming_error_range_y = 2;
 		ammo_attach_bone = weapon_grip;
 		ammo_template = c24_braak_boulder_ice;
-		damage_max = 23;
-		damage_min = 21;
+		damage_max = 26;
+		damage_min = 23;
 		use_aiming_error = true;
 	}
 	[magic]
@@ -718,8 +887,8 @@
 	{
 		ammo_attach_bone = weapon_grip;
 		ammo_template = ice_shard_06;
-		damage_max = 25;
-		damage_min = 25;
+		damage_max = 37;
+		damage_min = 30;
 		
 		use_aiming_error = true;
 		aiming_error_range_x = 3.5;
@@ -773,8 +942,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 30;
-		damage_min = 27;
+		damage_max = 42;
+		damage_min = 38;
 	}
 	[common]
 	{
@@ -840,7 +1009,7 @@
 				is_target_transfer = false;
 				is_offensive_transfer = true;
 				transfer_efficiency = 1;
-				value = 8;
+				value = 7;
 			}
 		}
 	}
@@ -979,7 +1148,7 @@
 	}
 }
 [t:template,n:c24_r5_naldrun_spell_healing_wind]
-{
+
 	category_name = "magic";
 	doc = "collab24 r5 spell naldrun healing wind";
 	specializes = base_spell_monster_nm;
@@ -1006,7 +1175,7 @@
 				duration = 6.0;
 				frequency = 0.25;
 				initial_delay = 1.0;
-				value = 1;
+				value = 2;
 			}
 		}
 	}
@@ -1067,6 +1236,62 @@
 		state_description = "Resting";
 	}
 }
+[t:template,n:c24_r5_naldrun_spell_mana_shield_mass]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell naldrun mana shield";
+	specializes = base_spell_monster_nm;
+	[magic]
+	{
+		apply_enchantments = false;
+		cast_range = 14;
+		cast_reload_delay = 0.15;
+		effect_duration = 20;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_self;
+		usage_context_flags = uc_offensive;
+		state_name = mshield;
+		require_state_check = false;
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_mana_shield;
+				description = "Mana shield";
+				duration = 20;
+				value = 75;
+			}
+		}
+	}
+	[spell_mass_enchant]
+	{
+		effect_script	= mana_shield;
+		radius			= 20.0;
+		description		= "Mana Shield";
+	}
+}
+[t:template,n:c24_r5_naldrun_spell_run]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell naldrun run";
+	specializes = base_spell_monster_nm;
+
+	[magic]
+	{
+		cast_range = 20;
+		cast_reload_delay = 0.15;
+		mana_cost = 0;
+		requires_line_of_sight = false;
+		speed_bias = 1;
+		target_type_flags = tt_self;
+		usage_context_flags = uc_offensive;
+	}
+	[c24_spell_run]
+	{
+	}
+}
 [t:template,n:c24_r5_dragon_spell_fireball]
 {
 	category_name = "magic";
@@ -1075,8 +1300,8 @@
 	[attack]
 	{
 		area_damage_radius = 3;
-		damage_max = 50;
-		damage_min = 45;
+		damage_max = 80;
+		damage_min = 75;
 	}
 	[common]
 	{
@@ -1161,8 +1386,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 37;
-		damage_min = 34;
+		damage_max = 51;
+		damage_min = 48;
 	}
 	[common]
 	{
@@ -1185,6 +1410,124 @@
 		usage_context_flags = uc_offensive;
 	}
 	[spell_default] {}
+}
+[t:template,n:c24_r5_fairy_queen_spell_rip_mana]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell fairy queen rip mana";
+	specializes = base_spell_monster_nm;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("rip_mana");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 12;
+		cast_reload_delay = 0.15;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_can_store_mana | tt_and | tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_mana;
+				description = "mana channel";
+				effect_script = mana_trail;
+				initial_delay = 0.0;
+				is_enhancement = true;
+				is_permanent = true;
+				is_source_transfer = true;
+				is_target_transfer = false;
+				is_offensive_transfer = true;
+				transfer_efficiency = 1;
+				value = 33;
+			}
+		}
+	}
+	[spell_default] {}
+}
+[t:template,n:c24_r5_fairy_queen_spell_mana_shield]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell fairy queen mana shield";
+	specializes = base_spell_monster_nm;
+	[magic]
+	{
+		apply_enchantments = false;
+		cast_range = 14;
+		cast_reload_delay = 0.15;
+		effect_duration = 20;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_self;
+		usage_context_flags = uc_offensive;
+		state_name = mshield;
+		require_state_check = false;
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_mana_shield;
+				description = "Mana shield";
+				duration = 20;
+				value = 100;
+			}
+		}
+	}
+	[spell_status_effect]
+	{
+		description = "Mana Shield";
+		effect_script = mana_shield;
+	}
+}
+[t:template,n:c24_r5_fairy_queen_spell_mana_debuff]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell fairy_queen mana debuff";
+	specializes = base_spell_monster_nm;
+	[magic]
+	{
+		cast_range = 15;
+		cast_reload_delay = 0.15;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+		apply_enchantments = false;
+		state_name = curse;
+		require_state_check = true;
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_mana_recovery_unit;
+				description = "Slowly die mana";
+				duration = 8;
+				frequency = 0;
+				initial_delay = 0.25;
+				value = -0.50;
+				multiply_value = true;
+			}
+		}
+	}
+	[spell_mass_enchant]
+	{
+		enchant_script	= inspiration;
+		radius			= 20.0;
+		description = "Mana Worm";
+	}
 }
 [t:template,n:c24_r6_ice_elemental_spell_ice_mage_balls]
 {
