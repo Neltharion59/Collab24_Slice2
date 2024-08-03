@@ -1,10 +1,26 @@
 [chapters]
 {
+	[chapter_02_path_of_merchant]
+	{
+		chapter_image = b_gui_ig_mnu_jnl_chapter_02;
+		screen_name = chapter ii: the path of the merchant;
+		[*]
+		{
+			description = becoming a merchant is a windy road. Especially so for the unlucky in birth.;
+		  i order = 0;
+		}
+		[*]
+		{
+			description = becoming a merchant is a windy road. Especially so for the unlucky in birth.;
+		  i order = 1;
+		}
+	}
 }
 [quests]
 {
 	[c24_slice_2_quest_giants]
 	{
+		chapter = chapter_02_path_of_merchant;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = Brotherly Feud;
 		victory_sample = s_e_level_up_quest;
@@ -63,6 +79,7 @@
 	}
 	[c24_slice_2_quest_pond]
 	{
+		chapter = chapter_02_path_of_merchant;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = Wishing Pond;
 		victory_sample = s_e_level_up_quest;
@@ -94,6 +111,7 @@
 	}
 	[c24_slice_2_quest_kill_brother]
 	{
+		chapter = chapter_02_path_of_merchant;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = The Outcast of the Family;
 		victory_sample = s_e_level_up_quest;
@@ -133,6 +151,7 @@
 	}
 	[c24_slice_2_quest_heal_tree]
 	{
+		chapter = chapter_02_path_of_merchant;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = The Tree that Bled;
 		victory_sample = s_e_level_up_quest;
@@ -189,6 +208,7 @@
 	}
 	[c24_slice_2_quest_krug_merchant]
 	{
+		chapter = chapter_02_path_of_merchant;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = Path of the Merchant;
 		victory_sample = s_e_level_up_quest;
@@ -244,15 +264,15 @@
 		}
 		[*]
 		{
-			description = Drop the cart near the Hermit;
+			description = The hermit must have made it for the town. Find him and speak with him;
 		  b is_consumable = true;
 		  i order = 6;
-		  b required = true;
+		  b required = false;
 			speaker = ;
 		}
 		[*]
 		{
-			description = Speak with the Mayor;
+			description = Drop the cart near the Hermit;
 		  b is_consumable = true;
 		  i order = 7;
 		  b required = true;
@@ -260,7 +280,7 @@
 		}
 		[*]
 		{
-			description = Speak with the Sommelier;
+			description = Speak with the Mayor;
 		  b is_consumable = true;
 		  i order = 8;
 		  b required = true;
@@ -268,7 +288,7 @@
 		}
 		[*]
 		{
-			description = Eliminate the Threat in the Wine Cellar;
+			description = Speak with the Sommelier;
 		  b is_consumable = true;
 		  i order = 9;
 		  b required = true;
@@ -276,7 +296,7 @@
 		}
 		[*]
 		{
-			description = Speak with the Sommelier;
+			description = Eliminate the Threat in the Wine Cellar;
 		  b is_consumable = true;
 		  i order = 10;
 		  b required = true;
@@ -284,7 +304,7 @@
 		}
 		[*]
 		{
-			description = Speak with the Mayor;
+			description = Speak with the Sommelier;
 		  b is_consumable = true;
 		  i order = 11;
 		  b required = true;
@@ -292,7 +312,7 @@
 		}
 		[*]
 		{
-			description = Speak with the Sheppard;
+			description = Speak with the Mayor;
 		  b is_consumable = true;
 		  i order = 12;
 		  b required = true;
@@ -300,7 +320,7 @@
 		}
 		[*]
 		{
-			description = Investigate the pasturelands;
+			description = Speak with the Sheppard;
 		  b is_consumable = true;
 		  i order = 13;
 		  b required = true;
@@ -308,7 +328,7 @@
 		}
 		[*]
 		{
-			description = Speak with Leotharn below the tower;
+			description = Investigate the pasturelands;
 		  b is_consumable = true;
 		  i order = 14;
 		  b required = true;
@@ -316,7 +336,7 @@
 		}
 		[*]
 		{
-			description = Summon a Cow in the Suspicious Ring of Bushes;
+			description = Speak with Leotharn below the tower;
 		  b is_consumable = true;
 		  i order = 15;
 		  b required = true;
@@ -324,7 +344,7 @@
 		}
 		[*]
 		{
-			description = Slay the Leopards;
+			description = Summon a Cow in the Suspicious Ring of Bushes;
 		  b is_consumable = true;
 		  i order = 16;
 		  b required = true;
@@ -332,7 +352,7 @@
 		}
 		[*]
 		{
-			description = Speak with Leotharn;
+			description = Slay the Leopards;
 		  b is_consumable = true;
 		  i order = 17;
 		  b required = true;
@@ -340,7 +360,7 @@
 		}
 		[*]
 		{
-			description = Speak with Mayor;
+			description = Speak with Leotharn;
 		  b is_consumable = true;
 		  i order = 18;
 		  b required = true;
@@ -348,7 +368,7 @@
 		}
 		[*]
 		{
-			description = Speak with Dartakk;
+			description = Speak with Mayor;
 		  b is_consumable = true;
 		  i order = 19;
 		  b required = true;
@@ -356,15 +376,24 @@
 		}
 		[*]
 		{
-			description = You Have Helped Dartakk Become a Merchant;
+			description = Speak with Dartakk;
 		  b is_consumable = true;
 		  i order = 20;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = You Have Helped Dartakk Become a Merchant;
+		  b is_consumable = true;
+		  i order = 21;
 		  b required = true;
 			speaker = ;
 		}
 	}
 	[c24_slice_2_quest_braak_barricade]
 	{
+		chapter = chapter_02_path_of_merchant;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = Braaks on the Bridge;
 		victory_sample = s_e_level_up_quest;
@@ -397,6 +426,7 @@
 	}
 	[c24_slice_2_quest_vaarth_barricade]
 	{
+		chapter = chapter_02_path_of_merchant;
 		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
 		screen_name = Artificial Landslide;
 		victory_sample = s_e_level_up_quest;

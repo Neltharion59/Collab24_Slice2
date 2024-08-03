@@ -259,7 +259,7 @@
 				action* = send_world_message("we_req_activate",0x02400148,0f,"0x4005","go_within_sphere",0);
 				action* = send_world_message("we_req_activate",0x02400145,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x02400149,0f,"default","every",0);
-				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",7);
+		action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",8);
 			  b can_self_destruct = true;
 				condition* = go_within_sphere(8.000000,0x00000000,"c24_2_r2_cart_caravan","on_first_enter");
 			  f delay = 0.000000;

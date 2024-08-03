@@ -84,14 +84,6 @@
 	  p position = -0.00521469,-0.680965,-2.89681,0x57dbdb39;
 	}
 }
-[t:trigger_generic,n:0x02200031]
-{
-	[placement]
-	{
-	  q orientation = 0,2.98023e-008,0,1;
-	  p position = -6.15937,-1.51594,-6.82945,0x1576ddc6;
-	}
-}
 [t:trigger_fade_nodes_global_box,n:0x022000a9]
 {
 	[common]
@@ -477,7 +469,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 2.77356,0,0.171783,0x16dd0127;
+	  p position = 2.76679,0,1.01136,0x16dd0127;
 	}
 }
 [t:blocking_object,n:0x0220002c]
@@ -488,7 +480,8 @@
 	}
 	[placement]
 	{
-	  p position = -3.50166,0,0.209385,0x16dd0127;
+	  q orientation = 0,1,0,0;
+	  p position = -1.59194,0,-0.367424,0x42480aca;
 	}
 }
 [t:trigger_generic,n:0x0220000c]
@@ -803,5 +796,33 @@
 	[placement]
 	{
 	  p position = 3.12586,0,1.66284,0x6356babd;
+	}
+}
+[t:trigger_generic,n:0x022000ea]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",6);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,0.500000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.048027,-1.5,-0.00468063,0x1576ddc6;
 	}
 }

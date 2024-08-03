@@ -49,11 +49,13 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.730217,0,0.374207,0x16dd0127;
+	  p position = 2.31222,0,-0.472927,0x16dd0127;
 	}
 	[screen_report]
 	{
-		description = "I should arrange help for Dartakk first.";
+		description = "'I should arrange help for Dartakk first.'";
+	  b prepend_name = false;
+	  f resend_delay = 3;
 	}
 }
 [t:cmd_region_message,n:0x02200009]

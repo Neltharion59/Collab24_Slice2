@@ -150,7 +150,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x02A00030,0f,"default","every",0), doc("set_bool");
-				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",10);
+		action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",11);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
