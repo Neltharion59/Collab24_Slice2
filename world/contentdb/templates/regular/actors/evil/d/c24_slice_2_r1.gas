@@ -441,6 +441,16 @@
 		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 	}
 	[defend] { defense = 40; }
+    [inventory]
+    {
+		[pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_mana_small;
+			}
+		}
+    }
 	[mind]
 	{
 		jat_brain = world\ai\jobs\common\brain_hero.skrit
@@ -568,6 +578,16 @@
 		}
 	}
 	[defend] { defense = 60; }
+    [inventory]
+    {
+		[pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_mana_small;
+			}
+		}
+    }
 	[mind]
 	{
 		jat_brain = world\ai\jobs\common\brain_hero.skrit
@@ -579,10 +599,6 @@
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
 		sight_range = 14.0;
-	}
-	[water_elemental_manager]
-	{
-		sphere_radius = 13.5;
 	}
 }
 [t:template,n:c24_2_r1_voadyk]
@@ -747,6 +763,13 @@
             il_active_primary_spell = c24_r1_voadyk_spell_water_splash;
             il_active_secondary_spell = c24_r1_voadyk_spell_watershot_single;
         }
+		[pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_mana_medium;
+			}
+		}
 	}
 	[mind]
 	{
@@ -873,20 +896,6 @@
 		ranged_engage_range = 17.0;
 		sight_range = 17.0;
 	}
-    [inventory]
-    {
-        selected_active_location = il_active_primary_spell;
-        [other] 
-        { 
-            il_active_primary_spell = c24_r1_mercrus_spell_watershot_sequence;
-            il_active_secondary_spell = c24_r1_mercrus_spell_watershot_multi;
-        }
-	}
-	[mind]
-	{
-		jat_cast 						= world\ai\jobs\common\job_cast.skrit
-			?rand_spell					= true;
-	}
 }
 [t:template,n:c24_2_r1_mercrus]
 {
@@ -927,6 +936,30 @@
             il_active_secondary_spell = c24_r1_mercrus_spell_watershot_multi;
             il_spell_1 = c24_r1_mercrus_spell_debuff;
         }
+    	[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #weapon/19-29;
+                    il_main = #armor/30-55;
+					il_main = #*/19-29;
+				}
+				[all*]
+				{
+					il_main = potion_health_small;
+					il_main = #nmagic/3-6;
+				}
+				[gold*]
+				{
+					max = 60;
+					min = 30;
+					min_pile = 10;
+					piles = 2 - 4;
+				}
+			}
+		}
 	}
 	[mind]
 	{

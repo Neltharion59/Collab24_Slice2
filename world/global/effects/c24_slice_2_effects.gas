@@ -136,7 +136,7 @@
 	script	=[[
 			// offset(L/R, HEIGHT, FRONT/BACK)
 			sfx create orbiter #TARGET
-				"must_update()scale(1)offset(0,.5,.5)model(c24_slice_2_bortusk_hat)ts(0)phi(0)radius(0)";
+				"must_update()scale(1)offset(0,.5,.5)model(c24_slice_2_bortusk_hat)radius(0)";
 			sfx attach_point #PEEK bip01_head target;
 			sfx start #POP;
 	]];
@@ -1542,5 +1542,17 @@
 			pause 6.5;
 			
 			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}
+[effect_script*]
+{
+	name	=collab24_slice2_effect_cave_light;
+
+	script	=[[
+
+			sfx create lightsource #TARGET 
+				"must_update()color0(.8,.1,0)radius(6)frequency(1)iradius(3)";
+			sfx start #POP;
+
 			]];
 }

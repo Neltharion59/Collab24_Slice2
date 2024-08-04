@@ -86,7 +86,7 @@
 		[*]
 		{
 			address = 2_0_passage:conversations:conv_giant_pass_start_quest_wishing_pond;
-			description = Summon the Pond Keeper;
+			description = Find the Cave Pond;
 		  b is_consumable = true;
 		  i order = 0;
 		  b required = true;
@@ -94,7 +94,7 @@
 		}
 		[*]
 		{
-			description = Defeat the Keeper;
+			description = Drop a Gold Coin Near the Pond;
 		  b is_consumable = true;
 		  i order = 1;
 		  b required = true;
@@ -102,9 +102,65 @@
 		}
 		[*]
 		{
-			description = The Keeper Has Been Defeated;
+			description = Defeat the Pond Keeper's Minions;
 		  b is_consumable = true;
 		  i order = 2;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Drop a Gold Coin Near the Pond;
+		  b is_consumable = true;
+		  i order = 3;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Defeat the Pond Keeper's Minions;
+		  b is_consumable = true;
+		  i order = 4;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Drop a Gold Coin Near the Pond;
+		  b is_consumable = true;
+		  i order = 5;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Defeat the Pond Keeper's Minions;
+		  b is_consumable = true;
+		  i order = 6;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Drop a Gold Coin Near the Pond;
+		  b is_consumable = true;
+		  i order = 7;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Defeat the Pond Keeper;
+		  b is_consumable = true;
+		  i order = 8;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = You Have Successfully Defeated the Pond Keeper;
+		  b is_consumable = true;
+		  i order = 9;
 		  b required = true;
 			speaker = ;
 		}

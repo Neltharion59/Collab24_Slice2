@@ -67,7 +67,8 @@
 	}
 	[screen_report]
 	{
-		description = "This cave seems dangerous. Perhaps consulting with a giant such as Notatakk first would be reasonable.";
+		description = "'This cave seems dangerous. Perhaps consulting with a giant such as Notatakk first would be reasonable.'";
+	  b prepend_name = false;
 	}
 }
 [t:c24_slice_2_cmd_activate_container,n:0x02200074]

@@ -101,8 +101,7 @@
 				duration = 3;
 				frequency = 0;
 				initial_delay = 0.25;
-				value = 0;
-				multiply_value = true;
+				value = -30;
 			}
 		}
 	}
@@ -161,7 +160,7 @@
 		{
 			[*]
 			{
-				action* = call_sfx_script("collab24_slice2_effect_watershot_multi_fan");
+				action* = call_sfx_script("collab24_slice2_effect_watershot_multi_sequence");
 				condition* = receive_world_message("we_req_cast");
 			}
 		}

@@ -108,9 +108,14 @@
 }
 [t:emt_sound_act,n:0x02100e98]
 {
+	[common]
+	{
+		dev_instance_text = "Haha later";
+	}
 	[placement]
 	{
-	  p position = -0.0550537,0,-1.17197,0x6e204a02;
+	  q orientation = 0,1,0,0;
+	  p position = -0.618324,-3.90958,-0.991421,0x250ed382;
 	}
 	[sound_emitter_act]
 	{

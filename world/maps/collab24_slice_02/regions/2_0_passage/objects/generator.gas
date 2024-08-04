@@ -1,18 +1,3 @@
-[t:generator_generic,n:0x0210005c]
-{
-	[generator_basic]
-	{
-		child_template_name = "c24_2_r1_rat";
-	  x initial_command = 0x02100066;
-	  i max_alive_children = 3;
-	  i num_children_incubating = 3;
-	  f spawn_period = 0.2;
-	}
-	[placement]
-	{
-	  p position = -2.20346,0,-0.361546,0x2183d3df;
-	}
-}
 [t:generator_generic,n:0x02100074]
 {
 	[generator_basic]
@@ -44,20 +29,53 @@
 	  p position = 2.90456,0,3.884,0x46e9614e;
 	}
 }
+[t:generator_generic,n:0x02100076]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r1_rat";
+	  x initial_command = 0x02100071;
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
+	  f spawn_period = 0.2;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -3.36121,1,3.3039,0xe6a986fa;
+	}
+}
+[t:generator_generic,n:0x0210005c]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r1_rat";
+	  x initial_command = 0x02100066;
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
+	  f spawn_period = 0.2;
+	}
+	[placement]
+	{
+	  p position = -2.20346,0,-0.361546,0x2183d3df;
+	}
+}
 [t:generator_generic,n:0x02100dee]
 {
 	[common]
 	{
-		dev_instance_text = "1";
+		dev_instance_text = "1 - Water Minion";
 	}
 	[generator_basic]
 	{
-		child_template_name = "potion_health_large";
+		child_template_name = "c24_2_r1_water_elemental_mangler";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02100EC9;
 	}
 	[placement]
 	{
-	  q orientation = 0,3.61411e-007,0,1;
-	  p position = 1.88886,0,-0.973434,0xa67d2e98;
+	  q orientation = 0,-1,0,2.12514e-007;
+	  p position = 1.7365,0,1.85336,0xa67d2e98;
 	}
 }
 [t:generator_generic,n:0x02100def]
@@ -68,12 +86,18 @@
 	}
 	[generator_basic]
 	{
-		child_template_name = "potion_health_large";
+		child_template_name = "c24_2_r1_water_elemental_larch";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02100ECD;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0.5;
 	}
 	[placement]
 	{
-	  q orientation = 0,3.61411e-007,0,1;
-	  p position = 1.07539,0,-0.984776,0xa67d2e98;
+	  q orientation = 0,1,0,-2.12514e-007;
+	  p position = 0.354919,0,1.87845,0xa67d2e98;
 	}
 }
 [t:generator_generic,n:0x02100df0]
@@ -84,12 +108,18 @@
 	}
 	[generator_basic]
 	{
-		child_template_name = "potion_health_large";
+		child_template_name = "c24_2_r1_voadyk";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02100ECF;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.5,1,0;
 	}
 	[placement]
 	{
-	  q orientation = 0,3.61411e-007,0,1;
-	  p position = 0.206917,0,-1.01942,0xa67d2e98;
+	  q orientation = 0,-1,0,2.12514e-007;
+	  p position = 1.2393,0,1.83502,0xa67d2e98;
 	}
 }
 [t:generator_generic,n:0x02100df1]
@@ -100,12 +130,54 @@
 	}
 	[generator_basic]
 	{
-		child_template_name = "c24_2_r1_orthrac";
+		child_template_name = "c24_2_r1_mercrus";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02100ED1;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,0,1;
 	}
 	[placement]
 	{
-	  q orientation = 0,3.61411e-007,0,1;
-	  p position = -0.700523,0,-0.975983,0xa67d2e98;
+	  q orientation = 0,-1,0,2.12514e-007;
+	  p position = 0.634483,0,1.81337,0xa67d2e98;
+	}
+}
+[t:generator_generic,n:0x02100ec4]
+{
+	[common]
+	{
+		dev_instance_text = "1 - Water Minion";
+	}
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r1_water_elemental_mangler";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02100EC9;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,2.12514e-007;
+	  p position = 0.946831,0,1.84002,0xa67d2e98;
+	}
+}
+[t:generator_generic,n:0x02100ec5]
+{
+	[common]
+	{
+		dev_instance_text = "1 - Water Minion";
+	}
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r1_water_elemental_mangler";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02100EC9;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,2.12514e-007;
+	  p position = -0.0313034,0,1.84631,0xa67d2e98;
 	}
 }
 [t:generator_generic,n:0x021004c6]
@@ -140,36 +212,52 @@
 	  p position = 3.16154,2,2.67439,0xd79bba7e;
 	}
 }
-[t:generator_generic,n:0x02100076]
+[t:generator_generic,n:0x02100dd2]
 {
 	[generator_basic]
 	{
 		child_template_name = "c24_2_r1_rat";
-	  x initial_command = 0x02100071;
-	  i max_alive_children = 3;
-	  i num_children_incubating = 3;
-	  f spawn_period = 0.2;
+	  x initial_command = 0x02100DD3;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  f spawn_period = 0.1;
 	}
 	[placement]
 	{
 	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -3.36121,1,3.3039,0xe6a986fa;
+	  p position = -1.64074,6,1.86919,0x9d7388c7;
 	}
 }
-[t:generator_generic,n:0x021004c4]
+[t:generator_generic,n:0x0210071e]
 {
 	[generator_basic]
 	{
 		child_template_name = "c24_2_r1_rat";
-	  x initial_command = 0x021004C8;
+	  x initial_command = 0x0210071D;
+	  i max_alive_children = 9;
+	  i num_children_incubating = 9;
+	  f spawn_period = 0.1;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,-0.382684;
+	  p position = 0.321182,0,0.663651,0x3206f535;
+	}
+}
+[t:generator_generic,n:0x021004c5]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r1_rat";
+	  x initial_command = 0x021004C9;
 	  i max_alive_children = 3;
 	  i num_children_incubating = 3;
 	  f spawn_period = 0.3;
 	}
 	[placement]
 	{
-	  q orientation = 0,0.92388,0,-0.382684;
-	  p position = -1.69791,-5.95804,-4.08699,0xdf8c2784;
+	  q orientation = 0,0.382683,0,-0.92388;
+	  p position = -0.088604,0,-0.429367,0x3d8f7c98;
 	}
 }
 [t:generator_generic,n:0x021004c2]
@@ -188,20 +276,20 @@
 	  p position = -1.3074,7.97794,4.7309,0xbf9989a1;
 	}
 }
-[t:generator_generic,n:0x02100dd2]
+[t:generator_generic,n:0x021004c4]
 {
 	[generator_basic]
 	{
 		child_template_name = "c24_2_r1_rat";
-	  x initial_command = 0x02100DD3;
-	  i max_alive_children = 5;
-	  i num_children_incubating = 5;
-	  f spawn_period = 0.1;
+	  x initial_command = 0x021004C8;
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
+	  f spawn_period = 0.3;
 	}
 	[placement]
 	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -1.64074,6,1.86919,0x9d7388c7;
+	  q orientation = 0,0.92388,0,-0.382684;
+	  p position = -1.69791,-5.95804,-4.08699,0xdf8c2784;
 	}
 }
 [t:generator_generic,n:0x02100dd8]
@@ -266,37 +354,5 @@
 	{
 	  q orientation = 0,-6.46033e-009,0,1;
 	  p position = 1.433,4,-0.304123,0xc9bb9c48;
-	}
-}
-[t:generator_generic,n:0x0210071e]
-{
-	[generator_basic]
-	{
-		child_template_name = "c24_2_r1_rat";
-	  x initial_command = 0x0210071D;
-	  i max_alive_children = 9;
-	  i num_children_incubating = 9;
-	  f spawn_period = 0.1;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,-0.382684;
-	  p position = 0.321182,0,0.663651,0x3206f535;
-	}
-}
-[t:generator_generic,n:0x021004c5]
-{
-	[generator_basic]
-	{
-		child_template_name = "c24_2_r1_rat";
-	  x initial_command = 0x021004C9;
-	  i max_alive_children = 3;
-	  i num_children_incubating = 3;
-	  f spawn_period = 0.3;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.382683,0,-0.92388;
-	  p position = -0.088604,0,-0.429367,0x3d8f7c98;
 	}
 }
