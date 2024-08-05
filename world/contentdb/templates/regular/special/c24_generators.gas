@@ -53,5 +53,55 @@
 	}
 
     [generator_breakable] {}
+}
+[t:template,n:collab24_slice2_r3_gen_metal_cage]
+{
+	specializes = base_breakable_wood;
+	doc = "collab24 slice2 r3 generator metal cage";
+    category_name = "1w_generator";
+    
+    [common]
+    {
+    	rollover_display = false;
+    	screen_name = "metal Cage";
+		rollover_life = false;
+    }
 
+	[aspect]
+	{
+		model 		= m_i_csl_cage-03;
+        material = metal;
+		is_selectable = false;
+		does_block_path = true;
+		life_state		= LS_ALIVE_CONSCIOUS;
+        is_collidable 		= false;
+		is_invincible = true;
+		life			= 210;
+		max_life		= 210;
+	}
+
+	[physics]
+	{
+		break_sound = s_e_die_copter;
+		explode_when_killed = true;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_metal_01 = 5;
+			frag_glb_metal_03 = 4;
+			frag_glb_metal_05 = 5;
+			frag_glb_metal_06 = 8;
+		}
+	}
+
+
+    [gizmo]
+	{
+		model				=	m_i_glb_object-waypoint;
+		texture				=	;
+		diffuse_color		=	0.0, 1, 0.0;
+		use_diffuse_color	=	true;
+	}
+
+    [generator_breakable] {}
 }

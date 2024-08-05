@@ -18,9 +18,13 @@
 	{
 	  x target_scid = 0x02200041;
 	}
+	[common]
+	{
+		dev_instance_text = "DELETE HERMIT";
+	}
 	[placement]
 	{
-	  p position = -2.31126,-2.38434,-8.84336,0x1576ddc6;
+	  p position = -2.71791,-1.5,7.98164,0x1576ddc6;
 	}
 }
 [t:cmd_delete_object,n:0x0220007d]
@@ -28,7 +32,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 3.15326,0,0.187027,0xf8126dd7;
+	  p position = 2.25475,0,0.1511,0xf8126dd7;
 	}
 }
 [t:c24_slice_2_cmd_activate_container,n:0x0220002e]
@@ -81,6 +85,44 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 0.188919,0,0.673973,0xacf78d63;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x022000f0]
+{
+	[placement]
+	{
+	  p position = 1.35663,2.01204,3.15971,0xeeedb960;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x022000f1]
+{
+	[placement]
+	{
+	  p position = -0.615372,0,-1.48483,0x87901be5;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x022000f2]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.856148,0,-0.727228,0x87901be5;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x022000f3]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.830597,0,0.493841,0x87901be5;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x022000f4]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.928757,0,1.59683,0x87901be5;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x02200038]

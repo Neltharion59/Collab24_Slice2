@@ -870,19 +870,19 @@
 	specializes = base_scroll_dark;
 	[aspect]
 	{
-		gold_value = 20;
+		gold_value = 1;
 	}
 	[attack]
 	{
 		area_damage_radius = 3;
-		damage_max = 20;
-		damage_min = 15;
+		damage_max = 5;
+		damage_min = 3;
 	}
 	[common]
 	{
 		screen_name = "Scroll of Lesser Fireball";
 		is_pcontent_allowed = false;
-		description = "Hurls a weak large ball of flame that explodes on impact.";
+		description = "Hurls a weak ball of flame that explodes on impact.";
 		[template_triggers]
 		{
 			[*]

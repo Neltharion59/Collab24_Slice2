@@ -1,8 +1,13 @@
 [t:emt_sound,n:0x02300084]
 {
+	[aspect]
+	{
+		expired_template_name = tree screams;
+	}
 	[placement]
 	{
-	  p position = -1.40791,0,-3.38546,0x78169ad7;
+	  q orientation = 0,1,0,-2.98023e-008;
+	  p position = -3.84875,0,-1.96286,0x4b693d61;
 	}
 	[sound_emitter]
 	{
@@ -13,27 +18,34 @@
 }
 [t:emt_generic_act,n:0x02300086]
 {
+	[common]
+	{
+		dev_instance_text = "HEAL EFFECT";
+	}
 	[generic_emitter_act]
 	{
-		other_effect = "major_heal";
-	  x target = 0x02300004;
+		other_effect = "collab24_slice2_major_heal";
 	}
 	[placement]
 	{
-	  p position = -0.940439,0,-1.9909,0x4b693d61;
+	  p position = -3.84771,0,-1.20621,0x4b693d61;
 	}
 }
-[t:emt_sound_act,n:0x0230009a]
+[t:emt_generic_act,n:0x023001d3]
 {
+	[common]
+	{
+		dev_instance_text = "FAE SINGS";
+	}
+	[generic_emitter_act]
+	{
+		other_effect = "collab24_slice2_effect_dryad_sing";
+	  f rep_freq_max = 20;
+	  f rep_freq_min = 20;
+	}
 	[placement]
 	{
-	  p position = -1.63662,-9.53674e-007,2.91027,0x4b693d61;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_ds2_amb_dryadsinger2_lp";
-	  b repeat = false;
-	  b stop_instantly = true;
+	  p position = -1.6024,0,3.16869,0x4b693d61;
 	}
 }
 [t:emt_generic_act,n:0x02300099]

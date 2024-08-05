@@ -87,7 +87,7 @@ state Talk$
             // Quest was accepted
 			m_Go$.GetConversation.RSSelectConversation( "conv_c24_r3_fairy_start_quest_next" );
 		}
-		else
+		else if ( GameAuditor.GetDb.GetBool( "flag_fairy_tree_quest_kurgans_killed" ) )
 		{
             // Before quest
             m_Go$.GetConversation.RSSelectConversation( "conv_c24_r3_fairy_start_quest" );
@@ -96,6 +96,10 @@ state Talk$
 			scid quest_activated_trigger_scid$ = MakeScid(0x0230009B);
 			Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
 			SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
+		}
+		else
+		{
+            m_Go$.GetConversation.RSSelectConversation( "conv_c24_r3_fairy_b4_kurgans_killed" );
 		}
 
 		m_Go$.GetConversation.RSActivateDialogue();

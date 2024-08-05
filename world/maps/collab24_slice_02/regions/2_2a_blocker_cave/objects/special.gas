@@ -1,4 +1,4 @@
-[t:trigger_generic,n:0x0280000d]
+[t:trigger_change_mood_box,n:0x02800010]
 {
 	[common]
 	{
@@ -6,9 +6,98 @@
 		{
 			[*]
 			{
+				action* = mood_change("collab24_slice2_mood_r2_cave_vaarth");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(0.200000,2.000000,5.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.051152,-11.9959,-0.997083,0xb7fc5431;
+	}
+}
+[t:trigger_generic,n:0x02800015]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0280001C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02800017,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(10.000000,2.500000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.88882,0,0.655731,0xc965d840;
+	}
+}
+[t:trigger_generic,n:0x02800017]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_delete",0x0280001D,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02800017,0f,"default","every",0), delay(3);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.785611,0,-0.754627,0xc965d840;
+	}
+}
+[t:trigger_generic,n:0x0280000d]
+{
+	[common]
+	{
+		dev_instance_text = "ON KEG FOUND";
+		[instance_triggers]
+		{
+			[*]
+			{
 				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",1);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,5.200000,1.000000,"on_first_enter");
+				condition* = party_member_within_bounding_box(10.000000,5.200000,10.000000,"on_first_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -23,7 +112,8 @@
 	}
 	[placement]
 	{
-	  p position = 4.57764e-005,-0.956529,-2.03728,0xd58721c5;
+	  q orientation = 0,1,0,-2.98023e-008;
+	  p position = 1.90268,0,-1.44658,0x59d0a909;
 	}
 }
 [t:use_point,n:0x02800009]
@@ -59,7 +149,7 @@
 	}
 	[placement]
 	{
-	  p position = 0.248087,0,1.38308,0xc26a6125;
+	  p position = 0.205067,0,1.31382,0xc26a6125;
 	}
 }
 [t:trigger_generic,n:0x0280000e]
@@ -90,7 +180,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 1.49667,0,1.26824,0xc26a6125;
+	  p position = 1.59165,0,1.29945,0xc26a6125;
 	}
 }
 [t:use_point,n:0x02800006]
@@ -105,34 +195,5 @@
 	[placement]
 	{
 	  p position = 0.250954,0,0.186323,0x4fcaea20;
-	}
-}
-[t:trigger_change_mood_box,n:0x02800010]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("collab24_slice2_mood_r2_cave_vaarth");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.200000,2.000000,5.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.051152,-11.9959,-0.997083,0xb7fc5431;
 	}
 }

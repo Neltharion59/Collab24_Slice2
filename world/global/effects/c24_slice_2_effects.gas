@@ -197,7 +197,7 @@
 	script	=[[
 			// offset(L/R, HEIGHT, FRONT/BACK)
 			sfx create orbiter #TARGET
-				"must_update()scale(1)offset(0,0,0)model(c24_2_r3_static_broom)ts(3.14)rotate(-90,180,0)phi(0)radius(0)bone_orient()";
+				"must_update()scale(1)offset(.5,0,-1)model(c24_2_r3_static_broom)ts(3.14)rotate(-90,180,0)phi(0)radius(0)bone_orient()";
 			sfx attach_point #PEEK @kill_bone target;
 			set $broom #POP;
 			sfx start $broom;
@@ -1554,5 +1554,55 @@
 				"must_update()color0(.8,.1,0)radius(6)frequency(1)iradius(3)";
 			sfx start #POP;
 
+			]];
+}
+[effect_script*]
+{
+	name	=collab24_slice2_effect_dryad_sing;
+
+	script	=[[
+			sound play s_e_env_ds2_amb_dryadsinger2_lp at #SOURCE_POSITION dist 3 30;
+			]];
+}
+[effect_script*]
+{
+	name	=collab24_slice2_major_heal;
+
+	script	=[[
+			sfx create cylinder #TARGET
+			"hp0(8,-3,-35)hp1(20,8,-1)rp1(0,0,0)rp0(.3,5,.2)dur(2.5)
+			texture(b_sfx_lightray_01)spin(2)color0(.25,.25,.5)";
+			
+				
+			sfx start #POP;
+			sfx create cylinder #TARGET
+			"hp0(8,-3,-35)hp1(20,8,-1)rp1(0,0,0)rp0(.3,5,.2)dur(2.5)
+			texture(b_sfx_lightray_02)spin(-1)color0(.5,.3,.5)";
+			
+				
+			sfx start #POP;
+
+			pause .5;
+			
+			call healing_base s<b_sfx_sblueflare_02> s<.6,.6,.6>;
+			call healing_base s<b_sfx_moon_01> s<.3,.1,.3>;
+			
+			sfx create fire #TARGET
+				"texture(b_sfx_sparkle01)color0(.7,.7,1)radius(.375)
+				offset(0,1,0)count(30)flamesize(.2)velocity(0,-16,0)
+				accel(0,10,0)alphafade(.75)dur(.85)";
+				
+					
+			sfx start #POP;
+
+			sfx create fire #TARGET
+				"texture(b_sfx_sparkle01)color0(1,.7,1)radius(.375)offset(0,-1,0)
+				count(30)flamesize(.2)velocity(0,16,0)accel(0,-10,0)
+				alphafade(.75)dur(.85)";
+				
+					
+			sfx start #POP;
+
+			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
 			]];
 }

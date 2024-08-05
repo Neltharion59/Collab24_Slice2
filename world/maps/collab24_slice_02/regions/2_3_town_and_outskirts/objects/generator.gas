@@ -177,8 +177,10 @@
 {
 	[generator_basic]
 	{
-		child_template_name = "c24_2_r4_krusk";
+		child_template_name = "c24_2_r4_krusk_quest_pet";
+	  b get_child_cc = true;
 	  x initial_command = 0x02400185;
+	  x msg_scid = 0x02400007;
 	}
 	[placement]
 	{

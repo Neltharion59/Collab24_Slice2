@@ -46,7 +46,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x02900007,0f,"default","every",0);
-		action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",17);
+		action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",18);
 			  b can_self_destruct = true;
 				condition* = go_within_sphere(8.000000,0x00000000,"c24_slice2_friendly_cow","on_every_enter");
 			  f delay = 0.000000;
@@ -148,7 +148,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x02900026,0f,"default","every",0);
-		action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",18);
+		action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",19);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;

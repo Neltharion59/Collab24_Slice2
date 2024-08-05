@@ -49,6 +49,24 @@
 	[common]
 	{
 		screen_name = "Preserved Dead Orthrac Hatchling";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("c24_slice_2_quest_dead_orthrac","active",0);
+				action* = send_world_message("we_trigger_activate",0x02400003,0f,"default","every",0);
+				b can_self_destruct = true;
+				condition* = receive_world_message("we_picked_up",0,"on_first_message"), doc("[*converted to one-shot*]");
+				f delay = 0.000000;
+				b flip_flop = false;
+				b multi_player = true;
+				occupants_group = ;
+				f reset_duration = 0.000000;
+				b single_player = true;
+				b single_shot = true;
+				b start_active = true;
+			}
+		}
 	}
 	[gui]
 	{
@@ -85,6 +103,7 @@
 			[*]
 			{
 				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",3);
+				action* = send_world_message("we_req_activate",0x022000EE,0f,"default","every",0);
 				b can_self_destruct = true;
 				condition* = receive_world_message("we_picked_up",0,"on_first_message"), doc("[*converted to one-shot*]");
 				f delay = 0.000000;
@@ -130,8 +149,8 @@
 		{
 			[*]
 			{
-				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",5);
-				action* = send_world_message("we_trigger_activate",0x022000EA,0f,"default","every",0);
+				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",6);
+				action* = send_world_message("we_req_activate",0x022000EF,0f,"default","every",0);
 				b can_self_destruct = true;
 				condition* = receive_world_message("we_picked_up",0,"on_first_message"), doc("[*converted to one-shot*]");
 				f delay = 0.000000;
@@ -172,6 +191,25 @@
 	[common]
 	{
 		screen_name = "Nourishing Scroll";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("c24_slice_2_quest_heal_tree","active",3);
+				action* = send_world_message("we_trigger_activate",0x02400003,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_picked_up",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
 	}
 	[gui]
 	{

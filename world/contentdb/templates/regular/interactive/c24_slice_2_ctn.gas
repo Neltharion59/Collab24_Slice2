@@ -81,6 +81,39 @@
 		[break_particulate] {}
 	}
 }
+[t:template,n:c24_slice_2_r3_ctn_bookcase]
+{
+	category_name = "container";
+	doc = "c24 Slice 2 R3 Ctn bookcase";
+	specializes = base_chest;
+
+	[aspect]
+	{
+		model = m_i_glb_bookcase-01;
+		material = ;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=bookcase-01-open; }
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Bookcase";
+	}
+	[generator_object_pcontent]
+	{
+		create_msg = WE_REQ_USE;
+		one_shot = false;
+	}
+}
 
 // PContent-Oriented
 

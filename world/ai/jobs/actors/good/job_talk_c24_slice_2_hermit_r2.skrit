@@ -74,7 +74,7 @@ state Talk$
 		if ( GameAuditor.GetDb.GetBool( "c24_slice2_r2_hermit_quest_started" ) )
 		{
             // After the quest was completed
-			m_Go$.GetConversation.RSSelectConversation( "conv_c24_r2_hermit_first_next" );
+			m_Go$.GetConversation.RSSelectConversation( "conv_c24_r2_hermit_next" );
 		}
 		else
 		{

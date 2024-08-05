@@ -1,8 +1,8 @@
-[t:template,n:c24_2_r4_krusk]
+[t:template,n:c24_2_r4_krusk_base]
 {
 	// Stats based on Mucosa Boss - Strengthened
 	category_name = "1W_evil_d";
-	doc = "Bruhs Slice 2 R4 krusk";
+	doc = "Bruhs Slice 2 R4 krusk base";
 	specializes = actor_evil;
 	[actor]
 	{
@@ -142,6 +142,24 @@
 		personal_space_range = 0.7;
 		ranged_engage_range = 16.0;
 		sight_range = 16.0;
+	}
+}
+[t:template,n:c24_2_r4_krusk]
+{
+	// Stats based on Mucosa Boss - Strengthened
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R4 krusk";
+	specializes = c24_2_r4_krusk_base;
+}
+[t:template,n:c24_2_r4_krusk_quest_pet]
+{
+	// Stats based on Mucosa Boss - Strengthened
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R4 krusk quest pet";
+	specializes = c24_2_r4_krusk_base;
+	[common]
+	{
+		screen_name="Pooky";
 	}
 }
 [t:template,n:c24_2_r4_leopard]
