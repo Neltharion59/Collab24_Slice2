@@ -1045,6 +1045,29 @@
 	  p position = 1.18185,0,-0.421494,0x98ad2e0e;
 	}
 }
+[t:collab24_slice2_npc_ice_witch,n:0x0240007f]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_r4_ice_witch_pet_quest_after_orthrac_is_owned;
+			* = conv_r4_ice_witch_pet_quest_after_ortranc_revived;
+			* = conv_r4_ice_witch_pet_quest_after_pet_killed;
+			* = conv_r4_ice_witch_pet_quest_after_quest_completed;
+			* = conv_r4_ice_witch_pet_quest_before_quest_started;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_collab24_slice2_ice_witch_pet_owner.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.918678,0.15,0.112366,0x3318c5e8;
+	}
+}
 [t:c24_2_r4_shagor,n:0x024001a3]
 {
 	[placement]
@@ -1456,13 +1479,5 @@
 	{
 	  q orientation = 0,0.382683,0,0.92388;
 	  p position = 0.319153,4.57016,1.46922,0x47258526;
-	}
-}
-[t:collab24_slice2_npc_ice_witch,n:0x0240007f]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.918678,0.15,0.112366,0x3318c5e8;
 	}
 }

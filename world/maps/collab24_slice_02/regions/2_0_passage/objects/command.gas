@@ -1236,7 +1236,7 @@
 	}
 	[placement]
 	{
-	  p position = -3.20397,0,-1.04973,0x825d8de7;
+	  p position = -3.17121,0,-1.17372,0x825d8de7;
 	}
 }
 [t:cmd_ai_t_attack_object,n:0x0210018e]
@@ -1264,37 +1264,6 @@
 	[placement]
 	{
 	  p position = 0.776014,0,1.28809,0x825d8de7;
-	}
-}
-[t:c24_slice_2_cmd_activate_container,n:0x0210003e]
-{
-	[cmd_c24_activate_container]
-	{
-	  x target_container = 0x02100030;
-	}
-	[common]
-	{
-		dev_instance_text = "MAKE THE ROCK NON INVINCIBLE";
-	}
-	[placement]
-	{
-	  p position = 0.797676,0,-0.0760727,0x0481e863;
-	}
-}
-[t:c24_slice_2_cmd_activate_container,n:0x02100e9b]
-{
-	[cmd_c24_activate_container]
-	{
-	  b invincible = true;
-	  x target_container = 0x0210001D;
-	}
-	[common]
-	{
-		dev_instance_text = "MAKE CLUB UNSELECTABLE";
-	}
-	[placement]
-	{
-	  p position = 0.942745,0,-1.70621,0x0481e863;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x021013a5]
@@ -2208,18 +2177,6 @@
 	[placement]
 	{
 	  p position = -3.39009,0,0.702094,0x10866d8e;
-	}
-}
-[t:c24_slice_2_cmd_activate_container,n:0x02100221]
-{
-	[cmd_c24_activate_container]
-	{
-	  b selectable = true;
-	  x target_container = 0x0210001E;
-	}
-	[placement]
-	{
-	  p position = 0.742277,0,0.0604553,0xed7508e1;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x02101374]
@@ -3862,5 +3819,44 @@
 	[placement]
 	{
 	  p position = 1.11694,-2,-1.12184,0x2467e573;
+	}
+}
+[t:cmd_selection_toggle,n:0x02100221]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0210001E;
+	  i start_state = 2;
+	  b toggle_invincibility = true;
+	}
+	[placement]
+	{
+	  p position = 0.742277,0,0.0604553,0xed7508e1;
+	}
+}
+[t:cmd_selection_toggle,n:0x02100e9b]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0210001D;
+	  i start_state = 2;
+	}
+	[placement]
+	{
+	  p position = 0.942745,0,-1.70621,0x0481e863;
+	}
+}
+[t:cmd_selection_toggle,n:0x0210003e]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02100030;
+	  i start_state = 1;
+	  b toggle_invincibility = true;
+	  b toggle_selection = false;
+	}
+	[placement]
+	{
+	  p position = 0.797676,0,-0.0760727,0x0481e863;
 	}
 }
