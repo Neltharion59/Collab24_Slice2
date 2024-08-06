@@ -1068,6 +1068,37 @@
 	  p position = 0.918678,0.15,0.112366,0x3318c5e8;
 	}
 }
+[t:c24_2_r1_orthrac,n:0x02400241]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.92388;
+	  p position = -3.2483,0,-0.141098,0x0e3b8b40;
+	}
+}
+[t:zombie_01,n:0x02400246]
+{
+	[aspect]
+	{
+	  b force_no_render = true;
+	  b is_invincible = true;
+	  b is_selectable = false;
+	}
+	[mind]
+	{
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+		combat_orders = co_hold;
+	  f job_travel_distance_limit = 0;
+	  f limited_movement_range = 0;
+		movement_orders = mo_hold;
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.96046e-008,0,1;
+	  p position = 1.70058,-3.25,3.58717,0xe6f8965f;
+	}
+}
 [t:c24_2_r4_shagor,n:0x024001a3]
 {
 	[placement]
