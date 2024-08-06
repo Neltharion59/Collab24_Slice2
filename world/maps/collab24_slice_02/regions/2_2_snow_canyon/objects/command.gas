@@ -1,3 +1,67 @@
+[t:cmd_selection_toggle,n:0x02300061]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02300025;
+	  i start_state = 2;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "REMOVE FLESH";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -2.19599,0,-3.53621,0x78169ad7;
+	}
+}
+[t:cmd_selection_toggle,n:0x023001d1]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0230007F;
+	  i start_state = 2;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = -0.331253,0,0.0650558,0x059d52f5;
+	}
+}
+[t:cmd_selection_toggle,n:0x023001d5]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0230007E;
+	  i start_state = 2;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = 0.83448,0,0.0279846,0x059d52f5;
+	}
+}
+[t:cmd_selection_toggle,n:0x023001d6]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02300080;
+	  i start_state = 2;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707106,0,0.707107;
+	  p position = 1.89238,0,0.0405731,0x059d52f5;
+	}
+}
 [t:cmd_ai_c_patrol,n:0x023000e2]
 {
 	[placement]
@@ -34,31 +98,49 @@
 	  p position = 1.73811,0,-0.0340099,0x8870b6a9;
 	}
 }
-[t:c24_slice_2_cmd_activate_container,n:0x02300092]
+[t:cmd_selection_toggle,n:0x02300092]
 {
-	[cmd_c24_activate_container]
+	[cmd_selection_toggle]
 	{
-	  b selectable = true;
-	  x target_container = 0x02800003;
+	  x object_scid = 0x02800003;
+	  i start_state = 1;
+	  b toggle_invincibility = true;
+	  b toggle_selection = false;
 	}
 	[placement]
 	{
 	  q orientation = 0,1,0,-5.64831e-007;
-	  p position = 1.54909,0,-0.338905,0x3361f325;
+	  p position = 1.54696,0,-0.308128,0x3361f325;
 	}
 }
-[t:c24_slice_2_cmd_activate_container,n:0x02300093]
+[t:cmd_selection_toggle,n:0x023001d7]
 {
-	[cmd_c24_activate_container]
+	[cmd_selection_toggle]
 	{
-	  b invincible = true;
-	  b selectable = true;
-	  x target_container = 0x02800003;
+	  x object_scid = 0x0230007B;
+	  i start_state = 2;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,5.64831e-007,0,1;
+	  p position = -0.0446854,0,0.783592,0x689e52ad;
+	}
+}
+[t:cmd_selection_toggle,n:0x023001d8]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0230001B;
+	  i start_state = 2;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
 	}
 	[placement]
 	{
 	  q orientation = 0,1,0,-5.64831e-007;
-	  p position = -0.768929,0,-0.243536,0x3361f325;
+	  p position = -0.194214,0,-0.509624,0x689e52ad;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x0230008e]
@@ -87,18 +169,6 @@
 	{
 		description = "': I Should Help the Poor Fae First.'";
 	  f resend_delay = 3;
-	}
-}
-[t:c24_slice_2_cmd_activate_container,n:0x0230011a]
-{
-	[cmd_c24_activate_container]
-	{
-	  x target_container = 0x02300117;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 1.68472,-3.8308,-4.94754,0x93415d5f;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x0230011b]

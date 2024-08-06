@@ -54,36 +54,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -2.88882,0,0.655731,0xc965d840;
-	}
-}
-[t:trigger_generic,n:0x02800017]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_delete",0x0280001D,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x02800017,0f,"default","every",0), delay(3);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.785611,0,-0.754627,0xc965d840;
+	  p position = -2.88666,0,0.664585,0xc965d840;
 	}
 }
 [t:trigger_generic,n:0x0280000d]
@@ -131,7 +102,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0280000B,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x0280000B,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x0280000C,0f,"default","every",0), delay(5);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");

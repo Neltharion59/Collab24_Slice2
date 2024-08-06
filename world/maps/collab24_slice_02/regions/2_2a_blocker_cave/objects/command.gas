@@ -1,9 +1,23 @@
-[t:c24_slice_2_cmd_activate_container,n:0x0280000b]
+[t:cmd_selection_toggle,n:0x02800017]
 {
-	[cmd_c24_activate_container]
+	[cmd_selection_toggle]
 	{
-	  b selectable = true;
-	  x target_container = 0x02800007;
+	  x object_scid = 0x0280001D;
+	  i start_state = 2;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  p position = 0.714624,0,-0.868046,0xc965d840;
+	}
+}
+[t:cmd_selection_toggle,n:0x0280000b]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02800007;
+	  i start_state = 1;
 	}
 	[placement]
 	{

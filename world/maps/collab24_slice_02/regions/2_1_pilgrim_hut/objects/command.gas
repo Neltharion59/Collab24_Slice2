@@ -12,19 +12,32 @@
 	  p position = -1.37537,0,1.80804,0xf8a303ce;
 	}
 }
-[t:cmd_t_delete,n:0x02200034]
+[t:cmd_selection_toggle,n:0x022000fc]
 {
-	[cmd_t_delete]
+	[cmd_selection_toggle]
 	{
-	  x target_scid = 0x02200041;
-	}
-	[common]
-	{
-		dev_instance_text = "DELETE HERMIT";
+	  x object_scid = 0x02200041;
+	  i start_state = 2;
+	  b toggle_visability = true;
 	}
 	[placement]
 	{
-	  p position = -2.71791,-1.5,7.98164,0x1576ddc6;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.27228,-1.51213,8.02425,0x1576ddc6;
+	}
+}
+[t:cmd_selection_toggle,n:0x02200042]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x022000FB;
+	  i start_state = 1;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.33794,0,-0.752609,0xf8126dd7;
 	}
 }
 [t:cmd_delete_object,n:0x0220007d]
@@ -35,17 +48,31 @@
 	  p position = 2.25475,0,0.1511,0xf8126dd7;
 	}
 }
-[t:c24_slice_2_cmd_activate_container,n:0x0220002e]
+[t:cmd_selection_toggle,n:0x02200031]
 {
-	[cmd_c24_activate_container]
+	[cmd_selection_toggle]
 	{
-	  b invincible = true;
-	  b selectable = true;
-	  x target_container = 0x02200003;
+	  x object_scid = 0x02200003;
+	  i start_state = 1;
 	}
 	[placement]
 	{
-	  p position = -3.95866,0.723358,2.11679,0x05007457;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.147285,-0.372967,-1.17853,0x903426eb;
+	}
+}
+[t:cmd_selection_toggle,n:0x02200027]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02200026;
+	  i start_state = 1;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-8.9407e-008;
+	  p position = -0.0861969,0,-0.766329,0xfb8ddb88;
 	}
 }
 [t:cmd_region_message,n:0x02200006]
@@ -73,18 +100,6 @@
 	{
 		description = "'This cave seems dangerous. Perhaps consulting with a giant such as Notatakk first would be reasonable.'";
 	  b prepend_name = false;
-	}
-}
-[t:c24_slice_2_cmd_activate_container,n:0x02200074]
-{
-	[cmd_c24_activate_container]
-	{
-	  x target_container = 0x02200073;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.188919,0,0.673973,0xacf78d63;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x022000f0]

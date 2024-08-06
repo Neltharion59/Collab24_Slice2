@@ -18,81 +18,7 @@
 	}
 	[placement]
 	{
-	  p position = -2.78141,0,-0.630341,0xea1ad916;
-	}
-}
-[t:c24_slice_2_cmd_activate_container,n:0x02900022]
-{
-	[cmd_c24_activate_container]
-	{
-	  b invincible = true;
-	  b selectable = true;
-	  x target_container = 0x0290000A;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -2.75744,0,1.04916,0xea1ad916;
-	}
-}
-[t:c24_slice_2_cmd_activate_container,n:0x02900015]
-{
-	[cmd_c24_activate_container]
-	{
-	  x target_container = 0x0290000F;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.32653,3.99157,1.83569,0x15921fba;
-	}
-}
-[t:c24_slice_2_cmd_activate_container,n:0x02900012]
-{
-	[cmd_c24_activate_container]
-	{
-	  x target_container = 0x02900010;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.3153,0,0.0601959,0x7ff3a5ad;
-	}
-}
-[t:c24_slice_2_cmd_activate_container,n:0x02900016]
-{
-	[cmd_c24_activate_container]
-	{
-	  b selectable = true;
-	  x target_container = 0x02900010;
-	}
-	[placement]
-	{
-	  p position = 3.29224,0,-0.430939,0x5c6404e3;
-	}
-}
-[t:c24_slice_2_cmd_activate_container,n:0x02900018]
-{
-	[cmd_c24_activate_container]
-	{
-	  b selectable = true;
-	  x target_container = 0x0290000F;
-	}
-	[placement]
-	{
-	  p position = 3.3847,0,1.86405,0x5c6404e3;
-	}
-}
-[t:c24_slice_2_cmd_activate_container,n:0x0290001c]
-{
-	[cmd_c24_activate_container]
-	{
-	  x target_container = 0x0290000A;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -1.01301,12,2.75243,0x1e45abb7;
+	  p position = -2.97082,0,-1.15569,0xea1ad916;
 	}
 }
 [t:cmd_ai_t_move,n:0x02900014]
@@ -117,5 +43,44 @@
 	[placement]
 	{
 	  p position = -2.4048,12,0.595306,0x93f8f547;
+	}
+}
+[t:cmd_selection_toggle,n:0x0290001c]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0290000A;
+	  i start_state = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -1.01301,12,2.75243,0x1e45abb7;
+	}
+}
+[t:cmd_selection_toggle,n:0x02900012]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02900010;
+	  i start_state = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.3153,0,0.0601959,0x7ff3a5ad;
+	}
+}
+[t:cmd_selection_toggle,n:0x02900015]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0290000F;
+	  i start_state = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.3564,3.98557,1.71868,0x15921fba;
 	}
 }
