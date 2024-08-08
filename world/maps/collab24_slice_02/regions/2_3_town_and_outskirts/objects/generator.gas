@@ -32,38 +32,16 @@
 	  p position = 0.0173264,-3.93822,-0.403931,0x879431f4;
 	}
 }
-[t:generator_generic,n:0x024000e9]
+[t:generator_generic,n:0x02400175]
 {
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = call_sfx_script("dust_explosion","","");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
 	[generator_basic]
 	{
-		child_template_name = "c24_2_r4_krusk";
-	  x initial_command = 0x024000EB;
+		child_template_name = "c24_2_r4_shagor";
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.0244751,0,-0.0393982,0x5e3d958a;
+	  q orientation = 0,-0.92388,0,-0.382684;
+	  p position = 1.17024,3,-1.0255,0x87cc2f41;
 	}
 }
 [t:generator_generic,n:0x024000ea]
@@ -100,6 +78,40 @@
 	  p position = 0.0855102,0,-0.853889,0x8d4fa469;
 	}
 }
+[t:generator_generic,n:0x024000e9]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("dust_explosion","","");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r4_krusk";
+	  x initial_command = 0x024000EB;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.0244751,0,-0.0393982,0x5e3d958a;
+	}
+}
 [t:generator_bush_02,n:0x02400169]
 {
 	[generator_advanced_a2]
@@ -126,8 +138,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.382683,0,-0.92388;
-	  p position = 2.92445,2,2.95299,0x4307d961;
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 2.23206,2,3.25287,0x4307d961;
 	}
 }
 [t:generator_bush_02,n:0x02400181]

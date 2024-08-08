@@ -1,9 +1,5 @@
 [t:door_ice_gate,n:0x02400254]
 {
-	[aspect]
-	{
-	  b is_selectable = false;
-	}
 	[door_basic]
 	{
 	  x second_door = 0x02400255;
@@ -17,10 +13,6 @@
 }
 [t:door_ice_gate_right,n:0x02400255]
 {
-	[aspect]
-	{
-	  b is_selectable = false;
-	}
 	[door_basic]
 	{
 	  x second_door = 0x02400254;
@@ -50,10 +42,6 @@
 }
 [t:door_ice_gate,n:0x02400250]
 {
-	[aspect]
-	{
-	  b is_selectable = false;
-	}
 	[door_basic]
 	{
 	  x second_door = 0x02400251;
@@ -67,10 +55,6 @@
 }
 [t:door_ice_gate_right,n:0x02400251]
 {
-	[aspect]
-	{
-	  b is_selectable = false;
-	}
 	[door_basic]
 	{
 	  x second_door = 0x02400250;
@@ -105,6 +89,7 @@
 {
 	[aspect]
 	{
+	  b is_invincible = true;
 	  b is_selectable = false;
 	}
 	[door_basic]
@@ -122,6 +107,7 @@
 {
 	[aspect]
 	{
+	  b is_invincible = true;
 	  b is_selectable = false;
 	}
 	[door_basic]
@@ -168,10 +154,6 @@
 }
 [t:door_ice_gate,n:0x0240024c]
 {
-	[aspect]
-	{
-	  b is_selectable = false;
-	}
 	[door_basic]
 	{
 	  x second_door = 0x0240024D;
@@ -185,10 +167,6 @@
 }
 [t:door_ice_gate_right,n:0x0240024d]
 {
-	[aspect]
-	{
-	  b is_selectable = false;
-	}
 	[door_basic]
 	{
 	  x second_door = 0x0240024C;
@@ -197,5 +175,55 @@
 	{
 	  p position = 0.0159403,-6,0.847565,0x156951da;
 		use_point_scids = 0x0240024e,0x0240024f;
+	}
+}
+[t:door_glb_woodfence_left_01,n:0x02400c2f]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.165047,0,-0.986285;
+	  p position = -0.598732,0,-2.09879,0x710e9314;
+	}
+}
+[t:door_glb_woodfence_left_01,n:0x02400d09]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.11579e-007,0,1;
+	  p position = -0.00312996,-0.95,0.99219,0x4028095c;
+	}
+}
+[t:door_ice_gate,n:0x02400d57]
+{
+	[door_basic]
+	{
+	  x second_door = 0x02400D58;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.45468e-007,0,1;
+	  p position = -0.00625157,-6,0.825325,0x76cd35e3;
+		use_point_scids = 0x02400D59,0x02400D5A;
+	}
+}
+[t:door_ice_gate_right,n:0x02400d58]
+{
+	[door_basic]
+	{
+	  x second_door = 0x02400D57;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.66939e-007,0,1;
+	  p position = 0.0101475,-6,0.818253,0x76cd35e3;
+		use_point_scids = 0x02400D59,0x02400D5A;
 	}
 }

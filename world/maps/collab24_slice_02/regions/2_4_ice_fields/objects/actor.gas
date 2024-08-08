@@ -269,7 +269,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -2.50045,0,0.63181,0x10b9b897;
+	  p position = -2.49506,0,0.65573,0x10b9b897;
 	}
 }
 [t:c24_2_r5_naldrun_03_healer,n:0x02500048]
@@ -465,35 +465,6 @@
 	  p position = 2.43144,0,0.287292,0x8a251411;
 	}
 }
-[t:c24_2_r5_naldrun_01_dmg,n:0x02500042]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 3.33439,0.337532,0.67506,0x531067f3;
-	}
-}
-[t:c24_2_r5_naldrun_02_trickster,n:0x02500044]
-{
-	[placement]
-	{
-	  p position = 2.76654,-0.0785942,-0.157188,0x531067f3;
-	}
-}
-[t:c24_2_r5_naldrun_01_dmg,n:0x02500043]
-{
-	[placement]
-	{
-	  p position = 1.44372,0.847,2.73499,0x5d2b4878;
-	}
-}
-[t:c24_2_r5_naldrun_03_healer,n:0x02500046]
-{
-	[placement]
-	{
-	  p position = 1.16633,0.882633,2.91317,0x5d2b4878;
-	}
-}
 [t:c24_2_r5_naldrun_01_dmg,n:0x0250004b]
 {
 	[placement]
@@ -516,41 +487,47 @@
 	  p position = -0.972578,3,0.839251,0x93b5bc3c;
 	}
 }
-[t:c24_2_r5_naldrun_03_healer,n:0x02500045]
+[t:c24_2_r5_dragon_boss,n:0x02500051]
 {
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500053,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
 	[placement]
 	{
-	  p position = -3.91052,0.491039,0.982078,0xebc371ab;
+	  q orientation = 4.37048e-007,-0.707107,-2.44248e-008,0.707106;
+	  p position = 2.70613,0,-0.270447,0x5e7d5885;
 	}
 }
-[t:c24_2_r5_naldrun_03_healer,n:0x0250003b]
+[t:c24_2_r5_naldrun_01_dmg,n:0x02500043]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 3.35304,9.53674e-007,-1.24643,0x2f9d1cf0;
+	  p position = 1.44372,0.847,2.73499,0x5d2b4878;
 	}
 }
-[t:c24_2_r5_naldrun_01_dmg,n:0x0250004d]
+[t:c24_2_r5_naldrun_03_healer,n:0x02500046]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 2.33168,0,-1.99136,0x2f9d1cf0;
-	}
-}
-[t:c24_2_r5_naldrun_03_healer,n:0x0250003c]
-{
-	[placement]
-	{
-	  p position = 2.82446,0,-3.37263,0x902c0e53;
-	}
-}
-[t:c24_2_r5_naldrun_02_trickster,n:0x0250003d]
-{
-	[placement]
-	{
-	  p position = 3.72155,0,-3.85793,0x902c0e53;
+	  p position = 1.16633,0.882633,2.91317,0x5d2b4878;
 	}
 }
 [t:c24_2_r5_naldrun_01_dmg,n:0x0250003e]
@@ -589,84 +566,6 @@
 	{
 	  q orientation = 0,-0.382683,0,0.92388;
 	  p position = 1.91305,0.958536,0.518441,0x814fbf8f;
-	}
-}
-[t:c24_2_r5_dragon_boss,n:0x02500051]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02500053,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 4.37048e-007,-0.707107,-2.44248e-008,0.707106;
-	  p position = 2.70613,0,-0.270447,0x5e7d5885;
-	}
-}
-[t:c24_2_r5_naldrun_03_healer,n:0x02500066]
-{
-	[placement]
-	{
-	  p position = 2.75918,-1.90735e-006,-0.418596,0x912e05e5;
-	}
-}
-[t:c24_2_r5_naldrun_01_dmg,n:0x02500067]
-{
-	[placement]
-	{
-	  p position = 3.65467,-1.90735e-006,-0.406164,0x912e05e5;
-	}
-}
-[t:c24_2_r5_naldrun_02_trickster,n:0x02500068]
-{
-	[placement]
-	{
-	  p position = 3.24177,0,0.168352,0x912e05e5;
-	}
-}
-[t:c24_2_r5_naldrun_02_trickster,n:0x02500062]
-{
-	[placement]
-	{
-	  p position = -1.88857,0,0.790238,0x3929f03c;
-	}
-}
-[t:c24_2_r5_naldrun_01_dmg,n:0x02500063]
-{
-	[placement]
-	{
-	  p position = -1.38923,0,-0.583831,0x3929f03c;
-	}
-}
-[t:c24_2_r5_naldrun_01_dmg,n:0x02500064]
-{
-	[placement]
-	{
-	  p position = -3.02531,1.90735e-006,1.75718,0x3929f03c;
-	}
-}
-[t:c24_2_r5_naldrun_03_healer,n:0x02500065]
-{
-	[placement]
-	{
-	  p position = -1.65289,0,1.01333,0x3929f03c;
 	}
 }
 [t:c24_2_r5_naldrun_02_trickster,n:0x0250006a]
