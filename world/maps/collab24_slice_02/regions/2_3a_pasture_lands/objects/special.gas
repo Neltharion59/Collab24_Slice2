@@ -27,6 +27,103 @@
 	  p position = 0.702038,1.90735e-006,0.212716,0x26c8fc57;
 	}
 }
+[t:trigger_generic,n:0x0290000b]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02900026,0f,"default","every",0);
+				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",19);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.0189972,0,0.544144,0x27716690;
+	}
+}
+[t:accumulate_trigger,n:0x02900025]
+{
+	[generic_accumtrigger]
+	{
+	  i num_til_send = 7;
+	  x send_to_scid = 0x0290000B;
+	}
+	[placement]
+	{
+	  p position = -1.24777,0,0.458923,0x27716690;
+	}
+}
+[t:set_bool,n:0x02900026]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707106;
+	  p position = 1.19015,0,0.997665,0x27716690;
+	}
+	[set_bool]
+	{
+		bool_variable = "c24_slice2_r4_flag_quest_hassat_leopard_killed";
+	}
+}
+[t:trigger_generic,n:0x02900021]
+{
+	[common]
+	{
+		dev_instance_text = "ON HASSAT READY TO FIGHT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02900017,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x0290001C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02900023,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(2.500000,0x0290000A,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -2.80695,0,-0.601593,0xea1ad916;
+	}
+}
+[t:set_bool,n:0x02900023]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707106;
+	  p position = -2.36757,0,3.34614,0xea1ad916;
+	}
+	[set_bool]
+	{
+		bool_variable = "c24_slice2_r4_flag_quest_hassat_under_tower";
+	}
+}
 [t:trigger_generic,n:0x02900007]
 {
 	[common]
@@ -122,103 +219,6 @@
 	[placement]
 	{
 	  p position = -0.364635,0,1.21818,0xd72fd100;
-	}
-}
-[t:trigger_generic,n:0x02900021]
-{
-	[common]
-	{
-		dev_instance_text = "ON HASSAT READY TO FIGHT";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02900017,0f,"default","every",0);
-				action* = send_world_message("we_req_deactivate",0x0290001C,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x02900023,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = go_within_sphere(2.500000,0x0290000A,"","on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -2.80695,0,-0.601593,0xea1ad916;
-	}
-}
-[t:set_bool,n:0x02900023]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707106,0,0.707106;
-	  p position = -2.36757,0,3.34614,0xea1ad916;
-	}
-	[set_bool]
-	{
-		bool_variable = "c24_slice2_r4_flag_quest_hassat_under_tower";
-	}
-}
-[t:trigger_generic,n:0x0290000b]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02900026,0f,"default","every",0);
-				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",19);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.0189972,0,0.544144,0x27716690;
-	}
-}
-[t:accumulate_trigger,n:0x02900025]
-{
-	[generic_accumtrigger]
-	{
-	  i num_til_send = 7;
-	  x send_to_scid = 0x0290000B;
-	}
-	[placement]
-	{
-	  p position = -1.24777,0,0.458923,0x27716690;
-	}
-}
-[t:set_bool,n:0x02900026]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707106,0,0.707106;
-	  p position = 1.19015,0,0.997665,0x27716690;
-	}
-	[set_bool]
-	{
-		bool_variable = "c24_slice2_r4_flag_quest_hassat_leopard_killed";
 	}
 }
 [t:trigger_generic,n:0x02900013]

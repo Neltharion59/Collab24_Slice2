@@ -494,40 +494,6 @@
 	  p position = -2.65111,-1,-2.89853,0x08a04bdf;
 	}
 }
-[t:c24_slice_2_r6_ice_mage_boss,n:0x0260005c]
-{
-	[aspect]
-	{
-	  b is_invincible = true;
-	  b is_selectable = false;
-	}
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02600089,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-5.96046e-008,0,1;
-	  p position = -3.91683,1,3.71069,0x6b13cc69;
-	}
-}
 [t:c24_slice_2_r6_shard_ice,n:0x02600063]
 {
 	[common]
@@ -583,6 +549,40 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -2.50598,-1,-2.61617,0xdeec1970;
+	}
+}
+[t:c24_slice_2_r6_ice_mage_boss,n:0x0260005c]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	  b is_selectable = false;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02600089,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.96046e-008,0,1;
+	  p position = -3.91683,1,3.71069,0x6b13cc69;
 	}
 }
 [t:c24_slice_2_r6_shard_ice,n:0x02600073]
