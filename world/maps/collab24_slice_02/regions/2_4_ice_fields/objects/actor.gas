@@ -853,3 +853,37 @@
 	  p position = -1.92559,0,-0.182542,0xf370e9a2;
 	}
 }
+[t:collab24_slice2_pm_l4,n:0x02500065]
+{
+	[aspect]
+	{
+	  f max_life = 68.6;
+	  f max_mana = 80;
+	}
+	[common]
+	{
+		dev_instance_text = "Singleplayer";
+	  b is_multi_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = collab24_slice2_conversation_pm_l4_accept;
+			* = collab24_slice2_conversation_pm_l4_disband;
+			* = collab24_slice2_conversation_pm_l4_disband_rejoin;
+			* = collab24_slice2_conversation_pm_l4_join;
+			* = collab24_slice2_conversation_pm_l4_reject;
+			* = collab24_slice2_conversation_pm_l4_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_collab24_slice2_pm_l4.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.984808,0,-0.173648;
+	  p position = 2.59193,-3.65,0.636352,0x6cb2f6cd;
+	}
+}

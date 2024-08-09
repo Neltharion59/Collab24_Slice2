@@ -1,0 +1,115 @@
+[t:template,n:collab24_slice2_pm_l3]
+{
+	doc = "collab24 slice2 pm l3";
+	specializes = base_pm_fb;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_ru;
+		[skills]
+		{
+			dexterity 		= 0.81, 0, 10;
+			intelligence 	= 0.27, 0, 10;
+			strength 		= 1.92, 0, 10;
+			melee 			= 3, 0, 0;
+			uber 			= 3, 0, 0;
+		}
+	}
+	[aspect]
+	{
+		gold_value = 1050;
+		model = m_c_gah_fb_pos_a1;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_28;
+			1 = b_c_pos_a1_028;
+		}
+	}
+	[common]
+	{
+		screen_name = "Larothan";
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_sl_f_g_c_fun;
+			es_feet = #boots/-no_mod/2-8;
+			es_weapon_hand = ss_un_gl_rusk;
+			es_shield_hand = #shield/-no_mod/5-10;
+            es_head = he_ca_le_avg;
+		}
+		[other]
+		{
+            il_main = potion_health_small;
+            il_main = potion_health_small;
+            il_main = potion_health_small;
+		}
+
+	}
+}
+[t:template,n:collab24_slice2_pm_l4]
+{
+	doc = "collab24 slice2 pm l4";
+	specializes = base_pm_fb;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_ze;
+		[skills]
+		{
+			strength 		= 0.36, 0, 10;
+			dexterity 		= 0.72, 0, 10;
+			intelligence 	= 2.92, 0, 10;
+
+			nature_magic 	= 4,0,0;
+			uber 			= 4,0,0;
+		}
+	}
+	[aspect]
+	{
+		gold_value = 1850;
+		model = m_c_gah_fb_pos_a1;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_14;
+			1 = b_c_pos_a1_029;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+	}
+	[common]
+	{
+		screen_name = "Dhuanor";
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[equipment]
+		{
+			es_chest = bd_ro_m_d_c_003;
+			es_feet = #boots/-no_mod/4-8;
+		}
+		[other]
+		{
+			il_active_primary_spell = spell_spark;
+			il_active_secondary_spell = spell_healing_hands;
+			il_spell_1 = spell_resurrect;
+			il_spell_2 = spell_flash;
+			il_spell_3 = spell_zap;
+			il_spell_4 = spell_summon_dsx_giant_rat;
+			il_spell_5 = spell_purity;
+			il_spell_6 = spell_transmute;
+			il_main = #staff/-no_mod/7-10;
+            il_main = potion_health_small;
+            il_main = potion_health_small;
+            il_main = potion_health_small;
+            il_main = potion_mana_small;
+            il_main = potion_mana_small;
+            il_main = potion_mana_small;
+            il_main = potion_mana_small;
+            il_main = potion_mana_small;
+            il_main = potion_mana_small;
+		}
+	}
+}

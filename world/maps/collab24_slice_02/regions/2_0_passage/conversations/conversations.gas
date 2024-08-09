@@ -155,12 +155,49 @@
 	  f scroll_rate = 10.000000;
 	}
 }
-[shop]
+[collab24_slice2_conversation_pm_l3_join]
 {
 	[text*]
 	{
-		choice = shop;
-		screen_text = "Trade, bitch";
-	  f scroll_rate = 10.000000;
+		choice = potential_member;
+		screen_text = "Let me go with you.";
+		scroll_rate = 6.5;
+	}
+}
+[collab24_slice2_conversation_pm_l3_accept]
+{
+	[text*]
+	{
+		screen_text = "I'm happy to go with you.";
+	}
+}
+[collab24_slice2_conversation_pm_l3_reject]
+{
+	[text*]
+	{
+		screen_text = "Why cannot I go with you?";
+	}
+}
+[collab24_slice2_conversation_pm_l3_rejoin]
+{
+	[text*]
+	{
+		screen_text = "Let me go with you.";
+		choice = potential_member;
+	}
+}
+[collab24_slice2_conversation_pm_l3_disband]
+{
+	[text*]
+	{
+		screen_text = "I shall not go with you anymore.";
+	}
+}
+[collab24_slice2_conversation_pm_l3_disband_rejoin]
+{
+	[text*]
+	{
+		screen_text = "Let us go together again.";
+		choice = potential_member;
 	}
 }
