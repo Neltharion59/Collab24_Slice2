@@ -1,0 +1,28 @@
+[t:emt_mist,n:0x02800035]
+{
+	[fire_emitter]
+	{
+	  f blue0 = 0.7;
+	  f green0 = 0.3;
+	  f red0 = 0;
+	}
+	[placement]
+	{
+	  p position = -0.0799465,-2.39617,1.39638,0xf788379c;
+	}
+}
+[t:emt_sound,n:0x02800036]
+{
+	[placement]
+	{
+	  q orientation = 0.382683,0,0,0.92388;
+	  p position = -0.240593,-2.2845,1.29886,0xf788379c;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_shrine_mana";
+	  f max_dist = 40;
+	  f min_dist = 10;
+	}
+}

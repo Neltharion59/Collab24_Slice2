@@ -1273,7 +1273,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x02600088,0f,"default","every",0), delay(1);
+				action* = send_world_message("we_req_deactivate",0x02600088,0f,"default","every",0), delay(1);
 			  b can_self_destruct = true;
 				condition* = actor_within_sphere(2.500000,"on_first_enter");
 			  f delay = 0.000000;

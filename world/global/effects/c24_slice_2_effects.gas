@@ -1602,7 +1602,26 @@
 				
 					
 			sfx start #POP;
+			]];
+}
+[effect_script*]
+{
+	name	=collab24_slice2_effect_revive_orthrac;
 
-			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
+	script	=[[
+			call healing_base s<b_sfx_bluestars_01> s<.6,.6,.6>;
+			
+			sfx create fire #TARGET
+				"texture(b_sfx_blood_002)color0(.7,.7,1)radius(.375)
+				offset(0,1,0)count(30)flamesize(.2)velocity(0,-16,0)
+				accel(0,10,0)alphafade(.75)dur(.85)";
+			sfx start #POP;
+
+			sfx create fire #TARGET
+				"texture(b_sfx_blood_002)color0(1,.7,1)radius(.375)offset(0,-1,0)
+				count(30)flamesize(.2)velocity(0,16,0)accel(0,-10,0)
+				alphafade(.75)dur(.85)";
+			sfx start #POP;
+			
 			]];
 }

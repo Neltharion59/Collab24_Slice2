@@ -10,3 +10,36 @@
 	  p position = -1.93126,0,-0.162388,0x8166b3c8;
 	}
 }
+[t:cmd_ai_c_patrol,n:0x02a000bd]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x02A000BE;
+	}
+	[placement]
+	{
+	  p position = -0.992764,1,1.45601,0x0ef9e7a9;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x02a000be]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x02A000BF;
+	}
+	[placement]
+	{
+	  p position = -0.953627,0,-1.14276,0x21fb2383;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x02a000bf]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x02A000BD;
+	}
+	[placement]
+	{
+	  p position = 0.81567,1.02455,-1.5581,0xbd4fc4ba;
+	}
+}

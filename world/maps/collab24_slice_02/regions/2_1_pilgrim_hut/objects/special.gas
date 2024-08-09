@@ -362,7 +362,6 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_trigger_activate",0x022000EA,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x022000FC,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -381,7 +380,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.382683,0,0.92388;
-	  p position = 0.115891,0,2.37566,0xf8126dd7;
+	  p position = 0.121315,0,2.43505,0xf8126dd7;
 	}
 }
 [t:blocking_object,n:0x02200091]
