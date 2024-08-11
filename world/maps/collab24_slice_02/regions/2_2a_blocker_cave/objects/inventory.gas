@@ -1,3 +1,45 @@
+[t:st_g_d_r_avg,n:0x02800056]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = -0.0238536,-0.918788,0.0561954,-0.390002;
+	  p position = -0.916664,-2.7968,-4.808,0xe5f591db;
+	}
+}
+[t:c24_scroll_fireball,n:0x02800016]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",3);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_picked_up",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-5.96046e-007;
+	  p position = -1.65242,1.44528,-0.747272,0xc26a6125;
+		use_point_scids = 0x02800009;
+	}
+}
 [t:c24_2_r3_dynamite,n:0x02800003]
 {
 	[common]
@@ -86,37 +128,7 @@
 	{
 	  q orientation = 0,1,0,-2.98023e-008;
 	  p position = 0.044014,1.45267,1.59178,0x4fcaea20;
-		use_point_scids = 0x0280000F;
-	}
-}
-[t:c24_scroll_fireball,n:0x02800016]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",3);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_picked_up",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-5.96046e-007;
-	  p position = -1.65242,1.44528,-0.747272,0xc26a6125;
-		use_point_scids = 0x02800009;
+		use_point_scids = 0x0280000f;
 	}
 }
 [t:c24_scroll_summon_cow,n:0x0280002a]
@@ -146,18 +158,6 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 0.699409,0.751815,1.59228,0x4fcaea20;
-		use_point_scids = 0x0280000F;
-	}
-}
-[t:st_g_d_r_avg,n:0x02800056]
-{
-	[aspect]
-	{
-	  b is_selectable = false;
-	}
-	[placement]
-	{
-	  q orientation = -0.0238536,-0.918788,0.0561954,-0.390002;
-	  p position = -0.916664,-2.7968,-4.808,0xe5f591db;
+		use_point_scids = 0x0280000f;
 	}
 }

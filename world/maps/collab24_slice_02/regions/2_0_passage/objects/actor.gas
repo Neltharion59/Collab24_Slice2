@@ -1,3 +1,37 @@
+[t:collab24_slice2_pm_l3,n:0x02100228]
+{
+	[aspect]
+	{
+	  f max_life = 78.4;
+	  f max_mana = 31;
+	}
+	[common]
+	{
+		dev_instance_text = "Singleplayer";
+	  b is_multi_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = collab24_slice2_conversation_pm_l3_accept;
+			* = collab24_slice2_conversation_pm_l3_disband;
+			* = collab24_slice2_conversation_pm_l3_disband_rejoin;
+			* = collab24_slice2_conversation_pm_l3_join;
+			* = collab24_slice2_conversation_pm_l3_reject;
+			* = collab24_slice2_conversation_pm_l3_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_collab24_slice2_pm_l3.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-6.46033e-009;
+	  p position = -1.18354,-1.05229,-3.47711,0x2fa898d3;
+	}
+}
 [t:collab24_slice2_r0_butterfly,n:0x0210138b]
 {
 	[mind]
@@ -1236,39 +1270,5 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = -2.70354,4.00571,-4.97718,0x9e084e28;
-	}
-}
-[t:collab24_slice2_pm_l3,n:0x02100228]
-{
-	[aspect]
-	{
-	  f max_life = 78.4;
-	  f max_mana = 31;
-	}
-	[common]
-	{
-		dev_instance_text = "Singleplayer";
-	  b is_multi_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = collab24_slice2_conversation_pm_l3_accept;
-			* = collab24_slice2_conversation_pm_l3_disband;
-			* = collab24_slice2_conversation_pm_l3_disband_rejoin;
-			* = collab24_slice2_conversation_pm_l3_join;
-			* = collab24_slice2_conversation_pm_l3_reject;
-			* = collab24_slice2_conversation_pm_l3_rejoin;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_collab24_slice2_pm_l3.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-6.46033e-009;
-	  p position = -1.18354,-1.05229,-3.47711,0x2fa898d3;
 	}
 }
