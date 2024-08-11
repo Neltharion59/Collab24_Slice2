@@ -14,6 +14,14 @@
 	  p position = -2.40566,0,1.37116,0x774d54a6;
 	}
 }
+[t:c24_2_r3_vaarth_magic,n:0x02800004]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.36099,-3.9361,-5.2667,0x553f8d03;
+	}
+}
 [t:c24_2_r4_krusk,n:0x0280001d]
 {
 	[actor]
@@ -49,12 +57,12 @@
 	  p position = 3.34849,0,-1.10713,0xc965d840;
 	}
 }
-[t:c24_2_r3_vaarth_magic,n:0x02800004]
+[t:c24_2_r3_vaarth_ranged,n:0x02800002]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 1.36099,-3.9361,-5.2667,0x553f8d03;
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = -1.69428,2,-0.460243,0x817b7eaa;
 	}
 }
 [t:c24_2_r3_vaarth_ranged,n:0x02800008]
@@ -71,13 +79,5 @@
 	{
 	  q orientation = 0,0.92388,0,-0.382683;
 	  p position = 1.90773,2,3.90887,0xd58721c5;
-	}
-}
-[t:c24_2_r3_vaarth_ranged,n:0x02800002]
-{
-	[placement]
-	{
-	  q orientation = 0,0.923879,0,-0.382684;
-	  p position = -1.69428,2,-0.460243,0x817b7eaa;
 	}
 }
