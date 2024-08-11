@@ -13,7 +13,6 @@
 		skill_class = "Nature Magic";
 	}
 }
-
 [t:template,n:c24_r1_voadyk_spell_water_splash]
 {
 	category_name = "magic";
@@ -21,8 +20,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 20;
-		damage_min = 18;
+		damage_max = 31;
+		damage_min = 28;
 	}
 	[magic]
 	{
@@ -49,8 +48,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 22;
-		damage_min = 20;
+		damage_max = 35;
+		damage_min = 28;
 	}
 	[common]
 	{
@@ -84,7 +83,7 @@
 	{
 		apply_enchantments = false;
 		cast_range = 30;
-		cast_reload_delay = 0.15;
+		cast_reload_delay = 0.30;
 		effect_duration = 3;
 		mana_cost = 0;
 		requires_line_of_sight = true;
@@ -101,7 +100,7 @@
 				duration = 3;
 				frequency = 0;
 				initial_delay = 0.25;
-				value = -30;
+				value = -15;
 			}
 		}
 	}
@@ -135,7 +134,7 @@
 	[magic]
 	{
 		cast_range = 17;
-		cast_reload_delay = 0.15;
+		cast_reload_delay = 1;
 		mana_cost = 0;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -168,7 +167,7 @@
 	[magic]
 	{
 		cast_range = 17;
-		cast_reload_delay = 0.15;
+		cast_reload_delay = 1;
 		mana_cost = 0;
 		requires_line_of_sight = true;
 		speed_bias = 1;
@@ -244,8 +243,8 @@
 	{
 		area_damage_radius = 3;
 		// Has 3 Projectiles
-		damage_max = 20;
-		damage_min = 15;
+		damage_max = 29;
+		damage_min = 26;
 	}
 	[common]
 	{
@@ -282,8 +281,8 @@
 	[attack]
 	{
 		area_damage_radius = 3;
-		damage_max = 40;
-		damage_min = 35;
+		damage_max = 48;
+		damage_min = 40;
 
 	}
 	[magic]

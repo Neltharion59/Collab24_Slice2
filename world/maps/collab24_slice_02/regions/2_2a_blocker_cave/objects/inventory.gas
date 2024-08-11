@@ -19,6 +19,7 @@
 			[*]
 			{
 				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",3);
+				action* = send_world_message("we_req_activate",0x0280002B,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_picked_up",0,"on_first_message");
 			  f delay = 0.000000;

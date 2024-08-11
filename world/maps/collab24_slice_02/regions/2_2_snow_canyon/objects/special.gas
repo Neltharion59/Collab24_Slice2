@@ -1,3 +1,33 @@
+[t:trigger_generic,n:0x02300061]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_delete",0x02300025,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02300061,3f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -2.19599,0,-3.53621,0x78169ad7;
+	}
+}
 [t:trigger_generic,n:0x02300009]
 {
 	[common]
@@ -350,6 +380,7 @@
 				action* = send_world_message("we_req_activate",0x023001D7,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x023001D8,0f,"default","every",0);
 				action* = send_world_message("we_req_deactivate",0x023001D9,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02300837,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -843,6 +874,35 @@
 	[placement]
 	{
 	  p position = 0.551384,0,-0.352386,0xfabdd62c;
+	}
+}
+[t:trigger_generic,n:0x02300837]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_delete",0x02300092,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02300837,3f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.51762,0,1.18397,0xfabdd62c;
 	}
 }
 [t:trigger_generic,n:0x02300091]

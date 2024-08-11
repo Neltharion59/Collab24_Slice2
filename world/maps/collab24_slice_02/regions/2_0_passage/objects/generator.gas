@@ -60,24 +60,6 @@
 	  p position = -2.20346,0,-0.361546,0x2183d3df;
 	}
 }
-[t:generator_generic,n:0x02100dee]
-{
-	[common]
-	{
-		dev_instance_text = "1 - Water Minion";
-	}
-	[generator_basic]
-	{
-		child_template_name = "c24_2_r1_water_elemental_mangler";
-	  b get_child_cc = true;
-	  x msg_scid = 0x02100EC9;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1,0,2.12514e-007;
-	  p position = 1.7365,0,1.85336,0xa67d2e98;
-	}
-}
 [t:generator_generic,n:0x02100def]
 {
 	[common]
@@ -97,87 +79,7 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,-2.12514e-007;
-	  p position = 0.354919,0,1.87845,0xa67d2e98;
-	}
-}
-[t:generator_generic,n:0x02100df0]
-{
-	[common]
-	{
-		dev_instance_text = "3";
-	}
-	[generator_basic]
-	{
-		child_template_name = "c24_2_r1_voadyk";
-	  b get_child_cc = true;
-	  x msg_scid = 0x02100ECF;
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 0.5,1,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1,0,2.12514e-007;
-	  p position = 1.2393,0,1.83502,0xa67d2e98;
-	}
-}
-[t:generator_generic,n:0x02100df1]
-{
-	[common]
-	{
-		dev_instance_text = "4";
-	}
-	[generator_basic]
-	{
-		child_template_name = "c24_2_r1_mercrus";
-	  b get_child_cc = true;
-	  x msg_scid = 0x02100ED1;
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 0,0,1;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1,0,2.12514e-007;
-	  p position = 0.634483,0,1.81337,0xa67d2e98;
-	}
-}
-[t:generator_generic,n:0x02100ec4]
-{
-	[common]
-	{
-		dev_instance_text = "1 - Water Minion";
-	}
-	[generator_basic]
-	{
-		child_template_name = "c24_2_r1_water_elemental_mangler";
-	  b get_child_cc = true;
-	  x msg_scid = 0x02100EC9;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1,0,2.12514e-007;
-	  p position = 0.946831,0,1.84002,0xa67d2e98;
-	}
-}
-[t:generator_generic,n:0x02100ec5]
-{
-	[common]
-	{
-		dev_instance_text = "1 - Water Minion";
-	}
-	[generator_basic]
-	{
-		child_template_name = "c24_2_r1_water_elemental_mangler";
-	  b get_child_cc = true;
-	  x msg_scid = 0x02100EC9;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1,0,2.12514e-007;
-	  p position = -0.0313034,0,1.84631,0xa67d2e98;
+	  p position = -1.22971,0,0.846523,0xa67d2e98;
 	}
 }
 [t:generator_generic,n:0x021004c6]

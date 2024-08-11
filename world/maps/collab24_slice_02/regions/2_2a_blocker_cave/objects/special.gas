@@ -120,7 +120,7 @@
 	}
 	[placement]
 	{
-	  p position = 0.205067,0,1.31382,0xc26a6125;
+	  p position = 0.249283,0,1.35075,0xc26a6125;
 	}
 }
 [t:trigger_generic,n:0x0280000e]
@@ -152,6 +152,36 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 1.59165,0,1.29945,0xc26a6125;
+	}
+}
+[t:trigger_generic,n:0x0280002b]
+{
+	[common]
+	{
+		dev_instance_text = "STOP MONITORING THE SCROLL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_delete",0x0280000B,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0280002B,3f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.423255,0,0.419812,0xc26a6125;
 	}
 }
 [t:use_point,n:0x02800006]

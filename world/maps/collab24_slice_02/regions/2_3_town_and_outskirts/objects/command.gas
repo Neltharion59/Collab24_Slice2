@@ -121,14 +121,11 @@
 	  p position = -1.91455,0,-0.823068,0x2f443bb7;
 	}
 }
-[t:cmd_selection_toggle,n:0x02400145]
+[t:dsx_cmd_visibility_switch,n:0x02400145]
 {
-	[cmd_selection_toggle]
+	[dsx_cmd_visibility_switch]
 	{
-	  x object_scid = 0x0240029E;
-	  i start_state = 1;
-	  b toggle_selection = false;
-	  b toggle_visability = true;
+	  x target_scid = 0x0240029E;
 	}
 	[placement]
 	{
@@ -300,5 +297,17 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 1.00383,-6,-2.28284,0x156951da;
+	}
+}
+[t:dsx_cmd_visibility_switch,n:0x02400c25]
+{
+	[dsx_cmd_visibility_switch]
+	{
+	  x target_scid = 0x0240029E;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.17265,0,1.80293,0xdb73f282;
 	}
 }

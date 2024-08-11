@@ -30,14 +30,6 @@
 	  p position = 7.5417,-4.5,5.12705,0x05f7ab9c;
 	}
 }
-[t:cart_glb_caravan_01,n:0x0240029e]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -3.88728,0,-0.936249,0xc8850d47;
-	}
-}
 [t:collab24_slice2_bush_ice_rhod_03,n:0x02400d53]
 {
 	[placement]
@@ -2770,7 +2762,7 @@
 {
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,-0.707107;
+	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 6.31661,-4.95,-7.73071,0xd467bdd7;
 	}
 }
@@ -9695,6 +9687,14 @@
 	{
 	  q orientation = 0,0.92388,0,0.382683;
 	  p position = 2.02821,-0.35,2.7444,0x0b47126b;
+	}
+}
+[t:cart_glb_caravan_01,n:0x0240029e]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.76662,0,1.12455,0x6c563ad8;
 	}
 }
 [t:tree_ice_pine_group_02,n:0x02400ba7]

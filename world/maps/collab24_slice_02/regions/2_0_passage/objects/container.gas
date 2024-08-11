@@ -79,6 +79,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_deactivate",0x02100049,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0210022B,0.1f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_killed",0,"on_first_message");
 			  f delay = 0.000000;
@@ -207,7 +208,7 @@
 	[placement]
 	{
 	  q orientation = -2.14162e-007,0.707107,-2.14162e-007,0.707107;
-	  p position = -1.37806,0,-0.58727,0x6731f12c;
+	  p position = -1.56047,0,0.458345,0x6731f12c;
 	}
 }
 [t:c24_slice2_r1_ctn_webbed_barrel_1,n:0x02100eac]

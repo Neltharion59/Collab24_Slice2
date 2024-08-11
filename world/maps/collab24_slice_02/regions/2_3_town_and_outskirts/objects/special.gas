@@ -257,7 +257,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x02400148,0f,"0x4005","go_within_sphere",0);
-				action* = send_world_message("we_req_deactivate",0x02400145,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02400145,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x02400149,0f,"default","every",0);
 				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",9);
 			  b can_self_destruct = true;
@@ -1321,6 +1321,34 @@
 	[placement]
 	{
 	  p position = 0.163145,-6,1.78917,0x76cd35e3;
+	}
+}
+[t:trigger_generic,n:0x02400c24]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02400C25,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,5.000000,0.200000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.00995159,-6,-0.986481,0x76cd35e3;
 	}
 }
 [t:use_point,n:0x02400d59]

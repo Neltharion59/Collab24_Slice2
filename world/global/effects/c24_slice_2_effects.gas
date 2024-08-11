@@ -36,13 +36,6 @@
 			sfx friendly party $trackball;
 
 			////////////////////////////////////////////
-			//// Create a light to attach to our trackball
-			sfx create lightsource #SOURCE 
-				"must_update()color0(1,1,.7)color1(0,0,1)";
-			set $light #POP;
-			sfx rat $light;
-			sfx target $light $trackball;
-			sfx attach $trackball $light;
 
 			sfx start $trackball;
 
@@ -1623,5 +1616,24 @@
 				alphafade(.75)dur(.85)";
 			sfx start #POP;
 			
+			]];
+}
+[effect_script*]
+{
+	name	=collab24_slice2_water_explosion;
+
+	script	=[[
+
+			sfx create explosion #TARGET 
+				"dur(1)scale(1)offset(0,.2,0)color0(0,.2,.7)color1(.0,.0,.0)texture(b_sfx_splotches_01)
+				omni_dir()";
+			sfx start #POP;
+
+			sfx create fire #TARGET 
+				"dur(1)dark()grey_tex()color0(0,.2,.7)color1(0,0,0)texture(b_sfx_splotches_01)
+				count(20)alphafade(.2)flamesize(6)max_radius(16)instant()
+				velocity(0,2,0)accel(0,0,0)";
+			sfx start #POP;
+
 			]];
 }

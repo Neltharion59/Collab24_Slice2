@@ -1,0 +1,48 @@
+[t:statue_cav_spin_02,n:0x00100003]
+{
+	[common]
+	{
+		screen_name = "ACTIVATE";
+	}
+	[on_off_lever]
+	{
+	  x on_scid = 0x00100001;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.993618,0,-0.454442,0x09529b59;
+	}
+}
+[t:statue_cav_spin_01,n:0x00100005]
+{
+	[on_off_lever]
+	{
+		on_message = we_req_deactivate;
+	  x on_scid = 0x00100001;
+	  x on_scid_2 = 0x00100007;
+	  x on_scid_3 = 0x00100012;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.1976,0,-3.20983,0x09529b59;
+	}
+}
+[t:statue_cav_spin_02,n:0x00100013]
+{
+	[common]
+	{
+		screen_name = "DEACTIVATE";
+	}
+	[on_off_lever]
+	{
+		on_message = we_req_deactivate;
+	  x on_scid = 0x00100001;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.788204,0,-1.31435,0x09529b59;
+	}
+}

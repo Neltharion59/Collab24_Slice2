@@ -405,7 +405,7 @@
 			strength =     19, 0;
 			intelligence = 15, 0;
 			dexterity =    15, 0;
-			melee =        5, 0;
+			melee =        4, 0;
 		}
 	}
 	[aspect]
@@ -431,8 +431,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 38; 
-		damage_min = 33;
+		damage_max = 31; 
+		damage_min = 27;
 	}
 	
 	[common]
@@ -462,6 +462,14 @@
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
 		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = collab24_slice2_water_explosion;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate] {}
 	}
 }
 [t:template,n:c24_2_r1_water_elemental_larch]
@@ -599,6 +607,14 @@
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
 		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = collab24_slice2_water_explosion;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate] {}
 	}
 }
 [t:template,n:c24_2_r1_voadyk]
@@ -781,6 +797,14 @@
 		ranged_engage_range = 16.0;
 		sight_range = 16.0;
 	}
+	[physics]
+	{
+		break_effect = collab24_slice2_water_explosion;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate] {}
+	}
 }
 [t:template,n:c24_2_r1_mercrus_base]
 {
@@ -942,13 +966,13 @@
 			{
 				[oneof*]
 				{
-					il_main = #weapon/19-29;
+					il_main = #weapon/20-25;
                     il_main = #armor/30-55;
-					il_main = #*/19-29;
+					il_main = #*/20-25;
 				}
 				[all*]
 				{
-					il_main = potion_health_small;
+					il_main = potion_mana_medium;
 					il_main = #nmagic/3-6;
 				}
 				[gold*]
