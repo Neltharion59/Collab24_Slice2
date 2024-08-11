@@ -658,14 +658,14 @@
 			{
 				[all*]
 				{
-					chance = 0.75;
-    	        	il_main = #spell/4-8;
+					chance = 0.95;
+    	        	il_main = #spell/2-6;
 					max = 4;
 					min = 2;
 				}
 				[oneof*]
 				{
-					chance = 0.25;
+					chance = 0.05;
     	        	il_main = #spellbook/16-35;
 				}
 			}
@@ -708,14 +708,14 @@
 				{
 					chance = 0.90;
 					il_main = #weapon/-rare(1)/20-28;
-					il_main = #armor/-rare(1)/55-70;
+					il_main = #armor/-rare(1)/55-65;
 					il_main = #*/-rare(1)/20-28;
 				}
 				[oneof*]
 				{
 					chance = 0.10;
 					il_main = #weapon/-unique(2)/20-28;
-					il_main = #armor/-unique(2)/55-70;
+					il_main = #armor/-unique(2)/55-65;
 					il_main = #*/-unique(2)/20-28;
 				}
 			}
@@ -758,7 +758,7 @@
 				[oneof*]
 				{
 					il_main = #weapon/-mod(1)/20-28;
-					il_main = #armor/-mod(1)/50-70;
+					il_main = #armor/-mod(1)/40-60;
 					il_main = #*/-mod(1)/20-28;
 				}
 			}
@@ -798,12 +798,12 @@
 			{
 				[all*]
 				{
-					chance = 0.85;
-    	        	il_main = #spell/8-12;
+					chance = 0.95;
+    	        	il_main = #spell/4-8;
 				}
 				[oneof*]
 				{
-					chance = 0.15;
+					chance = 0.05;
     	        	il_main = #spellbook/25-40;
 				}
 			}
@@ -842,12 +842,12 @@
 			{
 				[oneof*]
 				{
-					il_main	= #weapon/-mod(1)/25-40;
+					il_main	= #weapon/-mod(1)/25-32;
 					chance = 0.85;
 				}
 				[oneof*]
 				{
-					il_main	= #weapon/-rare(1)/25-40;
+					il_main	= #weapon/-rare(1)/25-32;
 					chance = 0.15;
 				}
 			}
@@ -882,12 +882,12 @@
 			{
 				[oneof*]
 				{
-					il_main	= #armor/-mod(1)/60-90;
+					il_main	= #armor/-mod(1)/40-70;
 					chance = 0.85;
 				}
 				[oneof*]
 				{
-					il_main	= #armor/-rare(1)/60-90;
+					il_main	= #armor/-rare(1)/40-70;
 					chance = 0.15;
 				}
 			}
@@ -928,21 +928,6 @@
 				{
 					il_main	= #ring/-mod(1)/5-15;
 					il_main	= #amulet/-mod(1)/5-15;
-					min = 1;
-					max = 2;
-					chance = 0.85;
-				}
-				[oneof*]
-				{
-					il_main	= #ring/-rare(1)/5-15;
-					il_main	= #amulet/-rare(1)/5-15;
-					chance = 0.10;
-				}
-				[oneof*]
-				{
-					il_main	= #ring/-unique(2)/5-15;
-					il_main	= #amulet/-unique(2)/5-15;
-					chance = 0.05;
 				}
 			}
 		}
