@@ -44,7 +44,7 @@
 		}
 		[*]
 		{
-			description = Return Maashner's club to its owner;
+			description = Speak with Maashner;
 		  b is_consumable = true;
 		  i order = 2;
 		  b required = true;
@@ -52,8 +52,8 @@
 		}
 		[*]
 		{
-			address = 2_0_passage:conversations:conv_giant_agg_barricade_smashed;
-			description = Destroy the creature;
+			address = 2_0_passage:conversations:conv_giant_agg_found_club;
+			description = Drop Maashner's club on the ground;
 		  b is_consumable = true;
 		  i order = 3;
 		  b required = true;
@@ -69,10 +69,27 @@
 		}
 		[*]
 		{
+			address = 2_0_passage:conversations:conv_giant_agg_barricade_smashed;
+			description = Destroy the creature;
+		  b is_consumable = true;
+		  i order = 5;
+		  b required = true;
+			speaker = Maashner;
+		}
+		[*]
+		{
+			description = Speak with Maashner;
+		  b is_consumable = true;
+		  i order = 6;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
 			address = 2_0_passage:conversations:conv_giant_agg_killed_insect_first;
 			description = You have helped the giants resolve their dispute. Perhaps Notatakk would like to speak with you as well.;
 		  b is_consumable = true;
-		  i order = 5;
+		  i order = 7;
 		  b required = true;
 			speaker = Maashner;
 		}

@@ -145,6 +145,45 @@
 	  p position = -0.758767,-3.93306,-3.44777,0x7c5c780f;
 	}
 }
+[t:statue_glb_roman_06,n:0x02800029]
+{
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.66939e-007;
+	  p position = -0.0762615,-3.85831,1.23328,0xf788379c;
+	}
+}
+[t:column_gargoyle,n:0x02800037]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 0.901585,-3.93078,1.37575,0xf788379c;
+	}
+}
+[t:column_gargoyle,n:0x02800038]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -0.92384,-3.75855,1.16557,0xf788379c;
+	}
+}
+[t:books_glb_02,n:0x0280003a]
+{
+	[placement]
+	{
+	  p position = 0.89966,-2.63095,1.37836,0xf788379c;
+	}
+}
+[t:book_glb_magic_02,n:0x0280003b]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.939657,-2.45308,1.1946,0xf788379c;
+	}
+}
 [t:well_grs,n:0x0280003c]
 {
 	[aspect]
@@ -169,48 +208,16 @@
 	  p position = 2.32612,-0.506701,-2.03972,0x3fa6b05e;
 	}
 }
-[t:firepit_glb_04,n:0x02800032]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -2.15493,0,-0.723438,0x59d0a909;
-	}
-}
-[t:spit_grs_01,n:0x0280003f]
-{
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -1.23528,0,-0.242346,0x59d0a909;
-	}
-}
-[t:spit_grs_01,n:0x02800040]
-{
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -2.81089,0,-1.44657,0x59d0a909;
-	}
-}
-[t:spit_grs_01,n:0x02800041]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.923879;
-	  p position = -2.49488,0,-0.410595,0x59d0a909;
-	}
-}
-[t:bookcase_glb_01,n:0x02800007]
+[t:bucket_grs_01,n:0x0280003d]
 {
 	[aspect]
 	{
-	  f scale_multiplier = 1.5;
+	  f scale_multiplier = 2;
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -1.68573,0,-0.594486,0xc26a6125;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.91365,0,-3.18911,0x11755071;
 	}
 }
 [t:firepit_glb_04,n:0x02800030]
@@ -345,26 +352,6 @@
 	  p position = 3.22844,0.616387,-1.54253,0x7155118f;
 	}
 }
-[t:bucket_grs_01,n:0x0280003d]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 2;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 3.91365,0,-3.18911,0x11755071;
-	}
-}
-[t:torch_glb_stick,n:0x0280002f]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.92388,0,0.382683;
-	  p position = -3.90983,2.86102e-006,1.086,0xbd435bf9;
-	}
-}
 [t:bed_glb_fort_02,n:0x02800025]
 {
 	[aspect]
@@ -377,42 +364,55 @@
 	  p position = 1.25315,-2,-4.63041,0x8fe150d4;
 	}
 }
-[t:statue_glb_roman_06,n:0x02800029]
+[t:bookcase_glb_01,n:0x02800007]
 {
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
 	[placement]
 	{
-	  q orientation = 0,-1,0,-1.66939e-007;
-	  p position = -0.0762615,-3.85831,1.23328,0xf788379c;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.68573,0,-0.594486,0xc26a6125;
 	}
 }
-[t:column_gargoyle,n:0x02800037]
+[t:firepit_glb_04,n:0x02800032]
 {
 	[placement]
 	{
-	  q orientation = 0,0.382683,0,0.92388;
-	  p position = 0.901585,-3.93078,1.37575,0xf788379c;
+	  q orientation = 0,1,0,0;
+	  p position = -2.15493,0,-0.723438,0x59d0a909;
 	}
 }
-[t:column_gargoyle,n:0x02800038]
+[t:spit_grs_01,n:0x0280003f]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -0.92384,-3.75855,1.16557,0xf788379c;
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -1.23528,0,-0.242346,0x59d0a909;
 	}
 }
-[t:books_glb_02,n:0x0280003a]
+[t:spit_grs_01,n:0x02800040]
 {
 	[placement]
 	{
-	  p position = 0.89966,-2.63095,1.37836,0xf788379c;
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -2.81089,0,-1.44657,0x59d0a909;
 	}
 }
-[t:book_glb_magic_02,n:0x0280003b]
+[t:spit_grs_01,n:0x02800041]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.939657,-2.45308,1.1946,0xf788379c;
+	  q orientation = 0,-0.382683,0,0.923879;
+	  p position = -2.49488,0,-0.410595,0x59d0a909;
+	}
+}
+[t:torch_glb_stick,n:0x0280002f]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -3.90983,2.86102e-006,1.086,0xbd435bf9;
 	}
 }

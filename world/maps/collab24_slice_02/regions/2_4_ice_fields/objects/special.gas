@@ -256,7 +256,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes(0x00000025,33,33,33,"out:black");
+				action* = fade_nodes(0x00000025,33,33,33,"in");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,0.100000,"on_every_enter");
 			  f delay = 0.000000;
@@ -285,7 +285,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes(0x00000025,33,33,33,"in");
+				action* = fade_nodes(0x00000025,33,33,33,"out:black");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,0.100000,"on_every_enter");
 			  f delay = 0.000000;

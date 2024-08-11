@@ -136,7 +136,8 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x02100147,0f,"default","every",0);
-				action* = change_quest_state("c24_slice_2_quest_giants","active",3);
+				action* = change_quest_state("c24_slice_2_quest_giants","active",4);
+				action* = send_world_message("we_req_talk_begin",0x02100007,0.2f,"0x0004","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_killed",0,"on_first_message");
 			  f delay = 0.000000;
