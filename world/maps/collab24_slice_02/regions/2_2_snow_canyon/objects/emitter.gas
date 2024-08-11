@@ -1,15 +1,19 @@
-[t:emt_sound,n:0x02300084]
+[t:emt_generic,n:0x02300084]
 {
+	[common]
+	{
+		dev_instance_text = "TREE MOANING";
+	}
+	[generic_emitter]
+	{
+		other_effect = "collab24_slice2_effect_tree_cry";
+	  f rep_freq_max = 7;
+	  f rep_freq_min = 2;
+	}
 	[placement]
 	{
 	  q orientation = 0,1,0,-2.98023e-008;
-	  p position = -3.84875,0,-1.96286,0x4b693d61;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_moaning";
-	  b stop_instantly = true;
+	  p position = -3.028,0,-1.02141,0x4b693d61;
 	}
 }
 [t:emt_generic_act,n:0x02300086]
@@ -41,7 +45,7 @@
 	}
 	[placement]
 	{
-	  p position = -1.6024,0,3.16869,0x4b693d61;
+	  p position = -1.46458,0,3.14909,0x4b693d61;
 	}
 }
 [t:emt_generic_act,n:0x02300099]

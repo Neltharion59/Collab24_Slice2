@@ -1559,6 +1559,14 @@
 }
 [effect_script*]
 {
+	name	=collab24_slice2_effect_tree_cry;
+
+	script	=[[
+			sound play s_e_moan_loud at #SOURCE_POSITION dist 3 30;
+			]];
+}
+[effect_script*]
+{
 	name	=collab24_slice2_major_heal;
 
 	script	=[[

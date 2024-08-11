@@ -1,0 +1,13 @@
+[t:template,n:collab24_slice_2_cmd_set_visibility]
+{
+	specializes = cmd_const;
+	doc			= "collab24 Slice2 Cmd Set Visibility";
+	extra_doc	= "Use this command to make target_object selectable and not invincible.";
+    category_name       = "zurb";
+
+	[collab24_slice2_cmd_set_visibility]
+    {
+        target_object			= ;
+	}
+	[gizmo] { diffuse_color=0.000000,0.000000,0.700000; texture=; }
+}

@@ -1168,7 +1168,6 @@
 {
 	[aspect]
 	{
-	  b force_no_render = true;
 	  b is_invincible = true;
 	  b is_selectable = false;
 	}
@@ -1212,10 +1211,14 @@
 }
 [t:c24_2_r1_orthrac,n:0x02400241]
 {
+	[aspect]
+	{
+	  b is_invincible = true;
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.382684,0,0.92388;
-	  p position = -3.2483,0,-0.141098,0x0e3b8b40;
+	  p position = -2.72265,0,-0.493507,0x0e3b8b40;
 	}
 }
 [t:c24_2_r4_shagor,n:0x024001a3]

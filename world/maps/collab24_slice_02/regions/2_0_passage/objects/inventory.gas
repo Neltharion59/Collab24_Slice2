@@ -7,7 +7,7 @@
 			[*]
 			{
 				action* = change_quest_state("c24_slice_2_quest_dead_orthrac","active",0);
-				action* = send_world_message("we_trigger_activate",0x02400003,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02400003,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_picked_up",0,"on_first_message"), doc("[*converted to one-shot*]");
 			  f delay = 0.000000;

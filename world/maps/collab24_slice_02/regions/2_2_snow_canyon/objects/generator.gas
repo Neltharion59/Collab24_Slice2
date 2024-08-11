@@ -1,18 +1,3 @@
-[t:generator_bush_02,n:0x0230008b]
-{
-	[generator_advanced_a2]
-	{
-		child_template_name = "c24_2_r3_kurgan_melee";
-	  x initial_command = 0x0230008D;
-	  f spawn_period = 1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.382683,0,0.92388;
-	  p position = 2.24794,0,-1.45105,0xa403f032;
-	}
-}
 [t:generator_bush_02,n:0x0230008a]
 {
 	[generator_advanced_a2]
@@ -26,6 +11,21 @@
 	{
 	  q orientation = 0,-5.66244e-007,0,1;
 	  p position = 2.5735,0,0.313046,0x4b877675;
+	}
+}
+[t:generator_bush_02,n:0x0230008b]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_2_r3_kurgan_melee";
+	  x initial_command = 0x0230008D;
+	  f spawn_period = 1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 2.24794,0,-1.45105,0xa403f032;
 	}
 }
 [t:generator_bush_02,n:0x02300087]
@@ -55,5 +55,19 @@
 	[placement]
 	{
 	  p position = -2.38217,5.975,2.36813,0x5f75e7ba;
+	}
+}
+[t:generator_generic,n:0x02300836]
+{
+	[generator_basic]
+	{
+		child_template_name = "0x023003C2";
+	  x initial_command = 0x02300835;
+	  f spawn_period = 0.1;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-4.69147e-008;
+	  p position = -1.86427,-1.97285,2.95609,0xfba5acf2;
 	}
 }

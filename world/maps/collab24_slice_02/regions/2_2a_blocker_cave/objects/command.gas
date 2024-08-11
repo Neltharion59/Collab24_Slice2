@@ -25,8 +25,12 @@
 	  p position = -1.30326,0,1.54188,0xc26a6125;
 	}
 }
-[t:cmd_screen_report,n:0x0280002e]
+[t:cmd_region_message,n:0x0280002e]
 {
+	[common]
+	{
+		description = "";
+	}
 	[placement]
 	{
 	  p position = 1.66515,0,0.174782,0x4fcaea20;
@@ -34,6 +38,5 @@
 	[screen_report]
 	{
 		description = "'Curious. Perhaps this scroll will be useful in an unexpected manner. I should keep it.'";
-	  b prepend_name = true;
 	}
 }

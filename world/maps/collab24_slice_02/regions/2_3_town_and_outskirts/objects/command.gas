@@ -121,16 +121,29 @@
 	  p position = -1.91455,0,-0.823068,0x2f443bb7;
 	}
 }
-[t:dsx_cmd_visibility_switch,n:0x02400145]
+[t:collab24_slice_2_cmd_set_visibility,n:0x02400145]
 {
-	[dsx_cmd_visibility_switch]
+	[collab24_slice2_cmd_set_visibility]
 	{
-	  x target_scid = 0x0240029E;
+	  b invincible = true;
+	  x target_object = 0x0240029E;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.39106,0,1.16567,0xdb73f282;
+	}
+}
+[t:collab24_slice_2_cmd_set_visibility,n:0x02400c25]
+{
+	[collab24_slice2_cmd_set_visibility]
+	{
+	  x target_object = 0x0240029E;
 	}
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -3.07816,0,0.852485,0x6c563ad8;
+	  p position = 1.49177,0,-0.514265,0xdb73f282;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x024000eb]
@@ -200,11 +213,19 @@
 	[cmd_ai_dojob]
 	{
 	  x target1 = 0x02400241;
-	  x target2 = 0x02400246;
+	  x target2 = 0x02400245;
 	}
 	[placement]
 	{
-	  p position = 1.93652,0,1.43518,0x096e6f17;
+	  p position = 1.9309,0,1.0908,0x096e6f17;
+	}
+}
+[t:cmd_delete_object,n:0x02400242]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.81584,0,0.0917435,0x096e6f17;
 	}
 }
 [t:cmd_alignment_changer,n:0x0240023c]
@@ -213,6 +234,7 @@
 	{
 		alignment_activated = aa_good;
 	  b change_visibility = true;
+	  b invincible_spawn = true;
 	  i start_state = 1;
 	  x target_actor = 0x02400241;
 	}
@@ -226,21 +248,6 @@
 	[placement]
 	{
 	  p position = 0.803757,0,-0.474594,0x6f03bad4;
-	}
-}
-[t:cmd_selection_toggle,n:0x02400242]
-{
-	[cmd_selection_toggle]
-	{
-	  x object_scid = 0x02400245;
-	  i start_state = 1;
-	  b toggle_selection = false;
-	  b toggle_visability = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 2.70715,-3.25,3.56803,0xe6f8965f;
 	}
 }
 [t:cmd_selection_toggle,n:0x02400249]
@@ -297,17 +304,5 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 1.00383,-6,-2.28284,0x156951da;
-	}
-}
-[t:dsx_cmd_visibility_switch,n:0x02400c25]
-{
-	[dsx_cmd_visibility_switch]
-	{
-	  x target_scid = 0x0240029E;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 1.17265,0,1.80293,0xdb73f282;
 	}
 }
