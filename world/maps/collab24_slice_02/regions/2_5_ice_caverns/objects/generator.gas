@@ -3,10 +3,67 @@
 	[generator_basic]
 	{
 		child_template_name = "c24_2_r6_blocking_ice_door";
+		kill_msg = we_req_die;
 	}
 	[placement]
 	{
 	  p position = 0.042984,-6,2.8347,0x3621b2e7;
+	}
+}
+[t:generator_generic,n:0x026000f7]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600060;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -0.397728,0.836093,1.92825,0xfb287c92;
+	}
+}
+[t:generator_generic,n:0x026000f8]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600060;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 1.57699,-0.525342,-0.944931,0xfb287c92;
+	}
+}
+[t:generator_generic,n:0x026000fa]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600079;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.314133,0.835214,1.66979,0xd9dc9440;
+	}
+}
+[t:generator_generic,n:0x026000fe]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600079;
+	}
+	[placement]
+	{
+	  q orientation = 0,-4.25441e-008,0,1;
+	  p position = -2.62599,-0.307617,-0.615234,0xd9dc9440;
 	}
 }
 [t:generator_generic,n:0x02600053]
@@ -22,6 +79,34 @@
 	  p position = 4.24597,-12.05,-7.52635,0xd06e26c4;
 	}
 }
+[t:generator_generic,n:0x026000fc]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600079;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 1.78601,1,3.52261,0x4b809cf6;
+	}
+}
+[t:generator_generic,n:0x026000fd]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600079;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.923879;
+	  p position = 2.04829,0.176424,0.352848,0x4b809cf6;
+	}
+}
 [t:generator_generic,n:0x02600047]
 {
 	[generator_basic]
@@ -35,6 +120,48 @@
 	  p position = 4.24597,-12.05,-7.52635,0xfbb91c34;
 	}
 }
+[t:generator_generic,n:0x02600101]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600071;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,0.382684;
+	  p position = 1.75403,1,3.64897,0x8ac65924;
+	}
+}
+[t:generator_generic,n:0x02600103]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600071;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,-0.923879;
+	  p position = 3.43589,0.153824,0.307648,0x8ac65924;
+	}
+}
+[t:generator_generic,n:0x02600102]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600071;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,-0.92388;
+	  p position = -0.410223,0.784489,1.10463,0x5791e511;
+	}
+}
 [t:generator_generic,n:0x0260003c]
 {
 	[generator_basic]
@@ -46,5 +173,157 @@
 	{
 	  q orientation = 0,-1,0,-1.66939e-007;
 	  p position = 4.24597,-12.05,-7.52635,0xd39e4371;
+	}
+}
+[t:generator_generic,n:0x02600104]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600069;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.355804,0.852716,2.08303,0x7f0549aa;
+	}
+}
+[t:generator_generic,n:0x02600105]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600069;
+	}
+	[placement]
+	{
+	  p position = 2.50111,-0.470605,-0.941211,0x7f0549aa;
+	}
+}
+[t:generator_generic,n:0x02600106]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600069;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.43431,0.618215,1.32032,0x1a1f0f7c;
+	}
+}
+[t:generator_generic,n:0x0260005f]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600060;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -1.08311,-0.0576422,0.113937,0x7977e10a;
+	}
+}
+[t:generator_generic,n:0x026000f9]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600060;
+	}
+	[placement]
+	{
+	  p position = -2.18847,-1,-2.98354,0xec75d486;
+	}
+}
+[t:generator_generic,n:0x02600108]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600069;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 2.86394,-1,2.13885,0xec75d486;
+	}
+}
+[t:generator_generic,n:0x02600107]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600069;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -2.32201,-1,-2.77361,0x08a04bdf;
+	}
+}
+[t:generator_generic,n:0x026000f6]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600060;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 2.56213,-1,1.61826,0xdeec1970;
+	}
+}
+[t:generator_generic,n:0x026000fb]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600079;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.923879,0,0.382683;
+	  p position = -1.30252,-1,-3.08768,0xdeec1970;
+	}
+}
+[t:generator_generic,n:0x026000ff]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600071;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,-0.382683;
+	  p position = -0.68647,-1,-3.3383,0x6b13cc69;
+	}
+}
+[t:generator_generic,n:0x02600100]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_slice_2_r6_shard_ice";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02600071;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.66939e-007;
+	  p position = -3.27343,-1,-2.45729,0x6b13cc69;
 	}
 }

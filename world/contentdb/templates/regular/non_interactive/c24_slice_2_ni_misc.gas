@@ -96,3 +96,21 @@
 		}
 	}
 }
+[t:template,n:collab24_slice2_shard_decorative]
+{
+	category_name = "indoor";
+	doc = "collab24 slice2 decorative shard";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.8;
+		lodfi_upper = 1.0;
+
+		model = m_c_edm_sd_pos_1;
+		scale_base = 0.15;
+		[textures]
+		{
+			0 = b_c_edm_iw;
+		}
+	}
+}

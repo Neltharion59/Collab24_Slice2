@@ -259,11 +259,6 @@
 		selected_active_location = il_active_primary_spell;
 		[other] { il_active_primary_spell=c24_r6_ice_shard_spell_shard; }
 	}
-	[mind]
-	{
-		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
-			?activate = true;
-	}
 	[physics]
 	{
 		[break_particulate]
