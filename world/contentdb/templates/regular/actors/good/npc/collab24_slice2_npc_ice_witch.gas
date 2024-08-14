@@ -47,15 +47,23 @@
         actor_may_be_attacked = false;
 	}
 }
-[t:template,n:collab24_slice2_npc_ice_witch]
+[t:template,n:collab24_slice2_npc_ice_witch_quest_orthrac]
 {
 	category_name = "1W_townsperson";
 	doc = "collab24 slice2 NPC Ice Mage";
 	specializes = collab24_slice2_npc_ice_witch_base;
+	[common]
+	{
+		screen_name = "Yanaga";
+	}
 }
-[t:template,n:collab24_slice2_npc_ice_witch_quest_giver_fae_princess]
+[t:template,n:collab24_slice2_npc_ice_witch_quest_orthrac_quest_giver_fae_princess]
 {
 	category_name = "1W_townsperson";
 	doc = "collab24 slice2 NPC Ice Mage";
 	specializes = collab24_slice2_npc_ice_witch_base;
+	[common]
+	{
+		screen_name = "Kiaruth";
+	}
 }
