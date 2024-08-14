@@ -1,0 +1,33 @@
+[conversation_legionnaire1]
+{
+	[text*]
+	{
+		order = 0;
+		//sample = s_v_greet_male_allochap;
+		screen_text = "By the shield of Azunai, were you sent by the Overseer? Our detachment was sent from Fortress Kroth to seek emergency reinforcements from Glacern. Four days ago, a terrifically powerful necromancer calling himself Gresh appeared, and laid into us with an army of undead and Droog at his flanks. With more Droog blocking access to Castle Ehb in the east, we were cut off from both sides.";
+		choice = more;
+	}
+	[text*]
+	{
+		deactivate_quest*	= quest_fort_kroth;
+		activate_quest*		= quest_fort_kroth2;
+		activate_quest*		= quest_fort_kroth2,1;
+		screen_text = "Six of us used the old temple route to sneak past Gresh, but we ran into one of his tentacled guardians. It tore us to shreds. Somehow the two of us escaped to here, but now there's no way we can get Legion reinforcements to Captain Tarish in time. I don't know who you are, but if you're as capable as you look, I don't think Gresh would be expecting reinforcements of your kind. This may be the lucky break my comrades need to stop Gresh before he kills us all.";
+		quest_dialog = true;
+	}
+}
+
+[conversation_legionnaire2]
+{
+	[text*]
+	{
+		order = 0;
+		//sample = s_v_greet_dwarf_surprise;
+		screen_text = "Tentacles and teeth... the flashing lights... so many dead... why so many dead?";
+	}
+	[text*]
+	{
+		screen_text = "Tentacles and teeth... the flashing lights... so many dead... why so many dead?";
+	}
+}
+

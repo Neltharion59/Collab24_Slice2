@@ -1,0 +1,213 @@
+[lights]
+{
+	[t:point,n:light_0x0d3678ce]
+	{
+	  b active = true;
+	  b affects_actors = false;
+	  b affects_items = false;
+	  b affects_terrain = true;
+	  x color = 0xFF4C66E6;
+	  b draw_shadow = false;
+	  f inner_radius = 1.000000;
+	  f intensity = 0.300000;
+	  b occlude_geometry = false;
+	  b on_timer = false;
+	  f outer_radius = 2.000000;
+		[position]
+		{
+		  x node = 0x68C92F86;
+		  f x = 1.255375;
+		  f y = -10.600394;
+		  f z = 0.218283;
+		}
+	}
+	[t:point,n:light_0x286b3dcd]
+	{
+	  b active = true;
+	  b affects_actors = true;
+	  b affects_items = true;
+	  b affects_terrain = true;
+	  x color = 0xFFFDCD26;
+	  b draw_shadow = false;
+	  f inner_radius = 2.000000;
+	  f intensity = 2.000000;
+	  b occlude_geometry = false;
+	  b on_timer = false;
+	  f outer_radius = 3.000000;
+		[position]
+		{
+		  x node = 0x4F65E347;
+		  f x = 0.774330;
+		  f y = 0.317353;
+		  f z = -0.092847;
+		}
+	}
+	[t:point,n:light_0x63f0f4f4]
+	{
+	  b active = true;
+	  b affects_actors = true;
+	  b affects_items = true;
+	  b affects_terrain = true;
+	  x color = 0xFFFDCD26;
+	  b draw_shadow = false;
+	  f inner_radius = 2.000000;
+	  f intensity = 1.000000;
+	  b occlude_geometry = false;
+	  b on_timer = false;
+	  f outer_radius = 3.000000;
+		[position]
+		{
+		  x node = 0x10425D80;
+		  f x = 0.243151;
+		  f y = 1.314055;
+		  f z = -0.114341;
+		}
+	}
+	[t:directional,n:light_0x7a26182f]
+	{
+	  b active = true;
+	  b affects_actors = true;
+	  b affects_items = true;
+	  b affects_terrain = true;
+	  x color = 0xFFFFFFFF;
+	  b draw_shadow = true;
+	  f inner_radius = 0.000000;
+	  f intensity = 1.000000;
+	  b occlude_geometry = true;
+	  b on_timer = true;
+	  f outer_radius = 0.000000;
+		[direction]
+		{
+		  x node = 0xF141E357;
+		  f x = -0.604023;
+		  f y = 0.766044;
+		  f z = 0.219846;
+		}
+	}
+	[t:directional,n:light_0x83b72bfd]
+	{
+	  b active = true;
+	  b affects_actors = true;
+	  b affects_items = true;
+	  b affects_terrain = true;
+	  x color = 0xFF4C66E6;
+	  b draw_shadow = false;
+	  f inner_radius = 0.000000;
+	  f intensity = 0.400000;
+	  b occlude_geometry = false;
+	  b on_timer = false;
+	  f outer_radius = 0.000000;
+		[direction]
+		{
+		  x node = 0xF141E357;
+		  f x = 0.633022;
+		  f y = 0.766044;
+		  f z = -0.111619;
+		}
+	}
+	[t:point,n:light_0x94f52232]
+	{
+	  b active = true;
+	  b affects_actors = false;
+	  b affects_items = false;
+	  b affects_terrain = true;
+	  x color = 0xFFF0BE4A;
+	  b draw_shadow = false;
+	  f inner_radius = 8.500000;
+	  f intensity = 2.000000;
+	  b occlude_geometry = false;
+	  b on_timer = false;
+	  f outer_radius = 10.000000;
+		[position]
+		{
+		  x node = 0x10425D80;
+		  f x = 0.634010;
+		  f y = 9.216693;
+		  f z = 0.330352;
+		}
+	}
+	[t:point,n:light_0x9d16d9f6]
+	{
+	  b active = true;
+	  b affects_actors = true;
+	  b affects_items = true;
+	  b affects_terrain = true;
+	  x color = 0xFF80FF80;
+	  b draw_shadow = false;
+	  f inner_radius = 0.500000;
+	  f intensity = 1.000000;
+	  b occlude_geometry = false;
+	  b on_timer = false;
+	  f outer_radius = 0.600000;
+		[position]
+		{
+		  x node = 0xD019FFB3;
+		  f x = -0.218311;
+		  f y = 3.608395;
+		  f z = -0.009802;
+		}
+	}
+	[t:point,n:light_0xd2d2d4d8]
+	{
+	  b active = true;
+	  b affects_actors = false;
+	  b affects_items = false;
+	  b affects_terrain = true;
+	  x color = 0xFFE4A718;
+	  b draw_shadow = false;
+	  f inner_radius = 8.500000;
+	  f intensity = 2.000000;
+	  b occlude_geometry = false;
+	  b on_timer = false;
+	  f outer_radius = 10.000000;
+		[position]
+		{
+		  x node = 0xA12B6DE8;
+		  f x = 3.302505;
+		  f y = 6.799644;
+		  f z = -1.261271;
+		}
+	}
+	[t:point,n:light_0xf5ad9cae]
+	{
+	  b active = true;
+	  b affects_actors = true;
+	  b affects_items = true;
+	  b affects_terrain = true;
+	  x color = 0xFF80FF80;
+	  b draw_shadow = false;
+	  f inner_radius = 0.500000;
+	  f intensity = 1.000000;
+	  b occlude_geometry = false;
+	  b on_timer = false;
+	  f outer_radius = 0.600000;
+		[position]
+		{
+		  x node = 0xD019FFB3;
+		  f x = 2.619598;
+		  f y = 3.608395;
+		  f z = -0.012583;
+		}
+	}
+	[t:point,n:light_0xff45ff3e]
+	{
+	  b active = true;
+	  b affects_actors = true;
+	  b affects_items = true;
+	  b affects_terrain = true;
+	  x color = 0xFFFDCD26;
+	  b draw_shadow = false;
+	  f inner_radius = 2.000000;
+	  f intensity = 1.000000;
+	  b occlude_geometry = false;
+	  b on_timer = false;
+	  f outer_radius = 3.000000;
+		[position]
+		{
+		  x node = 0x47AFBC76;
+		  f x = 1.437820;
+		  f y = 1.180622;
+		  f z = -0.000317;
+		}
+	}
+}

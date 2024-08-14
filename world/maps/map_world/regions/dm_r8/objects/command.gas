@@ -1,0 +1,107 @@
+[t:cmd_report_gameplay_screen_player,n:0x03500313]
+{
+	[cmd_report_gameplay_screen_player]
+	{
+		report_name = "1_dm_r8";
+	}
+	[placement]
+	{
+	  p position = -1.15262,0,-3.66175,0xb45f735c;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x035000cf]
+{
+	[placement]
+	{
+	  p position = 0.181398,-0.049999,-1.15521,0x2f2be984;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x035000d0]
+{
+	[placement]
+	{
+	  p position = -0.525305,0.049999,-1.57916,0x90977e94;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x035000d1]
+{
+	[placement]
+	{
+	  p position = -0.066525,-0.049999,-0.486431,0x7187db7b;
+	}
+}
+[t:cmd_ai_c_move,n:0x03500095]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x035000D1;
+	}
+	[placement]
+	{
+	  p position = -0.439369,-0.05,-2.6898,0x06be6bb5;
+	}
+}
+[t:cmd_ai_c_move,n:0x035000ce]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x035000D0;
+	}
+	[placement]
+	{
+	  p position = 0.144583,-0.05,-2.6847,0x6f104193;
+	}
+}
+[t:cmd_ai_c_move,n:0x03500094]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x035000CF;
+	}
+	[placement]
+	{
+	  p position = 0.365982,-0.05,-3.10092,0x6357964d;
+	}
+}
+[t:light_flicker,n:0x03500031]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x6170A078;
+	}
+	[placement]
+	{
+	  p position = 5.85642,2,3.24035,0x6d13b2a2;
+	}
+}
+[t:light_flicker,n:0x035000df]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0xFE2FF42C;
+	}
+	[placement]
+	{
+	  p position = -2.41224,3.88019,-0.425293,0xde17364f;
+	}
+}
+[t:light_flicker,n:0x0350002b]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0xB563F15D;
+	}
+	[placement]
+	{
+	  p position = 0.257452,-1.90735e-006,-0.597713,0x905a04d9;
+	}
+}

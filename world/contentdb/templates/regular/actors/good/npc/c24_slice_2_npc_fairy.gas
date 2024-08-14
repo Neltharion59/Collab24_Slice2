@@ -59,3 +59,35 @@
 		sight_range = 16.0;
 	}
 }
+[t:template,n:c24_2_r3_npc_naldrun_princess]
+{
+    // To love the tree
+	category_name = "1W_evil_d";
+	doc = "c24 npc naldrun r3 princess";
+	specializes = c24_2_r5_naldrun_base;
+    [actor]
+    {
+        alignment = aa_neutral;
+    }
+	[aspect]
+	{
+        is_invincible = true;
+		[textures]
+		{
+			0 = b_c_edm_054-04;
+		}
+	}
+	[common]
+	{
+		screen_name="Glamoulla";
+	}
+    [conversation]
+    {
+    }
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}

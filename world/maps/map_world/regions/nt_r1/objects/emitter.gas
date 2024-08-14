@@ -1,0 +1,128 @@
+[t:emt_sound,n:0x02700567]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND; wind";
+	}
+	[placement]
+	{
+	  p position = -1.48698,25.078,-1.48065,0x445e7bdb;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_01b";
+	}
+}
+[t:emt_sound,n:0x0270056a]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND; wind";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.75513,51.0716,0.119705,0x72c97df5;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_01b";
+	}
+}
+[t:emt_fire,n:0x027003a0]
+{
+	[fire_emitter]
+	{
+	  f scale = 2;
+	}
+	[gizmo]
+	{
+	  f scale = 2;
+	}
+	[placement]
+	{
+	  p position = -2.20103,-0.965658,2.1619,0xa568bf84;
+	}
+}
+[t:emt_sound,n:0x0270056e]
+{
+	[placement]
+	{
+	  p position = -1.09922,0,3.56662,0xa568bf84;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_tavern";
+	}
+}
+[t:emt_sound,n:0x0270056d]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND; wind";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.32066,12.2868,1.2014,0x9fefaca0;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_01b";
+	}
+}
+[t:emt_sound,n:0x02700569]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND; wind";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.702278,20.2868,-0.865173,0x3490d40b;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_01b";
+	}
+}
+[t:emt_sound,n:0x0270056c]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND; wind";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.09292,8.28681,1.09506,0x2e897fb7;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_01b";
+	}
+}
+[t:emt_sound,n:0x0270056b]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND; wind";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 3.63734,30.6625,0.855743,0x6d3bfe3a;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_01b";
+	}
+}

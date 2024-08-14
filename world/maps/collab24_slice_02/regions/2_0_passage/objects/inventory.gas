@@ -1,3 +1,71 @@
+[t:sd_g_c_sd_1h_avg,n:0x02101ab4]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  p position = -1.02684,1.42397,-0.294521,0x1f65d451;
+	}
+}
+[t:sd_ra_g_c_sc_1h_fin,n:0x02101ab5]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  p position = -0.899037,1.43866,-0.263805,0x1f65d451;
+	}
+}
+[t:bw_g_c_c_m_4_fun,n:0x02101ab6]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.66939e-007;
+	  p position = -0.964537,1.39563,-1.93097,0x1f65d451;
+	}
+}
+[t:he_ca_pl_dome,n:0x02101ab7]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.817647,1.44973,-1.42275,0x1f65d451;
+	}
+}
+[t:gl_gl_sc_r_g_c_avg_rubber_dsx,n:0x02101ab8]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  p position = -0.914777,1.46077,-2.24833,0x1f65d451;
+	}
+}
+[t:mc_g_c_s_1h_avg,n:0x02101ab9]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  p position = -0.86869,1.46553,-1.28893,0x1f65d451;
+	}
+}
 [t:c24_2_r1_dead_orthrac_youngling_quest,n:0x021011c1]
 {
 	[common]
@@ -41,7 +109,7 @@
 		{
 			[*]
 			{
-				action* = change_quest_state("c24_slice_2_quest_giants","active",3);
+				action* = change_quest_state("c24_slice_2_quest_giants","active",2);
 				action* = send_world_message("we_req_activate",0x0210018D,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_picked_up",0,"on_first_message");

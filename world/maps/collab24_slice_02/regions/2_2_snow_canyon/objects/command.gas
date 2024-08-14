@@ -1,3 +1,30 @@
+[t:cmd_alignment_changer,n:0x02300839]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_deactivated = aa_neutral;
+		alignment_spawn = aa_good;
+	  b change_collide = true;
+	  b change_invincibility = true;
+	  b change_may_attack = true;
+	  b change_may_attacked = true;
+	  b change_visibility = true;
+	  b collide_deactivated = false;
+	  b invincible_deactivated = true;
+	  b invincible_spawn = true;
+		life_state_spawn = ls_alive_conscious;
+	  b may_attack_deactivated = false;
+	  b may_attack_spawn = true;
+	  b may_attacked_deactivated = false;
+	  b may_attacked_spawn = true;
+	  i start_state = 1;
+	  x target_actor = 0x0230006F;
+	}
+	[placement]
+	{
+	  p position = -0.803112,0,2.45894,0x4b693d61;
+	}
+}
 [t:cmd_ai_c_patrol,n:0x02300835]
 {
 	[placement]

@@ -1,0 +1,197 @@
+[t:cmd_camera_command,n:0x08d00000]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 7;
+	  x next_scid = 0x08D00004;
+	}
+	[placement]
+	{
+	  q orientation = 0.268169,-0.634441,0.250025,0.680483;
+	  p position = -2.6785,5.86111,0.471766,0xbbc379c3;
+	}
+}
+[t:cmd_camera_command,n:0x08d00004]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x08D00017;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.539671,-0.360884,0.274572,0.709316;
+	  p position = -3.31745,5.77374,2.79076,0xbbc379c3;
+	}
+}
+[t:cmd_camera_command,n:0x08d00017]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 9.2;
+	  x next_scid = 0x08D00001;
+	}
+	[placement]
+	{
+	  q orientation = 0.570893,-0.265212,0.201782,0.750352;
+	  p position = -3.36785,5.40727,2.8753,0xbbc379c3;
+	}
+}
+[t:cmd_camera_command,n:0x08d0027b]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x08D00000;
+		order = cor_snap;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x08D00279,0f,"default","",0), doc("make spider visible");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_camera_command_done",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0.268169,-0.634442,0.250025,0.680482;
+	  p position = -2.77151,5.86111,-1.9195,0xbbc379c3;
+	}
+}
+[t:cmd_alignment_changer,n:0x08d00279]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_neutral;
+		alignment_deactivated = aa_neutral;
+	  b change_visibility = true;
+	  i start_state = 1;
+	  x target_actor = 0x08D000B7;
+	  b update_anim_spawn = false;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.82546,-0.251345,-0.566674,0x75f17bad;
+	}
+}
+[t:cmd_camera_command,n:0x08d00015]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x08D00016;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.294568,0.482253,-0.176254,0.805975;
+	  p position = -0.437054,1.23049,0.57904,0xbef7db3d;
+	}
+}
+[t:cmd_camera_command,n:0x08d00016]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 7.9;
+	  x next_scid = 0x08D0027B;
+	}
+	[placement]
+	{
+	  q orientation = 0.272986,0.444823,-0.156374,0.838546;
+	  p position = -1.10975,1.75216,0.352386,0xbef7db3d;
+	}
+}
+[t:cmd_ai_t_move,n:0x08d001a1]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x08D000B7;
+	}
+	[placement]
+	{
+	  p position = 1.24051,-7.63685e-007,-3.89728,0x519e9126;
+	}
+}
+[t:cmd_camera_command,n:0x08d00019]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 18;
+	  x next_scid = 0x01C00BD7;
+	}
+	[placement]
+	{
+	  q orientation = 0.0163664,0.956289,-0.286997,0.0536218;
+	  p position = -1.07646,3.22443,-1.68867,0x1959521c;
+	}
+}
+[t:cmd_camera_command,n:0x08d00001]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x08D00019;
+		order = cor_snap;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_delete",0x08D000B7,0f,"default","",0), doc("delete spider");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_camera_command_done",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0.319124,0.0561668,-0.0189501,0.945857;
+	  p position = 0.240568,1.07946,-1.29237,0xa76fe233;
+	}
+}
+[t:cmd_ai_t_move,n:0x08d00003]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x08D000B7;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[placement]
+	{
+	  p position = 1.99098,-0.849997,1.69813,0xa76fe233;
+	}
+}

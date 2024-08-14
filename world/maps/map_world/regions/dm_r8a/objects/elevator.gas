@@ -1,0 +1,56 @@
+[t:elevator_2s_1c_1n,n:0x085000d8]
+{
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0xF82EEB65;
+	  f duration = 4;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x2C68A8A5;
+		material = "grate";
+	}
+	[placement]
+	{
+	  p position = 0.134798,2.58543,0.218918,0x2c68a8a5;
+	}
+}
+[t:elevator_2s_1c_1n,n:0x085000e0]
+{
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0x19922722;
+	  f duration = 3;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x547B8AF5;
+		material = "grate";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382684;
+	  p position = -1.17585,-1.92093,2.14473,0x19922722;
+	}
+}
+[t:elevator_2s_1c_1n,n:0x085000df]
+{
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0x127523CF;
+	  f duration = 1;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x9D5D7263;
+		material = "grate";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,2.68221e-007;
+	  p position = 1.11387,-1.92092,-1.60405,0x127523cf;
+	}
+}

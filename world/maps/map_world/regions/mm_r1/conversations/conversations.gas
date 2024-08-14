@@ -1,0 +1,20 @@
+[conversation_jeriah]
+{
+	[text*]
+	{
+		order = 0;
+		choice = shop;
+		sample = s_v_mm_jeriah1;
+		screen_text = "Who are you, then? Another of that short Goblin cuss's errand runners? You tell that little green snot ball I don't have any high 'n mighty magic staff, and I never did. I don't traffic in exotics, and even if I did have one I'm not gonna go trudging through the eastern swamp lookin' to sell it to some damn foreigner. Now, if there's anything else I can get you today, maybe I'll consider not tossin' your ugly butt out into the snow.";
+	}
+	[text*]
+	{
+		choice = shop;
+		sample = s_v_mm_jeriah3;
+		screen_text = "You're about as welcome here as a badger in a stone cold outhouse, you know that?";
+	}
+	[goodbye*]
+	{
+		sample = s_v_mm_jeriah2;
+	}
+}

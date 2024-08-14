@@ -1,0 +1,13 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0xACA40100;
+	source_region_name = fc_r1;
+	[t:stitch_editor,n:path2nt]
+	{
+		dest_region = path2nt;
+		[node_ids]
+		{
+			0xaaa40001 = 0x123F3612,8;
+		}
+	}
+}

@@ -1,3 +1,82 @@
+[t:use_point,n:0x02b0002d]
+{
+	[placement]
+	{
+	  p position = -2.07717,-1.55744,-0.617423,0x967f0d78;
+	}
+}
+[t:trigger_generic,n:0x02b0002e]
+{
+	[common]
+	{
+		dev_instance_text = "ON TOMB BROKEN";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02B00030,0f,"default","every",0), doc("delete naldrun decoy");
+				action* = send_world_message("we_req_activate",0x02B00033,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.038177,-1.34398,-2.31984,0x967f0d78;
+	}
+}
+[t:trigger_generic,n:0x02b00034]
+{
+	[common]
+	{
+		dev_instance_text = "ON GUARDIANS DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02B00032,0f,"default","every",0);
+				action* = change_quest_state("c24_slice_2_quest_frozen_fae","active",3);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -5.02069,-3.143,-0.466704,0x967f0d78;
+	}
+}
+[t:accumulate_trigger,n:0x02b00035]
+{
+	[generic_accumtrigger]
+	{
+	  i num_til_send = 10;
+	  x send_to_scid = 0x02B00034;
+	}
+	[placement]
+	{
+	  p position = -5.63454,-3.34587,0.419819,0x967f0d78;
+	}
+}
 [t:trigger_generic,n:0x02b00015]
 {
 	[common]
@@ -8,16 +87,17 @@
 			{
 				action* = send_world_message("we_req_activate",0x02B0000B,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x02B0000C,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x02B00011,0f,"default","every",0), delay(3);
-				action* = send_world_message("we_req_activate",0x02B00012,0f,"default","every",0), delay(3);
-				action* = send_world_message("we_req_activate",0x02B0000D,0f,"default","every",0), delay(6);
-				action* = send_world_message("we_req_activate",0x02B0000E,0f,"default","every",0), delay(6);
-				action* = send_world_message("we_req_activate",0x02B00010,0f,"default","every",0), delay(9);
-				action* = send_world_message("we_req_activate",0x02B0000F,0f,"default","every",0), delay(9);
-				action* = send_world_message("we_req_activate",0x02B00013,0f,"default","every",0), delay(12);
-				action* = send_world_message("we_req_activate",0x02B00014,0f,"default","every",0), delay(12);
+				action* = send_world_message("we_req_activate",0x02B00011,0f,"default","every",0), delay(5);
+				action* = send_world_message("we_req_activate",0x02B00012,0f,"default","every",0), delay(5);
+				action* = send_world_message("we_req_activate",0x02B0000D,0f,"default","every",0), delay(10);
+				action* = send_world_message("we_req_activate",0x02B0000E,0f,"default","every",0), delay(10);
+				action* = send_world_message("we_req_activate",0x02B00010,0f,"default","every",0), delay(15);
+				action* = send_world_message("we_req_activate",0x02B0000F,0f,"default","every",0), delay(15);
+				action* = send_world_message("we_req_activate",0x02B00013,0f,"default","every",0), delay(20);
+				action* = send_world_message("we_req_activate",0x02B00014,0f,"default","every",0), delay(20);
+				action* = change_quest_state("c24_slice_2_quest_frozen_fae","active",2);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(15.000000,1.500000,0.500000,"on_first_enter");
+				condition* = party_member_within_bounding_box(15.000000,6.500000,0.500000,"on_first_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -62,5 +142,62 @@
 	[placement]
 	{
 	  p position = -0.0116577,-3.98277,-0.484924,0xe2ab61fe;
+	}
+}
+[t:trigger_generic,n:0x02b00036]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("c24_slice_2_quest_frozen_fae","active",1);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,3.500000,1.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.0321007,-3.99856,0.50658,0xe2ab61fe;
+	}
+}
+[t:trigger_generic,n:0x02b00037]
+{
+	[common]
+	{
+		dev_instance_text = "ON QUEST COMPLETED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x02400CF3,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -2.60914,-2.02637,0.572185,0x967f0d78;
 	}
 }

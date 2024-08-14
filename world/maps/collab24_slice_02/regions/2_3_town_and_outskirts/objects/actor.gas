@@ -772,6 +772,26 @@
 	  p position = -1.4547,-5.87543,-1.08984,0x856a3db9;
 	}
 }
+[t:collab24_slice2_npc_ice_witch_quest_giver_fae_princess,n:0x02400c26]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_collab24_slice2_r3_ice_witch_princess_freezer_first;
+			* = conv_collab24_slice2_r3_ice_witch_princess_freezer_next;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_collab24_slice2_ice_witch_fae_freezer_r3.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = 0.38483,0.15,-0.0523682,0xe85a902f;
+	}
+}
 [t:c24_2_r3_kurgan_melee,n:0x02400056]
 {
 	[placement]
@@ -1059,7 +1079,7 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.382684,0,0.923879;
+	  q orientation = 0,0.923879,0,-0.382684;
 	  p position = 2.62254,0,0.717789,0x0907c799;
 	}
 }

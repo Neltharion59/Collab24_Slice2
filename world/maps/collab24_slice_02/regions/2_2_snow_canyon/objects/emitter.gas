@@ -84,6 +84,18 @@
 	  p position = 1.07756,3.10191,1.02956,0xbd3e2bf2;
 	}
 }
+[t:emt_generic,n:0x023003c2]
+{
+	[generic_emitter]
+	{
+		other_effect = "c24_slice_02_effect_broom_flyer";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = 0.286041,-3.98459,-5.16203,0x93415d5f;
+	}
+}
 [t:emt_glow,n:0x0230012d]
 {
 	[glow_emitter]
@@ -169,17 +181,5 @@
 	[placement]
 	{
 	  p position = -0.024292,12.2114,-0.202751,0x5f75e7ba;
-	}
-}
-[t:emt_generic,n:0x023003c2]
-{
-	[generic_emitter]
-	{
-		other_effect = "c24_slice_02_effect_broom_flyer";
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.66939e-007;
-	  p position = 0.286041,-3.98459,-5.16203,0x93415d5f;
 	}
 }

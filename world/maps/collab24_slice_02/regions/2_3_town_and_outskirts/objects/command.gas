@@ -146,6 +146,48 @@
 	  p position = 1.49177,0,-0.514265,0xdb73f282;
 	}
 }
+[t:cmd_selection_toggle,n:0x02400d5d]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02400D44;
+	  i start_state = 2;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  p position = 0.0170212,0.15,1.29147,0xe85a902f;
+	}
+}
+[t:cmd_selection_toggle,n:0x02400d60]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02400D5B;
+	  i start_state = 2;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  p position = -1.18739,0.15,0.00823975,0xe85a902f;
+	}
+}
+[t:cmd_selection_toggle,n:0x02400d61]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02400D5C;
+	  i start_state = 2;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  p position = 0.0897942,0.15,-1.19363,0xe85a902f;
+	}
+}
 [t:cmd_ai_c_patrol,n:0x024000eb]
 {
 	[placement]
@@ -270,6 +312,17 @@
 	[placement]
 	{
 	  p position = -1.80132,0,0.527426,0xd95d0b48;
+	}
+}
+[t:cmd_region_message,n:0x02400c93]
+{
+	[placement]
+	{
+	  p position = 1.51938,0,-1.75434,0x92e53560;
+	}
+	[screen_report]
+	{
+		description = "'Perhaps I should not wander here without some knowledge on what is in there. Asking the witches might help.'";
 	}
 }
 [t:cmd_auto_save,n:0x02400a5b]

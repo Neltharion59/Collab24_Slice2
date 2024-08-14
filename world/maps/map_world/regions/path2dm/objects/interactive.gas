@@ -1,0 +1,128 @@
+[t:lever_cav_stone_01,n:0x0330012b]
+{
+	[common]
+	{
+		dev_instance_text = "SCIDS ARE VALID - Called from sd_r2";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x02D00259;
+	  x on_scid = 0x02D00259;
+	  f reset_time = 2;
+	  f reset_time_2 = 2;
+	}
+	[placement]
+	{
+	  q orientation = -0.5,-0.5,-0.5,0.5;
+	  p position = 0.0738068,-1.85,2.21372,0x9e7aa3ea;
+	}
+}
+[t:sign_glb_01,n:0x03300331]
+{
+	[common]
+	{
+		screen_name = "Wesrin Cross - Western Tower";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.5,0,0.866026;
+	  p position = -1.51632,4,1.07577,0x5dde9f11;
+	}
+}
+[t:sign_glb_01,n:0x03300332]
+{
+	[common]
+	{
+		screen_name = "Town of Glacern";
+	}
+	[placement]
+	{
+	  q orientation = -1.167e-008,0.991445,-0.130526,8.86421e-008;
+	  p position = -1.71493,3.52607,0.60462,0x5dde9f11;
+	}
+}
+[t:sign_glb_01,n:0x03300333]
+{
+	[common]
+	{
+		screen_name = "Town of Glitterdelve";
+	}
+	[placement]
+	{
+	  q orientation = -1.167e-008,0.991445,-0.130526,8.86421e-008;
+	  p position = -1.71493,3.79483,0.60462,0x5dde9f11;
+	}
+}
+[t:sign_glb_01,n:0x03300330]
+{
+	[common]
+	{
+		screen_name = "Town of Stonebridge";
+	}
+	[placement]
+	{
+	  q orientation = 0,2.98023e-007,0,1;
+	  p position = 0.466904,0.0790515,-1.74957,0x68d9354c;
+	}
+}
+[t:sign_glb_coughin_jak,n:0x03300377]
+{
+	[placement]
+	{
+	  p position = 4.55615,1.00859,4.30004,0x83cf878b;
+	}
+}
+[t:sign_glb_01,n:0x03300336]
+{
+	[common]
+	{
+		screen_name = "Glitterdelve Mines";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.767479,-6.67572e-006,1.50501,0x79c71287;
+	}
+}
+[t:sign_glb_01,n:0x03300337]
+{
+	[common]
+	{
+		screen_name = "Town of Glacern";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.77791,-0.241698,1.50783,0x79c71287;
+	}
+}
+[t:sign_glb_01,n:0x03300338]
+{
+	[common]
+	{
+		screen_name = "Town of Stonebridge";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,-0.382683;
+	  p position = -1.36855,-0.486708,1.09715,0x79c71287;
+	}
+}
+[t:respawn_statue,n:0x0330039b]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.92388;
+	  p position = -0.0697165,0,0.0761013,0xf31810b8;
+		use_point_scids = 0x033002e0;
+	}
+}
+[t:sign_cav_glitterdelve_03,n:0x03300378]
+{
+	[placement]
+	{
+	  q orientation = 0,0.882948,0,-0.469472;
+	  p position = 3.33935,0,-0.957458,0xf555e621;
+	}
+}

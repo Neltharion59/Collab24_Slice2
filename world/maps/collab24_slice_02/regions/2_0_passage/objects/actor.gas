@@ -1,3 +1,35 @@
+[t:mule,n:0x02101a9c]
+{
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[aspect]
+	{
+	  b is_invincible = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.40993,0,-0.742439,0x69678d85;
+	}
+}
+[t:mule,n:0x02101a9d]
+{
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[aspect]
+	{
+	  b is_invincible = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -2.9627,0,1.20954,0x69678d85;
+	}
+}
 [t:collab24_slice2_pm_l3,n:0x02100228]
 {
 	[aspect]
@@ -28,8 +60,298 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,-6.46033e-009;
-	  p position = -1.18354,-1.05229,-3.47711,0x2fa898d3;
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -3.28378,0,1.36266,0x1f65d451;
+	}
+}
+[t:collab24_slice2_r0_shop,n:0x02101a51]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = collab24_slice2_conversation_shop_first;
+			* = collab24_slice2_conversation_shop_next;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_collab24_slice2_trader_r0.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.923879;
+	  p position = -2.6951,0,-3.28849,0x1f65d451;
+		use_point_scids = 0x02101a58;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a69]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A6A;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = -3.63973,0,2.66053,0x1f65d451;
+	}
+}
+[t:dog_sleeping,n:0x02101aa0]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.923879,0,-0.382684;
+	  p position = -2.03621,0,-0.556353,0x1f65d451;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a86]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,-0.382683;
+	  p position = -1.10093,0.424886,0.849772,0x954d3cf4;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a84]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02101A95,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -0.316857,0,-0.491955,0x354aa485;
+	}
+}
+[t:c24_2_r1_spider,n:0x02100022]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.923879,0,-0.382683;
+	  p position = -5.22303,-3.91902,-5.54354,0x39a39464;
+	}
+}
+[t:c24_2_r1_spider,n:0x02100234]
+{
+	[placement]
+	{
+	  q orientation = 0,9.55219e-008,0,1;
+	  p position = -6.36402,-3.9168,-5.67468,0x39a39464;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a7d]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-4.69147e-008;
+	  p position = -16.2893,-12,-20.2048,0x3fc560a2;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a41]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A42;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = -2.92848,-12,-5.76132,0x9e3ce909;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a4c]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A4D;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = -2.84913,-1,-2.17198,0x0d3793c6;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a7a]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.873344,0.722871,1.42844,0x0d3793c6;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a7b]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.69537,0.213916,0.50399,0x0d3793c6;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a52]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A53;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = 3.34201,0,0.165224,0x0403eb26;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a7e]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.20399,-5.88944,-4.57127,0xb1d512a3;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a15]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A16;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = -1.78236,-9.53674e-007,1.69835,0xa8905c23;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a7f]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -1.23949,1.90735e-006,2.24026,0x6aef9b5b;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a47]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A48;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = 2.92486,-0.298162,-0.596322,0x5ff8bb42;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a79]
+{
+	[placement]
+	{
+	  p position = -2.07199,1,3.90245,0xa9e5bc21;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a74]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02101A72,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = 3.30126,0,-1.53447,0x03da2b8b;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a1a]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A1B;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = 3.33826,-0.0314693,1.55057,0x4811138c;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a0f]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A10;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = -1.17948,-1,0.0221043,0x7dbc21f0;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a08]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A09;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = -1.37447,0,1.11482,0xc42e26f1;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a80]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -3.52886,0,-0.12662,0x96d1c38e;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a81]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -3.0408,-12,-5.38894,0x59978691;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a83]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -16.7267,-12,-20.6361,0xad2ed698;
 	}
 }
 [t:collab24_slice2_r0_butterfly,n:0x0210138b]
@@ -188,40 +510,32 @@
 	  p position = 3.09559,0,2.14379,0xd0c0c9a8;
 	}
 }
+[t:collab24_slice2_r0_butterfly,n:0x02101322]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101323;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = 1.06775,-3.86806,-4.55011,0x07ebcba6;
+	}
+}
+[t:c24_2_r1_spider,n:0x02100024]
+{
+	[placement]
+	{
+	  q orientation = 0,9.55219e-008,0,1;
+	  p position = -0.493837,0,1.80952,0xb9e29a88;
+	}
+}
 [t:c24_2_r1_spider,n:0x02100226]
 {
 	[placement]
 	{
 	  q orientation = 0,9.55219e-008,0,1;
 	  p position = -3.23257,-6,-1.09563,0xd5cf05ad;
-	}
-}
-[t:c24_2_r1_spider,n:0x02100022]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.923879,0,-0.382683;
-	  p position = -5.22303,-3.91902,-5.54354,0x39a39464;
-	}
-}
-[t:c24_2_r1_spider,n:0x02100234]
-{
-	[placement]
-	{
-	  q orientation = 0,9.55219e-008,0,1;
-	  p position = -6.36402,-3.9168,-5.67468,0x39a39464;
-	}
-}
-[t:collab24_slice2_r0_butterfly,n:0x02101310]
-{
-	[mind]
-	{
-	  x initial_command = 0x02101311;
-	  b on_enemy_entered_weapon_engage_range_attack = true;
-	}
-	[placement]
-	{
-	  p position = 2.41764,-1,-2.72745,0xda5403ec;
 	}
 }
 [t:c24_2_r1_spider,n:0x02100029]
@@ -250,26 +564,6 @@
 	[placement]
 	{
 	  p position = 2.43646,0.933595,3.16797,0x820cbcc7;
-	}
-}
-[t:collab24_slice2_r0_butterfly,n:0x02101322]
-{
-	[mind]
-	{
-	  x initial_command = 0x02101323;
-	  b on_enemy_entered_weapon_engage_range_attack = true;
-	}
-	[placement]
-	{
-	  p position = 1.06775,-3.86806,-4.55011,0x07ebcba6;
-	}
-}
-[t:c24_2_r1_spider,n:0x02100024]
-{
-	[placement]
-	{
-	  q orientation = 0,9.55219e-008,0,1;
-	  p position = -0.493837,0,1.80952,0xb9e29a88;
 	}
 }
 [t:collab24_slice2_r0_butterfly,n:0x0210131b]
@@ -323,6 +617,18 @@
 	[placement]
 	{
 	  p position = -0.535454,6,4.95681,0xf0b642b0;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101310]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101311;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = 2.41764,-1,-2.72745,0xda5403ec;
 	}
 }
 [t:collab24_slice2_r0_butterfly,n:0x02101305]
@@ -1440,5 +1746,149 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = -2.70354,4.00571,-4.97718,0x9e084e28;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x021019fd]
+{
+	[mind]
+	{
+	  x initial_command = 0x021019FE;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = 3.29529,-0.265196,-0.641665,0x84291c2a;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a85]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.75832,-1,3.39282,0xea347811;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a03]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A04;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = 1.18793,0.815466,2.57733,0xb8671007;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a82]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 0.997326,0,0.669537,0xb0e09a4c;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a62]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A63;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = -0.586238,-2.05,-3.27379,0xe5c94ff5;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a28]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A29;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = -1.06045,-1,-2.23159,0x41d93ffe;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a35]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A36;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = 1.57386,-12,-5.90588,0xa3f43ccf;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a3b]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A3C;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = 2.19939,0.828206,2.64103,0xf22e1dfd;
+	}
+}
+[t:c24_2_r1_spider,n:0x02101a7c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -3.59789,1,2.33493,0xf22e1dfd;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a2f]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A30;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = -3.26711,-1.2,2.96343,0x1b5c7993;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a22]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A23;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = 0.876845,0,-0.329671,0x1f9b1c82;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x021019f5]
+{
+	[mind]
+	{
+	  x initial_command = 0x021019F6;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = 2.15001,1,3.64427,0xc2c1ef2a;
+	}
+}
+[t:collab24_slice2_r0_butterfly,n:0x02101a57]
+{
+	[mind]
+	{
+	  x initial_command = 0x02101A59;
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = -3.85829,-0.98794,-1.58992,0xc2c1ef2a;
 	}
 }

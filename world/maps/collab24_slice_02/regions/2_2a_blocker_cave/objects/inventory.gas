@@ -55,8 +55,17 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.699409,0.751815,1.59228,0x4fcaea20;
+	  p position = 0.248772,2.14795,1.68797,0x4fcaea20;
 		use_point_scids = 0x0280000f;
+	}
+}
+[t:bw_g_d_s_s_c_avg,n:0x02800048]
+{
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,0.382683;
+	  p position = -0.78743,-3.98994,-5.73861,0xe5f591db;
+		use_point_scids = 0x02800049;
 	}
 }
 [t:st_g_d_r_avg,n:0x02800056]
@@ -169,14 +178,5 @@
 	  q orientation = -1.07911e-013,-1,-1.80854e-008,-6.7685e-007;
 	  p position = -1.6117,1.03585,0.0710258,0xc26a6125;
 		use_point_scids = 0x02800009;
-	}
-}
-[t:bw_g_d_s_s_c_avg,n:0x02800048]
-{
-	[placement]
-	{
-	  q orientation = 0,0.923879,0,0.382683;
-	  p position = -0.78743,-3.98994,-5.73861,0xe5f591db;
-		use_point_scids = 0x02800049;
 	}
 }

@@ -1,0 +1,133 @@
+[t:drake_green,n:0x00d0018e]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.939693,0,0.34202;
+	  p position = -5.02459,-3.87679,-13.9487,0x9e9a581f;
+	}
+}
+[t:dragon,n:0x00d00068]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.75;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00D00071,0f,"default","",0), doc("quake");
+				action* = send_world_message("we_req_activate",0x00D0006E,0f,"default","",0), delay(0.2), doc("rubble");
+				action* = send_world_message("we_req_activate",0x00D00073,0f,"default","",0), delay(0.3), doc("small rubble");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_anim_weapon_fire",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_trigger_deactivate",0x00D00198,0f,"default","",0), doc("fight mood door trigger deactivate");
+				action* = send_world_message("we_req_activate",0x00D00161,0f,"default","",0), delay(5), doc("blocking rubble falls");
+				action* = fade_nodes_global(0xAAA70100,2,1,1,"out:black"), doc("fade dragon node");
+				action* = change_quest_state("quest_slay_dragon","completed",0);
+				action* = send_world_message("we_req_activate",0x00D00193,0f,"default","",0), delay(5), doc("make light ray visible");
+				action* = send_world_message("we_req_activate",0x00D00192,0f,"default","",0), delay(5), doc("light for light ray");
+				action* = send_world_message("we_req_activate",0x00D0017D,0f,"default","",0), doc("start treasure room sound");
+				action* = send_world_message("we_trigger_activate",0x00D00199,0f,"default","",0), doc("dead dragon mood door trigger activate");
+				action* = send_world_message("we_trigger_activate",0x00D0014A,0f,"default","",0), doc("turn on node fading under treasure cave arch");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("using this more reliable condition for server actions");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00D00071,0f,"default","",0), doc("quake");
+				action* = send_world_message("we_req_activate",0x00D00074,0f,"default","",0), delay(2.5), doc("flash room for dead dragon mood");
+				action* = send_world_message("we_req_activate",0x00D00197,0f,"default","every",0), delay(2.6), doc("ensure anyone in hall doesn't get red mood");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("sp actions");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00D00075,0f,"default","",0), doc("wake dragon if hit");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_damaged",0,"on_first_message"), doc("[*converted to one-shot*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00D001A0,0f,"default","every",0), doc("send to client broadcaster");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("mp actions");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00D00068,0f,"default","every",0), delay(3), doc("to self - always wake up when loaded after initial wake-up");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_entered_world",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = false;
+			}
+		}
+	}
+	[mind]
+	{
+	  f personal_space_range = 6;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.99863,0,-0.052336;
+	  p position = -0.575294,3.575,-14.2106,0x26b536ed;
+		use_point_scids = 0x00d00185,0x00d0018c,0x00d00186,0x00d00187,0x00d00188,0x00d0018b,0x00d00189,0x00d0018a,0x00d0016f,0x00d00170,0x00d00171;
+	}
+}

@@ -1,0 +1,61 @@
+[t:emt_light_ray,n:0x03c0018d]
+{
+	[placement]
+	{
+	  q orientation = -0.18024,0.906128,0.37533,0.0746578;
+	  p position = 1.91315,-1.95,-3.29797,0x6d0f8445;
+	}
+}
+[t:emt_light_ray,n:0x03c00183]
+{
+	[placement]
+	{
+	  q orientation = 0.343408,0.0425799,0.139559,0.927783;
+	  p position = 2.50252,-1,-2.35164,0xfa63ebe3;
+	}
+}
+[t:emt_light_ray,n:0x03c0018b]
+{
+	[placement]
+	{
+	  q orientation = 0.0746578,0.768178,0.37533,0.51328;
+	  p position = 1.96206,-0.322963,-0.645926,0xce37315e;
+	}
+}
+[t:emt_light_ray,n:0x03c0018c]
+{
+	[placement]
+	{
+	  q orientation = 0.224994,0.918514,-0.288286,-0.150336;
+	  p position = -3.55783,1,0.835629,0x65aa1aa8;
+	}
+}
+[t:emt_light_ray,n:0x03c00187]
+{
+	[placement]
+	{
+	  q orientation = -0.103553,0.853554,-0.103554,0.5;
+	  p position = -3.20825,0,-0.450745,0xd6a16f9c;
+	}
+}
+[t:emt_light_ray,n:0x03c00184]
+{
+	[placement]
+	{
+	  q orientation = 0.0586586,0.549727,0.25,0.794896;
+	  p position = -3.1786,0,1.96907,0xd5f37a76;
+	}
+}
+[t:emt_sound_act,n:0x03c0016e]
+{
+	[placement]
+	{
+	  q orientation = 0,0.66262,0,-0.748956;
+	  p position = 0.0110016,-0.75,0.00328064,0x1ede73d2;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_shrine_mana";
+	  b start_on_creation = false;
+	}
+}

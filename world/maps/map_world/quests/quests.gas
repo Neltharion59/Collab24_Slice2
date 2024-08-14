@@ -1,0 +1,962 @@
+//////////////////////////////
+//	 MAP_WORLD QUESTS FILE	//
+//////////////////////////////
+
+///////////////////////////////////////////////////////////////
+//
+//DOCUMENTATION:
+//
+// The first step to take is that we need to add chapters to the quests.gas.  The format of chapters is as follows:
+// 
+// [chapters]
+// {
+// 	[chapter_1]
+// 	{
+// 		// Name that will be seen in the listbox with the quests
+// 		screen_name = "Chapter 1: Stonebridge";
+// 
+// 		// Chapter image for the journal
+//		chapter_image = b_gui_ig_menu_chapter;
+//
+//		// Add [*] block for each "state" the chapter can be in.
+//		[*]
+//		{
+//			// Activation state
+//			order = 0; 
+//
+//	 		// Text that will serve as the "dialog" portion of the chapter.
+//	 		description = "";
+//	 
+//	 		// Sound file that plays the description text ( or something similar )
+//	 		sample = ;
+//		}
+//		[*]
+//		{
+//			// Activation state
+//			order = 1;
+//			
+//	 		// Text that will serve as the "dialog" portion of the chapter.
+//	 		description = "Long ago stuff happened, and it was bad.";
+//	 
+//	 		// Sound file that plays the description text ( or something similar )
+//	 		sample = s_e_bad_stuff;
+//		}
+//		
+// 	}
+// 
+// 	// add more chapters here...
+// }
+// 
+// Once all the chapters have been added to quests.gas, the existing quests need to be in this format:
+// 
+// [quests]
+// {
+// 	[quest_for_gyorn]
+// 	{
+// 		// Chapter the quest belongs in.  Must be in the format of the fuel block name
+// 		// in the [chapters] definition.
+// 		chapter = chapter_1;
+// 
+// 		// Screen name used in the listbox 
+// 		screen_name = "Seek Gyorn in Stonebridge";
+// 
+// 		// Sound file to play when the quest is completed
+// 		victory_sample = s_e_level_up_quest;
+// 
+// 		// Image for the quest 
+// 		quest_image = b_gui_ig_mnu_quest;
+// 
+// 		// Quest completion skrit ( no .skrit extension necessary. )
+// 		skrit = get_award;
+// 
+// 		// Each one of these blocks counts as a speaker that has offered information
+// 		// about the quest.  Once their order is activated, it becomes available in
+// 		// the conversation listing.
+// 		[*]
+// 		{
+// 			// Order of the quest that is currently activated.
+// 			order = 0;
+// 
+// 			// Must this part of the quest be actived for the next order to work ( default is true )
+// 			required = true;
+// 
+// 			// Description put in the textbox when you click on the listbox name
+// 			description = "Find my buddy Gyorn.";
+//
+//			// Speaker name
+//			speaker = "Norick";
+// 
+// 			// Fuel address of the conversation that has the dialogue we want in it.
+// 			// quest_dialog = true must be set in the conversation [text*] block we want,
+// 			// or it will not work!!
+// 			address = fh_r1:conversations:conversation_norick;
+// 		}
+// 
+// 		[*]
+// 		{
+// 			order 1;
+// 			address = path2crypts:conversations:conversation_skartis;
+// 		}
+// 	}
+// 
+// 	// add the rest of the quests here...
+// }
+
+//////////////
+// CHAPTERS //
+//////////////
+
+[chapters]
+{
+	[chapter_1]
+	{
+		// Name that will be seen in the listbox with the quests
+		screen_name = "Chapter 1: Stonebridge";
+		
+		// Chapter image for the journal
+		chapter_image = b_gui_ig_mnu_jnl_chapter_01;
+		
+		[*]
+		{
+			// Activation state
+			order = 0; 
+		
+			// Text that will serve as the "dialog" portion of the chapter.
+			description = "A long time ago, on the continent of Aranna... the once-magnificent Empire of Stars had crumbled into oblivion; paralyzed by its own power-hungry Legions, and torn asunder by an ancient and merciless evil. But the 10th Legion, the dying Empire's most valiant soldiers... and most trusted... withdrew far to the west, to a land called Ehb, seeking to preserve what their Empire had lost. Here, in the rugged mountains and rich valleys of their new home, they founded the Kingdom of Ehb... a Kingdom that has embraced peace and freedom for 300 years. But, there was a price... Few now remember the evil that opposed them. Fewer still recall the dark sorceries cast to save them. And none could foretell that one humble farmer would stand between a vengeance from the past and the survival of the Kingdom...";
+
+			// Sound file that plays the description text ( or something similar )
+			sample = s_v_king_intro;
+		}
+		[*]
+		{
+			//Activation state
+			order = 1;
+			
+			// Text that will serve as the "dialog" portion of the chapter.
+			description = "With only a name given by a dying friend, our beleaguered hero entered the battle worn gates of Stonebridge. Who could know then that the arrival of one humble farmer from the fields would change the very course of the Kingdom?";
+			
+			// Sound file that plays the description text ( or something similar )
+			sample = s_v_chapter_1;
+		}
+	}
+	[chapter_2]
+	{
+		// Name that will be seen in the listbox with the quests
+		screen_name = "Chapter 2: Journey to the Overseer";
+
+		// Chapter image for the journal
+		chapter_image = b_gui_ig_mnu_jnl_chapter_02;
+		
+		[*]
+		{
+			// Activation state
+			order = 0; 
+		
+			// Text that will serve as the "dialog" portion of the chapter.
+			//description = "";
+
+			// Sound file that plays the description text ( or something similar )
+			//sample = ;
+		}
+		[*]
+		{
+			// Activation state
+			order = 1; 
+		
+			// Text that will serve as the "dialog" portion of the chapter.
+			description = "Our hero emerged from the wilderness with a message of warning for the Overseer, and a spirit strengthened to endure the travails that were yet to unfold.";
+
+			// Sound file that plays the description text ( or something similar )
+			sample = s_v_chapter_2;
+		}
+	}
+	[chapter_3]
+	{
+		// Name that will be seen in the listbox with the quests
+		screen_name = "Chapter 3: The Search for Merik";
+
+		// Chapter image for the journal
+		chapter_image = b_gui_ig_mnu_jnl_chapter_03;
+		
+		[*]
+		{
+			// Activation state
+			order = 0; 
+				
+			// Text that will serve as the "dialog" portion of the chapter.
+			//description = "";
+
+			// Sound file that plays the description text ( or something similar )
+			//sample = ;
+		}
+		[*]
+		{
+			// Activation state
+			order = 1; 
+				
+			// Text that will serve as the "dialog" portion of the chapter.
+			description = "With the Grand Mage freed from his icy tomb, it was now clear that there was an evil hand behind the forces consuming the Kingdom. Our hero went forth seeking clues to the whereabouts of the Warding Staff.";
+
+			// Sound file that plays the description text ( or something similar )
+			sample = s_v_chapter_3;
+		}
+	}
+	[chapter_4]
+	{
+		// Name that will be seen in the listbox with the quests
+		screen_name = "Chapter 4: The Warding Staff";
+
+		// Chapter image for the journal
+		chapter_image = b_gui_ig_mnu_jnl_chapter_04;
+		
+		[*]
+		{
+			// Activation state
+			order = 0; 
+				
+			// Text that will serve as the "dialog" portion of the chapter.
+			//description = "";
+
+			// Sound file that plays the description text ( or something similar )
+			//sample = ;
+		}
+		[*]
+		{
+			// Activation state
+			order = 1; 
+				
+			// Text that will serve as the "dialog" portion of the chapter.
+			description = "Having defeated the Goblin menace in its very lair, our hero stood with Warding Staff securely in hand. But the ancient evil remained elusive. Time was running out, and answers were in short supply. The truth would have to be found further east, toward Fortress Kroth.";
+
+			// Sound file that plays the description text ( or something similar )
+			sample = s_v_chapter_4;
+		}
+	}
+	[chapter_5]
+	{
+		// Name that will be seen in the listbox with the quests
+		screen_name = "Chapter 5: An Ancient Evil";
+
+		// Chapter image for the journal
+		chapter_image = b_gui_ig_mnu_jnl_chapter_05;
+		
+		[*]
+		{
+			// Activation state
+			order = 0; 
+				
+			// Text that will serve as the "dialog" portion of the chapter.
+			//description = "";
+
+			// Sound file that plays the description text ( or something similar )
+			//sample = ;
+		}
+		[*]
+		{
+			// Activation state
+			order = 1; 
+				
+			// Text that will serve as the "dialog" portion of the chapter.
+			description = "With Gresh died the greatest threat to Fortress Kroth, but the grave danger of a resurgence of this manner of ancient evil weighed heavily on our hero's mind.";
+
+			// Sound file that plays the description text ( or something similar )
+			sample = s_v_chapter_5;
+		}
+	}
+	[chapter_6]
+	{
+		// Name that will be seen in the listbox with the quests
+		screen_name = "Chapter 6: Unwise Alliance";
+
+		// Chapter image for the journal
+		chapter_image = b_gui_ig_mnu_jnl_chapter_06;
+		
+		[*]
+		{
+			// Activation state
+			order = 0; 
+				
+			// Text that will serve as the "dialog" portion of the chapter.
+			//description = "";
+
+			// Sound file that plays the description text ( or something similar )
+			//sample = ;
+		}
+		[*]
+		{
+			// Activation state
+			order = 1; 
+				
+			// Text that will serve as the "dialog" portion of the chapter.
+			description = "The surrender of the Droog meant the safety of the kingdom had been secured. But a warning had to be delivered to the throne before the revenant Seck could succeed in their mysterious plot.";
+
+			// Sound file that plays the description text ( or something similar )
+			sample = s_v_chapter_6;
+		}
+	}
+	[chapter_7]
+	{
+		// Name that will be seen in the listbox with the quests
+		screen_name = "Chapter 7: King and Castle";
+
+		// Chapter image for the journal
+		chapter_image = b_gui_ig_mnu_jnl_chapter_07;
+		
+		[*]
+		{
+			// Activation state
+			order = 0; 
+				
+			// Text that will serve as the "dialog" portion of the chapter.
+			//description = "";
+
+			// Sound file that plays the description text ( or something similar )
+			//sample = ;
+		}
+//		[*]
+//		{
+//			// Activation state
+//			order = 1; 
+//				
+//			// Text that will serve as the "dialog" portion of the chapter.
+//			description = "With the castle defeated from within, and a resurgence of the Seck already in full swing, there was no question that our hero was all that now remained to halt the overthrow of Ehb, and the slaughter of its good people.";
+//
+//			// Sound file that plays the description text ( or something similar )
+//			sample = s_v_chapter_7;
+//		}
+	}
+	[chapter_8]
+	{
+		// Name that will be seen in the listbox with the quests
+		screen_name = "Chapter 8: The Chamber of Stars";
+
+		// Chapter image for the journal
+		chapter_image = b_gui_ig_mnu_jnl_chapter_08;
+		
+		[*]
+		{
+			// Activation state
+			order = 0; 
+				
+			// Text that will serve as the "dialog" portion of the chapter.
+			//description = "Long ago...";
+
+			// Sound file that plays the description text ( or something similar )
+			//sample = s_e_intro_nis;
+		}
+		[*]
+		{
+			// Activation state
+			order = 1; 
+				
+			// Text that will serve as the "dialog" portion of the chapter.
+			description = "Our hero stepped forth from the Chamber of Stars a fearless champion who would valiantly stride into the army of horrors that lie in wait, determined to crush an eternity of madness before it could be unleashed.";
+
+			// Sound file that plays the description text ( or something similar )
+			sample = s_v_chapter_8;
+		}
+	}
+	[chapter_9]
+	{
+		// Name that will be seen in the listbox with the quests
+		screen_name = "Chapter 9: Dungeon Siege";
+
+		// Chapter image for the journal
+		chapter_image = b_gui_ig_mnu_jnl_chapter_09;
+		
+		[*]
+		{
+			// Activation state
+			order = 0; 
+				
+			// Text that will serve as the "dialog" portion of the chapter.
+			//description = "Long ago...";
+
+			// Sound file that plays the description text ( or something similar )
+			//sample = s_e_intro_nis;
+		}
+		[*]
+		{
+			// Activation state
+			order = 1; 
+				
+			// Text that will serve as the "dialog" portion of the chapter.
+			description = "With the Seck defeated, peace once again returned to the Kingdom. History would record the names of those brave heroes that drove the Seck back to the hell from which they had crawled...a hell they would never return from again. Though victory was ours and nary a vile creature would show itself for many years, the story does not end here. There was a new plan being devised, an evil plot that would once again plunge the Kingdom into war.";
+
+			// Sound file that plays the description text ( or something similar )
+			sample = s_v_king_outro;
+		}
+	}
+}
+
+////////////
+// QUESTS //
+////////////
+
+[quests]
+{
+	[quest_for_gyorn]
+	{		
+		chapter			= chapter_1;
+		screen_name		= "Seek Gyorn in Stonebridge";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_01;              
+		
+		[*]
+		{
+			order		= 0;
+			speaker     = "Norick";                  
+			description = "Seek Norick's friend Gyorn in the town of Stonebridge.";
+			sample      = s_v_fh_norick1;   
+			address		= fh_r1:conversations:conversation_norick;  
+			play_update_sound = false;
+		}
+		[*]
+		{
+			order		= 1;
+			speaker     = "Skartis";
+			description = "Seek Norick's friend Gyorn in the town of Stonebridge by using the old path through the Crypts.";
+			address		= path2crypts:conversations:conversation_skartis;				
+		}
+	}
+	[quest_edgaar_basement]
+	{		
+		chapter			= chapter_1;
+		screen_name		= "Clear Edgaar's Basement";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_02;              
+				
+		[*]
+		{
+			order		= 0;
+			speaker         = "Edgaar";
+			speaker_role    = "Wounded Neighbor";
+			description     = "Clear the Krug from Edgaar's Basement, and gather supplies for the journey to Stonebridge.";
+			sample      = s_v_fh_edgaar2; 
+			address		= fh_r1:conversations:conversation_edgaar;
+		}
+	}
+	[quest_open_gate]
+	{
+		chapter			= chapter_2;		
+		screen_name		= "Clear Glitterdelve Pass";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_06;              
+		
+		[*]
+		{
+			order			= 0;
+			speaker         = "Town Guard";			
+			description     = "Clear the way to Glitterdelve for the Stonebridge militia.";
+			address			= bt_r1:conversations:conversation_guard3;	
+		}
+		[*]
+		{
+			order			= 1;		
+			description     = "Attempt to open Glitterdelve Pass by way of Wesrin Cross.";
+			required		= false;
+		}
+	}
+	[quest_sister_message]
+	 //Take a message from Ella in Stonebridge to her sister in Glacern
+	{
+		chapter			= chapter_2;		
+		screen_name		= "A Sister's Message";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_03;              
+		
+		[*]
+		{
+			order		= 0;
+			speaker 	= "Ella Riverstarn"; 										
+			description = "Deliver Ella's message to her sister Ada in Glacern."; 	
+			address		= bt_r1:conversations:conversation_ella;
+		}
+	}
+	[quest_drunkard_tower]
+	 //Find Ordus's axe in the basement of the guard tower in path2sd
+	{
+		chapter			= chapter_2;		
+		screen_name		= "Ordus' Axe";
+		victory_sample		= s_e_level_up_quest;
+		quest_image 		= b_gui_ig_mnu_jnl_quest_04;              
+
+		[*]
+		{
+			order			= 0;
+			speaker 		= "Ordus Jarrell"; 										
+			description 		= "Secure Ordus' axe from the Northern guard tower."; 	
+			address			= bt_r1:conversations:conversation_ordus;
+		}
+	}
+	[quest_gyorn_seek_overseer]
+	{
+		chapter			= chapter_2;		
+		screen_name		= "Deliver Gyorn's Report";
+		skrit			= overseer_award;
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_05;              
+		
+		[*]
+		{
+			order			= 0;
+			speaker         = "Gyorn";			
+			description     = "Deliver Gyorn's report to the Overseer in Glacern.";
+			sample          = s_v_bt_gyorn1;
+			address			= bt_r1:conversations:conversation_gyorn_join;
+		}
+	}
+	[quest_gyorn_seek_overseer_mp]
+	{
+		chapter			= chapter_2;		
+		screen_name		= "Deliver Gyorn's Report";
+		skrit			= overseer_award;
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_05;              
+		
+		[*]
+		{
+			order			= 0;
+			speaker         = "Gyorn";			
+			description     = "Deliver Gyorn's report to the Overseer in Glacern.";
+			sample 			= s_v_bt_gyornMP1;
+			address			= bt_r1:conversations:conversation_gyorn_multiplayer;
+		}
+	}
+	[quest_free_torg]
+	{
+		chapter			= chapter_2;		
+		screen_name		= "Rescue Torg";
+//		skrit			= lucky_amulet;
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_07;              
+		
+		[*]
+		{
+			order			= 0;
+			speaker         = "Gloern";
+			description     = "Rescue Gloern's brother Torg from within the Dwarven mines.";
+			sample 			= s_v_dm_gloern1;
+			address			= path2dm:conversations:conversation_gloern_join;
+		}
+	}
+	[quest_free_torg_mp]
+	{
+		chapter			= chapter_2;
+		screen_name		= "Rescue Torg";
+//		skrit			= lucky_amulet;
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_07;              
+		
+		[*]
+		{
+			order			= 0;
+			speaker         = "Gloern";			
+			description     = "Rescue Gloern's brother Torg from within the Dwarven mines.";
+			sample          = s_v_dm_gloernMP1;
+			address			= path2dm:conversations:conversation_gloern_multiplayer;
+		}
+	}
+	[quest_torg_seek_overseer]
+	{
+		chapter			= chapter_2;		
+		screen_name		= "Report Torg's Findings";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_08;              
+		
+		[*]
+		{
+			order			= 0;
+			speaker         = "Torg";			
+			description     = "Report Torg's findings to the Overseer in Glacern.";
+			sample          = s_v_path2dm_torg1;
+			address			= dm_r11:conversations:conversation_torg;
+			play_update_sound = false;
+		}
+	}
+	[quest_apprentice_books]
+	 //Find two books for Onoc's apprentice.  They're in Glacern.
+	{
+		chapter			= chapter_3;		
+		screen_name		= "Book Return";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_09;              
+		
+		[*]
+		{
+			order		= 0;
+			speaker     = "Ardun";			
+			description = "Find the first two volumes in the Fedwyrr's Way trilogy.";
+			address		= nt_r1:conversations:conversation_apprentice;
+		}
+	}
+	[quest_ice_dungeon]
+	 //Clear out Orlov's "basement"
+	{
+		chapter			= chapter_3;		
+		screen_name		= "Homeless Blacksmith";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_10;              
+		
+		[*]
+		{
+			order		= 0;
+			speaker     = "Orlov";			
+			description = "Secure Orlov's cabin and cellar in the wilderness north of Glacern.";
+			address		= nt_r1:conversations:conversation_orlov;
+		}
+	}
+	[quest_find_merik]
+	{
+		chapter			= chapter_3;		
+		screen_name		= "Quest for Merik";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_11;              
+		
+		[*]
+		{
+			order		= 0;		
+			speaker     = "Ibsen Yamas";			
+			description = "Find Merik the Grand Mage.";
+			sample      = s_v_nt_ibsen1;
+			address		= nt_r1:conversations:conversation_ibsen;
+		}
+		
+		[*]
+		{
+			order		= 1;
+			speaker     = "Jewlynna";		
+			description = "Find Merik the Grand Mage in the Ice Caves north of Glacern.";
+			required	= false;
+			address		= nt_r1:conversations:conversation_jewlynna;
+		}
+	}
+	[quest_fort_kroth]
+	{
+		chapter			= chapter_3;		
+		screen_name		= "Reinforce Fortress Kroth";
+		quest_image 	= b_gui_ig_mnu_jnl_quest_12;              
+		
+		[*]
+		{
+			order			= 0;		
+			speaker         = "Ibsen Yamas";			
+			description     = "Travel through the Ice Caves to reinforce the Legionnaires at Fortress Kroth.";
+			sample          = s_v_nt_ibsen2;
+			address			= nt_r1:conversations:conversation_ibsen_2;
+		}
+		[*]
+		{
+			order			= 1;
+			speaker     = "Legionnaire Guard";		
+			description     = "Defeat the necromancer besieging Fortress Kroth.";
+			required		= false;
+			address		= tr_r1:conversations:conversation_legionnaire1;
+		}
+	}
+	[quest_fort_kroth2]
+	{
+		chapter			= chapter_5;		
+		screen_name		= "Reinforce Fortress Kroth";
+		quest_image 	= b_gui_ig_mnu_jnl_quest_12;              
+		
+		[*]
+		{
+			order			= 0;		
+			speaker         = "Ibsen Yamas";			
+			description     = "Travel through the Ice Caves to reinforce the Legionnaires at Fortress Kroth.";
+			sample          = s_v_nt_ibsen2;
+			address			= nt_r1:conversations:conversation_ibsen_2;
+			play_update_sound = false;
+		}
+		[*]
+		{
+			order			= 1;
+			speaker     = "Legionnaire Guard";		
+			description     = "Defeat the necromancer besieging Fortress Kroth.";
+			required		= false;
+			address		= tr_r1:conversations:conversation_legionnaire1;
+		}
+	}
+	[quest_kill_bandits]
+	{
+		chapter			= chapter_4;		
+		screen_name		= "Confront the Bandit Boss";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_14;              
+		
+		[*]
+		{
+			order			= 0;
+			speaker         = "Razvan";			
+			description     = "Confront the Bandit Boss to protect the Traveler's camp.";
+			address			= df_r0:conversations:conversation_tent2_a;
+		}
+	}
+	[quest_merik_staff]
+	{
+		chapter			= chapter_4;		
+		screen_name		= "Merik's Staff";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_13;              
+				
+		[*]
+		{
+			order			= 0;
+			speaker         = "Merik";			
+			description     = "Retreive Merik's warding staff.";
+			sample          = s_v_lc_merik1;
+			address			= lc_r5:conversations:conversation_merik_nis;
+			play_update_sound = false;
+		}
+	}
+	[quest_purify_temple]
+	{
+		chapter			= chapter_4;		
+		screen_name		= "Purify the Temple";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_16;              
+				
+		[*]
+		{
+			order			= 0;
+			speaker			= "Azunite Scholar";
+			description     = "Destroy the temple Guardian.";
+			required		= true;
+			address			= df_r1:conversations:conversation_azunite_scholar;
+		}
+
+		[*]
+		{
+			order			= 1;
+			description		= "Place the holy icon on the Temple altar";
+			required		= true;
+		}
+	}
+	[quest_purify_temple_2]
+	{
+		chapter			= chapter_4;		
+		screen_name		= "Purify the Temple";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_16;              
+				
+		[*]
+		{
+			order			= 0;
+			speaker			= "Azunite Scholar";			
+			description		= "Place the holy icon on the Temple altar";
+			required		= true;
+			address			= df_r1:conversations:conversation_azunite_scholar_boss_dead;
+		}
+	}
+	[quest_water_dungeon]
+	{
+		chapter			= chapter_5;		
+		screen_name		= "Missing Treasure Hunters";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_15;              
+				
+		[*]
+		{
+			order		= 0;
+			speaker     = "Gregor";			
+			description = "Find out what became of Thayne's customers, and report your findings to Gregor.";
+			address		= tr_r2:conversations:conversation_gregor;
+		}
+		[*]
+		{
+			order		= 1;
+			description = "Report the demise of the treasure hunters to Gregor for a reward.";
+		}
+	}
+	[quest_merik_staff_mp]
+	{
+		chapter			= chapter_4;		
+		screen_name		= "Merik's Staff";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_13;              
+		
+		[*]
+		{
+			order			= 0;
+			speaker         = "Merik";			
+			description     = "Retreive Merik's warding staff.";
+			//sample 		= s_v_lc_merikMP;
+			address			= lc_r5:conversations:conversation_merik_multiplayer;
+		}
+	}
+//[quest_purify_chapel]
+//	{
+//		chapter			= chapter_4;
+//		screen_name		= "Find and purify the Chapel";
+//		//skrit			  = ;
+//		victory_sample   = s_e_env_secret_found2;	
+//		//quest_image 	= b_gui_ig_mnu_jnl_quest_01;              
+//
+//		[*]
+//		{
+//			order			= 0;
+//			speaker         = "Eusen Brinmas";
+//			description     = "Find the Chapel.";
+//			//sample        = ;
+//			address		=
+//		}
+//	 	[*]
+// 		{
+// 			order		= 1;		
+// 			description = "Cleanse the Chapel grounds of all evil.";
+// 		}
+//		[*]
+// 			{
+// 				order		= 2;		
+// 				description = "Place the amulet near the altar.";
+// 			}
+//	}
+	[quest_subdue_village]
+	{
+		chapter			= chapter_6;			
+		screen_name		= "Subdue the Droog";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_17;              
+		
+		[*]
+		{
+			order			= 0;
+			speaker         = "Tarish";			
+			description     = "Subdue the Droog Leadership in their village beyond the desert to the east.";
+			sample          = s_v_cf_tarish1;
+			address			= cf_r1:conversations:conversation_tarish;
+		}
+	}
+	[quest_slay_dragon]
+	{
+		chapter			= chapter_7;		
+		screen_name		= "Slay the Ancient Dragon of Rathe";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_18;              
+		
+		[*]
+		{
+			order			= 0;
+			speaker         = "Crusader Goquua";			
+			description     = "Slay the Ancient Dragon before the Seck can free him from Dragon's Rathe.";
+			address			= dc_r1:conversations:conversation_goquua;
+		}
+	}
+	[quest_journey_castle]
+	{
+		chapter			= chapter_7;		
+		screen_name		= "Journey to Castle Ehb";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_19;              
+				
+		[*]
+		{
+			order		= 0;
+			speaker         = "Nonataya";			
+			description     = "Journey to Castle Ehb to prevent the Seck from capturing the secret chamber.";
+			sample          = s_v_dc_nonataya1;
+			address			= dc_r1:conversations:conversation_nonataya;
+		}
+	}
+	[quest_find_king]
+	{
+		chapter			= chapter_7;		
+		screen_name		= "Search for the King";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_20;              
+		
+		[*]
+		{
+			order			= 0;
+			speaker         = "Lord Bolingar";			
+			description     = "Find the King and secure Castle Ehb from the Seck.";
+			sample          = s_v_ce_lord_bolingar1;
+			address			= ce_r2:conversations:conversation_lord_bolingar_join;
+		}
+	}
+	[quest_find_king_mp]
+	{
+		chapter			= chapter_7;		
+		screen_name		= "Search for the King";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_20;              
+				
+		[*]
+		{
+			order		= 0;
+			speaker     = "Lord Bolingar";			
+			description = "Find the King and secure Castle Ehb from the Seck.";
+			sample      = s_v_ce_lord_bolingarMP1;
+			address		= ce_r2:conversations:conversation_lord_bolingar_multiplayer;
+		}
+	}
+	[quest_find_artifacts]
+	{
+		chapter			= chapter_8;		
+		screen_name		= "The Chamber of Stars";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_21;              
+				
+		[*]
+		{
+			order		= 0;
+			speaker     = "King Konreid";			
+			description = "Retrieve artifacts from the Chamber of Stars.";
+			sample      = s_v_ce_kingkonreid1;
+			address		= cd_r1:conversations:conversation_king;
+			play_update_sound = false;			
+		}
+	}
+	[quest_destroy_gom]
+	{
+		chapter			= chapter_8;		
+		screen_name		= "Vanquish the Seck";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_22;              
+				
+		[*]
+		{
+			order			= 0;
+			speaker         = "King Konreid";			
+			description     = "Find and destroy the remaining Seck before they can free Gom.";
+			sample          = s_v_ce_kingkonreid1;
+			address			= cd_r1:conversations:conversation_king;
+			required		= true;
+			play_update_sound = false;			
+		}
+		[*]
+		{
+			order			= 1;
+			description		= "Destroy the Seck Leader Gom.";
+			required		= true;
+			play_update_sound = false;
+		}
+	}
+	[quest_destroy_gom2]
+	{
+		chapter			= chapter_9;		
+		screen_name		= "Vanquish the Seck";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_22;              
+				
+		[*]
+		{
+			order			= 0;
+			speaker         = "King Konreid";			
+			description     = "Find and destroy the remaining Seck before they can free Gom.";
+			sample          = s_v_ce_kingkonreid1;
+			address			= cd_r1:conversations:conversation_king;
+			required		= true;
+			play_update_sound = false;			
+		}
+		[*]
+		{
+			order			= 1;
+			description		= "Destroy the Seck Leader Gom.";
+			required		= true;
+			play_update_sound = false;
+		}
+	}
+}
+

@@ -558,8 +558,8 @@
 	[attack]
 	{
 		area_damage_radius = 4;
-		damage_max = 21;
-		damage_min = 20;
+		damage_max = 13;
+		damage_min = 11;
 	}
 	[magic]
 	{
@@ -592,8 +592,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 19;
-		damage_min = 17;
+		damage_max = 15;
+		damage_min = 13;
 	}
 	[magic]
 	{
@@ -713,7 +713,7 @@
 	{
 		enchant_script	= curse;
 		radius			= 20.0;
-		description = "Cursed";
+		description = "Never recover";
 	}
 }
 [t:template,n:c24_r4_scorpion_spell_spikes]

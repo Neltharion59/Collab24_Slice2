@@ -1,0 +1,36 @@
+[t:spider,n:0x08d000b7]
+{
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[aspect]
+	{
+	  b draw_shadow = false;
+	  f experience_value = 0;
+	  b is_selectable = false;
+		life_state = ls_ignore;
+	  b rollover_highlight = false;
+	  f scale_multiplier = 0.55;
+	}
+	[body]
+	{
+	  f avg_move_velocity = 2;
+		initial_chore = chore_none;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.748956,0,0.66262;
+	  p position = 0.535267,1.7,3.2388,0xbbc379c3;
+	}
+}

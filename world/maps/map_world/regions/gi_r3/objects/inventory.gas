@@ -1,0 +1,79 @@
+[t:pickaxe,n:0x051001f0]
+{
+	[aspect]
+	{
+	  b draw_selection_indicator = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = -0.146447,-0.853553,-0.353553,0.353553;
+	  p position = -2.57724,-1.79693,3.5282,0x7457ff34;
+	}
+}
+[t:st_un_merik,n:0x0510004a]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[common]
+	{
+		dev_instance_text = "QUEST";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0510021D,0f,"default","",0), doc("lights off");
+				action* = send_world_message("we_req_deactivate",0x05100144,0f,"default","",0), doc("staff effect off");
+				action* = send_world_message("we_req_deactivate",0x0510014F,0f,"default","",0), doc("staff rotate off");
+				action* = send_world_message("we_req_use",0x05100008,0f,"default","",0), doc("open door");
+				action* = change_quest_state("quest_merik_staff","completed",0);
+				action* = change_quest_state("quest_merik_staff_mp","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_picked_up",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.0165291,-4.34386,-0.0122299,0xbcc21d3c;
+		use_point_scids = 0x05100224,0x05100223,0x05100222,0x05100221,0x05100220;
+	}
+}
+[t:pickaxe,n:0x051001f5]
+{
+	[aspect]
+	{
+	  b draw_selection_indicator = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = -0.37533,0.18024,0.0746578,0.906127;
+	  p position = 3.30592,0.453065,3.02229,0xbec3e44a;
+	}
+}
+[t:pickaxe,n:0x051001f6]
+{
+	[aspect]
+	{
+	  b draw_selection_indicator = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = -0.37533,-0.18024,-0.0746578,0.906127;
+	  p position = -0.364143,0.453068,3.23564,0xbec3e44a;
+	}
+}

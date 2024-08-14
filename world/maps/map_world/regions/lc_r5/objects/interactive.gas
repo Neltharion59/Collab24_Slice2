@@ -1,0 +1,62 @@
+[t:tomb_ice_merik,n:0x04b001b5]
+{
+	[aspect]
+	{
+	  b does_block_path = true;
+	}
+	[breaking_object]
+	{
+	  b break_with_damage = false;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x04B00066,0f,"default","every",0), doc("send to master trigger");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_damaged",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.19509,0,0.980785;
+	  p position = -0.0426025,-1.2,-0.149117,0xafe6fc7d;
+		use_point_scids = 0x04b001a4;
+	}
+}
+[t:sign_glb_01,n:0x04b001e1]
+{
+	[common]
+	{
+		screen_name = "Town of Glacern";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.0463829,0,1.03131,0x377d7740;
+	}
+}
+[t:sign_glb_01,n:0x04b001e2]
+{
+	[common]
+	{
+		screen_name = "Jeriah's Trading Post";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.880821,1.43051e-006,0.990993,0x377d7740;
+	}
+}

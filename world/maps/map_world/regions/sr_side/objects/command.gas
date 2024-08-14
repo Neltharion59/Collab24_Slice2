@@ -1,0 +1,48 @@
+[t:cmd_report_gameplay_screen_player,n:0x072000c1]
+{
+	[cmd_report_gameplay_screen_player]
+	{
+		report_name = "1_sr_side";
+	}
+	[placement]
+	{
+	  p position = 0.100333,-0.0999999,2.86141,0xb50a7ca9;
+	}
+}
+[t:cmd_move_party,n:0x0720013b]
+{
+	[cmd_party]
+	{
+	  f aproach_distance_max = 3;
+	  f aproach_distance_min = 1;
+	}
+	[placement]
+	{
+	  p position = 4.31506,-0.35,3.97066,0x3798188c;
+	}
+}
+[t:cmd_move_party,n:0x0720013c]
+{
+	[cmd_party]
+	{
+	  f aproach_distance_max = 3;
+	  f aproach_distance_min = 1;
+	}
+	[placement]
+	{
+	  p position = -5.00605,-0.35,3.42445,0xb73db742;
+	}
+}
+[t:cmd_move_party,n:0x0720013d]
+{
+	[cmd_party]
+	{
+	  f aproach_distance_max = 3;
+	  f aproach_distance_min = 1;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.251961,-0.45,-1.0965,0xd6aa1a5f;
+	}
+}

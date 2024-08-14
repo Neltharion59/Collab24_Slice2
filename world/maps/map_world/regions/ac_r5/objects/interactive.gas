@@ -1,0 +1,207 @@
+[t:generator_ice_stalagmite,n:0x03c00034]
+{
+	[generator_breakable]
+	{
+	  i accel_count = 25;
+	  i accel_delay = 0;
+		child_template_name = "ice_fly";
+	  x initial_command = 0x03C00033;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  x spawnpoint = 0x03C00035;
+	}
+	[placement]
+	{
+	  q orientation = -0.007972,0.913511,-0.003549,-0.406721;
+	  p position = -1.13311,-2.30964,-3.06861,0x6d0f8445;
+	}
+}
+[t:generator_ice_stalagmite,n:0x03c0005c]
+{
+	[generator_breakable]
+	{
+	  i accel_count = 30;
+	  i accel_delay = 10;
+		child_template_name = "ice_fly";
+	  x initial_command = 0x03C0005E;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  x spawnpoint = 0x03C0005D;
+	}
+	[placement]
+	{
+	  p position = -2.07473,0.903036,1.63996,0xc033180d;
+	}
+}
+[t:respawn_statue,n:0x03c00165]
+{
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = -2.2372,-4.15,-5.92362,0xb4233c91;
+		use_point_scids = 0x03c0019e;
+	}
+}
+[t:generator_ice_stalagmite,n:0x03c0003c]
+{
+	[generator_breakable]
+	{
+	  i accel_count = 30;
+	  i accel_delay = 0;
+		child_template_name = "ice_fly";
+	  x initial_command = 0x03C0003E;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  x spawnpoint = 0x03C00162;
+	}
+	[placement]
+	{
+	  q orientation = -0.168125,0.931813,-0.295956,-0.125968;
+	  p position = 3.25633,-0.218871,1.47249,0x81033942;
+	}
+}
+[t:generator_ice_stalagmite,n:0x03c0004a]
+{
+	[generator_breakable]
+	{
+	  i accel_count = 30;
+	  i accel_delay = 0;
+		child_template_name = "ice_fly";
+	  x initial_command = 0x03C0004C;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  x spawnpoint = 0x03C0004B;
+	}
+	[placement]
+	{
+	  q orientation = -0.0662467,0.86209,-0.0692234,0.497615;
+	  p position = -0.571178,1.00475,2.3905,0xd278385e;
+	}
+}
+[t:generator_ice_stalagmite,n:0x03c00037]
+{
+	[generator_breakable]
+	{
+	  i accel_count = 30;
+	  i accel_delay = 0;
+		child_template_name = "ice_fly";
+	  x initial_command = 0x03C00056;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  x spawnpoint = 0x03C00055;
+	}
+	[placement]
+	{
+	  q orientation = -0.191589,0.667454,-0.140729,0.705688;
+	  p position = -1.02262,2.86102e-006,1.55966,0xc0abdc38;
+	}
+}
+[t:generator_ice_stalagmite,n:0x03c00059]
+{
+	[generator_breakable]
+	{
+	  i accel_count = 25;
+		child_template_name = "ice_fly";
+	  x initial_command = 0x03C00056;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  x spawnpoint = 0x03C0005A;
+	}
+	[placement]
+	{
+	  q orientation = -0.196427,0.222704,-0.333319,0.894828;
+	  p position = -2.64869,9.53674e-007,0.465424,0x39970604;
+	}
+}
+[t:generator_ice_stalagmite,n:0x03c00036]
+{
+	[generator_breakable]
+	{
+	  i accel_count = 30;
+	  i accel_delay = 0;
+		child_template_name = "ice_fly";
+	  x initial_command = 0x03C00047;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  x spawnpoint = 0x03C0003B;
+	}
+	[placement]
+	{
+	  q orientation = -0.154851,0.984415,0.064516,-0.052777;
+	  p position = -0.209279,-0.346211,-0.324428,0x33d5b159;
+	}
+}
+[t:generator_stalagmite,n:0x03c0002d]
+{
+	[generator_breakable]
+	{
+	  i accel_count = 30;
+	  i accel_delay = 0;
+		child_template_name = "ice_fly";
+	  x initial_command = 0x03C00032;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  x spawnpoint = 0x03C0002E;
+	}
+	[placement]
+	{
+	  q orientation = 0.082155,0.804426,-0.296991,0.507883;
+	  p position = -1.45105,0,1.27533,0x4a139ba4;
+	}
+}
+[t:generator_ice_stalagmite,n:0x03c0008b]
+{
+	[generator_breakable]
+	{
+		child_template_name = "ice_fly";
+	  x initial_command = 0x03C00092;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  x spawnpoint = 0x03C0008C;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -2.19136,-2.90871e-005,-1.95732,0xb51fb27d;
+	}
+}
+[t:generator_ice_stalagmite,n:0x03c00093]
+{
+	[generator_breakable]
+	{
+		child_template_name = "ice_fly";
+	  x initial_command = 0x03C0008F;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  x spawnpoint = 0x03C00097;
+	}
+	[placement]
+	{
+	  q orientation = 0.0527911,-0.51328,0.074658,0.853336;
+	  p position = 3.16374,0.289181,-0.647156,0xd6a16f9c;
+	}
+}
+[t:sign_ice_01,n:0x03c00189]
+{
+	[common]
+	{
+		screen_name = "Jeriah's Trading Post";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.866026,0,0.5;
+	  p position = 0.377518,-2.38419e-007,-0.750031,0xd5f37a76;
+	}
+}
+[t:sign_ice_01,n:0x03c0018e]
+{
+	[common]
+	{
+		screen_name = "Town of Glacern";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.258819,0,0.965926;
+	  p position = 0.992615,-2.38419e-007,-0.1007,0xd5f37a76;
+	}
+}

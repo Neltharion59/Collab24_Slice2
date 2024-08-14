@@ -1,0 +1,41 @@
+[t:door_ice_cave,n:0x03d004b2]
+{
+	[door_basic]
+	{
+	  b can_use = false;
+	}
+	[placement]
+	{
+	  p position = -0.0108457,-11.7937,3.43913,0x58cd01f1;
+	}
+}
+[t:door_ice_peasant_left,n:0x03d00360]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x03D0036B;
+		msg_type_opening = we_trigger_activate;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.80014,-1.49631,-4.04553,0xcf73dc28;
+		use_point_scids = 0x03d00535,0x03d00534;
+	}
+}
+[t:sign_ice_mountainman,n:0x03d00373]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -2.45541,1.54056,-4.55641,0xcf73dc28;
+	}
+}
+[t:respawn_statue,n:0x03d004c6]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -3.9281,1,3.81609,0xa960b4d5;
+	}
+}

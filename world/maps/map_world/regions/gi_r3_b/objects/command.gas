@@ -1,0 +1,153 @@
+[t:cmd_enter_nis,n:0x0530010f]
+{
+	[cmd_enter_nis]
+	{
+	  x next_scid = 0x05300113;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.894126,0,0.245439,0x2f4f8902;
+	}
+}
+[t:cmd_leave_nis,n:0x05300110]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.882197,-3.8147e-006,1.97351,0x2f4f8902;
+	}
+}
+[t:cmd_report_gameplay_screen_player,n:0x053000d0]
+{
+	[cmd_report_gameplay_screen_player]
+	{
+		report_name = "1_gi_r3_b";
+	}
+	[placement]
+	{
+	  p position = 1.65806,0,-0.785236,0x457b12fe;
+	}
+}
+[t:cmd_move_party,n:0x0530011a]
+{
+	[cmd_party]
+	{
+	  f aproach_distance_max = 3;
+	  f aproach_distance_min = 0.5;
+	}
+	[placement]
+	{
+	  p position = -0.236813,6.67572e-006,-1.51072,0x796dd56e;
+	}
+}
+[t:cmd_camera_command,n:0x05300113]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 2.5;
+	  x next_scid = 0x05300115;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = -0.137344,-0.159004,-0.0223425,0.977423;
+	  p position = 2.93756,0.0916595,1.29713,0x2316cd0f;
+	}
+}
+[t:cmd_camera_command,n:0x05300115]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 2.5;
+	  x next_scid = 0x05300119;
+	}
+	[placement]
+	{
+	  q orientation = -0.139137,0.0131394,0.0018463,0.990185;
+	  p position = 1.75894,0.09166,1.16082,0x2316cd0f;
+	}
+}
+[t:cmd_camera_command,n:0x05300119]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 8;
+	  x next_scid = 0x0530011D;
+	}
+	[placement]
+	{
+	  q orientation = -0.139137,0.0131394,0.00184629,0.990184;
+	  p position = -2.51057,0.0916595,1.40349,0x2316cd0f;
+	}
+}
+[t:cmd_camera_command,n:0x05300120]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x05300110;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.260036,-0.655878,0.258473,0.659846;
+	  p position = 1.59959,9.38329,-7.3618,0xadca9ceb;
+	}
+}
+[t:cmd_camera_command,n:0x0530011d]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 10;
+	  x next_scid = 0x05300125;
+	}
+	[placement]
+	{
+	  q orientation = 0.0503662,0.0208586,-0.0010521,0.998512;
+	  p position = -2.56293,0.492247,-2.72741,0x3b1546d6;
+	}
+}
+[t:cmd_camera_command,n:0x05300125]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 2;
+	  x next_scid = 0x05300120;
+	}
+	[placement]
+	{
+	  q orientation = 0.0503662,0.0208586,-0.0010521,0.998512;
+	  p position = -2.58339,0.492247,-2.99298,0x3b1546d6;
+	}
+}
+[t:camera_quake,n:0x05300109]
+{
+	[camera_quake]
+	{
+	  f duration = 0.9;
+	  f magnitude_x = 0.2;
+	  f magnitude_y = 0.2;
+	  f magnitude_z = 0.2;
+	  b self_destruct = true;
+	}
+	[placement]
+	{
+	  p position = 0.0118942,-7.92518,-0.251102,0x060a7209;
+	}
+}
+[t:camera_quake,n:0x0530010a]
+{
+	[camera_quake]
+	{
+	  f duration = 0.9;
+	  f magnitude_x = 0.1;
+	  f magnitude_y = 0.1;
+	  f magnitude_z = 0.1;
+	  b self_destruct = true;
+	}
+	[placement]
+	{
+	  p position = 0.205919,0.15,0.80629,0xc9e769dc;
+	}
+}

@@ -1,0 +1,72 @@
+[conversation_thayne]
+{
+	[text*]
+	{
+		choice = shop;
+		order = 0;
+		sample = s_v_tr_thayne1;
+		screen_text = "Mmmmmm...You've not travelled in the best circles, but there can be some margin in lower end goods... My assistant and I have just finished with a party of foolhardy sorcerers who were found up the road near the Temple. There were a few items among their effects that might be of interest, but we've yet to get the... unfortunate odor off them. Surely that won't be a problem for people of your station, mmm?";
+	}
+	[text*]
+	{
+		choice = shop;
+		sample = s_v_tr_thayne3;
+		screen_text = "Welcome back. We're always glad to have a future supplier in the store.";
+	}
+	[goodbye*]
+	{
+		sample = s_v_tr_thayne2; // "I'm very sure I shall be seeing you again."
+	}
+}
+
+[conversation_gregor]
+{
+	[text*]
+	{
+		order = 0;
+		//sample = s_v_greet_male_allochap;
+		screen_text = "Milord Thayne and I have been supplying a group of treasure hunters who were delving into the flooded dungeon west of here. Might you be headed that way?";
+		choice = more;
+	}
+	[text*]
+	{
+		order = 1;
+		screen_text = "They stopped showing up a few days ago, and never gave word of leaving. We always hate to lose regular customers, especially if we don't know where to find them. If you happen to see them, tell them we appreciate their business. If they have...um...closed their account, please come back and tell me where we might find them; I would surely make it worth your time.";
+		activate_quest* = quest_water_dungeon;
+		choice = more;
+		quest_dialog = true;
+	}
+	[text*]
+	{
+		screen_text = "It would be most unfortunate to have lost all their high value... patronage in these hard times.";
+	}
+}
+[conversation_gregor_quest_complete]
+{
+	[text*]
+	{
+		order = 0;
+		screen_text = "You found them dead? Outstanding!... er... most unfortunate rather. I knew they weren't the kind to just leave without saying goodbye. Here is a trifle for helping us locate them.";
+		complete_quest* = quest_water_dungeon;		
+		choice = more;
+	}
+	[text*]
+	{
+		screen_text = "Thayne and I will have to get down there straight away to ensure a... um... proper burial for the poor chaps.";
+	}
+}
+[conversation_gregor_quest_done_early]
+{
+	[text*]
+	{
+		order = 0;
+		//sample = s_v_greet_male_allochap;
+		screen_text = "So you've been to the flooded dungeon west of here? You didn't happen to bump into a group of treasure hunters did you? Oh you found them dead? Outstanding!... er... most unfortunate rather. I knew they weren't the kind to just leave without saying goodbye. Here is a trifle for the information.";
+		choice = more;
+	}
+	[text*]
+	{
+		screen_text = "Thayne and I will have to get down there straight away to ensure a... um... proper burial for the poor chaps.";
+	}
+}
+

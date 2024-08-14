@@ -359,7 +359,11 @@
 			}
 		}
 	}
-	[defend] { defense=90; }
+	[common]
+	{
+		screen_name = "Vjaranna";
+	}
+	[defend] { defense=40; }
 	[generator_in_object]
 	{
 		child_template_name = swamp_switch_skeleton;
@@ -381,8 +385,8 @@
 			{
 				[oneof*]
 				{
-					il_main = #nmagic/3-7;
-					il_main = #cmagic/3-7;
+					il_main = #nmagic/3-6;
+					il_main = #cmagic/3-6;
 					min = 2;
 					max = 3;
 				}

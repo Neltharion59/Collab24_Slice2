@@ -56,6 +56,21 @@
 		inventory_icon = b_gui_ig_i_ic_dead_orthrac;
 	}
 }
+[t:template,n:collab24_slice2_r4_naldrun_frozen]
+{
+	category_name = "treasure";
+	doc = "collab24 slice2 r4 naldrun frozen";
+	specializes = treasure;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_c_edm_054_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_054-04;
+		}
+	}
+}
 [t:template,n:c24_2_r2_wood_pile]
 {
 	category_name = "treasure";
@@ -196,7 +211,8 @@
 	[gui]
 	{
 		can_sell = false;
-		inventory_icon = b_gui_ig_i_ic_sc_001-inv;
+		active_icon = b_gui_ig_i_ic_sc_001;
+		inventory_icon = b_gui_ig_i_ic_sc_008_inv;
 	}
 }
 [t:template,n:c24_2_r3_dynamite]

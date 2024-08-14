@@ -1,0 +1,301 @@
+[t:gen_explode_ice_01-ice_warrior,n:0x03a001eb]
+{
+	[placement]
+	{
+	  q orientation = 0,0.999391,0,-0.0348997;
+	  p position = 2.46104,0,-3.17241,0x4c623729;
+	}
+}
+[t:gen_explode_ice_02-ice_warrior,n:0x03a001ec]
+{
+	[placement]
+	{
+	  q orientation = 0,0.728371,0,0.685183;
+	  p position = -3.18203,0,-3.14435,0x4c623729;
+	}
+}
+[t:gen_explode_ice_02-ice_warrior,n:0x03a001ed]
+{
+	[placement]
+	{
+	  q orientation = 0,0.62932,0,-0.777146;
+	  p position = 2.30251,0,2.95439,0x4c623729;
+	}
+}
+[t:gen_explode_ice_06-ice_warrior,n:0x03a001ee]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = -3.31495,0,2.70619,0x4c623729;
+	}
+}
+[t:gen_explode_ice_05-ice_warrior,n:0x03a001ef]
+{
+	[placement]
+	{
+	  q orientation = 0,0.656059,0,0.75471;
+	  p position = -0.209648,0,-2.67197,0x4c623729;
+	}
+}
+[t:gen_explode_ice_02-ice_warrior,n:0x03a001f0]
+{
+	[placement]
+	{
+	  q orientation = 0,0.945518,0,-0.325568;
+	  p position = -0.639374,0,2.44864,0x4c623729;
+	}
+}
+[t:gen_explode_ice_01-ice_archer,n:0x03a001c3]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.866025,0,0.5;
+	  p position = -2.30301,2,3.05879,0x989ac8c4;
+	}
+}
+[t:generator_generic,n:0x03a00024]
+{
+	[generator_basic]
+	{
+		child_template_name = "ice_warrior";
+	  x initial_command = 0x03A00020;
+	}
+	[placement]
+	{
+	  p position = 3.07459,1.21765,1.94163,0x27b2f05f;
+	}
+}
+[t:generator_generic,n:0x03a00022]
+{
+	[generator_basic]
+	{
+		child_template_name = "ice_warrior";
+	  x initial_command = 0x03A0001C;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.00105,-0.828468,-1.81322,0xc7b1e743;
+	}
+}
+[t:gen_explode_ice_01-ice_archer,n:0x03a001c0]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.3;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.656059,0,0.75471;
+	  p position = -1.65294,0,-0.671654,0x3c3e5f03;
+	}
+}
+[t:gen_explode_ice_03-ice_archer,n:0x03a001c1]
+{
+	[placement]
+	{
+	  q orientation = 0,0.737277,0,0.67559;
+	  p position = -0.00871134,0,-0.142704,0x3c3e5f03;
+	}
+}
+[t:gen_explode_ice_06-ice_archer,n:0x03a001c2]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.477159,0,0.878817;
+	  p position = 1.41577,0,1.44598,0x3c3e5f03;
+	}
+}
+[t:generator_generic,n:0x03a0002c]
+{
+	[generator_basic]
+	{
+		child_template_name = "ice_warrior";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = 0.613722,0.880779,-0.075188,0x546eea82;
+	}
+}
+[t:gen_explode_ice_01-ice_archer,n:0x03a001ce]
+{
+	[generator_auto_object_exploding]
+	{
+	  f trigger_range = 14;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.999229,0,0.0392597;
+	  p position = -1.85025,0,-0.077137,0x3ad44450;
+	}
+}
+[t:gen_explode_ice_02-ice_archer,n:0x03a001cf]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.2;
+	}
+	[generator_auto_object_exploding]
+	{
+	  f trigger_range = 14;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.785317,0,-0.619094;
+	  p position = 0.672783,0,-0.658953,0x3ad44450;
+	}
+}
+[t:gen_explode_ice_03-ice_archer,n:0x03a001d0]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[generator_auto_object_exploding]
+	{
+	  f trigger_range = 14;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.629321,0,0.777146;
+	  p position = -0.450195,0,0.432411,0x3ad44450;
+	}
+}
+[t:generator_generic,n:0x03a00027]
+{
+	[generator_basic]
+	{
+		child_template_name = "ice_warrior";
+	  x initial_command = 0x03A00028;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,-0.382683;
+	  p position = 2.87505,-2.81301,-1.12771,0x37b56db3;
+	}
+}
+[t:generator_generic,n:0x03a00029]
+{
+	[generator_basic]
+	{
+		child_template_name = "ice_warrior";
+	  x initial_command = 0x03A00032;
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
+	  f spawn_period = 15;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.925076,12.1635,0.901191,0x77a3c4e9;
+	}
+}
+[t:generator_generic,n:0x03a0002a]
+{
+	[generator_basic]
+	{
+		child_template_name = "ice_warrior";
+	  x initial_command = 0x03A0002D;
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
+	  f spawn_period = 15;
+	}
+	[placement]
+	{
+	  p position = 0.138764,0,1.75461,0x780557a9;
+	}
+}
+[t:generator_generic,n:0x03a00025]
+{
+	[generator_basic]
+	{
+		child_template_name = "ice_warrior";
+	  x initial_command = 0x03A00036;
+	}
+	[placement]
+	{
+	  p position = -1.01308,4e-006,1.61014,0xec0280c5;
+	}
+}
+[t:generator_generic,n:0x03a00039]
+{
+	[generator_basic]
+	{
+		child_template_name = "ice_warrior";
+	  x initial_command = 0x03A00037;
+	}
+	[placement]
+	{
+	  p position = -0.278992,5e-006,1.57138,0xec0280c5;
+	}
+}
+[t:gen_explode_ice_02-ice_archer,n:0x03a001df]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.2;
+	}
+	[generator_auto_object_exploding]
+	{
+	  f trigger_range = 14;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.0741083,0,-0.99725;
+	  p position = -0.391355,0,-0.239243,0x0c07d8e5;
+	}
+}
+[t:gen_explode_ice_03-ice_archer,n:0x03a001e0]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.35;
+	}
+	[generator_auto_object_exploding]
+	{
+	  f trigger_range = 14;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.995396,0,0.0958456;
+	  p position = 1.27838,0,-0.264847,0x0c07d8e5;
+	}
+}
+[t:gen_explode_ice_01-ice_archer,n:0x03a001e1]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[generator_auto_object_exploding]
+	{
+	  f trigger_range = 14;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.601815,0,-0.798636;
+	  p position = -3.1256,0,-0.158234,0x0c07d8e5;
+	}
+}
+[t:generator_generic,n:0x03a0003e]
+{
+	[generator_basic]
+	{
+		child_template_name = "ice_warrior";
+	  x initial_command = 0x03A0003F;
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
+	  f spawn_period = 10;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = -0.518356,0,0.110731,0x3f4e76a6;
+	}
+}

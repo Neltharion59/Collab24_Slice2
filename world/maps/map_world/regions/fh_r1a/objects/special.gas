@@ -1,0 +1,228 @@
+[t:frag_glb_bone_dirty_01,n:0x08d000a8]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	  f scale_multiplier = 1.35;
+	}
+	[placement]
+	{
+	  q orientation = -2.08616e-007,0.707107,2.08616e-007,-0.707107;
+	  p position = -2.81213,1.7,2.83668,0xbbc379c3;
+	}
+}
+[t:frag_glb_bone_dirty_03,n:0x08d000aa]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	  f scale_multiplier = 1.35;
+	}
+	[placement]
+	{
+	  q orientation = 2.4869e-014,1,3.57628e-007,1.49012e-007;
+	  p position = -3.74143,1.7,3.39432,0xbbc379c3;
+	}
+}
+[t:frag_glb_bone_dirty_04,n:0x08d000ab]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.6121,1.7,3.29054,0xbbc379c3;
+	}
+}
+[t:frag_glb_bone_dirty_01,n:0x08d000b1]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	  f scale_multiplier = 1.35;
+	}
+	[placement]
+	{
+	  q orientation = 0.382683,5.96046e-008,-0.923879,-1.3411e-007;
+	  p position = -3.26395,1.77424,2.61603,0xbbc379c3;
+	}
+}
+[t:trigger_generic,n:0x08d00002]
+{
+	[common]
+	{
+		dev_instance_text = "MOVE SPIDER";
+	  b is_multi_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x08D00003,0f,"default","",0), delay(17), doc("waypoint 1");
+				action* = send_world_message("we_req_activate",0x08D001A1,0f,"default","",0), delay(21), doc("waypoint 2");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("from start trigger in fh_r1");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.37955,-0.58829,1.66054,0x75f17bad;
+	}
+}
+[t:frag_glb_bone_dirty_02,n:0x08d000a9]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	  f scale_multiplier = 1.35;
+	}
+	[placement]
+	{
+	  q orientation = -1.78814e-007,-0.382683,-1.04308e-007,-0.923879;
+	  p position = -1.6673,-1.42491,1.6338,0x7641ceea;
+	}
+}
+[t:frag_glb_bone_dirty_05,n:0x08d000ac]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	  f scale_multiplier = 1.35;
+	}
+	[placement]
+	{
+	  q orientation = -2.08616e-007,0.707107,2.08616e-007,-0.707107;
+	  p position = -1.41403,-1.50465,1.76698,0x7641ceea;
+	}
+}
+[t:frag_glb_bone_dirty_06,n:0x08d000ad]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	  f scale_multiplier = 1.35;
+	}
+	[placement]
+	{
+	  q orientation = 0.255265,0.47808,0.277243,0.793357;
+	  p position = -1.97357,-1.45545,1.37632,0x7641ceea;
+	}
+}
+[t:frag_glb_bone_dirty_03,n:0x08d000b0]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	  f scale_multiplier = 1.35;
+	}
+	[placement]
+	{
+	  q orientation = -3.09665e-008,-0.00617039,-0.999962,-0.00617067;
+	  p position = -1.13675,-1.39129,1.81882,0x7641ceea;
+	}
+}
+[t:frag_glb_bone_dirty_04,n:0x08d000b2]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-2.68221e-007,0,1;
+	  p position = -1.00653,-1.5,1.8881,0x7641ceea;
+	}
+}
+[t:frag_glb_bone_dirty_01,n:0x08d000a1]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	}
+	[placement]
+	{
+	  p position = 0.891602,0,1.31793,0x6d68c1f9;
+	}
+}
+[t:frag_glb_bone_dirty_02,n:0x08d000a2]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	}
+	[placement]
+	{
+	  p position = 1.52354,0,1.51021,0x6d68c1f9;
+	}
+}
+[t:frag_glb_bone_dirty_03,n:0x08d000a3]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	}
+	[placement]
+	{
+	  p position = 1.47971,0,1.04108,0x6d68c1f9;
+	}
+}
+[t:frag_glb_bone_dirty_04,n:0x08d000a4]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	}
+	[placement]
+	{
+	  p position = 0.724136,0,1.86779,0x6d68c1f9;
+	}
+}
+[t:frag_glb_bone_dirty_05,n:0x08d000a5]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	}
+	[placement]
+	{
+	  p position = 0.694427,0,1.55789,0x6d68c1f9;
+	}
+}
+[t:frag_glb_bone_dirty_06,n:0x08d000a6]
+{
+	[aspect]
+	{
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	}
+	[placement]
+	{
+	  p position = 0.31987,0,1.31861,0x6d68c1f9;
+	}
+}

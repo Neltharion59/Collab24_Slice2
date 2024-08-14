@@ -1,0 +1,21 @@
+[t:generator_generic,n:0x04e00012]
+{
+	[common]
+	{
+		dev_instance_text = "GENERATOR, dont delete this object... it is calling a valid scid in path2dm... so there!!!  -ernsie";
+	}
+	[generator_basic]
+	{
+		child_template_name = "dwarf_worker";
+	  x initial_command = 0x033000F6;
+	  x initial_command2 = 0x03300108;
+	  x initial_command3 = 0x033000F9;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,0.382684;
+	  p position = -0.0669705,-6,-1.34944,0x345aa2f5;
+	}
+}

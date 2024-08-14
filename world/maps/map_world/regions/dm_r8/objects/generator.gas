@@ -1,0 +1,44 @@
+[t:generator_generic,n:0x0350008a]
+{
+	[generator_basic]
+	{
+		child_template_name = "krug_scout";
+	  x initial_command = 0x03500094;
+	  x initial_command2 = 0x035000CE;
+	  x initial_command3 = 0x03500095;
+	  i num_children_incubating = 3;
+	}
+	[placement]
+	{
+	  p position = 0.880282,-0.05,2.58082,0x347ea8fb;
+	}
+}
+[t:generator_generic,n:0x035000d2]
+{
+	[generator_basic]
+	{
+		child_template_name = "krug_scout";
+	  x initial_command = 0x03500094;
+	  x initial_command2 = 0x035000CE;
+	  x initial_command3 = 0x03500095;
+	  i num_children_incubating = 3;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -2.02572,-0.05,-3.21753,0x523aa4ad;
+	}
+}
+[t:generator_alignment_changer,n:0x0350007a]
+{
+	[generator_dumb_guy]
+	{
+		child_template_name = "mine_worm";
+		life_state_spawn = ls_alive_conscious;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -0.478096,0,-1.66379,0xc7ccd1b4;
+	}
+}

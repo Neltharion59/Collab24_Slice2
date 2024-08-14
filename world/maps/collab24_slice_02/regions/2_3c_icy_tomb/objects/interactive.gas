@@ -1,0 +1,36 @@
+[t:tomb_ice_merik,n:0x02b0002b]
+{
+	[aspect]
+	{
+	  f life = 1;
+	  f max_life = 1;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02B0002E,0f,"default","every",0);
+				action* = change_quest_state("c24_slice_2_quest_frozen_fae","active",4);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -0.0154383,-0.8,-0.172876,0x967f0d78;
+		use_point_scids = 0x02b0002d;
+	}
+}

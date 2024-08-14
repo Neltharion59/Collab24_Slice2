@@ -1,0 +1,462 @@
+[t:arrow,n:0x0090051f]
+{
+	[placement]
+	{
+	  q orientation = -0.0810797,0.898685,0.200679,-0.381469;
+	  p position = 2.03844,2.18606,-1.73398,0xe5972423;
+	}
+}
+[t:arrow,n:0x00900534]
+{
+	[placement]
+	{
+	  q orientation = -0.170315,-0.371814,-0.234879,0.881804;
+	  p position = 1.79324,7.48325,1.1546,0xe5972423;
+	}
+}
+[t:arrow,n:0x00900527]
+{
+	[placement]
+	{
+	  q orientation = -0.248687,0.109172,0.202845,0.940792;
+	  p position = 1.71523,13.1406,1.92299,0x7a931c9f;
+	}
+}
+[t:arrow,n:0x00900528]
+{
+	[placement]
+	{
+	  q orientation = 0.111845,0.992097,-0.0195235,-0.0534117;
+	  p position = -1.73433,13.7597,0.786675,0x59d25c7d;
+	}
+}
+[t:arrow,n:0x00900524]
+{
+	[placement]
+	{
+	  q orientation = -0.319281,-0.588044,-0.0324155,0.742437;
+	  p position = -1.50606,1.14059,1.0517,0xa72fc75e;
+	}
+}
+[t:sign_glb_01,n:0x0090054c]
+{
+	[common]
+	{
+		screen_name = "Bonepicker's Post";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.465976,0,1.44084,0xa72fc75e;
+	}
+}
+[t:sign_glb_01,n:0x0090054d]
+{
+	[common]
+	{
+		screen_name = "Fortress Kroth";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.29945,0,1.49267,0xa72fc75e;
+	}
+}
+[t:arrow,n:0x00900521]
+{
+	[placement]
+	{
+	  q orientation = -0.129167,0.891909,0.333563,-0.276676;
+	  p position = 1.95305,0,1.36449,0x31208aba;
+	}
+}
+[t:arrow,n:0x0090051e]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.92;
+	}
+	[placement]
+	{
+	  q orientation = 0.039997,0.404184,0.873735,-0.267626;
+	  p position = 0.126778,0.299683,0.363344,0x7dc47280;
+	}
+}
+[t:arrow,n:0x00900538]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.92;
+	}
+	[placement]
+	{
+	  q orientation = 0.456971,0.375487,0.633497,-0.498867;
+	  p position = 1.13351,0.170405,-0.148897,0x7dc47280;
+	}
+}
+[t:arrow,n:0x00900535]
+{
+	[placement]
+	{
+	  q orientation = 0.00476952,0.950376,-0.263451,0.165399;
+	  p position = -5.51323,14.812,2.04036,0xcaf970df;
+	}
+}
+[t:arrow,n:0x00900536]
+{
+	[placement]
+	{
+	  q orientation = 0.151875,0.944059,0.290215,-0.038226;
+	  p position = -6.02905,17.3022,1.44271,0xcaf970df;
+	}
+}
+[t:door_glb_fort_01,n:0x00900318]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x00900183;
+		msg_type_opening = we_trigger_activate;
+	  b oneshot = true;
+	  x second_door = 0x00900428;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.49012e-007;
+	  p position = 3.08292,-5.04113,27.164,0x64da9d5a;
+		use_point_scids = 0x0090031a,0x00900319;
+	}
+}
+[t:door_glb_fort_right_01,n:0x00900428]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x00900183;
+		msg_type_opening = we_trigger_activate;
+	  b oneshot = true;
+	  x second_door = 0x00900318;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.60478e-007;
+	  p position = 3.08744,-5.00402,27.1625,0x64da9d5a;
+		use_point_scids = 0x0090031a,0x00900319;
+	}
+}
+[t:pathspike_glb_gresh,n:0x00900317]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  p position = 0.710579,-1.98253,-0.435066,0x99225041;
+	}
+}
+[t:pathspike_glb_gresh,n:0x00900385]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.38356,-2,-1.67359,0x99225041;
+	}
+}
+[t:pathspike_glb_gresh,n:0x009003d7]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  p position = 3.59421,0,-1.35754,0x779b3050;
+	}
+}
+[t:pathspike_glb_gresh,n:0x009003bb]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.32156,-4.76837e-007,1.7149,0x71a9302f;
+	}
+}
+[t:pathspike_glb_gresh,n:0x009003bf]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  p position = 0.415703,-4.76837e-007,0.613678,0x71a9302f;
+	}
+}
+[t:pathspike_glb_gresh,n:0x009003c0]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  p position = -0.223785,0,-0.624092,0x71a9302f;
+	}
+}
+[t:pathspike_glb_gresh,n:0x009003cf]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  p position = -0.593498,0,-1.99718,0x71a9302f;
+	}
+}
+[t:pathspike_glb_gresh,n:0x009003d2]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.72229,-1.98006,0.504303,0xe1a2d459;
+	}
+}
+[t:pathspike_glb_gresh,n:0x0090042e]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  p position = 3.41396,0,-1.32891,0xb9e1f447;
+	}
+}
+[t:sign_glb_01,n:0x0090053a]
+{
+	[common]
+	{
+		screen_name = "Castle Ehb";
+	}
+	[placement]
+	{
+	  p position = 6.53782,-5.59329,-23.0741,0x6573f080;
+	}
+}
+[t:sign_glb_01,n:0x0090053b]
+{
+	[common]
+	{
+		screen_name = "Hall of Skulls";
+	}
+	[placement]
+	{
+	  q orientation = 0.026173,0.0174464,-0.000456851,0.999505;
+	  p position = 6.54253,-5.05,-23.1638,0x6573f080;
+	}
+}
+[t:sign_glb_01,n:0x0090053c]
+{
+	[common]
+	{
+		screen_name = "The Cliffs of Fire";
+	}
+	[placement]
+	{
+	  q orientation = -0.0174493,-0.0174493,-0.000304572,0.999695;
+	  p position = 6.52602,-5.33829,-23.0039,0x6573f080;
+	}
+}
+[t:sign_glb_01,n:0x0090053d]
+{
+	[common]
+	{
+		screen_name = "Bonepicker's Post";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.965926,0,-0.258819;
+	  p position = 6.65385,-5.36105,-24.0119,0x6573f080;
+	}
+}
+[t:sign_glb_01,n:0x00900546]
+{
+	[common]
+	{
+		screen_name = "Eastern Swamp";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.991445,0,-0.130526;
+	  p position = 6.76309,-5.05,-24.0681,0x6573f080;
+	}
+}
+[t:pathspike_glb_gresh,n:0x0090044e]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  p position = 3.14989,0,0.0541,0x80c79d1d;
+	}
+}
+[t:pathspike_glb_gresh,n:0x00900462]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.31374,-1.96569,-1.44899,0x93b14b60;
+	}
+}
+[t:pathspike_glb_gresh,n:0x00900574]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.97437,-4,-0.646992,0x1e6cb162;
+	}
+}
+[t:pathspike_glb_gresh,n:0x00900550]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  p position = 0.0136223,0,-0.264442,0xec49e6f1;
+	}
+}
+[t:sign_glb_fortress_kroth,n:0x00900213]
+{
+	[placement]
+	{
+	  p position = -1.49483,0,-2.72559,0x9e8d13a5;
+	}
+}
+[t:pathspike_glb_gresh,n:0x00900545]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  p position = 0.202351,0,1.31847,0x3a403393;
+	}
+}
+[t:sign_glb_01,n:0x00900548]
+{
+	[common]
+	{
+		screen_name = "Eastern Swamp";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 3.9169,-5.24521e-006,1.05067,0x3a403393;
+	}
+}
+[t:sign_glb_01,n:0x00900549]
+{
+	[common]
+	{
+		screen_name = "Bonepicker's Post";
+	}
+	[placement]
+	{
+	  q orientation = 2.34291e-007,0.858616,0.130527,-0.495723;
+	  p position = 3.02731,-0.27091,0.226044,0x3a403393;
+	}
+}
+[t:sign_glb_01,n:0x0090054a]
+{
+	[common]
+	{
+		screen_name = "Fortress Kroth";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.5,0,0.866025;
+	  p position = 3.09692,-4.29153e-006,1.28212,0x3a403393;
+	}
+}
+[t:pathspike_glb_gresh,n:0x0090054f]
+{
+	[breaking_object]
+	{
+		break_event = we_req_use;
+	  b break_with_damage = false;
+	}
+	[placement]
+	{
+	  p position = 0.387451,0,-1.2375,0x3a403393;
+	}
+}
+[t:respawn_statue,n:0x00900371]
+{
+	[placement]
+	{
+	  p position = -0.00850296,7.15256e-007,0.0845947,0x57f04172;
+	}
+}
+[t:arrow,n:0x0090052f]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.92;
+	}
+	[placement]
+	{
+	  q orientation = -0.738204,0.223051,0.0345226,0.635698;
+	  p position = 3.35846,-0.984469,-3.04254,0x92e0d7db;
+	}
+}
+[t:arrow,n:0x00900530]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.92;
+	}
+	[placement]
+	{
+	  q orientation = -0.840847,-0.0216553,-0.0634947,0.5371;
+	  p position = 3.59189,-0.987436,-3.19588,0x92e0d7db;
+	}
+}

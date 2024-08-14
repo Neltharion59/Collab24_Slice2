@@ -4889,12 +4889,6 @@
 		[door*]
 		{
 		  i fardoor = 1;
-		  x farguid = 0xBB147BC4;
-		  i id = 17;
-		}
-		[door*]
-		{
-		  i fardoor = 1;
 		  x farguid = 0xCB21CDDE;
 		  i id = 20;
 		}
@@ -6206,25 +6200,6 @@
 		{
 		  i fardoor = 2;
 		  x farguid = 0xE2AB61FE;
-		  i id = 1;
-		}
-	}
-	[t:snode,n:0xbb147bc4]
-	{
-	  b bounds_camera = true;
-	  b camera_fade = false;
-	  x guid = 0xBB147BC4;
-	  x mesh_guid = 0x02B00D24;
-	  x nodelevel = 0xFFFFFFFF;
-	  x nodeobject = 0xFFFFFFFF;
-	  x nodesection = 0x00000021;
-	  b occludes_camera = false;
-	  b occludes_light = true;
-		texsetabbr = ic01;
-		[door*]
-		{
-		  i fardoor = 17;
-		  x farguid = 0x967F0D78;
 		  i id = 1;
 		}
 	}

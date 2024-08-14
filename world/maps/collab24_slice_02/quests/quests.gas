@@ -166,7 +166,7 @@
 		}
 		[*]
 		{
-			description = Defeat the Pond Keeper's Minions;
+			description = Defeat First Wave of Pond Keeper's Minions;
 		  b is_consumable = true;
 		  i order = 2;
 		  b required = true;
@@ -174,7 +174,7 @@
 		}
 		[*]
 		{
-			description = Drop a Gold Coin Near the Pond;
+			description = Drop a Second Gold Coin Near the Pond;
 		  b is_consumable = true;
 		  i order = 3;
 		  b required = true;
@@ -182,7 +182,7 @@
 		}
 		[*]
 		{
-			description = Defeat the Pond Keeper's Minions;
+			description = Defeat the Second Wave of Pond Keeper's Minions;
 		  b is_consumable = true;
 		  i order = 4;
 		  b required = true;
@@ -190,7 +190,7 @@
 		}
 		[*]
 		{
-			description = Drop a Gold Coin Near the Pond;
+			description = Drop a Third Gold Coin Near the Pond;
 		  b is_consumable = true;
 		  i order = 5;
 		  b required = true;
@@ -198,7 +198,7 @@
 		}
 		[*]
 		{
-			description = Defeat the Pond Keeper's Minions;
+			description = Defeat the Third Wave of Pond Keeper's Minions;
 		  b is_consumable = true;
 		  i order = 6;
 		  b required = true;
@@ -206,7 +206,7 @@
 		}
 		[*]
 		{
-			description = Drop a Gold Coin Near the Pond;
+			description = Drop a Fourth Gold Coin Near the Pond;
 		  b is_consumable = true;
 		  i order = 7;
 		  b required = true;
@@ -611,6 +611,61 @@
 			description = You Have Successfully Cleared the Road;
 		  b is_consumable = true;
 		  i order = 6;
+		  b required = true;
+			speaker = ;
+		}
+	}
+	[c24_slice_2_quest_frozen_fae]
+	{
+		chapter = chapter_02_path_of_merchant;
+		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
+		screen_name = Suspended Soul;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = Enter the Tomb Cave;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Explore the Cave;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Destroy the Guardians;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Free the imprisoned Fae;
+		  b is_consumable = true;
+		  i order = 3;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Speak with Glamoulla of the Fae;
+		  b is_consumable = true;
+		  i order = 4;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = You have successfully freed Glamoulla from the Tomb. She will likely be heard of again.;
+		  b is_consumable = true;
+		  i order = 5;
 		  b required = true;
 			speaker = ;
 		}

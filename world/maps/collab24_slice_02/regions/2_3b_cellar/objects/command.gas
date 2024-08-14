@@ -1,13 +1,13 @@
-[t:cmd_t_delete,n:0x02a0006a]
+[t:cmd_selection_toggle,n:0x02a0006b]
 {
-	[cmd_t_delete]
+	[cmd_selection_toggle]
 	{
-	  x target_scid = 0x02A0006C;
+	  x object_scid = 0x02A00061;
+	  i start_state = 1;
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -1.93126,0,-0.162388,0x8166b3c8;
+	  p position = -0.0881767,0,0.0111237,0x8166b3c8;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x02a000be]

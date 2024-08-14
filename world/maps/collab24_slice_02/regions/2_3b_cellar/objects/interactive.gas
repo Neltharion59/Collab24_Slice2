@@ -2,9 +2,11 @@
 {
 	[on_off_lever]
 	{
+		on_message_3 = we_req_deactivate;
 	  x on_scid = 0x02A00031;
 	  x on_scid_2 = 0x02A00032;
-	  x on_scid_3 = 0x02A0006A;
+	  x on_scid_3 = 0x02A0006C;
+	  x on_scid_4 = 0x02A000BC;
 	  b one_shot = true;
 	}
 	[placement]

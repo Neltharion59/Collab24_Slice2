@@ -1,0 +1,120 @@
+[conversation_gloern_multiplayer]
+{
+	[text*]
+	{
+		activate_quest* = quest_free_torg_mp;
+		sample = s_v_dm_gloernMP1;
+		screen_text = "This is a bad business, but we're no' the only ones in it! These magic bits the Krug are stealing are goin' to some clag named Commander Gresh, but there'll be a blasted goblin behind this or I'm a mule's father! Me brother Torg will like as know more, but the Krug 'ave him holt up down beloo.";
+		quest_dialog = true;
+	}
+}
+[conversation_gloern_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		activate_quest* = quest_free_torg;
+		sample = s_v_dm_gloern1;
+		screen_text = "This is a bad business, but we're no' the only ones in it! These magic bits the Kroog are stealing are goin' to some clag named Commander Gresh, but there'll be a blasted goblin behind this or I'm a mule's father! Me brother Torg will like as know more, but the Kroog 'ave him holt up down beloo. I could truly use a hand in getting him free, if yer willing.";
+		quest_dialog = true;
+	}
+}
+[conversation_gloern_accept]
+{
+	[text*]
+	{
+		sample = s_v_dm_gloern2;
+		screen_text = "Let's get to it! There's a score o' Krug who need to re-learn who rules the Glitterdelve!";
+	}
+}
+[conversation_gloern_reject]
+{
+	[text*]
+	{
+		sample = s_v_dm_gloern5;
+		screen_text = "Bah! Do you no' get it? We're fighting a war, and against who or what only the god knows! But, if you think you can fight it all on yer own, I guess I'll not stand in yer way. Go on, then.";
+	}
+}
+[conversation_gloern_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_dm_gloern4;
+		screen_text = "I knew it! Didn't get very far without Gloern, did ye? We shoulda fight together, not aloon! What's say we fight this evil together?";
+	}
+}
+[conversation_gloern_disband]
+{
+	[text*]
+	{
+		sample = s_v_dm_gloern3;
+		screen_text = "Ach, some bloody gratitude for saving your hide! Well now, we'll jus see how well ye do without Gloern!";
+	}
+}
+[conversation_gloern_disband_rejoin]
+{
+	[text*]
+	{
+		sample = s_v_dm_gloern6;
+		screen_text = "By the thousand holes of glory, get those brains o' yours workin'! Do ye want me ta help you or no'?";
+		choice = potential_member;
+	}
+}
+
+[conversation_bodrus]
+{
+	[text*]
+	{
+		order = 0;
+		choice = shop;
+		sample = s_v_path2dm_bodrus1;
+		screen_text = "My good friend! Fate surely has delivered us into each other's hands. I have need of a few interesting items to take back to my...eh...business partners...and you seem well equipped. Well equipped indeed. Might I propose that I take a few items off your hands in exchange for good Kingdom currency? Magical items would be especially welcome...if you have them.";
+	}
+	[goodbye*]
+	{
+		sample = s_v_path2dm_bodrus2;
+		screen_text = "A pleasure doing business with you.";
+	}
+	[text*]
+	{
+		choice = shop;
+		sample = s_v_path2dm_bodrus3;
+		screen_text = "Ahh! How good to see you again! Is there some magical artifact you might bear to part with?";
+	}
+}
+[conversation_fretch_multiplayer]
+{
+	[text*]
+	{
+		sample = s_v_path2dm_fretchMP1;
+		screen_text = "If yer headin' ta Stonebridge, don't bother. I hear the place was burned to the ground a few nights ago. We're just tryin ta figure out how ta keep our mules fed until our business associates show up.";
+	}
+}
+[conversation_fretch_first]
+{
+	[text*]
+	{
+        choice = buy_packmule;
+		sample = s_v_path2dm_fretch1;
+		screen_text = "If yer headin' ta Stonebridge, don't bother. I hear the place was burned to the ground a few nights ago. We're just tryin ta figure out how ta keep our mules fed until our business associates show up. You know, we really only need one mule from here on out, if you want to give back some of that coin, I think I could part with old Mabel.";
+	}
+}
+[conversation_fretch_one_packmule]
+{
+	[text*]
+	{
+
+		sample = s_v_path2dm_fretch2;
+		screen_text = "Mabel can take care of herself better'n most.";
+        choice = buy_packmule;
+	}
+}
+[conversation_fretch_no_packmules]
+{
+	[text*]
+	{
+		sample = s_v_path2dm_fretch3;
+		screen_text = "I'm afraid I can't give ya both of 'em, we're gonna need one mule just to carry all the gold Bodrus says we're gonna get.";
+	}
+}

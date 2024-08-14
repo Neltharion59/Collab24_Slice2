@@ -1,0 +1,734 @@
+[t:emitter_glb_fire_01,n:0x01f0006b]
+{
+	[placement]
+	{
+	  p position = 0.984978,-0.64878,0.312721,0x10b67283;
+	}
+}
+[t:emitter_glb_fire_01,n:0x01f0006d]
+{
+	[placement]
+	{
+	  p position = 0.017044,0.3,-0.1572,0xa5dd41f2;
+	}
+}
+[t:emitter_glb_fire_01,n:0x01f00071]
+{
+	[placement]
+	{
+	  p position = 0.024224,0.3,-0.138729,0x0715ea14;
+	}
+}
+[t:emt_sound,n:0x01f001bf]
+{
+	[placement]
+	{
+	  q orientation = -5.78606e-014,0.803855,-5.8234e-014,0.594825;
+	  p position = 0.0747909,-1.56369,0.00700773,0x61914fb3;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_chains_rustling";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 12;
+	}
+}
+[t:emitter_glb_fire_01,n:0x01f0006c]
+{
+	[placement]
+	{
+	  p position = 0.023869,0.3,-0.215387,0x746f3695;
+	}
+}
+[t:emitter_glb_fire_01,n:0x01f000cb]
+{
+	[placement]
+	{
+	  p position = 0.003743,0.300001,-0.172155,0x873ac60b;
+	}
+}
+[t:emt_sound_act,n:0x01f00370]
+{
+	[placement]
+	{
+	  p position = 3.60055,4.76837e-007,1.0344,0xfa34af50;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_scream_male";
+	  f max_dist = 10;
+	  f min_dist = 1;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound,n:0x01f001bd]
+{
+	[placement]
+	{
+	  q orientation = -8.20913e-014,0.989016,-2.64049e-016,-0.147807;
+	  p position = 3.54578,1.00958,0.834101,0x250c4384;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_moaning";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 12;
+	}
+}
+[t:emt_sound,n:0x01f001b3]
+{
+	[placement]
+	{
+	  q orientation = -5.80473e-014,0.803855,-5.78608e-014,0.594824;
+	  p position = 1.27231,-1.75496,0.618414,0x7b7dde1d;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_haunting";
+	  f max_repeat_rate = 25;
+	  f repeat_rate = 12;
+	}
+}
+[t:emitter_glb_fire_01,n:0x01f000ba]
+{
+	[placement]
+	{
+	  p position = 0.985967,-0.600001,0.347682,0xe1346c62;
+	}
+}
+[t:emitter_glb_fire_01,n:0x01f000ca]
+{
+	[placement]
+	{
+	  p position = 0.014684,0.299999,-0.157837,0x890907e6;
+	}
+}
+[t:emt_sound,n:0x01f001b0]
+{
+	[placement]
+	{
+	  q orientation = 0,0.989016,0,-0.14781;
+	  p position = 1.90596,-2,-1.61584,0x8100ca3d;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_haunting";
+	  f max_repeat_rate = 21;
+	  f repeat_rate = 10;
+	}
+}
+[t:emt_sound,n:0x01f001ae]
+{
+	[placement]
+	{
+	  q orientation = 3.40287e-021,0.803857,4.5987e-021,0.594823;
+	  p position = 2.01035,-2,5.40051,0xe4cc10a9;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_haunting";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 15;
+	}
+}
+[t:emt_sound,n:0x01f001b1]
+{
+	[placement]
+	{
+	  q orientation = 3.43187e-021,0.989016,5.12892e-022,-0.147809;
+	  p position = -0.553597,-1.95,3.80664,0xdc0efb66;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_haunting";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 10;
+	}
+}
+[t:emt_sound,n:0x01f001b4]
+{
+	[placement]
+	{
+	  q orientation = 1.30003e-008,0.803856,1.75687e-008,0.594823;
+	  p position = -0.0320642,-0.135647,-1.04256,0xe2c46be6;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_chains_rustling";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 12;
+	}
+}
+[t:emt_sound,n:0x01f001b2]
+{
+	[placement]
+	{
+	  q orientation = -1.75687e-008,-0.594823,1.30003e-008,0.803856;
+	  p position = -0.0513192,5.98991,-0.0335578,0xf7b2e6db;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_burning_small";
+	}
+}
+[t:emitter_glb_fire_01,n:0x01f000aa]
+{
+	[placement]
+	{
+	  p position = 0.951869,-0.6,0.331161,0x821b73c2;
+	}
+}
+[t:emt_sound_act,n:0x01f00331]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND: GENERATOR ON";
+	}
+	[placement]
+	{
+	  p position = 3.20121,2.13506,-1.45683,0x489af90f;
+	}
+	[sound_emitter_act]
+	{
+	  b continual_loop = true;
+		event_sound = "cos_gen_run";
+	  f min_dist = 15;
+	  f repeat_rate = 0;
+	  b start_on_creation = false;
+	}
+}
+[t:emitter_glb_fire_01,n:0x01f000eb]
+{
+	[placement]
+	{
+	  p position = 0.92508,-0.601951,0.330868,0x1b60e184;
+	}
+}
+[t:emt_sound,n:0x01f001be]
+{
+	[placement]
+	{
+	  q orientation = 2.16156e-008,0.147806,3.23036e-009,0.989016;
+	  p position = 0.156229,0.236307,0.137078,0x1fb78db3;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_chains_rustling";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 12;
+	}
+}
+[t:emitter_glb_fire_01,n:0x01f000ce]
+{
+	[placement]
+	{
+	  p position = 0.970308,-0.600001,0.32539,0x8ca1eec7;
+	}
+}
+[t:emitter_glb_fire_01,n:0x01f000cd]
+{
+	[placement]
+	{
+	  p position = 0.984428,-0.6,0.249298,0x7f7e849a;
+	}
+}
+[t:emt_sound,n:0x01f001bc]
+{
+	[placement]
+	{
+	  q orientation = -8.19594e-014,0.989016,1.31869e-016,-0.147808;
+	  p position = -1.4916,-0.920518,0.498414,0x5f82cc7f;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_haunting";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 10;
+	}
+}
+[t:emt_sound,n:0x01f001bb]
+{
+	[placement]
+	{
+	  q orientation = -8.21321e-014,0.989016,-9.7713e-017,-0.147808;
+	  p position = -0.578142,-0.920507,0.816478,0x0ad90aa5;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_haunting";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 12;
+	}
+}
+[t:emt_sound,n:0x01f001ba]
+{
+	[placement]
+	{
+	  q orientation = 3.23045e-009,0.147808,-2.16157e-008,0.989016;
+	  p position = -1.14496,-0.920507,-1.35997,0xe7e7ad37;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_haunting";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 5;
+	}
+}
+[t:emt_sound,n:0x01f001b9]
+{
+	[placement]
+	{
+	  q orientation = -1.75689e-008,0.803855,1.30002e-008,0.594824;
+	  p position = -0.498933,-2.21491,1.90501,0x399665c9;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_haunting";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 5;
+	}
+}
+[t:emt_generic_act,n:0x01f00340]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01F00376,0f,"default","",0), doc("camera shake");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[generic_emitter_act]
+	{
+		other_effect = "static_gen_shoot";
+	  x target = 0x01F0037A;
+	  x target2 = 0x01F002E7;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  p position = -0.362102,12.0687,-2.66868,0x432e8683;
+	}
+}
+[t:emt_generic_act,n:0x01f00367]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "static_gen_charge";
+	  x target = 0x01F0037A;
+	}
+	[placement]
+	{
+	  p position = -1.61495,12.0687,-3.44733,0x432e8683;
+	}
+}
+[t:emt_generic_act,n:0x01f00375]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "item_spawn";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[placement]
+	{
+	  q orientation = -0.65606,0,0,0.75471;
+	  p position = 6.38929,13.5426,-0.937725,0x432e8683;
+	}
+}
+[t:emt_generic_act,n:0x01f0036b]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "static_gen_charge";
+	  x target = 0x01F00365;
+	}
+	[placement]
+	{
+	  p position = -0.0309634,12.0687,1.85938,0xccfb7ee2;
+	}
+}
+[t:emt_generic_act,n:0x01f00372]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "item_spawn";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[placement]
+	{
+	  q orientation = -0.65606,0,0,0.75471;
+	  p position = 6.15193,13.5697,0.975173,0xccfb7ee2;
+	}
+}
+[t:emt_generic_act,n:0x01f00379]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01F00376,0f,"default","",0), doc("camera shake");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[generic_emitter_act]
+	{
+		other_effect = "static_gen_shoot";
+	  x target = 0x01F00365;
+	  x target2 = 0x01F002E7;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  p position = -1.97612,12.0687,2.71043,0xccfb7ee2;
+	}
+}
+[t:emt_sound_act,n:0x01f002e8]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND: GENERATOR ON";
+	}
+	[placement]
+	{
+	  p position = 14.5472,2.13506,0.120311,0xb5c0f715;
+	}
+	[sound_emitter_act]
+	{
+	  b continual_loop = true;
+		event_sound = "cos_gen_run";
+	  f repeat_rate = 0;
+	  b start_on_creation = false;
+	}
+}
+[t:emitter_glb_fire_01,n:0x01f00325]
+{
+	[light_flicker_lightweight]
+	{
+	  x siege_light = 0x7FD57ACA;
+	}
+	[placement]
+	{
+	  p position = -15.4437,1.32441,-2.96045,0xb5c0f715;
+	}
+}
+[t:emitter_glb_fire_01,n:0x01f00326]
+{
+	[light_flicker_lightweight]
+	{
+	  x siege_light = 0xDD8DE4A9;
+	}
+	[placement]
+	{
+	  p position = -15.5713,1.3306,2.56753,0xb5c0f715;
+	}
+}
+[t:emt_sound_act,n:0x01f00358]
+{
+	[common]
+	{
+		dev_instance_text = "FLASH SOUND";
+	}
+	[placement]
+	{
+	  p position = -12.8916,12.2852,-12.2285,0x11e3c468;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "cos_flash";
+	  f min_dist = 15;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x01f002e7]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND: RINGS START";
+	}
+	[placement]
+	{
+	  p position = -12.9422,19.7567,11.8283,0xeb6b06d2;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "cos_ring";
+	  f min_dist = 15;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_generic_act,n:0x01f0036a]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "static_gen_charge";
+	  x target = 0x01F00364;
+	}
+	[placement]
+	{
+	  p position = -4.55787,12.0687,2.57114,0xeb6b06d2;
+	}
+}
+[t:emt_generic_act,n:0x01f0036f]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "static_gen_solar_system";
+	  f rep_freq_max = 9;
+	  x target = 0x01F002E7;
+	}
+	[placement]
+	{
+	  p position = -12.9528,19.4285,11.8463,0xeb6b06d2;
+	}
+}
+[t:emt_generic_act,n:0x01f00373]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "item_spawn";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[placement]
+	{
+	  q orientation = -0.65606,0,0,0.75471;
+	  p position = -1.50522,13.5715,8.5665,0xeb6b06d2;
+	}
+}
+[t:emt_generic_act,n:0x01f00377]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01F00376,0f,"default","",0), doc("camera shake");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[generic_emitter_act]
+	{
+		other_effect = "static_gen_shoot";
+	  x target = 0x01F00364;
+	  x target2 = 0x01F002E7;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  p position = -6.32225,12.0687,1.14125,0xeb6b06d2;
+	}
+}
+[t:emt_sound_act,n:0x01f003a0]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND: GENERATOR ON";
+	}
+	[placement]
+	{
+	  p position = -5.97947,2.13506,2.60455,0xeb6b06d2;
+	}
+	[sound_emitter_act]
+	{
+	  b continual_loop = true;
+		event_sound = "cos_gen_run";
+	  f min_dist = 15;
+	  f repeat_rate = 0;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x01f002e1]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND: GENERATOR START";
+	}
+	[placement]
+	{
+	  p position = -11.797,11.3012,-12.709,0xe6412fd6;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "cos_gen_start";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_generic_act,n:0x01f00341]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01F00376,0f,"default","",0), doc("camera shake");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[generic_emitter_act]
+	{
+		other_effect = "static_gen_shoot";
+	  x target = 0x01F00363;
+	  x target2 = 0x01F002E7;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  p position = -5.23895,12.0687,-2.84139,0xe6412fd6;
+	}
+}
+[t:emt_generic_act,n:0x01f00369]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "static_gen_charge";
+	  x target = 0x01F00363;
+	}
+	[placement]
+	{
+	  p position = -6.93098,12.0687,-1.79057,0xe6412fd6;
+	}
+}
+[t:emt_generic_act,n:0x01f00374]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "item_spawn";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[placement]
+	{
+	  q orientation = -0.731354,0,0,0.681999;
+	  p position = -2.10425,13.1654,-8.69077,0xe6412fd6;
+	}
+}
+[t:emt_sound_act,n:0x01f003a1]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND: GENERATOR AMP";
+	}
+	[placement]
+	{
+	  p position = 7.61867,-13.6318,10.7519,0x028da650;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "cos_gen_amp";
+	  f min_dist = 20;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emitter_glb_fire_01,n:0x01f000cc]
+{
+	[placement]
+	{
+	  p position = 0.981592,-0.600001,0.294266,0xf714e79c;
+	}
+}
+[t:emt_sound,n:0x01f001af]
+{
+	[placement]
+	{
+	  q orientation = -8.19594e-014,0.989016,1.31721e-016,-0.147805;
+	  p position = 0.331205,-0.432076,0.263063,0x520e36b5;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_haunting";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 10;
+	}
+}
+[t:emt_sound,n:0x01f00342]
+{
+	[placement]
+	{
+	  q orientation = -8.19594e-014,0.989016,1.31721e-016,-0.147805;
+	  p position = 0.331205,-0.432076,0.263063,0x520e36b5;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_haunting";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 10;
+	}
+}

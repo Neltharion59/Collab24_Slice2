@@ -1,0 +1,218 @@
+[t:emt_sound,n:0x00d00172]
+{
+	[placement]
+	{
+	  p position = -1.1622,31.0042,-0.55592,0x4a217ab7;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_crypt";
+	  f max_dist = 35;
+	}
+}
+[t:emt_sound_act,n:0x00d00173]
+{
+	[common]
+	{
+		dev_instance_text = "ROCK TREMOR";
+	}
+	[placement]
+	{
+	  p position = 21.5769,21.2645,-30.5141,0x4a217ab7;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_tremor";
+	  f max_dist = 40;
+	  f min_dist = 10;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x00d0017d]
+{
+	[common]
+	{
+		dev_instance_text = "TREASURE SOUND";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 23.248,29.7592,-30.4409,0x4a217ab7;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "secret_nearby";
+	  f max_dist = 50;
+	  f repeat_rate = 25;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_generic_act,n:0x00d0017e]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "item_sparkles";
+	}
+	[placement]
+	{
+	  q orientation = -0.5,0.5,0.5,0.5;
+	  p position = -1.46492,20.1611,-9.28483,0x4a217ab7;
+	}
+}
+[t:emt_generic_act,n:0x00d00193]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "light_rays";
+	}
+	[placement]
+	{
+	  q orientation = 0.73406,-0.445905,-0.511077,-0.0335377;
+	  p position = 23.2409,22.8954,-30.0983,0x4a217ab7;
+	}
+}
+[t:emt_go,n:0x00d00196]
+{
+	[go_emitter]
+	{
+	  f avz = 0;
+	  f avz_var = 0;
+	  i count = 20;
+	  f duration = 2;
+	  f end_radius_max = 1;
+	  f end_radius_min = 0.1;
+	  f interval = 0.24;
+	  f lvz = 0.4;
+	  f lvz_var = 0.78;
+		model = "frag_glb_stone_09";
+		model2 = "frag_glb_debris_bone_rock_01";
+		model3 = "frag_glb_stone_07";
+		model4 = "frag_glb_stone_08";
+	}
+	[placement]
+	{
+	  q orientation = 0.586219,-0.395409,0.395409,0.586219;
+	  p position = 10.0469,36.6665,-30.1682,0x4a217ab7;
+	}
+}
+[t:emt_generic_act,n:0x00d00179]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "item_sparkles";
+	}
+	[placement]
+	{
+	  q orientation = -0.5,0.5,0.5,0.5;
+	  p position = -2.94735,-3.15795,-16.8468,0xec350b8f;
+	}
+}
+[t:emt_generic_act,n:0x00d0017b]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "item_sparkles";
+	}
+	[placement]
+	{
+	  q orientation = -0.5,0.5,0.5,0.5;
+	  p position = -2.26163,-3.24726,1.09035,0xec350b8f;
+	}
+}
+[t:emt_generic_act,n:0x00d0018f]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "item_sparkles";
+	}
+	[placement]
+	{
+	  q orientation = -0.5,0.5,0.5,0.5;
+	  p position = -9.55238,-3.18301,-11.3078,0xec350b8f;
+	}
+}
+[t:emt_generic_act,n:0x00d00190]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "item_sparkles";
+	}
+	[placement]
+	{
+	  q orientation = -0.5,0.5,0.5,0.5;
+	  p position = -6.84488,-3.39093,-21.3859,0xec350b8f;
+	}
+}
+[t:emt_generic_act,n:0x00d00191]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "item_sparkles";
+	}
+	[placement]
+	{
+	  q orientation = -0.5,0.5,0.5,0.5;
+	  p position = -19.1322,-3.55288,-22.5105,0xec350b8f;
+	}
+}
+[t:emt_go,n:0x00d0006e]
+{
+	[go_emitter]
+	{
+	  f avz = 0;
+	  f avz_var = 0;
+	  i count = 3;
+	  f duration = 1.5;
+	  f end_radius_max = 0.6;
+	  f end_radius_min = 0.1;
+	  f interval = 0.5;
+	  f lvz = 0.4;
+	  f lvz_var = 0.6;
+		model = "frag_cav_boulder_01";
+	  f random_delay = 0.7;
+	}
+	[placement]
+	{
+	  q orientation = 0.579229,-0.405581,0.405581,0.579229;
+	  p position = -10.6968,26.7383,-5.32228,0x26b536ed;
+	}
+}
+[t:emt_go,n:0x00d00073]
+{
+	[go_emitter]
+	{
+	  f avz = 0;
+	  f avz_var = 0;
+	  i count = 3;
+	  f duration = 1.5;
+	  f end_radius_max = 0.5;
+	  f end_radius_min = 0.1;
+	  f interval = 0.5;
+	  f lvz = 0.33;
+	  f lvz_var = 0.8;
+		model = "frag_cav_boulder_02";
+	  f random_delay = 0.7;
+	}
+	[placement]
+	{
+	  q orientation = 0.572062,0.415628,-0.415628,0.572062;
+	  p position = 10.1955,26.7133,-6.19118,0x26b536ed;
+	}
+}
+[t:emt_sound_act,n:0x00d00177]
+{
+	[placement]
+	{
+	  p position = -2.46153,3.90519,-15.243,0x26b536ed;
+	}
+	[sound_emitter_act]
+	{
+	  b continual_loop = true;
+		event_sound = "env_dragon_breath";
+	  f max_dist = 55;
+	  f min_dist = 5;
+	  b stop_instantly = true;
+	}
+}
