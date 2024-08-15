@@ -1172,3 +1172,61 @@
 	  p position = -3.25615,3.78542,-5.8583,0x9e084e28;
 	}
 }
+[t:trigger_generic,n:0x02101a73]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_talk_begin",0x02100007,0f,"0x4001","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,3.500000,0.500000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,5.96046e-008;
+	  p position = -0.209328,-3.93503,-3.25684,0x6d751d27;
+	}
+}
+[t:trigger_generic,n:0x02101a96]
+{
+	[common]
+	{
+		dev_instance_text = "ON GIANT TALKED TO AFTER SMASHING THE ROCK";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_deactivate",0x02101A73,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 2.98866,0,-0.664696,0x825d8de7;
+	}
+}

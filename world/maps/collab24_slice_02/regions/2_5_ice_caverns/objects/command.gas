@@ -75,6 +75,23 @@
 	  p position = -2.08817,0.77787,1.73349,0x08a04bdf;
 	}
 }
+[t:cmd_alignment_changer,n:0x02600088]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_spawn = aa_evil;
+	  b change_invincibility = true;
+	  b change_may_attacked = true;
+	  b invincible_spawn = true;
+	  b may_attack_spawn = true;
+	  i start_state = 1;
+	  x target_actor = 0x0260005C;
+	}
+	[placement]
+	{
+	  p position = -2.39372,0.997758,2.40272,0xdeec1970;
+	}
+}
 [t:cmd_ai_c_patrol,n:0x0260000a]
 {
 	[placement]
@@ -101,22 +118,5 @@
 	{
 	  q orientation = 0,-5.96046e-008,0,1;
 	  p position = 0.210171,-0.396142,-3.75926,0xc9274015;
-	}
-}
-[t:cmd_alignment_changer,n:0x02600088]
-{
-	[cmd_dumb_guy]
-	{
-		alignment_spawn = aa_evil;
-	  b change_invincibility = true;
-	  b change_may_attacked = true;
-	  b invincible_spawn = true;
-	  b may_attack_spawn = true;
-	  i start_state = 1;
-	  x target_actor = 0x0260005C;
-	}
-	[placement]
-	{
-	  p position = -2.39372,0.997758,2.40272,0xdeec1970;
 	}
 }

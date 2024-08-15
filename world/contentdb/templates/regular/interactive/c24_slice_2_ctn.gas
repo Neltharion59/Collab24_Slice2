@@ -114,6 +114,23 @@
 		one_shot = false;
 	}
 }
+[t:template,n:c24_slice_2_r3_ctn_flesh]
+{
+	specializes		= container;
+	doc				= "c24 Slice 2 R3 Ctn Flesh";
+
+	[aspect]
+	{
+        is_selectable = false;
+        is_invincible = true;
+		is_usable	= false;
+		life_state	= LS_ALIVE_CONSCIOUS;
+		max_life	= 1;
+		material	= flesh;
+		life		= 1;
+        model	= m_i_csl_corpse-01;
+	}
+}
 
 // PContent-Oriented
 

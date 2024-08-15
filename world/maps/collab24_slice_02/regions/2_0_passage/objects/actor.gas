@@ -1730,14 +1730,6 @@
 }
 [t:c24_slice_2_npc_krug_storeless,n:0x02100e9e]
 {
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conv_c24_r1_krug_start_quest;
-			* = conv_c24_r1_krug_start_quest_next;
-		}
-	}
 	[mind]
 	{
 		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_krug_r1.skrit;

@@ -1,0 +1,58 @@
+[t:template,n:collab24_slice2_npc_guard_ranged_tower]
+{
+	doc = "collab 24 slice2 npc guard ranged tower";
+	specializes = base_bandit;
+	[actor]
+	{
+        alignment = aa_good;
+		[skills]
+		{
+			strength =   14, 0;
+			intelligence = 10, 0;
+			dexterity =   12, 0;
+			ranged =  8,  0;
+		}
+	}
+	[aspect]
+	{
+        is_invincible = true;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_10;
+			1 = b_c_pos_a3_028;
+		}
+	}
+	[common]
+	{
+		screen_name="Tower Sentry";
+		membership = monster, party_bandit_ranged, bandit;
+	}
+    [conversation] {}
+	[inventory]
+	{
+    	selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		[pcontent]
+		{
+			[all*]
+			{
+				es_feet = bo_bo_le_light;
+                es_shield_hand = collab24_slice2_guard_bow;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+	}
+	[mind]
+    {
+
+		melee_engage_range = 30.0;
+		ranged_engage_range = 30.0;
+		sight_range = 30.0;
+
+        movement_orders = mo_hold;
+  		jat_brain						= world\ai\jobs\common\brain_hero.skrit;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+}

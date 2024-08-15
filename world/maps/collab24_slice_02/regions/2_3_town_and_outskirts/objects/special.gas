@@ -962,6 +962,36 @@
 	  p position = 0.296448,0,-0.453944,0xf342b26b;
 	}
 }
+[t:trigger_fade_nodes_global_box,n:0x02400d5f]
+{
+	[common]
+	{
+		dev_instance_text = "FADE ICY TOMB";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes_global(0x0000002B,20,20,20,"out:black");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,4.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.52583,0,0.371223,0xf342b26b;
+	}
+}
 [t:chunks_ice_spire_02,n:0x02400c47]
 {
 	[placement]
@@ -1396,6 +1426,35 @@
 	{
 	  q orientation = 0,-1.66939e-007,0,1;
 	  p position = 0.149346,-6,2.88137,0x76cd35e3;
+	}
+}
+[t:trigger_fade_nodes_global_box,n:0x02400d5e]
+{
+	[common]
+	{
+		dev_instance_text = "FADE ICY TOMB";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes_global(0x0000002B,20,20,20,"out:black");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,4.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.134732,-6,0.393612,0x76cd35e3;
 	}
 }
 [t:trigger_fade_nodes_global_box,n:0x02400038]
@@ -3082,5 +3141,13 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 0.492493,4.50865,1.93771,0x47258526;
+	}
+}
+[t:use_point,n:0x02400d71]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.258819,0,-0.965926;
+	  p position = -1.79632,-3.5,0.497098,0x21d5aa64;
 	}
 }
