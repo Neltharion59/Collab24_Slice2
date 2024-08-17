@@ -693,4 +693,35 @@
 			speaker = ;
 		}
 	}
+	[collab24_slice2_quest_smith]
+	{
+		chapter = chapter_02_path_of_merchant;
+		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
+		screen_name = Miscreated Monster;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = Destroy the Bronze Golem in Carlicio the Blacksmith's House;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Speak with Carlicio the Blacksmith;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = You have Made Carlicio the Blacksmith's House Safe Again;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = true;
+			speaker = ;
+		}
+	}
 }

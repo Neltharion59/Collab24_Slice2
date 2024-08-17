@@ -2082,3 +2082,40 @@
 	  p position = 0.319153,4.57016,1.46922,0x47258526;
 	}
 }
+[t:collab24_slice2_r3_shop_smith,n:0x02400ee7]
+{
+	[placement]
+	{
+	  q orientation = 0,-6.46033e-009,0,1;
+	  p position = -0.393725,-5.15,-2.0333,0xaf4c2545;
+	}
+}
+[t:c24_2_r3_bronze_golem,n:0x02400ee8]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02400F38,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.923879,0,-0.382684;
+	  p position = 0.937671,-3.15,6.04006,0xaf4c2545;
+	}
+}

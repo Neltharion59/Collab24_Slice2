@@ -359,3 +359,45 @@
 	  p position = 1.00383,-6,-2.28284,0x156951da;
 	}
 }
+[t:cmd_selection_toggle,n:0x02400f34]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02400EEB;
+	  i start_state = 1;
+	}
+	[placement]
+	{
+	  p position = 2.01366,-3.15,2.47656,0xaf4c2545;
+	}
+}
+[t:cmd_selection_toggle,n:0x02400f35]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02400EEA;
+	  i start_state = 1;
+	}
+	[placement]
+	{
+	  p position = 1.311,-3.15,7.03611,0xaf4c2545;
+	}
+}
+[t:cmd_alignment_changer,n:0x02400f37]
+{
+	[cmd_dumb_guy]
+	{
+	  b change_collide = true;
+	  b change_invincibility = true;
+	  b change_may_attack = true;
+	  b change_may_attacked = true;
+	  b collide_spawn = false;
+	  b invincible_spawn = true;
+	  i start_state = 1;
+	  x target_actor = 0x02400EE8;
+	}
+	[placement]
+	{
+	  p position = 1.83161,-3.15,4.86126,0xaf4c2545;
+	}
+}
