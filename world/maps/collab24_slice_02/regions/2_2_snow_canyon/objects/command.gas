@@ -193,6 +193,34 @@
 	  f resend_delay = 3;
 	}
 }
+[t:cmd_selection_toggle,n:0x0230083e]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0230083C;
+	  i start_state = 2;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  p position = -0.868347,0,-1.36165,0x158d46e4;
+	}
+}
+[t:cmd_selection_toggle,n:0x0230083f]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0230083D;
+	  i start_state = 2;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  p position = 0.276367,0,-1.34594,0x158d46e4;
+	}
+}
 [t:cmd_ai_c_patrol,n:0x0230011b]
 {
 	[cmd_ai_dojob]

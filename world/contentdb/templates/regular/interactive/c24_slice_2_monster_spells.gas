@@ -819,6 +819,62 @@
 		number = 1;
 	}
 }
+[t:template,n:collab24_slice2_r3_bronze_golem_spell_metal_shards]
+{
+	category_name = "magic";
+	doc = "collab24 slice2 r3 spell bronze_golem metal_shards";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		aiming_error_range_x = 9;
+		aiming_error_range_y = 9;
+		ammo_attach_bone = weapon_grip;
+		ammo_template = metal_shard;
+		damage_max = 17;
+		damage_min = 22;
+		use_aiming_error = true;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script( "dust_explosion_cast" );
+				condition* = receive_world_message("we_req_cast");
+			}
+			[*]
+			{
+				action* = call_sfx_script( "metal_shards_charge" );
+				condition* = receive_world_message("we_req_cast_charge");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 16;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
+		usage_context_flags = uc_offensive;
+	}
+	[physics]
+	{
+		velocity = 12;
+	}
+	[spell_launch]
+	{
+		delay_between_shots = false;
+		number = 5;
+		randomize_offsets = true;
+		use_offsets = true;
+		x_offset = .2;
+		y_offset = .2;
+		z_offset = .2;
+	}
+}
 [t:template,n:c24_r5_naldrun_spell_iceshard]
 {
 	category_name = "magic";
@@ -1347,7 +1403,7 @@
 	}
 	[spell_fire]
 	{
-		effect_script = c24_slice_02_effect_spell_drake_frost;
+		effect_script = drake_frost;
 		ignite = false;
 		particle_fit = 0.2;
 		watch_caster = true;

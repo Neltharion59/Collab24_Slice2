@@ -670,4 +670,27 @@
 			speaker = ;
 		}
 	}
+	[collab24_slice2_quest_mayor_greet]
+	{
+		chapter = chapter_02_path_of_merchant;
+		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
+		screen_name = Men in Power Bonding;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = Greet Mayor of Shroomington from Mayor of Frostfingers;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = You Have Given Greetings to the Mayor to Shroomington;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+	}
 }

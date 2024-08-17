@@ -75,6 +75,48 @@
 	  p position = -2.08817,0.77787,1.73349,0x08a04bdf;
 	}
 }
+[t:light_enable,n:0x02600019]
+{
+	[light_enable]
+	{
+	  b initially_active = false;
+	  x siege_light = 0x24EFBBD5;
+	  b use_fizzle = true;
+	  b use_flare = true;
+	}
+	[placement]
+	{
+	  p position = 1.51375,-0.854641,-1.21948,0x08a04bdf;
+	}
+}
+[t:light_enable,n:0x0260001a]
+{
+	[light_enable]
+	{
+	  b initially_active = false;
+	  x siege_light = 0x66CB8397;
+	  b use_fizzle = true;
+	  b use_flare = true;
+	}
+	[placement]
+	{
+	  p position = 2.67717,-0.854641,-0.315559,0x08a04bdf;
+	}
+}
+[t:light_enable,n:0x0260001b]
+{
+	[light_enable]
+	{
+	  b initially_active = false;
+	  x siege_light = 0x4D016FE0;
+	  b use_fizzle = true;
+	  b use_flare = true;
+	}
+	[placement]
+	{
+	  p position = 2.59689,-0.854641,1.08174,0x08a04bdf;
+	}
+}
 [t:cmd_alignment_changer,n:0x02600088]
 {
 	[cmd_dumb_guy]

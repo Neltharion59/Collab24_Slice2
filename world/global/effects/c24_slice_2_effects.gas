@@ -190,13 +190,13 @@
 	script	=[[
 			// offset(L/R, HEIGHT, FRONT/BACK)
 			sfx create orbiter #TARGET
-				"must_update()scale(1)offset(0,0,0)model(c24_2_r3_static_broom)ts(3.14)rotate(-90,180,0)phi(0)radius(0)bone_orient()";
+				"must_update()scale(1)offset(0,0,0)model(c24_2_r3_static_broom)ts(3.14)rotate(-90,0,0)phi(0)radius(0)bone_orient()";
 			sfx attach_point #PEEK @kill_bone target;
 			set $broom #POP;
 			sfx start $broom;
 
 			sfx create orbiter #TARGET
-				"must_update()scale(1)offset(0,0,0)model(c24_2_r3_static_ice_witch)ts(0)rotate(0,0,0)phi(0)radius(0)bone_orient()";
+				"must_update()scale(1)offset(0,0,-1)model(c24_2_r3_static_ice_witch)ts(0)rotate(0,0,0)phi(0)radius(0)bone_orient()";
 			sfx rat #PEEK;
 			sfx target #PEEK $broom;
 			sfx start #POP;
@@ -1077,54 +1077,6 @@
 				sfx attach_point #PEEK Bip01_Head target;
 				sfx start #POP;
 			}
-			]];
-}
-[effect_script*]
-{
-	name	=c24_slice_02_effect_spell_drake_frost;
-
-	script	=[[
-			set $texture b_sfx_sparkle01;
-
-			set $velocity 0,100,0;
-			set $accel 0,0,0;
-
-			set $flames1 100;
-			set $flames2 100;
-
-			set $width1 20;
-			set $width2 40;
-
-			sfx create fireb #SOURCE 
-				"must_update()texture($texture)fctrl(0,0,15)flamesize(1)alphafade(.5)
-				ts(.6)dur(2)color0(.3,.3,1)velocity($velocity)accel($accel)
-				cvel(1)lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)
-				count($flames2)bone_orient()[0]";
-			sfx attach_point #PEEK @weapon_bone target;
-			sfx friendly party #PEEK;
-			sfx start #POP;
-
-			sfx create fireb #SOURCE 
-				"must_update()texture($texture)fctrl(0,0,10)flamesize(1)alphafade(.5)
-				ts(.6)dur(2)color0(.7,.7,1)velocity($velocity)accel($accel)
-				cvel(1)lower_r0(0)lower_r1(0)upper_r0($width1)upper_r1($width2)
-				count($flames2)bone_orient()";
-			sfx attach_point #PEEK @weapon_bone target;
-			sfx friendly party #PEEK;
-			sfx start #POP;
-
-			sfx create fireb #SOURCE 
-				"must_update()fctrl(0,0,15)flamesize(2)alphafade(.5)ts(.6)dur(2)color0(.3,.5,1)
-				velocity($velocity)accel($accel)cvel(1)lower_r0(0)lower_r1(0)
-				upper_r0($width1)upper_r1($width2)count($flames2)bone_orient()";
-			sfx attach_point #PEEK @weapon_bone target;
-			sfx friendly party #PEEK;
-			sfx start #POP;
-
-			sound play s_e_attack_drake_white at #SOURCE_POSITION dist 10 30;
-			
-			worldmsg WE_SPELL_SYNC_END #INVALID_GOID #OWNER_GOID #TARGET_GOID;
-
 			]];
 }
 [effect_script*]

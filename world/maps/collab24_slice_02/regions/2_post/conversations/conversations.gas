@@ -1,0 +1,12 @@
+
+[conv_2_post_mayor_of_shroomington]
+{
+	[text*]
+	{
+		activate_quest* = collab24_slice2_quest_mayor_greet,1;
+		complete_quest* = collab24_slice2_quest_mayor_greet;
+	  b quest_dialog = true;
+		screen_text = "I was greeted, haha.";
+	  f scroll_rate = 10.000000;
+	}
+}

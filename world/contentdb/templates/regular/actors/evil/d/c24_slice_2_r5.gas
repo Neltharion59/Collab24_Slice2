@@ -593,9 +593,9 @@
 				}
 				[oneof*]
 				{
-					il_main = potion_mana_medium;
-					il_main = potion_health_medium;
-					il_main = potion_rejuvenation_medium;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+					il_main = potion_rejuvenation_small;
 					min = 1;
 					max = 3;
 				}
@@ -629,5 +629,120 @@
 		personal_space_range = 0.7;
 		ranged_engage_range = 16.0;
 		sight_range = 16.0;
+	}
+}
+[t:template,n:c24_2_r5_dragon_boss]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R5 dragon boss";
+	specializes = base_drake;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 100, 0;
+			dexterity = 15, 0;
+			intelligence = 15, 0;
+			nature_magic = 9, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 50;
+		life = 419;
+		max_life = 419;
+		mana = 1200;
+		max_mana = 1200;
+		model=m_c_edm_dk_pos_1;
+   		[textures] { 0=b_c_edm_dk-03; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 15;
+		damage_min = 12;
+	}
+	[common]
+	{
+        membership = monster;
+		screen_name="Phrymallix the Youthful Dragon";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("drake_wing");
+				condition* = receive_world_message("we_anim_sfx",2);
+			}
+			[*]
+			{
+				action* = call_sfx_script("drake_scream_white");
+				condition* = receive_world_message("we_anim_sfx",3);
+			}
+
+		}
+	}
+	[defend] { defense=100; }
+    [inventory]
+    {
+        spew_equipped_kill_count = <ignore>;
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_r5_dragon_spell_fireball;
+            il_active_secondary_spell = c24_r5_dragon_spell_breath;
+			il_spell_1 = c24_r5_dragon_spell_run;
+        }
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 400;
+					min = 300;
+					piles = 4 - 6;
+					min_pile = 75;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/28-35;
+					il_main = #armor/60-90;
+					il_main = #*/28-35;
+					min = 1;
+					max = 2;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/28-35;
+					il_main = #armor/-rare(1)/60-90;
+					il_main = #*/-rare(1)/28-35;
+					il_main = #weapon/-unique(2)/28-35;
+					il_main = #armor/-unique(2)/60-90;
+					il_main = #*/-unique(2)/28-35;
+
+					min = 2;
+					max = 2;
+				}
+			}
+		}
+    }
+	[mind]
+	{
+        actor_life_ratio_low_threshold 	= .33;
+		on_life_ratio_low_flee 			= true;
+		on_engaged_lost_consciousness_abort_attack	= true;
+		on_engaged_fled_abort_attack	= false;
+		flee_count						= 9999;
+		flee_distance					= 13;
+        job_travel_distance_limit					= 50;
+
+        jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true
+			&rand_target					= true;
+
+		melee_engage_range = 20.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 20.0;
+		sight_range = 20.0;
 	}
 }

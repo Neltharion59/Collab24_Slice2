@@ -5,6 +5,38 @@
 	  p position = 3.60208,0,-3.72419,0xe049f610;
 	}
 }
+[t:trigger_change_mood_box,n:0x02101aab]
+{
+	[common]
+	{
+		dev_instance_text = "[MP] MOOD & WORLD_LOCATION";
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab24_slice2_mood_r0_cave_1");
+				action* = set_player_world_location("collab24_slice2_world_location_r0_0");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,2.000000,8.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.66939e-007,0,1;
+	  p position = -0.650517,0,-0.258167,0xe049f610;
+	}
+}
 [t:trigger_generic,n:0x02101a95]
 {
 	[common]
@@ -93,6 +125,39 @@
 	{
 	  q orientation = 0,-1.66939e-007,0,1;
 	  p position = 0.132988,-11.9978,-0.976341,0x1019c9ee;
+	}
+}
+[t:trigger_generic,n:0x02101ac5]
+{
+	[common]
+	{
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("collab24_slice2_world_location_r0_0");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,4.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.3,0,0.4;
+	}
+	[placement]
+	{
+	  p position = 0.142281,-11.9972,-0.139923,0x1019c9ee;
 	}
 }
 [t:trigger_generic,n:0x02101a72]
@@ -246,6 +311,35 @@
 		bool_variable = "flag_giant_quest_killed_insect";
 	}
 }
+[t:trigger_generic,n:0x02101a73]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_talk_begin",0x02100007,0f,"0x4002","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,3.500000,0.500000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,5.96046e-008;
+	  p position = -0.209328,-3.93503,-3.25684,0x6d751d27;
+	}
+}
 [t:use_point,n:0x02100eb1]
 {
 	[placement]
@@ -293,6 +387,35 @@
 	[placement]
 	{
 	  p position = -1.9544,0,0.595512,0x825d8de7;
+	}
+}
+[t:trigger_generic,n:0x02101a96]
+{
+	[common]
+	{
+		dev_instance_text = "ON GIANT TALKED TO AFTER SMASHING THE ROCK";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_deactivate",0x02101A73,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 2.98866,0,-0.664696,0x825d8de7;
 	}
 }
 [t:trigger_generic,n:0x0210002e]
@@ -906,7 +1029,7 @@
 	}
 	[placement]
 	{
-	  p position = 0.592262,0,0.198582,0x6e204a02;
+	  p position = 0.296486,0,0.321083,0x6e204a02;
 	}
 }
 [t:accumulate_trigger,n:0x02100e9a]
@@ -925,34 +1048,6 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = -1.43103,0,-1.88714,0x6e204a02;
-	}
-}
-[t:trigger_generic,n:0x02100ed2]
-{
-	[common]
-	{
-		dev_instance_text = "QUEST - FOUND POND";
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(5.000000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = false;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 1.93818,0,0.462313,0x6e204a02;
 	}
 }
 [t:trigger_change_mood_box,n:0x02100eb5]
@@ -982,6 +1077,39 @@
 	{
 	  q orientation = 0,-4.69147e-008,0,1;
 	  p position = 0.148827,-11.9977,-1.13553,0x8e6c250b;
+	}
+}
+[t:trigger_generic,n:0x02101ac6]
+{
+	[common]
+	{
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("collab24_slice2_world_location_r0_0");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,4.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.3,0,0.4;
+	}
+	[placement]
+	{
+	  p position = 0.135963,-11.9974,-0.295227,0x8e6c250b;
 	}
 }
 [t:trigger_generic,n:0x02100ea1]
@@ -1170,63 +1298,5 @@
 	{
 	  q orientation = 0,-4.69147e-008,0,1;
 	  p position = -3.25615,3.78542,-5.8583,0x9e084e28;
-	}
-}
-[t:trigger_generic,n:0x02101a73]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_talk_begin",0x02100007,0f,"0x4001","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(5.000000,3.500000,0.500000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,5.96046e-008;
-	  p position = -0.209328,-3.93503,-3.25684,0x6d751d27;
-	}
-}
-[t:trigger_generic,n:0x02101a96]
-{
-	[common]
-	{
-		dev_instance_text = "ON GIANT TALKED TO AFTER SMASHING THE ROCK";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_trigger_deactivate",0x02101A73,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 2.98866,0,-0.664696,0x825d8de7;
 	}
 }

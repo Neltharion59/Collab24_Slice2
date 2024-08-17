@@ -1,0 +1,23 @@
+[t:mp_townfolk_male_03,n:0x02d00002]
+{
+	[common]
+	{
+		screen_name = "Mayor of Shroomington";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_2_post_mayor_of_shroomington;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.31105,-11.963,-0.608042,0x824a08a1;
+	}
+}

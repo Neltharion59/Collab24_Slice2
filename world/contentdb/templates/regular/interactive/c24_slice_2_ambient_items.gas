@@ -77,11 +77,12 @@
 {
 	category_name = "indoor";
 	doc = "c24 slice 2 r3 static ice witch";
-	specializes = non_interactive_nonblocking;
+	specializes = treasure;
 	[aspect]
 	{
 		model=m_c_edm_sw_pos_1;
 		scale_base = 0.75;
+		is_selectable = false;
 		[textures]
 		{
 			0 = b_c_edm_img;
@@ -92,23 +93,49 @@
 {
 	category_name = "indoor";
 	doc = "c24 slice 2 r3 static broom";
-	specializes = non_interactive_nonblocking;
+	specializes = treasure;
 	[aspect]
 	{
-		model = m_i_glb_broom;
+		is_selectable = false;
+		model=m_i_glb_broom;
+	}
+}
+[t:template,n:c24_2_r1_blocking_ice_door_large]
+{
+	specializes	= container;
+	doc	= "c24 r6 blocking ice door";
+	[aspect]
+	{
+		is_collidable = true;
+		is_selectable = false;
+		does_block_path = true;
+
+		
+		life_state	= LS_ALIVE_CONSCIOUS;
+		max_life	= 999999;
+		material	= ice;
+		life		= 999999;
+
+		model 		= m_i_csl_door-dungeon-07;
+		scale_base = 3.0;
+		[textures] { 0 = b_t_ic01_flr_stg-08x08-c;}
 	}
 }
 [t:template,n:c24_2_r6_blocking_ice_door]
 {
-	specializes	= non_interactive_blocking;
+	specializes	= container;
 	doc	= "c24 r6 blocking ice door";
 	[aspect]
 	{
-
 		is_collidable = true;
 		is_selectable = false;
-		is_invincible = true;
 		does_block_path = true;
+
+		
+		life_state	= LS_ALIVE_CONSCIOUS;
+		max_life	= 999999;
+		material	= ice;
+		life		= 999999;
 
 		model 		= m_i_csl_door-dungeon-07;
 		scale_base = 2.0;
