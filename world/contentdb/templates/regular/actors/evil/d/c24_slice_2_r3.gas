@@ -89,18 +89,18 @@
 			{
 				[oneof*]
 				{
-					il_main = #weapon/19-29;
-                    il_main = #armor/50-65;
-					il_main = #*/19-29;
-					il_main = #nmagic/4-7;
-					il_main = #cmagic/4-7;
 					chance = 0.10;
+					il_main = #weapon/6-15;
+                    il_main = #armor/8-30;
+					il_main = #*/6-15;
+					il_main = #nmagic/2-6;
+					il_main = #cmagic/2-6;
 				}
 				[oneof*]
 				{
+					chance = 0.15;
 					il_main = potion_health_small;
 					il_main = potion_mana_small;
-					chance = 0.20;
 				}
 			}
 		}
@@ -147,18 +147,18 @@
 			{
 				[oneof*]
 				{
-					il_main = #weapon/19-29;
-                    il_main = #armor/50-65;
-					il_main = #*/19-29;
-					il_main = #nmagic/4-7;
-					il_main = #cmagic/4-7;
-					chance = 0.15;
+					chance = 0.12;
+					il_main = #weapon/6-15;
+                    il_main = #armor/8-30;
+					il_main = #*/6-15;
+					il_main = #nmagic/2-6;
+					il_main = #cmagic/2-6;
 				}
 				[oneof*]
 				{
+					chance = 0.17;
 					il_main = potion_health_small;
 					il_main = potion_mana_small;
-					chance = 0.25;
 				}
 			}
 		}
@@ -219,11 +219,8 @@
 			{
 				[oneof*]
 				{
-					il_main = #weapon/19-29;
-                    il_main = #armor/50-65;
-					il_main = #*/19-29;
-					il_main = #nmagic/4-7;
-					il_main = #cmagic/4-7;
+					il_main = #weapon/-mod(1)/6-15;
+                    il_main = #armor/-mod(1)/8-30;
 				}
 				[oneof*]
 				{
@@ -234,10 +231,10 @@
 				}
 				[gold*]
 				{
-					max = 140;
-					min = 100;
-					min_pile = 40;
-					piles = 2 - 4;
+					max = 42;
+					min = 12;
+					min_pile = 5;
+					piles = 2 - 3;
 				}
 			}
 		}
@@ -379,43 +376,36 @@
             il_active_primary_spell = c24_r3_broom_flyer_spell_chubby_rain;
             il_active_secondary_spell = c24_r3_broom_flyer_spell_snowstorm;
         }
-    	[pcontent]
+		[pcontent]
 		{
 			[all*]
 			{
-				[oneof*]
-				{
-					il_main = #nmagic/3-6;
-					il_main = #cmagic/3-6;
-					min = 2;
-					max = 3;
-				}
-				[oneof*]
-				{
-					il_main = potion_health_small;
-					il_main = potion_mana_small;
-					min = 2;
-					max = 2;
-				}
-				[oneof*]
-				{
-					il_main = #weapon/-rare(1)/19-29;
-					il_main = #armor/-rare(1)/50-65;
-					il_main = #*/-rare(1)/19-29;
-                }
-				[oneof*]
-				{
-					chance = 0.20;
-					il_main = #weapon/-unique(2)/19-29;
-					il_main = #armor/-unique(2)/50-65;
-					il_main = #*/-unique(2)/19-29;
-                }
 				[gold*]
 				{
-					max = 200;
-					min = 120;
-					min_pile = 40;
-					piles = 2 - 4;
+					max = 50;
+					min = 20;
+					piles = 3 - 5;
+					min_pile = 11;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-mod(1)/6-15;
+					il_main = #armor/-mod(1)/8-30;
+					il_main = #weapon/-rare(1)/6-15;
+					il_main = #armor/-rare(1)/8-30;
+					il_main = #*/-rare(1)/6-15;
+					min = 1;
+					max = 2;
+				}
+				[all*]
+				{
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+				[all*]
+				{
+					il_main = #nmagic/2-6;
+					il_main = #cmagic/2-6;
 				}
 			}
 		}
@@ -659,8 +649,8 @@
 			{
 				[gold*]
 				{
-					max = 120;
-					min = 70;
+					max = 61;
+					min = 21;
 				}
 			}
 		}
@@ -824,6 +814,14 @@
 		[other]
 		{
 			il_active_primary_spell=collab24_slice2_r3_bronze_golem_spell_metal_shards;
+		}
+		[pcontent]
+		{
+			[oneof*]
+			{
+				il_main = #weapon/-mod(1)/7-17;
+				il_main = #armor/-mod(1)/8-33;
+			}
 		}
 	}
 	[mind]

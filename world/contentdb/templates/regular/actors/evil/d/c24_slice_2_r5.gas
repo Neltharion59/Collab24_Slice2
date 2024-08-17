@@ -16,7 +16,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 31;
+		experience_value = 28;
 		life = 24;
 		max_life = 24;
 		mana = 70;
@@ -173,42 +173,36 @@
 				[gold*]
 				{
 					chance = 0.15;
-					max = 41;
-					min = 23;
+					max = 27;
+					min = 10;
 				}
 				[oneof*]
 				{
 					chance = 0.10;
-					il_main = #staff/-mod(1)/20-33;
-					il_main = #staff/-mod(2)/20-33;
-					il_main = #body,ro/-mod(1)/50-80;
-					il_main = #body,ro/-mod(2)/50-80;
-				}
-				[oneof*]
-				{
-					chance = 0.15;
 					il_main = potion_mana_small;
 					il_main = potion_health_small;
 					il_main = potion_rejuvenation_small;
 				}
 				[oneof*]
 				{
-					chance = 0.02;
-					il_main = #ring/2-17;
-					il_main = #amulet/2-17;
+					chance = 0.10;
+					il_main = #weapon/10-20;
+					il_main = #armor/10-41;
+					il_main = #*/10-20;
 				}
 				[oneof*]
 				{
-					chance = 0.01;
-					il_main = #staff/-rare(1)/20-33;
-					il_main = #body,ro/-rare(1)/50-80;
-				}
-				[oneof*]
-				{
-					chance = 0.01;
-					il_main = #staff/-unique(2)/20-33;
-					il_main = #body,ro/-unique(2)/50-80;
+					chance = 0.04;
+					il_main = #ring/12-20;
+					il_main = #amulet/12-20;
     	        	il_main = #spellbook/16-35;
+
+					il_main = #weapon/-mod(1)/10-20;
+					il_main = #armor/-mod(1)/10-41;
+
+					il_main = #weapon/-rare(1)/10-20;
+					il_main = #armor/-rare(1)/10-41;
+					il_main = #*/-rare(1)/10-20;
 				}
 			}
 		}
@@ -256,42 +250,36 @@
 				[gold*]
 				{
 					chance = 0.15;
-					max = 41;
-					min = 23;
+					max = 27;
+					min = 10;
 				}
 				[oneof*]
 				{
 					chance = 0.10;
-					il_main = #staff/-mod(1)/20-33;
-					il_main = #staff/-mod(2)/20-33;
-					il_main = #body,ro/-mod(1)/50-80;
-					il_main = #body,ro/-mod(2)/50-80;
-				}
-				[oneof*]
-				{
-					chance = 0.15;
 					il_main = potion_mana_small;
 					il_main = potion_health_small;
 					il_main = potion_rejuvenation_small;
 				}
 				[oneof*]
 				{
-					chance = 0.02;
-					il_main = #ring/2-17;
-					il_main = #amulet/2-17;
+					chance = 0.10;
+					il_main = #weapon/10-20;
+					il_main = #armor/10-41;
+					il_main = #*/10-20;
 				}
 				[oneof*]
 				{
-					chance = 0.01;
-					il_main = #staff/-rare(1)/20-33;
-					il_main = #body,ro/-rare(1)/50-80;
-				}
-				[oneof*]
-				{
-					chance = 0.01;
-					il_main = #staff/-unique(2)/20-33;
-					il_main = #body,ro/-unique(2)/50-80;
+					chance = 0.04;
+					il_main = #ring/12-20;
+					il_main = #amulet/12-20;
     	        	il_main = #spellbook/16-35;
+
+					il_main = #weapon/-mod(1)/10-20;
+					il_main = #armor/-mod(1)/10-41;
+
+					il_main = #weapon/-rare(1)/10-20;
+					il_main = #armor/-rare(1)/10-41;
+					il_main = #*/-rare(1)/10-20;
 				}
 			}
 		}
@@ -333,42 +321,36 @@
 				[gold*]
 				{
 					chance = 0.15;
-					max = 41;
-					min = 23;
+					max = 27;
+					min = 10;
 				}
 				[oneof*]
 				{
 					chance = 0.10;
-					il_main = #staff/-mod(1)/20-33;
-					il_main = #staff/-mod(2)/20-33;
-					il_main = #body,ro/-mod(1)/50-80;
-					il_main = #body,ro/-mod(2)/50-80;
-				}
-				[oneof*]
-				{
-					chance = 0.15;
 					il_main = potion_mana_small;
 					il_main = potion_health_small;
 					il_main = potion_rejuvenation_small;
 				}
 				[oneof*]
 				{
-					chance = 0.02;
-					il_main = #ring/2-17;
-					il_main = #amulet/2-17;
+					chance = 0.10;
+					il_main = #weapon/10-20;
+					il_main = #armor/10-41;
+					il_main = #*/10-20;
 				}
 				[oneof*]
 				{
-					chance = 0.01;
-					il_main = #staff/-rare(1)/20-33;
-					il_main = #body,ro/-rare(1)/50-80;
-				}
-				[oneof*]
-				{
-					chance = 0.01;
-					il_main = #staff/-unique(2)/20-33;
-					il_main = #body,ro/-unique(2)/50-80;
+					chance = 0.04;
+					il_main = #ring/12-20;
+					il_main = #amulet/12-20;
     	        	il_main = #spellbook/16-35;
+
+					il_main = #weapon/-mod(1)/10-20;
+					il_main = #armor/-mod(1)/10-41;
+
+					il_main = #weapon/-rare(1)/10-20;
+					il_main = #armor/-rare(1)/10-41;
+					il_main = #*/-rare(1)/10-20;
 				}
 			}
 		}
@@ -578,44 +560,32 @@
 			{
 				[gold*]
 				{
-					max = 200;
-					min = 50;
+					max = 100;
+					min = 40;
 					piles = 2 - 4;
-					min_pile = 24;
-				}
-				[oneof*]
-				{
-					il_main = #staff/-mod(1)/20-33;
-					il_main = #staff/-mod(2)/20-33;
-					il_main = #body,ro/55-90;
-					min = 1;
-					max = 2;
+					min_pile = 25;
 				}
 				[oneof*]
 				{
 					il_main = potion_mana_small;
 					il_main = potion_health_small;
 					il_main = potion_rejuvenation_small;
-					min = 1;
-					max = 3;
 				}
 				[oneof*]
 				{
-					il_main = #ring/2-17;
-					il_main = #amulet/2-17;
-				}
-				[oneof*]
-				{
-					chance = 0.66;
-					il_main = #staff/-rare(1)/20-33;
-					il_main = #body,ro/-rare(1)/55-90;
-				}
-				[oneof*]
-				{
-					chance = 0.33;
-					il_main = #staff/-unique(2)/20-33;
-					il_main = #body,ro/-unique(2)/55-90;
+					min = 2;
+					max = 2;
+
+					il_main = #ring/12-20;
+					il_main = #amulet/12-20;
     	        	il_main = #spellbook/16-35;
+
+					il_main = #weapon/-mod(1)/10-20;
+					il_main = #armor/-mod(1)/10-41;
+
+					il_main = #weapon/-rare(1)/10-20;
+					il_main = #armor/-rare(1)/10-41;
+					il_main = #*/-rare(1)/10-20;
 				}
 			}
 		}
@@ -698,30 +668,28 @@
 			{
 				[gold*]
 				{
-					max = 400;
-					min = 300;
-					piles = 4 - 6;
-					min_pile = 75;
+					max = 100;
+					min = 40;
+					piles = 2 - 4;
+					min_pile = 25;
 				}
 				[oneof*]
 				{
-					il_main = #weapon/28-35;
-					il_main = #armor/60-90;
-					il_main = #*/28-35;
-					min = 1;
-					max = 2;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+					il_main = potion_rejuvenation_small;
 				}
 				[oneof*]
 				{
-					il_main = #weapon/-rare(1)/28-35;
-					il_main = #armor/-rare(1)/60-90;
-					il_main = #*/-rare(1)/28-35;
-					il_main = #weapon/-unique(2)/28-35;
-					il_main = #armor/-unique(2)/60-90;
-					il_main = #*/-unique(2)/28-35;
+					min = 3;
+					max = 3;
+					
+					il_main = #weapon/-mod(1)/10-20;
+					il_main = #armor/-mod(1)/10-41;
 
-					min = 2;
-					max = 2;
+					il_main = #weapon/-rare(1)/10-20;
+					il_main = #armor/-rare(1)/10-41;
+					il_main = #*/-rare(1)/10-20;
 				}
 			}
 		}

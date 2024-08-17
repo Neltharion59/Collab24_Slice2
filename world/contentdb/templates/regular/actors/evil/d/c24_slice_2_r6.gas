@@ -324,45 +324,36 @@
 		{
 			[all*]
 			{
-				[oneof*]
-				{
-					il_main = #weapon/23-35;
-                    il_main = #armor/45-90;
-					il_main = #*/23-35;
-					il_main = #nmagic/7-10;
-					il_main = #cmagic/7-10;
-					min = 1;
-					max = 2;
-				}
-				[oneof*]
-				{
-					chance = 0.33;
-					il_main = potion_health_small;
-					il_main = potion_mana_small;
-					il_main = potion_rejuvenation_small;
-					min = 1;
-					max = 2;
-				}
-				[oneof*]
-				{
-					il_main = #weapon/-rare(1)/23-35;
-					il_main = #armor/-rare(1)/55-90;
-					il_main = #*/-rare(1)/23-35;
-                }
-				[oneof*]
-				{
-					chance = 0.10;
-					il_main = #weapon/-unique(2)/23-35;
-					il_main = #armor/-unique(2)/55-90;
-					il_main = #*/-unique(2)/23-35;
-                }
 				[gold*]
 				{
-					chance = 0.33;
-					max = 404;
-					min = 202;
-					piles = 2 - 3;
-					min_pile = 100;
+					max = 120;
+					min = 50;
+					piles = 2 - 4;
+					min_pile = 24;
+				}
+				[oneof*]
+				{
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+					il_main = potion_rejuvenation_small;
+				}
+				[all*]
+				{
+					il_main = #cmagic/2-10;
+					il_main = #nmagic/2-10;
+    	        	il_main = #spellbook/16-35;
+				}
+				[oneof*]
+				{
+					min = 2;
+					max = 2;
+
+					il_main = #weapon/-mod(1)/10-20;
+					il_main = #armor/-mod(1)/10-41;
+
+					il_main = #weapon/-rare(1)/10-20;
+					il_main = #armor/-rare(1)/10-41;
+					il_main = #*/-rare(1)/10-20;
 				}
 			}
 		}

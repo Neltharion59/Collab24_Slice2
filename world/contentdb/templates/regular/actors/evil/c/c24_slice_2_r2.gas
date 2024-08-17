@@ -42,20 +42,9 @@
 		{
 			[oneof*]
 			{
-				[oneof*]
-				{
-					chance = 0.70;
-					il_main = #weapon/-rare(1)/17-25;
-					il_main = #armor/-rare(1)/48-64;
-					il_main = #*/-rare(1)/17-25;
-				}
-				[oneof*]
-				{
-					chance = 0.30;
-					il_main = #weapon/-unique(2)/17-25;
-					il_main = #armor/-unique(2)/48-64;
-					il_main = #*/-unique(2)/17-25;
-				}
+				il_main = #weapon/-rare(1)/17-25;
+				il_main = #armor/-rare(1)/15-56;
+				il_main = #*/-rare(1)/17-25;
 			}
 		}
     }

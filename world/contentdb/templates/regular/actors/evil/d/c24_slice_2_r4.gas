@@ -613,6 +613,15 @@
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
 		[equipment] { es_shield_hand = c24_shagor_boulder; }
+		[pcontent]
+		{
+			[oneof*]
+			{
+				chance = 0.10;
+				il_main = #weapon/-mod(1)/7-17;
+				il_main = #armor/-mod(1)/8-33;
+			}
+		}
 	}
 	[mind]
 	{
