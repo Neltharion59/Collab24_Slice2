@@ -436,21 +436,25 @@
 	specializes = base_arrow;
 	[aspect]
 	{
-		material = ice;
-		model=m_i_ice_chunks-01;
+		material = stone;
+		model=m_w_misc_021;
 		is_selectable	= false;
 		scale_base = 1.0;
+		[textures]
+		{
+			0 = b_i_ice_chunks;
+		}
 	}
 	[attack]
 	{
-		damage_max = 26;
-		damage_min = 23;
+		damage_max = 2;
+		damage_min = 2;
 		skill_class = "Nature Magic";
 	}
 	[common]
 	{
 		is_pcontent_allowed = FALSE;
-		screen_name = "Ice Shard";
+		screen_name = "Boulder";
 
 		[template_triggers]
 		{
@@ -462,7 +466,6 @@
 			}
 		}
 	}
-
 	[physics]
 	{
 		angular_velocity = 8,8,8;
@@ -470,13 +473,20 @@
 		elasticity = 0.9;
 		deflection_angle = 1;
 		orient_to_trajectory = FALSE;
-		break_effect = ice_explosion;
 		break_sound = s_e_die_shard_small;
 		explode_if_hit_go = true;
-		explode_if_hit_terrain = false;
+		explode_if_hit_terrain = true;
 		explode_when_expired = false;
 		explosion_magnitude = 3.5;
 		fire_resistance = 1;
+		[break_particulate]
+		{
+			chunks_ice_01 = 2;
+			chunks_ice_02 = 2;
+			chunks_ice_03 = 3;
+			chunks_ice_04 = 2;
+			chunks_ice_05 = 1;
+		}
 	}
 }
 [t:template,n:c24_shagor_boulder]
