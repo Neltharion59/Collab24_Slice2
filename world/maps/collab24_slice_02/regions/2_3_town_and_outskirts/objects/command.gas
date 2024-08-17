@@ -1,3 +1,18 @@
+[t:cmd_selection_toggle,n:0x02400145]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0240029E;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.90654,-4.76837e-006,-1.18152,0x6bf3e93e;
+	}
+}
 [t:cmd_delete_object,n:0x02400148]
 {
 	[placement]
@@ -161,31 +176,6 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -1.91455,0,-0.823068,0x2f443bb7;
-	}
-}
-[t:collab24_slice_2_cmd_set_visibility,n:0x02400145]
-{
-	[collab24_slice2_cmd_set_visibility]
-	{
-	  b invincible = true;
-	  x target_object = 0x0240029E;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 1.39106,0,1.16567,0xdb73f282;
-	}
-}
-[t:collab24_slice_2_cmd_set_visibility,n:0x02400c25]
-{
-	[collab24_slice2_cmd_set_visibility]
-	{
-	  x target_object = 0x0240029E;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 1.49177,0,-0.514265,0xdb73f282;
 	}
 }
 [t:cmd_selection_toggle,n:0x02400d5d]
@@ -364,8 +354,8 @@
 	}
 	[screen_report]
 	{
-		description = "': Perhaps I should not wander here without some knowledge on what is in there. Asking the witch in the nearby house might help.'";
-	  b prepend_name = true;
+		description = "'Perhaps I should not wander here without some knowledge on what is in there. Asking the witch in the nearby house might help.'";
+	  b prepend_name = false;
 	}
 }
 [t:cmd_auto_save,n:0x02400a5b]

@@ -98,9 +98,8 @@
 	}
 	[screen_report]
 	{
-		description = "': I should arrange help for Dartakk first.'";
-	  b prepend_name = true;
-	  f resend_delay = 3;
+		description = "'I should arrange help for Dartakk first.'";
+	  b prepend_name = false;
 	}
 }
 [t:cmd_region_message,n:0x02200009]
@@ -112,8 +111,8 @@
 	}
 	[screen_report]
 	{
-		description = "': This cave seems dangerous. Perhaps consulting with a giant such as Notatakk first would be reasonable.'";
-	  b prepend_name = true;
+		description = "'This cave seems dangerous. Perhaps consulting with a giant such as Notatakk first would be reasonable.'";
+	  b prepend_name = false;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x022000f0]

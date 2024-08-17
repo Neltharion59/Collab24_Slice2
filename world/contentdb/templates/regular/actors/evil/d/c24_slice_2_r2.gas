@@ -150,21 +150,21 @@
 	[aspect]
 	{
 		experience_value = 19;
-        life = 52;
+        life = 37;
         mana = 17;
-        max_life = 52;
+        max_life = 37;
         max_mana = 17;
 		scale_base = 1.00;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 30;
-		damage_min = 27;
+		damage_max = 14;
+		damage_min = 12;
 		reload_delay = 1;
 	}
 	[common] { screen_name="Bortusk"; }
-	[defend] { defense=45; }
+	[defend] { defense=35; }
     [mind]
     {
         jat_brain							= world\ai\jobs\common\brain_hero.skrit
@@ -184,23 +184,23 @@
 			strength =  6, 0;
 			intelligence =  10, 0;
 			dexterity =  10, 0;
-			melee =  6, 0;
+			melee =  5, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 35;
-        life = 97;
+        life = 71;
         mana = 22;
-        max_life = 97;
+        max_life = 71;
         max_mana = 22;
 		scale_base = 1.50;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 32;
-		damage_min = 28;
+		damage_max = 18;
+		damage_min = 16;
 		reload_delay = 1;
 	}
 	[common]
@@ -277,9 +277,9 @@
 	[aspect]
 	{
 		experience_value = 22;
-        life = 57;
+        life = 41;
         mana = 50;
-        max_life = 57;
+        max_life = 41;
         max_mana = 50;
 		scale_base = 1.20;
 	}
@@ -291,7 +291,7 @@
 		reload_delay = 1;
 	}
 	[common] { screen_name="Bortusk Enrager"; }
-	[defend] { defense=55; }
+	[defend] { defense=35; }
     [inventory]
     {
         spew_equipped_kill_count = <ignore>;
@@ -336,9 +336,9 @@
 	[aspect]
 	{
 		experience_value = 22;
-        life = 41;
+        life = 53;
         mana = 56;
-        max_life = 41;
+        max_life = 53;
         max_mana = 56;
 		scale_base = 1.20;
 	}
@@ -350,7 +350,7 @@
 		reload_delay = 1;
 	}
 	[common] { screen_name="Roaring Bortusk"; }
-	[defend] { defense=55; }
+	[defend] { defense=35; }
     [inventory]
     {
         spew_equipped_kill_count = <ignore>;
@@ -426,7 +426,7 @@
 			}
 		}
 	}
-	[defend] { defense=100; }
+	[defend] { defense=45; }
     [inventory]
     {
         spew_equipped_kill_count = <ignore>;
@@ -515,8 +515,8 @@
 	[aspect]
 	{
 		experience_value = 0;
-		life = 28;
-		max_life = 28;
+		life = 18;
+		max_life = 18;
 		mana = 6;
 		max_mana = 6;
 		model = m_c_edm_if_pos_1;
@@ -529,8 +529,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 27;
-		damage_min = 22;
+		damage_max = 14;
+		damage_min = 12;
 	}
 	[body]
 	{
@@ -593,7 +593,7 @@
 			}
 		}
 	 }
-    [defend] { defense=37; }
+    [defend] { defense=40; }
 	[mind]
 	{
 		personal_space_range = 0.5;
@@ -654,11 +654,11 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 23;
-		damage_min = 20;
+		damage_max = 15;
+		damage_min = 13;
 	}
 	[common] { screen_name="Frostnid"; }
-    [defend] { defense=65; }
+    [defend] { defense=30; }
 	[physics]
 	{
 		break_effect = ice_explosion;
@@ -697,10 +697,10 @@
 	}
 	[attack]
 	{
-		damage_max = 25;
-		damage_min = 23;
+		damage_max = 17;
+		damage_min = 15;
 	}
-	[defend] { defense=76; }
+	[defend] { defense=50; }
 	[physics]
 	{
 		break_effect = ice_explosion;
@@ -730,15 +730,15 @@
 		{
 			strength =  	9,0;
 			intelligence =  	10,0;
-			dexterity =  	4,0;
+			dexterity =  	20,0;
 			melee =  		5,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 18;
-		life = 36;
-        max_life = 36;
+		life = 21;
+        max_life = 21;
         mana = 6;
         max_mana = 6;
         textures:0 = b_c_edm_wf-03;
@@ -747,11 +747,11 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 24;
-		damage_min = 21;
+		damage_max = 13;
+		damage_min = 11;
 	}
 
-	[defend] { defense=41; }
+	[defend] { defense=15; }
 	[common]
 	{
 		screen_name="White Wolf";
@@ -782,15 +782,15 @@
 		{
 			strength =  	12,0;
 			intelligence =  20,0;
-			dexterity =  	6,0;
-			melee =  		7,0;
+			dexterity =  	20,0;
+			melee =  		6,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 30;
-		life = 66;
-        max_life = 66;
+		life = 44;
+        max_life = 44;
         mana = 2;
         max_mana = 2;
         textures:0 = b_c_edm_wf-03;
@@ -799,11 +799,11 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 28;
-		damage_min = 25;
+		damage_max = 14;
+		damage_min = 12;
 	}
 
-	[defend] { defense=57; }
+	[defend] { defense=30; }
 	[common]
 	{
 		screen_name="Alpha White Wolf";
@@ -831,8 +831,8 @@
 			{
 				[gold*]
 				{
-					  max = 90;
-					  min = 50;
+					  max = 67;
+					  min = 31;
 				}
 			}
 		}
@@ -852,7 +852,6 @@
 }
 [t:template,n:c24_2_r2_lertisk]
 {
-	// Stats based on Krug Raider
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R2 lertisk";
 	specializes = actor_evil;
@@ -903,8 +902,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 29;
-		damage_min = 26;
+		damage_max = 13;
+		damage_min = 10;
 	}
 	[body]
 	{
@@ -931,7 +930,7 @@
 					01=at-02;
 					02=at-03;
 				}
-				[anim_durations] { fs0 = 3.000; }
+				[anim_durations] { fs0 = 2.000; }
 			}
 			[chore_default]
 			{

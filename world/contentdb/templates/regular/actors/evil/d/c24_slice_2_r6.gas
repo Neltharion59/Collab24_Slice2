@@ -130,7 +130,7 @@
 	}
 	[defend]
 	{
-		defense = 120;
+		defense = 40;
 	}
 	[inventory]
 	{
@@ -253,7 +253,7 @@
     {
         screen_name = "Ice Shard";
     }
-	[defend] { defense=125; }
+	[defend] { defense=55; }
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
@@ -317,7 +317,7 @@
 			}
 		}
 	}
-    [defend] { defense=208; }
+    [defend] { defense=50; }
 	[inventory]
 	{
 		[pcontent]
@@ -422,8 +422,8 @@
 	[aspect]
 	{
 		experience_value = 0;
-		life = 28;
-		max_life = 28;
+		life = 18;
+		max_life = 18;
 		mana = 6;
 		max_mana = 6;
 		model = m_c_edm_if_pos_1;
@@ -436,8 +436,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 38;
-		damage_min = 32;
+		damage_max = 27;
+		damage_min = 25;
 	}
 	[body]
 	{
@@ -500,7 +500,7 @@
 			}
 		}
 	 }
-    [defend] { defense=100; }
+    [defend] { defense=40; }
 	[mind]
 	{
 		personal_space_range = 0.5;
@@ -569,8 +569,8 @@
 	[attack]
 	{
 		attack_range = 3;
-		damage_max = 48;
-		damage_min = 44;
+		damage_max = 33;
+		damage_min = 31;
 	}
 	[body]
 	{
@@ -638,7 +638,7 @@
 		screen_name="Tentacle"; 
 		membership=monster,immune_freeze;
 	}
-   	[defend] { defense=100; }
+   	[defend] { defense=40; }
 	[mind]
 	{
 		jat_die 					= world\ai\jobs\actors\evil\job_die_delete.skrit;

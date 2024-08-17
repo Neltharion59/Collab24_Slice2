@@ -48,8 +48,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 35;
-		damage_min = 28;
+		damage_max = 21;
+		damage_min = 19;
 	}
 	[common]
 	{
@@ -117,8 +117,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 24;
-		damage_min = 21;
+		damage_max = 9;
+		damage_min = 7;
 	}
 	[common]
 	{
@@ -150,8 +150,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 19;
-		damage_min = 17;
+		damage_max = 13;
+		damage_min = 11;
 	}
 	[common]
 	{
@@ -183,8 +183,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 41;
-		damage_min = 40;
+		damage_max = 36;
+		damage_min = 34;
 	}
 	[magic]
 	{
@@ -281,8 +281,8 @@
 	[attack]
 	{
 		area_damage_radius = 3;
-		damage_max = 48;
-		damage_min = 40;
+		damage_max = 58;
+		damage_min = 53;
 
 	}
 	[magic]
@@ -303,8 +303,8 @@
 	}
 	[spell_area_effect]
 	{
-		damage_checks = 1;
-		damage_frequency = 1;
+		damage_checks = 3;
+		damage_frequency = 0.33;
 		effect_script = "c24_slice_02_bortusk_shock_wave";
 	}
 }
@@ -316,8 +316,8 @@
 	[attack]
 	{
 		area_damage_radius = 4;
-		damage_max = 12;
-		damage_min = 10;
+		damage_max = 8;
+		damage_min = 6;
 	}
 	[magic]
 	{
@@ -352,12 +352,12 @@
 			{
 				[all*]
 				{
-					chance = 0.70;
+					chance = 0.75;
 					il_main = c24_2_r2_ice_fly_summon;
 				}
 				[all*]
 				{
-					chance = 0.25;
+					chance = 0.20;
 					il_main = c24_2_r2_spider_frostnid;
 				}
 				[all*]
@@ -401,8 +401,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 40;
-		damage_min = 33;
+		damage_max = 21;
+		damage_min = 20;
 	}
 	[common]
 	{
@@ -558,8 +558,8 @@
 	[attack]
 	{
 		area_damage_radius = 4;
-		damage_max = 13;
-		damage_min = 11;
+		damage_max = 9;
+		damage_min = 5;
 	}
 	[magic]
 	{
@@ -592,8 +592,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 15;
-		damage_min = 13;
+		damage_max = 12;
+		damage_min = 10;
 	}
 	[magic]
 	{
@@ -623,8 +623,8 @@
 	[attack]
 	{
 		area_damage_radius = 2;
-		damage_max = 50;
-		damage_min = 40;
+		damage_max = 30;
+		damage_min = 24;
 	}
 	[magic]
 	{
@@ -650,8 +650,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 40;
-		damage_min = 35;
+		damage_max = 25;
+		damage_min = 20;
 	}
 	[common]
 	{
@@ -723,8 +723,8 @@
 	specializes = base_spell_monster;
 	[attack]
 	{
-		aiming_error_range_x = 0.5;
-		aiming_error_range_y = 0.5;
+		aiming_error_range_x = 1.5;
+		aiming_error_range_y = 1.5;
 		ammo_attach_bone = ap_flame;
 		ammo_template = spike_mine_worm;
 		damage_max = 32;
@@ -796,8 +796,8 @@
 		aiming_error_range_y = 2;
 		ammo_attach_bone = weapon_grip;
 		ammo_template = c24_braak_boulder_ice;
-		damage_max = 26;
-		damage_min = 23;
+		damage_max = 28;
+		damage_min = 25;
 		use_aiming_error = true;
 	}
 	[magic]
@@ -1436,8 +1436,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 51;
-		damage_min = 48;
+		damage_max = 26;
+		damage_min = 23;
 	}
 	[common]
 	{
@@ -1586,8 +1586,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		 damage_max = 54;
-		 damage_min = 50;
+		 damage_max = 25;
+		 damage_min = 23;
 	}
 	[common]
 	{
@@ -1619,8 +1619,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 42;
-		damage_min = 38;
+		damage_max = 32;
+		damage_min = 28;
 	}
 	[magic]
 	{
@@ -1648,8 +1648,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 42;
-		damage_min = 38;
+		damage_max = 32;
+		damage_min = 28;
 	}
 	[magic]
 	{
@@ -1681,8 +1681,8 @@
 	{
 		ammo_attach_bone = weapon_grip;
 		ammo_template = c24_shard_ice_ammo;
-		damage_max = 40;
-		damage_min = 37;
+		damage_max = 29;
+		damage_min = 27;
 	}
 	[common]
 	{
@@ -1730,8 +1730,8 @@
 		aiming_error_range_y = 5;
 		ammo_attach_bone = weapon_grip;
 		ammo_template = c24_ice_lance;
-		damage_max = 52;
-		damage_min = 40;
+		damage_max = 32;
+		damage_min = 30;
 		use_aiming_error = true;
 	}
 	[magic]
@@ -1808,8 +1808,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 55;
-		damage_min = 46;
+		damage_max = 30;
+		damage_min = 26;
 	}
 	[magic]
 	{
@@ -1839,8 +1839,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 40;
-		damage_min = 35;
+		damage_max = 28;
+		damage_min = 25;
 	}
 	[magic]
 	{
@@ -1871,8 +1871,8 @@
 	{
 		ammo_attach_bone = weapon_grip;
 		ammo_template = c24_ice_fist;
-		damage_max = 69;
-		damage_min = 60;
+		damage_max = 30;
+		damage_min = 30;
 	}
 	[common]
 	{
@@ -1911,8 +1911,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 32;
-		damage_min = 30;
+		damage_max = 36;
+		damage_min = 33;
 	}
 	[magic]
 	{

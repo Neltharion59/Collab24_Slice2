@@ -442,8 +442,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 26;
-		damage_min = 20;
+		damage_max = 23;
+		damage_min = 18;
 	}
 	[defend] { defense=20; }
 }
@@ -608,7 +608,7 @@
         membership = monster;
 		screen_name="Snow Beast";
 	}
-	[defend] { defense=120; }
+	[defend] { defense=50; }
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
@@ -745,8 +745,8 @@
 	[aspect]
 	{
 		experience_value = 34;
-		life = 112;
-		max_life = 112;
+		life = 71;
+		max_life = 71;
 		mana = 27;
 		max_mana = 27;
 		[textures]
@@ -757,8 +757,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 40;
-		damage_min = 36;
+		damage_max = 30;
+		damage_min = 26;
 	}
 	[common]
 	{
@@ -785,8 +785,8 @@
 	[aspect]
 	{
 		experience_value = 35;
-		life = 127;
-		max_life = 127;
+		life = 94;
+		max_life = 94;
 		mana = 27;
 		max_mana = 27;
 		[textures]
@@ -797,14 +797,14 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 44;
-		damage_min = 40;
+		damage_max = 35;
+		damage_min = 29;
 	}
 	[common]
 	{
 		screen_name="Murky Flaypick";
 	}
-	[defend] { defense=99; }
+	[defend] { defense=55; }
 }
 [t:template,n:c24_2_r4_gargoyle_base]
 {

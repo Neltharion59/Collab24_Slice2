@@ -143,14 +143,14 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 12;
-		damage_min = 10;
+		damage_max = 4;
+		damage_min = 2;
 	}
 	[common]
 	{
 		screen_name="Ice Warrior";
 	}
-    [defend] { defense=80; }
+    [defend] { defense=50; }
    	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
@@ -314,7 +314,7 @@
 			}
 		}
 	}
-    [defend] { defense=80; }
+    [defend] { defense=50; }
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;

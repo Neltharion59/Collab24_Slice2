@@ -1,6 +1,5 @@
 [t:template,n:c24_2_r1_spider]
 {
-	// Stats based on Krug Grunt
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R1 spider_red_blck";
 	specializes = actor_evil;
@@ -36,8 +35,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 22;
-		damage_min = 19;
+		damage_max = 16;
+		damage_min = 12;
 		reload_delay = 1;
 	}
 	[body]
@@ -117,7 +116,7 @@
 			strength = 8, 0;
 			dexterity = 13, 0;
 			intelligence = 25, 0;
-			melee = 5, 0;
+			melee = 4, 0;
 		}
 	}
 	[aspect]
@@ -158,8 +157,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 46;
-		damage_min = 42;
+		damage_max = 21;
+		damage_min = 17;
 	}
 	[body]
 	{
@@ -259,14 +258,14 @@
 			strength =  4, 0;
 			intelligence =  1, 0;
 			dexterity =  6, 0;
-			melee =  4, 0;
+			melee =  2, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 4;
-		life = 12;
-		max_life = 12;
+		life = 5;
+		max_life = 5;
 		mana = 4;
 		material = teeth;
         max_mana = 4;
@@ -411,8 +410,8 @@
 	[aspect]
 	{
 		experience_value = 15;
-		life             = 67;
-		max_life         = 67;
+		life             = 37;
+		max_life         = 37;
 		mana             = 50;
 		max_mana         = 50;
 		model = m_c_edm_mn_pos_1;
@@ -431,8 +430,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 31; 
-		damage_min = 27;
+		damage_max = 15; 
+		damage_min = 13;
 	}
 	
 	[common]
@@ -440,7 +439,7 @@
 		screen_name = "Water Elemental Minion";
 		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 	}
-	[defend] { defense = 40; }
+	[defend] { defense = 30; }
     [inventory]
     {
 		[pcontent]
@@ -507,8 +506,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 44; 
-		damage_min = 39;
+		damage_max = 20; 
+		damage_min = 18;
 	}
 	[body]
 	{

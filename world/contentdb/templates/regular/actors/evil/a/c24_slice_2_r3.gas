@@ -45,8 +45,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 10;
-		damage_min = 10;
+		damage_max = 5;
+		damage_min = 3;
 	}
 	[body]
 	{
@@ -134,7 +134,7 @@
         membership = monster;
 		screen_name="Snow Va'arth Brute";
 	}
-	[defend] { defense=70; }
+	[defend] { defense=30; }
    	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
@@ -325,7 +325,7 @@
         membership = monster;
 		screen_name="Snow Va'arth Bombardier";
 	}
-	[defend] { defense=70; }
+	[defend] { defense=30; }
    	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
@@ -508,7 +508,7 @@
         membership = monster;
 		screen_name="Snow Va'arth Avalancher";
 	}
-	[defend] { defense=70; }
+	[defend] { defense=30; }
    	[inventory]
 	{
         spew_equipped_kill_count = <ignore>;
