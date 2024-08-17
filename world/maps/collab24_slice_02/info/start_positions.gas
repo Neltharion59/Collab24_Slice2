@@ -1,12 +1,123 @@
 [start_positions]
 {
-	[t:start_group,n:collab24_slice_02_test]
+	[t:start_group,n:collab24_slice2_test]
 	{
 	  b default = true;
 		description = "A test start position in Ghanawaland.";
 	  b dev_only = true;
 	  i id = 200;
 		screen_name = "Ghanawaland test";
+		[start_position]
+		{
+		  i id = 1;
+			position = -2.474964,0.000000,-0.663346,0xBC6174B8;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xBC6174B8;
+			}
+		}
+		[start_position]
+		{
+		  i id = 2;
+			position = -0.691966,0.000000,-0.500202,0xBC6174B8;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xBC6174B8;
+			}
+		}
+		[start_position]
+		{
+		  i id = 3;
+			position = 1.358121,0.000000,-0.738099,0xBC6174B8;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xBC6174B8;
+			}
+		}
+		[start_position]
+		{
+		  i id = 4;
+			position = 2.909142,0.000000,-0.415539,0xBC6174B8;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xBC6174B8;
+			}
+		}
+		[start_position]
+		{
+		  i id = 5;
+			position = -2.203824,0.000000,1.431459,0xBC6174B8;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xBC6174B8;
+			}
+		}
+		[start_position]
+		{
+		  i id = 6;
+			position = -0.821072,0.000000,1.455305,0xBC6174B8;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xBC6174B8;
+			}
+		}
+		[start_position]
+		{
+		  i id = 7;
+			position = 1.015724,0.000000,1.555175,0xBC6174B8;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xBC6174B8;
+			}
+		}
+		[start_position]
+		{
+		  i id = 8;
+			position = 2.762375,0.000000,1.532532,0xBC6174B8;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xBC6174B8;
+			}
+		}
+	}
+	[t:start_group,n:collab24_slice2_r0]
+	{
+	  b default = false;
+		description = "Trader in tiger grass caverns";
+	  b dev_only = false;
+	  i id = 21;
+		screen_name = "Tiger Caverns";
+		[world_levels]
+		{
+			[regular]
+			{
+				required_level = 3;
+			}
+		}
 		[start_position]
 		{
 		  i id = 1;
@@ -104,18 +215,18 @@
 			}
 		}
 	}
-	[t:start_group,n:collab24_slice_02_r0]
+	[t:start_group,n:collab24_slice2_r3]
 	{
 	  b default = false;
-		description = "Trader in tiger grass caverns";
+		description = "The town of Frostfingers.";
 	  b dev_only = false;
-	  i id = 21;
-		screen_name = "Tiger Caverns";
+	  i id = 22;
+		screen_name = "The town of Frostfingers";
 		[world_levels]
 		{
 			[regular]
 			{
-				required_level = 3;
+				required_level = 4;
 			}
 		}
 		[start_position]
@@ -212,117 +323,6 @@
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
 				position = 0.604788,0.000000,-1.223998,0xE548AE55;
-			}
-		}
-	}
-	[t:start_group,n:collab24_slice_02_r3]
-	{
-	  b default = false;
-		description = "The town of Frostfingers.";
-	  b dev_only = false;
-	  i id = 22;
-		screen_name = "The town of Frostfingers";
-		[world_levels]
-		{
-			[regular]
-			{
-				required_level = 4;
-			}
-		}
-		[start_position]
-		{
-		  i id = 1;
-			position = -2.474964,0.000000,-0.663346,0xBC6174B8;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xBC6174B8;
-			}
-		}
-		[start_position]
-		{
-		  i id = 2;
-			position = -0.691966,0.000000,-0.500202,0xBC6174B8;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xBC6174B8;
-			}
-		}
-		[start_position]
-		{
-		  i id = 3;
-			position = 1.358121,0.000000,-0.738099,0xBC6174B8;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xBC6174B8;
-			}
-		}
-		[start_position]
-		{
-		  i id = 4;
-			position = 2.909142,0.000000,-0.415539,0xBC6174B8;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xBC6174B8;
-			}
-		}
-		[start_position]
-		{
-		  i id = 5;
-			position = -2.203824,0.000000,1.431459,0xBC6174B8;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xBC6174B8;
-			}
-		}
-		[start_position]
-		{
-		  i id = 6;
-			position = -0.821072,0.000000,1.455305,0xBC6174B8;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xBC6174B8;
-			}
-		}
-		[start_position]
-		{
-		  i id = 7;
-			position = 1.015724,0.000000,1.555175,0xBC6174B8;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xBC6174B8;
-			}
-		}
-		[start_position]
-		{
-		  i id = 8;
-			position = 2.762375,0.000000,1.532532,0xBC6174B8;
-			[camera]
-			{
-			  f azimuth = 0.500000;
-			  f distance = 20.000000;
-			  f orbit = 0.000000;
-				position = 0.000000,0.000000,0.000000,0xBC6174B8;
 			}
 		}
 	}
