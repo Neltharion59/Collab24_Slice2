@@ -625,6 +625,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "HIDE THE FAIRY NEAR THE TREE";
 		[instance_triggers]
 		{
 			[*]
@@ -647,7 +648,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.522766,0,0.122562,0xefe49471;
+	  p position = 0.705551,0,0.122025,0xefe49471;
 	}
 }
 [t:trigger_change_mood_box,n:0x023001ce]
@@ -677,6 +678,39 @@
 	{
 	  q orientation = 0,1,0,1.50987e-007;
 	  p position = 0.0855865,-12,-3.7221,0xf856fbd5;
+	}
+}
+[t:trigger_generic,n:0x02300863]
+{
+	[common]
+	{
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("collab24_slice2_world_location_r1_0");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,4.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.3,0,0.4;
+	}
+	[placement]
+	{
+	  p position = 0.0745544,-12,-2.86419,0xf856fbd5;
 	}
 }
 [t:trigger_change_mood_box,n:0x023001cc]
@@ -1282,38 +1316,5 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -2.38263,0,-0.057106,0x03e2fdd2;
-	}
-}
-[t:trigger_generic,n:0x02300863]
-{
-	[common]
-	{
-	  b is_single_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("collab24_slice2_world_location_r1_0");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(5.000000,4.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 0.3,0,0.4;
-	}
-	[placement]
-	{
-	  p position = 0.0745544,-12,-2.86419,0xf856fbd5;
 	}
 }

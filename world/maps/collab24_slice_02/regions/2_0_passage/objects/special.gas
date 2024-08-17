@@ -380,13 +380,13 @@
 			  f reset_duration = 0.000000;
 			  b single_player = true;
 			  b single_shot = true;
-			  b start_active = true;
+			  b start_active = false;
 			}
 		}
 	}
 	[placement]
 	{
-	  p position = -1.9544,0,0.595512,0x825d8de7;
+	  p position = -2.02468,0,0.35434,0x825d8de7;
 	}
 }
 [t:trigger_generic,n:0x02101a96]
@@ -416,6 +416,35 @@
 	[placement]
 	{
 	  p position = 2.98866,0,-0.664696,0x825d8de7;
+	}
+}
+[t:trigger_generic,n:0x02101adf]
+{
+	[common]
+	{
+		dev_instance_text = "ENABLE DROPPING CLUB";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x0210018C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.982483,9.53674e-007,0.881889,0x825d8de7;
 	}
 }
 [t:trigger_generic,n:0x0210002e]

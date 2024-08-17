@@ -6,7 +6,8 @@
 	}
 	[screen_report]
 	{
-		description = "'Curious. Perhaps this scroll will be useful in an unexpected manner. I should keep it.'";
+		description = "': Curious. Perhaps this scroll will be useful in an unexpected manner. I should keep it.'";
+	  b prepend_name = true;
 	}
 }
 [t:cmd_selection_toggle,n:0x02800017]

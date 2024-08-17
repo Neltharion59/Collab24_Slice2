@@ -2,6 +2,7 @@
 {
 	[cmd_dumb_guy]
 	{
+		alignment_activated = aa_good;
 		alignment_deactivated = aa_neutral;
 		alignment_spawn = aa_good;
 	  b change_collide = true;
@@ -10,6 +11,7 @@
 	  b change_may_attacked = true;
 	  b change_visibility = true;
 	  b collide_deactivated = false;
+	  b invincible_activated = true;
 	  b invincible_deactivated = true;
 	  b invincible_spawn = true;
 		life_state_spawn = ls_alive_conscious;
@@ -17,7 +19,7 @@
 	  b may_attack_spawn = true;
 	  b may_attacked_deactivated = false;
 	  b may_attacked_spawn = true;
-	  i start_state = 1;
+	  i start_state = 2;
 	  x target_actor = 0x0230006F;
 	}
 	[placement]
@@ -191,6 +193,7 @@
 	{
 		description = "': I Should Help the Poor Fae First.'";
 	  f resend_delay = 3;
+	  b prepend_name = true;
 	}
 }
 [t:cmd_selection_toggle,n:0x0230083e]

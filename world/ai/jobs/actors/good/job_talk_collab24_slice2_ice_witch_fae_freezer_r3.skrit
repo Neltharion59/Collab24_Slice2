@@ -86,6 +86,10 @@ state Talk$
             // Before quest
             m_Go$.GetConversation.RSSelectConversation( "conv_collab24_slice2_r3_ice_witch_princess_freezer_first" );
             GameAuditor.GetDb.SetBool( "c24_slice2_r3_flag_ice_witch_princess_freezer_talked_to", true );
+
+			scid quest_activated_trigger_scid$ = MakeScid(0x02400C77);
+			Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
+			SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
 		}
 
 		m_Go$.GetConversation.RSActivateDialogue();

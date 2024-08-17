@@ -159,6 +159,7 @@
 	category_name = "1W_townsperson";
 	doc = "collab 24 slice 2 npc krug storeless";
 	specializes = c24_slice_2_npc_krug_base;
+	[conversation] {}
 }
 [t:template,n:c24_slice_2_npc_krug_store]
 {
@@ -171,6 +172,7 @@
 		use_range = 1.0;
 		is_ghost_usable = TRUE;
 	}
+	[conversation] {}
     [inventory]
 	{
 		[equipment]

@@ -95,6 +95,48 @@
 	  p position = -1.63172,-6,-2.60357,0x4aaf7698;
 	}
 }
+[t:cmd_selection_toggle,n:0x02400f34]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02400EEB;
+	  i start_state = 1;
+	}
+	[placement]
+	{
+	  p position = 2.01366,-3.15,2.47656,0xaf4c2545;
+	}
+}
+[t:cmd_selection_toggle,n:0x02400f35]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02400EEA;
+	  i start_state = 1;
+	}
+	[placement]
+	{
+	  p position = 1.311,-3.15,7.03611,0xaf4c2545;
+	}
+}
+[t:cmd_alignment_changer,n:0x02400f37]
+{
+	[cmd_dumb_guy]
+	{
+	  b change_collide = true;
+	  b change_invincibility = true;
+	  b change_may_attack = true;
+	  b change_may_attacked = true;
+	  b collide_spawn = false;
+	  b invincible_spawn = true;
+	  i start_state = 1;
+	  x target_actor = 0x02400EE8;
+	}
+	[placement]
+	{
+	  p position = 1.83161,-3.15,4.86126,0xaf4c2545;
+	}
+}
 [t:cmd_selection_toggle,n:0x0240029c]
 {
 	[cmd_selection_toggle]
@@ -318,11 +360,12 @@
 {
 	[placement]
 	{
-	  p position = 1.51938,0,-1.75434,0x92e53560;
+	  p position = 0.261978,0,2.79644,0x92e53560;
 	}
 	[screen_report]
 	{
-		description = "'Perhaps I should not wander here without some knowledge on what is in there. Asking the witches might help.'";
+		description = "': Perhaps I should not wander here without some knowledge on what is in there. Asking the witch in the nearby house might help.'";
+	  b prepend_name = true;
 	}
 }
 [t:cmd_auto_save,n:0x02400a5b]
@@ -357,47 +400,5 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 1.00383,-6,-2.28284,0x156951da;
-	}
-}
-[t:cmd_selection_toggle,n:0x02400f34]
-{
-	[cmd_selection_toggle]
-	{
-	  x object_scid = 0x02400EEB;
-	  i start_state = 1;
-	}
-	[placement]
-	{
-	  p position = 2.01366,-3.15,2.47656,0xaf4c2545;
-	}
-}
-[t:cmd_selection_toggle,n:0x02400f35]
-{
-	[cmd_selection_toggle]
-	{
-	  x object_scid = 0x02400EEA;
-	  i start_state = 1;
-	}
-	[placement]
-	{
-	  p position = 1.311,-3.15,7.03611,0xaf4c2545;
-	}
-}
-[t:cmd_alignment_changer,n:0x02400f37]
-{
-	[cmd_dumb_guy]
-	{
-	  b change_collide = true;
-	  b change_invincibility = true;
-	  b change_may_attack = true;
-	  b change_may_attacked = true;
-	  b collide_spawn = false;
-	  b invincible_spawn = true;
-	  i start_state = 1;
-	  x target_actor = 0x02400EE8;
-	}
-	[placement]
-	{
-	  p position = 1.83161,-3.15,4.86126,0xaf4c2545;
 	}
 }

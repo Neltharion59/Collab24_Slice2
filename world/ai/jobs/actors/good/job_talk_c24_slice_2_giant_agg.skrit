@@ -97,6 +97,10 @@ state Talk$
 		{
             // 
 			m_Go$.GetConversation.RSSelectConversation( "conv_giant_agg_found_club" );
+
+			scid quest_activated_trigger_scid$ = MakeScid(0x02101ADF);
+			Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
+			SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
 		}
 		else if ( GameAuditor.GetDb.GetBool( "flag_giant_quest_accepted" ) )
 		{
