@@ -110,19 +110,21 @@
 		}
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_ice_witch_pet_quest_after_pet_killed;
 			description = Speak with Yanaga to Offer the Dead Insect to her as Replacement for the Dead Pooky;
 		  b is_consumable = true;
 		  i order = 1;
 		  b required = true;
-			speaker = ;
+			speaker = Yanaga;
 		}
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_ice_witch_pet_quest_after_orthrac_is_owned;
 			description = Drop the Dead Orthranc Hatchling on the Ground near Yanaga;
 		  b is_consumable = true;
 		  i order = 2;
 		  b required = true;
-			speaker = ;
+			speaker = Yanaga;
 		}
 		[*]
 		{
@@ -134,11 +136,12 @@
 		}
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_ice_witch_pet_quest_after_ortranc_revived;
 			description = You Gave Yanaga a Pet to Fill the Hole in Her Heart and a New Life to the Dead Orthranc Hatchling;
 		  b is_consumable = true;
 		  i order = 4;
 		  b required = true;
-			speaker = ;
+			speaker = Yanaga;
 		}
 	}
 	[c24_slice_2_quest_pond]
@@ -400,11 +403,12 @@
 		}
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_hermit_b4_cart_is_dropped_first;
 			description = Drop the cart near the Hermit;
 		  b is_consumable = true;
 		  i order = 8;
 		  b required = true;
-			speaker = ;
+			speaker = Talak;
 		}
 		[*]
 		{
@@ -416,19 +420,21 @@
 		}
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_mayor_b4_cellar_quest_first;
 			description = Speak with the Sommelier;
 		  b is_consumable = true;
 		  i order = 10;
 		  b required = true;
-			speaker = ;
+			speaker = Mayor Quillbee;
 		}
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_sommelier_cellar_quest_started_first;
 			description = Eliminate the Threat in the Wine Cellar;
 		  b is_consumable = true;
 		  i order = 11;
 		  b required = true;
-			speaker = ;
+			speaker = Thylea the Sommelier;
 		}
 		[*]
 		{
@@ -440,43 +446,48 @@
 		}
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_sommelier_cellar_quest_completed_first;
 			description = Speak with the Mayor;
 		  b is_consumable = true;
 		  i order = 13;
 		  b required = true;
-			speaker = ;
+			speaker = Thylea the Sommelier;
 		}
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_mayor_b4_hassat_quest_first;
 			description = Speak with the Sheppard;
 		  b is_consumable = true;
 		  i order = 14;
 		  b required = true;
-			speaker = ;
+			speaker = Mayor Quillbee;
 		}
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_sheppard_hassat_quest_started_first;
 			description = Investigate the pasturelands;
 		  b is_consumable = true;
 		  i order = 15;
 		  b required = true;
-			speaker = ;
+			speaker = Thosius;
 		}
 		[*]
 		{
+			address = 2_3a_pasture_lands:conversations:conv_c24_r4_hassat_start;
 			description = Speak with Leotharn below the tower;
 		  b is_consumable = true;
 		  i order = 16;
 		  b required = true;
-			speaker = ;
+			speaker = Leotharn;
 		}
 		[*]
 		{
+			address = 2_3a_pasture_lands:conversations:conv_c24_r4_hassat_start_before_summon_first;
 			description = Summon a Cow in the Suspicious Ring of Bushes;
 		  b is_consumable = true;
 		  i order = 17;
 		  b required = true;
-			speaker = ;
+			speaker = Leotharn;
 		}
 		[*]
 		{
@@ -496,27 +507,30 @@
 		}
 		[*]
 		{
+			address = 2_3a_pasture_lands:conversations:conv_c24_r4_hassat_after_leopards_killed_first;
 			description = Speak with Mayor;
 		  b is_consumable = true;
 		  i order = 20;
 		  b required = true;
-			speaker = ;
+			speaker = Leotharn;
 		}
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_mayor_b4_braak_quest_first;
 			description = Speak with Dartakk;
 		  b is_consumable = true;
 		  i order = 21;
 		  b required = true;
-			speaker = ;
+			speaker = Mayor Quillbee;
 		}
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_krug_after_hassat_quest_first;
 			description = You Have Helped Dartakk Become a Merchant;
 		  b is_consumable = true;
 		  i order = 22;
 		  b required = true;
-			speaker = ;
+			speaker = Dartakk;
 		}
 	}
 	[c24_slice_2_quest_braak_barricade]
@@ -545,7 +559,7 @@
 		[*]
 		{
 			address = 2_3_town_and_outskirts:conversations:conv_r4_mayor_last;
-			description = The Path TODO is now clear;
+			description = The Eastern Path Is Now Clear. The Fae Lands Await You;
 		  b is_consumable = true;
 		  i order = 2;
 		  b required = true;
@@ -623,11 +637,12 @@
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_collab24_slice2_r3_ice_witch_princess_freezer_first;
 			description = Enter the Tomb Cave;
 		  b is_consumable = true;
 		  i order = 0;
 		  b required = true;
-			speaker = ;
+			speaker = Kiaruth;
 		}
 		[*]
 		{
@@ -663,11 +678,12 @@
 		}
 		[*]
 		{
+			address = 2_3c_icy_tomb:conversations:conv_collab24_slice2_r3_fae_princess_first;
 			description = You have successfully freed Glamoulla from the Tomb. She will likely be heard of again.;
 		  b is_consumable = true;
 		  i order = 5;
 		  b required = true;
-			speaker = ;
+			speaker = Princess Glamoulla;
 		}
 	}
 	[collab24_slice2_quest_mayor_greet]
@@ -678,11 +694,12 @@
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_r4_mayor_last;
 			description = Greet Mayor of Shroomington from Mayor of Frostfingers;
 		  b is_consumable = true;
 		  i order = 0;
 		  b required = true;
-			speaker = ;
+			speaker = Mayor Quillbee;
 		}
 		[*]
 		{
@@ -701,11 +718,12 @@
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_collab24_slice2_r3_smith_b4_quest_first;
 			description = Destroy the Bronze Golem in Carlicio the Blacksmith's House;
 		  b is_consumable = true;
 		  i order = 0;
 		  b required = true;
-			speaker = ;
+			speaker = Carlicio the Blacksmith;
 		}
 		[*]
 		{
@@ -717,11 +735,12 @@
 		}
 		[*]
 		{
+			address = 2_3_town_and_outskirts:conversations:conv_collab24_slice2_r3_smith_after_quest_first;
 			description = You have Made Carlicio the Blacksmith's House Safe Again;
 		  b is_consumable = true;
 		  i order = 2;
 		  b required = true;
-			speaker = ;
+			speaker = Carlicio the Blacksmith;
 		}
 	}
 }
