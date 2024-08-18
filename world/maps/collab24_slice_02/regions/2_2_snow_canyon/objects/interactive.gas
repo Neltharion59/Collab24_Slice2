@@ -1,3 +1,27 @@
+[t:sign_ice_01,n:0x0230087f]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = -2.71577,0,-1.14982,0xfd3c37d6;
+	}
+}
+[t:sign_ice_01,n:0x023008a3]
+{
+	[common]
+	{
+		screen_name = "Eksieland";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707106;
+	  p position = -2.89523,-0.253643,-1.33002,0xfd3c37d6;
+	}
+}
 [t:c24_generator_ice_door,n:0x02300001]
 {
 	[generator_breakable]
@@ -31,6 +55,30 @@
 	  p position = -0.138367,-3.84794,1.26066,0x401c3d49;
 	}
 }
+[t:sign_ice_01,n:0x0230088b]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.810425,0,1.57117,0x8460090d;
+	}
+}
+[t:sign_ice_01,n:0x023008a1]
+{
+	[common]
+	{
+		screen_name = "Eksieland";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -0.493965,-0.231319,1.71663,0x8460090d;
+	}
+}
 [t:c24_generator_ice_door,n:0x023000e1]
 {
 	[generator_breakable]
@@ -47,6 +95,18 @@
 	  p position = 0.144836,-3.86861,1.23184,0x156f87da;
 	}
 }
+[t:sign_ice_01,n:0x0230089b]
+{
+	[common]
+	{
+		screen_name = "Master Miner";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.85264,0,-0.522498;
+	  p position = 3.64399,0,1.9379,0xa403f032;
+	}
+}
 [t:door_ice_peasant_right,n:0x0230088e]
 {
 	[placement]
@@ -54,6 +114,30 @@
 	  q orientation = 0,1,0,-1.66939e-007;
 	  p position = -3.19498,-1.5,-4.43678,0xf2564ffb;
 		use_point_scids = 0x0230088c,0x0230088d;
+	}
+}
+[t:sign_ice_01,n:0x02300893]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,3.12407e-007,0,-1;
+	  p position = 3.80766,0,1.76286,0xfb6a2f3a;
+	}
+}
+[t:sign_ice_01,n:0x0230089c]
+{
+	[common]
+	{
+		screen_name = "Eksieland";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707106;
+	  p position = 3.80548,0,1.57084,0xfb6a2f3a;
 	}
 }
 [t:lever_glb_04,n:0x02300894]
@@ -103,5 +187,53 @@
 	[placement]
 	{
 	  p position = 0.0370331,-3.97407,-1.99585,0x93415d5f;
+	}
+}
+[t:sign_ice_01,n:0x02300865]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.17061,-1,-2.27164,0x4cc5a40a;
+	}
+}
+[t:sign_ice_01,n:0x02300872]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,3.12407e-007,0,-1;
+	  p position = 1.19371,0,-1.26994,0x856e1ba9;
+	}
+}
+[t:sign_ice_01,n:0x023008a6]
+{
+	[common]
+	{
+		screen_name = "Eksieland";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707106;
+	  p position = 1.18508,-0.0389723,-1.46931,0x856e1ba9;
+	}
+}
+[t:sign_ice_01,n:0x023008a7]
+{
+	[common]
+	{
+		screen_name = "Eksieland";
+	}
+	[placement]
+	{
+	  q orientation = 0,6.31878e-007,0,-1;
+	  p position = 1.37136,-0.970337,-2.17981,0x4cc5a40a;
 	}
 }

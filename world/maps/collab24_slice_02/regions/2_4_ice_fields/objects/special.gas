@@ -265,7 +265,7 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,5.96046e-008;
-	  p position = 0.265844,-11.9942,-4.94699,0x10299c2f;
+	  p position = 0.265843,-11.9942,-4.94699,0x10299c2f;
 	}
 }
 [t:use_point,n:0x0250097f]
@@ -480,5 +480,73 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 1.19902,0,0.524078,0xfed7fefc;
+	}
+}
+[t:trigger_generic,n:0x025009a9]
+{
+	[common]
+	{
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("collab24_slice2_world_location_r4_0");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,3.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.3,0,0.4;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,5.96046e-008;
+	  p position = 9.22256,2.59059,1.25432,0xa93b9325;
+	}
+}
+[t:trigger_generic,n:0x025009aa]
+{
+	[common]
+	{
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("collab24_slice2_world_location_r4_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,3.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.3,0,0.4;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,5.96046e-008;
+	  p position = 9.1416,2.61221,-0.604326,0xa93b9325;
 	}
 }
