@@ -28,7 +28,10 @@
 {
 	[text*]
 	{
-		screen_text = "You have found the scroll. Now, place it on the ground, so that I may summon its powers.";
+        activate_quest* = c24_slice_2_quest_heal_tree,5;
+		complete_quest* = c24_slice_2_quest_heal_tree;
+        b quest_dialog = true;
+		screen_text = "Rethoros is well once again. Listen to the peaceful silence in our ears. Kindness is so rare among folks outside the Fae realm. Your heart is beautiful one. May it ever be so.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -36,9 +39,6 @@
 {
 	[text*]
 	{
-        activate_quest* = c24_slice_2_quest_heal_tree,5;
-		complete_quest* = c24_slice_2_quest_heal_tree;
-        b quest_dialog = true;
 		screen_text = "There are no words in your tongue, stranger, that would suffice to express my gratitude. May the frost ever glide your skin smoothly.";
 	  f scroll_rate = 10.000000;
 	}

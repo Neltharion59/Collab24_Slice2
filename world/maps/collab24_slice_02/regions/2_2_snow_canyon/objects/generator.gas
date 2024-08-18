@@ -27,6 +27,20 @@
 	  p position = 2.5735,0,0.313046,0x4b877675;
 	}
 }
+[t:generator_bush_02,n:0x02300087]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_2_r3_kurgan_melee";
+	  f spawn_period = 1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-4.69147e-008;
+	  p position = -0.616272,-17.5,-5.24859,0xb531cec8;
+	}
+}
 [t:generator_bush_02,n:0x0230008b]
 {
 	[generator_advanced_a2]
@@ -40,20 +54,6 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707106;
 	  p position = 2.78067,0,1.25737,0x930b72d0;
-	}
-}
-[t:generator_bush_02,n:0x02300087]
-{
-	[generator_advanced_a2]
-	{
-		child_template_name = "c24_2_r3_kurgan_melee";
-	  f spawn_period = 1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-4.69147e-008;
-	  p position = -0.616272,-17.5,-5.24859,0xb531cec8;
 	}
 }
 [t:generator_generic,n:0x02300129]
