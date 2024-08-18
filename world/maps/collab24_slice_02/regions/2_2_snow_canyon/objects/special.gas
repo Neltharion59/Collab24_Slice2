@@ -667,7 +667,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_deactivate",0x02300839,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02300839,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(10.000000,4.500000,0.300000,"on_first_enter");
 			  f delay = 0.000000;

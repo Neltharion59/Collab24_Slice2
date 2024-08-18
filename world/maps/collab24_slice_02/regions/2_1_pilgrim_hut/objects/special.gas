@@ -747,8 +747,9 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x022000FC,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x022000FC,0f,"default","every",0), doc("hide hermit");
 				action* = send_world_message("we_trigger_activate",0x022000EA,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02101AC3,0f,"default","every",0), doc("hide krug in cave");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -1300,14 +1301,6 @@
 	  p position = -1.72996,0,1.35744,0xc9e1cd18;
 	}
 }
-[t:use_point,n:0x0220035f]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,2.75338e-008;
-	  p position = 3.55129,0,-0.0135803,0x86e40470;
-	}
-}
 [t:c24_blocking_object_act,n:0x0220033f]
 {
 	[aspect]
@@ -1318,5 +1311,13 @@
 	{
 	  q orientation = 0,1,0,-2.98023e-008;
 	  p position = 1.83685,1.9618,0.602924,0x4bf088b1;
+	}
+}
+[t:use_point,n:0x0220035f]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,2.75338e-008;
+	  p position = 3.55129,0,-0.0135803,0x86e40470;
 	}
 }

@@ -3159,7 +3159,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_deactivate",0x02B00033,0f,"default","every",0), doc("make the fae go away");
+				action* = send_world_message("we_req_activate",0x02B00052,0f,"default","every",0), doc("make the fae go away");
 				action* = send_world_message("we_req_activate",0x02400D5D,0f,"default","every",0), doc("hide book");
 				action* = send_world_message("we_req_activate",0x02400D60,0f,"default","every",0), doc("hide book");
 				action* = send_world_message("we_req_activate",0x02400D61,0f,"default","every",0), doc("hide book");
@@ -3179,7 +3179,7 @@
 	}
 	[placement]
 	{
-	  p position = 1.13346,0.233736,-0.478455,0xaef1f145;
+	  p position = 1.37342,0.561541,0.0403442,0xaef1f145;
 	}
 }
 [t:trigger_generic,n:0x0240017b]
@@ -3987,5 +3987,13 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 0.492493,4.50865,1.93771,0x47258526;
+	}
+}
+[t:use_point,n:0x02400e7d]
+{
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = -3.36874,0,0.366844,0x0e3b8b40;
 	}
 }

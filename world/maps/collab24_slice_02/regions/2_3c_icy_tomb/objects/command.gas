@@ -61,7 +61,7 @@
 	}
 	[placement]
 	{
-	  p position = -2.09278,-2.06855,-2.11092,0x967f0d78;
+	  p position = -1.92562,-2.04375,-2.16769,0x967f0d78;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x02b00027]
@@ -274,5 +274,16 @@
 	[placement]
 	{
 	  p position = 3.83243,0,-0.147956,0xa487ab07;
+	}
+}
+[t:cmd_t_delete,n:0x02b00052]
+{
+	[cmd_t_delete]
+	{
+	  x target_scid = 0x02B00031;
+	}
+	[placement]
+	{
+	  p position = -1.24982,-1.05819,-1.10914,0x967f0d78;
 	}
 }
