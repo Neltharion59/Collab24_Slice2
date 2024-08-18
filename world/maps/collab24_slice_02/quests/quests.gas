@@ -743,4 +743,53 @@
 			speaker = Carlicio the Blacksmith;
 		}
 	}
+	[c24_slice_2_quest_shrine_broom]
+	{
+		chapter = chapter_02_path_of_merchant;
+		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
+		screen_name = Brooms above the Shrine;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			address = 2_3_town_and_outskirts:conversations:conv_collab24_slice2_r3_ice_witch_princess_freezer_first;
+			description = Destroy the Witch Guarding the Shrine;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = Athrea the Pilgrim;
+		}
+		[*]
+		{
+			description = Ascend to the Top of the Shrine;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Destroy the Source of Witch's Curse;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Speak with Athrea the Pilgrim;
+		  b is_consumable = true;
+		  i order = 3;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			address = 2_3c_icy_tomb:conversations:conv_collab24_slice2_r3_fae_princess_first;
+			description = You have successfully broken the Witche's Curse on the Shrine.;
+		  b is_consumable = true;
+		  i order = 4;
+		  b required = true;
+			speaker = Athrea the Pilgrim;
+		}
+	}
 }

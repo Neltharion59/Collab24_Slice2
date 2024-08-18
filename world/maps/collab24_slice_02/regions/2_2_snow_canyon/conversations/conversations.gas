@@ -1,3 +1,41 @@
+
+[conv_collab24_slice2_r2_shrine_visitor_b4_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_shrine_broom,0;
+		b quest_dialog = true;
+		screen_text = "A visitor of the shrine? How fortunate. You seem able-bodied, I see. Good, good. Ehm...you see, the shrine has been bewitched by a witch. It's one of those odd elderly women of the town of Frostfingers who live in the wilderness. I haven't really heard of them being hostile, but this one certainly is. Not only she cast a curse upon the shrine, she also guards the access to it. For what purpose, I can only guess. But the shrine should be accessible to all visitors, if you know what I mean.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r2_shrine_visitor_b4_quest_next]
+{
+	[text*]
+	{
+		screen_text = "I can still sense the curse of the shrine in the air. Why would a witch do that?";
+		f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r2_shrine_visitor_after_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_shrine_broom,4;
+		complete_quest* = c24_slice_2_quest_shrine_broom;
+		b quest_dialog = true;
+		screen_text = "I do not know how you managed to do it, but the shrine is free of the witch's curse. You have done great service to all the pilgrims in these parts. And perhaps all folks - possessing control of this shrine was surely meant for nefarious aims.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r2_shrine_visitor_after_quest_next]
+{
+	[text*]
+	{
+		screen_text = "My dear friend, the day is crisp and innocent again. I thank you for your kind deeds.";
+	  f scroll_rate = 10.000000;
+	}
+}
 [conv_c24_r3_fairy_b4_kurgans_killed]
 {
 	[text*]

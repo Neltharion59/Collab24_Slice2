@@ -326,6 +326,7 @@
 	{
 		activate_quest* = collab24_slice2_quest_smith,0;
 	  b quest_dialog = true;
+		choice = shop;
 		screen_text = "Hello there, traveler. How is your day going? May I interest you in the fruits of my craft? I don't have much to do these days after my latest creation, the Bronze Golem, came to life, and took over my home.";
 	  f scroll_rate = 10.000000;
 	}
@@ -334,8 +335,9 @@
 {
 	[text*]
 	{
+		choice = shop;
 		screen_text = "Is there anything else you would like to see? Take care not to go to my bedroom. I will have to figure out how to deal with the Bronze Golem.";
-	  f scroll_rate = 10.000000;
+		f scroll_rate = 10.000000;
 	}
 }
 [conv_collab24_slice2_r3_smith_after_quest_first]
@@ -345,6 +347,7 @@
 		activate_quest* = collab24_slice2_quest_smith,2;
 		complete_quest* = collab24_slice2_quest_smith;
 	  b quest_dialog = true;
+		choice = shop;
 		screen_text = "You done WHAT? I...my friend, am glad I get to sleep in my bed, after I fix it. But I was hoping I would be able to stop the bronze golem without demolishing it completely. Maybe I could have removed its autonomy component or something. Well, it's back to start then. Thank you anyway.";
 	  f scroll_rate = 10.000000;
 	}
@@ -353,6 +356,7 @@
 {
 	[text*]
 	{
+		choice = shop;
 		screen_text = "My friend, the progress with the Bronze Golem is far better than I expected. I have even come up with a few improvements since. Thank you so much again. Would you like to see some of my weapons and armor?";
 	  f scroll_rate = 10.000000;
 	}

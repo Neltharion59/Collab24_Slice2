@@ -246,7 +246,7 @@
 		}
 	}
 }
-[t:template,n:c24_slice_2_r2_hermit]
+[t:template,n:c24_slice_2_r1_hermit]
 {
 	category_name = "1W_townsperson";
 	doc = "c24 slice2 npc r2 hermit";
@@ -262,6 +262,28 @@
 	[common]
 	{
 		screen_name = "Talak";
+	}
+	[conversation]
+	{
+	}
+}
+[t:template,n:c24_slice_2_r2_shrine_visitor]
+{
+	category_name = "1W_townsperson";
+	doc = "c24 slice2 npc r2 Shrine Visitor";
+	specializes = base_npc_fg;
+	[aspect]
+	{
+		model = m_c_gah_fg_pos_a7;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_19;
+			1 = b_c_pos_a7_002;
+		}
+	}
+	[common]
+	{
+		screen_name = "Athrea the Pilgrim";
 	}
 	[conversation]
 	{

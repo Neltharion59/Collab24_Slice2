@@ -80,90 +80,14 @@
 	  p position = 1.07756,3.10191,1.02956,0xbd3e2bf2;
 	}
 }
-[t:emt_glow,n:0x0230012d]
+[t:emt_generic_act,n:0x0230085b]
 {
-	[glow_emitter]
+	[generic_emitter_act]
 	{
-	  f blue = 0.7;
-	  f green = 0.1;
-	  f radius = 2;
-	  f red = 0;
-	  b sparkle = true;
-	  b use_star = true;
+		other_effect = "ice_explosion";
 	}
 	[placement]
 	{
-	  p position = -0.0508575,9.26051,-0.149033,0x5f75e7ba;
-	}
-}
-[t:emt_glow,n:0x0230012e]
-{
-	[glow_emitter]
-	{
-	  f blue = 0.7;
-	  f green = 0.1;
-	  f radius = 2;
-	  f red = 0;
-	  b sparkle = true;
-	  b use_star = true;
-	}
-	[placement]
-	{
-	  p position = -0.000961304,9.26051,-0.0860977,0x5f75e7ba;
-	}
-}
-[t:emt_glow,n:0x0230012f]
-{
-	[glow_emitter]
-	{
-	  f blue = 0.7;
-	  f green = 0.1;
-	  f radius = 2;
-	  f red = 0;
-	  b sparkle = true;
-	  b use_star = true;
-	}
-	[placement]
-	{
-	  p position = -0.152145,9.26051,-0.283653,0x5f75e7ba;
-	}
-}
-[t:emt_glow,n:0x02300130]
-{
-	[glow_emitter]
-	{
-	  f blue = 0.7;
-	  f green = 0.1;
-	  f radius = 2;
-	  f red = 0;
-	  b sparkle = true;
-	  b use_star = true;
-	}
-	[placement]
-	{
-	  p position = -0.110901,9.26051,-0.423668,0x5f75e7ba;
-	}
-}
-[t:emt_light_ray_blue,n:0x02300131]
-{
-	[placement]
-	{
-	  p position = 0.131729,5.975,0.0691223,0x5f75e7ba;
-	}
-}
-[t:emt_glow,n:0x02300132]
-{
-	[glow_emitter]
-	{
-	  f blue = 0.9;
-	  f green = 0.2;
-	  f red = 0;
-	  f scale = 3;
-	  b sparkle = true;
-	  b use_star = true;
-	}
-	[placement]
-	{
-	  p position = -0.024292,12.2114,-0.202751,0x5f75e7ba;
+	  p position = -2.17598,5.975,2.29629,0x5f75e7ba;
 	}
 }

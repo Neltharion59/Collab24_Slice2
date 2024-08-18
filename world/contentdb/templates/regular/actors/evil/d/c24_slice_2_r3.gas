@@ -671,96 +671,77 @@
 		flee_count						= 9999;
 	}
 }
-[t:template,n:c24_2_r3_bronze_golem]
+[t:template,n:c24_2_r3_ice_pillar]
 {
 	category_name = "1W_evil_d";
-	doc = "Bruhs Slice 2 R3 Bronze Golem";
+	doc = "c24 Slice2 R3 ice_pillar";
 	specializes = actor_evil;
 	[actor]
 	{
 		[skills]
 		{
-			strength = 50, 0;
-			dexterity = 10, 0;
-			intelligence = 10, 0;
-			combat_magic = 6, 0;
-		}
+			strength 		= 10, 0;
+			intelligence 	= 10, 0;
+			dexterity 		= 10, 0;
+			
+			nature_magic	= 6, 0;
+		}			
 	}
 	[aspect]
 	{
-		experience_value = 30;
-		life = 118;
-		max_life = 118;
-		mana = 400;
-		max_mana = 400;
-		material = steel;
-        model = m_c_edm_062_pos_1;
-		[textures]
-		{
-			0 = b_c_edm_62_bronze;
-		}
+		experience_value	= 30;
+		force_no_render		= true;
+		force_no_render_click = true;
+		life				= 63;
+		max_life			= 63;
+		mana				= 45;
+		max_mana			= 45;
+		megamap_icon	= b_gui_ig_mnu_eyes_whelnar;
+		megamap_orient = true;
+		draw_shadow = false;
+		model = m_c_edm_tr_pos_1;
+		scale_base = 1;  
+		
+        material = ice;
+
 		[voice]
 		{
-			[attack]
-			{
-				priority = high;
-				* = s_e_ds2_gen_ice_elem_atk1;
-				* = s_e_ds2_gen_ice_elem_atk2;
-			}
-			[cast]
-			{
-				priority = high;
-				* = s_e_ds2_gen_ice_elem_atk1;
-				* = s_e_ds2_gen_ice_elem_atk2;
-			}
-			[die]
-			{
-				priority = high;
-				* = s_e_ds2_gen_ice_elem_die1;
-			}
-			[enemy_spotted]	{ priority = high; * = s_e_ds2_gen_ice_elem_sgt; }
-			[hit_critical]	{ priority = low; * = s_e_ds2_gen_ice_elem_hit; }
-			[hit_glance]	{ priority = low; * = s_e_ds2_gen_ice_elem_hit; }
-			[hit_solid]		{ priority = low; * = s_e_ds2_gen_ice_elem_hit; }
-	        [move] { priority = low; * = s_e_ds2_gen_ice_elem_move; }
+			[die]			{ priority = high; * = s_e_die_shard_small; }
 		}
 	}
 	[attack]
 	{
+		area_damage_radius = 4.25;
 		attack_range = 0.5;
-		damage_max = 40;
-		damage_min = 40;
+		damage_max = 25;
+		damage_min = 20;
 	}
     [body]
 	{
+		avg_move_velocity = 0.000000;
 		[bone_translator]
 		{
-			body_anterior = bip01_head;
-			body_mid = Bip01_torso;
-			body_posterior = Bip01_torso;
-			kill_bone = Bip01_torso;
-			shield_bone = Bip01_HandL;
-			weapon_bone = Bip01_HandR;
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = eye3_base;
+			shield_bone = bone01;
+			weapon_bone = bone01;
 		}
 		[chore_dictionary]
 		{
-			chore_prefix = a_c_edm_062_fs;
+			chore_prefix = a_c_edm_tr_fs;
 			[chore_attack]
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files]
-				{
-					00=mg;
-					01=mg-02;
-				}
-				[anim_durations] { fs0 = 1.000; }
+				[anim_files] { 00=at; }
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dff; }
+				[anim_files] { 00=ds; }
 			}
 			[chore_die]
 			{
@@ -772,82 +753,82 @@
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files] { 00=dsf; }
 			}
-			[chore_magic]
+            [chore_magic]
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files]
-				{
-					00=mg;
-					01=mg-02;
-				}
-				[anim_durations] { fs0 = 0.7500; }
-			}
-			[chore_misc]
-			{
-				chore_stances = ignore;
-				skrit = select_transition;
-				[anim_files] {}
+				[anim_files] { 00=at; }
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=rl; }
+				[anim_files] { 00=ds; }
 			}
 		}
-	}
+	}	
 	[common]
 	{
+		forced_expiration_class=immediate;
+		auto_expiration_class=immediate;
+		screen_name = "Frost Shard";
 		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
-		screen_name="Bronze Golem";
-	}
-	[defend]
-	{
-		defense = 80;
-	}
-	[inventory]
-	{
-		selected_active_location = il_spell_1;
-		[other]
+		[template_triggers]
 		{
-			il_active_primary_spell=collab24_slice2_r3_bronze_golem_spell_metal_shards;
-		}
-		[pcontent]
-		{
-			[oneof*]
+			[*]
 			{
-				il_main = #weapon/-mod(1)/7-17;
-				il_main = #armor/-mod(1)/8-33;
+				action* = call_sfx_script("collab24_slice2_effect_ice_pillar");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
 			}
 		}
 	}
+
+	[defend] { defense = 50; }
+
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=c24_r3_ice_pillar_spell_ice_storm; }
+	}
+
 	[mind]
 	{
-		actor_auto_switches_to_magic         = true;
-		actor_weapon_preference              = WP_MAGIC;
-		actor_auto_switches_to_karate         = false;
-		actor_auto_switches_to_melee         = false;
+		actor_weapon_preference		= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
 
-		melee_engage_range = 14.0;
-		personal_space_range = 0.1;
-		ranged_engage_range = 14.0;
-		sight_range = 14.0;
+		jat_flee_from_object					= jat_none;
+		jat_guard         						= jat_none;
+		jat_move          						= jat_none;
+		jat_patrol         						= jat_none;
+
+		on_enemy_entered_icz_switch_to_melee	= false;
+
+		actor_auto_fidgets 						= false;
+		movement_orders							= mo_hold;
+		inner_comfort_zone_range				= 1.9;
+		melee_engage_range 						= 2.0;
+		personal_space_range					= 1.5;
+		ranged_engage_range 					= 20.0;
+		sight_range								= 20.0;
 	}
-	[physics]
-	{
 
-		break_sound = s_e_die_copter;
+    [physics]
+	{
+		break_effect = c24_slice_02_effect_ice_element_explosion;
 		explode_when_killed = true;
+		explosion_magnitude = 4.25;
 		gib_gore_good = true;
 		[break_particulate]
 		{
-			frag_glb_metal_01 = 5;
-			frag_glb_metal_03 = 4;
-			frag_glb_metal_05 = 5;
-			frag_glb_metal_06 = 8;
+			c24_frag_glb_gr_shard_ice_sm_01 = 1;
+			c24_frag_glb_gr_shard_ice_sm_02 = 1;
+			c24_frag_glb_gr_shard_ice_sm_03 = 2;
+			c24_frag_glb_gr_shard_ice_sm_04 = 3;
+			c24_frag_glb_gr_shard_ice_sm_05 = 3;
 		}
 	}
 }

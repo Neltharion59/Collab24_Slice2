@@ -615,6 +615,37 @@
 		charge_effect = dsx_sj_snowstorm_charge;
 	}
 }
+[t:template,n:c24_r3_ice_pillar_spell_ice_storm]
+{
+	category_name = "magic";
+	doc = "collab24 r2 spell bortusk ice storm";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		area_damage_radius = 3;
+		damage_max = 8;
+		damage_min = 6;
+	}
+	[magic]
+	{
+		cast_range = 14;
+		cast_reload_delay = 0.15;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_terrain | tt_conscious_enemy | tt_unconscious_enemy | tt_breakable;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_deathrain]
+	{
+		drop_freq_max = .075;
+		drop_freq_min = .025;
+		drop_script = "ice_storm";
+		max_drops = 30;
+		spawn_height = 10.0;
+		spawn_radius = 12;
+	}
+}
 [t:template,n:c24_r3_vaarth_spell_shock]
 {
 	category_name = "magic";
