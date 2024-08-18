@@ -1,0 +1,119 @@
+[t:emt_sound,n:0x03d004bd]
+{
+	[placement]
+	{
+	  p position = 1.46844,-15.5907,4.62255,0x32df0f97;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_wolf_howl";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 5;
+	}
+}
+[t:emt_sound_act,n:0x03d004cc]
+{
+	[placement]
+	{
+	  p position = 0.026802,-1.28571,-0.013485,0x0dd562c5;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_shrine_health";
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound,n:0x03d004c3]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.43772,-0.114549,-0.691572,0xe1a223b6;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_wolf_howl";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 5;
+	}
+}
+[t:emt_sound,n:0x03d004c1]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.929531,3.327,-0.0780487,0xec3ae23b;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_wolf_howl";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 5;
+	}
+}
+[t:emt_sound,n:0x03d004c2]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.03786,5.027,3.87656,0x01822b9f;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_wolf_howl";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 5;
+	}
+}
+[t:emt_sound_act,n:0x03d004cb]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- crackling fire";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -3.01084,-1.02689,2.8138,0xcf73dc28;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_fire_small";
+	  f repeat_rate = 5;
+	  b start_on_creation = false;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x03d0001b]
+{
+	[placement]
+	{
+	  p position = -2.4,3,3.5,0x532a2a98;
+	}
+}
+[t:emt_sound,n:0x03d004c4]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.61527,0.885498,-0.79776,0x68babe9c;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_wolf_howl";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 5;
+	}
+}
+[t:emt_sound,n:0x03d004c0]
+{
+	[placement]
+	{
+	  p position = 1.00723,-0.000276566,-0.525696,0x5b84143e;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_wolf_howl";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 5;
+	}
+}

@@ -1,0 +1,51 @@
+[t:generator_generic,n:0x03300021]
+{
+	[generator_basic]
+	{
+		child_template_name = "krug_scout";
+	  b get_child_cc = true;
+	  x initial_command = 0x033000FD;
+	  i max_alive_children = 2;
+	  x msg_scid = 0x033003AC;
+	  i num_children_incubating = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382684;
+	  p position = -0.949905,-1.5,2.5583,0xd64a3a6c;
+	}
+}
+[t:generator_generic,n:0x033000f0]
+{
+	[generator_basic]
+	{
+		child_template_name = "krug_scout";
+	  b get_child_cc = true;
+	  x initial_command = 0x03300107;
+	  i max_alive_children = 2;
+	  x msg_scid = 0x033003AC;
+	  i num_children_incubating = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.92388;
+	  p position = -0.850338,-1.5,-0.432262,0xd64a3a6c;
+	}
+}
+[t:generator_generic,n:0x033000f2]
+{
+	[generator_basic]
+	{
+		child_template_name = "krug_scout";
+	  b get_child_cc = true;
+	  x initial_command = 0x033000FC;
+	  i max_alive_children = 2;
+	  x msg_scid = 0x033003AC;
+	  i num_children_incubating = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = -5.26209,-2.21814,-5.21638,0x83cf878b;
+	}
+}

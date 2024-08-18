@@ -1,0 +1,712 @@
+[t:door_csl_dungeon_04,n:0x05b00185]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E9;
+	  x second_door = 0x05B0035C;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.49012e-007;
+	  p position = 0.000102998,-2,0.0374489,0x472d5cd4;
+	}
+}
+[t:door_csl_dungeon_right_04,n:0x05b0035c]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E9;
+	  x second_door = 0x05B00185;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.55754e-007;
+	  p position = 0.00338173,-2,0.0301094,0x472d5cd4;
+	}
+}
+[t:door_csl_dungeon_04,n:0x05b00184]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B0035D;
+	}
+	[placement]
+	{
+	  q orientation = 0,-6.85453e-007,0,1;
+	  p position = -0.00386811,-2,-0.104059,0xb35eae12;
+	}
+}
+[t:door_csl_dungeon_right_04,n:0x05b0035d]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E8;
+	  x second_door = 0x05B00184;
+	}
+	[placement]
+	{
+	  p position = -0.00976944,-2,-0.100885,0xb35eae12;
+	}
+}
+[t:rack_csl_weapons_gen_01_cd_r1,n:0x05b001fd]
+{
+	[placement]
+	{
+	  q orientation = -2.64698e-022,1,-4.37114e-008,-3.55271e-015;
+	  p position = -0.115246,-0.499999,0.863625,0x4474958f;
+	}
+}
+[t:rack_csl_armor_gen_01_cd_r1,n:0x05b00200]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.94236,-2,-1.38952,0xd4f5fe72;
+	}
+}
+[t:door_csl_dungeon_04,n:0x05b0013e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes_global(0xACA90100,1,2,-1,"out:black");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[door_basic]
+	{
+	  x second_door = 0x05B002AC;
+	}
+	[placement]
+	{
+	  p position = -0.998283,-2,0.903311,0x6337d766;
+		use_point_scids = 0x05b002ae,0x05b00291;
+	}
+}
+[t:door_csl_dungeon_right_04,n:0x05b002ac]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E2;
+	  x second_door = 0x05B0013E;
+	}
+	[placement]
+	{
+	  p position = -0.994591,-2,0.903206,0x6337d766;
+		use_point_scids = 0x05b002ae,0x05b00291;
+	}
+}
+[t:door_csl_dungeon_04,n:0x05b00187]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001EB;
+	  x second_door = 0x05B00362;
+	}
+	[placement]
+	{
+	  q orientation = -1.57772e-030,0,-1.0257e-022,1;
+	  p position = -1.99721,-2,1.92045,0x2fff0b12;
+	}
+}
+[t:door_csl_dungeon_right_04,n:0x05b00362]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001EB;
+	  x second_door = 0x05B00187;
+	}
+	[placement]
+	{
+	  p position = 1.99937,-2,1.92392,0x9b77ecaa;
+	}
+}
+[t:door_csl_dungeon_02,n:0x05b00188]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_camera_fade_node(0x38D762B7,1);
+				action* = fade_nodes_global(0xACA90100,1,14,-1,"out:black");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_first_message"), doc("[*converted to one-shot*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B00368;
+	}
+	[placement]
+	{
+	  q orientation = 1.2622e-029,-2.30074e-007,-8.84129e-028,1;
+	  p position = -1.98297,0.400004,1.79995,0x790d3847;
+	}
+}
+[t:door_csl_dungeon_02,n:0x05b0018f]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001F0;
+	}
+	[placement]
+	{
+	  q orientation = -3.34575e-015,-4.60944e-007,-2.66454e-015,1;
+	  p position = -0.0134578,0.399992,-0.261448,0x04fa0967;
+	}
+}
+[t:lever_glb_01,n:0x05b003a0]
+{
+	[on_off_lever]
+	{
+	  b initially_usable = false;
+		off_message = we_req_activate;
+	  x off_scid = 0x05B00399;
+	  x on_scid = 0x05B00399;
+	  f reset_time = 4;
+	  f reset_time_2 = 4;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,0.382684;
+	  p position = 1.47868,-1.16798,-0.234769,0x6be08cc3;
+	}
+}
+[t:door_csl_dungeon_02,n:0x05b00189]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001EF;
+	}
+	[placement]
+	{
+	  q orientation = -2.11758e-022,1,-2.11759e-022,5.37872e-007;
+	  p position = 0.00205188,0.4,0.24395,0xd3f8675c;
+	}
+}
+[t:lever_cav_stone_01,n:0x05b0039e]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x05B00399;
+	  x on_scid = 0x05B00399;
+	  f reset_time = 2;
+	  f reset_time_2 = 2;
+	}
+	[placement]
+	{
+	  q orientation = -0.707107,-8.21863e-007,-1.00099e-006,0.707107;
+	  p position = 1.80272,0,1.30104,0x953beace;
+	}
+}
+[t:door_csl_dungeon_02_use_toggle_01,n:0x05b00196]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001F2;
+	}
+	[placement]
+	{
+	  p position = 0.0104677,0.4,-0.0996246,0xc601f3bf;
+	}
+}
+[t:door_csl_dungeon_02_use_toggle_01,n:0x05b00197]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001F1;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.0340827,0.399998,0.149551,0x3de54adb;
+	}
+}
+[t:door_csl_dungeon_left_03,n:0x05b00203]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001F3;
+	}
+	[placement]
+	{
+	  q orientation = 1.56996e-014,1,-2.18557e-008,-7.58967e-007;
+	  p position = -2.1939,-2,2.98412,0x8da43284;
+	}
+}
+[t:door_csl_dungeon_left_03,n:0x05b00205]
+{
+	[common]
+	{
+		dev_instance_text = "FADE";
+	}
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B00206;
+	}
+	[placement]
+	{
+	  q orientation = -2.18557e-008,1,-1.77636e-015,-8.9407e-008;
+	  p position = 1.1956,-1.95,-0.126432,0x98594b8f;
+	}
+}
+[t:door_csl_dungeon_03,n:0x05b00210]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B00202;
+	}
+	[placement]
+	{
+	  q orientation = 2.18557e-008,-4.47035e-007,5.90957e-015,1;
+	  p position = 1.29405,-1.95,-0.185995,0xba805fd9;
+	}
+}
+[t:door_csl_dungeon_03,n:0x05b0020c]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B00209;
+	}
+	[placement]
+	{
+	  q orientation = 2.18557e-008,1,-4.37114e-008,-5.96046e-008;
+	  p position = -2.09992,-2,2.92347,0x275abda5;
+	}
+}
+[t:door_csl_dungeon_left_03,n:0x05b0021a]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B0021B;
+	}
+	[placement]
+	{
+	  q orientation = 5.75163e-015,1,-2.18557e-008,-2.22525e-007;
+	  p position = -2.19835,-2,2.92898,0x3862efc1;
+	}
+}
+[t:door_csl_dungeon_03,n:0x05b001fb]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001F6;
+	}
+	[placement]
+	{
+	  q orientation = -1.24355e-015,1,-2.18557e-008,1.78814e-007;
+	  p position = -2.10056,-2,2.91945,0x2d917e64;
+	}
+}
+[t:door_csl_dungeon_left_03,n:0x05b00208]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001F7;
+	}
+	[placement]
+	{
+	  q orientation = 1.84313e-014,1,-4.37114e-008,-4.45051e-007;
+	  p position = -2.19257,-2,2.90931,0x0c4f52f1;
+	}
+}
+[t:door_csl_dungeon_left_03,n:0x05b00219]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001F4;
+	}
+	[placement]
+	{
+	  q orientation = 9.65974e-015,1,-2.18557e-008,-4.01339e-007;
+	  p position = -2.20165,-2,2.92173,0x5f203ecb;
+	}
+}
+[t:door_csl_dungeon_03,n:0x05b0020a]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001F9;
+	}
+	[placement]
+	{
+	  q orientation = 2.18557e-008,-3.27826e-007,4.44089e-015,1;
+	  p position = 1.29927,-1.95,-0.118951,0x1cda42a1;
+	}
+}
+[t:door_csl_dungeon_03,n:0x05b0020e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes_global(0xACA90100,1,26,-1,"out:black");
+				action* = fade_nodes_global(0xACA90100,1,30,-1,"out:black");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001FA;
+	}
+	[placement]
+	{
+	  q orientation = 2.18557e-008,-3.27826e-007,4.44089e-015,1;
+	  p position = -2.11858,-2,2.8912,0xb71f978c;
+	}
+}
+[t:door_csl_dungeon_03,n:0x05b00207]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001F5;
+	}
+	[placement]
+	{
+	  q orientation = -1.24356e-015,1,-2.18557e-008,1.78814e-007;
+	  p position = -2.10868,-2,2.89109,0x4797df8d;
+	}
+}
+[t:door_csl_dungeon_left_03,n:0x05b00223]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B0016E;
+	}
+	[placement]
+	{
+	  q orientation = -2.18557e-008,-2.84114e-007,7.09769e-015,1;
+	  p position = -1.2019,-1.95,-0.174446,0x71868275;
+	}
+}
+[t:door_csl_dungeon_left_03,n:0x05b00218]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B0016E;
+	}
+	[placement]
+	{
+	  q orientation = -2.18557e-008,-1.19209e-007,1.06581e-014,1;
+	  p position = -1.94513,-2,2.85872,0x40ea9678;
+	}
+}
+[t:door_csl_dungeon_left_03,n:0x05b00365]
+{
+	[door_basic]
+	{
+	  b can_use = false;
+	  x msg_scid_opening = 0x05B0016E;
+	}
+	[placement]
+	{
+	  q orientation = 7.09769e-015,1,2.18557e-008,2.84114e-007;
+	  p position = -2.15157,-2,2.87075,0x22fb6c5c;
+	}
+}
+[t:door_csl_dungeon_02,n:0x05b00191]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes_global(0xACA90100,1,16,-1,"out:black");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001EE;
+	}
+	[placement]
+	{
+	  q orientation = -3.55271e-015,1,-3.01934e-015,-6.86803e-007;
+	  p position = -0.011498,0.400004,0.260922,0x6e2ecbd0;
+	}
+}
+[t:door_csl_dungeon_02,n:0x05b00192]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001ED;
+	}
+	[placement]
+	{
+	  q orientation = 0,-9.91821e-008,0,1;
+	  p position = 0.000168305,0.400008,-0.248373,0x22830577;
+	}
+}
+[t:door_csl_dungeon_04,n:0x05b00186]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001EA;
+	  x second_door = 0x05B00360;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.49012e-007,0,1;
+	  p position = -0.999798,-2,0.929798,0xb263d513;
+	}
+}
+[t:door_csl_dungeon_right_04,n:0x05b00360]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001EA;
+	  x second_door = 0x05B00186;
+	}
+	[placement]
+	{
+	  q orientation = 0,-9.83477e-007,0,1;
+	  p position = -0.995838,-2,0.927421,0xb263d513;
+	}
+}
+[t:door_csl_dungeon_04,n:0x05b0017e]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E2;
+	  x second_door = 0x05B0035F;
+	}
+	[placement]
+	{
+	  q orientation = 0,1.50442e-007,0,1;
+	  p position = 1.99339,-2,1.88726,0x117c3cfc;
+		use_point_scids = 0x05b002a2,0x05b002ad;
+	}
+}
+[t:door_csl_dungeon_right_04,n:0x05b0035f]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E2;
+	  x second_door = 0x05B0017E;
+	}
+	[placement]
+	{
+	  q orientation = 0,7.46489e-007,0,1;
+	  p position = 1.988,-2,1.88788,0x117c3cfc;
+		use_point_scids = 0x05b002a2,0x05b002ad;
+	}
+}
+[t:rack_csl_weapons_gen_01_cd_r1,n:0x05b001ff]
+{
+	[placement]
+	{
+	  p position = 0.609538,-0.499999,0.761207,0xca7a5bb1;
+	}
+}
+[t:door_csl_dungeon_04,n:0x05b00180]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E3;
+	  x second_door = 0x05B00299;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.00621795,-2,0.081337,0x1f1074df;
+	}
+}
+[t:door_csl_dungeon_right_04,n:0x05b00299]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E3;
+	  x second_door = 0x05B00180;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.00662422,-2,0.0749702,0x1f1074df;
+	}
+}
+[t:door_csl_dungeon_04,n:0x05b00181]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E5;
+	  x second_door = 0x05B0029D;
+	}
+	[placement]
+	{
+	  q orientation = 0,-6.85453e-007,0,1;
+	  p position = 1.99687,-2,1.92535,0xf3ab46f8;
+	}
+}
+[t:door_csl_dungeon_right_04,n:0x05b0029d]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E5;
+	  x second_door = 0x05B00181;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.60479e-007,0,1;
+	  p position = 1.98889,-2,1.92577,0xf3ab46f8;
+	}
+}
+[t:door_csl_dungeon_04,n:0x05b00182]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E6;
+	  x second_door = 0x05B0029E;
+	}
+	[placement]
+	{
+	  q orientation = -3.15544e-029,-1.49012e-007,1.57772e-029,1;
+	  p position = 0.00482177,-2,-0.110027,0x6fa020cd;
+	}
+}
+[t:door_csl_dungeon_right_04,n:0x05b0029e]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E6;
+	  x second_door = 0x05B00182;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.75737e-007,0,1;
+	  p position = -0.00131989,-2,-0.115242,0x6fa020cd;
+	}
+}
+[t:rack_csl_armor_gen_01_cd_r1,n:0x05b00201]
+{
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.49012e-007;
+	  p position = 1.74456,-2,0.874569,0xf24a691e;
+	}
+}
+[t:door_csl_dungeon_04,n:0x05b00183]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E7;
+	  x second_door = 0x05B0035E;
+	}
+	[placement]
+	{
+	  p position = 0.00034332,-2,-0.089241,0xdbd1348b;
+	}
+}
+[t:door_csl_dungeon_right_04,n:0x05b0035e]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E7;
+	  x second_door = 0x05B00183;
+	}
+	[placement]
+	{
+	  q orientation = 0,6.85453e-007,0,1;
+	  p position = -0.00534058,-2,-0.0902214,0xdbd1348b;
+	}
+}
+[t:rack_csl_armor_gen_01_cd_r1,n:0x05b001fc]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = -1.12073,-0.499999,0.344757,0xced52bec;
+	}
+}
+[t:door_csl_dungeon_04,n:0x05b0017f]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E4;
+	  x second_door = 0x05B00298;
+	}
+	[placement]
+	{
+	  p position = -0.00205994,-2,-0.100318,0x6eb08a29;
+	}
+}
+[t:door_csl_dungeon_right_04,n:0x05b00298]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x05B001E4;
+	  x second_door = 0x05B0017F;
+	}
+	[placement]
+	{
+	  p position = -0.000240329,-2,-0.0986876,0x6eb08a29;
+	}
+}
+[t:rack_csl_weapons_gen_01_cd_r1,n:0x05b001fe]
+{
+	[placement]
+	{
+	  q orientation = 1.54543e-008,-0.707107,1.54543e-008,0.707107;
+	  p position = -0.770018,-2,-1.23527,0xe1873d09;
+	}
+}
+[t:respawn_statue,n:0x05b00222]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -0.0183163,-0.5,-0.194112,0x51c1a6ed;
+		use_point_scids = 0x05b0028f;
+	}
+}

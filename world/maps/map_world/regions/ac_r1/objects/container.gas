@@ -1,0 +1,45 @@
+[t:barrel_ice_01_ac_r1,n:0x03800009]
+{
+	[placement]
+	{
+	  q orientation = 0,0.147809,0,0.989016;
+	  p position = -1.05313,2.38419e-006,1.3577,0x73fcf173;
+	}
+}
+[t:barrel_ice_01_ac_r1,n:0x03800019]
+{
+	[placement]
+	{
+	  q orientation = 0,0.743145,0,-0.669131;
+	  p position = -1.50493,4.76837e-007,0.567997,0x73fcf173;
+	}
+}
+[t:barrel_ice_01_ac_r1,n:0x0380001a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.979925,0,-0.199368;
+	  p position = -0.497581,4.76837e-007,0.606338,0x73fcf173;
+	}
+}
+[t:crate_ice_01_ac_r1,n:0x0380001b]
+{
+	[placement]
+	{
+	  q orientation = 0,0.782608,0,0.622515;
+	  p position = -1.22374,4.76837e-007,-0.408599,0x73fcf173;
+	}
+}
+[t:chest_ice_01_ac_r1,n:0x03800008]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.507538,0,0.861629;
+	  p position = -1.36849,-2.38419e-007,-1.33063,0x52c764d1;
+		use_point_scids = 0x038001f4;
+	}
+}

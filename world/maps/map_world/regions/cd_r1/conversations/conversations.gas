@@ -1,0 +1,82 @@
+[conversation_king]
+{
+	[text*]
+	{
+		activate_quest* = quest_find_artifacts;
+		activate_quest* = quest_destroy_gom;
+		sample = s_v_ce_kingkonreid1;
+		screen_text = "We live on borrowed time, so you must listen well and act quickly if we are to survive. Three hundred years ago, our ancestors entombed Commander Gom with the remnants of his Seck army, following their craven surrender to the 10th Legion. Rather than obliterate the remains of their race, our forefathers magically bound them one by one in the Vault of Eternity as a sentence for their savagery against our people. It would appear the magical wards have weakened during Merik's long absence. The Seck that imprisoned me here somehow breached our castle defenses and caught us unaware. Unlike the rest of my retinue, I was spared, but I am sure they were simply holding me for some unspeakable sacrifice. Were it not for your rescue, they would eventually have figured out that I hold this key.\nWithin the bowels of this castle there is a hidden sanctuary known as the Chamber of Stars. If what you say is true, the Seck must be plotting to acquire the Imperial relics concealed therein. They could possibly hold the power to revive their dark lord Gom and the rest of their kin. You should hurry to retrieve the artifacts from the Chamber to safeguard them. If any of them can be of use to you, so much the better. Once the artifacts are secure, I charge you to seek out, and vanquish the remaining Seck before their dark vengeance can be unleashed on the good folk of Ehb... You have become our last bastion of hope. I shall remain here and pray for the deliverance of our kingdom at your hands. May Azunai bless and guard you in your crusade... Heroes of Ehb.";
+		scroll_rate = 2.5;
+		quest_dialog = true;
+	}
+}
+[conversation_king_secondary]
+{
+	[text*]
+	{
+		sample = s_v_ce_kingkonreid2;
+		screen_text = "I shall be well enough in time, but you must look to the rescue of the kingdom!";
+	}
+}
+[conversation_hein]
+{
+	[text*]
+	{
+		choice = shop;
+		order = 0;
+		sample = s_v_cd_hein1;
+		screen_text = "Who's the bigger fool, eh? Me, locked safely behind these bars where the Seck don't care, or you out there with nothing between you and those devils?! 'Afore King Konreid locked me up, the only freedom whats I had was the freedom to starve and sleep in the rain. In here, I've done good for meeself, I 'ave. Made a bit of business trading with the guards and other prisoners, if you get my meaning. Like to take a look at what I got? Might be 'andy!";
+	}
+	[goodbye*]
+	{
+		sample = s_v_cd_hein2;
+	}
+	[text*]
+	{
+		choice = shop;
+		sample = s_v_cd_hein3;
+		screen_text = "Come back for more, 'ave you? Everybody always do. So what's it going to be this time, eh?";
+	}
+}
+[conversation_trufus]
+{
+	[text*]
+	{
+		order = 0;
+		//sample = s_v_greet_male_startled;
+		choice = more;
+		screen_text = "Well, I see the Seck ain't killt everyone at least. We weren't real sure if there was gonna be anyone left when we made our break.";
+	}
+	[text*]
+	{
+		screen_text = "One thing's sure, we wasn't gonna take our chances any longer up there. Them Seck was lookin' at us like we was food.";
+	}
+}
+[conversation_deller]
+{
+	[text*]
+	{
+		order = 0;
+		choice = more;
+		//sample = s_v_greet_male_allochap;
+		screen_text = "Yer not gonna tell anyone we're down here, are ya? If the Seck don't eat us, Swanny probably will.";
+	}
+	[text*]
+	{
+		screen_text = "Old Swanny had it comin'. Serves 'im right to get tortured on 'is own racks. Them Seck musta broke him real quick though. I seen 'im prancin' up the hall with 'is bat in hand, yellin' fer gremals to play cricket wif.";
+	}
+}
+[conversation_mabdug]
+{
+	[text*]
+	{
+		order = 0;
+		choice = more;
+		//sample = s_v_greet_male_howdy;
+		screen_text = "Funny how ya get a lucky break once in a while. If'n that pack o' Seck hadn't broke into Deller's cell from these sewers, we never woulda known this place was down here.";
+	}
+	[text*]
+	{
+		screen_text = "Hein got us the picks and shovels, and gave us a shopping list to bring back if we made it out alive, can you believe that?";
+	}
+}

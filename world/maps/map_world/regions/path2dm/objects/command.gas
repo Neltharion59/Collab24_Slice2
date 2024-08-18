@@ -1,0 +1,441 @@
+[t:cmd_report_gameplay_screen_player,n:0x033003a1]
+{
+	[cmd_report_gameplay_screen_player]
+	{
+		report_name = "1_path2dm";
+	}
+	[placement]
+	{
+	  p position = 2.28345,-1.35,-2.71805,0x9e7aa3ea;
+	}
+}
+[t:cmd_camera_move,n:0x033003b7]
+{
+	[placement]
+	{
+	  q orientation = 0.258819,0,0,0.965926;
+	  p position = -0.0213032,5.29888,0.20962,0x2dc77450;
+	}
+}
+[t:cmd_auto_save,n:0x03300461]
+{
+	[placement]
+	{
+	  p position = 2.08841,-0.991215,-2.92267,0xc420f40e;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x033000fd]
+{
+	[placement]
+	{
+	  p position = -1.71167,-0.049999,-1.4864,0x365cbc00;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x03300107]
+{
+	[placement]
+	{
+	  p position = -2.18105,-0.050001,2.01782,0x365cbc00;
+	}
+}
+[t:cmd_ai_c_move,n:0x0330010b]
+{
+	[cmd_ai_dojob]
+	{
+		jat = jat_patrol;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -3.41245,-0.0499921,0.161243,0x365cbc00;
+	}
+}
+[t:cmd_ai_c_move,n:0x03300114]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.282101,-0.0499959,0.350731,0x365cbc00;
+	}
+}
+[t:cmd_ai_c_move,n:0x03300113]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x0330010B;
+	}
+	[placement]
+	{
+	  p position = 1.25802,-0.049999,-0.400187,0x66d70df5;
+	}
+}
+[t:cmd_ai_c_move,n:0x033002dd]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x03300106;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.33985,0.411116,1.47087,0x66d70df5;
+	}
+}
+[t:cmd_ai_c_move,n:0x033002da]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x03300114;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.62646,0.451552,1.89394,0x00ef10b3;
+	}
+}
+[t:cmd_ai_c_move,n:0x033002de]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x03300113;
+	}
+	[placement]
+	{
+	  p position = 1.43148,0.199238,0.827114,0x00ef10b3;
+	}
+}
+[t:cmd_camera_command,n:0x033000fe]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 8.5;
+	  x next_scid = 0x03300128;
+	}
+	[placement]
+	{
+	  q orientation = 0.217208,0.781522,-0.387592,0.437969;
+	  p position = -3.17525,10.0652,0.538525,0xfe243ca6;
+	}
+}
+[t:cmd_ai_c_move,n:0x03300106]
+{
+	[cmd_ai_dojob]
+	{
+		jat = jat_patrol;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.4411,0,0.209093,0xfe243ca6;
+	}
+}
+[t:cmd_ai_t_move_orient,n:0x0330039c]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x03300118;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.83147,0,0.55557;
+	  p position = -2.10343,3.8147e-006,-0.915298,0xfe243ca6;
+	}
+}
+[t:cmd_ai_c_move,n:0x033000f6]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x033002DA;
+	}
+	[placement]
+	{
+	  p position = 1.22149,-6,-1.11654,0x7d52408d;
+	}
+}
+[t:cmd_ai_c_move,n:0x033000f9]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x033002DD;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.49944,-6,-2.09388,0x7d52408d;
+	}
+}
+[t:cmd_ai_c_move,n:0x03300108]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x033002DE;
+	}
+	[placement]
+	{
+	  p position = -0.10055,-6,-2.61107,0x7d52408d;
+	}
+}
+[t:light_flicker,n:0x03300137]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x9966B405;
+	}
+	[placement]
+	{
+	  p position = -0.0926209,-3.2105,2.62187,0x7d52408d;
+	}
+}
+[t:cmd_camera_command,n:0x033000fb]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0.1;
+	  x next_scid = 0x033000FE;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.387591,-0.437969,0.217208,0.781522;
+	  p position = -3.31956,12.547,-1.5257,0x3cdb1125;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x033000fc]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -2.94702,-1.90735e-006,1.42943,0x3cdb1125;
+	}
+}
+[t:cmd_ai_t_move_orient,n:0x03300119]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x033000FC;
+	  x target1 = 0x03300118;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.10237,0,-0.262934,0x3cdb1125;
+	}
+}
+[t:cmd_alignment_changer,n:0x033003a9]
+{
+	[cmd_dumb_guy]
+	{
+	  b change_alignment = false;
+	  b change_invincibility = true;
+	  b change_life_state = false;
+	  b invincible_spawn = true;
+	  i start_state = 1;
+	  x target_actor = 0x03300118;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0330039C,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.422783,-0.594156,-0.658665,0x906e46b2;
+	}
+}
+[t:cmd_camera_command,n:0x03300050]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 7.5;
+	  x next_scid = 0x033000FB;
+	}
+	[placement]
+	{
+	  q orientation = 0.228222,-0.0344554,0.00808198,0.972966;
+	  p position = 1.17985,6.84384,1.76039,0xb32dbc76;
+	}
+}
+[t:cmd_enter_nis,n:0x033000ed]
+{
+	[cmd_enter_nis]
+	{
+	  x next_scid = 0x03300025;
+	  b select_catalyst = true;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x033002DB,0f,"default","",0), doc("wrangler on");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 2.46476,0,-1.29765,0x311d1268;
+	}
+}
+[t:cmd_party_wrangler,n:0x033002db]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  p position = 3.47909,0,0.0773277,0x311d1268;
+	}
+}
+[t:cmd_camera_command,n:0x0330000c]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0.1;
+	  x next_scid = 0x0330000E;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.112736,0.886651,-0.299148,0.334142;
+	  p position = -1.94602,8.5893,1.3893,0x7952f662;
+	}
+}
+[t:cmd_camera_command,n:0x0330000e]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 7.5;
+	  x next_scid = 0x033002D1;
+	}
+	[placement]
+	{
+	  q orientation = 0.125655,0.870298,-0.288792,0.378671;
+	  p position = 0.00903702,6.81575,0.794224,0x7952f662;
+	}
+}
+[t:cmd_leave_nis,n:0x033000ef]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x033002DB,0f,"default","",0), delay(3.5), doc("wrangler off");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.31366,-1.90735e-006,1.36624,0x79c71287;
+	}
+}
+[t:cmd_camera_command,n:0x03300128]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0.1;
+	  x next_scid = 0x0330012A;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.23557,-0.389949,0.103901,0.884111;
+	  p position = 0.423988,9.39593,1.369,0xb3460e17;
+	}
+}
+[t:cmd_camera_command,n:0x0330012a]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 4;
+	  x next_scid = 0x0330000C;
+	}
+	[placement]
+	{
+	  q orientation = 0.164045,-0.0841307,0.0140433,0.982758;
+	  p position = -0.826347,5.97193,1.88689,0xbe2f7fb7;
+	}
+}
+[t:cmd_camera_command,n:0x03300025]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0.1;
+	  x next_scid = 0x03300050;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.184127,-0.789631,0.284127,0.511716;
+	  p position = 0.878889,20.49,1.85428,0xf31810b8;
+	}
+}
+[t:cmd_stop_party,n:0x03300009]
+{
+	[placement]
+	{
+	  q orientation = 0,0.906308,0,0.422619;
+	  p position = 2.43539,-2.09808e-005,-1.47991,0x8547860b;
+	}
+}
+[t:cmd_camera_command,n:0x033002d1]
+{
+	[cmd_camera_command]
+	{
+	  x next_scid = 0x033000EF;
+	}
+	[placement]
+	{
+	  q orientation = 0.210476,-0.418936,0.10048,0.877551;
+	  p position = -0.698437,8.29675,2.2142,0x2dd0f8eb;
+	}
+}

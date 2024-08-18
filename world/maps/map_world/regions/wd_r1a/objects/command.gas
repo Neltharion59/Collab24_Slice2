@@ -1,0 +1,24 @@
+[t:cmd_puzzle_steam,n:0x0860010c]
+{
+	[cmd_steam_puzzle]
+	{
+	  x goal_scid = 0x0860010B;
+	  x lever1_scid = 0x086000E1;
+	  x lever2_scid = 0x086000DF;
+	  x lever3_scid = 0x086000DE;
+	  x lever4_scid = 0x086000E0;
+	  x steam1_scid = 0x08600108;
+	  x steam2_scid = 0x08600107;
+	  x steam3_scid = 0x08600101;
+	  x steam4_scid = 0x08600103;
+	}
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.671664,-0.449989,2.31713,0xa46bb517;
+	}
+}

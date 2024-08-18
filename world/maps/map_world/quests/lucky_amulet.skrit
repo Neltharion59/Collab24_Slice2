@@ -1,0 +1,46 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  lucky_amulet.skrit
+// Author(s):  Eric Tams
+//
+// Copyright © 2001 Gas Powered Games, Inc.  All rights reserved.
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+//
+//
+// Gives someone a lucky amulet. They also get a little hand bag, and the cutest pair of red FM pumps.
+//
+// $$$ hey Eric fix this, It doesn't make any sense what you are doing here. -ET
+//
+
+RewardQuest$( goid Recipient$ )
+{
+	if( Recipient$.IsValid() ) 
+	{	
+		SiegePos SpawnPos$;
+		
+		if( AIQuery.FindSpotRelativeToSource( Recipient$.Go, 0.66, 1.33, 2.0, Recipient$.Go.Mind.TempPos1 ) )
+	   	{
+	   		SpawnPos$ = Recipient$.Go.Mind.TempPos1;
+	   	} else {
+	   		SpawnPos$ = Recipient$.go.placement.position;
+	   	}
+	
+		// make an amulet
+		GoCloneReq cloneReq$ = MakeGoCloneReq( "amulet_horseshoe" );
+		
+		cloneReq$.StartingPos	= SpawnPos$;
+	    
+		If( Recipient$.Go.Hasmind )
+		{
+			if( AIQuery.FindSpotRelativeToSource( Recipient$.Go, 1, 1.5, 2.0, Recipient$.Go.Mind.TempPos1 ) )
+	   		{
+	   			cloneReq$.StartingPos	= Recipient$.Go.Mind.TempPos1;
+	   		}
+	   	}	
+		cloneReq$.SnapToTerrain = true;
+        GoDb.SCloneGo( cloneReq$ );
+	}
+}

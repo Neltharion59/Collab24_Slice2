@@ -1,0 +1,145 @@
+[t:respawn_statue,n:0x053000df]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -0.056222,3.8147e-006,1.80242,0x8515b2e7;
+		use_point_scids = 0x05300116;
+	}
+}
+[t:body_glb_gobbot_breakable,n:0x0530010e]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -3.36359,-5.72205e-006,2.74374,0x2316cd0f;
+	}
+}
+[t:body_glb_gobbot_breakable,n:0x05300112]
+{
+	[placement]
+	{
+	  q orientation = 0,-1,0,6.51926e-008;
+	  p position = 2.39909,-2.86102e-006,2.72147,0x2316cd0f;
+	}
+}
+[t:body_glb_gobbot_breakable,n:0x05300114]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-5.96046e-008;
+	  p position = 0.60335,-3.8147e-006,2.71524,0x2316cd0f;
+	}
+}
+[t:body_glb_gobbot_breakable,n:0x05300117]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.40215,-5.72205e-006,2.72423,0x2316cd0f;
+	}
+}
+[t:valve_gob_02,n:0x05300008]
+{
+	[common]
+	{
+		dev_instance_text = "ELEVATOR";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1.2;
+	  x off_scid = 0x0510000B;
+	  f on_message_delay = 1.2;
+	  f on_message_delay_2 = 1.2;
+	  x on_scid = 0x0510000B;
+	  x on_scid_2 = 0x0510000B;
+	  f reset_time = 3;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 7.97406,0.200001,-14.6229,0xadca9ceb;
+	}
+}
+[t:body_glb_gobbot_breakable,n:0x0530011b]
+{
+	[placement]
+	{
+	  q orientation = 0,0.731354,0,-0.681998;
+	  p position = 9.23142,0.150005,-14.7258,0xadca9ceb;
+	}
+}
+[t:body_glb_gobbot_breakable,n:0x0530011c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.731355,0,0.681999;
+	  p position = 6.66124,0.149996,-14.7279,0xadca9ceb;
+	}
+}
+[t:body_glb_gobbot_breakable,n:0x05300118]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.719341,0,-0.694659;
+	  p position = -2.80218,-2.86102e-006,-1.34436,0x3b1546d6;
+	}
+}
+[t:body_glb_gobbot_breakable,n:0x0530011e]
+{
+	[placement]
+	{
+	  q orientation = 0,0.71934,0,0.694659;
+	  p position = -2.74418,-6.19888e-006,2.59131,0x3b1546d6;
+	}
+}
+[t:body_glb_gobbot_breakable,n:0x05300124]
+{
+	[placement]
+	{
+	  q orientation = 0,0.71934,0,0.694659;
+	  p position = -2.81371,-5.72205e-006,0.617682,0x3b1546d6;
+	}
+}
+[t:lever_gob_01,n:0x0530000f]
+{
+	[common]
+	{
+		dev_instance_text = "ELEVATOR";
+	}
+	[on_off_lever]
+	{
+	  f on_message_delay = 1.75;
+	  x on_scid = 0x05300011;
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  p position = -3.29933,3.8147e-006,-0.269753,0xfc8d5611;
+	}
+}
+[t:body_glb_gobbot_breakable,n:0x05300121]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.19081,0,-0.981629;
+	  p position = -3.42367,-2.86102e-006,-1.85512,0xfc8d5611;
+	}
+}
+[t:body_glb_gobbot_breakable,n:0x05300122]
+{
+	[placement]
+	{
+	  q orientation = 0,0.342021,0,-0.939695;
+	  p position = 2.95838,-2.86102e-006,1.66963,0xfc8d5611;
+	}
+}
+[t:body_glb_gobbot_breakable,n:0x05300123]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.390733,0,-0.920508;
+	  p position = -3.33135,-3.8147e-006,2.25487,0xfc8d5611;
+	}
+}

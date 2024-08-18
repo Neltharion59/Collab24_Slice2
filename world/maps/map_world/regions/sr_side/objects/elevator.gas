@@ -1,0 +1,519 @@
+[t:elevator_hidden_stairwell_act_deact,n:0x072000c0]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x072000DC,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[elevator_hidden_stairwell_act_deact]
+	{
+	  f duration = 3;
+	  x level1_scid = 0x07200127;
+	  f level2_message_delay = 0;
+	  x level2_scid = 0x0720012A;
+	  f moving2_message_delay = 0;
+	  x moving2_scid = 0x0720012C;
+	  i stair_door_back = 1;
+	  i stair_door_front_bot = 5;
+	  i stair_door_front_top = 3;
+	  i stair_door_side = 4;
+	  x stair_node_1 = 0xD9E2C263;
+	  x stair_node_10 = 0x182DFBDA;
+	  x stair_node_2 = 0x7FE07FAF;
+	  x stair_node_3 = 0x2242D867;
+	  x stair_node_4 = 0x0E502A3C;
+	  x stair_node_5 = 0xB9B16E88;
+	  x stair_node_6 = 0x50D55671;
+	  x stair_node_7 = 0x096CADB2;
+	  x stair_node_8 = 0x69951B74;
+	  x stair_node_9 = 0xECF0BC30;
+	  i stairwell_door10_down = 31;
+	  i stairwell_door10_up = 21;
+	  i stairwell_door1_down = 22;
+	  i stairwell_door1_up = 12;
+	  i stairwell_door2_down = 23;
+	  i stairwell_door2_up = 13;
+	  i stairwell_door3_down = 24;
+	  i stairwell_door3_up = 14;
+	  i stairwell_door4_down = 25;
+	  i stairwell_door4_up = 15;
+	  i stairwell_door5_down = 26;
+	  i stairwell_door5_up = 16;
+	  i stairwell_door6_down = 27;
+	  i stairwell_door6_up = 17;
+	  i stairwell_door7_down = 28;
+	  i stairwell_door7_up = 18;
+	  i stairwell_door8_down = 29;
+	  i stairwell_door8_up = 19;
+	  i stairwell_door9_down = 30;
+	  i stairwell_door9_up = 20;
+	  x stairwell_node = 0x8D6CFD7A;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.5,0.9,0.5;
+	}
+	[placement]
+	{
+	  p position = 0.00209641,2.90953,-6.42564,0x8d6cfd7a;
+	}
+}
+[t:elevator_hidden_stairwell_act_deact,n:0x072000c2]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x072000DD,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[elevator_hidden_stairwell_act_deact]
+	{
+	  f duration = 3;
+	  f level1_message_delay = 0;
+	  x level1_scid = 0x07200128;
+	  f level2_message_delay = 0;
+	  x level2_scid = 0x0720012D;
+	  f moving2_message_delay = 0;
+	  x moving2_scid = 0x0720012E;
+	  i stair_door_back = 1;
+	  i stair_door_front_bot = 5;
+	  i stair_door_front_top = 3;
+	  i stair_door_side = 4;
+	  x stair_node_1 = 0x901FBE69;
+	  x stair_node_10 = 0xD7A7492D;
+	  x stair_node_2 = 0x64C3F444;
+	  x stair_node_3 = 0x3C3170AA;
+	  x stair_node_4 = 0x269A08D3;
+	  x stair_node_5 = 0x5A10D3B6;
+	  x stair_node_6 = 0x12809299;
+	  x stair_node_7 = 0x74DE1957;
+	  x stair_node_8 = 0x1F8A962F;
+	  x stair_node_9 = 0x7EF32289;
+	  i stairwell_door10_down = 31;
+	  i stairwell_door10_up = 21;
+	  i stairwell_door1_down = 22;
+	  i stairwell_door1_up = 12;
+	  i stairwell_door2_down = 23;
+	  i stairwell_door2_up = 13;
+	  i stairwell_door3_down = 24;
+	  i stairwell_door3_up = 14;
+	  i stairwell_door4_down = 25;
+	  i stairwell_door4_up = 15;
+	  i stairwell_door5_down = 26;
+	  i stairwell_door5_up = 16;
+	  i stairwell_door6_down = 27;
+	  i stairwell_door6_up = 17;
+	  i stairwell_door7_down = 28;
+	  i stairwell_door7_up = 18;
+	  i stairwell_door8_down = 29;
+	  i stairwell_door8_up = 19;
+	  i stairwell_door9_down = 30;
+	  i stairwell_door9_up = 20;
+	  x stairwell_node = 0x8F3FCD44;
+	}
+	[placement]
+	{
+	  p position = -0.0461219,-0.35,-3.30483,0x3798188c;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x072000f9]
+{
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 8;
+	  x connect_node = 0xCFD1E394;
+	  f duration = 2;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0xB164E1A7;
+	  x level1_scid = 0x07200138;
+	  x level2_scid = 0x072000F7;
+	}
+	[placement]
+	{
+	  p position = 5.77401,-0.349996,2.93272,0x3798188c;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x072000f1]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+	}
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0x54685E05;
+	  f duration = 0.25;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0x5CC5A697;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x072000F5;
+	  x level2_scid = 0x072000F5;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.9,0.4,0.9;
+	}
+	[placement]
+	{
+	  p position = -0.12677,-4.09237,0.139743,0x5cc5a697;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x048000c4]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+	}
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0x0834D31D;
+	  f duration = 0.25;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0xBD2265E9;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x072000C3;
+	  x level2_scid = 0x072000C3;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.9,0.4,0.9;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.52588e-007;
+	  p position = -0.0205479,2.26738,1.27091,0x9e85f750;
+	}
+}
+[t:elevator_hidden_stairwell_act_deact,n:0x048000ca]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x072000DE,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[elevator_hidden_stairwell_act_deact]
+	{
+	  f duration = 3;
+	  f level1_message_delay = 0;
+	  x level1_scid = 0x07200129;
+	  f level2_message_delay = 0;
+	  x level2_scid = 0x0720012F;
+	  f moving2_message_delay = 0;
+	  x moving2_scid = 0x07200130;
+	  i stair_door_back = 1;
+	  i stair_door_front_bot = 5;
+	  i stair_door_front_top = 3;
+	  i stair_door_side = 4;
+	  x stair_node_1 = 0xF42139C7;
+	  x stair_node_10 = 0x9104527C;
+	  x stair_node_2 = 0x5A9209DF;
+	  x stair_node_3 = 0xAF57FDC9;
+	  x stair_node_4 = 0x34901F19;
+	  x stair_node_5 = 0xA85069D4;
+	  x stair_node_6 = 0x56B236BD;
+	  x stair_node_7 = 0xDD21C316;
+	  x stair_node_8 = 0x3B905E98;
+	  x stair_node_9 = 0xDE6A255D;
+	  i stairwell_door10_down = 31;
+	  i stairwell_door10_up = 21;
+	  i stairwell_door1_down = 22;
+	  i stairwell_door1_up = 12;
+	  i stairwell_door2_down = 23;
+	  i stairwell_door2_up = 13;
+	  i stairwell_door3_down = 24;
+	  i stairwell_door3_up = 14;
+	  i stairwell_door4_down = 25;
+	  i stairwell_door4_up = 15;
+	  i stairwell_door5_down = 26;
+	  i stairwell_door5_up = 16;
+	  i stairwell_door6_down = 27;
+	  i stairwell_door6_up = 17;
+	  i stairwell_door7_down = 28;
+	  i stairwell_door7_up = 18;
+	  i stairwell_door8_down = 29;
+	  i stairwell_door8_up = 19;
+	  i stairwell_door9_down = 30;
+	  i stairwell_door9_up = 20;
+	  x stairwell_node = 0x6EF450C6;
+	}
+	[placement]
+	{
+	  p position = 0.19237,1.89212,-3.36716,0xb73db742;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x072000f8]
+{
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 8;
+	  x connect_node = 0xC2227241;
+	  f duration = 2;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0xB26C3031;
+	  x level1_scid = 0x07200139;
+	  x level2_scid = 0x072000E0;
+	}
+	[placement]
+	{
+	  p position = -5.77901,-0.350007,2.74429,0xb73db742;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x072000f2]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+	}
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0xA75EFFAC;
+	  f duration = 0.25;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0x91B9E0FD;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x072000F6;
+	  x level2_scid = 0x072000F6;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.9,0.4,0.9;
+	}
+	[placement]
+	{
+	  p position = 0.181427,-3.72044,-0.0448256,0x91b9e0fd;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x048000c0]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+	}
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0x040A2A1D;
+	  f duration = 0.25;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0x4C291C5F;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x072000CC;
+	  x level2_scid = 0x072000CC;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-3.05176e-008;
+	  p position = -0.0501745,2.25499,0.82361,0x9c7771bd;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x07200101]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+	}
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0x7344423B;
+	  f duration = 0.25;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0x17D2D0BA;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x07200103;
+	  x level2_scid = 0x07200103;
+	}
+	[placement]
+	{
+	  p position = -0.483009,-3.70319,-0.121598,0x17d2d0ba;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x07200104]
+{
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 8;
+	  x connect_node = 0xFBB4682B;
+	  f duration = 2;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x5965A315;
+	  x level1_scid = 0x0720013A;
+	  x level2_scid = 0x072000DF;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.35878,-0.45,-1.8513,0xd6aa1a5f;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x048000c5]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+	}
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0xED162BE4;
+	  f duration = 0.25;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0xFF94A527;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x072000CC;
+	  x level2_scid = 0x072000CC;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.0317272,2.11785,-1.18471,0x9c7771bd;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x048000c3]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+	}
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0x185ABF1D;
+	  f duration = 0.25;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0x62DFC894;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x072000C3;
+	  x level2_scid = 0x072000C3;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.9,0.4,0.9;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.124384,1.82375,-1.33816,0x9e85f750;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x072000fd]
+{
+	[common]
+	{
+		dev_instance_text = "ELEVATOR";
+	}
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0x5BB2E42E;
+	  f duration = 0.5;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0x42A1732C;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x048000CB;
+	  x level2_scid = 0x048000CB;
+	}
+	[placement]
+	{
+	  p position = -1.14053,2.5364,-0.117774,0xbde5ad1f;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x072000fb]
+{
+	[common]
+	{
+		dev_instance_text = "ELEVATOR";
+	}
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 10;
+	  x connect_node = 0x29A9F496;
+	  f duration = 0.5;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0xDFFA7FF5;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x048000CB;
+	  x level2_scid = 0x048000CB;
+	}
+	[placement]
+	{
+	  p position = 1.27728,2.53641,-0.121471,0xbde5ad1f;
+	}
+}

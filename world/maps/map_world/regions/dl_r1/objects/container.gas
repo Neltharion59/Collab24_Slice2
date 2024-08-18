@@ -1,0 +1,744 @@
+[t:chest_csl_02_dl_r1,n:0x00d0004a]
+{
+	[placement]
+	{
+	  q orientation = -0.0816363,0.933107,-0.0305227,-0.348876;
+	  p position = -1.38796,19.9238,-9.18694,0x4a217ab7;
+	}
+}
+[t:pot_des_clay_05_dl_r1,n:0x00d0005e]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.984863;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.866026,0,0.5;
+	  p position = -14.6954,20.097,-39.3367,0x4a217ab7;
+	}
+}
+[t:pot_des_clay_05_dl_r1,n:0x00d0005f]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.913709;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.34202,0,-0.939693;
+	  p position = -15.5512,22.0931,-38.0854,0x4a217ab7;
+	}
+}
+[t:pot_des_clay_05_dl_r1,n:0x00d0006b]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.97476;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00D00075,0f,"default","",0), doc("wake dragon");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_exploded",0,"on_first_message"), doc("[*converted to one-shot*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.902585,0,-0.430511;
+	  p position = -7.06913,20.0179,-11.2852,0x4a217ab7;
+	}
+}
+[t:pot_des_clay_05_dl_r1,n:0x00d00077]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.11652;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00D00075,0f,"default","",0), doc("wake dragon");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_exploded",0,"on_first_message"), doc("[*converted to one-shot*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.182236,0,0.983255;
+	  p position = -9.02774,19.9684,-14.7053,0x4a217ab7;
+	}
+}
+[t:pot_des_clay_05_dl_r1,n:0x00d00079]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.08678;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00D00075,0f,"default","",0), doc("wake dragon");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_exploded",0,"on_first_message"), doc("[*converted to one-shot*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.333807,0,0.942641;
+	  p position = -6.9291,19.6541,-18.2156,0x4a217ab7;
+	}
+}
+[t:pot_des_clay_05_dl_r1,n:0x00d0007a]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.18077;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00D00075,0f,"default","",0), doc("wake dragon");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_exploded",0,"on_first_message"), doc("[*converted to one-shot*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.991444,0,-0.130526;
+	  p position = -6.35115,19.949,-17.3593,0x4a217ab7;
+	}
+}
+[t:pot_des_clay_05_dl_r1,n:0x00d0007b]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.34537;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00D00075,0f,"default","",0), doc("wake dragon");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_exploded",0,"on_first_message"), doc("[*converted to one-shot*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.147809,0,0.989016;
+	  p position = 0.394645,19.9413,-11.7971,0x4a217ab7;
+	}
+}
+[t:pot_des_clay_05_dl_r1,n:0x00d0007c]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.35533;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.406736,0,-0.913546;
+	  p position = 18.8711,20.5842,-32.682,0x4a217ab7;
+	}
+}
+[t:pot_des_clay_05_dl_r1,n:0x00d0007d]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.20674;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.748957,0,-0.66262;
+	  p position = 21.5722,21.0309,-32.5916,0x4a217ab7;
+	}
+}
+[t:pot_des_clay_05_dl_r1,n:0x00d0007e]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.08272;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.999658,0,0.0261764;
+	  p position = 22.9726,20.7107,-32.2327,0x4a217ab7;
+	}
+}
+[t:pot_des_clay_02_dl_r1,n:0x00d00080]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.31008;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00D00075,0f,"default","",0), doc("wake dragon");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_exploded",0,"on_first_message"), doc("[*converted to one-shot*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.838671,0,0.544639;
+	  p position = 1.1118,19.9698,-14.3834,0x4a217ab7;
+	}
+}
+[t:pot_des_clay_01_dl_r1,n:0x00d0008b]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.972597;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00D00075,0f,"default","",0), doc("wake dragon");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_exploded",0,"on_first_message"), doc("[*converted to one-shot*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.67559,0,0.737277;
+	  p position = 0.535689,19.9914,-15.5764,0x4a217ab7;
+	}
+}
+[t:chest_csl_02_dl_r1,n:0x00d00049]
+{
+	[placement]
+	{
+	  q orientation = 0,0.207911,0,-0.978148;
+	  p position = -6.28455,-4,-21.9606,0x9e9a581f;
+	}
+}
+[t:pot_des_clay_02_dl_r1,n:0x00d00050]
+{
+	[placement]
+	{
+	  q orientation = 0,0.87462,0,-0.48481;
+	  p position = -9.53651,-4,-10.0019,0x9e9a581f;
+	}
+}
+[t:pot_des_clay_02_dl_r1,n:0x00d00052]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.884084;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.66262,0,-0.748956;
+	  p position = -9.7812,-4,-10.8788,0x9e9a581f;
+	}
+}
+[t:pot_des_clay_04_dl_r1,n:0x00d00053]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.21086;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.477159,0,-0.878817;
+	  p position = -8.68108,-4,-10.5685,0x9e9a581f;
+	}
+}
+[t:pot_des_clay_05_dl_r1,n:0x00d00054]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.02196;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.978148,0,-0.207912;
+	  p position = -1.43421,-4,-9.47276,0x9e9a581f;
+	}
+}
+[t:pot_des_clay_03_dl_r1,n:0x00d00055]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.867178;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.891007,0,0.45399;
+	  p position = -2.64035,-3.9592,-18.224,0x9e9a581f;
+	}
+}
+[t:pot_des_clay_03_dl_r1,n:0x00d00056]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.31121;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.587785,0,-0.809017;
+	  p position = -3.71724,-4,-18.4019,0x9e9a581f;
+	}
+}
+[t:pot_des_clay_01_dl_r1,n:0x00d00057]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.23926;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.5,0,-0.866026;
+	  p position = -1.54551,-3.82368,-14.4156,0x9e9a581f;
+	}
+}
+[t:pot_des_clay_01_dl_r1,n:0x00d00058]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.32224;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.700909,0,0.71325;
+	  p position = -18.4747,-4,-17.9042,0x9e9a581f;
+	}
+}
+[t:pot_des_clay_01_dl_r1,n:0x00d00059]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.89291;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.992546,0,-0.12187;
+	  p position = -17.7117,-3.92793,-17.4687,0x9e9a581f;
+	}
+}
+[t:pot_des_clay_05_dl_r1,n:0x00d0005a]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.37231;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.173648,0,0.984808;
+	  p position = -19.3739,-4.07831,-21.1591,0x9e9a581f;
+	}
+}
+[t:pot_des_clay_05_dl_r1,n:0x00d0005b]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.898694;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,-0.92388;
+	  p position = -17.5554,-3.98845,-18.0751,0x9e9a581f;
+	}
+}
+[t:pot_des_clay_04_dl_r1,n:0x00d00093]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.20852;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.945518,0,-0.325568;
+	  p position = -22.2897,-3.93013,-27.8705,0x9e9a581f;
+	}
+}
+[t:pot_des_clay_04_dl_r1,n:0x00d00094]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.33116;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.275637,0,-0.961262;
+	  p position = -22.1944,-3.55744,-29.1719,0x9e9a581f;
+	}
+}
+[t:chest_csl_07_dl_r1,n:0x00d00047]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.515038,0,0.857167;
+	  p position = -2.65076,-3.90169,-17.012,0xec350b8f;
+		use_point_scids = 0x00d00157;
+	}
+}
+[t:chest_csl_07_dl_r1,n:0x00d00048]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -6.54237,-4,-21.6084,0xec350b8f;
+		use_point_scids = 0x00d0015a;
+	}
+}
+[t:chest_csl_05_dl_r1,n:0x00d0004b]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.748956,0,0.66262;
+	  p position = -19.5467,-4.1736,-22.4871,0xec350b8f;
+		use_point_scids = 0x00d0015c;
+	}
+}
+[t:chest_csl_02_dl_r1,n:0x00d0004c]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.995396,0,0.0958456;
+	  p position = -17.7363,-4.02001,-18.5473,0xec350b8f;
+		use_point_scids = 0x00d00183;
+	}
+}
+[t:chest_csl_04_dl_r1,n:0x00d0004f]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.920505,0,0.390731;
+	  p position = -9.79806,-3.88305,-11.0854,0xec350b8f;
+		use_point_scids = 0x00d0015b;
+	}
+}
+[t:pot_des_clay_02_dl_r1,n:0x00d00082]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.42893;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.333807,0,0.942641;
+	  p position = -22.6022,-3.34194,-29.4506,0xec350b8f;
+		use_point_scids = 0x00d00184;
+	}
+}
+[t:pot_des_clay_02_dl_r1,n:0x00d00083]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.21606;
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.989016,0,0.147809;
+	  p position = -1.41177,-3.95475,-12.4232,0xec350b8f;
+		use_point_scids = 0x00d00180;
+	}
+}
+[t:pot_des_clay_02_dl_r1,n:0x00d00084]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.08317;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.147809,0,-0.989016;
+	  p position = -1.51115,-3.9624,-11.3146,0xec350b8f;
+	}
+}
+[t:pot_des_clay_02_dl_r1,n:0x00d00086]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.43227;
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.121869,0,-0.992546;
+	  p position = -5.83426,-3.97928,-20.3363,0xec350b8f;
+		use_point_scids = 0x00d00181;
+	}
+}
+[t:pot_des_clay_01_dl_r1,n:0x00d00087]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.45727;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.104528,0,0.994522;
+	  p position = -1.48829,-3.95111,-13.6416,0xec350b8f;
+	}
+}
+[t:pot_des_clay_01_dl_r1,n:0x00d00088]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.31542;
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.121869,0,-0.992546;
+	  p position = -5.34046,-4,-19.4012,0xec350b8f;
+		use_point_scids = 0x00d00182;
+	}
+}
+[t:pot_des_clay_01_dl_r1,n:0x00d00089]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.944393;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.833886,0,-0.551937;
+	  p position = -4.30597,-4,-18.3834,0xec350b8f;
+	}
+}
+[t:pot_des_clay_01_dl_r1,n:0x00d0008a]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.18598;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.725374,0,-0.688355;
+	  p position = -1.96283,-4,-1.20806,0xec350b8f;
+	}
+}
+[t:pot_des_clay_01_dl_r1,n:0x00d0008c]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.21333;
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.976296,0,-0.21644;
+	  p position = -6.37759,-3.96224,0.437382,0xec350b8f;
+		use_point_scids = 0x00d0017f;
+	}
+}
+[t:pot_des_clay_04_dl_r1,n:0x00d0008d]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.17034;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.587785,0,0.809017;
+	  p position = -6.29954,-4,-2.18527,0xec350b8f;
+	}
+}
+[t:pot_des_clay_04_dl_r1,n:0x00d0008e]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.899396;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.970296,0,0.241922;
+	  p position = -6.6525,-3.97699,1.53976,0xec350b8f;
+	}
+}
+[t:pot_des_clay_04_dl_r1,n:0x00d0008f]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.16994;
+	}
+	[placement]
+	{
+	  p position = -5.66231,-4,-1.35658,0xec350b8f;
+	}
+}
+[t:pot_des_clay_04_dl_r1,n:0x00d00090]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.997628;
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.737277,0,0.67559;
+	  p position = -21.9332,-3.66984,-29.0101,0xec350b8f;
+		use_point_scids = 0x00d00184;
+	}
+}
+[t:pot_des_clay_04_dl_r1,n:0x00d00091]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.856059;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.0697562,0,-0.997564;
+	  p position = -22.207,-3.09031,-30.6405,0xec350b8f;
+		use_point_scids = 0x00d0018d;
+	}
+}
+[t:pot_des_clay_04_dl_r1,n:0x00d00092]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.38323;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.984808,0,-0.173648;
+	  p position = -21.6294,-3.40739,-30.0638,0xec350b8f;
+		use_point_scids = 0x00d00184;
+	}
+}
+[t:chest_csl_07_dl_r1,n:0x00d0014f]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.743144,0,0.66913;
+	  p position = -1.85686,-4,1.09083,0xec350b8f;
+		use_point_scids = 0x00d00143;
+	}
+}

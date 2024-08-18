@@ -1,0 +1,143 @@
+[t:emt_go,n:0x081000ef]
+{
+	[go_emitter]
+	{
+	  i count = 3;
+	  f lvz = 12;
+		model = "chunks_ice_01";
+		model3 = "chunks_ice_03";
+		model4 = "chunks_ice_04";
+	  f random_delay = 4;
+	}
+	[placement]
+	{
+	  q orientation = -0.5,-0.5,-0.5,0.5;
+	  p position = 0.3312,16.4617,-1.1284,0xe1c47246;
+	}
+}
+[t:emt_go,n:0x081001ac]
+{
+	[go_emitter]
+	{
+	  i count = 2;
+	  f lvz = 18;
+		model = "chunks_ice_01";
+		model3 = "chunks_ice_03";
+		model4 = "chunks_ice_04";
+	  f random_delay = 4;
+	}
+	[placement]
+	{
+	  q orientation = -0.5,-0.5,-0.5,0.5;
+	  p position = -1.65276,16.3793,1.98787,0xe1c47246;
+	}
+}
+[t:emt_go,n:0x081001b1]
+{
+	[go_emitter]
+	{
+	  i count = 2;
+	  f lvz = 18;
+		model = "chunks_ice_01";
+		model3 = "chunks_ice_03";
+		model4 = "chunks_ice_04";
+	  f random_delay = 4;
+	}
+	[placement]
+	{
+	  q orientation = -0.5,-0.5,-0.5,0.5;
+	  p position = 5.23846,6.37596,0.76038,0xe1c47246;
+	}
+}
+[t:emt_generic_act,n:0x081001ff]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "ice_bridge_dust";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,3.4523e-007;
+	  p position = 0.0728226,0.4,0.0460968,0x6f1a75cd;
+	}
+}
+[t:emt_generic_act,n:0x08100200]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "ice_bridge_dust";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,3.4523e-007;
+	  p position = 0.00820925,0.4,0.0630341,0x8d98de94;
+	}
+}
+[t:emt_generic_act,n:0x081001fd]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "ice_bridge_dust";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,3.4523e-007;
+	  p position = 0.0121307,0.4,0.0482216,0xd23064fd;
+	}
+}
+[t:emt_generic_act,n:0x081001fe]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "ice_bridge_dust";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,3.4523e-007;
+	  p position = -0.0898647,0.4,0.017601,0x08e0c6f3;
+	}
+}
+[t:emt_generic_act,n:0x081001fb]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "ice_bridge_dust";
+	}
+	[placement]
+	{
+	  p position = -0.0161972,0.4,0.0566063,0x1a4dc9bd;
+	}
+}
+[t:emt_generic_act,n:0x081001fc]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "ice_bridge_dust";
+	}
+	[placement]
+	{
+	  p position = -0.144623,0.4,0.0826226,0xfa871d2a;
+	}
+}
+[t:emt_generic_act,n:0x081001f9]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "ice_bridge_dust";
+	}
+	[placement]
+	{
+	  p position = -0.0540428,0.4,0.0552807,0x9e21472d;
+	}
+}
+[t:emt_generic_act,n:0x081001fa]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "ice_bridge_dust";
+	}
+	[placement]
+	{
+	  p position = -0.17918,0.4,0.0579625,0xd01005d3;
+	}
+}

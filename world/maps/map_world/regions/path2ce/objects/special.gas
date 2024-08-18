@@ -1,0 +1,143 @@
+[t:trigger_generic,n:0x07700149]
+{
+	[common]
+	{
+		dev_instance_text = "FADE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0xCB9E5310,1,-1,-1,"out:black"), doc("ce_r1a fadeout");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.458332,-11.1326,-8.74651,0x3b1a871a;
+	}
+}
+[t:trigger_generic,n:0x07700147]
+{
+	[common]
+	{
+		dev_instance_text = "FADE   OVERLAPPING NODES";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0xAAA90100,1,2,-1,"out:black"), doc("ce_r1 nodes out");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,0.500000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.59582,0,-0.215993,0xfb9cbe95;
+	}
+}
+[t:trigger_generic,n:0x07700148]
+{
+	[common]
+	{
+		dev_instance_text = "FADE   OVERLAPPING NODES";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0xAAA90100,1,2,-1,"in"), doc("ce_r1 nodes out");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,0.500000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.243611,0,0.766666,0xe2d19397;
+	}
+}
+[t:trigger_generic,n:0x07700146]
+{
+	[common]
+	{
+		dev_instance_text = "FADE   OVERLAPPING NODES";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0xA3370300,1,1,-1,"in"), doc("path2ce nodes in");
+				action* = fade_nodes(0xAAA90100,1,2,-1,"out:black"), doc("ce_r1 nodes out");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,1.000000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.228531,-5.89269,1.0823,0x624bfe50;
+	}
+}
+[t:trigger_generic,n:0x0770014a]
+{
+	[common]
+	{
+		dev_instance_text = "FADE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0xCB9E5310,1,-1,-1,"out:black"), doc("ce_r1a fadeout");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.057601,-5.95,3.66236,0x624bfe50;
+	}
+}

@@ -1,0 +1,391 @@
+[conversation_narrator]
+{
+	[text*]
+	{
+		sample = s_v_chapter_5;
+		nis = true;
+		screen_text = "With Gresh died the greatest threat to Fortress Kroth, but the grave danger of a resurgence of this manner of ancient evil weighed heavily on our hero's mind.";
+		scroll_rate = 2.5;
+	}
+}
+[conversation_beuwel]
+{
+	[text*]
+	{
+		order = 0;
+		choice = shop;
+		sample = s_v_cf_beuwel1;
+		screen_text = "Look, I'm fairly new here, all right? My brilliant predecessor, the Quartermaster, got himself skulled by picking a fight with Seck commander Gresh. I bloody well don't even know what's in half of our stores! You want something, you point at it, and I'll give you a price.";
+	}
+	[goodbye*]
+	{
+		sample = s_v_cf_beuwel2;
+	}
+	[text*]
+	{
+		choice = shop;
+		sample = s_v_cf_beuwel3;
+		screen_text = "You know the drill. Just let me know when you've found something you want.";
+	}
+}
+[conversation_magus_player_healthy]
+{
+	[text*]
+	{
+		order = 0;
+		choice = shop;
+		sample = s_v_cf_jardaranz1;
+		screen_text = "Do you know how many people here are merely an eye blink from death's gate? What can you possibly want that's more important than healing the critically injured?";
+	}
+	[text*]
+	{
+		choice = shop;
+		sample = s_v_cf_jardaranz4;
+		screen_text = "Take a look at what I have, but be quick about it. I have injured men to attend to.";
+	}
+	[goodbye*]
+	{
+		sample = s_v_cf_jardaranz3;
+	}
+
+}
+[conversation_magus_player_hurt]
+{
+	[text*]
+	{
+		order = 0;
+		choice = shop;
+		sample = s_v_cf_jardaranz2;
+		screen_text = "Someone's knocked you about, haven't they? I can patch up your injuries if you don't object to a little field magic. Or I can sell you a potion or two if you'd like to handle things yourself. It's your choice, but be quick about it. Lots of others await my services.";
+	}
+	[text*]
+	{
+		choice = shop;
+		sample = s_v_cf_jardaranz4;
+		screen_text = "Take a look at what I have, but be quick about it. I have injured men to attend to.";
+	}
+	[goodbye*]
+	{
+		sample = s_v_cf_jardaranz3;
+	}
+}
+[conversation_tarish]
+{
+	[text*]
+	{
+		order = 0;
+		activate_quest* = quest_subdue_village;
+		sample = s_v_cf_tarish1;
+		screen_text = "One hundred eighty-two men dead...all because some fool couldn't be bothered to follow orders. A scout spotted Seck in the woods weeks ago, but didn't report it for fear the other men would ridicule him for seeing ghosts. But what else do you call creatures three centuries dead, eh? I'll tell you this though, those Droog helping the Seck aren't phantoms. If we subdue their village we'll have this battle half won.";
+		scroll_rate = 7;
+		quest_dialog = true;
+       	button_1_text = "More";
+       	button_1_value = talked_to_tarish;
+	}
+	[goodbye*]
+	{
+		sample = s_v_cf_tarish2;
+	}
+}
+[conversation_tarish_2]
+{
+	[text*]
+	{
+		sample = s_v_cf_tarish3;
+		screen_text = "We've still got that Droog village causing problems, but you're welcome to take a crack at it!";
+	}
+	[goodbye*]
+	{
+		sample = s_v_cf_tarish2;
+	}
+}
+[conversation_boryev_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_cf_boryev1;
+		screen_text = "Zhese fools do not know a friend when zhey see him! I turn my spells against zhe Seck, but zhese legionnaires do not trust me because I am traveler, outsider! I know zhey haf my cousin Sikra inside. I must know she is well. Perhaps if I come with you, they shall let me in, eh? I shall be sorcerer for you cheap. Zhat goot?";
+	}
+}
+[conversation_boryev_accept_no_money]
+{
+	[text*]
+	{
+		sample = s_v_cf_boryev2;
+		screen_text = "Zhe guards are watching. Zhey will expect to see an exchange of money, else zhey will not believe you truly hire Boryev. When you have enough money, we try again.";
+	}
+}
+[conversation_boryev_accept_have_money]
+{
+	[text*]
+	{
+		sample = s_v_cf_boryev3;
+		screen_text = "You are good friend to Boryev. I shall not forget. We go into zhe fortress together and see what we shall see!";
+	}
+}
+[conversation_boryev_reject]
+{
+	[text*]
+	{
+		sample = s_v_cf_boryev4;
+		screen_text = "Go then! If you do not trust Boryev, I shall find someone else who needs zhe best sorcerer zhe Travelers hef to offer!";
+	}
+}
+[conversation_boryev_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_cf_boryev5;
+		screen_text = "Perhaps you hef zhought about Boryev's problem? A little gold will buy you an excellent sorcerer, and all you must do in return is walk him through zhe gates of Fortress Kroth.";
+	}
+}
+[conversation_boryev_disband]
+{
+	[text*]
+	{
+		sample = s_v_cf_boryev6;
+		screen_text = "If you are satisfied with our bargain, zhen so is Boryev! You will be well remembered by zhe Travelers of Nong!";
+	}
+}
+[conversation_boryev_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_cf_boryev7;
+		screen_text = "You have need yet of my powers? Let them be at your disposal! I shall do anytink zhat you ask.";
+	}
+}
+[conversation_rhut_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_cf_rhut1;
+		screen_text = "So we've retaken this worthless pile of sticks, what of it, eh? 'Ave any of us seen so much as a gold piece since this mess started? Not bloody likely! I'm sick o' bleeding for spit! Tell you what. You come up with a nice sum, I'll show this dunghill my backside, and Rhut will work for you from now on. What do you think?";
+	}
+}
+[conversation_rhut_accept_no_money]
+{
+	[text*]
+	{
+		sample = s_v_cf_rhut2;
+		screen_text = "I've had enough of people promisin' me money what they don't 'ave! Get lost you buggering snot wad!";
+	}
+}
+[conversation_rhut_accept_have_money]
+{
+	[text*]
+	{
+		sample = s_v_cf_rhut3;
+		screen_text = "I think I'm going to likes workin' for you. Good enough! Rhut's your man!";
+	}
+}
+[conversation_rhut_reject]
+{
+	[text*]
+	{
+		sample = s_v_cf_rhut4;
+		screen_text = "Fine, fine. You bloody do whatever you bloody well want to do while the rest of us slave for the kingdom! I hopes you rot!";
+	}
+}
+[conversation_rhut_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_cf_rhut5;
+		screen_text = "Well, well, if it isn't the independent adventurer come back to visit Rhuttie. You think about what I said before? My price will get you a superb axe-wielding, sword-slinging, death machine, it will.";
+	}
+}
+[conversation_rhut_disband]
+{
+	[text*]
+	{
+		sample = s_v_cf_rhut6;
+		screen_text = "Let's see... keep on marchin' into the reeking maw of death, or go home with all me parts intact? Hmmm. Not a tough choice there, now is it? Not fer anyone who's still got a head on their shoulders! G'day chum!";
+	}
+}
+[conversation_rhut_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_cf_rhut7;
+		screen_text = "What, are you mad? You want Rhut to come with you again? Not unless you've got more gold for me I won't.";
+	}
+}
+[conversation_dhoge_first]
+{
+	[text*]
+	{
+		sample = s_v_cf_dhoge1;
+		screen_text = "You look the decent sort, so I'll level with you. The Seck pilfered everything from Kroth's stores, so we've not got enough grain left for our mules. We'll either have to starve our surplus animals or slaughter them for meat, and I don't want to see either happen. If you can scrape together some gold, I'll let you slip out of here with a strong and fearless Legion mule for next to nothing.";
+		choice = buy_packmule;
+	}
+	[goodbye*]
+	{
+		sample = s_v_cf_dhoge2;
+	}
+}
+[conversation_dhoge_three_packmules]
+{
+	[text*]
+	{
+		sample = s_v_cf_dhoge3;
+		screen_text = "It's good to see you again! I still have a good mule left, which I'd like to save from the Legion's stewpots! For a few gold, she's all yours!";
+		choice = buy_packmule;
+	}
+	[goodbye*]
+	{
+		sample = s_v_cf_dhoge2;
+	}
+}
+[conversation_dhoge_two_packmules]
+{
+	[text*]
+	{
+		sample = s_v_cf_dhoge3;
+		screen_text = "It's good to see you again! I still have a good mule left, which I'd like to save from the Legion's stewpots! For a few gold, she's all yours!";
+		choice = buy_packmule;
+	}
+	[goodbye*]
+	{
+		sample = s_v_cf_dhoge2;
+	}
+}
+[conversation_dhoge_one_packmule]
+{
+	[text*]
+	{
+		sample = s_v_cf_dhoge3;
+		screen_text = "It's good to see you again! I still have a good mule left, which I'd like to save from the Legion's stewpots! For a few gold, she's all yours!";
+		choice = buy_packmule;
+	}
+	[goodbye*]
+	{
+		sample = s_v_cf_dhoge2;
+	}
+}
+[conversation_dhoge_no_packmules]
+{
+	[text*]
+	{
+		sample = s_v_cf_dhoge4;
+		screen_text = "You're a generous sort my friend, but I've sold off all the surplus mules we had on hand. The rest will get the care they deserve, have no fear! Thanks again for your kindness!";
+	}
+}
+[conversation_gresh_no_staff]
+{
+	[text*]
+	{
+		sample = s_v_cf_gresh2;
+		screen_text = "At last, an enemy who doesn't cower behind walls! I thought I'd die of tedium fighting these pathetic Legionnaires. Let us see if your mettle is greater than that of your worthless kin!";
+		scroll_rate = 3.5;
+	}
+}
+[conversation_kroth_guard]
+{
+	[text*]
+	{
+		//sample = s_v_greet_male_howyadoin;
+		screen_text = "You did mighty well out there with that necromancer Gresh. He's been terrorizing the region for days now. Ever since the last battle, he's been walking around calling us out to duel. We'd be crazy to go out there.";
+	}
+}
+[conversation_hs_guard]
+{
+	[text*]
+	{
+		order = 0;
+		//sample = s_v_greet_male_startled;
+		screen_text = "This door leads to the shortest way into the desert; the Hall of Skulls is down there, so watch out. It's some kind of ancient shrine, and the Droog have been holding it for more than a week.";
+		choice = more;
+	}
+	[text*]
+	{
+		screen_text = "A pike man saw the Droog drag a girl in through here during the battle; we sent a regiment after her, but they haven't returned. I'm sure they're all right; it's only Droog down there, after all, but they'd probably be glad of your help, all the same.";
+	}
+}
+[conversation_guard_a]
+{
+	[text*]
+	{
+		//sample = s_v_greet_male_howyadoin;
+		screen_text = "You don't look Legion; are you our reinforcements? Whoever you are, welcome to Fortress Kroth, last bastion to Castle Ehb.";
+	}
+}
+[conversation_guard_b]
+{
+	[text*]
+	{
+		//sample = s_v_greet_dwarf_ahoythere;
+		screen_text = "Go an' check in with Capn' Tarish. He'll be wantin' ta hear whatever news you got fer us.";
+	}
+}
+[conversation_guard_c]
+{
+	[text*]
+	{
+		//sample = s_v_greet_dwarf_heyhowyadoin;
+		screen_text = "Oy was gettin' just aboot tired of hackin' at them skellies oll day long. Maybe they'll stay down fer good with that Krug-kisser Gresh gone.";
+	}
+}
+[conversation_guard_d]
+{
+	[text*]
+	{
+		//sample = s_v_greet_dwarf_surprise;
+		screen_text = "Shhhh! I'm just waitin fer anuther one o' them skellies ta pop outa tha moat like they been doin all day. I just can't tell if I been shootin at the same one wot keeps gettin up, or if there's a big pile of 'em down there.";
+	}
+}
+[conversation_guard_e]
+{
+	[text*]
+	{
+		//sample = s_v_greet_male_hi;
+		screen_text = "If you fought your way through Gresh's army, you should be more than able to get to the Hall of Skulls from here. The Captain sent a detachment down there to look for some woman he thinks is captured, but they were supposed to be back by now.";
+	}
+}
+[conversation_guard_f]
+{
+	[text*]
+	{
+		//sample = s_v_greet_dwarf_surprise;
+		screen_text = "Captain Tarish has us all on alert while the detachment is away at the Hall of Skulls. I am just trying to stay awake with target practice until they come back.";
+	}
+}
+[conversation_guard_g]
+{
+	[text*]
+	{
+		//sample = s_v_greet_dwarf_ahoy;
+		screen_text = "Talk aboot gratitude, sarge takes away me ale when I tell him I seen Seck, and when I finally tell Tarish, he puts me on fire watch fer a week. I shoulda just kept me mouth shut. Still, if Gresh wasn't Seck, I don't know what he was.";
+	}
+}
+[conversation_guard_h]
+{
+	[text*]
+	{
+		//sample = s_v_greet_dwarf_hello;
+		screen_text = "I'm under strict orders ta make sure nobody disturbs the wounded. Make yer business quick with the Magus er I'll have ta ring yer bell.";
+	}
+}
+[conversation_guard_i]
+{
+	[text*]
+	{
+		//sample = s_v_greet_dwarf_ahoy;
+		screen_text = "I don' know if them undead are down fer good, but you done a good thing out there all the same. Maybe this means I can finally get some sleep.";
+	}
+}
+[conversation_guard_j]
+{
+	[text*]
+	{
+		//sample = s_v_greet_male_hailmyfriend;
+		screen_text = "There is nothing as horrible as having to fight the dead remains of our fellow Legionnaires. Thank Azunai you came when you did. I doubt we could have held the fort much more than a day without you.";
+	}
+}
+

@@ -1,0 +1,180 @@
+[t:elevator_2s_1c_2n,n:0x01f0025a]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 4;
+	  x connect_node_level1 = 0x698DD359;
+	  x connect_node_level2 = 0x9D552D75;
+	  f duration = 5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x61914FB3;
+	  x level2_scid = 0x01F003A6;
+		material = "dc_pulley";
+	}
+	[placement]
+	{
+	  p position = -1.67661,-2,0.0674656,0x698dd359;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x01f00227]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 3;
+	  i connect_door_level2 = 4;
+	  x connect_node_level1 = 0x0EF76478;
+	  x connect_node_level2 = 0x575005EC;
+	  f duration = 5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0xF7B2E6DB;
+		material = "dc_pulley";
+	}
+	[placement]
+	{
+	  p position = -1.38783,-1.2,0.970884,0xe4cc10a9;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x01f0024c]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 3;
+	  i connect_door_level2 = 2;
+	  x connect_node_level1 = 0x42E6D985;
+	  x connect_node_level2 = 0xCB071B9B;
+	  f duration = 5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0xE2C46BE6;
+	  x level2_scid = 0x01F0025F;
+		material = "dc_pulley";
+	}
+	[placement]
+	{
+	  p position = -0.072419,-1.5,-0.506851,0xe2c46be6;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x01f00253]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 2;
+	  i connect_door_level2 = 3;
+	  x connect_node_level1 = 0x48FD3779;
+	  x connect_node_level2 = 0x1EEE9E00;
+	  f duration = 5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x178E764F;
+		material = "dc_pulley";
+	}
+	[placement]
+	{
+	  q orientation = 2.69524e-021,-0.707107,2.69526e-021,0.707106;
+	  p position = -1.27083,-0.545126,0.949611,0x1fb78db3;
+	}
+}
+[t:elevator_2s_2c_2n,n:0x01f002f7]
+{
+	[elevator_2s_2c_2n]
+	{
+	  i additional_door_level1 = 3;
+	  i additional_door_level2 = 1;
+	  x additional_node_level1 = 0x4B22654F;
+	  x additional_node_level2 = 0x4B22654F;
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 8;
+	  x connect_node_level1 = 0xBE16B780;
+	  x connect_node_level2 = 0xBE16B780;
+	  f duration = 6;
+	  i elevator_additionaldoor_level1 = 1;
+	  i elevator_additionaldoor_level2 = 1;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0x31D1470C;
+	  f level2_message_delay = 0;
+	  x level2_scid = 0x01F00307;
+		material = "gi_slide";
+	}
+	[placement]
+	{
+	  p position = -0.173473,-7.8,3.08757,0x31d1470c;
+	}
+}
+[t:elevator_2s_2c_2n,n:0x01f002f6]
+{
+	[elevator_2s_2c_2n]
+	{
+	  i additional_door_level1 = 2;
+	  i additional_door_level2 = 1;
+	  x additional_node_level1 = 0xBE16B780;
+	  x additional_node_level2 = 0xBE16B780;
+	  i connect_door_level1 = 3;
+	  i connect_door_level2 = 1;
+	  x connect_node_level1 = 0xEE086BE6;
+	  x connect_node_level2 = 0xEE086BE6;
+	  f duration = 6;
+	  i elevator_additionaldoor_level1 = 1;
+	  i elevator_additionaldoor_level2 = 1;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0x072C4CA9;
+	  f level2_message_delay = 0;
+	  x level2_scid = 0x01F00304;
+		material = "gi_slide";
+	}
+	[placement]
+	{
+	  p position = -0.137656,-7.8,-1.09126,0x072c4ca9;
+	}
+}
+[t:elevator_2s_2c_1n,n:0x01f002f8]
+{
+	[elevator_2s_2c_1n]
+	{
+	  i additional_door_level1 = 6;
+	  i additional_door_level2 = 5;
+	  x additional_node_level1 = 0xBE16B780;
+	  x additional_node_level2 = 0xBE16B780;
+	  i connect_door_level1 = 3;
+	  i connect_door_level2 = 4;
+	  x connect_node = 0xBE16B780;
+	  f duration = 6;
+	  i elevator_additionaldoor_level1 = 1;
+	  i elevator_additionaldoor_level2 = 1;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0x4ECA604D;
+	  f level2_message_delay = 0;
+	  x level2_scid = 0x01F00306;
+		material = "gi_slide";
+	}
+	[placement]
+	{
+	  p position = -0.335654,-7.8,-0.651002,0x4eca604d;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x01f00259]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 9;
+	  i connect_door_level2 = 2;
+	  x connect_node_level1 = 0x7E9B35C7;
+	  x connect_node_level2 = 0x41DB335F;
+	  f duration = 1;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x520E36B5;
+	  x level2_scid = 0x01F00250;
+		material = "dc_pulley";
+	}
+	[placement]
+	{
+	  q orientation = -5.98883e-022,0.707106,-5.99005e-022,0.707107;
+	  p position = 2.24444,-2.00001,-1.73774,0x7e9b35c7;
+	}
+}

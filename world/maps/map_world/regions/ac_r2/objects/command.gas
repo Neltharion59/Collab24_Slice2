@@ -1,0 +1,41 @@
+[t:cmd_ai_c_patrol,n:0x03900028]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x0390000D;
+	}
+	[placement]
+	{
+	  p position = -1.00183,14.4065,1.27971,0xb879d36f;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x0390000d]
+{
+	[placement]
+	{
+	  p position = 2.04136,-6e-006,0.820396,0x7a614910;
+	}
+}
+[t:cmd_report_gameplay_screen_player,n:0x039000ef]
+{
+	[cmd_report_gameplay_screen_player]
+	{
+		report_name = "1_ac_r2";
+	}
+	[placement]
+	{
+	  p position = -0.964491,1.90735e-006,0.367649,0x27bc8177;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x0390000e]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x0390000D;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.784368,1e-006,1.75313,0x05e0808a;
+	}
+}

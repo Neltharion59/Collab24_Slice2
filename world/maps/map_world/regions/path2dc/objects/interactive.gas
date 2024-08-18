@@ -1,0 +1,38 @@
+[t:lever_glb_06,n:0x02900201]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x029001E9;
+	  x on_scid = 0x029001E9;
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  q orientation = -0.707107,0,0,0.707107;
+	  p position = 7.00063,-9.98238,-6.46453,0xf5bae2c0;
+	}
+}
+[t:door_glb_cave_02,n:0x029001eb]
+{
+	[aspect]
+	{
+	  b dynamically_lit = false;
+	}
+	[common]
+	{
+	  b is_single_player = false;
+	}
+	[placement]
+	{
+	  p position = -0.0965443,-6,2.18481,0x4157ae4a;
+	}
+}
+[t:respawn_statue,n:0x029000fb]
+{
+	[placement]
+	{
+	  q orientation = 0,0.130526,0,0.991445;
+	  p position = -0.586842,-1.90735e-006,-0.425078,0x1ea54b3e;
+	}
+}

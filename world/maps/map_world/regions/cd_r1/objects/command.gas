@@ -1,0 +1,649 @@
+[t:cmd_report_gameplay_screen_player,n:0x05b00220]
+{
+	[cmd_report_gameplay_screen_player]
+	{
+		report_name = "1_cd_r1";
+	}
+	[placement]
+	{
+	  p position = -4.4769,-9.53674e-007,-1.0799,0x71140823;
+	}
+}
+[t:cmd_camera_command,n:0x05b0038e]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x05B003B2;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.112929,0.698031,-0.112929,0.698031;
+	  p position = 2.85512,0.751524,-5.82,0x90a39c2c;
+	}
+}
+[t:cmd_camera_command,n:0x05b002b9]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x05B003B6;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = -0.000476219,0.995441,-0.0952525,-0.00497675;
+	  p position = 1.62369,1.88718,-0.38725,0xa9b6a32e;
+	}
+}
+[t:cmd_stop_party,n:0x05b002b4]
+{
+	[placement]
+	{
+	  p position = -0.151197,0,0.030029,0x790d3847;
+	}
+}
+[t:cmd_camera_command,n:0x05b0039c]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x05B003A3;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = -0.0129222,0.902033,-0.430623,-0.0270684;
+	  p position = -1.90798,7.6417,0.400486,0x790d3847;
+	}
+}
+[t:cmd_camera_command,n:0x05b003b5]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 33.25;
+	  x next_scid = 0x05B002B7;
+	}
+	[placement]
+	{
+	  q orientation = -0.000476219,0.995441,-0.0952525,-0.00497675;
+	  p position = -1.6606,1.88718,-0.398791,0x790d3847;
+	}
+}
+[t:cmd_enter_nis,n:0x05b0039f]
+{
+	[cmd_enter_nis]
+	{
+	  x next_scid = 0x05B0038E;
+	  b select_catalyst = true;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x05B0039D,0f,"default","",0), doc("wrangler on");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[placement]
+	{
+	  p position = -0.311476,-2,-1.19974,0xb133d046;
+	}
+}
+[t:cmd_leave_nis,n:0x05b003a3]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x05B0039D,0f,"default","",0), delay(2.5), doc("wrangler off");
+				action* = fade_nodes_global(0xACA90100,1,14,-1,"out:black"), doc("re-fade roof node to ensure cancelling nis won't bring it back");
+				action* = send_world_message("we_req_deactivate",0x05B003C2,0f,"default","",0), doc("turn off freeze wrangler");
+				action* = send_world_message("we_req_activate",0x05B002CA,0f,"default","every",0), doc("play quest sound");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[placement]
+	{
+	  p position = 1.01203,-2,-1.19802,0xb133d046;
+	}
+}
+[t:cmd_camera_command,n:0x05b003b4]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 33.25;
+	  x next_scid = 0x05B003B5;
+	}
+	[placement]
+	{
+	  q orientation = 0.0510576,0.935361,-0.15133,0.315583;
+	  p position = -0.27368,0.528152,-1.00266,0xb133d046;
+	}
+}
+[t:cmd_camera_command,n:0x05b002b7]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x05B002BC;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = -0.11292,0.850851,-0.204072,-0.470804;
+	  p position = 0.157573,-0.120646,-1.67082,0x3a265adf;
+	}
+}
+[t:cmd_camera_command,n:0x05b002bc]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 4;
+	  x next_scid = 0x05B002B9;
+	}
+	[placement]
+	{
+	  q orientation = -0.188549,0.801667,-0.325225,-0.464767;
+	  p position = -0.603908,-0.288558,-2.22834,0x3a265adf;
+	}
+}
+[t:cmd_party_wrangler,n:0x05b0039d]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  p position = 0.0209975,-2,-0.780587,0x3a265adf;
+	}
+}
+[t:cmd_camera_command,n:0x05b003b2]
+{
+	[cmd_camera_command]
+	{
+	  x next_scid = 0x05B003B3;
+	}
+	[placement]
+	{
+	  q orientation = 0.112933,-0.698031,0.112933,0.69803;
+	  p position = 1.06745,-0.260155,-3.13002,0x3a265adf;
+	}
+}
+[t:cmd_camera_command,n:0x05b003b6]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 29.75;
+	  x next_scid = 0x05B003B7;
+	}
+	[placement]
+	{
+	  q orientation = -0.0312751,0.965115,-0.136398,-0.221295;
+	  p position = 0.310457,0.333327,-0.910002,0x3a265adf;
+	}
+}
+[t:cmd_party_wrangler,n:0x05b003c2]
+{
+	[cmd_party_wrangler]
+	{
+	  b freeze = true;
+	  b neutralize = false;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  p position = -1.39997,-2,-0.790435,0x3a265adf;
+	}
+}
+[t:cmd_move_party,n:0x05b003c4]
+{
+	[cmd_party]
+	{
+	  f aproach_distance_max = 2.5;
+	  f aproach_distance_min = 1;
+	  x facepoint = 0x05B00367;
+	}
+	[placement]
+	{
+	  p position = 0.0250679,-2,-3.06861,0x3a265adf;
+	}
+}
+[t:cmd_camera_command,n:0x05b003b3]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x05B003B4;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.0668934,0.929095,-0.298023,0.208542;
+	  p position = 1.59702,1.88659,1.15038,0x7ea9d962;
+	}
+}
+[t:light_flicker,n:0x05b00092]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x63DED0A2;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.855713,-1.1,-2.3528,0xcd39e489;
+	}
+}
+[t:light_flicker,n:0x05b00093]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0xE43B5589;
+	}
+	[placement]
+	{
+	  p position = 1.39148,-2,-0.082016,0x460612fb;
+	}
+}
+[t:light_flicker,n:0x05b00097]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x1260A45E;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.29238,-1.99999,0.071777,0xaa6691e8;
+	}
+}
+[t:light_enable,n:0x05b00292]
+{
+	[light_enable]
+	{
+	  b initially_active = false;
+	  x siege_light = 0x9233210B;
+	  b use_flare = true;
+	}
+	[placement]
+	{
+	  p position = 1.41314,-2,-0.261449,0x6be08cc3;
+	}
+}
+[t:light_flicker,n:0x05b0008f]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x1EE7B8DC;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.31074,-2,-0.014944,0x9dc84a61;
+	}
+}
+[t:light_flicker,n:0x05b00088]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0xD1E16CAC;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707106;
+	  p position = 1.15658,-2,-0.30619,0x637ba101;
+	}
+}
+[t:light_flicker,n:0x05b00095]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x83A519DA;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.54855,-2,-0.308516,0x33bae711;
+	}
+}
+[t:light_flicker,n:0x05b00294]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.02;
+	  x siege_light = 0x83755332;
+	}
+	[placement]
+	{
+	  p position = -3.66273,0.55,3.23201,0x9ebdcf45;
+	}
+}
+[t:light_flicker,n:0x05b00076]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x235309F9;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.49234,-2,-0.238769,0x193b5cae;
+	}
+}
+[t:cmd_ai_t_move,n:0x05b003c9]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x05B002E3;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[placement]
+	{
+	  p position = -0.258305,0,3.34858,0xc601f3bf;
+	}
+}
+[t:cmd_ai_t_move,n:0x05b003ca]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x05B002E2;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[placement]
+	{
+	  p position = 0.701638,0,-3.73147,0x3de54adb;
+	}
+}
+[t:light_flicker,n:0x05b0009c]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0xBACED025;
+	}
+	[placement]
+	{
+	  p position = 2.39326,-2,-0.236229,0xd205db34;
+	}
+}
+[t:light_flicker,n:0x05b000b5]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0xD3283DFD;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = 1.09447,-2.00001,0.38686,0x06d8a7eb;
+	}
+}
+[t:light_flicker,n:0x05b0009e]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0xCC2FB778;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.06103,-2,0.175675,0xd808982e;
+	}
+}
+[t:light_flicker,n:0x05b00099]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x2A8D7F56;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.03295,-2,0.249786,0x477ae917;
+	}
+}
+[t:cmd_auto_save,n:0x05b0032c]
+{
+	[placement]
+	{
+	  p position = -0.101683,-2,-0.66108,0xbb4cceab;
+	}
+}
+[t:light_flicker,n:0x05b0005b]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x336A43B2;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.36559,-1.00041,0.134003,0xaadb5681;
+	}
+}
+[t:cmd_alignment_changer,n:0x05b00366]
+{
+	[cmd_dumb_guy]
+	{
+	  b change_collide = true;
+	  b change_invincibility = true;
+	  b change_selection = false;
+	  b collide_spawn = false;
+	  b invincible_spawn = true;
+		life_state_spawn = ls_alive_conscious;
+	  i start_state = 1;
+	  x target_actor = 0x05B00367;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.37954,-2,-1.45904,0xaadb5681;
+	}
+}
+[t:cmd_camera_command,n:0x05b003b7]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 29.75;
+	  x next_scid = 0x05B0039C;
+	}
+	[placement]
+	{
+	  q orientation = 0.0726141,0.74749,-0.0828585,0.655073;
+	  p position = 0.429019,0.0369434,-1.3818,0xaadb5681;
+	}
+}
+[t:light_flicker,n:0x05b00057]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x8600C1B7;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.473076,-1.1,-1.24881,0x51838163;
+	}
+}
+[t:light_flicker,n:0x05b00059]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x542270E4;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.46325,-2.00001,-0.250734,0xc255a66c;
+	}
+}
+[t:light_flicker,n:0x05b00066]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x180C1BA7;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.84142,-2.00001,-0.587348,0x9f3fca29;
+	}
+}
+[t:light_flicker,n:0x05b00053]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0xFEDA7C29;
+	}
+	[placement]
+	{
+	  p position = 1.79185,-2,-0.36615,0xb90e60df;
+	}
+}
+[t:light_flicker,n:0x05b0004e]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x640B255B;
+	}
+	[placement]
+	{
+	  p position = 1.92428,-2,-0.41066,0xb93b3ae4;
+	}
+}
+[t:light_flicker,n:0x05b00055]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x49F570E5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.95919,-2,-0.020752,0x0f824ac8;
+	}
+}
+[t:light_flicker,n:0x05b00087]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0xF4C6DF69;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.8154,-2,-0.903401,0xaa03bccd;
+	}
+}

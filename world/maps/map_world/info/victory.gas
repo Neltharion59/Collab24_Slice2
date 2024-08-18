@@ -1,0 +1,11 @@
+[victory]
+{
+	victory_delay = 12.0;
+	[condition*]
+	{
+		name = end_game;
+		screen_name = "Defeat Gom."
+		description = "Gom was just a regular guy who never got any. Let this be a lesson to you.";
+		exclusive = true;
+	}
+}

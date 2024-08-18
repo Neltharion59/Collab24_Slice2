@@ -1,0 +1,84 @@
+[conversation_narrator]
+{
+	[text*]
+	{
+		sample = s_v_chapter_3;
+		nis = true;
+		screen_text = "With the Grand Mage freed from his icy tomb, it was now clear that there was an evil hand behind the forces overwhelming the Kingdom. Our hero went forth seeking clues to the whereabouts of the Warding Staff.";
+		scroll_rate = 3.0.;
+	}
+}
+[conversation_merik_multiplayer]
+{
+	[text*]
+	{
+		activate_quest* = quest_merik_staff_mp;
+		sample = s_v_lc_merik1;
+		screen_text = "I've been suspended for what. . .nearly a month now? Most astonishing! Their powers have grown. I should have been paying closer attention. I should have foreseen this, blast it! The forces behind this violence will be searching for my Warding Staff. That's the magical artifact they're after. Thanks to me, they believe it to have powers it doesn't actually possess, but it could still be a terrible weapon in the wrong hands. It must be recovered!";
+		scroll_rate = 5.2;
+		quest_dialog = true;
+	}
+}
+[conversation_merik_nis]
+{
+	[text*]
+	{
+		choice = potential_member;
+		activate_quest* = quest_merik_staff;
+		sample = s_v_lc_merik1;
+		screen_text = "I've been suspended for what. . .nearly a month now? Most astonishing! Their powers have grown. I should have been paying closer attention. I should have foreseen this, blast it! The forces behind this violence will be searching for my Warding Staff. That's the magical artifact they're after. Thanks to me, they believe it to have powers it doesn't actually possess, but it could still be a terrible weapon in the wrong hands. It must be recovered!";
+		scroll_rate = 3.2;
+		quest_dialog = true;
+	}
+}
+[conversation_merik_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_lc_merik1a;
+		screen_text = "I'm still too weak to search for it myself, but if I lean on you for support, we might be able to find it together. Will you help?";
+	}
+}
+[conversation_merik_accept]
+{
+	[text*]
+	{
+		sample = s_v_lc_merik2;
+		screen_text = "An excellent and wise choice. Now, let's fix this mess I've gotten us into, shall we?";
+	}
+}
+[conversation_merik_reject]
+{
+	[text*]
+	{
+		sample = s_v_lc_merik3;
+		screen_text = "Don't you see what's happening? The very fate of this kingdom hangs in the balance! If you don't have the stomach to help me save our people, I'll have to find someone who does.";
+	}
+}
+[conversation_merik_rejoin]
+{
+	[text*]
+	{
+		sample = s_v_lc_merik4;
+		screen_text = "I'm in no mood to be mocked, if that's why you've come. I'm weak, I'm tired, and everything I've sworn to defend teeters on the brink of the abyss. Will you help me?";
+		choice = potential_member;
+	}
+}
+[conversation_merik_disband]
+{
+	[text*]
+	{
+		sample = s_v_lc_merik5;
+		screen_text = "What?! You've the gall to dismiss the Grand Mage of the 10th Legion, third in line to the throne of the kingdom? I certainly hope you've no ambitions greater than being a mule-dung seller, child, because that's the most you can hope for after today! Off with you!";
+	}
+}
+[conversation_merik_disband_rejoin]
+{
+	[text*]
+	{
+		sample = s_v_lc_merik6;
+		screen_text = "Forgive my earlier outburst. I've many things on my mind and am afraid I've lost most of my social graces over this affair. If you can forgive an intolerable old man's complaints, I could well use your assistance. I expect there are a few things I could do for you as well.";
+		choice = potential_member;
+	}
+}

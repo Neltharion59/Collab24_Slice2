@@ -1,0 +1,255 @@
+[t:emt_go,n:0x04b000ac]
+{
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[go_emitter]
+	{
+	  i count = 2;
+	  f interval = 1;
+		model3 = "chunks_ice_03";
+		model4 = "chunks_ice_04";
+		model5 = "chunks_ice_05";
+	  f random_delay = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0.707107,0,0,0.707107;
+	  p position = 1.88681,17.7308,-0.828445,0x159a9768;
+	}
+}
+[t:emt_go,n:0x04b00088]
+{
+	[go_emitter]
+	{
+	  i count = 9;
+	  f duration = 0.15;
+	  f interval = 0.01;
+		model = "frag_glb_ice_05";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.52588e-008;
+	  p position = -0.200089,0.536839,-1.0634,0xafe6fc7d;
+	}
+}
+[t:emt_go,n:0x04b00090]
+{
+	[go_emitter]
+	{
+	  i count = 10;
+	  f duration = 0.5;
+	  f interval = 0.01;
+		model = "frag_glb_ice_05";
+	}
+	[placement]
+	{
+	  q orientation = 0,1.52588e-008,0,1;
+	  p position = -0.405792,0.61885,0.604255,0xafe6fc7d;
+	}
+}
+[t:emt_go,n:0x04b00091]
+{
+	[go_emitter]
+	{
+	  i count = 9;
+	  f duration = 0.5;
+	  f interval = 0.01;
+		model = "frag_glb_ice_05";
+	}
+	[placement]
+	{
+	  q orientation = -0.270598,-0.653282,-0.270598,0.653281;
+	  p position = -1.29961,0.82101,-0.435135,0xafe6fc7d;
+	}
+}
+[t:emt_go,n:0x04b000a9]
+{
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[go_emitter]
+	{
+	  i count = 2;
+	  f interval = 1;
+		model2 = "chunks_ice_02";
+		model3 = "chunks_ice_03";
+		model4 = "chunks_ice_04";
+	  f random_delay = 6;
+	}
+	[placement]
+	{
+	  q orientation = 0.707107,1.07896e-008,-1.07896e-008,0.707107;
+	  p position = 0.612686,16.1737,5.40665,0xafe6fc7d;
+	}
+}
+[t:emt_go,n:0x04b000ab]
+{
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[go_emitter]
+	{
+	  i count = 2;
+	  f interval = 0.4;
+		model = "chunks_ice_01";
+		model4 = "chunks_ice_04";
+		model5 = "chunks_ice_05";
+	  f random_delay = 4;
+	}
+	[placement]
+	{
+	  q orientation = 0.707107,1.07896e-008,-1.07896e-008,0.707107;
+	  p position = 1.78473,15.3334,-7.8914,0xafe6fc7d;
+	}
+}
+[t:emt_sound_act,n:0x04b001ca]
+{
+	[common]
+	{
+		dev_instance_text = "earthquake sound";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.25974,-4.39851,7.7039,0xafe6fc7d;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_tremor";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x04b001f4]
+{
+	[common]
+	{
+		dev_instance_text = "earthquake sound";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.12653,-2.34511,-3.69732,0xafe6fc7d;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_tremor";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x04b001f5]
+{
+	[common]
+	{
+		dev_instance_text = "earthquake sound";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.52588e-008;
+	  p position = -4.03044,-2.33614,-0.701928,0xafe6fc7d;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_tremor";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_generic_act,n:0x04b001bb]
+{
+	[common]
+	{
+		dev_instance_text = "ICE EXPLOSION (SP)";
+	  b is_multi_player = false;
+	}
+	[generic_emitter_act]
+	{
+	  b maintain_state = false;
+		other_effect = "ice_explosion_merik";
+	  x target = 0x04B00008;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.51013,0.19149,1.46065,0x1dcb0015;
+	}
+}
+[t:emt_generic_act,n:0x04b001bd]
+{
+	[common]
+	{
+		dev_instance_text = "ICE EXPLOSION (MP)";
+	  b is_single_player = false;
+	}
+	[generic_emitter_act]
+	{
+	  b maintain_state = false;
+		other_effect = "ice_explosion_merik";
+	  x target = 0x04B001A6;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.0319,0,1.50882,0x1dcb0015;
+	}
+}
+[t:emt_go,n:0x04b00084]
+{
+	[go_emitter]
+	{
+	  i count = 9;
+	  f duration = 0.5;
+	  f interval = 0.01;
+		model = "frag_glb_ice_05";
+	}
+	[placement]
+	{
+	  q orientation = -0.270598,0.653281,0.270598,0.653282;
+	  p position = 0.779862,5.23684,11.4401,0x249514fb;
+	}
+}
+[t:emt_go,n:0x04b000aa]
+{
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[go_emitter]
+	{
+	  i count = 2;
+		model = "chunks_ice_01";
+		model3 = "chunks_ice_03";
+		model4 = "chunks_ice_04";
+	  f random_delay = 4;
+	}
+	[placement]
+	{
+	  q orientation = 0.707107,0,0,0.707107;
+	  p position = 3.38477,26.9618,0.801102,0x79164ab5;
+	}
+}
+[t:emt_light_ray,n:0x04b001ce]
+{
+	[placement]
+	{
+	  q orientation = -0.0913525,0.149826,0.152901,0.972537;
+	  p position = -3.97192,12.3951,-1.77201,0x733a1766;
+	}
+}

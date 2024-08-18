@@ -1,0 +1,268 @@
+[t:door_gob_metal_02,n:0x06c00059]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.1;
+	}
+	[door_basic]
+	{
+	  x msg_scid_open = 0x06C0034B;
+	  x msg_scid_opening = 0x06C00334;
+	  x second_door = 0x06C00349;
+	}
+	[placement]
+	{
+	  p position = 0.08169,-2,0.062638,0x5deb0934;
+		use_point_scids = 0x06c00179,0x06c00350;
+	}
+}
+[t:door_gob_metal_02_right,n:0x06c00349]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.1;
+	}
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x06C00334;
+	  x second_door = 0x06C00059;
+	}
+	[placement]
+	{
+	  q orientation = 0,5.96046e-008,0,1;
+	  p position = 0.0842743,-2,0.0659904,0x5deb0934;
+		use_point_scids = 0x06c00179,0x06c00350;
+	}
+}
+[t:valve_gob_03,n:0x06c00182]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x06C0006B;
+		on_message = we_req_deactivate;
+	  x on_scid = 0x06C0006B;
+	  x on_scid_2 = 0x06C00183;
+	}
+	[placement]
+	{
+	  p position = 1.06082,2,-1.48351,0x49125a2b;
+	}
+}
+[t:respawn_statue,n:0x06c00310]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.32031,0,-3.1022,0x3db03ace;
+		use_point_scids = 0x06c00327;
+	}
+}
+[t:door_gob_metal_02,n:0x06c0033b]
+{
+	[door_basic]
+	{
+	  x msg_scid_open = 0x06C0034C;
+	  x msg_scid_opening = 0x06C00341;
+	  x second_door = 0x06C00347;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.49012e-008,0,1;
+	  p position = 0.10745,-2,0.00710297,0x7c815b67;
+		use_point_scids = 0x06c00342,0x06c0034f;
+	}
+}
+[t:door_gob_metal_02_right,n:0x06c00347]
+{
+	[door_basic]
+	{
+	  x msg_scid_open = 0x06C0034C;
+	  x msg_scid_opening = 0x06C00341;
+	  x second_door = 0x06C0033B;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.60478e-007,0,1;
+	  p position = 0.112597,-2,0.00858307,0x7c815b67;
+		use_point_scids = 0x06c00342,0x06c0034f;
+	}
+}
+[t:valve_gob_03,n:0x06c00070]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+		off_message_2 = we_req_activate;
+	  x off_scid = 0x06C0032B;
+	  x off_scid_2 = 0x06C0032C;
+		on_message = we_req_deactivate;
+		on_message_2 = we_req_deactivate;
+	  x on_scid = 0x06C0032B;
+	  x on_scid_2 = 0x06C0032C;
+	  f reset_time_2 = 1;
+	}
+	[placement]
+	{
+	  q orientation = 0.707107,0.707107,0,0;
+	  p position = 1.82025,-0.132278,0.981113,0x056a0660;
+		use_point_scids = 0x06c0025f;
+	}
+}
+[t:valve_gob_03,n:0x06c00080]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.2;
+	}
+	[common]
+	{
+		description = "SCRIPTED EVENT";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+		off_message_2 = we_req_activate;
+	  x off_scid = 0x06C0000F;
+	  x off_scid_2 = 0x06C00328;
+		on_message = we_req_deactivate;
+		on_message_2 = we_req_deactivate;
+	  x on_scid = 0x06C0000F;
+	  x on_scid_2 = 0x06C00328;
+	}
+	[placement]
+	{
+	  q orientation = 0.5,0.5,0.5,0.5;
+	  p position = 0.765117,0.367721,1.06071,0x7189817c;
+		use_point_scids = 0x06c00260;
+	}
+}
+[t:lever_glb_05,n:0x06c001ff]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.45;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x06C00004;
+	  x on_scid = 0x06C00004;
+	  f reset_time_2 = 1;
+	}
+	[placement]
+	{
+	  p position = 1.97186,1.99999,-1.26177,0xd4390b1d;
+		use_point_scids = 0x06C00331,0x06C0035E;
+	}
+}
+[t:lever_glb_06,n:0x06c00069]
+{
+	[on_off_lever]
+	{
+	  x on_scid = 0x06C00057;
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = 1.72101,-6e-006,1.49011,0x362e4503;
+	}
+}
+[t:lever_glb_05,n:0x06c001f0]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.45;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x06C00004;
+	  x on_scid = 0x06C00004;
+	  f reset_time_2 = 1;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.91346,0,1.57772,0xda8973e8;
+		use_point_scids = 0x06C0032D,0x06C00331;
+	}
+}
+[t:lever_glb_05,n:0x06c00267]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.45;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x06C00000;
+	  x on_scid = 0x06C00276;
+	  x on_scid_2 = 0x06C00000;
+	  f reset_time = 2;
+	  f reset_time_2 = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.87471,0,3.42002,0xe58c726d;
+		use_point_scids = 0x06C0032E,0x06C0032F;
+	}
+}
+[t:lever_glb_05,n:0x06c00265]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.45;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x06C00000;
+	  x on_scid = 0x06C00000;
+	  f reset_time_2 = 1;
+	}
+	[placement]
+	{
+	  p position = -1.96064,2,-1.00931,0x0930537f;
+		use_point_scids = 0x06C00330,0x06C0032F;
+	}
+}
+[t:door_gob_metal_02,n:0x06c000a8]
+{
+	[door_basic]
+	{
+	  x msg_scid_open = 0x06C0034A;
+	  x msg_scid_opening = 0x06C00337;
+	  x second_door = 0x06C00348;
+	}
+	[placement]
+	{
+	  p position = 0.10202,-2,0.013279,0x42edd7d0;
+		use_point_scids = 0x06c002d4,0x06c00351;
+	}
+}
+[t:door_gob_metal_02_right,n:0x06c00348]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x06C00337;
+	  x second_door = 0x06C000A8;
+	}
+	[placement]
+	{
+	  q orientation = -1.57853e-024,-5.96046e-008,1.47911e-031,1;
+	  p position = 0.105698,-2,0.0169067,0x42edd7d0;
+		use_point_scids = 0x06c002d4,0x06c00351;
+	}
+}

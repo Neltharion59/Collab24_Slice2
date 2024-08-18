@@ -1,0 +1,17 @@
+[t:fountain_csl_health,n:0x04700121]
+{
+	[fountain]
+	{
+	  f heal_amount = 320;
+	  f health_left = 392;
+	  f health_regen = 0.419;
+	  x msg_scid = 0x04700122;
+		msg_type = we_req_deactivate;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.91588,-0.0565174,-0.375626,0x376ab2bc;
+		use_point_scids = 0x0470010c;
+	}
+}

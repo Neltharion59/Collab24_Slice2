@@ -1,0 +1,649 @@
+[t:cmd_report_gameplay_screen_player,n:0x04b001af]
+{
+	[cmd_report_gameplay_screen_player]
+	{
+		report_name = "1_lc_r5";
+	}
+	[placement]
+	{
+	  p position = 1.59374,0,1.23693,0x19fbc3ad;
+	}
+}
+[t:cmd_leave_nis,n:0x04b001ed]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x04B001F6,0f,"default","",0), doc("wrangler off");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.05,1,0.95;
+	}
+	[placement]
+	{
+	  p position = -3.55175,23.7457,1.23648,0x716b2b39;
+	}
+}
+[t:cmd_party_wrangler,n:0x04b001f6]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -3.17824,24,-1.51773,0xfccff604;
+	}
+}
+[t:cmd_camera_command,n:0x04b001ee]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x04B001EF;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = -0.00288397,0.963609,-0.267099,-0.0104045;
+	  p position = 10.6443,15.3924,5.46446,0x03433eb0;
+	}
+}
+[t:cmd_camera_command,n:0x04b001ef]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 10.5;
+	  x next_scid = 0x04B001F0;
+	}
+	[placement]
+	{
+	  q orientation = -0.00236037,0.975754,-0.218605,-0.0105356;
+	  p position = 10.7574,11.1664,3.23474,0x03433eb0;
+	}
+}
+[t:cmd_enter_nis,n:0x04b001ec]
+{
+	[cmd_enter_nis]
+	{
+	  i music_volume = 75;
+	  x next_scid = 0x04B001EE;
+	  b select_catalyst = true;
+	  f widescreen_delay = 2;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x04B001F6,0f,"default","",0), doc("wrangler on");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.05,1,0.95;
+	}
+	[placement]
+	{
+	  p position = 4.57931,12.4005,-0.908981,0x6c00ec92;
+	}
+}
+[t:cmd_alignment_changer,n:0x04b00009]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_good;
+	  b change_collide = true;
+	  b change_invincibility = true;
+	  b collide_spawn = false;
+	  b invincible_spawn = true;
+	  i start_state = 1;
+	  x target_actor = 0x04B00008;
+	}
+	[common]
+	{
+		dev_instance_text = "SP Merik changer";
+	  b is_multi_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[placement]
+	{
+	  p position = -0.796097,-2.76265,-6.17426,0xafe6fc7d;
+	}
+}
+[t:cmd_camera_command,n:0x04b00064]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0.1;
+	  x next_scid = 0x04B00094;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.27085,-0.618442,0.240154,0.697492;
+	  p position = 6.22256,7.1747,-1.1144,0xafe6fc7d;
+	}
+}
+[t:cmd_camera_command,n:0x04b000a7]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0.1;
+	  x next_scid = 0x04B001E8;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.183232,-0.784431,0.273427,0.525673;
+	  p position = 3.87495,4.13886,1.37286,0xafe6fc7d;
+	}
+}
+[t:cmd_alignment_changer,n:0x04b001a5]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_good;
+	  i start_state = 1;
+	  x target_actor = 0x04B001A6;
+	}
+	[common]
+	{
+		dev_instance_text = "MP Merik changer";
+	  b is_single_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0,1;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 3.84621,-2.40232,-6.20023,0xafe6fc7d;
+	}
+}
+[t:cmd_animation_command,n:0x04b001ab]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1836214635;
+	  x client_scid = 0x04B001A6;
+	  b start_fidget = true;
+	}
+	[common]
+	{
+	  b is_single_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0,1;
+	}
+	[placement]
+	{
+	  q orientation = 0,1.52588e-008,0,1;
+	  p position = 1.98956,-3.2395,-6.33913,0xafe6fc7d;
+	}
+}
+[t:cmd_move_party,n:0x04b001b0]
+{
+	[cmd_party]
+	{
+	  f aproach_distance_max = 3;
+	  f aproach_distance_min = 1.5;
+	  x facepoint = 0x04B001B5;
+	}
+	[placement]
+	{
+	  p position = 2.58054,-2.09682,2.54742,0xafe6fc7d;
+	}
+}
+[t:cmd_camera_command,n:0x04b001e6]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x04B001E7;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.0553779,-0.786523,0.0712949,0.610927;
+	  p position = 6.43782,0.90711,2.18046,0xafe6fc7d;
+	}
+}
+[t:cmd_camera_command,n:0x04b001e7]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 13.5;
+	  x next_scid = 0x04B000A6;
+	}
+	[placement]
+	{
+	  q orientation = -0.0937235,0.901281,-0.244978,-0.344811;
+	  p position = 3.85846,2.86308,3.9954,0xafe6fc7d;
+	}
+}
+[t:cmd_camera_command,n:0x04b001e8]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 13.5;
+	  x next_scid = 0x04B000AE;
+	}
+	[placement]
+	{
+	  q orientation = -0.0306468,-0.816488,0.0639541,0.57299;
+	  p position = 4.09473,-0.486997,1.70331,0xafe6fc7d;
+	}
+}
+[t:cmd_camera_command,n:0x04b001f0]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x04B001F1;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.276994,-0.647915,0.274238,0.654427;
+	  p position = 4.07115,5.27449,-0.491955,0xafe6fc7d;
+	}
+}
+[t:cmd_camera_command,n:0x04b001f1]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 6.5;
+	  x next_scid = 0x04B001ED;
+	}
+	[placement]
+	{
+	  q orientation = 0.276994,-0.647915,0.274238,0.654427;
+	  p position = -2.49872,5.27449,-0.590916,0xafe6fc7d;
+	}
+}
+[t:cmd_animation_command,n:0x04b001f3]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1718775674;
+	  x client_scid = 0x04B00008;
+	  b initially_active = true;
+	  x next_scid = 0x04B001C1;
+	  b start_fidget = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SP frozen Merik";
+	  b is_multi_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[placement]
+	{
+	  p position = 0.246551,-3.71375,-7.90892,0xafe6fc7d;
+	}
+}
+[t:cmd_camera_command,n:0x04b00094]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 10.5;
+	  x next_scid = 0x04B001E6;
+	}
+	[placement]
+	{
+	  q orientation = 0.00461616,0.917218,-0.398217,0.0106325;
+	  p position = 3.91825,15.0837,-0.47197,0x6f9ae8b7;
+	}
+}
+[t:cmd_stop_party,n:0x04b001b8]
+{
+	[placement]
+	{
+	  p position = 2.77089,0,-0.94635,0x6f9ae8b7;
+	}
+}
+[t:cmd_ai_c_send_message,n:0x04b001aa]
+{
+	[cmd_send_world_message]
+	{
+		send_message = we_req_talk_begin;
+	  x sendtoscid = 0x04B00008;
+	}
+	[common]
+	{
+	  b is_single_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0,1;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.0174525,0,0.999848;
+	  p position = 3.6581,1.54546,3.98928,0x249514fb;
+	}
+}
+[t:cmd_ai_t_fidget,n:0x04b001c0]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x04B001A6;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0,1;
+	}
+	[placement]
+	{
+	  p position = 1.23749,0,2.18664,0x249514fb;
+	}
+}
+[t:cmd_ai_t_fidget,n:0x04b001c1]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x04B00008;
+	}
+	[common]
+	{
+		dev_instance_text = "SP MERIK FIDGET";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[placement]
+	{
+	  p position = -0.299042,-9.53674e-007,2.38462,0x249514fb;
+	}
+}
+[t:cmd_animation_command,n:0x04b001ea]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1718775674;
+	  x client_scid = 0x04B001A6;
+	  b initially_active = true;
+	  x next_scid = 0x04B001C0;
+	  b start_fidget = true;
+	}
+	[common]
+	{
+		dev_instance_text = "MP frozen Merik";
+	  b is_single_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0,1;
+	}
+	[placement]
+	{
+	  q orientation = 0,1.52588e-008,0,1;
+	  p position = 1.32083,0.382251,3.7704,0x249514fb;
+	}
+}
+[t:cmd_enter_nis,n:0x04b000a2]
+{
+	[cmd_enter_nis]
+	{
+	  x next_scid = 0x04B00064;
+	  b select_catalyst = true;
+	  f widescreen_delay = 0.5;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x04B001CB,0f,"default","",0), doc("wrangler on");
+				action* = send_world_message("we_req_activate",0x04B001B7,0f,"default","every",0), delay(50), doc("post-nis activity");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0.95;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.713251,0,0.700909;
+	  p position = 3.93608,0.69938,1.4225,0x79164ab5;
+	}
+}
+[t:cmd_leave_nis,n:0x04b000ae]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x04B001CB,0f,"default","",0), delay(1), doc("wrangler off");
+				action* = send_world_message("we_req_deactivate",0x04B001A0,0f,"default","",0), doc("turn off party freeze");
+				action* = send_world_message("we_req_activate",0x04B001B7,0f,"default","every",0), delay(3), doc("post-nis activity");
+				action* = send_world_message("we_req_activate",0x04B001A3,0f,"default","every",0), doc("play quest sound");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0.95;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.999962,0,-0.00872705;
+	  p position = 2.3616,1.00604,1.33745,0x79164ab5;
+	}
+}
+[t:cmd_party_wrangler,n:0x04b001a0]
+{
+	[cmd_party_wrangler]
+	{
+	  b freeze = true;
+	  b neutralize = false;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 2.22213,4.76837e-007,0.0157165,0x79164ab5;
+	}
+}
+[t:cmd_party_wrangler,n:0x04b001cb]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0,0;
+	}
+	[placement]
+	{
+	  p position = 3.87635,3.33786e-006,0.0314635,0x79164ab5;
+	}
+}
+[t:camera_quake,n:0x04b00098]
+{
+	[camera_quake]
+	{
+	  f duration = 4;
+	  f magnitude_x = 0.3;
+	  f magnitude_y = 0.4;
+	  f magnitude_z = 0.5;
+	  b self_destruct = true;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[placement]
+	{
+	  p position = 3.41876,2.86102e-006,1.51234,0xb9dd218d;
+	}
+}
+[t:camera_quake,n:0x04b00099]
+{
+	[camera_quake]
+	{
+	  f duration = 3;
+	  f magnitude_x = 0.1;
+	  f magnitude_y = 0.1;
+	  f magnitude_z = 0.3;
+	  b self_destruct = true;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[placement]
+	{
+	  p position = 3.35963,6.67572e-006,2.88735,0xb9dd218d;
+	}
+}
+[t:cmd_camera_command,n:0x04b000a6]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0.1;
+	  x next_scid = 0x04B000A5;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.199804,0.2847,-0.0608005,0.935589;
+	  p position = -3.87146,9.81523,-0.824497,0xb9dd218d;
+	}
+}
+[t:camera_quake,n:0x04b000ad]
+{
+	[camera_quake]
+	{
+	  f duration = 3;
+	  f magnitude_x = 0.2;
+	  f magnitude_y = 0.3;
+	  f magnitude_z = 0.3;
+	  b self_destruct = true;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+	}
+	[placement]
+	{
+	  p position = 3.48354,7.62939e-006,-0.105854,0xb9dd218d;
+	}
+}
+[t:cmd_camera_command,n:0x04b000a5]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 7.5;
+	  x next_scid = 0x04B000A7;
+	}
+	[placement]
+	{
+	  q orientation = 0.199134,0.402701,-0.09022,0.888841;
+	  p position = -1.70438,10.2332,0.976934,0x8452eeb9;
+	}
+}
+[t:cmd_ai_t_move,n:0x04b00085]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x04B00096;
+	}
+	[placement]
+	{
+	  p position = 0.064722,0.926927,-1.1265,0x1ff90a0c;
+	}
+}

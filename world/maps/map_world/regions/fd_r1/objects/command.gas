@@ -1,0 +1,47 @@
+[t:light_flicker,n:0x023000df]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x00004486;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.01618,-1.55,-1.29911,0x79803366;
+	}
+}
+[t:light_flicker,n:0x023000e0]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x0000790C;
+	}
+	[placement]
+	{
+	  p position = 4.29431,-3,-2.85213,0x6276a31c;
+	}
+}
+[t:cmd_report_gameplay_screen_player,n:0x023001a8]
+{
+	[cmd_report_gameplay_screen_player]
+	{
+		report_name = "1_fd_r1";
+	}
+	[placement]
+	{
+	  p position = -0.385621,-8.7,14.9034,0x640a2135;
+	}
+}
+[t:cmd_auto_save,n:0x02300269]
+{
+	[placement]
+	{
+	  p position = -5.93373,-3.00001,-5.20511,0x6276a31c;
+	}
+}

@@ -1,0 +1,22 @@
+[t:elevator_2s_1c_2n,n:0x05b00399]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 7;
+	  x connect_node_level1 = 0x8269225A;
+	  x connect_node_level2 = 0x6ECC8D0E;
+	  f duration = 4;
+	  i elevator_door_level1 = 4;
+	  i elevator_door_level2 = 4;
+	  x elevator_node = 0x322A03C0;
+		material = "fh_grate";
+		moving1_actioninfo = "0xACA90100,1,-1,-1,in,3.2;0xACA90100,2,-1,-1,out:black,1.8";
+		moving2_actioninfo = "0xACA90100,1,-1,-1,out:black;0xACA90100,2,-1,-1,in,2.5";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.10269e-006;
+	  p position = -0.0796832,9.06949,-0.0420915,0x322a03c0;
+	}
+}

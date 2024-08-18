@@ -1,0 +1,26 @@
+[t:respawn_statue,n:0x02300221]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382684;
+	  p position = -0.509361,0,0.285954,0x759e8727;
+		use_point_scids = 0x0230025c;
+	}
+}
+[t:door_glb_cave_03,n:0x0230025f]
+{
+	[aspect]
+	{
+	  b dynamically_lit = false;
+	  f scale_multiplier = 1.3;
+	}
+	[common]
+	{
+	  b is_single_player = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.230309,-11.9,0.423309,0x685093fd;
+	}
+}

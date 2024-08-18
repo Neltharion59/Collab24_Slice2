@@ -1,0 +1,80 @@
+[t:dev_path_point,n:0x06f00036]
+{
+	[dev_path_point]
+	{
+	  x next_scid = 0x06F00037;
+		path_name = "path2sd_a_main_path";
+		point_name = "dup";
+	  f radius = 15;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+
+	}
+	[placement]
+	{
+	  p position = -1.34618,-0.349998,-0.411397,0x13d70cf0;
+	}
+}
+[t:dev_path_point,n:0x06f00038]
+{
+	[dev_path_point]
+	{
+		path_name = "path2sd_a_main_path";
+		point_name = "dup";
+	  f radius = 15;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,1,0;
+
+	}
+	[placement]
+	{
+	  p position = -0.446847,-0.65,0.311814,0x13d70cf0;
+	}
+}
+[t:dev_path_point,n:0x06f00035]
+{
+	[dev_path_point]
+	{
+	  x next_scid = 0x06F00036;
+		path_name = "path2sd_a_main_path";
+	  f radius = 15;
+	}
+
+	[placement]
+	{
+	  p position = 1.30306,-2,0.459251,0xbefe863e;
+	}
+}
+[t:dev_path_point,n:0x06f00037]
+{
+	[dev_path_point]
+	{
+	  x next_scid = 0x06F00038;
+		path_name = "path2sd_a_main_path";
+	  f radius = 15;
+	}
+
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.910105,0,1.34988,0x74e297f5;
+	}
+}
+[t:dev_path_point,n:0x06f00008]
+{
+	[dev_path_point]
+	{
+	  x next_scid = 0x06F00035;
+		path_name = "path2sd_a_main_path";
+	  f radius = 15;
+	}
+
+	[placement]
+	{
+	  p position = 0.0787642,-17.95,-0.0468849,0xebb92580;
+	}
+}

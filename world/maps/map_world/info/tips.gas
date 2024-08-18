@@ -1,0 +1,529 @@
+[world_tips]
+{
+	defeat_tip = tip_filtered_5;
+
+	[t:tip,n:tip_1]
+	{
+		order = 1;
+		style = bullets_4;
+
+		[text_1]
+		{
+			screen_name = "Use your mouse to move and interact with the world. Click objects to interact with them or click on open ground to move.";
+			texture = b_gui_ig_mnu_tip_pointer_norm;
+		}
+		[text_2]
+		{
+			screen_name = "When you place your pointer over an object, a brief description of the object will appear at the bottom of the screen. The default action will also appear there.";
+			texture = b_gui_ig_mnu_tip_pointer_norm;
+		}
+		[text_3]
+		{
+			screen_name = "To change the point of view, move the mouse pointer to the edge of the screen.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_4]
+		{
+			screen_name = "Opening this Adventurer's Handbook pauses Dungeon Siege. When you are ready to continue, click the Resume button. To recall these tips at any time, press <c:0xff00ff00>F12</c>.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+	}
+	
+	[t:tip,n:tip_2]
+	{
+		order = 2;
+		style = bullets_3;
+
+		[text_1]
+		{
+			screen_name = "If your health gets below 1/3, your Character Portrait flashes yellow to warn you.";
+			texture = b_gui_ig_mnu_tip_lowhealth;
+		}
+		[text_2]
+		{
+			screen_name = "You can regain your health and mana quickly by drinking potions, if you have one. To drink, click the Drink Health Potion or Drink Mana Potion button.";
+			texture = b_gui_ig_mnu_tip_button_potions;
+		}
+		[actions]
+		{
+			[flash*]
+			{
+				window = button_health_potions;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds
+			}
+			[flash*]
+			{
+				window = button_mana_potions;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds
+			}
+			[flash*]
+			{
+				window = paused_window;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds
+			}
+		}
+		[text_3]
+		{
+			screen_name = "You can click on the Pause button to pause Dungeon Siege at any time. You can issue orders (such as drinking potions) while Dungeon Siege is paused.";
+			texture = b_gui_ig_mnu_tip_button_pause;
+		}
+	}
+	
+	[t:tip,n:tip_3]
+	{
+		order = 3;
+		style = bullets_4;
+
+		[text_1]
+		{
+			screen_name = "To change the point of view, move the mouse pointer to the edge of the screen.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_2]
+		{
+			screen_name = "Moving the mouse pointer to the left and right edges of the screen controls camera rotation. Moving the pointer to the top and bottom edges of the screen controls camera tilt.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_3]
+		{
+			screen_name = "You can also control the camera angle by pressing the <c:0xff00ff00>arrow keys</c>.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_4]
+		{
+			screen_name = "You can zoom in and out by pressing the <c:0xff00ff00>+ (plus)</c> and <c:0xff00ff00>- (minus)</c> keys, or by rotating the mouse wheel.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+	}
+	
+	[t:tip,n:tip_4]
+	{
+		order = 4;
+		style = bullets_4;
+
+		[text_1]
+		{
+			screen_name = "To open your Inventory (to equip different weapons or spells), click the Inventory button next to your Character Portrait, or press <c:0xff00ff00>I</c>.";
+			texture = b_gui_ig_mnu_tip_button_inv;
+		}
+		[text_2]
+		{
+			screen_name = "Click and drag items to move them between your Equipped Weapons panel and your Inventory panel.";
+			texture = b_gui_ig_mnu_tip_pointer_invitem;
+		}
+		[text_3]
+		{
+			screen_name = "You can also drag spells into your Spell Book to prepare them for casting.";
+			texture = b_gui_ig_mnu_tip_button_spellbook;
+		}
+		[text_4]
+		{
+			screen_name = "To switch between melee weapons, ranged weapons, and spells, click on the appropriate icon on the Weapons Panel (next to your Character Portrait), or press <c:0xff00ff00>Q</c>.";
+			texture = b_gui_ig_mnu_tip_awp;
+		}
+		[actions]
+		{
+			[flash*]
+			{
+				window = awp_button_inventory_1;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds
+			}
+			[flash*]
+			{
+				window = awp_radio_button_character_1_slot_1;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds				
+			}
+			[flash*]
+			{
+				window = awp_radio_button_character_1_slot_2;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds				
+			}
+			[flash*]
+			{
+				window = awp_radio_button_character_1_slot_3;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds				
+			}
+			[flash*]
+			{
+				window = awp_radio_button_character_1_slot_4;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds				
+			}
+		}
+	}
+	
+	[t:tip,n:tip_5]
+	{
+		order = 5;
+		style = bullets_1;
+
+		[text_1]
+		{
+			screen_name = "Consider saving your progress periodically. To save, click on the Game Menu button, and then select Save Game.";
+			texture = b_gui_ig_mnu_tip_button_options;
+		}
+		[actions]
+		{
+			[flash*]
+			{
+				window = button_menu;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds
+			}
+		}
+	}
+	
+	[t:tip,n:tip_6]
+	{
+		order = 6;
+		style = bullets_4;
+
+		[text_1]
+		{
+			screen_name = "To view an overhead map of your surroundings, click the Megamap button.";
+			texture = b_gui_ig_mnu_tip_button_map;
+		}		
+		[text_2]
+		{
+			screen_name = "Use the point of view controls (<c:0xff00ff00>arrow keys</c>, <c:0xff00ff00>+</c>, and <c:0xff00ff00>-</c>) to rotate or zoom the Megamap.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_3]
+		{
+			screen_name = "You can issue commands (move, attack, etc.) from the map.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_4]
+		{
+			screen_name = "The compass is a useful tool for navigation, especially if you want to wander off the path.";
+			texture = b_gui_ig_mnu_tip_compass;
+		}
+		[actions]
+		{
+
+			[flash*]
+			{
+				window = button_mega_map;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds
+			}
+		}
+	}
+
+	[t:tip,n:tip_7]
+	{
+		order = 7;
+		style = bullets_4;
+
+		[text_1]
+		{
+			screen_name = "To converse with a person, left-click on him or her.";
+			texture = b_gui_ig_mnu_tip_pointer_talk;
+		}
+		[text_2]
+		{
+			screen_name = "Often you will encounter people that need assistance. Any quests they give you are noted in your Journal.";
+			texture = b_gui_ig_mnu_tip_button_questlog;
+		}
+		[actions]
+		{
+			[flash*]
+			{
+				window = window_quest_indicator;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds
+			}
+		}
+
+		[text_3]
+		{
+			screen_name = "To view your Journal at any time, click on the Journal button.";
+			texture = b_gui_ig_mnu_tip_button_questlog;
+		}
+		[text_4]
+		{
+			screen_name = "When the Journal button flashes, a quest has been updated.";
+			texture = b_gui_ig_mnu_tip_button_questlog;
+		}
+	}
+	
+	[t:tip,n:tip_8]
+	{
+		order = 8;
+		style = bullets_4;
+
+		[text_1]
+		{
+			screen_name = "To select a single party member, click on his or her portrait on the left. A green border indicates the currently selected member(s).";
+			texture = b_gui_ig_mnu_tip_portrait;
+		}		
+		[text_2]
+		{
+			screen_name = "To select your entire party, drag a square around them or click the Select Party button.";
+			texture = b_gui_ig_mnu_tip_button_selectall;
+		}
+		[actions]
+		{
+			[flash*]
+			{
+				window = awp_itemslot_portrait_1;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds
+			}
+			[flash*]
+			{
+				window = button_selectall;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds
+			}
+		}
+		[text_3]
+		{
+			screen_name = "To open multiple Inventories (for easier equipment exchange), hold down the <c:0xff00ff00>Ctrl</c> key, select the desired party members, and then press the Inventory button (<c:0xff00ff00>I</c>).";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_4]
+		{
+			screen_name = "To issue formation commands to your party, point to open ground, then press and hold the right mouse button.";
+			texture = b_gui_ig_mnu_tip_pointer_formation;
+		}
+	}
+	
+	[t:tip,n:tip_9]
+	{
+		order = 9;
+		style = bullets_4;
+
+		[text_1]
+		{
+			screen_name = "Some formations are better suited for different situations. You might need a small, tight formation to maneuver through narrow passages.";
+			texture = b_gui_ig_mnu_tip_pointer_formation;
+		}
+		[text_2]
+		{
+			screen_name = "To cycle through different formations, press and hold the right mouse button, and then left-click.";
+			texture = b_gui_ig_mnu_tip_button_formtypes;
+		}
+		[text_3]
+		{
+			screen_name = "To adjust formation spacing, press and hold the right mouse button, and then rotate the mouse wheel.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_4]
+		{
+			screen_name = "To adjust the formation orientation, press and hold the right mouse button, and then move the mouse left or right.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+	}
+	
+	[t:tip,n:tip_10]
+	{
+		order = 10;
+		style = bullets_1;
+
+		[text_1]
+		{
+			screen_name = "Further information about stats, skills, combat, and spells can be found in this Handbook. Although this Handbook will no longer pop-up with reminders and tips, you can open the Handbook at any time by pressing <c:0xff00ff00>F12</c>.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+	}
+
+	[t:tip,n:tip_11]
+	{
+		order = 11;
+		style = bullets_4;
+
+		[text_1]
+		{
+			screen_name = "As you use weapons and spells, your skills increase. You can track your experience on the Character Panel in the Inventory.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_2]
+		{ 
+			screen_name = "Your stats (Str, Dex, and Int) will increase depending on what skill you use. Although each skill (Melee, Ranged, or Magic) increases one stat more than the other two, all of your stats will increase as you use any skill.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_3]
+		{			
+			screen_name = "Melee skill increases your Strength at the fastest rate, while Ranged skill increases Dexterity. Nature and Combat magic skills both increase your Intelligence faster than Strength or Dexterity.";
+			texture = b_gui_ig_mnu_tip_default;
+		}			
+		[text_4]
+		{
+			screen_name = "As you achieve the next level in a skill, your health and mana are fully recharged.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+	}
+	
+	[t:tip,n:tip_12]
+	{
+		order = 12;
+		style = bullets_3;
+		
+		[text_1]
+		{
+			screen_name = "Strength is most important for a fighter. Heavy weapons and armor require strong heroes to wield them. Strength determines how much health you have and increases melee damage.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_2]
+		{
+			screen_name = "Dexterity is most important for an archer. Powerful bows require nimble heroes to wield them. It increases accuracy with ranged weapons, assists in hitting with melee weapons, and adds a bonus to your Armor Rating.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_3]
+		{
+			screen_name = "Intelligence is most important for a mage. Only the very intelligent will be able to expertly use arcane equipment and mighty spells. Intelligence is important for determining the current level of mana.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+	}
+	
+	[t:tip,n:tip_13]
+	{
+		order = 13;
+		style = bullets_3;
+		
+		[text_1]
+		{
+			screen_name = "Armor can deflect potential damage. Every time you or an adversary is hit, some of the potential damage is blocked by the available armor (be it a scaly hide or a suit of mail).";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_2]
+		{
+			screen_name = "For example, if you wield a low damage weapon (like a dagger) and your adversary is wearing armor (like chain mail), you will not be able to inflict very much damage.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_3]
+		{
+			screen_name = "If you have a higher damage weapon (like a double-bladed battle axe), you can be sure that your weapon will penetrate all but the sturdiest armor.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+	}
+	
+	[t:tip,n:tip_14]
+	{
+		order = 14;
+		style = bullets_2;
+		
+		[text_1]
+		{
+			screen_name = "As you use spells, your Nature or Combat magic skills will increase along with your statistics, particularly Intelligence; the more Intelligent you are, the larger your reserve of mana.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+		[text_2]
+		{	
+			screen_name = "Most spells require a certain level of magic skill to cast them. As you cast spells and your magic skill increases, spells will become more powerful.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+	}
+
+	[t:filtered_tip,n:tip_filtered_1]
+	{
+		style = bullets_2;
+
+		[text_1]
+		{
+			screen_name = "Many objects, such as barrels and crates, contain valuable items. Click on a barrel or crate to break it open.";
+			texture = b_gui_ig_mnu_tip_pointer_bust;
+		}
+		[text_2]
+		{
+			screen_name = "You can also click doors and levers to move them as well.";
+			texture = b_gui_ig_mnu_tip_pointer_use;
+		}
+	}
+
+	[t:filtered_tip,n:tip_filtered_2]
+	{
+		style = bullets_2;
+
+		[text_1]
+		{
+			screen_name = "To pick up an item on the ground (such as the Fireshot spell you just walked past), simply left-click it.";
+			texture = b_gui_ig_mnu_tip_pointer_pickup;
+		}
+		[text_2]
+		{
+			screen_name = "You can quickly gather up multiple items around you by pressing the Collect Items button.";
+			texture = b_gui_ig_mnu_tip_button_loot;
+		}
+		[actions]
+		{
+			[flash*]
+			{
+				window = button_collect_loot;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds
+			}
+		}
+	}
+
+	[t:filtered_tip,n:tip_filtered_3]
+	{
+		style = bullets_1;
+
+		[text_1]
+		{
+			screen_name = "Some buildings have more than one story. Be sure to look for stairs or lifts whenever you enter a building.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+	}
+
+	[t:filtered_tip,n:tip_filtered_4]
+	{
+		style = bullets_1;
+
+		[text_1]
+		{
+			screen_name = "Be sure to explore any buildings that you encounter. You can often find important people or items inside.";
+			texture = b_gui_ig_mnu_tip_default;
+		}
+	}
+	
+	[t:filtered_tip,n:tip_filtered_5]
+	{
+		style = bullets_4;
+
+		[text_1]
+		{
+			screen_name = "You have died! Be sure to keep an eye on your Health indicator  (red bar) when in combat.";
+			texture = b_gui_ig_mnu_tip_health;
+		}
+		[text_2]
+		{
+			screen_name = "If your health gets below 1/3, your Character Portrait flashes yellow to warn you.";
+			texture = b_gui_ig_mnu_tip_lowhealth;
+		}
+		[text_3]
+		{
+			screen_name = "You can regain your health and mana quickly by drinking potions, if you have one. To drink, click on the Drink Health Potion or Drink Mana Potion button.";
+			texture = b_gui_ig_mnu_tip_button_potions;
+		}
+		[actions]
+		{
+			[flash*]
+			{
+				window = button_health_potions;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds
+			}
+			[flash*]
+			{
+				window = button_mana_potions;
+				num_loops = -1; // -1 for infinite
+				duration = 0.3;  // seconds
+			}
+		}
+		[text_4]
+		{
+			screen_name = "You may also wish to save your progress periodically. Press <c:0xff00ff00>F9</c> to quickly save your game.";
+			texture = b_gui_ig_mnu_tip_button_options;
+		}
+	}
+}

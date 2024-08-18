@@ -1,0 +1,99 @@
+[t:lever_gob_01,n:0x0860010b]
+{
+	[on_off_lever]
+	{
+	  b initially_usable = false;
+		off_message = we_req_activate;
+		off_message_2 = we_req_activate;
+	  x off_scid = 0x0860010A;
+	  x off_scid_2 = 0x086000D8;
+	  f on_message_delay = 2;
+	  x on_scid = 0x0860010A;
+	  x on_scid_2 = 0x086000D8;
+	  x on_scid_3 = 0x08600119;
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -2.40939,9.53674e-006,1.50732,0x09082f0d;
+	}
+}
+[t:valve_gob_02,n:0x086000e1]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x0860010C;
+	  x on_scid = 0x0860010C;
+	}
+	[placement]
+	{
+	  q orientation = 3.37067e-008,0.707107,0.707107,2.36096e-007;
+	  p position = -2.02385,5.38133,0.263477,0x7150e17e;
+		use_point_scids = 0x086000e4;
+	}
+}
+[t:valve_gob_02,n:0x086000df]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x0860010C;
+	  x on_scid = 0x0860010C;
+	}
+	[placement]
+	{
+	  q orientation = -0.5,-0.5,-0.5,0.5;
+	  p position = 0.110828,5.38134,-2.3202,0x8924344f;
+		use_point_scids = 0x086000e3;
+	}
+}
+[t:valve_gob_02,n:0x086000e0]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x0860010C;
+	  x on_scid = 0x0860010C;
+	}
+	[placement]
+	{
+	  q orientation = 1.15904e-007,0.707107,0.707106,8.42937e-008;
+	  p position = -2.06635,5.38133,-1.82681,0x8f665fbe;
+		use_point_scids = 0x086000e2;
+	}
+}
+[t:valve_gob_02,n:0x086000de]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x0860010C;
+	  x on_scid = 0x0860010C;
+	}
+	[placement]
+	{
+	  q orientation = 2.79223e-007,0.707107,0.707107,1.58051e-008;
+	  p position = -1.98273,5.38132,-1.81536,0xd3cbe38f;
+		use_point_scids = 0x086000e5;
+	}
+}
+[t:lever_glb_05,n:0x08600119]
+{
+	[on_off_lever]
+	{
+	  b initially_usable = false;
+	  f on_message_delay_3 = 0.5;
+	  x on_scid = 0x0860010E;
+	  x on_scid_2 = 0x0860010F;
+	  x on_scid_3 = 0x08600118;
+	  b one_shot = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,5.50675e-008,0,1;
+	  p position = -0.00150681,0.1,-0.0522931,0x12ffded5;
+		use_point_scids = 0x08600172;
+	}
+}

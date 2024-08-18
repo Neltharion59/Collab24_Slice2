@@ -1,0 +1,14 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0xAAA10101;
+	source_region_name = fh_r1a;
+	[t:stitch_editor,n:fh_r1]
+	{
+		dest_region = fh_r1;
+		[node_ids]
+		{
+			0x0000bcd1 = 0xB6A36DED,4;
+			0x0000bcd2 = 0xB10C14C3,8;
+		}
+	}
+}

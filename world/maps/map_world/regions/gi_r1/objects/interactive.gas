@@ -1,0 +1,175 @@
+[t:valve_gob_03,n:0x0200008f]
+{
+	[aspect]
+	{
+	  f use_range = 2.3;
+	}
+	[common]
+	{
+		dev_instance_text = "ELEVATOR";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1.2;
+	  x off_scid = 0x02000001;
+	  f on_message_delay = 1.2;
+	  x on_scid = 0x02000001;
+	  f reset_time = 4;
+	}
+	[placement]
+	{
+	  p position = 3.84672,0.55,7.31378,0x1783b8c3;
+	}
+}
+[t:respawn_statue,n:0x02000204]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.9465,4,7.70536,0x7a318208;
+		use_point_scids = 0x0200023c;
+	}
+}
+[t:valve_gob_02,n:0x0200008a]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+		off_message_2 = we_req_activate;
+		off_message_4 = we_req_activate;
+	  f off_message_delay_2 = 1.5;
+	  x off_scid = 0x02000079;
+	  x off_scid_2 = 0x02000089;
+	  x off_scid_3 = 0x020001C8;
+	  x off_scid_4 = 0x020001F2;
+		on_message = we_req_deactivate;
+		on_message_2 = we_req_deactivate;
+		on_message_4 = we_req_deactivate;
+	  f on_message_delay = 1.5;
+	  x on_scid = 0x02000079;
+	  x on_scid_2 = 0x02000089;
+	  x on_scid_3 = 0x020001C8;
+	  x on_scid_4 = 0x020001F2;
+	}
+	[placement]
+	{
+	  p position = -0.146332,6.06302,-2.57581,0xb4135335;
+	}
+}
+[t:door_gob_metal_04,n:0x02000070]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x02000042,0f,"default","receive_world_message",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[door_basic]
+	{
+	  x msg_scid_open = 0x02000242;
+	  x msg_scid_opening = 0x020000BD;
+	  x second_door = 0x0200023F;
+	}
+	[placement]
+	{
+	  p position = -1.88336,4.5,24.5559,0x2055ac57;
+	}
+}
+[t:door_gob_metal_04_right,n:0x0200023f]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x02000042,0f,"default","receive_world_message",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x020000BD;
+	  x second_door = 0x02000070;
+	}
+	[placement]
+	{
+	  p position = -1.88245,4.5,24.5519,0x2055ac57;
+	}
+}
+[t:valve_gob_03,n:0x02000091]
+{
+	[aspect]
+	{
+	  f use_range = 2.3;
+	}
+	[common]
+	{
+		dev_instance_text = "ELEVATOR";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1.2;
+	  x off_scid = 0x02000001;
+	  f on_message_delay = 1.2;
+	  x on_scid = 0x02000001;
+	  f reset_time = 4;
+	}
+	[placement]
+	{
+	  p position = -0.0134814,12.0454,6.94118,0xa39def3d;
+	}
+}
+[t:valve_gob_03,n:0x0200008d]
+{
+	[aspect]
+	{
+	  f use_range = 2;
+	}
+	[common]
+	{
+		dev_instance_text = "ELEVATOR";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 2;
+	  x off_scid = 0x02000001;
+	  f on_message_delay = 1.5;
+	  x on_scid = 0x02000001;
+	  f reset_time = 5;
+	  f reset_time_2 = 4.5;
+	}
+	[placement]
+	{
+	  p position = -9.49894,30.5,-0.496473,0x1ff3d3d1;
+	}
+}

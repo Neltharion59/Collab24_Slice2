@@ -1,0 +1,39 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0xAAA20300;
+	source_region_name = dm_r8;
+	[t:stitch_editor,n:dm_r11]
+	{
+		dest_region = dm_r11;
+		[node_ids]
+		{
+			0xaaa20009 = 0xDBA834F2,2;
+			0xaaa20010 = 0xEE470D9F,2;
+			0xaaa20011 = 0x598C0E12,2;
+			0xaaa20012 = 0x800B6C2C,6;
+		}
+	}
+	[t:stitch_editor,n:dm_r2]
+	{
+		dest_region = dm_r2;
+		[node_ids]
+		{
+			0xaaa20004 = 0x6E0016D1,4;
+			0xaaa20005 = 0x0BAA0E82,1;
+			0xaaa20006 = 0x20BFECDE,1;
+			0xaaa20007 = 0x20BFECDE,2;
+			0xaaa20008 = 0x4F835C4A,1;
+		}
+	}
+	[t:stitch_editor,n:dm_r8a]
+	{
+		dest_region = dm_r8a;
+		[node_ids]
+		{
+			0xaaa20014 = 0xACB6AFAB,1;
+			0xaaa20015 = 0x057EC60E,8;
+			0xaaa20016 = 0x057EC60E,7;
+			0xaaa20017 = 0x94E26F5B,4;
+		}
+	}
+}

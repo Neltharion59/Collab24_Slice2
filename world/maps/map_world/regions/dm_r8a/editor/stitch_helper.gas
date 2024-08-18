@@ -1,0 +1,16 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x6DBDECD3;
+	source_region_name = dm_r8a;
+	[t:stitch_editor,n:dm_r8]
+	{
+		dest_region = dm_r8;
+		[node_ids]
+		{
+			0xaaa20014 = 0xF82EEB65,4;
+			0xaaa20015 = 0xF82EEB65,5;
+			0xaaa20016 = 0xF82EEB65,6;
+			0xaaa20017 = 0xF82EEB65,7;
+		}
+	}
+}

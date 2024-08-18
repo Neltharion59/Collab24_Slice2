@@ -1,0 +1,21 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0xA3370300;
+	source_region_name = path2ce;
+	[t:stitch_editor,n:ce_r1]
+	{
+		dest_region = ce_r1;
+		[node_ids]
+		{
+			0xaaa70001 = 0x624BFE50,4;
+		}
+	}
+	[t:stitch_editor,n:dc_r2]
+	{
+		dest_region = dc_r2;
+		[node_ids]
+		{
+			0xaaab0008 = 0x3B1A871A,10;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0xAAA30100;
+	source_region_name = ac_r1;
+	[t:stitch_editor,n:ac_r1a]
+	{
+		dest_region = ac_r1a;
+		[node_ids]
+		{
+			0xaaa30015 = 0xAD9B71F9,8;
+			0xaaa30016 = 0xBA8AC471,1;
+			0xaaa30017 = 0xBA8AC471,2;
+			0xaaa30018 = 0xEB84ECBC,3;
+			0xaaa30019 = 0xEB84ECBC,4;
+		}
+	}
+	[t:stitch_editor,n:ac_r2]
+	{
+		dest_region = ac_r2;
+		[node_ids]
+		{
+			0xaaa30001 = 0xC15B1AB3,8;
+		}
+	}
+	[t:stitch_editor,n:path2ac]
+	{
+		dest_region = path2ac;
+		[node_ids]
+		{
+			0xada30001 = 0xC55DDC86,4;
+			0xada30002 = 0x862D44A6,1;
+			0xada30003 = 0x862D44A6,2;
+			0xada30004 = 0xB795B07B,2;
+		}
+	}
+}
