@@ -63,6 +63,15 @@
 		use_point_scids = 0x02400256,0x02400257;
 	}
 }
+[t:respawn_statue,n:0x02400ea3]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = 2.12596,8,5.66952,0xaf9caf89;
+		use_point_scids = 0x02400ea4;
+	}
+}
 [t:door_ice_peasant_right,n:0x02400f57]
 {
 	[placement]
@@ -157,6 +166,15 @@
 	[placement]
 	{
 	  p position = -0.183495,-3.8221,1.43835,0xf988a6f4;
+	}
+}
+[t:respawn_statue,n:0x02400ee9]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 1.98533,-2,-4.22371,0xac2dbb9e;
+		use_point_scids = 0x02400eef;
 	}
 }
 [t:door_ice_gate,n:0x02400250]
@@ -322,6 +340,33 @@
 	  p position = -0.0123177,-3.8686,1.20848,0x4916bc52;
 	}
 }
+[t:respawn_statue,n:0x02400f24]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 6.62204,-17.85,-0.590126,0x4f572051;
+		use_point_scids = 0x02400f2b,0x02400f33,0x02400f5f;
+	}
+}
+[t:respawn_statue,n:0x02400ef5]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 3.12521,2,-1.26497,0xab260ec7;
+		use_point_scids = 0x02400f21;
+	}
+}
+[t:respawn_statue,n:0x02400ea5]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -3.83179,-0.65,0.00791359,0xaa6417f6;
+		use_point_scids = 0x02400eac;
+	}
+}
 [t:c24_generator_ice_door,n:0x02400179]
 {
 	[generator_breakable]
@@ -400,50 +445,5 @@
 	  q orientation = 0,1,0,1.66939e-007;
 	  p position = 1.90149,-1.4,0.831706,0xc7fdfada;
 		use_point_scids = 0x02400f68,0x02400f6a;
-	}
-}
-[t:respawn_statue,n:0x02400ea3]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.92388,0,0.382683;
-	  p position = 2.12596,8,5.66952,0xaf9caf89;
-		use_point_scids = 0x02400EA4;
-	}
-}
-[t:respawn_statue,n:0x02400ea5]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -3.83179,-0.65,0.00791359,0xaa6417f6;
-		use_point_scids = 0x02400EAC;
-	}
-}
-[t:respawn_statue,n:0x02400ee9]
-{
-	[placement]
-	{
-	  q orientation = 0,0.382683,0,0.92388;
-	  p position = 1.98533,-2,-4.22371,0xac2dbb9e;
-		use_point_scids = 0x02400EEF;
-	}
-}
-[t:respawn_statue,n:0x02400ef5]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 3.12521,2,-1.26497,0xab260ec7;
-		use_point_scids = 0x02400F21;
-	}
-}
-[t:respawn_statue,n:0x02400f24]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 6.62204,-17.85,-0.590126,0x4f572051;
-		use_point_scids = 0x02400F2B,0x02400F33,0x02400F5F;
 	}
 }

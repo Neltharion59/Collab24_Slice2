@@ -99,6 +99,19 @@
 }
 [t:dog_sleeping,n:0x02101aa0]
 {
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[aspect]
+	{
+	  b is_invincible = true;
+	}
+	[mind]
+	{
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.923879,0,-0.382684;

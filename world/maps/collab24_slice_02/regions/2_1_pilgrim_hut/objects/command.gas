@@ -1,15 +1,8 @@
-[t:cmd_auto_save,n:0x022001ba]
+[t:cmd_ai_c_patrol,n:0x02200015]
 {
 	[placement]
 	{
-	  p position = -0.188414,0,-0.399578,0xc61ecf8d;
-	}
-}
-[t:cmd_ai_c_patrol,n:0x02200035]
-{
-	[placement]
-	{
-	  p position = 0.528664,0,0.0817137,0x78008b2a;
+	  p position = -1.37537,0,1.80804,0xf8a303ce;
 	}
 }
 [t:cmd_auto_save,n:0x02200162]
@@ -19,11 +12,46 @@
 	  p position = -9.54733,5.64919,3.92488,0x466696a0;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x02200015]
+[t:cmd_ai_c_patrol,n:0x02200035]
 {
 	[placement]
 	{
-	  p position = -1.37537,0,1.80804,0xf8a303ce;
+	  p position = 0.528664,0,0.0817137,0x78008b2a;
+	}
+}
+[t:cmd_auto_save,n:0x022001ba]
+{
+	[placement]
+	{
+	  p position = -0.188414,0,-0.399578,0xc61ecf8d;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x02200038]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.957405,0,1.58098,0xfe2bb926;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x022000f0]
+{
+	[placement]
+	{
+	  p position = 1.35663,2.01204,3.15971,0xeeedb960;
+	}
+}
+[t:cmd_region_message,n:0x02200006]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.31222,0,-0.472927,0x16dd0127;
+	}
+	[screen_report]
+	{
+		description = "'I should arrange help for Dartakk first.'";
+	  b prepend_name = false;
 	}
 }
 [t:cmd_selection_toggle,n:0x022000fc]
@@ -89,39 +117,6 @@
 	  p position = -0.0861969,0,-0.766329,0xfb8ddb88;
 	}
 }
-[t:cmd_region_message,n:0x02200006]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 2.31222,0,-0.472927,0x16dd0127;
-	}
-	[screen_report]
-	{
-		description = "'I should arrange help for Dartakk first.'";
-	  b prepend_name = false;
-	}
-}
-[t:cmd_region_message,n:0x02200009]
-{
-	[placement]
-	{
-	  q orientation = 0,2.98023e-008,0,1;
-	  p position = 2.38341,0,-2.03493,0x57542faa;
-	}
-	[screen_report]
-	{
-		description = "'This cave seems dangerous. Perhaps consulting with a giant such as Notatakk first would be reasonable.'";
-	  b prepend_name = false;
-	}
-}
-[t:cmd_ai_c_patrol,n:0x022000f0]
-{
-	[placement]
-	{
-	  p position = 1.35663,2.01204,3.15971,0xeeedb960;
-	}
-}
 [t:cmd_ai_c_patrol,n:0x022000f1]
 {
 	[placement]
@@ -153,11 +148,16 @@
 	  p position = -0.928757,0,1.59683,0x87901be5;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x02200038]
+[t:cmd_region_message,n:0x02200009]
 {
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.957405,0,1.58098,0xfe2bb926;
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = 2.38341,0,-2.03493,0x57542faa;
+	}
+	[screen_report]
+	{
+		description = "'This cave seems dangerous. Perhaps consulting with a giant such as Notatakk first would be reasonable.'";
+	  b prepend_name = false;
 	}
 }

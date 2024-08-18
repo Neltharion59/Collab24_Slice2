@@ -26,21 +26,6 @@
 	  p position = -3.51391,-12,-5.22673,0x7fbd18bf;
 	}
 }
-[t:generator_bush_02,n:0x02200013]
-{
-	[generator_advanced_a2]
-	{
-		child_template_name = "c24_2_r2_bortusk_roar";
-	  x initial_command = 0x02200015;
-	  f spawn_period = 1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.572433,-3.98478,-3.87822,0x0322206a;
-	}
-}
 [t:generator_bush_02,n:0x02200010]
 {
 	[generator_advanced_a2]
@@ -53,24 +38,6 @@
 	{
 	  q orientation = 0,0.382683,0,0.92388;
 	  p position = 1.88783,0,0.870612,0x702c12b1;
-	}
-}
-[t:generator_generic,n:0x0220033e]
-{
-	[common]
-	{
-		dev_instance_text = "SPAWN THE BOSS";
-	}
-	[generator_basic]
-	{
-		child_template_name = "c24_2_r2_bortusk_wizard_boss_01";
-	  b get_child_cc = true;
-	  x msg_scid = 0x02200075;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -1.40848,0,1.17355,0x63eb97bb;
 	}
 }
 [t:generator_generic,n:0x0220033f]
@@ -87,7 +54,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -1.48914,0,-0.00563049,0xc27ebf2a;
+	  p position = -0.764332,0,-0.786621,0xc27ebf2a;
 	}
 }
 [t:generator_generic,n:0x022000f5]
@@ -153,6 +120,39 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707106;
 	  p position = -2.6028,3.92405,-0.00790405,0x7c918afe;
+	}
+}
+[t:generator_generic,n:0x0220033e]
+{
+	[common]
+	{
+		dev_instance_text = "SPAWN THE BOSS";
+	}
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r2_bortusk_wizard_boss_01";
+	  b get_child_cc = true;
+	  x msg_scid = 0x02200075;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.40848,0,1.17355,0x63eb97bb;
+	}
+}
+[t:generator_bush_02,n:0x02200013]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_2_r2_bortusk_roar";
+	  x initial_command = 0x02200015;
+	  f spawn_period = 1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.572433,-3.98478,-3.87822,0x0322206a;
 	}
 }
 [t:generator_bush_02,n:0x0220000d]
