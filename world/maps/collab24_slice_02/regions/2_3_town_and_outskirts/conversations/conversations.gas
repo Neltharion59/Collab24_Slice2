@@ -320,3 +320,40 @@
 	  f scroll_rate = 10.000000;
 	}
 }
+[conv_collab24_slice2_r3_smith_b4_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = collab24_slice2_quest_smith,0;
+	  b quest_dialog = true;
+		screen_text = "Nooo, how did that little harmless ladybug ever escape? She ran off with my tomes. I shall set for the fae lands and hunt her down, trust me on that!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r3_smith_b4_quest_next]
+{
+	[text*]
+	{
+		screen_text = "Nooo, how did that little harmless ladybug ever escape? She ran off with my tomes. I shall set for the fae lands and hunt her down, trust me on that!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r3_smith_after_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = collab24_slice2_quest_smith,2;
+		complete_quest* = collab24_slice2_quest_smith;
+	  b quest_dialog = true;
+		screen_text = "Nooo, how did that little harmless ladybug ever escape? She ran off with my tomes. I shall set for the fae lands and hunt her down, trust me on that!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r3_smith_after_quest_next]
+{
+	[text*]
+	{
+		screen_text = "Nooo, how did that little harmless ladybug ever escape? She ran off with my tomes. I shall set for the fae lands and hunt her down, trust me on that!";
+	  f scroll_rate = 10.000000;
+	}
+}

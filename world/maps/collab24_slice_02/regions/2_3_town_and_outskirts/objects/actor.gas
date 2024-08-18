@@ -787,6 +787,20 @@
 }
 [t:collab24_slice2_r3_shop_smith,n:0x02400ee7]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_collab24_slice2_r3_smith_b4_quest_first;
+			* = conv_collab24_slice2_r3_smith_b4_quest_next;
+			* = conv_collab24_slice2_r3_smith_after_quest_first;
+			* = conv_collab24_slice2_r3_smith_after_quest_next;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_collab24_slice2_smith_r3.skrit;
+	}
 	[placement]
 	{
 	  q orientation = 0,-6.46033e-009,0,1;
