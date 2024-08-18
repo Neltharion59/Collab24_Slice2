@@ -1,0 +1,67 @@
+[t:statue_cav_spin_01,n:0x00100005]
+{
+	[on_off_lever]
+	{
+		on_message = we_req_deactivate;
+	  x on_scid = 0x00100001;
+	  x on_scid_2 = 0x00100007;
+	  x on_scid_3 = 0x00100012;
+	}
+	[placement]
+	{
+	  p position = -1.13859,0,-2.16907,0x51c29201;
+	}
+}
+[t:statue_cav_spin_02,n:0x00100003]
+{
+	[common]
+	{
+		screen_name = "ACTIVATE";
+	}
+	[on_off_lever]
+	{
+	  x on_scid = 0x00100001;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.993618,0,-0.454442,0x09529b59;
+	}
+}
+[t:statue_cav_spin_02,n:0x00100013]
+{
+	[common]
+	{
+		screen_name = "DEACTIVATE";
+	}
+	[on_off_lever]
+	{
+		on_message = we_req_deactivate;
+	  x on_scid = 0x00100001;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.788204,0,-1.31435,0x09529b59;
+	}
+}
+[t:c24_generator_ice_door,n:0x00100020]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.8395,0,-0.420861,0x08e46e8a;
+	}
+}
+[t:statue_cav_spin_01,n:0x00100023]
+{
+	[on_off_lever]
+	{
+	  x on_scid = 0x00100021;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.318407,0,1.90793,0x08e46e8a;
+	}
+}

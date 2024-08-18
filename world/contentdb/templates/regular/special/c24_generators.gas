@@ -54,6 +54,61 @@
 
     [generator_breakable] {}
 }
+[t:template,n:c24_generator_ice_door_large]
+{
+	specializes = base_breakable_wood;
+	doc = "c24 generator_ice_door";
+    category_name = "1w_generator";
+	[common]
+    {
+    	rollover_display = false;
+    	screen_name = "Ice Burrow";
+		rollover_life = false;
+    }
+
+	[aspect]
+	{
+		model 		= m_i_csl_door-dungeon-07;
+        material = ice;
+        scale_base = 5.0;
+		is_selectable = false;
+		does_block_path = true;
+		[textures] { 0 = b_t_ic01_flr_stg-08x08-c;}
+	}
+	
+	physics:break_effect		= ice_explosion;
+
+	[aspect]
+    {
+		life_state		= LS_ALIVE_CONSCIOUS;
+        is_collidable 		= false;
+		life			= 210;
+		max_life		= 210;
+	}
+
+    [physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_ice_01	= 3;
+			frag_glb_ice_02	= 3;
+			frag_glb_ice_03	= 3;
+			frag_glb_ice_04	= 3;
+			frag_glb_ice_05	= 3;
+        }
+	}
+
+
+    [gizmo]
+	{
+		model				=	m_i_glb_object-waypoint;
+		texture				=	;
+		diffuse_color		=	0.0, 1, 0.0;
+		use_diffuse_color	=	true;
+	}
+
+    [generator_breakable] { spawn_range = 0; }
+}
 [t:template,n:collab24_slice2_r3_gen_metal_cage]
 {
 	specializes = base_breakable_wood;

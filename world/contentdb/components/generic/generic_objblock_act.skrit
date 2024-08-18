@@ -1,0 +1,43 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  generic_objblock.skrit
+// Author(s):  Orig: James Loe, Resurrected: Eric Tams
+//
+// Copyright � 2000 Gas Powered Games, Inc.  All rights reserved.
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// public definitions
+
+// reserved tags
+property bool   _server_only$        = true;
+property string _doc$                = "Controls pathfinding blocking/unblocking uses Activate/Deactivate";
+property string _required_component$ = "placement";
+
+owner                                = GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+
+trigger OnGoHandleMessage$( WE_ENTERED_WORLD )
+{
+	// Request object blocking
+	owner.Go.Aspect.SetDoesBlockPath( false );
+}
+
+trigger OnGoHandleMessage$( WE_REQ_ACTIVATE )
+{
+	// Request object blocking
+	owner.Go.Aspect.SetDoesBlockPath( true );
+}
+
+trigger OnGoHandleMessage$( WE_REQ_DEACTIVATE )
+{
+	// Request object un-blocking
+	owner.Go.Aspect.SetDoesBlockPath( false );
+	Godb.SMarkForDeletion( owner.goid );
+}
+
+//////////////////////////////////////////////////////////////////////////////
