@@ -71,12 +71,23 @@
 {
 	[interface_fade]
 	{
-	  f duration = 7;
-		interface = "chapter_02_path_of_merchant";
+	  f duration = 10;
+		interface = "chapter_2-path-of-merchant";
 	}
 	[placement]
 	{
 	  p position = 1.30511,0.937426,3.18713,0x8d460cd1;
+	}
+}
+[t:activate_chapter,n:0x02101ae7]
+{
+	[activate_chapter]
+	{
+		chapter = "chapter_02";
+	}
+	[placement]
+	{
+	  p position = -0.499634,0.908195,3.04098,0x8d460cd1;
 	}
 }
 [t:trigger_generic,n:0x0210004e]
@@ -90,7 +101,6 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x02100050,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x02101526,3f,"0x4003","party_member_within_bounding_box",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,4.000000,0.200000,"on_first_enter");
 			  f delay = 0.000000;
@@ -108,7 +118,7 @@
 	[placement]
 	{
 	  q orientation = 0,-1.66939e-007,0,1;
-	  p position = -0.1549,-11.9968,0.567162,0x1019c9ee;
+	  p position = -0.122253,-11.9976,-1.65373,0x1019c9ee;
 	}
 }
 [t:trigger_change_mood_box,n:0x02100ea4]
@@ -138,6 +148,38 @@
 	{
 	  q orientation = 0,-1.66939e-007,0,1;
 	  p position = -0.0718842,-11.9977,-0.972534,0x1019c9ee;
+	}
+}
+[t:trigger_generic,n:0x02101ac4]
+{
+	[common]
+	{
+		dev_instance_text = "CHAPTER";
+	  b is_multi_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02101526,0f,"0x4003","party_member_within_bounding_box",0);
+				action* = send_world_message("we_req_activate",0x02101AE7,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,4.000000,0.200000,"on_unique_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.66939e-007,0,1;
+	  p position = -0.104454,-11.9992,1.05241,0x1019c9ee;
 	}
 }
 [t:trigger_generic,n:0x02101ac5]
