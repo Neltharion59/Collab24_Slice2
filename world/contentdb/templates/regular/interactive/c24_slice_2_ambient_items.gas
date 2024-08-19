@@ -100,6 +100,56 @@
 		model=m_i_glb_broom;
 	}
 }
+[t:template,n:c24_slice2_r3_book_base]
+{
+	category_name = "indoor";
+	doc = "c24 slice slice2 r3 book base";
+	specializes = treasure;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_i_glb_book-magic-02;
+	}
+}
+[t:template,n:c24_slice2_r3_book_1]
+{
+	category_name = "indoor";
+	doc = "c24 slice slice2 r3 book 1";
+	specializes = c24_slice2_r3_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_glb_book-magic-10;
+		}
+	}
+}
+[t:template,n:c24_slice2_r3_book_2]
+{
+	category_name = "indoor";
+	doc = "c24 slice slice2 r3 book 2";
+	specializes = c24_slice2_r3_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_glb_book-magic-16;
+		}
+	}
+}
+[t:template,n:c24_slice2_r3_book_3]
+{
+	category_name = "indoor";
+	doc = "c24 slice slice2 r3 book 3";
+	specializes = c24_slice2_r3_book_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_glb_book-magic-19;
+		}
+	}
+}
 [t:template,n:c24_2_r6_blocking_ice_door]
 {
 	specializes	= container;

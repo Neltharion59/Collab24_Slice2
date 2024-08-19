@@ -68,6 +68,63 @@
 	}
 	[placement]
 	{
-	  p position = -2.38217,5.975,2.36813,0x5f75e7ba;
+	  p position = -2.57993,5.975,2.33474,0x5f75e7ba;
+	}
+}
+[t:generator_generic,n:0x0230085a]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r2_ice_fly";
+		kill_msg = we_req_die;
+	  i max_alive_children = 1;
+	  i num_children_incubating = 9999;
+	  f spawn_period = 3;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,0.5,0.5;
+	}
+	[placement]
+	{
+	  p position = -2.11702,5.975,2.22114,0x5f75e7ba;
+	}
+}
+[t:generator_generic,n:0x0230085c]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r2_ice_fly";
+		kill_msg = we_req_die;
+	  i max_alive_children = 1;
+	  i num_children_incubating = 9999;
+	  f spawn_period = 3;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,0.5,0.5;
+	}
+	[placement]
+	{
+	  p position = 2.27617,5.975,2.09787,0x5f75e7ba;
+	}
+}
+[t:generator_generic,n:0x0230085e]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r2_ice_fly";
+		kill_msg = we_req_die;
+	  i max_alive_children = 1;
+	  i num_children_incubating = 9999;
+	  f spawn_period = 3;
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,0.5,0.5;
+	}
+	[placement]
+	{
+	  p position = 2.15146,5.975,-1.95339,0x5f75e7ba;
 	}
 }

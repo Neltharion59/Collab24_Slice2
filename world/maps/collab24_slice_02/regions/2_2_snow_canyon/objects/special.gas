@@ -1333,6 +1333,10 @@
 			{
 				action* = change_quest_state("c24_slice_2_quest_shrine_broom","active",2);
 				action* = send_world_message("we_req_activate",0x0230085B,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02300129,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0230085A,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0230085C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0230085E,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.500000,1.500000,0.200000,"on_first_enter");
 			  f delay = 0.000000;
@@ -1350,7 +1354,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.0175934,5.73094,-5.41344,0x5f75e7ba;
+	  p position = -0.167831,5.74664,-5.39515,0x5f75e7ba;
 	}
 }
 [t:trigger_generic,n:0x02300137]
@@ -1405,7 +1409,12 @@
 				action* = send_world_message("we_req_activate",0x023008AB,0f,"default","every",0);
 				action* = send_world_message("we_trigger_activate",0x023008AE,0f,"default","every",0);
 				action* = change_quest_state("c24_slice_2_quest_shrine_broom","active",3);
-				action* = send_world_message("we_req_deactivate",0x02300129,0f,"default","every",0);
+				action* = send_world_message("we_req_die",0x0230085A,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x0230085A,0f,"default","every",0);
+				action* = send_world_message("we_req_die",0x0230085C,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x0230085C,0f,"default","every",0);
+				action* = send_world_message("we_req_die",0x0230085E,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x0230085E,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
@@ -1422,7 +1431,7 @@
 	}
 	[placement]
 	{
-	  p position = 1.28914,5.975,-2.32357,0x5f75e7ba;
+	  p position = 1.11493,5.975,-2.45518,0x5f75e7ba;
 	}
 }
 [t:trigger_generic,n:0x02300831]
