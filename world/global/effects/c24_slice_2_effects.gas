@@ -1607,3 +1607,41 @@
 			sfx start #POP;
 	]];
 }
+[effect_script*]
+{
+	name	=collab24_slice2_effect_vasp_spark_multi;
+
+	script	=[[
+			sound play s_e_spell_spark_multi_cast at #SOURCE_POSITION dist 3 25;
+
+			frandrange 4 10; frandrange 3 9;
+			call spark_base <accel(#POP)velocity(#POP)dir(.2,0,0)>;
+			frandrange 4 10; frandrange 3 9;
+			call spark_base <accel(#POP)velocity(#POP)dir(0,0,-.2)>;
+			frandrange 4 10; frandrange 3 9;
+			call spark_base <accel(#POP)velocity(#POP)dir(-.2,0,0)>;
+			frandrange 4 10; frandrange 3 9;
+			call spark_base <accel(#POP)velocity(#POP)dir(0,0,.2)>;
+			frandrange 4 10; frandrange 3 9;
+			call spark_base <accel(#POP)velocity(#POP)dir(0,.2,0)>;
+			frandrange 4 10; frandrange 3 9;
+			call spark_base <accel(#POP)velocity(#POP)dir(0,-.2,0)>;
+			
+			frandrange 4 10; frandrange 3 9;
+			call spark_base <accel(#POP)velocity(#POP)dir(.4,0,0)>;
+			frandrange 4 10; frandrange 3 9;
+			call spark_base <accel(#POP)velocity(#POP)dir(0,0,-.4)>;
+			frandrange 4 10; frandrange 3 9;
+			call spark_base <accel(#POP)velocity(#POP)dir(-.4,0,0)>;
+			frandrange 4 10; frandrange 3 9;
+			call spark_base <accel(#POP)velocity(#POP)dir(0,0,.4)>;
+			frandrange 4 10; frandrange 3 9;
+			call spark_base <accel(#POP)velocity(#POP)dir(0,.4,0)>;
+			frandrange 4 10; frandrange 3 9;
+			call spark_base <accel(#POP)velocity(#POP)dir(0,-.4,0)>;
+
+			pause 5;
+
+			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
+			]];
+}

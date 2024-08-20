@@ -792,4 +792,103 @@
 			speaker = Athrea the Pilgrim;
 		}
 	}
+	[c24_slice_2_quest_fae_lover]
+	{
+		chapter = chapter_02_path_of_merchant;
+		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
+		screen_name = Mischief and Love;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			address = 2_4_ice_fields:conversations:conv_collab24_slice2_r4_fae_lover_b4_quest_first;
+			description = Kill Aerthemees the Trapper;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = Thaelaen;
+		}
+		[*]
+		{
+			description = Collect the TODO Trapping Item;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Speak with Thaelaen;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			address = 2_4_ice_fields:conversations:conv_collab24_slice2_r4_fae_lover_ready_for_trap;
+			description = Wait for Nyahdal to Appear;
+		  b is_consumable = true;
+		  i order = 3;
+		  b required = true;
+			speaker = Thaelaen;
+		}
+		[*]
+		{
+			description = Drop the TODO Trapping Item Near Nyahdal;
+		  b is_consumable = true;
+		  i order = 4;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Speak with Thaelaen;
+		  b is_consumable = true;
+		  i order = 5;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			address = 2_4_ice_fields:conversations:conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_first;
+			description = Destroy the Frost Vasp;
+		  b is_consumable = true;
+		  i order = 6;
+		  b required = true;
+			speaker = Thaelaen;
+		}
+		[*]
+		{
+			description = Speak with Thaelaen;
+		  b is_consumable = true;
+		  i order = 7;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Destroy the Barrels;
+		  b is_consumable = true;
+		  i order = 8;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Speak with Thaelaen;
+		  b is_consumable = true;
+		  i order = 9;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			address = 2_4_ice_fields:conversations:conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_first;
+			description = Thaelaen fell in love with the Fae who Gave him so much Trouble. There is nothing more you can do except for using the Fae's trading services.;
+		  b is_consumable = true;
+		  i order = 10;
+		  b required = true;
+			speaker = Thaelaen;
+		}
+	}
 }

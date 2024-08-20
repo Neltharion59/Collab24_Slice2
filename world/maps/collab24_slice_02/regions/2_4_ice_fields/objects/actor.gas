@@ -473,6 +473,118 @@
 	  p position = 2.59193,-3.65,0.636352,0x6cb2f6cd;
 	}
 }
+[t:c24_slice_2_r4_fae_lands_hermit,n:0x025009a8]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_collab24_slice2_r4_fae_lover_after_quest_first;
+			* = conv_collab24_slice2_r4_fae_lover_after_quest_next;
+			* = conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_first;
+			* = conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_next;
+			* = conv_collab24_slice2_r4_fae_lover_b4_quest_first;
+			* = conv_collab24_slice2_r4_fae_lover_b4_quest_next;
+			* = conv_collab24_slice2_r4_fae_lover_ready_for_trap;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_fae_lover_r4.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,3.12407e-007,0,-1;
+	  p position = -6.87026,-4.65,2.81648,0x6cb2f6cd;
+	}
+}
+[t:c24_2_r4_npc_naldrun_in_love,n:0x025009cb]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	  f scale_multiplier = 0.7;
+	}
+	[placement]
+	{
+	  q orientation = 0,6.46033e-009,0,1;
+	  p position = -7.11117,-4.65,-0.926483,0x6cb2f6cd;
+	}
+}
+[t:c24_2_r4_npc_naldrun_in_love,n:0x025009d2]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.7;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.45468e-007;
+	  p position = 1.65082,-3.65,-0.884384,0x6cb2f6cd;
+	}
+}
+[t:c24_2_r5_vasp,n:0x025009ba]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 3;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x025009C2,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382682;
+	  p position = -1.86928,0,-0.0930786,0x912e05e5;
+	}
+}
+[t:c24_2_r5_naldrun_boss_01_trapper,n:0x025009b7]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x025009C1,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = 1.00856,0,-0.126923,0x2dfa1f16;
+	}
+}
 [t:c24_2_r5_naldrun_03_healer,n:0x0250005f]
 {
 	[placement]

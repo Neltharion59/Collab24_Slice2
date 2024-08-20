@@ -44,3 +44,61 @@
 		choice = potential_member;
 	}
 }
+[conv_collab24_slice2_r4_fae_lover_b4_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_fae_lover,0;
+	  b quest_dialog = true;
+		screen_text = "a";
+	}
+}
+[conv_collab24_slice2_r4_fae_lover_b4_quest_next]
+{
+	[text*]
+	{
+		screen_text = "b";
+	}
+}
+[conv_collab24_slice2_r4_fae_lover_ready_for_trap]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_fae_lover,3;
+	  b quest_dialog = true;
+		screen_text = "c";
+	}
+}
+[conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_fae_lover,6;
+	  b quest_dialog = true;
+		screen_text = "d";
+	}
+}
+[conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_next]
+{
+	[text*]
+	{
+		screen_text = "e";
+	}
+}
+[conv_collab24_slice2_r4_fae_lover_after_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_fae_lover,10;
+		complete_quest* = c24_slice_2_quest_fae_lover;
+	  b quest_dialog = true;
+		screen_text = "f";
+	}
+}
+[conv_collab24_slice2_r4_fae_lover_after_quest_next]
+{
+	[text*]
+	{
+		screen_text = "g";
+	}
+}

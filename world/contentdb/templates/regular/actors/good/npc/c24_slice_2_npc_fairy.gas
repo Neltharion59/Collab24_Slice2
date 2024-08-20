@@ -91,3 +91,75 @@
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
+[t:template,n:c24_2_r4_npc_naldrun_in_love]
+{
+    // To love the tree
+	category_name = "1W_evil_d";
+	doc = "c24 npc naldrun r3 princess";
+	specializes = c24_2_r5_naldrun_base;
+    [actor]
+    {
+        alignment = aa_neutral;
+    }
+	[aspect]
+	{
+        is_invincible = true;
+		[textures]
+		{
+			0 = b_c_edm_054-04;
+		}
+	}
+	[common]
+	{
+		screen_name="Nyahdal";
+	}
+    [conversation]
+    {
+    }
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:c24_2_r4_npc_naldrun_in_love_store]
+{
+    // To love the tree
+	category_name = "1W_evil_d";
+	doc = "c24 npc naldrun r3 princess";
+	specializes = c24_2_r5_naldrun_base;
+    [actor]
+    {
+        alignment = aa_neutral;
+    }
+	[aspect]
+	{
+        is_invincible = true;
+		[textures]
+		{
+			0 = b_c_edm_054-04;
+		}
+	}
+	[common]
+	{
+		screen_name="Nyahdal";
+	}
+    [conversation]
+    {
+    }
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+
+		jat_flee_from_object					= jat_none;
+		jat_guard         						= jat_none;
+		jat_move          						= jat_none;
+		jat_patrol         						= jat_none;
+
+		actor_auto_fidgets 						= false;
+		movement_orders 						= mo_hold;
+	}
+}

@@ -1,0 +1,210 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  cmd_selection_toggle.skrit
+// Author(s):  Uncle Ernsie, Eric Tams
+//
+// Copyright � 2000 Gas Powered Games, Inc.  All rights reserved.
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+//
+// Scid Bits Key
+// 0 = Changed.
+// 1 = State. true = selectable, false = non-selectable.
+//
+
+//////////////////////////////////////////////////////////////////////////////
+// public definitions
+
+// reserved tags
+property bool   _server_only$        	= true;
+property string _doc$                	= "Command which toggles an objects selectable state via world messaging.";
+property string _required_component$ 	= "placement";
+
+// exported properties
+property	scid		Object_Scid$                     					doc = "Scid to Toggle Selection State with.";
+property	eWorldEvent	Selection_Off_Msg$			= WE_REQ_ACTIVATE   	doc = "Send this to make Object non-usable.";
+property	eWorldEvent	Selection_On_Msg$			= WE_REQ_DEACTIVATE     doc = "Send this to make Object usable.";
+property	bool		Toggle_Selection$			= true					doc = "When True Selection is effected.";
+property	bool		Toggle_Usability$			= false					doc = "When True Usability is effected.";
+property    bool        Toggle_Visability$          = false                 doc = "When True Visability is effected.";
+property    bool        Toggle_Invincibility$       = false                 doc = "When True Invincibility is effected.";
+property    bool        Toggle_Collidability$       = false                 doc = "When True Collide is effected.";
+
+property	int			start_state$				= 0						doc = "state of the object when the command enters the world. 1 = NonSelectable, 2 = Selectable. If 0 object will be unchanged.";
+
+owner = GoSkritComponent;
+
+
+void Select$()
+{
+	// Set the active Bits
+	Godb.SetScidBit( owner.scid, 1, true );
+	
+	SetState Selectable$;
+}
+
+void NonSelect$()
+{
+	// Set the active Bits
+	Godb.SetScidBit( owner.scid, 1, false );
+	
+	SetState NonSelectable$;
+}
+
+event OnGoHandleMessage$( eWorldEvent e$, WorldMessage /*msg$*/ )
+{
+	if( e$ == Selection_Off_Msg$ )
+	{
+    	NonSelect$();
+	}
+	if( e$ == Selection_On_Msg$ )
+	{
+   		Select$();
+    }
+}
+
+startup state Startup$
+{
+	#only( game )
+    [[
+		trigger OnGoHandleMessage$( WE_ENTERED_WORLD )
+		{		
+			int bits$ = Godb.GetScidBits( owner.scid );
+			
+			if( bits$ == 0 ) // nothing has changed. In the default state.
+			{
+				if( start_state$ == 1)
+				{
+					NonSelect$();
+				}
+				else if( start_state$ == 2)
+				{
+					Select$();
+				}
+			}
+			else if ( Godb.GetScidBit( owner.scid, 1 ) ) // target was selectable when command streamed out, make sure it is selectable again.
+			{
+				Select$();
+			}
+			else
+			{
+				NonSelect$();
+			}
+		}
+		
+		event OnExitState$
+		{
+			// Set the used Bits
+			Godb.SetScidBit( owner.scid, 0, true );
+		}
+    ]]
+}
+
+State NonSelectable$
+{
+	transition -> NonSelectable$:OnGoHandleCCMessage( WE_LEFT_WORLD );
+	
+	trigger OnTimer$ ( 1 )
+	{
+		SetState NonSelectable$;
+	}
+
+	event OnExitState$
+	{
+		if ( GoDb.IsWatching( owner.Goid ) && Object_Scid$.goid.isvalid() ) 
+		{
+			GoDb.StopWatching( owner.Goid, Object_Scid$.goid );
+		}
+	}
+	
+	event OnEnterState$
+	{
+		if ( Object_Scid$.goid.isvalid() )
+		{
+			GoDb.StartWatching( owner.Goid, Object_Scid$.goid );
+
+			if (Toggle_Selection$)
+			{
+				Object_Scid$.Go.Aspect.SSetIsSelectable( false );
+			}
+			if (Toggle_Usability$)
+			{
+				Object_Scid$.Go.Aspect.SSetIsUsable( false );
+            }
+			if (Toggle_Visability$)
+			{
+				Object_Scid$.Go.Aspect.SSetIsVisible( false );
+            }
+            if (Toggle_Invincibility$)
+			{
+				Object_Scid$.Go.Aspect.SetIsInvincible( true );
+            }
+            if (Toggle_Collidability$)
+			{
+				Object_Scid$.Go.Aspect.IsCollidable = false;
+            }
+		}
+		else
+		{
+			this.CreateFrameTimer( 1, 5 );
+		}
+	}
+}
+
+State Selectable$
+{
+	transition -> Selectable$:OnGoHandleCCMessage( WE_LEFT_WORLD );
+	
+	trigger OnTimer$ ( 1 )
+	{
+		SetState Selectable$;
+	}
+
+	event OnExitState$
+	{
+		if ( GoDb.IsWatching( owner.Goid ) && Object_Scid$.goid.isvalid() ) 
+		{
+			GoDb.StopWatching( owner.Goid, Object_Scid$.goid );
+		}
+	}
+	
+	event OnEnterState$
+	{
+		if ( Object_Scid$.goid.isvalid() )
+		{
+			GoDb.StartWatching( owner.Goid, Object_Scid$.goid );
+			
+			if (Toggle_Selection$)
+			{
+				Object_Scid$.Go.Aspect.SSetIsSelectable( true );
+            }
+			if (Toggle_Usability$)
+			{
+				Object_Scid$.Go.Aspect.SSetIsUsable( true );
+            }
+			if (Toggle_Visability$)
+			{
+				Object_Scid$.Go.Aspect.SSetIsVisible( true );
+            }
+            if (Toggle_Invincibility$)
+			{
+				Object_Scid$.Go.Aspect.SetIsInvincible( false );
+            }
+            if (Toggle_Collidability$)
+			{
+				Object_Scid$.Go.Aspect.IsCollidable = true;
+            }
+		}
+		else
+		{
+			this.CreateFrameTimer( 1, 5 );
+		}
+	}
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////

@@ -1316,7 +1316,7 @@
 				action* = send_world_message("we_req_activate",0x02600043,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x0260004F,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x02600012,0f,"default","every",0), doc("activate skull lights");
-				action* = send_world_message("we_req_activate",0x0260001C,3.5f,"default","every",0), doc("deactivate skull lights");
+				action* = send_world_message("we_req_activate",0x0260001C,4.5f,"default","every",0), doc("deactivate skull lights");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -1334,7 +1334,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.443954,0.186203,2.23752,0x08a04bdf;
+	  p position = -0.443954,0.221977,2.23752,0x08a04bdf;
 	}
 }
 [t:trigger_generic,n:0x02600089]

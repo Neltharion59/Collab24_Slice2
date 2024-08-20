@@ -45,14 +45,6 @@
 	  p position = -0.788204,0,-1.31435,0x09529b59;
 	}
 }
-[t:c24_generator_ice_door,n:0x00100020]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 2.8395,0,-0.420861,0x08e46e8a;
-	}
-}
 [t:statue_cav_spin_01,n:0x00100023]
 {
 	[on_off_lever]
@@ -62,6 +54,30 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.318407,0,1.90793,0x08e46e8a;
+	  p position = 1.14326,0,-2.4891,0x08e46e8a;
+	}
+}
+[t:statue_cav_spin_01,n:0x00100024]
+{
+	[on_off_lever]
+	{
+	  x on_scid = 0x00100022;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.18708,0,1.97067,0x08e46e8a;
+	}
+}
+[t:statue_cav_spin_01,n:0x00100026]
+{
+	[on_off_lever]
+	{
+	  x on_scid = 0x00100025;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.292438,0,-2.42402,0xcfb1f64e;
 	}
 }

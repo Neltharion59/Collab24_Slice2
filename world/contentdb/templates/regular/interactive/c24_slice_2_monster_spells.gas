@@ -1373,6 +1373,131 @@
 	{
 	}
 }
+[t:template,n:c24_r5_naldrun_trapper_spell_shock]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell naldrun_trapper shock";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		area_damage_radius = 2;
+		damage_max = 50;
+		damage_min = 44;
+	}
+	[magic]
+	{
+		cast_range = 15;
+		cast_reload_delay = 1;
+		effect_duration = 2;
+		does_damage_per_second = true;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_damage_volume]
+	{
+		caster_center = false;
+		effect_script = c24_slice_02_effects_shock;
+	}
+}
+[t:template,n:c24_r5_naldrun_trapper_spell_ice_orb]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell naldrun_trapper ice orb";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 42;
+		damage_min = 38;
+	}
+	[common]
+	{
+		screen_name = "Orb of Ice";
+	}
+	[magic]
+	{
+		cast_range = 12;
+		cast_reload_delay = 0.15;
+
+		effect_duration = 20;
+
+		target_type_flags = tt_self;
+		usage_context_flags = uc_offensive;
+		caster_state_name = "Orb_spell_orbiting";
+		require_state_check = true;
+	}
+	[spell_orb]
+	{
+		orbEffect = orb_ice_orbiter;
+		orbSoundEffect = orb_ice_sound;
+		shotEffect = freeze;
+		isLightning = true;
+		casterDescription = "Orb of Freezing";
+	}
+}
+[t:template,n:c24_r5_vasp_spell_spark_multi]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell vasp spark multi";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 11;
+		damage_min = 9;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("collab24_slice2_effect_vasp_spark_multi");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 22;
+		cast_reload_delay = 2;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_default] {}
+}
+[t:template,n:c24_r5_vasp_spell_spark_orb]
+{
+	category_name = "magic";
+	doc = "collab24 r5 spell vasp spark orb";
+	specializes = base_spell_monster_nm;
+	[attack]
+	{
+		damage_max = 18;
+		damage_min = 15;
+	}
+	[magic]
+	{
+		cast_range = 20;
+		cast_reload_delay = 0.15;
+
+		effect_duration = 20;
+
+		target_type_flags = tt_self;
+		usage_context_flags = uc_offensive;
+		caster_state_name = "Orb_spell_orbiting";
+		require_state_check = true;
+	}
+	[spell_orb]
+	{
+		orbEffect = orb_lightning_orbiter;
+		orbSoundEffect = orb_lightning_sound;
+		shotEffect = spark;
+		casterDescription = "Orb of Spark";
+	}
+}
 [t:template,n:c24_r5_dragon_spell_fireball]
 {
 	category_name = "magic";

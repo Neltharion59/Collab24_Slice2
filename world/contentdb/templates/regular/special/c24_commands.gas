@@ -1,0 +1,11 @@
+[t:template,n:cmd_selection_toggle_enhanced]
+{
+	specializes = cmd_const;
+	doc			= "cmd_selection_toggle";
+	extra_doc	= "Use this command to toggle the selection of the target scid with extra capabilities.";
+    category_name       = "zurb";
+
+	[cmd_selection_toggle_enhanced] {}
+
+	[gizmo] { diffuse_color=0.000000,0.000000,0.700000; texture=; }
+}

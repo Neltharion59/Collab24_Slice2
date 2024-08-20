@@ -13,6 +13,30 @@
 	  p position = 0.165302,-3.89522,1.14647,0x2fe6fdfc;
 	}
 }
+[t:sign_ice_01,n:0x02500996]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.17421e-007;
+	  p position = 3.71243,1.99035,0.115807,0xa63c0198;
+	}
+}
+[t:sign_ice_01,n:0x02500997]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 3.77811,1.97248,0.330284,0xa63c0198;
+	}
+}
 [t:c24_generator_ice_door,n:0x0250007a]
 {
 	[generator_breakable]
@@ -28,251 +52,6 @@
 	{
 	  q orientation = 0,-2.56942e-007,0,1;
 	  p position = 0.213364,-3.87949,1.29543,0x3ebcb3ad;
-	}
-}
-[t:respawn_statue,n:0x0250097b]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707106,0,0.707107;
-	  p position = -1.72925,-1,3.99721,0x8dd61957;
-		use_point_scids = 0x02500975;
-	}
-}
-[t:c24_generator_ice_door,n:0x02500052]
-{
-	[aspect]
-	{
-	  b is_invincible = true;
-	  f scale_multiplier = 2;
-	}
-	[generator_breakable]
-	{
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = -5.55112e-017,6.46033e-009,2.61684e-016,1;
-	  p position = 0.586202,-11.9824,-3.32056,0x10299c2f;
-	}
-}
-[t:respawn_statue,n:0x0250097c]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707106;
-	  p position = -3.28618,0,-0.854553,0x6e4db115;
-		use_point_scids = 0x0250097d,0x0250097e,0x0250097f;
-	}
-}
-[t:respawn_statue,n:0x02500972]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,-5.96046e-008;
-	  p position = -1.26449,4,1.1274,0x5f5093b1;
-		use_point_scids = 0x02500971;
-	}
-}
-[t:c24_generator_ice_door,n:0x02500076]
-{
-	[generator_breakable]
-	{
-		child_template_name = "c24_2_r2_lertisk";
-	  i max_alive_children = 1;
-	  i num_children_incubating = 1;
-	  f spawn_period = 0.1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-2.56942e-007,0,1;
-	  p position = -0.35469,-3.80381,1.42493,0xa7f9c26b;
-	}
-}
-[t:c24_generator_ice_door,n:0x02500077]
-{
-	[generator_breakable]
-	{
-		child_template_name = "c24_2_r2_lertisk";
-	  i max_alive_children = 1;
-	  i num_children_incubating = 1;
-	  f spawn_period = 0.1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-2.56942e-007,0,1;
-	  p position = 0.0146828,-3.84487,1.34552,0xe0a823d7;
-	}
-}
-[t:respawn_statue,n:0x0250059d]
-{
-	[placement]
-	{
-	  q orientation = 0,0.923879,0,-0.382683;
-	  p position = -0.351791,-3.92069,-3.34566,0x3917b449;
-		use_point_scids = 0x0250044d;
-	}
-}
-[t:c24_generator_ice_door,n:0x02500075]
-{
-	[generator_breakable]
-	{
-		child_template_name = "c24_2_r2_lertisk";
-	  i max_alive_children = 1;
-	  i num_children_incubating = 1;
-	  f spawn_period = 0.1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-2.56942e-007,0,1;
-	  p position = -0.207291,-3.80059,1.55531,0xac95c88f;
-	}
-}
-[t:sign_ice_01,n:0x02500981]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,-0.707107;
-	  p position = 1.35112,4,-2.17632,0x2d1e3ba8;
-	}
-}
-[t:sign_ice_01,n:0x02500982]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,-1,0,-2.09483e-007;
-	  p position = 1.29637,4,-2.32127,0x2d1e3ba8;
-	}
-}
-[t:sign_ice_01,n:0x02500984]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 0,3.12407e-007,0,-1;
-	  p position = -1.42959,0,-1.37789,0x3a20b43f;
-	}
-}
-[t:sign_ice_01,n:0x02500985]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -1.49555,0,-1.62438,0x3a20b43f;
-	}
-}
-[t:sign_ice_01,n:0x02500987]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,4.17421e-007;
-	  p position = -3.68413,0,1.39916,0xc4e4f6e1;
-	}
-}
-[t:sign_ice_01,n:0x02500988]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707106,0,0.707107;
-	  p position = -3.94828,0,1.46674,0xc4e4f6e1;
-	}
-}
-[t:sign_ice_01,n:0x0250098a]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707106;
-	  p position = 1.34706,0,1.19704,0xec537934;
-	}
-}
-[t:sign_ice_01,n:0x0250098b]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,-1,0,1.1948e-007;
-	  p position = 1.59405,0,1.12887,0xec537934;
-	}
-}
-[t:sign_ice_01,n:0x0250098d]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707106,0,0.707107;
-	  p position = 2.36494,0,-0.0832977,0xcb198184;
-	}
-}
-[t:sign_ice_01,n:0x0250098e]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,-1,0,1.1948e-007;
-	  p position = 2.40472,0,-0.25383,0xcb198184;
-	}
-}
-[t:sign_ice_01,n:0x02500990]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,4.17421e-007;
-	  p position = 3.61307,4,1.97201,0x117c4c3c;
-	}
-}
-[t:sign_ice_01,n:0x02500991]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,-0.707106;
-	  p position = 3.61679,-1,-3.84191,0x5d2b4878;
 	}
 }
 [t:sign_ice_01,n:0x02500993]
@@ -299,7 +78,40 @@
 	  p position = 0.497818,0,-1.19425,0x0ec7aca6;
 	}
 }
-[t:sign_ice_01,n:0x02500996]
+[t:sign_ice_01,n:0x0250098d]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = 2.36494,0,-0.0832977,0xcb198184;
+	}
+}
+[t:sign_ice_01,n:0x0250098e]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,1.1948e-007;
+	  p position = 2.40472,0,-0.25383,0xcb198184;
+	}
+}
+[t:respawn_statue,n:0x0250097b]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -1.72925,-1,3.99721,0x8dd61957;
+		use_point_scids = 0x02500975;
+	}
+}
+[t:sign_ice_01,n:0x02500990]
 {
 	[common]
 	{
@@ -308,67 +120,24 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,4.17421e-007;
-	  p position = 3.71243,1.99035,0.115807,0xa63c0198;
+	  p position = 3.61307,4,1.97201,0x117c4c3c;
 	}
 }
-[t:sign_ice_01,n:0x02500997]
+[t:c24_generator_ice_door,n:0x02500052]
 {
-	[common]
+	[aspect]
 	{
-		screen_name = "Frostfingers";
+	  b is_invincible = true;
+	  f scale_multiplier = 2;
+	}
+	[generator_breakable]
+	{
+	  f spawn_range = 0;
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 3.77811,1.97248,0.330284,0xa63c0198;
-	}
-}
-[t:sign_ice_01,n:0x02500999]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707106;
-	  p position = 1.95111,0,0.188553,0x12603a33;
-	}
-}
-[t:sign_ice_01,n:0x0250099a]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,1.78814e-007,0,1;
-	  p position = 1.9489,0,0.42176,0x12603a33;
-	}
-}
-[t:sign_ice_01,n:0x0250099c]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 4.05487e-009,-0.00872586,2.46858e-008,-0.999961;
-	  p position = -1.94691,6,0.646469,0xec20bee1;
-	}
-}
-[t:sign_ice_01,n:0x0250099d]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,-1,0,1.40951e-007;
-	  p position = -1.76314,5.7539,0.400741,0xec20bee1;
+	  q orientation = -5.55112e-017,6.46033e-009,2.61684e-016,1;
+	  p position = 0.586202,-11.9824,-3.32056,0x10299c2f;
 	}
 }
 [t:sign_ice_01,n:0x0250099f]
@@ -393,6 +162,15 @@
 	{
 	  q orientation = 0,0.707107,0,0.707106;
 	  p position = -0.944885,0,-0.403564,0xda2b0922;
+	}
+}
+[t:respawn_statue,n:0x0250097c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = -3.28618,0,-0.854553,0x6e4db115;
+		use_point_scids = 0x0250097d,0x0250097e,0x0250097f;
 	}
 }
 [t:sign_ice_01,n:0x025009a2]
@@ -453,5 +231,227 @@
 	{
 	  q orientation = 0,-1,0,-1.43982e-007;
 	  p position = -0.552398,-0.278968,-0.955419,0xa6d5686d;
+	}
+}
+[t:sign_ice_01,n:0x0250099c]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 4.05487e-009,-0.00872586,2.46858e-008,-0.999961;
+	  p position = -1.94691,6,0.646469,0xec20bee1;
+	}
+}
+[t:sign_ice_01,n:0x0250099d]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,1.40951e-007;
+	  p position = -1.76314,5.7539,0.400741,0xec20bee1;
+	}
+}
+[t:sign_ice_01,n:0x02500999]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707106;
+	  p position = 1.95111,0,0.188553,0x12603a33;
+	}
+}
+[t:sign_ice_01,n:0x0250099a]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,1.78814e-007,0,1;
+	  p position = 1.9489,0,0.42176,0x12603a33;
+	}
+}
+[t:sign_ice_01,n:0x02500991]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707106;
+	  p position = 3.61679,-1,-3.84191,0x5d2b4878;
+	}
+}
+[t:sign_ice_01,n:0x0250098a]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707106;
+	  p position = 1.34706,0,1.19704,0xec537934;
+	}
+}
+[t:sign_ice_01,n:0x0250098b]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,1.1948e-007;
+	  p position = 1.59405,0,1.12887,0xec537934;
+	}
+}
+[t:respawn_statue,n:0x02500972]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-5.96046e-008;
+	  p position = -1.26449,4,1.1274,0x5f5093b1;
+		use_point_scids = 0x02500971;
+	}
+}
+[t:c24_generator_ice_door,n:0x02500076]
+{
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r2_lertisk";
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-2.56942e-007,0,1;
+	  p position = -0.35469,-3.80381,1.42493,0xa7f9c26b;
+	}
+}
+[t:sign_ice_01,n:0x02500987]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.17421e-007;
+	  p position = -3.68413,0,1.39916,0xc4e4f6e1;
+	}
+}
+[t:sign_ice_01,n:0x02500988]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707106,0,0.707107;
+	  p position = -3.94828,0,1.46674,0xc4e4f6e1;
+	}
+}
+[t:c24_generator_ice_door,n:0x02500077]
+{
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r2_lertisk";
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-2.56942e-007,0,1;
+	  p position = 0.0146828,-3.84487,1.34552,0xe0a823d7;
+	}
+}
+[t:sign_ice_01,n:0x02500984]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 0,3.12407e-007,0,-1;
+	  p position = -1.42959,0,-1.37789,0x3a20b43f;
+	}
+}
+[t:sign_ice_01,n:0x02500985]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.49555,0,-1.62438,0x3a20b43f;
+	}
+}
+[t:respawn_statue,n:0x0250059d]
+{
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382683;
+	  p position = -0.351791,-3.92069,-3.34566,0x3917b449;
+		use_point_scids = 0x0250044d;
+	}
+}
+[t:c24_generator_ice_door,n:0x02500075]
+{
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r2_lertisk";
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-2.56942e-007,0,1;
+	  p position = -0.207291,-3.80059,1.55531,0xac95c88f;
+	}
+}
+[t:sign_ice_01,n:0x02500981]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = 1.35112,4,-2.17632,0x2d1e3ba8;
+	}
+}
+[t:sign_ice_01,n:0x02500982]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-2.09483e-007;
+	  p position = 1.29637,4,-2.32127,0x2d1e3ba8;
 	}
 }
