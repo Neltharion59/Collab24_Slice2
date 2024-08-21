@@ -27,22 +27,6 @@
 	  p position = -1.65894,1.90735e-006,0.056366,0xf967f9c8;
 	}
 }
-[t:cmd_ai_t_animate,n:0x025009ad]
-{
-	[cmd_ai_dojob]
-	{
-	  i int1 = 1735685488;
-	  x target1 = 0x025009A8;
-	}
-	[common]
-	{
-		dev_instance_text = "GET UP";
-	}
-	[placement]
-	{
-	  p position = -7.52317,-4.65,0.531189,0x6cb2f6cd;
-	}
-}
 [t:cmd_selection_toggle,n:0x025009ae]
 {
 	[cmd_selection_toggle]
@@ -63,7 +47,8 @@
 {
 	[cmd_ai_dojob]
 	{
-	  i int1 = 1802397029;
+	  i int1 = 1634624617;
+	  x next_scid = 0x025009B4;
 	  x target1 = 0x025009A8;
 	}
 	[common]
@@ -72,7 +57,7 @@
 	}
 	[placement]
 	{
-	  p position = -6.20296,-4.65,0.579422,0x6cb2f6cd;
+	  p position = -6.19278,-4.65,0.579559,0x6cb2f6cd;
 	}
 }
 [t:cmd_alignment_changer,n:0x025009cc]
@@ -506,5 +491,17 @@
 	[placement]
 	{
 	  p position = -0.323448,0,0.425201,0x496ee7d3;
+	}
+}
+[t:cmd_ai_t_animate,n:0x025009ad]
+{
+	[cmd_ai_dojob]
+	{
+	  i int1 = 1819242347;
+	  x target1 = 0x025009A8;
+	}
+	[placement]
+	{
+	  p position = -7.52316,-4.65,0.531189,0x6cb2f6cd;
 	}
 }

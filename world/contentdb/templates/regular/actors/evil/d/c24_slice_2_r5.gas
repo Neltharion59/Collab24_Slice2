@@ -385,8 +385,8 @@
 	[aspect]
 	{
 		experience_value = 45;
-		life = 71;
-		max_life = 71;
+		life = 81;
+		max_life = 81;
 		mana = 180;
 		max_mana = 180;
 	}
@@ -705,8 +705,8 @@
 	[aspect]
 	{
 		experience_value = 35;
-		life = 96;
-		max_life = 96;
+		life = 114;
+		max_life = 114;
 		mana = 12;
 		max_mana = 12;
 		model = m_c_edm_ma_pos_1;
@@ -835,6 +835,20 @@
 		personal_space_range = 0.7;
 		ranged_engage_range = 16.0;
 		sight_range = 16.0;
+	}
+	[physics]
+	{
+		break_effect = ice_explosion;
+		explode_when_killed = true;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			c24_frag_glb_gr_shard_ice_sm_01 = 1;
+			c24_frag_glb_gr_shard_ice_sm_02 = 1;
+			c24_frag_glb_gr_shard_ice_sm_03 = 2;
+			c24_frag_glb_gr_shard_ice_sm_04 = 3;
+			c24_frag_glb_gr_shard_ice_sm_05 = 3;
+		}
 	}
 }
 [t:template,n:c24_2_r5_dragon_boss]

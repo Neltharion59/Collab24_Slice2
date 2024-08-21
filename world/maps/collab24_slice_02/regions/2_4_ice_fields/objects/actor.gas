@@ -503,7 +503,6 @@
 	[aspect]
 	{
 	  b is_selectable = false;
-	  f scale_multiplier = 0.7;
 	}
 	[placement]
 	{
@@ -511,11 +510,19 @@
 	  p position = -7.11117,-4.65,-0.926483,0x6cb2f6cd;
 	}
 }
-[t:c24_2_r4_npc_naldrun_in_love,n:0x025009d2]
+[t:c24_2_r4_npc_naldrun_in_love_store,n:0x025009d2]
 {
-	[aspect]
+	[conversation]
 	{
-	  f scale_multiplier = 0.7;
+		[conversations]
+		{
+			* = conv_c24_r4_fae_shop_first;
+			* = conv_c24_r4_fae_shop_next;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice2_fae_shop_r4.skrit;
 	}
 	[placement]
 	{
@@ -525,10 +532,6 @@
 }
 [t:c24_2_r5_vasp,n:0x025009ba]
 {
-	[aspect]
-	{
-	  f scale_multiplier = 3;
-	}
 	[common]
 	{
 		[instance_triggers]

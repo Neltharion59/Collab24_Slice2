@@ -654,7 +654,7 @@
 				action* = send_world_message("we_req_activate",0x025009ED,0f,"default","every",0), doc("enable wave 2 barrels");
 				action* = change_quest_state("c24_slice_2_quest_fae_lover","active",4);
 				action* = send_world_message("we_req_activate",0x025009CC,0f,"default","every",0), delay(4), doc("spawn fae");
-				action* = send_world_message("we_trigger_activate",0x025009CD,0f,"default","every",0), delay(4), doc("enable dropping trapping item");
+				action* = send_world_message("we_trigger_activate",0x025009CD,0f,"default","every",0), delay(4.5), doc("enable dropping trapping item");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
@@ -706,7 +706,7 @@
 	[placement]
 	{
 	  q orientation = 0,4.47035e-007,0,1;
-	  p position = -6.95457,-4.65,-1.62314,0x6cb2f6cd;
+	  p position = -7.06186,-4.65,-1.54893,0x6cb2f6cd;
 	}
 }
 [t:trigger_generic,n:0x025009d4]
