@@ -3163,6 +3163,7 @@
 				action* = send_world_message("we_req_activate",0x02400D5D,0f,"default","every",0), doc("hide book");
 				action* = send_world_message("we_req_activate",0x02400D60,0f,"default","every",0), doc("hide book");
 				action* = send_world_message("we_req_activate",0x02400D61,0f,"default","every",0), doc("hide book");
+				action* = send_world_message("we_req_activate",0x02500A75,0f,"default","every",0), doc("enable meeting princess after killing the drake");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(5.000000,4.500000,0.300000,"on_first_enter");
 			  f delay = 0.000000;
@@ -3430,7 +3431,7 @@
 	[placement]
 	{
 	  q orientation = 0,2.98023e-008,0,1;
-	  p position = -3.36874,0,0.366844,0x0e3b8b40;
+	  p position = -3.65302,0,0.591438,0x0e3b8b40;
 	}
 }
 [t:use_point,n:0x02400eac]

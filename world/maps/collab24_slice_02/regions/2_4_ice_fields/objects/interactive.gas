@@ -37,6 +37,15 @@
 	  p position = 3.77811,1.97248,0.330284,0xa63c0198;
 	}
 }
+[t:respawn_statue,n:0x0250097b]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -1.72925,-1,3.99721,0x8dd61957;
+		use_point_scids = 0x02500975;
+	}
+}
 [t:c24_generator_ice_door,n:0x0250007a]
 {
 	[generator_breakable]
@@ -52,6 +61,30 @@
 	{
 	  q orientation = 0,-2.56942e-007,0,1;
 	  p position = 0.213364,-3.87949,1.29543,0x3ebcb3ad;
+	}
+}
+[t:sign_ice_01,n:0x02500990]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.17421e-007;
+	  p position = 3.61307,4,1.97201,0x117c4c3c;
+	}
+}
+[t:sign_ice_01,n:0x02500991]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707106;
+	  p position = 3.61679,-1,-3.84191,0x5d2b4878;
 	}
 }
 [t:sign_ice_01,n:0x02500993]
@@ -100,197 +133,6 @@
 	{
 	  q orientation = 0,-1,0,1.1948e-007;
 	  p position = 2.40472,0,-0.25383,0xcb198184;
-	}
-}
-[t:respawn_statue,n:0x0250097b]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707106,0,0.707107;
-	  p position = -1.72925,-1,3.99721,0x8dd61957;
-		use_point_scids = 0x02500975;
-	}
-}
-[t:sign_ice_01,n:0x02500990]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,4.17421e-007;
-	  p position = 3.61307,4,1.97201,0x117c4c3c;
-	}
-}
-[t:c24_generator_ice_door,n:0x02500052]
-{
-	[aspect]
-	{
-	  b is_invincible = true;
-	  f scale_multiplier = 2;
-	}
-	[generator_breakable]
-	{
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = -5.55112e-017,6.46033e-009,2.61684e-016,1;
-	  p position = 0.586202,-11.9824,-3.32056,0x10299c2f;
-	}
-}
-[t:sign_ice_01,n:0x0250099f]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 0,-5.19403e-007,0,1;
-	  p position = -1.20145,0,-0.298386,0xda2b0922;
-	}
-}
-[t:sign_ice_01,n:0x025009a0]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707106;
-	  p position = -0.944885,0,-0.403564,0xda2b0922;
-	}
-}
-[t:respawn_statue,n:0x0250097c]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707106;
-	  p position = -3.28618,0,-0.854553,0x6e4db115;
-		use_point_scids = 0x0250097d,0x0250097e,0x0250097f;
-	}
-}
-[t:sign_ice_01,n:0x025009a2]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,-0.707106;
-	  p position = -2.04294,0,1.42963,0x58acdae1;
-	}
-}
-[t:sign_ice_01,n:0x025009a3]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,-0.707106;
-	  p position = -1.74038,-0.275681,1.62024,0x58acdae1;
-	}
-}
-[t:sign_ice_01,n:0x025009a5]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707106,0,-0.707107;
-	  p position = -0.434387,0,-0.50496,0xa6d5686d;
-	}
-}
-[t:sign_ice_01,n:0x025009a6]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,2.33441e-007,0,0.999999;
-	  p position = -0.729461,0,-0.418085,0xa6d5686d;
-	}
-}
-[t:sign_ice_01,n:0x025009a7]
-{
-	[common]
-	{
-		screen_name = "Isle of Rhea Yhanity";
-	}
-	[placement]
-	{
-	  q orientation = 0,-1,0,-1.43982e-007;
-	  p position = -0.552398,-0.278968,-0.955419,0xa6d5686d;
-	}
-}
-[t:sign_ice_01,n:0x0250099c]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 4.05487e-009,-0.00872586,2.46858e-008,-0.999961;
-	  p position = -1.94691,6,0.646469,0xec20bee1;
-	}
-}
-[t:sign_ice_01,n:0x0250099d]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,-1,0,1.40951e-007;
-	  p position = -1.76314,5.7539,0.400741,0xec20bee1;
-	}
-}
-[t:sign_ice_01,n:0x02500999]
-{
-	[common]
-	{
-		screen_name = "Shroomington";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707106;
-	  p position = 1.95111,0,0.188553,0x12603a33;
-	}
-}
-[t:sign_ice_01,n:0x0250099a]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,1.78814e-007,0,1;
-	  p position = 1.9489,0,0.42176,0x12603a33;
-	}
-}
-[t:sign_ice_01,n:0x02500991]
-{
-	[common]
-	{
-		screen_name = "Frostfingers";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,-0.707106;
-	  p position = 3.61679,-1,-3.84191,0x5d2b4878;
 	}
 }
 [t:sign_ice_01,n:0x0250098a]
@@ -429,6 +271,525 @@
 	{
 	  q orientation = 0,-2.56942e-007,0,1;
 	  p position = -0.207291,-3.80059,1.55531,0xac95c88f;
+	}
+}
+[t:c24_2_r5_ice_tree_destroyable,n:0x02500a3c]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A3C,0f,"default","every",0), doc("destroy self");
+				action* = send_world_message("we_req_activate",0x02500A38,0f,"default","every",0), doc("action on self destoryed");
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(5.000000,0x02500051,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,0.382684;
+	  p position = -2.79117,0,-1.9946,0x9011f918;
+	}
+}
+[t:c24_2_r5_ice_tree_destroyable,n:0x02500a18]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A18,0f,"default","every",0), doc("destroy self");
+				action* = send_world_message("we_req_activate",0x0250051F,0f,"default","every",0), doc("action on self destoryed");
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(5.000000,0x02500051,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.923879;
+	  p position = 0.194305,0,2.27514,0x2eb05dee;
+	}
+}
+[t:sign_ice_01,n:0x025009a2]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707106;
+	  p position = -2.04294,0,1.42963,0x58acdae1;
+	}
+}
+[t:sign_ice_01,n:0x025009a3]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707106;
+	  p position = -1.74038,-0.275681,1.62024,0x58acdae1;
+	}
+}
+[t:respawn_statue,n:0x0250097c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = -3.28618,0,-0.854553,0x6e4db115;
+		use_point_scids = 0x0250097d,0x0250097e,0x0250097f;
+	}
+}
+[t:c24_2_r5_ice_tree_destroyable,n:0x02500a4a]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A4A,0f,"default","every",0), doc("destroy self");
+				action* = send_world_message("we_req_activate",0x02500A46,0f,"default","every",0), doc("action on self destoryed");
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(5.000000,0x02500051,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -1.10014,0,1.09729,0x334a5269;
+	}
+}
+[t:c24_2_r5_ice_tree_destroyable,n:0x02500a51]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A51,0f,"default","every",0), doc("destroy self");
+				action* = send_world_message("we_req_activate",0x02500A4D,0f,"default","every",0), doc("action on self destoryed");
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(5.000000,0x02500051,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -2.43748,0,0.613068,0x370f75d3;
+	}
+}
+[t:c24_2_r5_ice_tree_destroyable,n:0x02500a20]
+{
+	[common]
+	{
+		dev_instance_text = "THIS TREE IS ALWAYS DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A20,0f,"default","every",0), doc("destroy self");
+				action* = send_world_message("we_req_activate",0x02500A1C,0f,"default","every",0), doc("action on self destoryed");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -3.34333,0,0.885925,0x99028976;
+	}
+}
+[t:c24_2_r5_ice_tree_destroyable,n:0x02500a43]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A43,0f,"default","every",0), doc("destroy self");
+				action* = send_world_message("we_req_activate",0x02500A3F,0f,"default","every",0), doc("action on self destoryed");
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(5.000000,0x02500051,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -3.97877,0,1.82748,0x6a2b9eaf;
+	}
+}
+[t:sign_ice_01,n:0x025009a5]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -0.434387,0,-0.50496,0xa6d5686d;
+	}
+}
+[t:sign_ice_01,n:0x025009a6]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,2.33441e-007,0,1;
+	  p position = -0.729462,0,-0.418085,0xa6d5686d;
+	}
+}
+[t:sign_ice_01,n:0x025009a7]
+{
+	[common]
+	{
+		screen_name = "Isle of Rhea Yhanity";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.43982e-007;
+	  p position = -0.552399,-0.278968,-0.955418,0xa6d5686d;
+	}
+}
+[t:c24_2_r5_ice_tree_destroyable,n:0x02500a27]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A27,0f,"default","every",0), doc("destroy self");
+				action* = send_world_message("we_req_activate",0x02500A23,0f,"default","every",0), doc("action on self destoryed");
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(5.000000,0x02500051,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.923879;
+	  p position = -2.24319,0,-0.40604,0x8f3e8cb5;
+	}
+}
+[t:c24_2_r5_ice_tree_destroyable,n:0x02500a5f]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A5F,0f,"default","every",0), doc("destroy self");
+				action* = send_world_message("we_req_activate",0x02500A5B,0f,"default","every",0), doc("action on self destoryed");
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(5.000000,0x02500051,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.923879;
+	  p position = -0.982391,0,-1.67305,0x96047234;
+	}
+}
+[t:c24_2_r5_ice_tree_destroyable,n:0x02500a2e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A2E,0f,"default","every",0), doc("destroy self");
+				action* = send_world_message("we_req_activate",0x02500A2A,0f,"default","every",0), doc("action on self destoryed");
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(5.000000,0x02500051,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.923879;
+	  p position = -3.4552,0,1.47983,0xa6280a00;
+	}
+}
+[t:c24_generator_ice_door,n:0x02500052]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	  f scale_multiplier = 2;
+	}
+	[generator_breakable]
+	{
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = -5.55112e-017,6.46033e-009,2.61684e-016,1;
+	  p position = 0.586202,-11.9824,-3.32056,0x10299c2f;
+	}
+}
+[t:c24_2_r5_ice_tree_destroyable,n:0x02500a35]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A35,0f,"default","every",0), doc("destroy self");
+				action* = send_world_message("we_req_activate",0x02500A31,0f,"default","every",0), doc("action on self destoryed");
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(5.000000,0x02500051,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 1.16911,0,2.57425,0x4beea5a0;
+	}
+}
+[t:c24_2_r5_ice_tree_destroyable,n:0x02500a66]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A66,0f,"default","every",0), doc("destroy self");
+				action* = send_world_message("we_req_activate",0x02500A62,0f,"default","every",0), doc("action on self destoryed");
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(5.000000,0x02500051,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.923879;
+	  p position = -2.16495,0,-0.974666,0x48cef2e0;
+	}
+}
+[t:c24_2_r5_ice_tree_destroyable,n:0x02500a58]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A58,0f,"default","every",0), doc("destroy self");
+				action* = send_world_message("we_req_activate",0x02500A54,0f,"default","every",0), doc("action on self destoryed");
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(5.000000,0x02500051,"","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.923879;
+	  p position = -1.59415,0,2.52302,0x4920d6c2;
+	}
+}
+[t:sign_ice_01,n:0x0250099f]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.19403e-007,0,1;
+	  p position = -1.20145,0,-0.298386,0xda2b0922;
+	}
+}
+[t:sign_ice_01,n:0x025009a0]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = -0.944885,0,-0.403564,0xda2b0922;
+	}
+}
+[t:sign_ice_01,n:0x0250099c]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 4.05487e-009,-0.00872586,2.46858e-008,-0.999961;
+	  p position = -1.94691,6,0.646469,0xec20bee1;
+	}
+}
+[t:sign_ice_01,n:0x0250099d]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,1.40951e-007;
+	  p position = -1.76314,5.7539,0.400741,0xec20bee1;
+	}
+}
+[t:sign_ice_01,n:0x02500999]
+{
+	[common]
+	{
+		screen_name = "Shroomington";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707106;
+	  p position = 1.95111,0,0.188553,0x12603a33;
+	}
+}
+[t:sign_ice_01,n:0x0250099a]
+{
+	[common]
+	{
+		screen_name = "Frostfingers";
+	}
+	[placement]
+	{
+	  q orientation = 0,1.78814e-007,0,1;
+	  p position = 1.9489,0,0.42176,0x12603a33;
 	}
 }
 [t:sign_ice_01,n:0x02500981]

@@ -118,3 +118,129 @@
 		screen_text = "I cannot believe the sort of things that humans eat. How are you all still alive? Anyway, fancy to buy some potions to sustain you on your journey?";
 	}
 }
+[conv_c24_r4_fairy_trees_b4_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_restore_ice_trees,0;
+	  b quest_dialog = true;
+		screen_text = "Restore the trees.";
+	}
+}
+[conv_c24_r4_fairy_trees_b4_quest_next]
+{
+	[text*]
+	{
+		screen_text = "Restore the trees, again.";
+	}
+}
+[conv_c24_r4_fairy_trees_after_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_restore_ice_trees,2;
+		complete_quest* = c24_slice_2_quest_restore_ice_trees;
+	  b quest_dialog = true;
+		screen_text = "You have restored the trees.";
+	}
+}
+[conv_c24_r4_fairy_trees_after_quest_next]
+{
+	[text*]
+	{
+		screen_text = "You have restored the trees, again.";
+	}
+}
+[conv_c24_r4_fairy_trees_asking_help_4_princess_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_kill_fae_queen,3;
+	  b quest_dialog = true;
+		screen_text = "I shall help the princess.";
+	}
+}
+[conv_c24_r4_fairy_trees_asking_help_4_princess_next]
+{
+	[text*]
+	{
+		screen_text = "I shall help the princess, again.";
+	}
+}
+[conv_c24_r4_fairy_trees_queen_killed_first]
+{
+	[text*]
+	{
+		screen_text = "The queen is dead.";
+	}
+}
+[conv_c24_r4_fairy_trees_queen_killed_next]
+{
+	[text*]
+	{
+		screen_text = "The queen is dead, again.";
+	}
+}
+[conv_c24_r4_fairy_princess_b4_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_kill_fae_queen,0;
+	  b quest_dialog = true;
+		screen_text = "Become friends with Zaireen.";
+	}
+}
+[conv_c24_r4_fairy_princess_b4_quest_next]
+{
+	[text*]
+	{
+		screen_text = "Become friends with Zaireen, again.";
+	}
+}
+[conv_c24_r4_fairy_princess_after_tree_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_kill_fae_queen,2;
+	  b quest_dialog = true;
+		screen_text = "Speak with Zaireen on my behalf.";
+	}
+}
+[conv_c24_r4_fairy_princess_after_tree_quest_next]
+{
+	[text*]
+	{
+		screen_text = "Speak with Zaireen on my behalf, again.";
+	}
+}
+[conv_c24_r4_fairy_princess_gained_support_first]
+{
+	[text*]
+	{
+		screen_text = "Kill the queen.";
+	}
+}
+[conv_c24_r4_fairy_princess_gained_support_next]
+{
+	[text*]
+	{
+		screen_text = "Kill the queen, again.";
+	}
+}
+[conv_c24_r4_fairy_princess_queen_killed_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_kill_fae_queen,6;
+		complete_quest* = c24_slice_2_quest_kill_fae_queen;
+	  b quest_dialog = true;
+		screen_text = "I am the queen now.";
+	}
+}
+[conv_c24_r4_fairy_princess_queen_killed_next]
+{
+	[text*]
+	{
+		screen_text = "I am the queen now, again.";
+	}
+}

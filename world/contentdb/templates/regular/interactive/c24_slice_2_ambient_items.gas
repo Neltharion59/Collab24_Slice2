@@ -171,24 +171,163 @@
 		[textures] { 0 = b_t_ic01_flr_stg-08x08-c;}
 	}
 }
-[t:template,n:c24_2_r5_ice_tree]
+[t:template,n:c24_2_r5_ice_tree_destroyable]
 {
-	specializes	= base_tree;
-	doc	= "c24 r5 ice tree";
+	specializes	= base_breakable_wood;
+	doc	= "c24 slice2 r5 ice tree";
 	[aspect]
 	{
+		life_state		= LS_ALIVE_CONSCIOUS;
+		life			= 1;
+		max_life		= 1;
 
-		is_collidable = true;
-		is_selectable = true;
+		is_collidable = false;
+		is_selectable = false;
 		is_invincible = true;
 
 		model			 = m_i_glb_tree-03;
 		scale_multiplier = 0.7;
-		textures:0		 = b_i_glb_ice_area;
+		textures:0		 = b_c_edm_iw;
 	}
 	[common]
 	{
-		rollover_display = TRUE;
+		rollover_display = false;
+		rollover_life = false;
 		screen_name = "Frost Tree";
+	}
+    [generator_breakable] { spawn_range = 0; }
+	[physics]
+	{
+		break_effect = ice_explosion;
+		explode_when_killed = true;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			c24_frag_glb_gr_shard_ice_sm_01 = 1;
+			c24_frag_glb_gr_shard_ice_sm_02 = 1;
+			c24_frag_glb_gr_shard_ice_sm_03 = 2;
+			c24_frag_glb_gr_shard_ice_sm_04 = 3;
+			c24_frag_glb_gr_shard_ice_sm_05 = 3;
+		}
+	}
+}
+[t:template,n:c24_2_r5_ice_tree_ambient]
+{
+	specializes	= treasure;
+	doc	= "c24 slice2 r5 ice tree";
+	[aspect]
+	{
+		is_selectable = false;
+		model			 = m_i_glb_tree-03;
+		scale_multiplier = 0.7;
+		textures:0		 = b_c_edm_iw;
+	}
+}
+[t:template,n:c24_2_r5_ice_stump]
+{
+	category_name = "foliage";
+	doc = "c24 slice2 r5 ice stump";
+	specializes = treasure;
+	[aspect]
+	{
+		is_selectable = false;
+		model = m_i_glb_stump-flat;
+		textures:0		 = b_c_edm_iw;
+	}
+}
+[t:template,n:c24_2_r5_ice_egg]
+{
+	category_name = "foliage";
+	doc = "c24 slice2 r5 ice egg";
+	specializes = actor_evil;
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[aspect]
+	{
+		is_selectable = false;
+		is_invincible = false;
+		is_collidable = false;
+
+		scale_base = 0.10;
+		model			= m_c_edm_gb_pos_1;
+		textures:0		 = b_c_edm_iw;
+	}
+	[body]
+	{
+		avg_move_velocity = 0.01;
+        [bone_translator]
+		{
+			 kill_bone			= bone01;
+			 weapon_bone		= spine_1;
+			 shield_bone		= spine_1;
+			 body_anterior		= spine_1;
+			 body_mid			= spine_3;
+			 body_posterior		= spine_5;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_gb_fs;
+
+			[chore_attack]
+			{
+				skrit = select_attack;
+				chore_stances = 0;
+
+				anim_files:00 = at;
+				anim_files:01 = at-02;
+			}
+
+			[chore_die]
+			{
+				skrit = select_transition;
+				chore_stances = 0;
+
+				anim_files:00 = di;
+			}
+
+			[chore_default]
+			{
+				skrit = infinite_loop;
+				chore_stances = 0;
+
+				anim_files:00 = dfs;
+			}
+
+			[chore_fidget]
+			{
+				skrit = select_fidget;
+				chore_stances = 0;
+
+				anim_files:00 = dff;
+				anim_files:01 = dff-02;
+			}
+
+			[chore_walk]
+			{
+				skrit = select_walk;
+				chore_stances = 0;
+
+				anim_files:00 = wl;
+				anim_files:01 = wl-02;
+			}
+		}
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
+		
+		melee_engage_range  	= 14;
+		personal_space_range	= 0.7;
+		ranged_engage_range 	= 14.0;
+		sight_range				= 14.0;
+	}
+	[self_destruct] 
+	{
+		delete_time = 1.0;
+		explode = false;
 	}
 }

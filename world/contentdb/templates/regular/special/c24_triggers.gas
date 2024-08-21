@@ -1,0 +1,13 @@
+[t:template,n:c24_accumulate_trigger_up_and_down]
+{
+	specializes		= trigger;
+
+	doc				= [generic_accumtrigger raise up then message on zero];
+	category_name	= "trigger";
+	[common]
+	{
+		auto_expiration_class = never;
+		forced_expiration_class = never;
+	}
+	[generic_accumtrigger_up_and_down] { }
+}

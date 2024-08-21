@@ -891,4 +891,104 @@
 			speaker = Thaelaen;
 		}
 	}
+	[c24_slice_2_quest_restore_ice_trees]
+	{
+		chapter = chapter_02_path_of_merchant;
+		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
+		screen_name = Cleaning Up;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			address = 2_4_ice_fields:conversations:conv_c24_r4_fairy_trees_b4_quest_first;
+			description = Restore the Destroyed Ice Trees by Casting the Spell on Ice Stumps.;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = Zaireen;
+		}
+		[*]
+		{
+			description = Speak With Zaireen;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			address = 2_4_ice_fields:conversations:;
+			description = You restored the ice grove and gained Zaireen's trust;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = true;
+			speaker = Zaireen;
+		}
+	}
+	[c24_slice_2_quest_kill_fae_queen]
+	{
+		chapter = chapter_02_path_of_merchant;
+		quest_image = b_gui_ig_mnu_jnl_quest_c24_2_giants;
+		screen_name = Cleaning Up;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			address = 2_4_ice_fields:conversations:conv_c24_r4_fairy_princess_b4_quest_first;
+			description = Gain Zaireen's Trust;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = Princess Glamoulla;
+		}
+		[*]
+		{
+			description = Speak with Princess Glamoulla;
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			address = 2_4_ice_fields:conversations:conv_c24_r4_fairy_princess_after_tree_quest_first;
+			description = Speak with Zaireen;
+		  b is_consumable = true;
+		  i order = 2;
+		  b required = true;
+			speaker = Princess Glamoulla;
+		}
+		[*]
+		{
+			address = 2_4_ice_fields:conversations:conv_c24_r4_fairy_trees_asking_help_4_princess_first;
+			description = Enter Isle of Rhea Yhanity;
+		  b is_consumable = true;
+		  i order = 3;
+		  b required = true;
+			speaker = Zaireen;
+		}
+		[*]
+		{
+			description = Kill Suvanne the Fae Queen;
+		  b is_consumable = true;
+		  i order = 4;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Speak with Princess Glamoulla;
+		  b is_consumable = true;
+		  i order = 5;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			address = 2_4_ice_fields:conversations:;
+			description = You have removed the fae queen, paving way for Princess Glamoulla;
+		  b is_consumable = true;
+		  i order = 6;
+		  b required = true;
+			speaker = Princess Glamoulla;
+		}
+	}
 }

@@ -1,3 +1,10 @@
+[t:cmd_ai_c_patrol,n:0x0250007d]
+{
+	[placement]
+	{
+	  p position = 1.71137,0,-1.77197,0x8bcaf1e2;
+	}
+}
 [t:cmd_ai_c_patrol,n:0x0250007b]
 {
 	[cmd_ai_dojob]
@@ -9,13 +16,6 @@
 	  p position = 0.289561,1.8021,3.38359,0x6217207a;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x0250007d]
-{
-	[placement]
-	{
-	  p position = 1.71137,0,-1.77197,0x8bcaf1e2;
-	}
-}
 [t:cmd_ai_c_patrol,n:0x0250007c]
 {
 	[cmd_ai_dojob]
@@ -25,6 +25,516 @@
 	[placement]
 	{
 	  p position = -1.65894,1.90735e-006,0.056366,0xf967f9c8;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a3a]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A39;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW STUMP";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,9.53674e-007;
+	  p position = -2.75705,0,-0.709869,0x9011f918;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a3d]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A3E;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW RESTORED TREE";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,9.53674e-007;
+	  p position = -2.79742,0,-2.41022,0x9011f918;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500801]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500520;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW STUMP";
+	}
+	[placement]
+	{
+	  q orientation = 0,-7.15256e-007,0,1;
+	  p position = 0.160217,0,0.990395,0x2eb05dee;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a19]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A1A;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW RESTORED TREE";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.01328e-006,0,1;
+	  p position = 0.200561,0,2.69074,0x2eb05dee;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a41]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A40;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW STUMP";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.37091e-006;
+	  p position = 3.86157,0,-0.736467,0xfb43502f;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a48]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A47;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW STUMP";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -2.34474,0,0.458832,0x334a5269;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a4b]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A4C;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW RESTORED TREE";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -0.644403,0,0.418487,0x334a5269;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a4f]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A4E;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW STUMP";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -3.71856,0,0.685974,0x370f75d3;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a52]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A53;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW RESTORED TREE";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707108;
+	  p position = -2.01817,0,0.64563,0x370f75d3;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a6a]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A6B;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW RESTORED TREE";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -3.39134,0,0.407562,0x99028976;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a1e]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A1D;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW STUMP";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = 2.90831,0,0.447906,0x6a2b9eaf;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a44]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A45;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW RESTORED TREE";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707105,0,0.707108;
+	  p position = -3.56318,0,1.82123,0x6a2b9eaf;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a25]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A24;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW STUMP";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.19209e-006,0,1;
+	  p position = -2.27728,0,-1.69083,0x8f3e8cb5;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a28]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A29;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW RESTORED TREE";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.2815e-006,0,1;
+	  p position = -2.23694,0,0.00959587,0x8f3e8cb5;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a5d]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A5C;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW STUMP";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.46031e-006,0,1;
+	  p position = -1.04428,0,-3.09273,0x96047234;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a60]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A61;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW RESTORED TREE";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.40071e-006,0,1;
+	  p position = -1.00394,0,-1.39231,0x96047234;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a2c]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A2B;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW STUMP";
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.96046e-007,0,1;
+	  p position = -3.48929,0,0.195045,0xa6280a00;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a2f]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A30;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW RESTORED TREE";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.16229e-006,0,1;
+	  p position = -3.44894,0,1.89543,0xa6280a00;
+	}
+}
+[t:cmd_alignment_changer,n:0x02500a74]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_neutral;
+	  b change_visibility = true;
+	  i start_state = 1;
+	  x target_actor = 0x02500A73;
+	}
+	[placement]
+	{
+	  p position = 0.700378,0,0.895155,0xfb417a3d;
+	}
+}
+[t:cmd_alignment_changer,n:0x02500a71]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_neutral;
+	  b change_visibility = true;
+	  i start_state = 1;
+	  x target_actor = 0x02500A70;
+	}
+	[placement]
+	{
+	  p position = -1.30319,-9.53674e-007,-0.978254,0x3ece2992;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a79]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A21;
+	  i start_state = 1;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.896179,0,-0.804199,0x3ece2992;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a33]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A32;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW STUMP";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -0.115681,0,2.60834,0x4beea5a0;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a36]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A37;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW RESTORED TREE";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = 1.58471,0,2.56799,0x4beea5a0;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a64]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A63;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW STUMP";
+	}
+	[placement]
+	{
+	  q orientation = 0,-8.64267e-007,0,1;
+	  p position = -2.19904,0,-2.25948,0x48cef2e0;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a67]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A68;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW RESTORED TREE";
+	}
+	[placement]
+	{
+	  q orientation = 0,-8.64267e-007,0,1;
+	  p position = -2.15869,0,-0.559055,0x48cef2e0;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a56]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A55;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW STUMP";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.04308e-006,0,1;
+	  p position = -1.62823,0,1.23828,0x4920d6c2;
+	}
+}
+[t:cmd_selection_toggle,n:0x02500a59]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02500A5A;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "SHOW RESTORED TREE";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.16229e-006,0,1;
+	  p position = -1.58789,0,2.9386,0x4920d6c2;
+	}
+}
+[t:cmd_ai_t_animate,n:0x025009ad]
+{
+	[cmd_ai_dojob]
+	{
+	  i int1 = 1819242347;
+	  x target1 = 0x025009A8;
+	}
+	[placement]
+	{
+	  p position = -7.52316,-4.65,0.531189,0x6cb2f6cd;
 	}
 }
 [t:cmd_selection_toggle,n:0x025009ae]
@@ -491,17 +1001,5 @@
 	[placement]
 	{
 	  p position = -0.323448,0,0.425201,0x496ee7d3;
-	}
-}
-[t:cmd_ai_t_animate,n:0x025009ad]
-{
-	[cmd_ai_dojob]
-	{
-	  i int1 = 1819242347;
-	  x target1 = 0x025009A8;
-	}
-	[placement]
-	{
-	  p position = -7.52316,-4.65,0.531189,0x6cb2f6cd;
 	}
 }

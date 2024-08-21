@@ -954,13 +954,22 @@
 		flee_distance					= 13;
         job_travel_distance_limit					= 50;
 
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
         jat_cast 						= world\ai\jobs\common\job_cast.skrit
 			?rand_spell					= true
 			&rand_target					= true;
+
+
+		on_enemy_entered_icz_switch_to_melee = false;
 
 		melee_engage_range = 20.0;
 		personal_space_range = 0.7;
 		ranged_engage_range = 20.0;
 		sight_range = 20.0;
+
+		actor_auto_fidgets 			= false;
 	}
 }

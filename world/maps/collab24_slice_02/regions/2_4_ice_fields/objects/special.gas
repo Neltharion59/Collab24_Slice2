@@ -132,6 +132,122 @@
 	  p position = 0.787029,0,0.143677,0x8b048ac7;
 	}
 }
+[t:use_point,n:0x02500975]
+{
+	[placement]
+	{
+	  p position = -1.4962,-1,1.2519,0x8dd61957;
+	}
+}
+[t:use_point,n:0x02500971]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 0.588218,0,0.00118256,0xf453e3ea;
+	}
+}
+[t:trigger_generic,n:0x02500078]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500075,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(12.000000,1.500000,1.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.289192,0,1.88119,0x0a9b3b91;
+	}
+}
+[t:use_point,n:0x0250044d]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.19902,0,0.524078,0xfed7fefc;
+	}
+}
+[t:trigger_generic,n:0x02500a38]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A3A,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A39,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A1B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.17232e-007;
+	  p position = -2.35196,0,-1.51221,0x9011f918;
+	}
+}
+[t:trigger_generic,n:0x02500a3b]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A3A,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02500A3D,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A22,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,2.98023e-007;
+	  p position = -3.24931,0,-1.60474,0x9011f918;
+	}
+}
 [t:blocking_object,n:0x0250007e]
 {
 	[aspect]
@@ -144,11 +260,53 @@
 	  p position = 0.433878,11.97,1.90991,0xb25d9abe;
 	}
 }
-[t:use_point,n:0x02500975]
+[t:trigger_generic,n:0x02500a77]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A78,0f,"default","every",0);
+				action* = change_quest_state("c24_slice_2_quest_kill_fae_queen","active",5);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.84472,0,1.52274,0xaee58323;
+	}
+}
+[t:set_bool,n:0x02500a78]
 {
 	[placement]
 	{
-	  p position = -1.4962,-1,1.2519,0x8dd61957;
+	  q orientation = 0,1,0,2.98023e-008;
+	  p position = -3.85737,12,1.05331,0x2918514f;
+	}
+	[set_bool]
+	{
+		bool_variable = "c24_slice2_flag_queen_killed";
+	}
+}
+[t:blocking_object,n:0x02500a7c]
+{
+	[placement]
+	{
+	  p position = 0.139679,8,-1.65128,0xd2c81ed1;
 	}
 }
 [t:trigger_change_mood_box,n:0x02500082]
@@ -275,15 +433,496 @@
 	  p position = 9.1416,2.61221,-0.604326,0xa93b9325;
 	}
 }
-[t:trigger_generic,n:0x02500053]
+[t:trigger_generic,n:0x0250051f]
 {
 	[common]
 	{
+		dev_instance_text = "ON TREE DESTROYED";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x02500052,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02500801,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500520,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A1B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.244873,0,1.79273,0x2eb05dee;
+	}
+}
+[t:trigger_generic,n:0x025008ab]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500801,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02500A19,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A22,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-007,0,1;
+	  p position = 0.652374,0,1.88527,0x2eb05dee;
+	}
+}
+[t:trigger_generic,n:0x02500a3f]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A41,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A40,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A1B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.16229e-006;
+	  p position = -1.73334,0,-1.53882,0x91583bb0;
+	}
+}
+[t:trigger_generic,n:0x02500a42]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A41,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02500A44,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A22,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.16229e-006;
+	  p position = 3.36941,0,-1.63136,0xfb43502f;
+	}
+}
+[t:blocking_object,n:0x025009f2]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.168426,-6,-1.41526,0xaff74bad;
+	}
+}
+[t:use_point,n:0x0250097d]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -2.96245,0,-1.1788,0x58acdae1;
+	}
+}
+[t:use_point,n:0x0250097e]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 1.57146,0,-1.14453,0x58acdae1;
+	}
+}
+[t:use_point,n:0x0250097f]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -0.272621,0,1.01044,0x6e4db115;
+	}
+}
+[t:trigger_generic,n:0x02500a46]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A48,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A47,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A1B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.54241,0,0.863922,0x334a5269;
+	}
+}
+[t:trigger_generic,n:0x02500a49]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A48,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02500A4B,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A22,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.44987,0,-0.0333252,0x334a5269;
+	}
+}
+[t:trigger_generic,n:0x02500a4d]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A4F,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A4E,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A1B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -2.91616,0,1.09106,0x370f75d3;
+	}
+}
+[t:trigger_generic,n:0x02500a50]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A4F,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02500A52,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A22,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -2.82364,0,0.193817,0x370f75d3;
+	}
+}
+[t:trigger_generic,n:0x02500a1c]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A1E,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A1D,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A1B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 3.71066,0,0.852997,0x6a2b9eaf;
+	}
+}
+[t:trigger_generic,n:0x02500a1f]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A1E,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02500A6A,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A22,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = 3.80319,0,-0.0442505,0x6a2b9eaf;
+	}
+}
+[t:trigger_generic,n:0x02500a69]
+{
+	[common]
+	{
+		dev_instance_text = "ENABLE DESTRUCTIBLE TREES";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x02500A51,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A4A,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A58,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A35,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A66,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A43,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A27,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A2E,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A18,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A5F,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A3C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.7,0,0.5;
+	}
+	[placement]
+	{
+	  p position = 0.578644,0,0.158535,0xa6d5686d;
+	}
+}
+[t:trigger_generic,n:0x02500a1b]
+{
+	[common]
+	{
+		dev_instance_text = "A TREE WAS DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A6C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.7,0,0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.49012e-007;
+	  p position = -0.260162,0,-0.965815,0xaf682807;
+	}
+}
+[t:trigger_generic,n:0x02500a22]
+{
+	[common]
+	{
+		dev_instance_text = "A TREE WAS RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A6C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0.7,0,0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = 1.11569,0,-0.950725,0xaf682807;
+	}
+}
+[t:c24_accumulate_trigger_up_and_down,n:0x02500a6c]
+{
+	[generic_accumtrigger_up_and_down]
+	{
+	  x send_to_scid = 0x02500A6D;
+	}
+	[placement]
+	{
+	  p position = 0.956726,0,0.367111,0xaf682807;
+	}
+}
+[t:trigger_generic,n:0x02500053]
+{
+	[common]
+	{
+		dev_instance_text = "ON DRAGON KILLED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500052,0f,"default","every",0), doc("remove door");
+				action* = send_world_message("we_req_activate",0x02500A20,0f,"default","every",0), doc("destroy one of the trees");
+				action* = send_world_message("we_req_activate",0x02500A72,0f,"default","every",0), doc("spawn tree restoration quest giver");
+				action* = send_world_message("we_req_activate",0x02500A76,0f,"default","every",0), doc("spawn kill the queen quest giver");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
@@ -300,8 +939,341 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = 1.5748,0,1.27303,0x4425c11e;
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = 1.78778,0,-0.398139,0xd4667e5d;
+	}
+}
+[t:trigger_generic,n:0x02500a6d]
+{
+	[common]
+	{
+		dev_instance_text = "ON ALL TREES RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A6E,0f,"default","every",0);
+				action* = change_quest_state("c24_slice_2_quest_restore_ice_trees","active",1);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.7883,0,1.13863,0xd4667e5d;
+	}
+}
+[t:set_bool,n:0x02500a6e]
+{
+	[placement]
+	{
+	  p position = 0.501465,0,1.07593,0xd4667e5d;
+	}
+	[set_bool]
+	{
+		bool_variable = "c24_slice2_flag_ice_trees_restored";
+	}
+}
+[t:trigger_generic,n:0x02500a23]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A25,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A24,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A1B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-4.47035e-007,0,1;
+	  p position = -2.68237,0,-0.88849,0x8f3e8cb5;
+	}
+}
+[t:trigger_generic,n:0x02500a26]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A25,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02500A28,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A22,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.36442e-007,0,1;
+	  p position = -1.78513,0,-0.795895,0x8f3e8cb5;
+	}
+}
+[t:trigger_generic,n:0x02500a5b]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A5D,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A5C,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A1B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-2.68221e-007,0,1;
+	  p position = -1.44937,0,-2.29038,0x96047234;
+	}
+}
+[t:trigger_generic,n:0x02500a5e]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A5D,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02500A60,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A22,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.2517e-006,0,1;
+	  p position = -0.552124,0,-2.19783,0x96047234;
+	}
+}
+[t:trigger_generic,n:0x02500a75]
+{
+	[common]
+	{
+		dev_instance_text = "ON PRINCESS LEFT THE CAVE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A76,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 2.68033,0,-0.88471,0x4425c11e;
+	}
+}
+[t:accumulate_trigger,n:0x02500a76]
+{
+	[generic_accumtrigger]
+	{
+	  i num_til_send = 2;
+	  x send_to_scid = 0x02500A74;
+	}
+	[placement]
+	{
+	  p position = 3.95245,0,-0.792987,0x4425c11e;
+	}
+}
+[t:trigger_generic,n:0x02500a2a]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A2C,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A2B,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A1B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,5.96046e-008,0,1;
+	  p position = -3.89438,0,0.997418,0xa6280a00;
+	}
+}
+[t:trigger_generic,n:0x02500a2d]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A2C,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02500A2F,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A22,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-007,0,1;
+	  p position = -2.99713,0,1.08995,0xa6280a00;
+	}
+}
+[t:trigger_generic,n:0x02500a7d]
+{
+	[common]
+	{
+		dev_instance_text = "ON READY TO KILL QUEEN";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A7C,0f,"default","every",0), doc("unblock path");
+				action* = send_world_message("we_trigger_deactivate",0x02500A9C,0f,"default","every",0), doc("disable node fading");
+				action* = send_world_message("we_req_activate",0x02500A7E,0f,"default","every",0), delay(1), doc("unfade node");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.35904,0,3.52119,0xa6280a00;
+	}
+}
+[t:trigger_fade_nodes_global_box,n:0x02500a7e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes_global(0x00000025,40,40,40,"in");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.48947,0,1.81836,0xa6280a00;
 	}
 }
 [t:trigger_change_mood_box,n:0x02500084]
@@ -366,6 +1338,297 @@
 	  p position = 0.265843,-11.9942,-4.94699,0x10299c2f;
 	}
 }
+[t:trigger_generic,n:0x02500a6f]
+{
+	[common]
+	{
+		dev_instance_text = "ON ZAIREEN LEFT HAIRY TREE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A72,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.251,0,1.69775,0x3ece2992;
+	}
+}
+[t:accumulate_trigger,n:0x02500a72]
+{
+	[generic_accumtrigger]
+	{
+	  i num_til_send = 2;
+	  x send_to_scid = 0x02500A71;
+	}
+	[placement]
+	{
+	  p position = -1.29779,0,0.508453,0x3ece2992;
+	}
+}
+[t:trigger_generic,n:0x02500a7a]
+{
+	[common]
+	{
+		dev_instance_text = "ON QUEST TO RESTORE TREES ACCEPTED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A79,0f,"default","every",0), doc("SHOW SPELL");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0551891,0,-0.791443,0x3ece2992;
+	}
+}
+[t:trigger_generic,n:0x02500a7b]
+{
+	[common]
+	{
+		dev_instance_text = "ON SPELL PICKED UP";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_delete",0x02500A79,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 2.15542,0,-1.40497,0x3ece2992;
+	}
+}
+[t:trigger_generic,n:0x02500a31]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A33,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A32,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A1B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = 0.686703,0,3.01343,0x4beea5a0;
+	}
+}
+[t:trigger_generic,n:0x02500a34]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A33,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02500A36,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A22,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = 0.779224,0,2.11618,0x4beea5a0;
+	}
+}
+[t:trigger_generic,n:0x02500a62]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A64,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A63,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A1B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.78814e-007,0,1;
+	  p position = -2.60413,0,-1.45712,0x48cef2e0;
+	}
+}
+[t:trigger_generic,n:0x02500a65]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A64,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02500A67,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A22,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.78814e-007,0,1;
+	  p position = -1.70688,0,-1.36464,0x48cef2e0;
+	}
+}
+[t:trigger_generic,n:0x02500a54]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE DESTROYED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02500A56,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x02500A55,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A1B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.49012e-007,0,1;
+	  p position = -2.03332,0,2.04062,0x4920d6c2;
+	}
+}
+[t:trigger_generic,n:0x02500a57]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A56,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02500A59,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x02500A22,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-7.45058e-007,0,1;
+	  p position = -1.13608,0,2.13312,0x4920d6c2;
+	}
+}
 [t:trigger_generic,n:0x025009b8]
 {
 	[common]
@@ -394,30 +1657,6 @@
 	{
 	  q orientation = 0,-1,0,-1.66939e-007;
 	  p position = 0.227638,1.87036,3.51077,0x5d9092e6;
-	}
-}
-[t:use_point,n:0x0250097f]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -0.272621,0,1.01044,0x6e4db115;
-	}
-}
-[t:use_point,n:0x0250097d]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -2.96245,0,-1.1788,0x58acdae1;
-	}
-}
-[t:use_point,n:0x0250097e]
-{
-	[placement]
-	{
-	  q orientation = 0,0.382683,0,0.92388;
-	  p position = 1.57146,0,-1.14453,0x58acdae1;
 	}
 }
 [t:trigger_change_mood_box,n:0x02500080]
@@ -1049,15 +2288,7 @@
 	  p position = 3.632,5.98608,4.12448,0xe6bd68a1;
 	}
 }
-[t:use_point,n:0x02500971]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 0.588218,0,0.00118256,0xf453e3ea;
-	}
-}
-[t:trigger_generic,n:0x02500078]
+[t:trigger_generic,n:0x02500a96]
 {
 	[common]
 	{
@@ -1065,9 +2296,9 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x02500075,0f,"default","every",0);
+				action* = change_quest_state("c24_slice_2_quest_kill_fae_queen","active",4);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(12.000000,1.500000,1.000000,"on_first_enter");
+				condition* = party_member_within_bounding_box(5.000000,4.000000,1.000000,"on_first_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1082,15 +2313,139 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.289192,0,1.88119,0x0a9b3b91;
+	  q orientation = 0,1.59522e-008,0,1;
+	  p position = 9.10669,2.74743,0.234045,0xa93b9325;
 	}
 }
-[t:use_point,n:0x0250044d]
+[t:trigger_generic,n:0x02500a97]
 {
+	[common]
+	{
+		dev_instance_text = "ON PRINCESS QUEST ACCEPTED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A98,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.662109,0,-0.412943,0xfb417a3d;
+	}
+}
+[t:accumulate_trigger,n:0x02500a98]
+{
+	[generic_accumtrigger]
+	{
+	  i num_til_send = 2;
+	  x send_to_scid = 0x02500A9B;
+	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 1.19902,0,0.524078,0xfed7fefc;
+	  p position = -0.229706,0,-1.17263,0xfb417a3d;
+	}
+}
+[t:trigger_generic,n:0x02500a9a]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORE QUEST COMPLETED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A98,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.4064,0,-2.10742,0x3ece2992;
+	}
+}
+[t:trigger_generic,n:0x02500a9b]
+{
+	[common]
+	{
+		dev_instance_text = "GAINED ZAIREEN SUPPORT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("c24_slice_2_quest_kill_fae_queen","active",1);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = -1.29456,0,-1.08083,0xfb417a3d;
+	}
+}
+[t:trigger_fade_nodes_global_box,n:0x02500a9c]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes_global(0x00000025,40,40,40,"out:black");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(30.000000,4.000000,10.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,6.85453e-007;
+	  p position = -1.50739,0,-0.970627,0xe86c4d0b;
 	}
 }

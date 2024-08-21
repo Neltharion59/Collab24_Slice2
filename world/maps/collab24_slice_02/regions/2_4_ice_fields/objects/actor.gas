@@ -210,6 +210,69 @@
 	  p position = 1.17955,0,-1.63254,0x8b048ac7;
 	}
 }
+[t:c24_2_r5_naldrun_01_dmg,n:0x0250004b]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 0.148144,3,1.30211,0x93b5bc3c;
+	}
+}
+[t:c24_2_r5_naldrun_01_dmg,n:0x0250004c]
+{
+	[placement]
+	{
+	  p position = -1.84195,3,-0.436857,0x93b5bc3c;
+	}
+}
+[t:c24_2_r5_naldrun_02_trickster,n:0x0250004e]
+{
+	[placement]
+	{
+	  p position = -0.972578,3,0.839251,0x93b5bc3c;
+	}
+}
+[t:c24_2_r5_naldrun_02_trickster,n:0x02500040]
+{
+	[placement]
+	{
+	  p position = 2.6116,1,3.88199,0xe8d71d57;
+	}
+}
+[t:c24_2_r5_naldrun_01_dmg,n:0x02500058]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -1.26014,9.53674e-007,0.835889,0x3823fee6;
+	}
+}
+[t:c24_2_r5_naldrun_01_dmg,n:0x02500059]
+{
+	[mind]
+	{
+	  x initial_command = 0x0250007B;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -0.71951,0,-0.50405,0x3823fee6;
+	}
+}
+[t:c24_2_r5_naldrun_01_dmg,n:0x02500043]
+{
+	[placement]
+	{
+	  p position = 1.44372,0.847,2.73499,0x5d2b4878;
+	}
+}
+[t:c24_2_r5_naldrun_03_healer,n:0x02500046]
+{
+	[placement]
+	{
+	  p position = 1.16633,0.882633,2.91317,0x5d2b4878;
+	}
+}
 [t:c24_2_r5_naldrun_02_trickster,n:0x02500050]
 {
 	[placement]
@@ -277,33 +340,6 @@
 	[placement]
 	{
 	  p position = -1.26189,0,-0.119188,0x10b9b897;
-	}
-}
-[t:c24_2_r5_naldrun_02_trickster,n:0x02500040]
-{
-	[placement]
-	{
-	  p position = 2.6116,1,3.88199,0xe8d71d57;
-	}
-}
-[t:c24_2_r5_naldrun_01_dmg,n:0x02500058]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -1.26014,9.53674e-007,0.835889,0x3823fee6;
-	}
-}
-[t:c24_2_r5_naldrun_01_dmg,n:0x02500059]
-{
-	[mind]
-	{
-	  x initial_command = 0x0250007B;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -0.71951,0,-0.50405,0x3823fee6;
 	}
 }
 [t:c24_2_r5_naldrun_03_healer,n:0x02500035]
@@ -388,251 +424,6 @@
 	  p position = 2.43144,0,0.287292,0x8a251411;
 	}
 }
-[t:c24_2_r5_naldrun_01_dmg,n:0x0250004b]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 0.148144,3,1.30211,0x93b5bc3c;
-	}
-}
-[t:c24_2_r5_naldrun_01_dmg,n:0x0250004c]
-{
-	[placement]
-	{
-	  p position = -1.84195,3,-0.436857,0x93b5bc3c;
-	}
-}
-[t:c24_2_r5_naldrun_02_trickster,n:0x0250004e]
-{
-	[placement]
-	{
-	  p position = -0.972578,3,0.839251,0x93b5bc3c;
-	}
-}
-[t:c24_2_r5_dragon_boss,n:0x02500051]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02500053,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 4.37048e-007,-0.707107,-2.44248e-008,0.707106;
-	  p position = 2.70613,0,-0.270447,0x5e7d5885;
-	}
-}
-[t:collab24_slice2_pm_l4,n:0x02500065]
-{
-	[aspect]
-	{
-	  f max_life = 68.6;
-	  f max_mana = 80;
-	}
-	[common]
-	{
-		dev_instance_text = "Singleplayer";
-	  b is_multi_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = collab24_slice2_conversation_pm_l4_accept;
-			* = collab24_slice2_conversation_pm_l4_disband;
-			* = collab24_slice2_conversation_pm_l4_disband_rejoin;
-			* = collab24_slice2_conversation_pm_l4_join;
-			* = collab24_slice2_conversation_pm_l4_reject;
-			* = collab24_slice2_conversation_pm_l4_rejoin;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_collab24_slice2_pm_l4.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.984808,0,-0.173648;
-	  p position = 2.59193,-3.65,0.636352,0x6cb2f6cd;
-	}
-}
-[t:c24_slice_2_r4_fae_lands_hermit,n:0x025009a8]
-{
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conv_collab24_slice2_r4_fae_lover_after_quest_first;
-			* = conv_collab24_slice2_r4_fae_lover_after_quest_next;
-			* = conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_first;
-			* = conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_next;
-			* = conv_collab24_slice2_r4_fae_lover_b4_quest_first;
-			* = conv_collab24_slice2_r4_fae_lover_b4_quest_next;
-			* = conv_collab24_slice2_r4_fae_lover_ready_for_trap;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_fae_lover_r4.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,3.12407e-007,0,-1;
-	  p position = -6.87026,-4.65,2.81648,0x6cb2f6cd;
-	}
-}
-[t:c24_2_r4_npc_naldrun_in_love,n:0x025009cb]
-{
-	[aspect]
-	{
-	  b is_selectable = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,6.46033e-009,0,1;
-	  p position = -7.11117,-4.65,-0.926483,0x6cb2f6cd;
-	}
-}
-[t:c24_2_r4_npc_naldrun_in_love_store,n:0x025009d2]
-{
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conv_c24_r4_fae_shop_first;
-			* = conv_c24_r4_fae_shop_next;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice2_fae_shop_r4.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1,0,-1.45468e-007;
-	  p position = 1.65082,-3.65,-0.884384,0x6cb2f6cd;
-	}
-}
-[t:c24_2_r5_vasp,n:0x025009ba]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x025009C2,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382682;
-	  p position = -1.86928,0,-0.0930786,0x912e05e5;
-	}
-}
-[t:c24_2_r5_naldrun_boss_01_trapper,n:0x025009b7]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x025009C1,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.923879,0,-0.382684;
-	  p position = 1.00856,0,-0.126923,0x2dfa1f16;
-	}
-}
-[t:c24_2_r5_naldrun_03_healer,n:0x0250005f]
-{
-	[placement]
-	{
-	  p position = 0.048223,0,0.240976,0x7da6753d;
-	}
-}
-[t:c24_2_r5_naldrun_01_dmg,n:0x02500061]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 1.12277,0,1.56289,0x7da6753d;
-	}
-}
-[t:c24_2_r5_naldrun_03_healer,n:0x0250005e]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -1.65278,0,-0.291351,0x653eff7a;
-	}
-}
-[t:c24_2_r5_naldrun_02_trickster,n:0x02500060]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -1.6545,1.90735e-006,1.37367,0x653eff7a;
-	}
-}
-[t:c24_2_r5_naldrun_01_dmg,n:0x02500043]
-{
-	[placement]
-	{
-	  p position = 1.44372,0.847,2.73499,0x5d2b4878;
-	}
-}
-[t:c24_2_r5_naldrun_03_healer,n:0x02500046]
-{
-	[placement]
-	{
-	  p position = 1.16633,0.882633,2.91317,0x5d2b4878;
-	}
-}
 [t:c24_2_r5_naldrun_01_dmg,n:0x0250003e]
 {
 	[placement]
@@ -669,56 +460,6 @@
 	{
 	  q orientation = 0,-0.382683,0,0.92388;
 	  p position = 1.91305,0.958536,0.518441,0x814fbf8f;
-	}
-}
-[t:c24_2_r5_naldrun_02_trickster,n:0x0250006a]
-{
-	[placement]
-	{
-	  p position = -1.55314,12,0.688874,0x2918514f;
-	}
-}
-[t:c24_2_r5_naldrun_03_healer,n:0x0250006c]
-{
-	[placement]
-	{
-	  p position = -1.59948,12,0.35464,0x2918514f;
-	}
-}
-[t:c24_2_r5_naldrun_03_healer,n:0x0250006d]
-{
-	[placement]
-	{
-	  p position = -2.01018,12,0.0608597,0x2918514f;
-	}
-}
-[t:c24_2_r5_fairy_queen_boss,n:0x02500069]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 2.26662,0,1.45334,0xaee58323;
-	}
-}
-[t:c24_2_r5_naldrun_02_trickster,n:0x0250006b]
-{
-	[placement]
-	{
-	  p position = 1.66144,0,0.0222327,0xaee58323;
-	}
-}
-[t:c24_2_r5_naldrun_03_healer,n:0x0250006e]
-{
-	[placement]
-	{
-	  p position = 0.87953,9.53674e-007,-0.545044,0xaee58323;
-	}
-}
-[t:c24_2_r5_naldrun_03_healer,n:0x0250006f]
-{
-	[placement]
-	{
-	  p position = 1.72196,9.53674e-007,-1.05953,0xaee58323;
 	}
 }
 [t:c24_2_r5_naldrun_03_healer,n:0x0250002c]
@@ -954,6 +695,366 @@
 	[placement]
 	{
 	  p position = 2.76348,0,-3.52049,0xf040f657;
+	}
+}
+[t:c24_2_r5_fairy_queen_boss,n:0x02500069]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A77,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 2.26662,0,1.45334,0xaee58323;
+	}
+}
+[t:c24_2_r5_naldrun_02_trickster,n:0x0250006b]
+{
+	[placement]
+	{
+	  p position = 1.66144,0,0.0222327,0xaee58323;
+	}
+}
+[t:c24_2_r5_naldrun_03_healer,n:0x0250006e]
+{
+	[placement]
+	{
+	  p position = 0.87953,9.53674e-007,-0.545044,0xaee58323;
+	}
+}
+[t:c24_2_r5_naldrun_03_healer,n:0x0250006f]
+{
+	[placement]
+	{
+	  p position = 1.72196,9.53674e-007,-1.05953,0xaee58323;
+	}
+}
+[t:c24_2_r5_naldrun_02_trickster,n:0x0250006a]
+{
+	[placement]
+	{
+	  p position = -1.55314,12,0.688874,0x2918514f;
+	}
+}
+[t:c24_2_r5_naldrun_03_healer,n:0x0250006c]
+{
+	[placement]
+	{
+	  p position = -1.59948,12,0.35464,0x2918514f;
+	}
+}
+[t:c24_2_r5_naldrun_03_healer,n:0x0250006d]
+{
+	[placement]
+	{
+	  p position = -2.01018,12,0.0608597,0x2918514f;
+	}
+}
+[t:c24_2_r5_dragon_boss,n:0x02500051]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500053,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A69,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_enemy_spotted",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = -3.26311e-007,1,-2.91769e-007,1.2815e-006;
+	  p position = 1.83011,0,3.07422,0xe86c4d0b;
+	}
+}
+[t:c24_2_r3_npc_naldrun_princess,n:0x02500a73]
+{
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_c24_r4_fairy_princess_after_tree_quest_first;
+			* = conv_c24_r4_fairy_princess_after_tree_quest_next;
+			* = conv_c24_r4_fairy_princess_b4_quest_first;
+			* = conv_c24_r4_fairy_princess_b4_quest_next;
+			* = conv_c24_r4_fairy_princess_gained_support_first;
+			* = conv_c24_r4_fairy_princess_gained_support_next;
+			* = conv_c24_r4_fairy_princess_queen_killed_first;
+			* = conv_c24_r4_fairy_princess_queen_killed_next;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_collab24_slice2_fae_princess_r4.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.158417,0,1.04283,0xfb417a3d;
+	}
+}
+[t:c24_2_r3_npc_naldrun_tree,n:0x02500a70]
+{
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[aspect]
+	{
+	  b is_collidable = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_c24_r4_fairy_trees_after_quest_first;
+			* = conv_c24_r4_fairy_trees_after_quest_next;
+			* = conv_c24_r4_fairy_trees_asking_help_4_princess_first;
+			* = conv_c24_r4_fairy_trees_asking_help_4_princess_next;
+			* = conv_c24_r4_fairy_trees_b4_quest_first;
+			* = conv_c24_r4_fairy_trees_b4_quest_next;
+			* = conv_c24_r4_fairy_trees_queen_killed_first;
+			* = conv_c24_r4_fairy_trees_queen_killed_next;
+		}
+	}
+	[mind]
+	{
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_fairy_tree_r4.skrit;
+	}
+	[placement]
+	{
+	  p position = -0.227995,0,-2.16147,0x3ece2992;
+	}
+}
+[t:collab24_slice2_pm_l4,n:0x02500065]
+{
+	[aspect]
+	{
+	  f max_life = 68.6;
+	  f max_mana = 80;
+	}
+	[common]
+	{
+		dev_instance_text = "Singleplayer";
+	  b is_multi_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = collab24_slice2_conversation_pm_l4_accept;
+			* = collab24_slice2_conversation_pm_l4_disband;
+			* = collab24_slice2_conversation_pm_l4_disband_rejoin;
+			* = collab24_slice2_conversation_pm_l4_join;
+			* = collab24_slice2_conversation_pm_l4_reject;
+			* = collab24_slice2_conversation_pm_l4_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_collab24_slice2_pm_l4.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.984808,0,-0.173648;
+	  p position = 2.59193,-3.65,0.636352,0x6cb2f6cd;
+	}
+}
+[t:c24_slice_2_r4_fae_lands_hermit,n:0x025009a8]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_collab24_slice2_r4_fae_lover_after_quest_first;
+			* = conv_collab24_slice2_r4_fae_lover_after_quest_next;
+			* = conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_first;
+			* = conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_next;
+			* = conv_collab24_slice2_r4_fae_lover_b4_quest_first;
+			* = conv_collab24_slice2_r4_fae_lover_b4_quest_next;
+			* = conv_collab24_slice2_r4_fae_lover_ready_for_trap;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_fae_lover_r4.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,3.12407e-007,0,-1;
+	  p position = -6.87026,-4.65,2.81648,0x6cb2f6cd;
+	}
+}
+[t:c24_2_r4_npc_naldrun_in_love,n:0x025009cb]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,6.46033e-009,0,1;
+	  p position = -7.11117,-4.65,-0.926483,0x6cb2f6cd;
+	}
+}
+[t:c24_2_r4_npc_naldrun_in_love_store,n:0x025009d2]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conv_c24_r4_fae_shop_first;
+			* = conv_c24_r4_fae_shop_next;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice2_fae_shop_r4.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.45468e-007;
+	  p position = 1.65082,-3.65,-0.884384,0x6cb2f6cd;
+	}
+}
+[t:c24_2_r5_vasp,n:0x025009ba]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x025009C2,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382682;
+	  p position = -1.86928,0,-0.0930786,0x912e05e5;
+	}
+}
+[t:c24_2_r5_naldrun_boss_01_trapper,n:0x025009b7]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x025009C1,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = 1.00856,0,-0.126923,0x2dfa1f16;
+	}
+}
+[t:c24_2_r5_naldrun_03_healer,n:0x0250005f]
+{
+	[placement]
+	{
+	  p position = 0.048223,0,0.240976,0x7da6753d;
+	}
+}
+[t:c24_2_r5_naldrun_01_dmg,n:0x02500061]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.12277,0,1.56289,0x7da6753d;
+	}
+}
+[t:c24_2_r5_naldrun_03_healer,n:0x0250005e]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -1.65278,0,-0.291351,0x653eff7a;
+	}
+}
+[t:c24_2_r5_naldrun_02_trickster,n:0x02500060]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -1.6545,1.90735e-006,1.37367,0x653eff7a;
 	}
 }
 [t:c24_2_r5_naldrun_01_dmg,n:0x02500005]
