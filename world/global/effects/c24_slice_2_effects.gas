@@ -1645,3 +1645,69 @@
 			worldmsg WE_SPELL_SYNC_END #OWNER_GOID #OWNER_GOID #TARGET_GOID;
 			]];
 }
+[effect_script*]
+{
+	name	=collab24_slice2_effect_dust_explosion;
+
+	script	=[[
+			camerashake camera_stomp s<frequency=12&magnitude_x=0.1&magnitude_y=.5&magnitude_z=0.1&duration=.3&epicenter=#TARGET_GOID>;
+			
+			sfx create fire #TARGET 
+				"dark()grey_tex()dur(1)color0(0,0,0)color1(0,0,0)count(40)
+				alphafade(.2)flamesize(32)max_radius(40)velocity(0,6,0)
+				accel(0,0,0)";
+			sfx attach_point #PEEK AP_flame target;
+			sfx snap_to_ground #PEEK;
+			sfx start #POP;
+			
+			sfx create fire #TARGET 
+				"dark()grey_tex()dur(1)color0(0,0,0)color1(0,0,0)count(40)
+				alphafade(.2)flamesize(12)max_radius(12)velocity(0,6,0)
+				accel(0,0,0)";
+			sfx attach_point #PEEK AP_flame target;
+			sfx start #POP;
+		
+			sfx create explosion #TARGET
+			"ivel(0,2,0)rvel(4,2,4)texture(b_sfx_rock_single_01)
+			omni_dir()color0(0,0,0)color1(0,0,0)dark()dur(4)count(40)
+			collide()rand_scale()scale_range(.4,.8,0)";
+			
+			
+			sfx attach_point #PEEK AP_flame target;
+			sfx snap_to_ground #PEEK;
+			sfx start #POP;
+			
+			sfx create explosion #TARGET
+			"ivel(0,2,0)rvel(4,2,4)texture(b_sfx_rock_single_02)
+			omni_dir()color0(0,0,0)color1(0,0,0)dark()dur(4)count(40)
+			collide()rand_scale()scale_range(.4,.8,0)";
+			
+			
+			sfx attach_point #PEEK AP_flame target;
+			sfx snap_to_ground #PEEK;
+			sfx start #POP;
+			
+			sfx create explosion #TARGET
+			"ivel(0,2,0)rvel(4,2,4)texture(b_sfx_rock_single_03)
+			omni_dir()color0(0,0,0)color1(0,0,0)dark()dur(4)count(20)
+			collide()rand_scale()scale_range(.2,.4,0)";
+			
+			
+			sfx attach_point #PEEK AP_flame target;
+			sfx snap_to_ground #PEEK;
+			sfx start #POP;
+			
+			sfx create explosion #TARGET
+			"ivel(0,2,0)rvel(4,2,4)texture(b_sfx_rock_single_04)
+			omni_dir()color0(0,0,0)color1(0,0,0)dark()dur(4)count(40)
+			collide()rand_scale()scale_range(.4,.8,0)";
+			
+			
+			sfx attach_point #PEEK AP_flame target;
+			sfx snap_to_ground #PEEK;
+			sfx start #POP;
+			
+			sound play s_e_smash_rockbeast at #SOURCE_POSITION dist 1 12;
+			
+			]];
+}
