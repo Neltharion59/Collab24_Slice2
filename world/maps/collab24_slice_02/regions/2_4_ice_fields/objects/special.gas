@@ -433,6 +433,35 @@
 	  p position = 9.1416,2.61221,-0.604326,0xa93b9325;
 	}
 }
+[t:trigger_generic,n:0x02500a96]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("c24_slice_2_quest_kill_fae_queen","active",4);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,4.000000,1.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1.59522e-008,0,1;
+	  p position = 9.10669,2.74743,0.234045,0xa93b9325;
+	}
+}
 [t:trigger_generic,n:0x0250051f]
 {
 	[common]
@@ -786,6 +815,35 @@
 	{
 	  q orientation = 0,0.707106,0,0.707107;
 	  p position = 3.80319,0,-0.0442505,0x6a2b9eaf;
+	}
+}
+[t:trigger_fade_nodes_global_box,n:0x02500a9c]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes_global(0x00000025,40,40,40,"out:black");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(30.000000,4.000000,10.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,6.85453e-007;
+	  p position = -1.50739,0,-0.970627,0xe86c4d0b;
 	}
 }
 [t:trigger_generic,n:0x02500a69]
@@ -1276,6 +1334,79 @@
 	  p position = 1.48947,0,1.81836,0xa6280a00;
 	}
 }
+[t:trigger_generic,n:0x02500a97]
+{
+	[common]
+	{
+		dev_instance_text = "ON PRINCESS QUEST ACCEPTED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A98,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.662109,0,-0.412943,0xfb417a3d;
+	}
+}
+[t:accumulate_trigger,n:0x02500a98]
+{
+	[generic_accumtrigger]
+	{
+	  i num_til_send = 2;
+	  x send_to_scid = 0x02500A9B;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.229706,0,-1.17263,0xfb417a3d;
+	}
+}
+[t:trigger_generic,n:0x02500a9b]
+{
+	[common]
+	{
+		dev_instance_text = "GAINED ZAIREEN SUPPORT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("c24_slice_2_quest_kill_fae_queen","active",1);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = -1.29456,0,-1.08083,0xfb417a3d;
+	}
+}
 [t:trigger_change_mood_box,n:0x02500084]
 {
 	[common]
@@ -1388,7 +1519,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_deactivate",0x02500A79,0f,"default","every",0), doc("SHOW SPELL");
+				action* = send_world_message("we_req_deactivate",0x02500A79,0f,"default","every",0), doc("show spell");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
@@ -1435,6 +1566,36 @@
 	[placement]
 	{
 	  p position = 2.15542,0,-1.40497,0x3ece2992;
+	}
+}
+[t:trigger_generic,n:0x02500a9a]
+{
+	[common]
+	{
+		dev_instance_text = "ON TREE RESTORE QUEST COMPLETED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02500A98,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.4064,0,-2.10742,0x3ece2992;
 	}
 }
 [t:trigger_generic,n:0x02500a31]
@@ -2286,166 +2447,5 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 3.632,5.98608,4.12448,0xe6bd68a1;
-	}
-}
-[t:trigger_generic,n:0x02500a96]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("c24_slice_2_quest_kill_fae_queen","active",4);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(5.000000,4.000000,1.000000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1.59522e-008,0,1;
-	  p position = 9.10669,2.74743,0.234045,0xa93b9325;
-	}
-}
-[t:trigger_generic,n:0x02500a97]
-{
-	[common]
-	{
-		dev_instance_text = "ON PRINCESS QUEST ACCEPTED";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02500A98,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 0.662109,0,-0.412943,0xfb417a3d;
-	}
-}
-[t:accumulate_trigger,n:0x02500a98]
-{
-	[generic_accumtrigger]
-	{
-	  i num_til_send = 2;
-	  x send_to_scid = 0x02500A9B;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.229706,0,-1.17263,0xfb417a3d;
-	}
-}
-[t:trigger_generic,n:0x02500a9a]
-{
-	[common]
-	{
-		dev_instance_text = "ON TREE RESTORE QUEST COMPLETED";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02500A98,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -1.4064,0,-2.10742,0x3ece2992;
-	}
-}
-[t:trigger_generic,n:0x02500a9b]
-{
-	[common]
-	{
-		dev_instance_text = "GAINED ZAIREEN SUPPORT";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("c24_slice_2_quest_kill_fae_queen","active",1);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.49012e-007;
-	  p position = -1.29456,0,-1.08083,0xfb417a3d;
-	}
-}
-[t:trigger_fade_nodes_global_box,n:0x02500a9c]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes_global(0x00000025,40,40,40,"out:black");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(30.000000,4.000000,10.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,6.85453e-007;
-	  p position = -1.50739,0,-0.970627,0xe86c4d0b;
 	}
 }

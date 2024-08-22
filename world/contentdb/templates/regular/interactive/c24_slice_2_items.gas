@@ -971,18 +971,7 @@
 	{
 		screen_name = "Restore Ice Tree";
 		is_pcontent_allowed = false;
-	}
-	[common]
-	{
 		description = "Summons a short-lived seed to restore an ice tree.";
-		[template_triggers]
-		{
-			[*]
-			{
-				action* = call_sfx_script( "nature_spell_sparkle" );
-				condition* = receive_world_message("we_dropped");
-			}
-		}
 	}
 	[gui]
 	{
@@ -993,7 +982,6 @@
 	{
 		apply_enchantments = false;
 		one_use = false;
-		pcontent_level = 4;
 		cast_experience = 1;
 		cast_range = 10;
 		cast_reload_delay = 1;
