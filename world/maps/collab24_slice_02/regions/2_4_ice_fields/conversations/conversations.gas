@@ -3,7 +3,7 @@
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "Let me go with you.";
+		screen_text = "Hello, traveler. You come from Frostfingers, right? Have you had the chance to meet my brother, the blacksmith? Yeah, that sounds like him.\n\nSee, he tried to teach some of his smithing arts, but I am cut from different cloth. I set off for the lands of the frost fae, to learn more about ice magic. Unfortunate timing, right? I ended up stuck in Thaelaen's hut here.\n\nListen, how about I join your cause? Any chance to learn more about ice magic is better than skulking around.";
 		scroll_rate = 6.5;
 	}
 }
@@ -11,21 +11,21 @@
 {
 	[text*]
 	{
-		screen_text = "I'm happy to go with you.";
+		screen_text = "Excelent. I cannot wait to get a chance for some practice.";
 	}
 }
 [collab24_slice2_conversation_pm_l4_reject]
 {
 	[text*]
 	{
-		screen_text = "Why cannot I go with you?";
+		screen_text = "A pity, but I respect that. Perhaps the fae lands have hidden knowledge for me to uncover.";
 	}
 }
 [collab24_slice2_conversation_pm_l4_rejoin]
 {
 	[text*]
 	{
-		screen_text = "Let me go with you.";
+		screen_text = "So, you're back? Any new stories to tell? Or perhaps a fellowship for me to join?";
 		choice = potential_member;
 	}
 }
@@ -33,14 +33,14 @@
 {
 	[text*]
 	{
-		screen_text = "I shall not go with you anymore.";
+		screen_text = "I do not believe I have learnt all I can from you, but I understand nothing lasts forever. It was nice while it lasted.";
 	}
 }
 [collab24_slice2_conversation_pm_l4_disband_rejoin]
 {
 	[text*]
 	{
-		screen_text = "Let us go together again.";
+		screen_text = "Pretty inconstant, are we? How we managed to have such great cooperation together is beyond me. But we might resume where we left off anyway. There is so much in this world I have yet to learn.";
 		choice = potential_member;
 	}
 }
@@ -124,14 +124,14 @@
 	{
 		activate_quest* = c24_slice_2_quest_restore_ice_trees,0;
 	  b quest_dialog = true;
-		screen_text = "Restore the trees.";
+		screen_text = "An elephant in a glass store, are you? I leave my eyes off you for a moment, and our icy grove is shattered to pieces. Destroying Phrymallix the dragon was a noble deed, no doubt, just as finding that healing scroll for Rethoros. But you should learn to clean your own mess.\n\nHere, take this spell. Cast it upon the icy stumps left after the destroyed trees. It will restore the trees to their former beauty. Come find me when all trees have been restored.";
 	}
 }
 [conv_c24_r4_fairy_trees_b4_quest_next]
 {
 	[text*]
 	{
-		screen_text = "Restore the trees, again.";
+		screen_text = "Do not tally, friend. The trees must be restored. Remember to cast the spell I gave you upon ALL the icy stumps nearby.";
 	}
 }
 [conv_c24_r4_fairy_trees_after_quest_first]
@@ -141,14 +141,14 @@
 		activate_quest* = c24_slice_2_quest_restore_ice_trees,2;
 		complete_quest* = c24_slice_2_quest_restore_ice_trees;
 	  b quest_dialog = true;
-		screen_text = "You have restored the trees.";
+		screen_text = "Your kindness knows no boundaries, does it, friend? You take pity upon trees both organic and icy. You truly are a friend to the nature and the fae folk, despite having fought some of our derranged sisters.";
 	}
 }
 [conv_c24_r4_fairy_trees_after_quest_next]
 {
 	[text*]
 	{
-		screen_text = "You have restored the trees, again.";
+		screen_text = "I thank you friend, even for those who cannot express their thanks. I hope you will remain a friend to the fae folk for the rest of your life.";
 	}
 }
 [conv_c24_r4_fairy_trees_asking_help_4_princess_first]
@@ -157,28 +157,28 @@
 	{
 		activate_quest* = c24_slice_2_quest_kill_fae_queen,3;
 	  b quest_dialog = true;
-		screen_text = "I shall help the princess.";
+		screen_text = "You seek to champion Princess Glamoulla's cause? I am not fully convinced she would make a good queen. Thought it's true our queen cowardly fled to Isle of Rhea Yhanity when our realm needed a defender, a role you have taken upon yourself. Allright, if one as trustworthy as you seeks to put Princess Glamoulla on the throne, I have no objections. Very well, the Isle of Rhea Yhanity is now open to you.";
 	}
 }
 [conv_c24_r4_fairy_trees_asking_help_4_princess_next]
 {
 	[text*]
 	{
-		screen_text = "I shall help the princess, again.";
+		screen_text = "I have granted you the access to Isle of Rhea Yhanity. Do what must be done, before I reconsider.";
 	}
 }
 [conv_c24_r4_fairy_trees_queen_killed_first]
 {
 	[text*]
 	{
-		screen_text = "The queen is dead.";
+		screen_text = "So, the regicide I assisted has been brought to an end. What that means for our realm, is now up to Princess Glamoulla.";
 	}
 }
 [conv_c24_r4_fairy_trees_queen_killed_next]
 {
 	[text*]
 	{
-		screen_text = "The queen is dead, again.";
+		screen_text = "Long live Glamoulla the Queen. The brief conversations we managed to have so far hint me that her reign might be good one for the realm and its creatures.";
 	}
 }
 [conv_c24_r4_fairy_princess_b4_quest_first]
@@ -187,14 +187,14 @@
 	{
 		activate_quest* = c24_slice_2_quest_kill_fae_queen,0;
 	  b quest_dialog = true;
-		screen_text = "Become friends with Zaireen.";
+		screen_text = "Oh, my grand curse-breaking hero is here. Have you spoken with that hag who froze me in the tomb? I hope she cried a lot after I took her...cooking recipes! Would you believe? The jealously guarded great tomes of hers are just some stupid cooking recipes. Bortusk stew here, roasted rat whiskers there...is that what humans really eat?\n\nAnyway, I am now forced to achieve my goals in the traditional way. Which means I must choose a champion of my cause. Would you guess who's that going to be?\n\nYou're right. My mother the queen is cowardly hiding at Isle of Rhea Yhanity, where she thought herself safe from the drake. To enter the Isle, you need one of her royal consort to summon the bridge for you. Most of them are hiding with her, but one that calls herself Zaireen should be still in these parts. She was not with her, as she was attending an injured tree of some sorts near the town of Frostfingers.\n\nSee if you can gain her trust. She must summon the bridge willingly, or it won't work.";
 	}
 }
 [conv_c24_r4_fairy_princess_b4_quest_next]
 {
 	[text*]
 	{
-		screen_text = "Become friends with Zaireen, again.";
+		screen_text = "Speak with Zaireen and do anything she asks of you. She is the only way to access Isle of Rhea Yhanity, where my mother the queen is hiding.";
 	}
 }
 [conv_c24_r4_fairy_princess_after_tree_quest_first]
@@ -203,28 +203,28 @@
 	{
 		activate_quest* = c24_slice_2_quest_kill_fae_queen,2;
 	  b quest_dialog = true;
-		screen_text = "Speak with Zaireen on my behalf.";
+		screen_text = "Oh, helping an injured tree and restoring the icy grove surely must have made her trust you a great deal. This is ideal time to ask for her help.";
 	}
 }
 [conv_c24_r4_fairy_princess_after_tree_quest_next]
 {
 	[text*]
 	{
-		screen_text = "Speak with Zaireen on my behalf, again.";
+		screen_text = "Speak with Zaireen and ask her to summon the bridge to Isle of Rhea Yhanity. There, you will be able to kill my mother the queen.";
 	}
 }
 [conv_c24_r4_fairy_princess_gained_support_first]
 {
 	[text*]
 	{
-		screen_text = "Kill the queen.";
+		screen_text = "The bridge is now open. To arms my champion, put an end to the undeserving cowardly queen. As all the fae queens ever, I shall rise to take the place my champion clears for me.";
 	}
 }
 [conv_c24_r4_fairy_princess_gained_support_next]
 {
 	[text*]
 	{
-		screen_text = "Kill the queen, again.";
+		screen_text = "Hesitate not my champion, bring righteousness to the deserving.";
 	}
 }
 [conv_c24_r4_fairy_princess_queen_killed_first]
@@ -234,13 +234,13 @@
 		activate_quest* = c24_slice_2_quest_kill_fae_queen,6;
 		complete_quest* = c24_slice_2_quest_kill_fae_queen;
 	  b quest_dialog = true;
-		screen_text = "I am the queen now.";
+		screen_text = "So, the unworthy queen has been slain by my righteous champion. Now, we shall begin the rituals that will grant me the power and the form of a queen, as is our custom. You have served me well. Now, you are considered a loyal friend of the fae realm. I, your queen, thank you for your courage and strength.";
 	}
 }
 [conv_c24_r4_fairy_princess_queen_killed_next]
 {
 	[text*]
 	{
-		screen_text = "I am the queen now, again.";
+		screen_text = "As a new queen, I am as busy as ever. But I am always ready to hear your thoughts, my champ...friend. My dear friend.";
 	}
 }
