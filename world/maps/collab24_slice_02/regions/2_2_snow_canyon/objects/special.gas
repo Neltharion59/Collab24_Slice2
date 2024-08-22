@@ -380,6 +380,8 @@
 				action* = send_world_message("we_req_activate",0x023001D8,0f,"default","every",0);
 				action* = send_world_message("we_req_deactivate",0x023001D9,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x02300837,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0230085F,0f,"default","every",0), doc("dwarf charred texture");
+				action* = send_world_message("we_req_deactivate",0x023008AF,0f,"default","every",0), doc("make the rock damagable");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -436,8 +438,40 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -1.93874,0,-1.98507,0xacd1e648;
+	  q orientation = 0,1,0,-2.98023e-008;
+	  p position = -0.376812,-0.47261,-2.67578,0xe42c1d85;
+	}
+}
+[t:trigger_generic,n:0x02300096]
+{
+	[common]
+	{
+		dev_instance_text = "ON DWARF TALKED TO";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_deactivate",0x02300094,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x0230085F,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x023008BC,0f,"default","every",0), doc("ENABLE PACK RAMS");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-5.96046e-008;
+	  p position = 0.71286,-0.76058,-2.77774,0xe42c1d85;
 	}
 }
 [t:trigger_change_mood_box,n:0x023001ae]
@@ -496,35 +530,6 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 1.88921,0,-1.84533,0xacd1e648;
-	}
-}
-[t:trigger_generic,n:0x02300096]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_trigger_deactivate",0x02300094,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x02300096,0f,"default","every",0), delay(3);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 3.83927,0,3.13298,0x2037c246;
 	}
 }
 [t:trigger_fade_nodes_global_box,n:0x023000a5]
@@ -1493,5 +1498,37 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -2.38263,0,-0.057106,0x03e2fdd2;
+	}
+}
+[t:trigger_generic,n:0x023008bc]
+{
+	[common]
+	{
+		dev_instance_text = "SPAWN PACKRAMS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x023008B5,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x023008B6,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x023008B8,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -1.13025,0.961081,3.3054,0x47a3a5c5;
 	}
 }
