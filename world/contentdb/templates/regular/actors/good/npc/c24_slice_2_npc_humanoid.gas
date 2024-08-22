@@ -310,6 +310,16 @@
 	[conversation]
 	{
 	}
+	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				es_weapon_hand = pickaxe;
+			}
+		}
+	}
 	[mind]
 	{
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
