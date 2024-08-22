@@ -22,10 +22,6 @@
 		mana = 70;
 		max_mana = 70;
 		model = m_c_edm_054_pos_1;
-		[textures]
-		{
-			0 = b_c_edm_054-04;
-		}
 		[voice]
 		{
 			[cast]		{ priority = high; * = s_e_ds2_gen_naldrn_atk; }
@@ -150,6 +146,13 @@
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R5 Naldrun 01 Dmg";
 	specializes = c24_2_r5_naldrun_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_edm_054_fae_v01;
+		}
+	}
 	[common]
 	{
 		screen_name="Frost Fae Ravager";
@@ -223,6 +226,13 @@
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R5 Naldrun 02 Trickster";
 	specializes = c24_2_r5_naldrun_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_edm_054_fae_v02;
+		}
+	}
 	[common]
 	{
 		screen_name="Frost Fae Enchanter";
@@ -300,6 +310,13 @@
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R5 naldrun 03 Healer";
 	specializes = c24_2_r5_naldrun_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_edm_054_fae_v03;
+		}
+	}
 	[common]
 	{
 		screen_name="Frost Fae Nourisher";
@@ -389,6 +406,10 @@
 		max_life = 81;
 		mana = 180;
 		max_mana = 180;
+		[textures]
+		{
+			0 = b_c_edm_054_fae_v04;
+		}
 	}
 	[common]
 	{
