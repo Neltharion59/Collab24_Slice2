@@ -374,3 +374,123 @@
 		use_point_scids = 0x026000a5;
 	}
 }
+[t:c24_generator_ice_door,n:0x026001d4]
+{
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r4_lertisk";
+	  x initial_command = 0x026001E8;
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.2;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  p position = 0.182755,-3.84036,1.40609,0x66850d52;
+	}
+}
+[t:c24_generator_ice_door,n:0x026001ec]
+{
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r4_lertisk";
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.2;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.233445,0,0.97237;
+	  p position = 3.28385,0,-3.43487,0x9ec3dfe4;
+	}
+}
+[t:c24_generator_ice_door,n:0x026001ee]
+{
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r4_lertisk";
+	  x initial_command = 0x026001FA;
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.2;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.999848,0,-0.0174525;
+	  p position = -3.27395,-12,-3.10355,0x4fdf2d97;
+	}
+}
+[t:c24_generator_ice_door,n:0x026001f0]
+{
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r4_lertisk";
+	  x initial_command = 0x026001F9;
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.2;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.999848,0,-0.0174525;
+	  p position = -2.55788,-12,-3.73699,0x44fce746;
+	}
+}
+[t:c24_generator_ice_door,n:0x026001f2]
+{
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r4_lertisk";
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.2;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.999848,0,0.0174525;
+	  p position = -0.162637,-5.87753,-4.79977,0x471c20eb;
+	}
+}
+[t:c24_generator_ice_door,n:0x026001f4]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r4_lertisk";
+	  x initial_command = 0x026001FC;
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.2;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.694658,0,-0.71934;
+	  p position = -1.51558,0,-0.531593,0x73588717;
+	}
+}
+[t:c24_generator_ice_door,n:0x026001f6]
+{
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r4_lertisk";
+	  x initial_command = 0x026001F8;
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.2;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.995396,0,0.0958456;
+	  p position = -6.27069,-3.86213,-5.13887,0xd9e5bf15;
+	}
+}
