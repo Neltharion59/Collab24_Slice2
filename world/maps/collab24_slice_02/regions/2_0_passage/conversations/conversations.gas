@@ -24,8 +24,10 @@
 {
 	[text*]
 	{
+		activate_quest* = c24_slice_2_quest_pond,0;
+	  b quest_dialog = true;
 		choice = potential_member;
-		screen_text = "Traveler, what a happy encounter! You managed to meet me before the Master of the pond bested you. He is powerful and fearsome, and posseses command over the element of water. He causes all sorts of mischief to unwary travelers.\n\nMyself, I am a water being, so I was enthralled by his powers, forced to serve him. He had a minor skirmish with the giant brothers living in these caves, during which I managed to escape. Then I met Dahlia here, who offered me a job as her escort. Not having seen much in my life besides ponds and underground rivers, I was excited about the opportunity. However, soon after those undead bodies attacked us, I lost a couple of shovels, which she says I owe her money for. From mud to peddle, as they say.\n\nListen, if you were to pay for the shovels, I might become an escort for you. I wager it won't be worse than serving my previous masters.";
+		screen_text = "Traveler, what a happy encounter! You managed to meet me before the Master of the pond bested you. He is powerful and fearsome, and posseses command over the element of water. He causes all sorts of mischief to unwary travelers. Althought it's usually their folly for dropping gold coins near his pond.\n\nMyself, I am a water being, so I was enthralled by his powers, forced to serve him. He had a minor skirmish with the giant brothers living in these caves, during which I managed to escape. Then I met Dahlia here, who offered me a job as her escort. Not having seen much in my life besides ponds and underground rivers, I was excited about the opportunity. However, soon after those undead bodies attacked us, I lost a couple of shovels, which she says I owe her money for. From mud to peddle, as they say.\n\nListen, if you were to pay for the shovels, I might become an escort for you. I wager it won't be worse than serving my previous masters.";
 		scroll_rate = 6.5;
 	}
 }
@@ -179,14 +181,6 @@
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_giant_pass_killed_insect]
-{
-	[text*]
-	{
-		screen_text = "So, you have killed the insect. I cannot say I'm very enthusiastic about that. But I am happy it was not my brother's hand to have destroyed the creature. For that I am thankfull. I believe we wil be able to see eye to eye now. Come speak with me some other time. I may have some interesting topics to share with you.";
-	  f scroll_rate = 10.000000;
-	}
-}
 [conv_giant_pass_start_quest_third_brother]
 {
 	[text*]
@@ -194,16 +188,6 @@
 		activate_quest* = c24_slice_2_quest_kill_brother,0;
 	  b quest_dialog = true;
 		screen_text = "My brother may have mentioned that we come from mating of an Ice Giant and a Cyclops, right? Well, mixed breed such as we are doomed to living far away from our people. What my brother may not have mentioned is that we also have a third brother, Nutlech. While we inherited the cyclop intelligence from our mother, Nutlech was not that lucky. Growing up with him was tough, but we loved him nevertheless. At some point, his aggressivity became unbearable, and we chased him out. We hoped this was the last time we had to deal with him. But rumours reached us that he frequently harasses passersby, terrorizes wild game, and generally causes genuine mayhem. You have most surely noticed that I avoid violence when possible, but Nutlech needs to be stopped. The local humans do not deserve to have such threat in their neighbourhood. I ask you to find him and destroy him. No doubt he has made his home in some sort of cave nearby.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_giant_pass_start_quest_wishing_pond]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_pond,0;
-	  b quest_dialog = true;
-		screen_text = "You seem to take pleasure in investigating curious occurences, do you? Not a rare trait for a traveller, I presume. You see, there is this particular pond just a little bit along the way, located in an alcove to to your right. There are rumors that dropping a gold coin in it will grant you a wish of any kind. As tempting as it may sound, woe to those who try doing that. The gold coins attract attention of the Pond keeper. I do not know his name, but he certainly loves to challenge his summoners to a friendly potentially lethal duel. If you wish to prove your skills, you may try challenging him, too. Even one gold coin is enough. Be wary, for he does not return the offerings. You may need to drop a coin several times, as he sends his minions first to see if you're even worth duelling. I used to meet him in a friendly fight from time to time, but at some point I ran out of gold. I should not be visiting casinos, I guess. Oh, and I have another matter to discuss with you, if you'd care.";
 	  f scroll_rate = 10.000000;
 	}
 }

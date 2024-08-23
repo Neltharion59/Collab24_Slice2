@@ -124,6 +124,11 @@ state Talk$
 		else
 		{
 			TryAnim$('andi');
+			
+			// Enable wishing pond
+			scid activate_rock_trigger_scid$ = MakeScid(0x02100E99);
+			Go activate_rock_trigger$ = GoDb.FindGoidByScid( activate_rock_trigger_scid$ ).Go;
+			SendWorldMessage( WE_REQ_ACTIVATE, activate_rock_trigger$.Goid, activate_rock_trigger$.Goid );
 		}
 
 		m_Go$.GetConversation.RSActivateDialogue();
