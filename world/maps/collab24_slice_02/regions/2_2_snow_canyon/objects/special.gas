@@ -439,7 +439,7 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,-2.98023e-008;
-	  p position = -0.376812,-0.47261,-2.67578,0xe42c1d85;
+	  p position = -0.0856209,-0.728899,-3.03828,0xe42c1d85;
 	}
 }
 [t:trigger_generic,n:0x02300096]
@@ -915,6 +915,7 @@
 			[*]
 			{
 				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",0);
+				action* = send_world_message("we_req_activate",0x02300862,0f,"default","every",0), doc("make the dwarf use pickaxe");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(10.000000,3.500000,4.000000,"on_first_enter");
 			  f delay = 0.000000;
