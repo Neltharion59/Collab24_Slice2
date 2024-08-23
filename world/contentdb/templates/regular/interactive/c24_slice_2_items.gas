@@ -699,6 +699,58 @@
 		velocity = 14;
 	}
 }
+[t:template,n:c24_bronze_shard]
+{
+	specializes = base_arrow;
+	[aspect]
+	{
+		model=m_w_misc_020;
+		scale_base = 2.0;
+		[textures]
+		{
+			0 = b_c_edm_62_bronze;
+		}
+	}
+	[attack]
+	{
+		damage_max = 2;
+		damage_min = 1;
+		skill_class = "Combat Magic";
+	}
+	[body]
+	{
+		[bone_translator]
+		{
+			handle = ap_grip;
+			middle = ap_tip;
+			tip = ap_tip;
+		}
+	}
+	[common]
+	{
+		screen_name = "Shard";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("metal_shard_dust");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+	[physics]
+	{
+		angular_velocity = 16,16,16;
+		elasticity = 0.3;
+		explode_if_hit_go = false;
+		explode_if_hit_terrain = false;
+		explode_when_expired = false;
+		randomize_velocity = TRUE;
+		orient_to_trajectory = FALSE;
+		gravity = 6;
+	}
+}
 [t:template,n:c24_scroll_summon_cow]
 {
 	category_name = "magic";
