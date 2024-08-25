@@ -18,6 +18,10 @@ set tc=%TankCreator%
 :: Compile map file
 rmdir /S /Q "%tmp%\Bits"
 robocopy "%bits%\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /S
+pushd %gaspy%
+venv\Scripts\python -m build.fix_start_positions_required_levels %map% --dev-only-false --bits "%tmp%\Bits"
+if %errorlevel% neq 0 pause
+popd
 "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsmap" -copyright "%copyright%" -title "%title%" -author "%author%"
 if %errorlevel% neq 0 pause
 
@@ -25,6 +29,7 @@ if %errorlevel% neq 0 pause
 rmdir /S /Q "%tmp%\Bits"
 robocopy "%bits%\art" "%tmp%\Bits\art" /S
 robocopy "%bits%\sound" "%tmp%\Bits\sound" /S
+robocopy "%bits%\ui" "%tmp%\Bits\ui" /S
 robocopy "%bits%\world\ai" "%tmp%\Bits\world\ai" /S
 robocopy "%bits%\world\contentdb\components" "%tmp%\Bits\world\contentdb\components" /S
 robocopy "%bits%\world\contentdb\templates\regular" "%tmp%\Bits\world\contentdb\templates\regular" /S
