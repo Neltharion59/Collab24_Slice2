@@ -1,3 +1,35 @@
+[t:trigger_generic,n:0x02400146]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02400148,0f,"0x4005","go_within_sphere",0);
+				action* = send_world_message("we_req_activate",0x02400149,0f,"default","every",0);
+				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",9);
+				action* = send_world_message("we_req_deactivate",0x02400145,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(8.000000,0x00000000,"c24_2_r2_cart_caravan","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = 0.0333638,0,-1.7863,0x0f3cfe26;
+	}
+}
 [t:trigger_change_mood_box,n:0x024001da]
 {
 	[common]
@@ -313,38 +345,6 @@
 	{
 	  q orientation = 0,0.258819,0,0.965926;
 	  p position = -2.53611,-3.41628,-3.33813,0x05f7ab9c;
-	}
-}
-[t:trigger_generic,n:0x02400146]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02400148,0f,"0x4005","go_within_sphere",0);
-				action* = send_world_message("we_req_activate",0x02400149,0f,"default","every",0);
-				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",9);
-				action* = send_world_message("we_req_deactivate",0x02400145,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = go_within_sphere(8.000000,0x00000000,"c24_2_r2_cart_caravan","on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = false;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 2.10514,0,-1.15303,0xc8850d47;
 	}
 }
 [t:trigger_generic,n:0x02400158]

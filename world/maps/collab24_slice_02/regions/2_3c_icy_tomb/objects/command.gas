@@ -148,6 +148,17 @@
 	  p position = 0.956132,-0.928102,-1.34446,0x967f0d78;
 	}
 }
+[t:cmd_t_delete,n:0x02b00052]
+{
+	[cmd_t_delete]
+	{
+	  x target_scid = 0x02B00031;
+	}
+	[placement]
+	{
+	  p position = -1.24982,-1.05819,-1.10914,0x967f0d78;
+	}
+}
 [t:cmd_ai_c_patrol,n:0x02b00019]
 {
 	[cmd_ai_dojob]
@@ -274,16 +285,5 @@
 	[placement]
 	{
 	  p position = 3.83243,0,-0.147956,0xa487ab07;
-	}
-}
-[t:cmd_t_delete,n:0x02b00052]
-{
-	[cmd_t_delete]
-	{
-	  x target_scid = 0x02B00031;
-	}
-	[placement]
-	{
-	  p position = -1.24982,-1.05819,-1.10914,0x967f0d78;
 	}
 }

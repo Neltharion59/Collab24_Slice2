@@ -1,15 +1,3 @@
-[t:c24_2_r2_cart_caravan,n:0x0240029e]
-{
-	[aspect]
-	{
-	  b is_selectable = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -3.95057,0,-0.570531,0xc8850d47;
-	}
-}
 [t:ax_ra_g_c_2h2b_fin,n:0x02400f23]
 {
 	[aspect]
@@ -101,6 +89,18 @@
 	  q orientation = 0,-0.382683,0,0.92388;
 	  p position = 4.73177,-2.35,4.83112,0xaf4c2545;
 		use_point_scids = 0x02400f32;
+	}
+}
+[t:c24_2_r2_cart_caravan,n:0x0240029e]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.39661,0,0.692733,0x6c563ad8;
 	}
 }
 [t:c24_slice2_r3_book_2,n:0x02400d44]
