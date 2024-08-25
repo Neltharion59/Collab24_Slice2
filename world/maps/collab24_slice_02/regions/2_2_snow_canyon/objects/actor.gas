@@ -274,6 +274,13 @@
 }
 [t:collab24_slice2_npc_guard_ranged_tower,n:0x0230083b]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = tower_sentry;
+		}
+	}
 	[placement]
 	{
 	  q orientation = -4.57584e-009,-0.707107,-3.61296e-008,-0.707107;

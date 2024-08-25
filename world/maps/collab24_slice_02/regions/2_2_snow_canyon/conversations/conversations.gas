@@ -1,38 +1,19 @@
-
-[conv_collab24_slice2_r2_shrine_visitor_b4_quest_first]
+[conv_c24_r3_dwarf_miner_first]
 {
 	[text*]
 	{
-		activate_quest* = c24_slice_2_quest_shrine_broom,0;
-		b quest_dialog = true;
-		screen_text = "A visitor of the shrine? How fortunate. You seem able-bodied, I see. Good, good. Ehm...you see, the shrine has been bewitched by a witch. It's one of those odd elderly women of the town of Frostfingers who live in the wilderness. I haven't really heard of them being hostile, but this one certainly is. Not only she cast a curse upon the shrine, she also guards the access to it. For what purpose, I can only guess. But the shrine should be accessible to all visitors, if you know what I mean. She even made it difficult to travel. The furok must have been pretty stirred up by her passage. You better watch out around them.";
+		activate_quest* = c24_slice_2_quest_vaarth_barricade,6;
+		complete_quest* = c24_slice_2_quest_vaarth_barricade;
+	  b quest_dialog = true;
+		screen_text = "Bloody hell, now that was a blast. There must have been some powder sprinkled among the rocks. The bloody va'arth have taken all my kegs, and now they're damaging the landscape with no discipline. Who ever heard of Va'arth activng like that? I smell a blasted goblin behind this.\n\nBut it's my fault for not storing it in a more secure place. I was prepared to remove them all by hand, but I must admit, this was easier. Too bad the blast scared my rams away. I assume they'll be raging in the woods right now. Thank you for your intervention. Now, let me get cleaned up.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_collab24_slice2_r2_shrine_visitor_b4_quest_next]
+[conv_c24_r3_dwarf_miner_next]
 {
 	[text*]
 	{
-		screen_text = "I can still sense the curse of the shrine in the air. Why would a witch do that?";
-		f scroll_rate = 10.000000;
-	}
-}
-[conv_collab24_slice2_r2_shrine_visitor_after_quest_first]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_shrine_broom,4;
-		complete_quest* = c24_slice_2_quest_shrine_broom;
-		b quest_dialog = true;
-		screen_text = "I do not know how you managed to do it, but the shrine is free of the witch's curse. You have done great service to all the pilgrims in these parts. And perhaps all folks - possessing control of this shrine was surely meant for nefarious aims.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_collab24_slice2_r2_shrine_visitor_after_quest_next]
-{
-	[text*]
-	{
-		screen_text = "My dear friend, the day is crisp and innocent again. I thank you for your kind deeds.";
+		screen_text = "That's better. Now, I should restock my supply. But perhaps I should dig me a decent cellar first. Good luck to you anyway!\n\nOh, and be wary of my rams. The blast made them run away, and they have likely gone feral. My bad from bringing them with me, again.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -44,31 +25,13 @@
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_c24_r3_fairy_start_quest]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_heal_tree,2;
-		b quest_dialog = true;
-		screen_text = "That was a hideous doing, stranger, killing nature's creatures. Yet, it served justice, for their crimes are not redeemable. They would hurt Rethoros, one of the flesh trees, and feast upon his tortured body. His flesh flowing out of the wound, with no ability to act against it, imagine his torture. Now, his screams of agony shall haunt these woods until I am able to recover my healing scroll. Hear my plea, stranger, find the scroll, and bring it to me, so that I may nourish his flesh. I shall try to ease his pain with my nourishing song untile then.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_c24_r3_fairy_start_quest_next]
-{
-	[text*]
-	{
-		screen_text = "Do act with haste, stranger. Rethoros has suffered enough.";
-	  f scroll_rate = 10.000000;
-	}
-}
 [conv_c24_r3_fairy_finish_quest]
 {
 	[text*]
 	{
-        activate_quest* = c24_slice_2_quest_heal_tree,5;
+		activate_quest* = c24_slice_2_quest_heal_tree,5;
 		complete_quest* = c24_slice_2_quest_heal_tree;
-        b quest_dialog = true;
+	  b quest_dialog = true;
 		screen_text = "Rethoros is well once again. Listen to the peaceful silence in our ears. Kindness is so rare among folks outside the Fae realm. Your heart is beautiful one. May it ever be so.";
 	  f scroll_rate = 10.000000;
 	}
@@ -81,22 +44,66 @@
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_c24_r3_dwarf_miner_first]
+[conv_c24_r3_fairy_start_quest]
 {
 	[text*]
 	{
-		activate_quest* = c24_slice_2_quest_vaarth_barricade,6;
-		complete_quest* = c24_slice_2_quest_vaarth_barricade;
-        b quest_dialog = true;
-		screen_text = "Bloody hell, now that was a blast. There must have been some powder sprinkled among the rocks. The bloody va'arth have taken all my kegs, and now they're damaging the landscape with no discipline. Who ever heard of Va'arth activng like that? I smell a blasted goblin behind this.\n\nBut it's my fault for not storing it in a more secure place. I was prepared to remove them all by hand, but I must admit, this was easier. Too bad the blast scared my rams away. I assume they'll be raging in the woods right now. Thank you for your intervention. Now, let me get cleaned up.";
+		activate_quest* = c24_slice_2_quest_heal_tree,2;
+	  b quest_dialog = true;
+		screen_text = "That was a hideous doing, stranger, killing nature's creatures. Yet, it served justice, for their crimes are not redeemable. They would hurt Rethoros, one of the flesh trees, and feast upon his tortured body. His flesh flowing out of the wound, with no ability to act against it, imagine his torture. Now, his screams of agony shall haunt these woods until I am able to recover my healing scroll. Hear my plea, stranger, find the scroll, and bring it to me, so that I may nourish his flesh. I shall try to ease his pain with my nourishing song untile then.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_c24_r3_dwarf_miner_next]
+[conv_c24_r3_fairy_start_quest_next]
 {
 	[text*]
 	{
-		screen_text = "That's better. Now, I should restock my supply. But perhaps I should dig me a decent cellar first. Good luck to you anyway!\n\nOh, and be wary of my rams. The blast made them run away, and they have likely gone feral. My bad from bringing them with me, again.";
+		screen_text = "Do act with haste, stranger. Rethoros has suffered enough.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r2_shrine_visitor_after_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_shrine_broom,4;
+		complete_quest* = c24_slice_2_quest_shrine_broom;
+	  b quest_dialog = true;
+		screen_text = "I do not know how you managed to do it, but the shrine is free of the witch's curse. You have done great service to all the pilgrims in these parts. And perhaps all folks - possessing control of this shrine was surely meant for nefarious aims.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r2_shrine_visitor_after_quest_next]
+{
+	[text*]
+	{
+		screen_text = "My dear friend, the day is crisp and innocent again. I thank you for your kind deeds.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r2_shrine_visitor_b4_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_shrine_broom,0;
+	  b quest_dialog = true;
+		screen_text = "A visitor of the shrine? How fortunate. You seem able-bodied, I see. Good, good. Ehm...you see, the shrine has been bewitched by a witch. It's one of those odd elderly women of the town of Frostfingers who live in the wilderness. I haven't really heard of them being hostile, but this one certainly is. Not only she cast a curse upon the shrine, she also guards the access to it. For what purpose, I can only guess. But the shrine should be accessible to all visitors, if you know what I mean. She even made it difficult to travel. The furok must have been pretty stirred up by her passage. You better watch out around them.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r2_shrine_visitor_b4_quest_next]
+{
+	[text*]
+	{
+		screen_text = "I can still sense the curse of the shrine in the air. Why would a witch do that?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[tower_sentry]
+{
+	[text*]
+	{
+		screen_text = "Greetings, traveler. You're approaching the town of Frostfingers. Be careful, I spotted a pack of kurgans underneath the tower earlier.";
 	  f scroll_rate = 10.000000;
 	}
 }

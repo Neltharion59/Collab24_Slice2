@@ -1,9 +1,268 @@
-[shop]
+[conv_collab24_slice2_r3_ice_witch_princess_freezer_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_frozen_fae,0;
+	  b quest_dialog = true;
+		screen_text = "Hope you're not here to ask our help with defeating your superiors? The little fae had the nerve to try to steal my tomes, blabbering about overthrowing her queen or something. How would my cooking recipes improve her chances is lost on me. Imprisonment in the cave just few steps ahead should teach her to think twice before stealing my tomes.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r3_ice_witch_princess_freezer_next]
+{
+	[text*]
+	{
+		screen_text = "The tomes are still off your limits, just so that you know. I would hate to freeze you solid for eternity.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r3_ice_witch_princess_freezer_quest_complete]
+{
+	[text*]
+	{
+		screen_text = "Nooo, how did that little harmless ladybug ever escape? She ran off with my most delicious recipes. I shall set for the fae lands and hunt her down, trust me on that!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r3_smith_after_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = collab24_slice2_quest_smith,2;
+		choice = shop;
+		complete_quest* = collab24_slice2_quest_smith;
+	  b quest_dialog = true;
+		screen_text = "You done WHAT? I...my friend, am glad I get to sleep in my bed, after I fix it. But I was hoping I would be able to stop the bronze golem without demolishing it completely. Maybe I could have removed its autonomy component or something. Well, it's back to start then. Thank you anyway.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r3_smith_after_quest_next]
 {
 	[text*]
 	{
 		choice = shop;
-		screen_text = "Trade with me, honey.";
+		screen_text = "My friend, the progress with the Bronze Golem is far better than I expected. I have even come up with a few improvements since. Thank you so much again. Would you like to see some of my weapons and armor?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r3_smith_b4_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = collab24_slice2_quest_smith,0;
+		choice = shop;
+	  b quest_dialog = true;
+		screen_text = "Hello there, traveler. How is your day going? May I interest you in the fruits of my craft? I don't have much to do these days after my latest creation, the Bronze Golem, came to life, and took over my home.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_collab24_slice2_r3_smith_b4_quest_next]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Is there anything else you would like to see? Take care not to go to my bedroom. I will have to figure out how to deal with the Bronze Golem.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_innkeep]
+{
+	[text*]
+	{
+		screen_text = "Welcome to Chilly Anton's traveler. What business brings you here? Ah, you adventurous types have the best stories to tell, but never rnough time to spend telling.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_npc_fb1]
+{
+	[text*]
+	{
+		screen_text = "I tell you, we need to assemble military, and teach those fairies a lesson or two. We've always been nothing but friendly. Their raids on travelleing parties must be punished.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_npc_fb_2]
+{
+	[text*]
+	{
+		screen_text = "The way I see it, the fae need to appeased. With some sort of sacrifice, perhaps.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_npc_fg_1]
+{
+	[text*]
+	{
+		screen_text = "I do not believe the fae are a real threat. Perhaps it's because of a phase in some sort of cycle they live by. Perhaps we just need to wait their aggression out.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_npc_ft_1]
+{
+	[text*]
+	{
+		screen_text = "What a good boy he is. He ripped appart seven rats in Thylea's wine cellar before they chased him out. No worries, sweetie, you'll get them all next time.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_npc_hg_1]
+{
+	[text*]
+	{
+		screen_text = "Have you read 'On origin of monsters' by Kris Thaynor? A fascinating piece of literature.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_pmo]
+{
+	[text*]
+	{
+		screen_text = "Ah, how I miss Siklaya, my precious love. She reached the age to become an ice witch, so she followed her calling. Our children and grandchildren are pursuing their own lives. Oh, my achen heart.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_hermit_after_cart_is_dropped]
+{
+	[text*]
+	{
+		screen_text = "I am sorry I was so rude earlier. The loss of my means to make a living upset me a little. Please, see if you can help my krug friend. My influence here is limited.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_hermit_after_hassat_quest]
+{
+	[text*]
+	{
+		screen_text = "I cannot believe it worked. Thanks to you, my krug friend is now a proper merchant. Let us see how the competition with local merchants improves their services. After a month or two, we might set together towards the capital. Surely we will make great name for ourselves.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_hermit_b4_cart_is_dropped_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_krug_merchant,8;
+	  b quest_dialog = true;
+		screen_text = "Now, this is a hell of a day. After you left for the tree, your krug friend approached me. I still was not sure whether this all was not part of a krug raid, so I ran for the town. However, the passage was blocked with collapsed cliff. Seems like the Va'arth stole some kegs with explosive powder from the local dwarven master miner Roughdigger. The Va'arth had me cornered, the way back sealed with an ice barricade cast by a hat-wearing bortusk...would you believe that? Then, out of nowhere, your krug friend grabs my hand, and leads me through the rocks. Those krug know where to step like no human ever could. Against all odds, we made it to the town. Although this freak caused all my troubles, he also saved my life. So now here we are, figuring out what to with him. Perhaps talking to the mayor would make sense. I already vouched for him. Oh, and I see you are carryng my wagon. Would you mind...?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_hermit_b4_cart_is_dropped_next]
+{
+	[text*]
+	{
+		screen_text = "Please, hand the wagon to me so that we settle our dispute. Then you'll be able to negotiate in my krug friend's name.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_ice_witch_pet_quest_after_orthrac_is_owned]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_dead_orthrac,2;
+	  b quest_dialog = true;
+		screen_text = "Look at this poor thing. It died and turned to stone before it had the chance to hatch. Oh, the poor baby. Wait now, I know what to do. Place the poor thing on the ground carefully. I might have a nice charm to fix him up.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_ice_witch_pet_quest_after_ortranc_revived]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_dead_orthrac,4;
+		complete_quest* = c24_slice_2_quest_dead_orthrac;
+	  b quest_dialog = true;
+		screen_text = "What a lovely specimen you brought, my beautiful Buggie. His appetite is just fascinating. Thank you, my friend. He will terify and torture my enemies much better than Pookie did.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_ice_witch_pet_quest_after_pet_killed]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_dead_orthrac,1;
+	  b quest_dialog = true;
+		screen_text = "Noooooo, aaaah. My Pooky is dead, my dear fluffy Pooky is dead. Why did you commit this atrocity? Why did my beloved pet perish in your hands? Whom will I scratch behind the ears now? You? I think not.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_ice_witch_pet_quest_after_quest_completed]
+{
+	[text*]
+	{
+		screen_text = "Would you look at my big boy. You would not believe his appetite.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_ice_witch_pet_quest_before_quest_started]
+{
+	[text*]
+	{
+		screen_text = "Furry, soft and cuddly, my Pooky is. He moves his leg in the most adorable of ways when I scratch him behind his ears.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_krug_after_cart_is_dropped]
+{
+	[text*]
+	{
+		screen_text = "I hope your secretive dealings with the mayor go well. It would be difficult to do trading when cast out from the town.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_krug_after_cellar_quest]
+{
+	[text*]
+	{
+		screen_text = "I hope your secretive dealings with the mayor go well. Without the permission, no one will do dealings with me. And merchant is supposed to do dealings, right?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_krug_after_hassat_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_krug_merchant,22;
+		choice = shop;
+		complete_quest* = c24_slice_2_quest_krug_merchant;
+	  b quest_dialog = true;
+		screen_text = "Oh, my friend, finally. I cannot thank you enough. Here, let's practice my trading skills, shall we?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_krug_after_hassat_quest_next]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Your face is always welcome in our modest caravan store. How can I help you?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_krug_b4_cart_is_dropped]
+{
+	[text*]
+	{
+		screen_text = "Hey, friend. You have found us. Plase, give Talak his wagon. He certainly could use it.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_mayor_b4_braak_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_krug_merchant,21;
+		activate_quest* = c24_slice_2_quest_braak_barricade,0;
+	  b quest_dialog = true;
+		screen_text = "You want me to speak with WHOM? You come out of nowhere, persuade me to accept a krug i to my town, and now want me to speak with a hassat? You, traveler, have the strangest events happening to you. I surely hope it was not the hassat who sent the leopards after our livestock. Fine, I will meet him. Let not be said was too cowardly to do so. But if this goes badly, I will have you chased down. So, you wish to travel TODO? Well, you bave another issue to resolve then. The cliffa just beyond the gate are held by braak raiders. Anyone travellimg that way would be pelted to their death by ice shards. If you truly to wish to travel in that direction, you need to pass the southern gate first, and eliminate them. Then I'll be willing to open the gates.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_mayor_b4_braak_quest_next]
+{
+	[text*]
+	{
+		screen_text = "I'm sorry traveler, but I won't have you pelted to death just because you're impatient. Eliminate the braak, and I'll grant you passage.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -51,25 +310,6 @@
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_r4_mayor_b4_braak_quest_first]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_krug_merchant,21;
-		activate_quest* = c24_slice_2_quest_braak_barricade,0;
-	  b quest_dialog = true;
-		screen_text = "You want me to speak with WHOM? You come out of nowhere, persuade me to accept a krug i to my town, and now want me to speak with a hassat? You, traveler, have the strangest events happening to you. I surely hope it was not the hassat who sent the leopards after our livestock. Fine, I will meet him. Let not be said was too cowardly to do so. But if this goes badly, I will have you chased down. So, you wish to travel TODO? Well, you bave another issue to resolve then. The cliffa just beyond the gate are held by braak raiders. Anyone travellimg that way would be pelted to their death by ice shards. If you truly to wish to travel in that direction, you need to pass the southern gate first, and eliminate them. Then I'll be willing to open the gates.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_mayor_b4_braak_quest_next]
-{
-	[text*]
-	{
-		screen_text = "I'm sorry traveler, but I won't have you pelted to death just because you're impatient. Eliminate the braak, and I'll grant you passage.";
-	  f scroll_rate = 10.000000;
-	}
-}
 [conv_r4_mayor_last]
 {
 	[text*]
@@ -82,134 +322,27 @@
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_r4_hermit_b4_cart_is_dropped_first]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_krug_merchant,8;
-	  b quest_dialog = true;
-		screen_text = "Now, this is a hell of a day. After you left for the tree, your krug friend approached me. I still was not sure whether this all was not part of a krug raid, so I ran for the town. However, the passage was blocked with collapsed cliff. Seems like the Va'arth stole some kegs with explosive powder from the local dwarven master miner Roughdigger. The Va'arth had me cornered, the way back sealed with an ice barricade cast by a hat-wearing bortusk...would you believe that? Then, out of nowhere, your krug friend grabs my hand, and leads me through the rocks. Those krug know where to step like no human ever could. Against all odds, we made it to the town. Although this freak caused all my troubles, he also saved my life. So now here we are, figuring out what to with him. Perhaps talking to the mayor would make sense. I already vouched for him. Oh, and I see you are carryng my wagon. Would you mind...?";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_hermit_b4_cart_is_dropped_next]
-{
-	[text*]
-	{
-		screen_text = "Please, hand the wagon to me so that we settle our dispute. Then you'll be able to negotiate in my krug friend's name.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_hermit_after_cart_is_dropped]
-{
-	[text*]
-	{
-		screen_text = "I am sorry I was so rude earlier. The loss of my means to make a living upset me a little. Please, see if you can help my krug friend. My influence here is limited.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_hermit_after_hassat_quest]
-{
-	[text*]
-	{
-		screen_text = "I cannot believe it worked. Thanks to you, my krug friend is now a proper merchant. Let us see how the competition with local merchants improves their services. After a month or two, we might set together towards the capital. Surely we will make great name for ourselves.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_krug_b4_cart_is_dropped]
-{
-	[text*]
-	{
-		screen_text = "Hey, friend. You have found us. Plase, give Talak his wagon. He certainly could use it.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_krug_after_cart_is_dropped]
-{
-	[text*]
-	{
-		screen_text = "I hope your secretive dealings with the mayor go well. It would be difficult to do trading when cast out from the town.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_krug_after_cellar_quest]
-{
-	[text*]
-	{
-		screen_text = "I hope your secretive dealings with the mayor go well. Without the permission, no one will do dealings with me. And merchant is supposed to do dealings, right?";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_krug_after_hassat_quest_first]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_krug_merchant,22;
-		complete_quest* = c24_slice_2_quest_krug_merchant;
-	  b quest_dialog = true;
-		choice = shop;
-		screen_text = "Oh, my friend, finally. I cannot thank you enough. Here, let's practice my trading skills, shall we?";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_krug_after_hassat_quest_next]
-{
-	[text*]
-	{
-		choice = shop;
-		screen_text = "Your face is always welcome in our modest caravan store. How can I help you?";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_sommelier_b4_cellar_quest_started]
-{
-	[text*]
-	{
-		screen_text = "Welcome to Frostfingers traveler. I am afraid the services of wine cellar are temporarilly unavailable to the public.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_sommelier_cellar_quest_started_first]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_krug_merchant,11;
-	  b quest_dialog = true;
-		screen_text = "So, the mayor send you to help? Be my guest then. The wine cellar has been invaded by a few nasty beings, and frankly, none of us feels like dealing with them. There is not much else to it really. And please, try not to damage too many bottles in the process.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_sommelier_cellar_quest_started_next]
-{
-	[text*]
-	{
-		screen_text = "The cellar is right beneath this house. You should find it with no trouble.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_sommelier_cellar_quest_completed_first]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_krug_merchant,13;
-	  b quest_dialog = true;
-		screen_text = "They're gone? Oh, thank you so much. I was worried they'd learn how to uncork the bottles and destroy my precious collection. I will inform the mayor.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_sommelier_cellar_quest_completed_next]
-{
-	[text*]
-	{
-		screen_text = "Thank you again. The mayor has been informed of your efforts. And services of the cellar are open to public again.";
-	  f scroll_rate = 10.000000;
-	}
-}
 [conv_r4_sheppard_b4_hassat_quest_started]
 {
 	[text*]
 	{
 		screen_text = "Welcone to Frostfingers, traveler. Do refrain from making loud noises. The livestock do not tolerate them well.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_sheppard_hassat_quest_after_completion]
+{
+	[text*]
+	{
+		screen_text = "You are surrounded by the strangest of occurences, traveler. But thanks to you, our pasturelands are safe again. For that, we are grateful.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_sheppard_hassat_quest_b4_completion]
+{
+	[text*]
+	{
+		screen_text = "I'm sorry, what? Leopards? Hassat trade proposal? Look, I'm thankful for your help, but you should raise this issue with the mayor. This is beyond my duties as the sheppard.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -231,133 +364,104 @@
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_r4_sheppard_hassat_quest_b4_completion]
+[conv_r4_sommelier_b4_cellar_quest_started]
 {
 	[text*]
 	{
-		screen_text = "I'm sorry, what? Leopards? Hassat trade proposal? Look, I'm thankful for your help, but you should raise this issue with the mayor. This is beyond my duties as the sheppard.";
+		screen_text = "Welcome to Frostfingers traveler. I am afraid the services of wine cellar are temporarilly unavailable to the public.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_r4_sheppard_hassat_quest_after_completion]
+[conv_r4_sommelier_cellar_quest_completed_first]
 {
 	[text*]
 	{
-		screen_text = "You are surrounded by the strangest of occurences, traveler. But thanks to you, our pasturelands are safe again. For that, we are grateful.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_ice_witch_pet_quest_before_quest_started]
-{
-	[text*]
-	{
-		screen_text = "Furry, soft and cuddly, my Pooky is. He moves his leg in the most adorable of ways when I scratch him behind his ears.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[conv_r4_ice_witch_pet_quest_after_pet_killed]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_dead_orthrac,1;
+		activate_quest* = c24_slice_2_quest_krug_merchant,13;
 	  b quest_dialog = true;
-		screen_text = "Noooooo, aaaah. My Pooky is dead, my dear fluffy Pooky is dead. Why did you commit this atrocity? Why did my beloved pet perish in your hands? Whom will I scratch behind the ears now? You? I think not.";
+		screen_text = "They're gone? Oh, thank you so much. I was worried they'd learn how to uncork the bottles and destroy my precious collection. I will inform the mayor.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_r4_ice_witch_pet_quest_after_orthrac_is_owned]
+[conv_r4_sommelier_cellar_quest_completed_next]
 {
 	[text*]
 	{
-		activate_quest* = c24_slice_2_quest_dead_orthrac,2;
+		screen_text = "Thank you again. The mayor has been informed of your efforts. And services of the cellar are open to public again.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_r4_sommelier_cellar_quest_started_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_krug_merchant,11;
 	  b quest_dialog = true;
-		screen_text = "Look at this poor thing. It died and turned to stone before it had the chance to hatch. Oh, the poor baby. Wait now, I know what to do. Place the poor thing on the ground carefully. I might have a nice charm to fix him up.";
+		screen_text = "So, the mayor send you to help? Be my guest then. The wine cellar has been invaded by a few nasty beings, and frankly, none of us feels like dealing with them. There is not much else to it really. And please, try not to damage too many bottles in the process.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_r4_ice_witch_pet_quest_after_ortranc_revived]
+[conv_r4_sommelier_cellar_quest_started_next]
 {
 	[text*]
 	{
-		activate_quest* = c24_slice_2_quest_dead_orthrac,4;
-		complete_quest* = c24_slice_2_quest_dead_orthrac;
-	  b quest_dialog = true;
-		screen_text = "What a lovely specimen you brought, my beautiful Buggie. His appetite is just fascinating. Thank you, my friend. He will terify and torture my enemies much better than Pookie did.";
+		screen_text = "The cellar is right beneath this house. You should find it with no trouble.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_r4_ice_witch_pet_quest_after_quest_completed]
+[ice_witch_02]
 {
 	[text*]
 	{
-		screen_text = "Would you look at my big boy. You would not believe his appetite.";
+		screen_text = "Look at you, you're just skin and bones. You should find time to eat properly, especially when travelling. Come, have a bowl of my shagor stew.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_collab24_slice2_r3_ice_witch_princess_freezer_first]
+[ice_witch_03]
 {
 	[text*]
 	{
-		activate_quest* = c24_slice_2_quest_frozen_fae,0;
-	  b quest_dialog = true;
-		screen_text = "Hope you're not here to ask our help with defeating your superiors? The little fae had the nerve to try to steal my tomes, blabbering about overthrowing her queen or something. How would my cooking recipes improve her chances is lost on me. Imprisonment in the cave just few steps ahead should teach her to think twice before stealing my tomes.";
+		screen_text = "Ah, I wonder how my grandchildren are doing. I have not seen them since I reached the age to become an ice witch. It's not easy being an old woman in Frostfingers, you know.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_collab24_slice2_r3_ice_witch_princess_freezer_next]
+[ice_witch_04]
 {
 	[text*]
 	{
-		screen_text = "The tomes are still off your limits, just so that you know. I would hate to freeze you solid for eternity.";
+		screen_text = "Look at Fluffy, my adorable little pet spider. He curls up to me in my bed when I sleep, how cute is that? He is a lot cuter than Yanaga's Pooky. He gives me creeps. I would not mind if it went missing in an 'accident', mind you.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_collab24_slice2_r3_ice_witch_princess_freezer_quest_complete]
+[ice_witch_05]
 {
 	[text*]
 	{
-		screen_text = "Nooo, how did that little harmless ladybug ever escape? She ran off with my most delicious recipes. I shall set for the fae lands and hunt her down, trust me on that!";
+		screen_text = "Oh, gone with wind are the days when I wielded my spear against wolves and braaks. But my memories are not, as you can see in my collection. I recall seeing a pack of braak heading towards the Noseblow Viewpoint. I suppose you are the one sent to handle them, right? Feel free to take one of my old weapons. I would feel proud if they still served their purpose today.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_collab24_slice2_r3_smith_b4_quest_first]
+[ice_witch_1]
 {
 	[text*]
 	{
-		activate_quest* = collab24_slice2_quest_smith,0;
-	  b quest_dialog = true;
-		choice = shop;
-		screen_text = "Hello there, traveler. How is your day going? May I interest you in the fruits of my craft? I don't have much to do these days after my latest creation, the Bronze Golem, came to life, and took over my home.";
+		screen_text = "Ooooh, a traveler. It's been a while since we've had a visit. Those cowards in the town are too superstitious to even dare talking to us. As if we weren't their wives, mothers and grandmothers just a few years ago. Let me tell you, your back archs a little, you put on some rags and go to live outside the town, and everyone keeps activing as if you underwent metamorphosis.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_collab24_slice2_r3_smith_b4_quest_next]
+[shop]
 {
 	[text*]
 	{
 		choice = shop;
-		screen_text = "Is there anything else you would like to see? Take care not to go to my bedroom. I will have to figure out how to deal with the Bronze Golem.";
-		f scroll_rate = 10.000000;
-	}
-}
-[conv_collab24_slice2_r3_smith_after_quest_first]
-{
-	[text*]
-	{
-		activate_quest* = collab24_slice2_quest_smith,2;
-		complete_quest* = collab24_slice2_quest_smith;
-	  b quest_dialog = true;
-		choice = shop;
-		screen_text = "You done WHAT? I...my friend, am glad I get to sleep in my bed, after I fix it. But I was hoping I would be able to stop the bronze golem without demolishing it completely. Maybe I could have removed its autonomy component or something. Well, it's back to start then. Thank you anyway.";
+		screen_text = "Trade with me, honey.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conv_collab24_slice2_r3_smith_after_quest_next]
+[conv_npc_fg_2]
 {
 	[text*]
 	{
-		choice = shop;
-		screen_text = "My friend, the progress with the Bronze Golem is far better than I expected. I have even come up with a few improvements since. Thank you so much again. Would you like to see some of my weapons and armor?";
+		screen_text = "The fae are magical beings. They do not obey to our ideas of diplomacy. What worries me is the braaks holding the eastern gate. When have the braak ever behaved like that?";
 	  f scroll_rate = 10.000000;
 	}
 }

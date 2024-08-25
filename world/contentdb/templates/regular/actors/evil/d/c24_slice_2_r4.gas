@@ -627,6 +627,43 @@
 	}
 	[defend] { defense=20; }
 }
+[t:template,n:c24_2_r4_scorpion_melee_boss_01]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R4 scorpion melee boss";
+	specializes = c24_2_r4_scorpion_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	9,0;
+			intelligence =  	40,0;
+			dexterity =  	40,0;
+			melee =  		7,0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 15;
+		life = 33;
+		max_life = 33;
+		mana = 6;
+		max_mana = 6;
+		scale_base = 0.59;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 24;
+		damage_min = 22;
+	}
+	[common]
+	{
+		screen_name="Arachnoid Preystalker";
+		membership = party_scorpion_boss, monster;
+	}
+	[defend] { defense=30; }
+}
 [t:template,n:c24_2_r4_scorpion_ranged]
 {
 	// Stats based on Walking Corpse - Strengthened

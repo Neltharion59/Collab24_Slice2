@@ -1,3 +1,16 @@
+[t:emt_generic_act,n:0x02401049]
+{
+	[generic_emitter_act]
+	{
+	  b geyser_white = true;
+		other_effect = "ice_mage_reveal";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.819152,0,0.573576;
+	  p position = -1.79859,-3.00575,0.91333,0x34f9d8b5;
+	}
+}
 [t:emt_generic_act,n:0x02400240]
 {
 	[generic_emitter_act]
@@ -8,5 +21,12 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -2.72095,0,-0.725975,0x0e3b8b40;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x02401033]
+{
+	[placement]
+	{
+	  p position = 0.00999451,0.15,-1.38372,0xcef5a38c;
 	}
 }

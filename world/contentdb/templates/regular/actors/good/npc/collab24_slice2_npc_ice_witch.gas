@@ -50,7 +50,7 @@
 [t:template,n:collab24_slice2_npc_ice_witch_quest_orthrac]
 {
 	category_name = "1W_townsperson";
-	doc = "collab24 slice2 NPC Ice Mage";
+	doc = "collab24 slice2 NPC Ice Mage orthrac lover";
 	specializes = collab24_slice2_npc_ice_witch_base;
 	[common]
 	{
@@ -60,10 +60,20 @@
 [t:template,n:collab24_slice2_npc_ice_witch_quest_orthrac_quest_giver_fae_princess]
 {
 	category_name = "1W_townsperson";
-	doc = "collab24 slice2 NPC Ice Mage";
+	doc = "collab24 slice2 NPC Ice Mage Fae Princess holder";
 	specializes = collab24_slice2_npc_ice_witch_base;
 	[common]
 	{
 		screen_name = "Kiaruth";
+	}
+}
+[t:template,n:collab24_slice2_npc_ice_witch_generic]
+{
+	category_name = "1W_townsperson";
+	doc = "collab24 slice2 NPC Ice Mage";
+	specializes = collab24_slice2_npc_ice_witch_base;
+	[common]
+	{
+		screen_name = "Ice Witch";
 	}
 }

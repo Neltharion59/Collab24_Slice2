@@ -32,6 +32,146 @@
 	  p position = 0.0173264,-3.93822,-0.403931,0x879431f4;
 	}
 }
+[t:generator_generic,n:0x02401052]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r4_scorpion_ranged";
+	  x initial_command = 0x0240104B;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-2.41387e-007;
+	  p position = -2.59702,1.96072,0.582413,0xdaed270e;
+	}
+}
+[t:generator_generic,n:0x02401053]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r4_scorpion_ranged";
+	  x initial_command = 0x0240104C;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = -1.86405,0,0.829815,0x6a682854;
+	}
+}
+[t:generator_generic,n:0x02401051]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r4_scorpion_melee";
+	  x initial_command = 0x0240104A;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.20729,0,-1.1124,0xb161d478;
+	}
+}
+[t:generator_generic,n:0x02401050]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r4_scorpion_melee";
+	  x initial_command = 0x0240104D;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-5.96046e-008;
+	  p position = 0.414562,-11.9889,-2.96996,0x383c2bcf;
+	}
+}
+[t:generator_bush_02,n:0x02400169]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_2_r4_flaypick_melee_02";
+	  x initial_command = 0x02400183;
+	  f spawn_period = 0.1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.895721,0,-3.30751,0x779defe2;
+	}
+}
+[t:generator_bush_02,n:0x0240017e]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_2_r4_flaypick_melee_01";
+	  x initial_command = 0x0240017F;
+	  f spawn_period = 0.1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 2.23206,2,3.25287,0x4307d961;
+	}
+}
+[t:generator_bush_02,n:0x02400181]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_2_r4_flaypick_melee_02";
+	  x initial_command = 0x02400182;
+	  f spawn_period = 0.1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.06004,0,-1.80978,0xa5d2c816;
+	}
+}
+[t:generator_bush_02,n:0x0240017c]
+{
+	[generator_advanced_a2]
+	{
+		child_template_name = "c24_2_r4_flaypick_melee_01";
+	  x initial_command = 0x0240017D;
+	  f spawn_period = 0.1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 2.05423,0,2.10876,0xa7d43f0e;
+	}
+}
+[t:generator_generic,n:0x02400184]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r4_krusk_quest_pet";
+	  b get_child_cc = true;
+	  x initial_command = 0x02400185;
+	  x msg_scid = 0x02400007;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.66939e-007,0,-1;
+	  p position = 0.298096,0,-0.606606,0x1b77ab61;
+	}
+}
+[t:generator_generic,n:0x0240104f]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_2_r4_scorpion_melee_boss_01";
+	  x initial_command = 0x0240104E;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,0.382684;
+	  p position = -0.0768356,0,-1.11627,0x5a7b07a8;
+	}
+}
 [t:generator_generic,n:0x02400175]
 {
 	[generator_basic]
@@ -110,80 +250,5 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = -0.0244751,0,-0.0393982,0x5e3d958a;
-	}
-}
-[t:generator_bush_02,n:0x02400169]
-{
-	[generator_advanced_a2]
-	{
-		child_template_name = "c24_2_r4_flaypick_melee_02";
-	  x initial_command = 0x02400183;
-	  f spawn_period = 0.1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.895721,0,-3.30751,0x779defe2;
-	}
-}
-[t:generator_bush_02,n:0x0240017e]
-{
-	[generator_advanced_a2]
-	{
-		child_template_name = "c24_2_r4_flaypick_melee_01";
-	  x initial_command = 0x0240017F;
-	  f spawn_period = 0.1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 2.23206,2,3.25287,0x4307d961;
-	}
-}
-[t:generator_bush_02,n:0x02400181]
-{
-	[generator_advanced_a2]
-	{
-		child_template_name = "c24_2_r4_flaypick_melee_02";
-	  x initial_command = 0x02400182;
-	  f spawn_period = 0.1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 1.06004,0,-1.80978,0xa5d2c816;
-	}
-}
-[t:generator_bush_02,n:0x0240017c]
-{
-	[generator_advanced_a2]
-	{
-		child_template_name = "c24_2_r4_flaypick_melee_01";
-	  x initial_command = 0x0240017D;
-	  f spawn_period = 0.1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 2.05423,0,2.10876,0xa7d43f0e;
-	}
-}
-[t:generator_generic,n:0x02400184]
-{
-	[generator_basic]
-	{
-		child_template_name = "c24_2_r4_krusk_quest_pet";
-	  b get_child_cc = true;
-	  x initial_command = 0x02400185;
-	  x msg_scid = 0x02400007;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.66939e-007,0,-1;
-	  p position = 0.298096,0,-0.606606,0x1b77ab61;
 	}
 }
