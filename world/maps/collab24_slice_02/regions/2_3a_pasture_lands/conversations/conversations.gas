@@ -4,7 +4,7 @@
 	{
 		activate_quest* = c24_slice_2_quest_krug_merchant,16;
 	  b quest_dialog = true;
-		screen_text = "Help me destroy panthers.";
+		screen_text = "Greetings stranger. Has the city sent you to protect the pasturelands?\n\nOh indeed, I do know the culprit, and it's not me. But I do share my part of guilt. See, I am of the Taerie tribe. We were chased out of our homelands by rival tribes, more numerous and aggressive than we were. We finally found our new home in the mountains and seek to forge alliances with our neighbours, both distant and close ones. It was my task to address the town called Frostfingers.\n\nUnfortunately, it seems my passing has drawn attention of the snow  leopards. They must have followed me, and once we reached the pasturelands, they would gladly prey upon the local livestock. The locals quickly withdrew within their walls, so here I remain, isolated from the town, under constant watch of the preying leopards.\n\nHowever, with a brave soul such as yourself, we might have a chance to defeat them. Let us go down from this tower first.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -14,7 +14,7 @@
 	{
 		activate_quest* = c24_slice_2_quest_krug_merchant,17;
 	  b quest_dialog = true;
-		screen_text = "Time to summon a cow.";
+		screen_text = "Now, I have all the trust in your abilities, friend, but even the two of us combined might not be enough. I suggest we use bait. I believe the panthers would pounce at the first cow they'll see. We do not need to use an actual cow. I'm fairly certain the local merchant should be selling some, if you don't happen to have one on yourself. Summon it into this circle of bushes. The leopards believe they're well-hidden there, but their sneak skills are lacking against my eyesight.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -22,7 +22,7 @@
 {
 	[text*]
 	{
-		screen_text = "I ask you again to summon a cow.";
+		screen_text = "Summon a cow into this circle of bushes. If you don't happen to have a Scroll of Summon Cow on you, you can probably buy one from the local general store.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -32,7 +32,7 @@
 	{
 		activate_quest* = c24_slice_2_quest_krug_merchant,20;
 	  b quest_dialog = true;
-		screen_text = "We have slain the leopards.";
+		screen_text = "Now that was a fight. I am lucky to have witnessed your bravery friend. I suggest you report our success to the mayor. Oh, and do not forget to drop a word for me, if you don't mind.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -40,7 +40,7 @@
 {
 	[text*]
 	{
-		screen_text = "I rejoice again about slaying the leopards.";
+		screen_text = "I rejoice about our common victory, friend. The snow leopards are formidable opponents for any skilled hunter.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -48,7 +48,7 @@
 {
 	[text*]
 	{
-		screen_text = "All is well now.";
+		screen_text = "I have since received a messenger with negotiation offer. That is all I had ever hoped for. I thank you again, my friend.";
 	  f scroll_rate = 10.000000;
 	}
 }
