@@ -49,6 +49,58 @@
 	  p position = 3.34077,0,-0.511974,0xbd5f225f;
 	}
 }
+[t:cmd_animation_command,n:0x0240105a]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1936290865;
+	  x client_scid = 0x02401058;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = 2.6228,4.76837e-007,6.67755,0x49f0942a;
+	}
+}
+[t:cmd_animation_command,n:0x0240105b]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1936290865;
+	  x client_scid = 0x02401055;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = 1.09954,4.76837e-007,4.82674,0x49f0942a;
+	}
+}
+[t:cmd_animation_command,n:0x0240105c]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1936290865;
+	  x client_scid = 0x02401057;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = -0.313583,4.76837e-007,4.91088,0x49f0942a;
+	}
+}
+[t:cmd_animation_command,n:0x0240105d]
+{
+	[cmd_animation_command]
+	{
+	  i animation = 1936290865;
+	  x client_scid = 0x02401056;
+	  b initially_active = true;
+	}
+	[placement]
+	{
+	  p position = -1.74863,4.76837e-007,4.91748,0x49f0942a;
+	}
+}
 [t:cmd_animation_command,n:0x02400f7c]
 {
 	[cmd_animation_command]
@@ -594,57 +646,5 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -0.851143,0,-1.66294,0x4b4d7225;
-	}
-}
-[t:cmd_animation_command,n:0x0240105a]
-{
-	[cmd_animation_command]
-	{
-	  i animation = 1936290865;
-	  x client_scid = 0x02401058;
-	  b initially_active = true;
-	}
-	[placement]
-	{
-	  p position = 2.6228,4.76837e-007,6.67755,0x49f0942a;
-	}
-}
-[t:cmd_animation_command,n:0x0240105b]
-{
-	[cmd_animation_command]
-	{
-	  i animation = 1936290865;
-	  x client_scid = 0x02401055;
-	  b initially_active = true;
-	}
-	[placement]
-	{
-	  p position = 1.09954,4.76837e-007,4.82674,0x49f0942a;
-	}
-}
-[t:cmd_animation_command,n:0x0240105c]
-{
-	[cmd_animation_command]
-	{
-	  i animation = 1936290865;
-	  x client_scid = 0x02401057;
-	  b initially_active = true;
-	}
-	[placement]
-	{
-	  p position = -0.313583,4.76837e-007,4.91088,0x49f0942a;
-	}
-}
-[t:cmd_animation_command,n:0x0240105d]
-{
-	[cmd_animation_command]
-	{
-	  i animation = 1936290865;
-	  x client_scid = 0x02401056;
-	  b initially_active = true;
-	}
-	[placement]
-	{
-	  p position = -1.74863,4.76837e-007,4.91748,0x49f0942a;
 	}
 }
