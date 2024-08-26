@@ -1711,3 +1711,14 @@
 			
 			]];
 }
+[effect_script*]
+{
+	name	=c24_effect_ice_sparkle;
+
+	script	=[[
+				sfx create sparkles  #TARGET 
+					"offset(0,.1,0)radius(.3)texture(b_sfx_sparkle01)color0(0,.624,1)
+					count(20)psize(.9)";
+				sfx start #POP;
+			]];
+}
