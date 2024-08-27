@@ -382,6 +382,7 @@
 				action* = send_world_message("we_req_activate",0x02300837,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x0230085F,0f,"default","every",0), doc("dwarf charred texture");
 				action* = send_world_message("we_req_deactivate",0x023008AF,0f,"default","every",0), doc("make the rock damagable");
+				action* = send_world_message("we_req_activate",0x02300862,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -1531,5 +1532,48 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -2.38263,0,-0.057106,0x03e2fdd2;
+	}
+}
+[t:trigger_generic,n:0x02300862]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x023008E8,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_entered_world",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x023008E8,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.73041,0.573366,-1.32639,0xe42c1d85;
 	}
 }
