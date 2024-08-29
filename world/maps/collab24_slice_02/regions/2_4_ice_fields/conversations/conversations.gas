@@ -1,12 +1,3 @@
-[collab24_slice2_conversation_pm_l4_join]
-{
-	[text*]
-	{
-		choice = potential_member;
-		screen_text = "Hello, traveler. You come from Frostfingers, right? Have you had the chance to meet my brother, the blacksmith? Yeah, that sounds like him.\n\nSee, he tried to teach some of his smithing arts, but I am cut from different cloth. I set off for the lands of the frost fae, to learn more about ice magic. Unfortunate timing, right? I ended up stuck in Thaelaen's hut here.\n\nListen, how about I join your cause? Any chance to learn more about ice magic is better than skulking around.";
-		scroll_rate = 6.5;
-	}
-}
 [collab24_slice2_conversation_pm_l4_accept_have_money]
 {
 	[text*]
@@ -21,21 +12,6 @@
 		screen_text = "A pity my friend. My services are not for free.";
 	}
 }
-[collab24_slice2_conversation_pm_l4_reject]
-{
-	[text*]
-	{
-		screen_text = "A pity, but I respect that. Perhaps the fae lands have hidden knowledge for me to uncover.";
-	}
-}
-[collab24_slice2_conversation_pm_l4_rejoin]
-{
-	[text*]
-	{
-		screen_text = "So, you're back? Any new stories to tell? Or perhaps a fellowship for me to join?";
-		choice = potential_member;
-	}
-}
 [collab24_slice2_conversation_pm_l4_disband]
 {
 	[text*]
@@ -47,66 +23,32 @@
 {
 	[text*]
 	{
-		screen_text = "Pretty inconstant, are we? How we managed to have such great cooperation together is beyond me. But we might resume where we left off anyway. There is so much in this world I have yet to learn.";
 		choice = potential_member;
+		screen_text = "Pretty inconstant, are we? How we managed to have such great cooperation together is beyond me. But we might resume where we left off anyway. There is so much in this world I have yet to learn.";
 	}
 }
-[conv_collab24_slice2_r4_fae_lover_b4_quest_first]
+[collab24_slice2_conversation_pm_l4_join]
 {
 	[text*]
 	{
-		activate_quest* = c24_slice_2_quest_fae_lover,0;
-	  b quest_dialog = true;
-		screen_text = "For the love of Azunai. When I finally manage to float the barrels uninterrupted by that fae friar for more than five minutes, the first traveler in weeks does the job for her.\n\nWhat I'm talking about? See, I came here to practice telekinesis in peaceful solitude. But woe me, some fae noticed my efforts, and has been causing all sorts of mischief to me. Supplies going missing, cuttlery falling off racks, you name it. The little creature is very nimble and elusive. I have not had a chance catching her yet.\n\nBut now that you are here, perhaps you could help me. We might set up a trap - I'll lift another set of barrels, and while she's distracted, you'll trap her. For that, you'll need an Arcane Trap. The fae sometimes use it to catch wild icy wasps, or so I hear. One such trap is currently possesed by Aerthemees the Trapper. You can find her just across the bridge, in the area to your right.";
+		choice = potential_member;
+		screen_text = "Hello, traveler. You come from Frostfingers, right? Have you had the chance to meet my brother, the blacksmith? Yeah, that sounds like him.\n\nSee, he tried to teach some of his smithing arts, but I am cut from different cloth. I set off for the lands of the frost fae, to learn more about ice magic. Unfortunate timing, right? I ended up stuck in Thaelaen's hut here.\n\nListen, how about I join your cause? Any chance to learn more about ice magic is better than skulking around.";
+		scroll_rate = 6.5;
 	}
 }
-[conv_collab24_slice2_r4_fae_lover_b4_quest_next]
+[collab24_slice2_conversation_pm_l4_reject]
 {
 	[text*]
 	{
-		screen_text = "Have you managed to find the Arcane Trap yet? That little mischief doer will be the death of me.";
+		screen_text = "A pity, but I respect that. Perhaps the fae lands have hidden knowledge for me to uncover.";
 	}
 }
-[conv_collab24_slice2_r4_fae_lover_ready_for_trap]
+[collab24_slice2_conversation_pm_l4_rejoin]
 {
 	[text*]
 	{
-		activate_quest* = c24_slice_2_quest_fae_lover,3;
-	  b quest_dialog = true;
-		screen_text = "You have the Arcane Trap! Perfect! Let me focus on the barrels. Wait for her to appear. Then drop the Arcane Trap near her.";
-	}
-}
-[conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_first]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_fae_lover,6;
-	  b quest_dialog = true;
-		screen_text = "My dear friend, you managed to it. The little imp is finally imprisoned. However, I have another favor to ask. It seems like Aerthemees the Trapper had the Arcane Trap on her for a reason. One of those vasp monsters appeared at the very site you fought her. I worry the beast might bother both me and other travelers. Would you mind disposing of it? Since you do not have another Arcane Trap, you might have to contain it in the old-fashioned way.";
-	}
-}
-[conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_next]
-{
-	[text*]
-	{
-		screen_text = "How's your skirmish with the wasp going? It's a terrifying beast I hear.";
-	}
-}
-[conv_collab24_slice2_r4_fae_lover_after_quest_first]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_fae_lover,10;
-		complete_quest* = c24_slice_2_quest_fae_lover;
-	  b quest_dialog = true;
-		screen_text = "For the love of Azunai, after I fall in love with one friar, another one comes. Still, the whole effort was worth it. Yes, you heard me right\n\nThe fae you trapped calls herself Nyahdal. All the mischief she inflicted on me...was just her way of getting my attention. After we talked for a while, I realized our feelings were mutual. Now we live together. She even decided to run a shop to get to know people better. Thank you, my friend. You have enriched lives of the both of us greatly.";
-	}
-}
-[conv_collab24_slice2_r4_fae_lover_after_quest_next]
-{
-	[text*]
-	{
-		screen_text = "Our experiences together have completely depleted my supply of barrels to float. I might have to wait for a caravan passing through before I can resume my practice of telekinesis. Don't forget to visit Nyahdal's store.";
+		choice = potential_member;
+		screen_text = "So, you're back? Any new stories to tell? Or perhaps a fellowship for me to join?";
 	}
 }
 [conv_c24_r4_fae_shop_first]
@@ -125,67 +67,20 @@
 		screen_text = "I cannot believe the sort of things that humans eat. How are you all still alive? Anyway, fancy to buy some potions to sustain you on your journey?";
 	}
 }
-[conv_c24_r4_fairy_trees_b4_quest_first]
+[conv_c24_r4_fairy_princess_after_tree_quest_first]
 {
 	[text*]
 	{
-		activate_quest* = c24_slice_2_quest_restore_ice_trees,0;
+		activate_quest* = c24_slice_2_quest_kill_fae_queen,2;
 	  b quest_dialog = true;
-		screen_text = "An elephant in a glass store, are you? I leave my eyes off you for a moment, and our icy grove is shattered to pieces. Destroying Phrymallix the dragon was a noble deed, no doubt, just as finding that healing scroll for Rethoros. But you should learn to clean your own mess.\n\nHere, take this spell. Cast it upon the icy stumps left after the destroyed trees. It will restore the trees to their former beauty. Come find me when all trees have been restored.";
+		screen_text = "Oh, helping an injured tree and restoring the icy grove surely must have made her trust you a great deal. This is ideal time to ask for her help.";
 	}
 }
-[conv_c24_r4_fairy_trees_b4_quest_next]
+[conv_c24_r4_fairy_princess_after_tree_quest_next]
 {
 	[text*]
 	{
-		screen_text = "Do not tally, friend. The trees must be restored. Remember to cast the spell I gave you upon ALL the icy stumps nearby.";
-	}
-}
-[conv_c24_r4_fairy_trees_after_quest_first]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_restore_ice_trees,2;
-		complete_quest* = c24_slice_2_quest_restore_ice_trees;
-	  b quest_dialog = true;
-		screen_text = "Your kindness knows no boundaries, does it, friend? You take pity upon trees both organic and icy. You truly are a friend to the nature and the fae folk, despite having fought some of our derranged sisters.";
-	}
-}
-[conv_c24_r4_fairy_trees_after_quest_next]
-{
-	[text*]
-	{
-		screen_text = "I thank you friend, even for those who cannot express their thanks. I hope you will remain a friend to the fae folk for the rest of your life.";
-	}
-}
-[conv_c24_r4_fairy_trees_asking_help_4_princess_first]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_kill_fae_queen,3;
-	  b quest_dialog = true;
-		screen_text = "You seek to champion Princess Glamoulla's cause? I am not fully convinced she would make a good queen. Thought it's true our queen cowardly fled to Isle of Rhea Yhanity when our realm needed a defender, a role you have taken upon yourself. Allright, if one as trustworthy as you seeks to put Princess Glamoulla on the throne, I have no objections. Very well, the Isle of Rhea Yhanity is now open to you.";
-	}
-}
-[conv_c24_r4_fairy_trees_asking_help_4_princess_next]
-{
-	[text*]
-	{
-		screen_text = "I have granted you the access to Isle of Rhea Yhanity. Do what must be done, before I reconsider.";
-	}
-}
-[conv_c24_r4_fairy_trees_queen_killed_first]
-{
-	[text*]
-	{
-		screen_text = "So, the regicide I assisted has been brought to an end. What that means for our realm, is now up to Princess Glamoulla.";
-	}
-}
-[conv_c24_r4_fairy_trees_queen_killed_next]
-{
-	[text*]
-	{
-		screen_text = "Long live Glamoulla the Queen. The brief conversations we managed to have so far hint me that her reign might be good one for the realm and its creatures.";
+		screen_text = "Speak with Zaireen and ask her to summon the bridge to Isle of Rhea Yhanity. There, you will be able to kill my mother the queen.";
 	}
 }
 [conv_c24_r4_fairy_princess_b4_quest_first]
@@ -202,22 +97,6 @@
 	[text*]
 	{
 		screen_text = "Speak with Zaireen and do anything she asks of you. She is the only way to access Isle of Rhea Yhanity, where my mother the queen is hiding.";
-	}
-}
-[conv_c24_r4_fairy_princess_after_tree_quest_first]
-{
-	[text*]
-	{
-		activate_quest* = c24_slice_2_quest_kill_fae_queen,2;
-	  b quest_dialog = true;
-		screen_text = "Oh, helping an injured tree and restoring the icy grove surely must have made her trust you a great deal. This is ideal time to ask for her help.";
-	}
-}
-[conv_c24_r4_fairy_princess_after_tree_quest_next]
-{
-	[text*]
-	{
-		screen_text = "Speak with Zaireen and ask her to summon the bridge to Isle of Rhea Yhanity. There, you will be able to kill my mother the queen.";
 	}
 }
 [conv_c24_r4_fairy_princess_gained_support_first]
@@ -249,5 +128,129 @@
 	[text*]
 	{
 		screen_text = "As a new queen, I am as busy as ever. But I am always ready to hear your thoughts, my champ...friend. My dear friend.";
+	}
+}
+[conv_c24_r4_fairy_trees_after_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_restore_ice_trees,2;
+		complete_quest* = c24_slice_2_quest_restore_ice_trees;
+	  b quest_dialog = true;
+		screen_text = "Your kindness knows no boundaries, does it, friend? You take pity upon trees both organic and icy. You truly are a friend to the nature and the fae folk, despite having fought some of our derranged sisters.";
+	}
+}
+[conv_c24_r4_fairy_trees_after_quest_next]
+{
+	[text*]
+	{
+		screen_text = "I thank you friend, even for those who cannot express their thanks. I hope you will remain a friend to the fae folk for the rest of your life.
+
+\n\nBe careful on you journey. The witch who summoned the dragon plague upon our lands resided in these caves. She likely will be hostile to you.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conv_c24_r4_fairy_trees_asking_help_4_princess_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_kill_fae_queen,3;
+	  b quest_dialog = true;
+		screen_text = "You seek to champion Princess Glamoulla's cause? I am not fully convinced she would make a good queen. Thought it's true our queen cowardly fled to Isle of Rhea Yhanity when our realm needed a defender, a role you have taken upon yourself. Allright, if one as trustworthy as you seeks to put Princess Glamoulla on the throne, I have no objections. Very well, the Isle of Rhea Yhanity is now open to you.";
+	}
+}
+[conv_c24_r4_fairy_trees_asking_help_4_princess_next]
+{
+	[text*]
+	{
+		screen_text = "I have granted you the access to Isle of Rhea Yhanity. Do what must be done, before I reconsider.";
+	}
+}
+[conv_c24_r4_fairy_trees_b4_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_restore_ice_trees,0;
+	  b quest_dialog = true;
+		screen_text = "An elephant in a glass store, are you? I leave my eyes off you for a moment, and our icy grove is shattered to pieces. Destroying Phrymallix the dragon was a noble deed, no doubt, just as finding that healing scroll for Rethoros. But you should learn to clean your own mess.\n\nHere, take this spell. Cast it upon the icy stumps left after the destroyed trees. It will restore the trees to their former beauty. Come find me when all trees have been restored.";
+	}
+}
+[conv_c24_r4_fairy_trees_b4_quest_next]
+{
+	[text*]
+	{
+		screen_text = "Do not tally, friend. The trees must be restored. Remember to cast the spell I gave you upon ALL the icy stumps nearby.";
+	}
+}
+[conv_c24_r4_fairy_trees_queen_killed_first]
+{
+	[text*]
+	{
+		screen_text = "So, the regicide I assisted has been brought to an end. What that means for our realm, is now up to Princess Glamoulla.";
+	}
+}
+[conv_c24_r4_fairy_trees_queen_killed_next]
+{
+	[text*]
+	{
+		screen_text = "Long live Glamoulla the Queen. The brief conversations we managed to have so far hint me that her reign might be good one for the realm and its creatures.";
+	}
+}
+[conv_collab24_slice2_r4_fae_lover_after_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_fae_lover,10;
+		complete_quest* = c24_slice_2_quest_fae_lover;
+	  b quest_dialog = true;
+		screen_text = "For the love of Azunai, after I fall in love with one friar, another one comes. Still, the whole effort was worth it. Yes, you heard me right\n\nThe fae you trapped calls herself Nyahdal. All the mischief she inflicted on me...was just her way of getting my attention. After we talked for a while, I realized our feelings were mutual. Now we live together. She even decided to run a shop to get to know people better. Thank you, my friend. You have enriched lives of the both of us greatly.";
+	}
+}
+[conv_collab24_slice2_r4_fae_lover_after_quest_next]
+{
+	[text*]
+	{
+		screen_text = "Our experiences together have completely depleted my supply of barrels to float. I might have to wait for a caravan passing through before I can resume my practice of telekinesis. Don't forget to visit Nyahdal's store.";
+	}
+}
+[conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_fae_lover,6;
+	  b quest_dialog = true;
+		screen_text = "My dear friend, you managed to it. The little imp is finally imprisoned. However, I have another favor to ask. It seems like Aerthemees the Trapper had the Arcane Trap on her for a reason. One of those vasp monsters appeared at the very site you fought her. I worry the beast might bother both me and other travelers. Would you mind disposing of it? Since you do not have another Arcane Trap, you might have to contain it in the old-fashioned way.";
+	}
+}
+[conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_next]
+{
+	[text*]
+	{
+		screen_text = "How's your skirmish with the wasp going? It's a terrifying beast I hear.";
+	}
+}
+[conv_collab24_slice2_r4_fae_lover_b4_quest_first]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_fae_lover,0;
+	  b quest_dialog = true;
+		screen_text = "For the love of Azunai. When I finally manage to float the barrels uninterrupted by that fae friar for more than five minutes, the first traveler in weeks does the job for her.\n\nWhat I'm talking about? See, I came here to practice telekinesis in peaceful solitude. But woe me, some fae noticed my efforts, and has been causing all sorts of mischief to me. Supplies going missing, cuttlery falling off racks, you name it. The little creature is very nimble and elusive. I have not had a chance catching her yet.\n\nBut now that you are here, perhaps you could help me. We might set up a trap - I'll lift another set of barrels, and while she's distracted, you'll trap her. For that, you'll need an Arcane Trap. The fae sometimes use it to catch wild icy wasps, or so I hear. One such trap is currently possesed by Aerthemees the Trapper. You can find her just across the bridge, in the area to your right.";
+	}
+}
+[conv_collab24_slice2_r4_fae_lover_b4_quest_next]
+{
+	[text*]
+	{
+		screen_text = "Have you managed to find the Arcane Trap yet? That little mischief doer will be the death of me.";
+	}
+}
+[conv_collab24_slice2_r4_fae_lover_ready_for_trap]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_fae_lover,3;
+	  b quest_dialog = true;
+		screen_text = "You have the Arcane Trap! Perfect! Let me focus on the barrels. Wait for her to appear. Then drop the Arcane Trap near her.";
 	}
 }
