@@ -31,51 +31,9 @@
 		{
 			[*]
 			{
-				alteration			= alter_chance_to_block_nmagic_damage;
-				value				= 12;
-				duration			= #infinite;
-				is_permanent		= true;
-				is_single_instance	= false;
-			}
-			[*]
-			{
-				alteration			= alter_chance_to_block_cmagic_damage;
-				value				= 12;
-				description			= "+12% Chance to Block Magic Attacks";
-				duration			= #infinite;
-				is_permanent		= true;
-				is_single_instance	= false;
-			}
-			[*]
-			{
-				alteration			= alter_chance_to_dodge_hit_melee;
-				value				= 12;
-				description			= "+12% Chance to Dodge Physical Attack";
-				duration			= #infinite;
-				is_permanent		= true;
-				is_single_instance	= false;
-			}
-			[*]
-			{
-				alteration			= alter_chance_to_dodge_hit_ranged;
-				value				= 12;
-				duration			= #infinite;
-				is_permanent		= true;
-				is_single_instance	= false;
-			}
-			[*]
-			{
-				alteration			= alter_chance_to_hit_melee;
-				value				= 12;
-				description			= "+12% Chance to Hit Enemy with Physical Weapon";
-				duration			= #infinite;
-				is_permanent		= true;
-				is_single_instance	= false;
-			}
-			[*]
-			{
-				alteration			= alter_chance_to_hit_ranged;
-				value				= 12;
+				alteration			= alter_intelligence;
+				value				= 1;
+				description			= "Adds 1 to Intelligence";
 				duration			= #infinite;
 				is_permanent		= true;
 				is_single_instance	= false;
