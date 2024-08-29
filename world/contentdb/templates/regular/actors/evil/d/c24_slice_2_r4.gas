@@ -1269,3 +1269,204 @@
 			?activate					= true;
     }
 }
+[t:template,n:c24_s2_golem_base]
+{
+	category_name = "1W_evil_d";
+	doc = "c24 s2 golem base";
+	specializes = actor_evil;
+	[aspect]
+	{
+		model=m_c_edm_mg_pos_1;
+		material = stone;
+		[voice]
+		{
+			[die] { * = s_e_die_gargoyle; }
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 3.0000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_mg_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		explosion_magnitude = 3.0;
+		gib_gore_good = true;
+	}
+}
+[t:template,n:c24_s2_golem_boss_01]
+{
+	category_name = "1W_evil_d";
+	doc = "c24 s2 golem boss 01";
+	specializes = c24_s2_golem_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		30, 0;
+			intelligence = 	15, 0;
+			dexterity =		10, 0;
+            combat_magic =     10, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 45;
+		life = 216;
+		max_life = 216;
+		mana = 300;
+        max_mana = 300;
+		textures:0 = b_c_edm_c24_s2_golem;
+		material = steel;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 56;
+		damage_min = 50;
+		reload_delay = 0;
+	}
+	[common]
+	{
+		screen_name="Lua-Mi Mineral Golem";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("c24_s2_effect_golem");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+		}
+	}
+    [defend] { defense=72; }
+	[inventory]
+	{
+        spew_equipped_kill_count = <ignore>;
+        selected_active_location = il_active_primary_spell;
+        [other] 
+        { 
+            il_active_primary_spell = c24_s2_r3_golem_spell_chain_lightning;
+			il_active_secondary_spell = c24_s2_r3_golem_spell_acid_cloud;
+        }
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+				   il_main = potion_health_medium;
+				   il_main = potion_mana_medium;
+				   il_main = potion_rejuvenation_medium;
+				}
+				[all*]
+				{
+	                il_main = #nmagic/5-7;
+	                il_main = #cmagic/5-7;
+				}
+				[oneof*]
+				{
+					il_main = #armor/28-41;
+					il_main = #weapon/15-24;
+					il_main = #*/15-24;
+				}
+                [oneof*]
+				{
+					il_main = #weapon/-mod(1)/10-20;
+					il_main = #armor/-mod(1)/10-41;
+
+					il_main = #weapon/-rare(1)/10-20;
+					il_main = #armor/-rare(1)/10-41;
+					il_main = #*/-rare(1)/10-20;
+                }
+			}
+		}
+	}
+
+	[mind]
+	{
+        actor_auto_heals_self_life = false;
+        actor_auto_heals_others_life = false;
+        actor_auto_switches_to_magic = true;
+        actor_auto_switches_to_melee = false;
+        actor_weapon_preference			= WP_MAGIC;
+
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+
+		movement_orders = mo_hold;
+		
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
+		jat_guard	= world\ai\jobs\common\job_guard.skrit;
+		melee_engage_range = 20;
+		personal_space_range = 0.7;
+		ranged_engage_range = 20.0;
+		sight_range = 20.0;
+	}
+	[physics]
+	{
+		explode_when_killed = true;	
+	}
+}

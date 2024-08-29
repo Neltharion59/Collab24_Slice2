@@ -77,3 +77,100 @@
 		screen_name = "Ice Witch";
 	}
 }
+[t:template,n:c24_s2_npc_ice_witch_fight_base]
+{
+	category_name = "1W_townsperson";
+	doc = "c24 s2 NPC Ice Mage Fight Base";
+	specializes = base_swamp_witch;
+	[actor]
+	{
+		alignment = aa_good;
+		[skills]
+		{
+			strength =  3, 0;
+			intelligence =  10, 0;
+			dexterity =  10, 0;
+			nature_magic =  8,  0;
+		}
+	}
+	[aspect]
+	{
+		is_invincible = true;
+		textures:0 = b_c_edm_img;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 60;
+		damage_min = 55;
+	}
+	[common] { screen_name="Ice Mage"; }
+	[conversation] {}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+	}
+	[mind]
+	{
+		actor_may_be_attacked = false;
+		movement_orders = mo_hold;
+
+		jat_talk					= world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:c24_s2_npc_ice_witch_fight_1]
+{
+	category_name = "1W_townsperson";
+	doc = "c24 s2 NPC Ice Mage Fight 1";
+	specializes = c24_s2_npc_ice_witch_fight_base;
+	[common] { screen_name="Galenna Winewidow"; }
+	[inventory]
+	{
+        [other] 
+        { 
+            il_active_primary_spell = c24_s2_r3_witch_spell_debuff_skill;
+        }
+	}
+}
+[t:template,n:c24_s2_npc_ice_witch_fight_2]
+{
+	category_name = "1W_townsperson";
+	doc = "c24 s2 NPC Ice Mage Fight 2";
+	specializes = c24_s2_npc_ice_witch_fight_base;
+	[common] { screen_name="Ainilla Propersweep"; }
+	[inventory]
+	{
+        [other] 
+        { 
+            il_active_primary_spell = c24_s2_r3_witch_spell_debuff_armor;
+        }
+	}
+}
+[t:template,n:c24_s2_npc_ice_witch_fight_3]
+{
+	category_name = "1W_townsperson";
+	doc = "c24 s2 NPC Ice Mage Fight 3";
+	specializes = c24_s2_npc_ice_witch_fight_base;
+	[common] { screen_name="Nadan Ratherstrong"; }
+	[inventory]
+	{
+        [other] 
+        { 
+            il_active_primary_spell = c24_s2_r3_witch_spell_debuff_speed;
+        }
+	}
+}
+[t:template,n:c24_s2_npc_ice_witch_fight_4]
+{
+	category_name = "1W_townsperson";
+	doc = "c24 s2 NPC Ice Mage Fight 4";
+	specializes = c24_s2_npc_ice_witch_fight_base;
+	[common] { screen_name="Dayna Neverknocks"; }
+	[inventory]
+	{
+        [other] 
+        { 
+            il_active_primary_spell = c24_s2_r3_witch_spell_debuff_damage;
+        }
+	}
+}

@@ -906,6 +906,250 @@
 		z_offset = .2;
 	}
 }
+[t:template,n:c24_s2_r3_golem_spell_chain_lightning]
+{
+	category_name = "magic";
+	doc = "c24 s2 r3 spell golem chain_lightning";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 38;
+		damage_min = 36;
+	}
+	[magic]
+	{
+		cast_range = 20;
+		cast_reload_delay = 1;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_chain_attack]
+	{
+		jumps			= 16;
+		radius 			= 5;
+		attack_script	= c24_s2_chain_lightning;
+		effect_script	= c24_s2_chain_lightning;
+		dur				= 0.7;
+		falloff			= 1.0;
+	}
+}
+[t:template,n:c24_s2_r3_golem_spell_acid_cloud]
+{
+	category_name = "magic";
+	doc = "c24 s2 r3 spell golem acid_cloud";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 68;
+		damage_min = 61;
+	}
+	[magic]
+	{
+		cast_range = 20;
+		cast_reload_delay = 1;
+		effect_duration = 12;
+		does_damage_per_second = true;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_fire]
+	{
+		effect_script = c24_s2_effect_acid_cloud;
+		particle_fit = 0.1;
+		ignite = false;
+	}
+}
+[t:template,n:c24_s2_r3_witch_spell_debuff_skill]
+{
+	category_name = "magic";
+	doc = "c24 s2 r3 spell witch debuff skill";
+	specializes = base_spell_monster_nm;
+	[magic]
+	{
+		cast_range = 15;
+		cast_reload_delay = 3;
+		effect_duration = 3;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+		apply_enchantments = false;
+		state_name = curse;
+		require_state_check = true;
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_melee;
+				description = "Decrease melee";
+				duration = 3;
+				frequency = 0;
+				initial_delay = 0.25;
+				value = -3;
+			}
+			[*]
+			{
+				alteration = alter_ranged;
+				description = "Decrease Ranged";
+				duration = 3;
+				frequency = 0;
+				initial_delay = 0.25;
+				value = -3;
+			}
+			[*]
+			{
+				alteration = alter_combat_magic;
+				description = "Decrease Combat Magic";
+				duration = 3;
+				frequency = 0;
+				initial_delay = 0.25;
+				value = -3;
+			}
+			[*]
+			{
+				alteration = alter_nature_magic;
+				description = "Decrease Nature Magic";
+				duration = 3;
+				frequency = 0;
+				initial_delay = 0.25;
+				value = -3;
+			}
+		}
+	}
+	[spell_mass_enchant]
+	{
+		enchant_script	= curse;
+		radius			= 20.0;
+		description = "Cursed";
+	}
+}
+[t:template,n:c24_s2_r3_witch_spell_debuff_armor]
+{
+	category_name = "magic";
+	doc = "c24 s2 r3 spell witch debuff armor";
+	specializes = base_spell_monster_nm;
+	[magic]
+	{
+		cast_range = 15;
+		cast_reload_delay = 4;
+		effect_duration = 3;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+		apply_enchantments = false;
+		state_name = malign;
+		require_state_check = true;
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_armor;
+				description = "Decrease armor";
+				duration = 3;
+				frequency = 0;
+				initial_delay = 0.25;
+				value = -20;
+			}
+		}
+	}
+	[spell_mass_enchant]
+	{
+		enchant_script	= malign;
+		radius			= 2.0;
+		description = "Softened";
+	}
+}
+[t:template,n:c24_s2_r3_witch_spell_debuff_speed]
+{
+	category_name = "magic";
+	doc = "c24 s2 r3 spell witch debuff speed";
+	specializes = base_spell_monster_nm;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("sleepy_line");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		effect_duration = 3;
+		cast_range = 15;
+		cast_reload_delay = 4;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+		state_name = slowed;
+	}
+	[spell_speed_affector]
+	{
+		description = "Slowed";
+		effect_script = sleepy_gas;
+		walkModifier = 0.5;
+		attackModifier = 2.0;
+		immunity = "immune_sleepy_gas";
+		groupEffect = false;
+	}
+}
+[t:template,n:c24_s2_r3_witch_spell_debuff_damage]
+{
+	category_name = "magic";
+	doc = "c24 s2 r3 spell witch debuff damage";
+	specializes = base_spell_monster_nm;
+	[magic]
+	{
+		cast_range = 15;
+		cast_reload_delay = 4;
+		effect_duration = 3;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy;
+		usage_context_flags = uc_offensive;
+		apply_enchantments = false;
+		state_name = accuracy;
+		require_state_check = true;
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_cmagic_damage_min;
+				description = "Decrease Attack";
+				duration = 3;
+				frequency = 0;
+				initial_delay = 0.25;
+				value = -15;
+			}
+			[*]
+			{
+				alteration = alter_cmagic_damage_max;
+				duration = 3;
+				frequency = 0;
+				initial_delay = 0.25;
+				value = -15;
+			}
+		}
+	}
+	[spell_mass_enchant]
+	{
+		enchant_script	= accuracy;
+		radius			= 2.0;
+		description = "Power Leak";
+	}
+}
 [t:template,n:c24_r5_naldrun_spell_iceshard]
 {
 	category_name = "magic";
