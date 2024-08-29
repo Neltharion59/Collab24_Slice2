@@ -88,44 +88,45 @@ state Talk$
 	event OnEnterState$
 	{
 		// $$$ read/write variables from the Game Auditor here, and bring up the appropriate dialogs...
-		m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l4_join" );
 
 		if ( GameAuditor.GetDb.GetBool( "party_accept_0x2500065" ) )
 		{
-			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l4_accept" );
+			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l4_accept_have_money" );
 			GameAuditor.GetDb.SetBool( "party_accept_0x2500065", false );
-			TryAnim$('talk');
+		}
+		else if ( GameAuditor.GetDb.GetBool( "party_accept_no_money_0x2500065" ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l4_accept_have_no_money" );
+			GameAuditor.GetDb.SetBool( "party_accept_no_money_0x2500065", false );
+			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x2500065", true );
 		}
 		else if ( GameAuditor.GetDb.GetBool( "party_decline_0x2500065" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l4_reject" );
 			GameAuditor.GetDb.SetBool( "party_decline_0x2500065", false );
 			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x2500065", true );
-			TryAnim$('talk');
 		}
 		else if ( GameAuditor.GetDb.GetBool( "party_disband_0x2500065" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l4_disband" );
 			GameAuditor.GetDb.SetBool( "party_disband_0x2500065", false );
 			GameAuditor.GetDb.SetBool( "party_disbanded_0x2500065", true );
-			TryAnim$('talk');
 		}
 		else if ( GameAuditor.GetDb.GetBool( "party_disbanded_0x2500065" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l4_disband_rejoin" );
-			TryAnim$('talk');
 		}
 		else if ( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0x2500065" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l4_rejoin" );
 			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x2500065", false );
-			TryAnim$('talk');
 		}
 		else
 		{
-			TryAnim$('andi');
+			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l4_join" );
 		}
 
+		TryAnim$('talk');
 		m_Go$.GetConversation.RSActivateDialogue();
 	}
 }

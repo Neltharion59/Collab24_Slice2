@@ -11,7 +11,7 @@
 	(C)opyright 2000 Gas Powered Games, Inc.
 
   ----------------------------------------------------------------------------
-  ============================================================================
+  ============================================================================2500065
 */
 
 Go			m_Go$;
@@ -88,49 +88,50 @@ state Talk$
 	event OnEnterState$
 	{
 		// $$$ read/write variables from the Game Auditor here, and bring up the appropriate dialogs...
-		m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_join" );
 
 		if ( GameAuditor.GetDb.GetBool( "party_accept_0x2100228" ) )
 		{
-			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_accept" );
+			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_accept_have_money" );
 			GameAuditor.GetDb.SetBool( "party_accept_0x2100228", false );
-			TryAnim$('talk');
+		}
+		else if ( GameAuditor.GetDb.GetBool( "party_accept_no_money_0x2100228" ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_accept_have_no_money" );
+			GameAuditor.GetDb.SetBool( "party_accept_no_money_0x2100228", false );
+			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x2100228", true );
 		}
 		else if ( GameAuditor.GetDb.GetBool( "party_decline_0x2100228" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_reject" );
 			GameAuditor.GetDb.SetBool( "party_decline_0x2100228", false );
 			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x2100228", true );
-			TryAnim$('talk');
 		}
 		else if ( GameAuditor.GetDb.GetBool( "party_disband_0x2100228" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_disband" );
 			GameAuditor.GetDb.SetBool( "party_disband_0x2100228", false );
 			GameAuditor.GetDb.SetBool( "party_disbanded_0x2100228", true );
-			TryAnim$('talk');
 		}
 		else if ( GameAuditor.GetDb.GetBool( "party_disbanded_0x2100228" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_disband_rejoin" );
-			TryAnim$('talk');
 		}
 		else if ( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0x2100228" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_rejoin" );
 			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x2100228", false );
-			TryAnim$('talk');
 		}
 		else
 		{
-			TryAnim$('andi');
+			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_join" );
 			
 			// Enable wishing pond
-			scid activate_rock_trigger_scid$ = MakeScid(0x02100E99);
-			Go activate_rock_trigger$ = GoDb.FindGoidByScid( activate_rock_trigger_scid$ ).Go;
-			SendWorldMessage( WE_REQ_ACTIVATE, activate_rock_trigger$.Goid, activate_rock_trigger$.Goid );
+			scid quest_trigger_scid$ = MakeScid(0x02100E99);
+			Go quest_trigger$ = GoDb.FindGoidByScid( quest_trigger_scid$ ).Go;
+			SendWorldMessage( WE_REQ_ACTIVATE, quest_trigger$.Goid, quest_trigger$.Goid );
 		}
 
+		TryAnim$('talk');
 		m_Go$.GetConversation.RSActivateDialogue();
 	}
 }

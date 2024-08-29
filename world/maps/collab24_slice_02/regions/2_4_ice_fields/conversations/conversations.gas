@@ -7,11 +7,18 @@
 		scroll_rate = 6.5;
 	}
 }
-[collab24_slice2_conversation_pm_l4_accept]
+[collab24_slice2_conversation_pm_l4_accept_have_money]
 {
 	[text*]
 	{
 		screen_text = "Excelent. I cannot wait to get a chance for some practice.";
+	}
+}
+[collab24_slice2_conversation_pm_l4_accept_have_no_money]
+{
+	[text*]
+	{
+		screen_text = "A pity my friend. My services are not for free.";
 	}
 }
 [collab24_slice2_conversation_pm_l4_reject]
