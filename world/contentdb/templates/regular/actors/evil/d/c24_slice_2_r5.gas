@@ -295,7 +295,6 @@
 	}
     [inventory]
     {
-        spew_equipped_kill_count = <ignore>;
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
@@ -375,7 +374,6 @@
 	}
     [inventory]
     {
-        spew_equipped_kill_count = <ignore>;
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
@@ -459,7 +457,6 @@
 	}
     [inventory]
     {
-        spew_equipped_kill_count = <ignore>;
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
@@ -551,7 +548,6 @@
 	}
     [inventory]
     {
-        spew_equipped_kill_count = <ignore>;
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
@@ -786,7 +782,6 @@
 	[defend] { defense=50; }
     [inventory]
     {
-        spew_equipped_kill_count = <ignore>;
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
@@ -973,7 +968,6 @@
 	[defend] { defense=60; }
     [inventory]
     {
-        spew_equipped_kill_count = <ignore>;
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
@@ -983,12 +977,6 @@
     }
 	[mind]
 	{
-		actor_weapon_preference              = WP_MAGIC;
-		actor_auto_switches_to_magic         = true;
-		actor_auto_switches_to_karate         = false;
-		actor_auto_switches_to_melee         = false;
-
-		jat_brain							 = world\ai\jobs\common\brain_hero.skrit;
 		jat_cast 						= world\ai\jobs\common\job_cast.skrit
 			?rand_spell					= true;
 
@@ -1065,7 +1053,6 @@
 	[defend] { defense=100; }
     [inventory]
     {
-        spew_equipped_kill_count = <ignore>;
         selected_active_location = il_active_primary_spell;
         [other] 
         { 

@@ -137,7 +137,7 @@
 	}
 	[inventory]
 	{
-		selected_active_location = il_spell_1;
+		selected_active_location = il_active_primary_spell;
 		[other]
 		{
 			il_active_primary_spell=collab24_slice2_r3_bronze_golem_spell_metal_shards;
@@ -697,7 +697,6 @@
 	[defend] { defense=20; }
     [inventory]
 	{
-        spew_equipped_kill_count = <ignore>;
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
@@ -1404,7 +1403,6 @@
     [defend] { defense=72; }
 	[inventory]
 	{
-        spew_equipped_kill_count = <ignore>;
         selected_active_location = il_active_primary_spell;
         [other] 
         { 
