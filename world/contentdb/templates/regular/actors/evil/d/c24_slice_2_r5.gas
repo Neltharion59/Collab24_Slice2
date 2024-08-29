@@ -153,8 +153,10 @@
 		experience_value = 28;
 		life = 24;
 		max_life = 24;
-		mana = 70;
-		max_mana = 70;
+		mana = 50;
+		max_mana = 250;
+        mana_recovery_unit  = 1;
+        mana_recovery_period = 8;
 		model = m_c_edm_054_pos_1;
 		[voice]
 		{
@@ -538,8 +540,6 @@
 		experience_value = 45;
 		life = 81;
 		max_life = 81;
-		mana = 180;
-		max_mana = 180;
 		[textures]
 		{
 			0 = b_c_edm_054_fae_v04;
@@ -766,6 +766,8 @@
 		max_life = 267;
 		mana = 300;
 		max_mana = 300;
+        mana_recovery_unit  = 1;
+        mana_recovery_period = 6;
 		[textures]
 		{
 			0 = b_c_xedm_093_fae_queen;
