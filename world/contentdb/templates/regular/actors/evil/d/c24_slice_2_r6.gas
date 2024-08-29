@@ -134,7 +134,7 @@
 	}
 	[inventory]
 	{
-		selected_active_location = il_spell_1;
+		selected_active_location = il_active_primary_spell;
 		[other]
 		{
 			il_active_primary_spell=c24_r6_ice_elemental_spell_ice_mage_balls;
@@ -150,8 +150,7 @@
 		actor_auto_switches_to_melee         = false;
 
         jat_cast 						= world\ai\jobs\common\job_cast.skrit
-			?rand_spell					= true
-			&rand_target				= true;
+			?rand_spell					= true;
 
 		melee_engage_range = 14.0;
 		personal_space_range = 0.1;
@@ -218,11 +217,106 @@
 		sight_range = 28.0;
 	}
 }
+[t:template,n:c24_slice_2_r6_shard_ice_base]
+{
+	category_name = "1W_evil_d";
+	doc = "Bruhs Slice 2 R6 shard ice base";
+	specializes = actor_evil;
+	[aspect]
+	{
+		model = m_c_edm_sd_pos_1;
+		material = ice;
+		[voice]
+		{
+			[cast]			{ * = s_e_attack_shard; }
+			[die]			{ priority = high; * = s_e_die_shard_small; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_gargoyle; }
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 3.3; // speed according to Jake. -ET
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_sd_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00=ds;
+					01=dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[mind]
+	{
+		actor_auto_fidgets 				= false;
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		melee_engage_range = 10;
+		personal_space_range = 0.5;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+		
+		sight_origin_height = 1.5;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+	}
+}
 [t:template,n:c24_slice_2_r6_shard_ice]  // = shard_teal
 {
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R6 shard ice";
-	specializes = base_shard;
+	specializes = c24_slice_2_r6_shard_ice_base;
 	[actor]
 	{
 		[skills]

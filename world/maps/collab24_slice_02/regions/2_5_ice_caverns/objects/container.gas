@@ -2,7 +2,7 @@
 {
 	[aspect]
 	{
-	  f scale_multiplier = 0.75;
+	  f scale_multiplier = 0.25;
 	}
 	[inventory]
 	{
@@ -11,7 +11,24 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,-6.49566e-008;
-	  p position = -0.00296021,-0.51762,0.289015,0xe1dd36a3;
+	  p position = 0.146317,-0.51762,-0.170736,0xe1dd36a3;
 		use_point_scids = 0x02600098;
+	}
+}
+[t:c24_slice2_r6_ctn_chest,n:0x026001c1]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.25;
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-6.49566e-008;
+	  p position = -0.191284,-0.51762,-0.158997,0x70aa089f;
+		use_point_scids = 0x026001e7;
 	}
 }
