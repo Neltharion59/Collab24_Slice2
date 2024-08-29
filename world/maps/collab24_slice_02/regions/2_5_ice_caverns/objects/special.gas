@@ -1526,7 +1526,7 @@
 				action* = send_world_message("we_req_activate",0x0260008B,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x02600052,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x0260008C,0f,"default","every",0);
-				action* = send_world_message("we_req_die",0x0260008E,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x0260008E,0f,"default","every",0);
 				action* = send_world_message("we_trigger_deactivate",0x02600085,0f,"default","every",0);
 				action* = send_world_message("we_trigger_activate",0x02600010,0f,"default","every",0), delay(0.2);
 			  b can_self_destruct = true;
@@ -1934,19 +1934,17 @@
 	  p position = 0.031971,-1.1,-2.33258,0x4142e592;
 	}
 }
-[t:trigger_fade_nodes_global_box,n:0x026000a9]
+[t:trigger_change_mood_box,n:0x026000b6]
 {
 	[common]
 	{
-		dev_instance_text = "FADE SUB RIVER PART";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes_global(0x00000026,21,21,21,"out:black");
-				action* = fade_nodes_global(0x00000026,40,40,40,"in");
+				action* = mood_change("collab24_slice2_mood_r5_dungeon");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.200000,2.000000,0.300000,"on_every_enter");
+				condition* = party_member_within_bounding_box(3.000000,2.000000,0.200000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1961,7 +1959,35 @@
 	}
 	[placement]
 	{
-	  p position = 0.150288,-1.5,-0.892609,0xe3c07eb5;
+	  p position = -0.174841,0.9,-5.30327,0x4142e592;
+	}
+}
+[t:trigger_change_mood_box,n:0x026000b7]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("collab24_slice2_mood_r5_sub_river");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,2.000000,0.200000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.191319,1.5,-6.18459,0x4142e592;
 	}
 }
 [t:trigger_generic,n:0x026000f3]
@@ -2061,17 +2087,19 @@
 	  p position = -0.106379,0.7,-4.90138,0x4142e592;
 	}
 }
-[t:trigger_change_mood_box,n:0x026000b6]
+[t:trigger_fade_nodes_global_box,n:0x026000a9]
 {
 	[common]
 	{
+		dev_instance_text = "FADE SUB RIVER PART";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = mood_change("collab24_slice2_mood_r5_dungeon");
+				action* = fade_nodes_global(0x00000026,21,21,21,"out:black");
+				action* = fade_nodes_global(0x00000026,40,40,40,"in");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.000000,0.200000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.200000,2.000000,0.300000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2086,35 +2114,7 @@
 	}
 	[placement]
 	{
-	  p position = -0.174841,0.9,-5.30327,0x4142e592;
-	}
-}
-[t:trigger_change_mood_box,n:0x026000b7]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("collab24_slice2_mood_r5_sub_river");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.000000,0.200000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.191319,1.5,-6.18459,0x4142e592;
+	  p position = 0.150288,-1.5,-0.892609,0xe3c07eb5;
 	}
 }
 [t:use_point,n:0x026001d0]
@@ -2332,5 +2332,17 @@
 	[placement]
 	{
 	  p position = -2.22997,0,1.41013,0x5d455363;
+	}
+}
+[t:c24_blocking_object_act,n:0x0260008e]
+{
+	[aspect]
+	{
+	  b does_block_path = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = -0.139677,-5.98883,1.62958,0x3621b2e7;
 	}
 }
