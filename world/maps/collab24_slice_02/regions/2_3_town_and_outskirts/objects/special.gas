@@ -1915,6 +1915,37 @@
 	  p position = 1.88673,0,-1.92803,0xf46c6b83;
 	}
 }
+[t:trigger_generic,n:0x02400e40]
+{
+	[common]
+	{
+		dev_instance_text = "ENABLE GATE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x02400E34,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02400E2D,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,4.000000,0.200000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.92388;
+	  p position = 1.52076,0,-0.776989,0x84bb6476;
+	}
+}
 [t:accumulate_trigger,n:0x02400011]
 {
 	[generic_accumtrigger]
@@ -4199,36 +4230,5 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 0.492493,4.50865,1.93771,0x47258526;
-	}
-}
-[t:trigger_generic,n:0x02400e40]
-{
-	[common]
-	{
-		dev_instance_text = "ENABLE GATE";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_deactivate",0x02400E34,0f,"default","every",0);
-				action* = send_world_message("we_req_deactivate",0x02400E2D,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,4.000000,0.200000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382684,0,0.92388;
-	  p position = 1.52076,0,-0.776989,0x84bb6476;
 	}
 }
