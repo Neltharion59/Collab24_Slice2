@@ -131,3 +131,19 @@
 		}
 	}
 }
+[t:template,n:c24_s2_body_glb_goblin_ice]
+{
+	category_name = "dead";
+	doc = "c24 s2 body_goblin";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.8;
+		lodfi_upper = 1;
+		model = m_i_glb_dead_goblin-01;
+		[textures]
+		{
+			0 = b_c_edm_iw;
+		}
+	}
+}
