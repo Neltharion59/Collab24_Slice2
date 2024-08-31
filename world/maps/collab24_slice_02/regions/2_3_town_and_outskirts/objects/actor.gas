@@ -1399,24 +1399,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 5.32191,-1.75,-1.92445,0x1d1f4859;
-	}
-}
-[t:mule,n:0x02400dc5]
-{
-	[actor]
-	{
-		alignment = aa_neutral;
-	}
-	[aspect]
-	{
-	  b is_invincible = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 2.37105,-1.25,3.70434,0x1d1f4859;
+	  q orientation = 0,-5.28297e-008,0,1;
+	  p position = 5.23268,-1.69596,-2.86524,0x1d1f4859;
 	}
 }
 [t:mule,n:0x02400dc6]
@@ -1448,22 +1432,6 @@
 	[placement]
 	{
 	  p position = -0.968378,-1.25,-2.84432,0x1d1f4859;
-	}
-}
-[t:mule,n:0x02400dc8]
-{
-	[actor]
-	{
-		alignment = aa_neutral;
-	}
-	[aspect]
-	{
-	  b is_invincible = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 2.2945,-1.25,-3.42559,0x1d1f4859;
 	}
 }
 [t:cow_black_white,n:0x02400ec5]
@@ -2746,5 +2714,65 @@
 	{
 	  q orientation = 0,0.382683,0,0.92388;
 	  p position = 0.319153,4.57016,1.46922,0x47258526;
+	}
+}
+[t:c24_slice_2_r3_npc_mule_shop,n:0x024010b8]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_mule_shop_first;
+			* = conversation_mule_shop_two_packmules;
+			* = conversation_mule_shop_one_packmule;
+			* = conversation_mule_shop_no_packmules;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_s2_mule_store.skrit;
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_feet = bo_gr_bl_f_g_c_avg;
+			es_forearms = gl_ga_bl_f_g_c_avg;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,4.38495e-007;
+	  p position = 5.39157,-1.75,-1.71123,0x1d1f4859;
+	}
+}
+[t:mule_bt_r1,n:0x024010b9]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+		screen_name = "Maladriel";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-6.46033e-009;
+	  p position = 2.80767,-1.25,3.06117,0x1d1f4859;
+	}
+}
+[t:mule_bt_r1,n:0x024010bd]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+		screen_name = "Smellrond";
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.49012e-007,0,1;
+	  p position = 2.23126,-1.25,-2.41287,0x1d1f4859;
 	}
 }

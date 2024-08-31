@@ -501,3 +501,34 @@
 	  f scroll_rate = 10.000000;
 	}
 }
+[conversation_mule_shop_first]
+{
+	[text*]
+	{
+		screen_text = "It's a crisp morning, isn't it? What a waste of perfect fresh air it would be to hide by the hearthfire. But you don't seem like you need me to remind you of that. Now, how about you improve your day with a new pet mule, huh?";
+		choice = buy_packmule;
+	}
+}
+[conversation_mule_shop_two_packmules]
+{
+	[text*]
+	{
+		screen_text = "I still got ole Maladriel and Smellrond, if you're interested.";
+		choice = buy_packmule;
+	}
+}
+[conversation_mule_shop_one_packmule]
+{
+	[text*]
+	{
+		screen_text = "I hope your mule hasn't given you too much trouble. How 'bout making it a pair? I still got another one, if you're interested.";
+		choice = buy_packmule;
+	}
+}
+[conversation_mule_shop_no_packmules]
+{
+	[text*]
+	{
+		screen_text = "Good luck to you, then. Keep my darlings safe.";
+	}
+}

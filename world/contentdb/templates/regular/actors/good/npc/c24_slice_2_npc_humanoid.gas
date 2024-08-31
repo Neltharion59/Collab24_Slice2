@@ -809,6 +809,36 @@
 		item_markup = 2;
 	}
 }
+[t:template,n:c24_slice_2_r3_npc_mule_shop]
+{
+	category_name = "1W_townsperson";
+	doc = "c24 slice2 r3 npc mule shop";
+	specializes = base_npc_fg;
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_25;
+			1 = b_c_pos_a1_066;
+		}
+	}
+	[common]
+	{
+		screen_name = "Lydia";
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[store]
+	{
+		item_markup = 2;
+	}
+}
 [t:template,n:c24_slice_2_r3_npc_fg_1]
 {
 	category_name = "1W_townsperson";
