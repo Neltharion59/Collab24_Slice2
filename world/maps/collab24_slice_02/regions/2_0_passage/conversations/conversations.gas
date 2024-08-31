@@ -53,6 +53,17 @@
 		screen_text = "My offer to join you still stands. I fear no danger, and no burden is too heavy for me to carry.";
 	}
 }
+
+[collab24_slice2_conversation_pm_l3_mp]
+{
+	[text*]
+	{
+		activate_quest* = c24_slice_2_quest_pond,0;
+	  b quest_dialog = true;
+		screen_text = "Traveler, what a happy encounter! You managed to meet me before the Master of the pond bested you. He is powerful and fearsome, and posseses command over the element of water. He causes all sorts of mischief to unwary travelers. Althought it's usually their folly for dropping gold coins near his pond.\n\nMyself, I am a water being, so I was enthralled by his powers, forced to serve him. He had a minor skirmish with the giant brothers living in these caves, during which I managed to escape. Then I met Dahlia here, who offered me a job as her escort. Not having seen much in my life besides ponds and underground rivers, I was excited about the opportunity. However, soon after those undead bodies attacked us, I lost a couple of shovels, which she says I owe her money for. From mud to peddle, as they say.";
+		scroll_rate = 6.5;
+	}
+}
 [collab24_slice2_conversation_shop_first]
 {
 	[text*]

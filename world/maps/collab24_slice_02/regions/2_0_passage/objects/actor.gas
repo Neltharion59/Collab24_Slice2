@@ -62,7 +62,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.92388,0,0.382683;
-	  p position = -3.28378,0,1.36266,0x1f65d451;
+	  p position = -3.08544,0,0.994593,0x1f65d451;
 	}
 }
 [t:collab24_slice2_r0_shop,n:0x02101a51]
@@ -1878,5 +1878,34 @@
 	[placement]
 	{
 	  p position = -3.85829,-0.98794,-1.58992,0xc2c1ef2a;
+	}
+}
+[t:collab24_slice2_pm_l3,n:0x02101ae8]
+{
+	[aspect]
+	{
+	  f max_life = 78.4;
+	  f max_mana = 31;
+	}
+	[common]
+	{
+		dev_instance_text = "Multiplayer";
+	  b is_single_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = collab24_slice2_conversation_pm_l3_mp;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -3.24456,0,1.4749,0x1f65d451;
 	}
 }
