@@ -71,28 +71,35 @@ state Talk$
 
 	event OnEnterState$
 	{
-		if ( GameAuditor.GetDb.GetBool( "mule_shop_talked_to" ) )		
-		{
-			if ( m_Go$.GetStore().GetNumHires() == 2 )
-			{		
-				m_Go$.GetConversation.RSSelectConversation( "conversation_mule_shop_two_packmules" );
-			}
-			else if ( m_Go$.GetStore().GetNumHires() == 1 )
-			{		
-				m_Go$.GetConversation.RSSelectConversation( "conversation_mule_shop_one_packmule" );
-			}	
-			else 
-			{			
-				m_Go$.GetConversation.RSSelectConversation( "conversation_mule_shop_no_packmules" );
-			}		
-		}
-		else
-		{		
-			m_Go$.GetConversation.RSSelectConversation( "conversation_mule_shop_first" );
-			GameAuditor.GetDb.SetBool( "mule_shop_talked_to", true );
-		}	
+        if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_hassat_done" ) )
+        {
+            if ( GameAuditor.GetDb.GetBool( "mule_shop_talked_to" ) )
+            {
+                if ( m_Go$.GetStore().GetNumHires() == 2 )
+                {		
+                    m_Go$.GetConversation.RSSelectConversation( "conversation_mule_shop_two_packmules" );
+                }
+                else if ( m_Go$.GetStore().GetNumHires() == 1 )
+                {		
+                    m_Go$.GetConversation.RSSelectConversation( "conversation_mule_shop_one_packmule" );
+                }	
+                else 
+                {			
+                    m_Go$.GetConversation.RSSelectConversation( "conversation_mule_shop_no_packmules" );
+                }		
+            }
+            else
+            {		
+                m_Go$.GetConversation.RSSelectConversation( "conversation_mule_shop_first" );
+                GameAuditor.GetDb.SetBool( "mule_shop_talked_to", true );
+            }
+        }
+        else
+        {
+            m_Go$.GetConversation.RSSelectConversation( "conversation_mule_shop_store_closed" );
+        }
 
-		m_Go$.GetConversation.RSActivateDialogue();
+        m_Go$.GetConversation.RSActivateDialogue();
 	}
 }
 
