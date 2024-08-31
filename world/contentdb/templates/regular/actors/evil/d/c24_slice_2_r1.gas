@@ -231,7 +231,7 @@
 	[defend] { defense=35; }
 	[common]
 	{
-		membership = monster;
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		screen_name="Orthrac";
 	}
 	[mind]
@@ -756,8 +756,8 @@
 	}
 	[common]
 	{
-        membership = monster;
-		screen_name="Minor Water Deity";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name="Minor Aquatic Deity";
 	}
 	[defend] { defense=50; }
     [inventory]
@@ -938,6 +938,10 @@
 		attack_range = 0.5;
 		damage_max = 15;
 		damage_min = 12;
+	}
+	[common]
+	{
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 	}
 	[defend] { defense=50; }
     [inventory]

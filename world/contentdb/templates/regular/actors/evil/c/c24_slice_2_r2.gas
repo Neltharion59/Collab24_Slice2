@@ -34,7 +34,11 @@
 		damage_min = 14;
 		reload_delay = 0;
 	}
-	[common] { screen_name="Nutlech"; }
+	[common]
+	{
+		screen_name="Nutlech";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+	}
     [defend] { defense=35; }
     [inventory]
     {

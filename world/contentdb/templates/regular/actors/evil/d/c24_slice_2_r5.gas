@@ -545,6 +545,7 @@
 	[common]
 	{
 		screen_name="Aerthemees the Trapper";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 	}
     [inventory]
     {
@@ -778,6 +779,7 @@
 	[common]
 	{
 		screen_name="Suvanne the Fae Queen";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 	}
 	[defend] { defense=50; }
     [inventory]
@@ -964,6 +966,7 @@
 	[common]
 	{
 		screen_name="Frost Vasp";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 	}
 	[defend] { defense=60; }
     [inventory]
@@ -1033,7 +1036,7 @@
 	}
 	[common]
 	{
-        membership = monster;
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		screen_name="Phrymallix the Youthful Dragon";
 		[template_triggers]
 		{

@@ -660,7 +660,7 @@
 	[common]
 	{
 		screen_name="Arachnoid Preystalker";
-		membership = party_scorpion_boss, monster;
+		membership=party_scorpion_boss,monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 	}
 	[defend] { defense=30; }
 }
@@ -821,7 +821,7 @@
 	}
 	[common]
 	{
-        membership = monster;
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		screen_name="Snow Beast";
 	}
 	[defend] { defense=50; }
@@ -1384,6 +1384,7 @@
 	[common]
 	{
 		screen_name="Lua-Mi Mineral Golem";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
 			[*]

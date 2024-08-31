@@ -359,6 +359,7 @@
 	[common]
 	{
 		screen_name = "Vjaranna";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 	}
 	[defend] { defense=40; }
 	[generator_in_object]
@@ -1056,7 +1057,7 @@
 	}
 	[common]
 	{
-		membership = monster;
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		screen_name = "Armored Pack Ram";
 	}
 	[defend] { defense = 55; }
