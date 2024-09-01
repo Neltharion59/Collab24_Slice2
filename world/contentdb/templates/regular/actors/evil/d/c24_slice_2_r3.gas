@@ -279,22 +279,13 @@
 		force_no_render = true;
 		megamap_orient = true;
 		draw_shadow = false;
-
+		
 		[voice]
 		{
-			[cast]
-			{
-				priority = high;
-				* = s_e_ds2_gen_vasp_atk1;
-				* = s_e_ds2_gen_vasp_atk2;
-				* = s_e_ds2_gen_vasp_atk3;
-			}
-			[die]			{ priority = high; * = s_e_ds2_gen_vasp_die1; }
-			[enemy_spotted]	{ priority = high; * = s_e_ds2_gen_vasp_sgt; }
-			[hit_critical]	{ priority = low; * = s_e_ds2_gen_vasp_hit; }
-			[hit_glance]	{ priority = low; * = s_e_ds2_gen_vasp_hit; }
-			[hit_solid]		{ priority = low; * = s_e_ds2_gen_vasp_hit; }
-	        [move]			{ priority = low; * = s_e_ds2_gen_vasp_mve_lp; }
+			[die]			{ priority = high; * = s_e_die_swamp_witch; }
+			[hit_critical]	{ priority = low; * = s_e_hit_swamp_witch_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_swamp_witch_SED; }
+			[hit_solid]		{ priority = low; * = s_e_hit_swamp_witch_SED; }
 		}
 	}
 	[attack]

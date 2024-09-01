@@ -205,6 +205,18 @@
 	  p position = -0.0260487,-5.99864,-0.370346,0x3621b2e7;
 	}
 }
+[t:c24_blocking_object_act,n:0x0260008e]
+{
+	[aspect]
+	{
+	  b does_block_path = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = -0.139677,-5.98883,1.62958,0x3621b2e7;
+	}
+}
 [t:trigger_generic,n:0x0260005b]
 {
 	[common]
@@ -480,20 +492,6 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 3.57837,0.660421,1.8021,0x4b809cf6;
-	}
-}
-[t:use_point,n:0x0260009f]
-{
-	[placement]
-	{
-	  p position = 1.58743,-1.4,9.7217,0xe2ad1f60;
-	}
-}
-[t:use_point,n:0x026000a0]
-{
-	[placement]
-	{
-	  p position = 4.48911,-1.4,9.7079,0xe2ad1f60;
 	}
 }
 [t:trigger_change_mood_box,n:0x026000b1]
@@ -2255,94 +2253,5 @@
 	[placement]
 	{
 	  p position = -0.0116272,-1.85,-2.46459,0x3a8b708c;
-	}
-}
-[t:trigger_fade_nodes_global_box,n:0x026001ae]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes_global(0x00000026,31,31,31,"out:black");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.200000,2.000000,0.300000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.0337372,-1.5,0.68644,0x1fcf9312;
-	}
-}
-[t:use_point,n:0x026000a5]
-{
-	[placement]
-	{
-	  p position = 1.98476,0,-1.60394,0x046e3c9b;
-	}
-}
-[t:use_point,n:0x026000a6]
-{
-	[placement]
-	{
-	  p position = 1.71207,0,1.5267,0x046e3c9b;
-	}
-}
-[t:use_point,n:0x026000a7]
-{
-	[placement]
-	{
-	  p position = -2.25591,0,-1.33915,0x81cfde10;
-	}
-}
-[t:use_point,n:0x026000a8]
-{
-	[placement]
-	{
-	  p position = -2.29668,0,1.45791,0x81cfde10;
-	}
-}
-[t:use_point,n:0x026001e7]
-{
-	[placement]
-	{
-	  p position = -1.26645,7.45058e-009,0.008255,0xc0693918;
-	}
-}
-[t:use_point,n:0x026000a3]
-{
-	[placement]
-	{
-	  p position = -2.15935,0,-1.44994,0x5d455363;
-	}
-}
-[t:use_point,n:0x026000a4]
-{
-	[placement]
-	{
-	  p position = -2.22997,0,1.41013,0x5d455363;
-	}
-}
-[t:c24_blocking_object_act,n:0x0260008e]
-{
-	[aspect]
-	{
-	  b does_block_path = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,2.98023e-008,0,1;
-	  p position = -0.139677,-5.98883,1.62958,0x3621b2e7;
 	}
 }

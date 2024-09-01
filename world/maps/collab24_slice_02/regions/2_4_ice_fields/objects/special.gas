@@ -147,6 +147,14 @@
 	  p position = 0.588218,0,0.00118256,0xf453e3ea;
 	}
 }
+[t:use_point,n:0x02500aa6]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -8.69323,8.05,0.919319,0xe8fd2dbf;
+	}
+}
 [t:trigger_generic,n:0x02500078]
 {
 	[common]
@@ -2274,7 +2282,7 @@
 			{
 				action* = fade_nodes(0x00000025,33,33,33,"out:black");
 			  b can_self_destruct = true;
-				condition* = actor_within_sphere(2.500000,"on_every_enter");
+				condition* = actor_within_sphere(2.500000,"while_inside");
 			  f delay = 0.000000;
 			  b flip_flop = true;
 			  b multi_player = true;
@@ -2500,13 +2508,5 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 3.632,5.98608,4.12448,0xe6bd68a1;
-	}
-}
-[t:use_point,n:0x02500aa6]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -8.69323,8.05,0.919319,0xe8fd2dbf;
 	}
 }
