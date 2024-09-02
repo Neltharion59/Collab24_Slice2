@@ -494,62 +494,6 @@
 	  p position = 3.57837,0.660421,1.8021,0x4b809cf6;
 	}
 }
-[t:trigger_change_mood_box,n:0x026000b1]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("collab24_slice2_mood_r5_cave_ice");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,2.000000,0.200000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 2.99284,-1.4,4.16352,0xe2ad1f60;
-	}
-}
-[t:trigger_change_mood_box,n:0x026000b4]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("collab24_slice2_mood_r5_dungeon");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,2.000000,0.200000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 3.0004,-1.4,4.80452,0xe2ad1f60;
-	}
-}
 [t:use_point,n:0x026001cc]
 {
 	[placement]
@@ -2253,5 +2197,12 @@
 	[placement]
 	{
 	  p position = -0.0116272,-1.85,-2.46459,0x3a8b708c;
+	}
+}
+[t:use_point,n:0x026001b3]
+{
+	[placement]
+	{
+	  p position = -0.0441742,-1.05,-0.726864,0x3a8b708c;
 	}
 }
