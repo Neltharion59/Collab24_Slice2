@@ -407,8 +407,8 @@
 	{
 		ammo_template = arrow_ice;
 		attack_range = 11;
-		damage_max = 44;
-		damage_min = 32;
+		damage_max = 25;
+		damage_min = 16;
 		reload_delay = 0.15;
 	}
 	[common]
@@ -419,7 +419,7 @@
 	[gui]
 	{
 		active_icon = b_gui_ig_i_ic_bow_004;
-		equip_requirements = strength:12,dexterity:16;
+		equip_requirements = dexterity:13;
 		inventory_height = 3;
 		inventory_icon = b_gui_ig_i_w_bow_087;
 		inventory_width = 1;
@@ -432,8 +432,8 @@
 			{
                 alteration			= alter_custom_damage_chance_ranged;
                 custom_damage		= cold;
-                value				= 15;
-                description			= "+15% Chance to Freeze and";
+                value				= 10;
+                description			= "+10% Chance to Freeze and";
                 duration			= #infinite;
                 is_permanent		= true;
                 is_single_instance	= false;
@@ -442,9 +442,9 @@
 			{
 				alteration			= alter_custom_damage_ranged;
                 custom_damage		= cold;
-                value				= 2;
-                max_value			= 4;
-                description			= "Adds 2 to 4 Cold Damage";
+                value				= 1;
+                max_value			= 2;
+                description			= "Adds 1 to 2 Cold Damage";
                 duration			= #infinite;
                 is_permanent		= true;
                 is_single_instance	= false;
