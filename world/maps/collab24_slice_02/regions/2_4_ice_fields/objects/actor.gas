@@ -931,14 +931,36 @@
 			* = collab24_slice2_conversation_pm_l4_rejoin;
 		}
 	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ro_m_d_c_003;
+			es_feet = bo_bo_le_f_g_c_avg;
+		}
+		[other]
+		{
+			il_active_primary_spell = spell_spark;
+			il_active_secondary_spell = spell_healing_hands;
+			il_main = potion_health_small;
+			il_main = potion_health_small;
+			il_main = potion_health_small;
+			il_main = potion_mana_small;
+			il_main = potion_mana_small;
+			il_main = potion_mana_small;
+			il_main = potion_mana_small;
+			il_main = potion_mana_small;
+			il_main = potion_mana_small;
+		}
+	}
 	[mind]
 	{
 		jat_talk = world\ai\jobs\actors\good\job_talk_collab24_slice2_pm_l4.skrit;
 	}
 	[placement]
 	{
-	  q orientation = 0,0.984808,0,-0.173648;
-	  p position = 2.59193,-3.65,0.636352,0x6cb2f6cd;
+	  q orientation = 0,-0.21644,0,0.976296;
+	  p position = 1.5482,0,0.728912,0x12603a33;
 	}
 }
 [t:c24_slice_2_r4_fae_lands_hermit,n:0x025009a8]

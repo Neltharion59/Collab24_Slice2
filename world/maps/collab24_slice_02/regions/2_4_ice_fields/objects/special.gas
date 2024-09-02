@@ -2272,35 +2272,6 @@
 	  p position = 1.09554,-3.65,-2.28351,0x6cb2f6cd;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x02500a9f]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0x00000025,33,33,33,"out:black");
-			  b can_self_destruct = true;
-				condition* = actor_within_sphere(2.500000,"while_inside");
-			  f delay = 0.000000;
-			  b flip_flop = true;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.984808,0,-0.173648;
-	  p position = 2.55315,-3.65,0.724365,0x6cb2f6cd;
-	}
-}
 [t:use_point,n:0x02500aa2]
 {
 	[placement]
