@@ -108,6 +108,19 @@
 	  p position = 1.06448,0,-0.179153,0x04cf34cf;
 	}
 }
+[t:barrel_glb_with_lid,n:0x02401135]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.6132,12,0.130638,0xf7399379;
+	}
+}
 [t:chest_csl_08,n:0x02400e3d]
 {
 	[aspect]
@@ -563,55 +576,6 @@
 	  p position = -1.98948,-3.25,0.671692,0x305fcc78;
 	}
 }
-[t:c24_slice2_r2_ctn_ice_crate_1,n:0x0240028f]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -2.20422,0,0.470106,0x62cec577;
-	}
-}
-[t:c24_slice2_r2_ctn_ice_crate_1,n:0x02400290]
-{
-	[placement]
-	{
-	  p position = -1.17018,4.76837e-007,0.499592,0x62cec577;
-	}
-}
-[t:c24_slice2_r2_ctn_ice_crate_1,n:0x02400291]
-{
-	[placement]
-	{
-	  q orientation = 0,0.382683,0,0.92388;
-	  p position = -1.59546,0,-0.239359,0x62cec577;
-	}
-}
-[t:c24_slice2_r2_ctn_chest_furok,n:0x02400260]
-{
-	[inventory]
-	{
-	  b drop_at_use_point = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -2.23308,0,0.377853,0xb0976182;
-		use_point_scids = 0x02400261;
-	}
-}
-[t:barrel_glb_with_lid,n:0x02401135]
-{
-	[aspect]
-	{
-	  b is_invincible = true;
-	  b is_selectable = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 1.6132,12,0.130638,0xf7399379;
-	}
-}
 [t:barrel_ice_supplies_01,n:0x0240113e]
 {
 	[aspect]
@@ -648,5 +612,41 @@
 	[placement]
 	{
 	  p position = 0.909824,12,2.50351,0x5bbf5946;
+	}
+}
+[t:c24_slice2_r2_ctn_ice_crate_1,n:0x0240028f]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -2.20422,0,0.470106,0x62cec577;
+	}
+}
+[t:c24_slice2_r2_ctn_ice_crate_1,n:0x02400290]
+{
+	[placement]
+	{
+	  p position = -1.17018,4.76837e-007,0.499592,0x62cec577;
+	}
+}
+[t:c24_slice2_r2_ctn_ice_crate_1,n:0x02400291]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -1.59546,0,-0.239359,0x62cec577;
+	}
+}
+[t:c24_slice2_r2_ctn_chest_furok,n:0x02400260]
+{
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.23308,0,0.377853,0xb0976182;
+		use_point_scids = 0x02400261;
 	}
 }

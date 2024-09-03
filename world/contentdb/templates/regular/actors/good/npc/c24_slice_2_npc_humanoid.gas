@@ -859,6 +859,10 @@
 	[conversation]
 	{
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
 }
 [t:template,n:c24_slice_2_r3_npc_fg_2]
 {
@@ -879,6 +883,10 @@
 	}
 	[conversation]
 	{
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
 [t:template,n:c24_slice_2_r3_npc_fb_1]
@@ -901,6 +909,10 @@
 	[conversation]
 	{
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
 }
 [t:template,n:c24_slice_2_r3_npc_fb_2]
 {
@@ -922,6 +934,10 @@
 	[conversation]
 	{
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
 }
 [t:template,n:c24_slice_2_r3_npc_ik_1]
 {
@@ -941,6 +957,10 @@
 	}
 	[conversation]
 	{
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
 [t:template,n:c24_slice_2_r3_npc_pmo_1]
@@ -962,6 +982,10 @@
 	[conversation]
 	{
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
 }
 [t:template,n:c24_slice_2_r3_npc_hg_1]
 {
@@ -973,6 +997,7 @@
 		[textures]
 		{
 			0 = b_c_gan_hg_skin_06;
+			1 = b_c_pos_a1_063;
 		}
 	}
 	[common]
@@ -986,6 +1011,7 @@
 	{
 		actor_may_attack = false;
 		actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
 [t:template,n:c24_slice_2_r3_npc_ft_1]
@@ -1000,6 +1026,10 @@
 	[common] { screen_name="Narreba"; }
 	[conversation]
 	{
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
 [t:template,n:c24_slice_2_r4_fae_lands_hermit]
@@ -1126,5 +1156,9 @@
 	}
 	[conversation]
 	{
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
