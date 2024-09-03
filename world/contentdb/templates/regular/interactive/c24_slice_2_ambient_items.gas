@@ -331,3 +331,327 @@
 		explode = false;
 	}
 }
+[t:template,n:c24_ambient_frag_base]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag base";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.8;
+		lodfi_upper = 1;
+	}
+}
+[t:template,n:c24_ambient_frag_boardwalk_03]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag boardwalk_03";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_swp_frag-boardwalk-03; }
+}
+[t:template,n:c24_ambient_frag_boardwalk_04]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag boardwalk_04";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_swp_frag-boardwalk-04; }
+}
+[t:template,n:c24_ambient_frag_boardwalk_06]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag boardwalk_06";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_swp_frag-boardwalk-06; }
+}
+[t:template,n:c24_ambient_frag_wood_02]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag wood_02";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-wood-02; }
+}
+[t:template,n:c24_ambient_frag_wood_04]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag wood_04";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-wood-04; }
+}
+[t:template,n:c24_ambient_frag_wood_06]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag wood_06";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-wood-06; }
+}
+[t:template,n:c24_ambient_frag_darker_02]
+{
+	doc = "c24 ambient frag darker_02";
+	specializes = c24_ambient_frag_base;
+	aspect:model = m_i_glb_frag-generic-02; 
+	aspect:textures:0 = b_i_glb_frag-generic-02;
+}
+[t:template,n:c24_ambient_frag_copter_01]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag copter_01";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-copter-01; }
+}
+[t:template,n:c24_ambient_frag_copter_02]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag copter_02";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-copter-02; }
+}
+[t:template,n:c24_ambient_frag_copter_03]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag copter_03";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-copter-03; }
+}
+[t:template,n:c24_ambient_frag_copter_04]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag copter_04";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-copter-04; }
+}
+[t:template,n:c24_ambient_frag_copter_05]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag copter_05";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-copter-05; }
+}
+[t:template,n:c24_ambient_frag_blaster_01]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag blaster_01";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-blaster-01; }
+}
+[t:template,n:c24_ambient_frag_blaster_02]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag blaster_02";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-blaster-02; }
+}
+[t:template,n:c24_ambient_frag_blaster_03]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag blaster_03";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-blaster-03; }
+}
+[t:template,n:c24_ambient_frag_blaster_04]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag blaster_04";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-blaster-04; }
+}
+[t:template,n:c24_ambient_frag_gobbot_01]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag gobbot_01";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-gobbot-01; }
+}
+[t:template,n:c24_ambient_frag_gobbot_02]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag gobbot_02";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-gobbot-02; }
+}
+[t:template,n:c24_ambient_frag_gobbot_03]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag gobbot_03";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-gobbot-03; }
+}
+[t:template,n:c24_ambient_frag_gobbot_04]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag gobbot_04";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-gobbot-04; }
+}
+[t:template,n:c24_ambient_frag_gobbot_05]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag gobbot_05";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-gobbot-05; }
+}
+[t:template,n:c24_ambient_frag_gobbot_06]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag gobbot_06";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-gobbot-06; }
+}
+[t:template,n:c24_ambient_frag_gobbot_07]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag gobbot_07";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-gobbot-07; }
+}
+[t:template,n:c24_ambient_frag_perforator_01]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag perforator_01";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-perforator-01; }
+}
+[t:template,n:c24_ambient_frag_perforator_02]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag perforator_02";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-perforator-02; }
+}
+[t:template,n:c24_ambient_frag_perforator_03]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag perforator_03";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-perforator-03; }
+}
+[t:template,n:c24_ambient_frag_perforator_05]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag perforator_05";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-perforator-05; }
+}
+[t:template,n:c24_ambient_frag_kill_bot_01]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag kill_bot_01";
+	specializes = c24_ambient_frag_base;
+	aspect:model 	= m_i_glb_frag-picker-01;
+	aspect:textures:0 = b_c_edm_pr-02;
+}
+[t:template,n:c24_ambient_frag_kill_bot_02]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag kill_bot_02";
+	specializes = c24_ambient_frag_base;
+	aspect:model 	= m_i_glb_frag-picker-02;
+	aspect:textures:0 = b_c_edm_pr-02;
+}
+[t:template,n:c24_ambient_frag_kill_bot_31]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag kill_bot_03";
+	specializes = c24_ambient_frag_base;
+	aspect:model 	= m_i_glb_frag-picker-03;
+	aspect:textures:0 = b_c_edm_pr-02;
+}
+[t:template,n:c24_ambient_frag_kill_bot_04]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag kill_bot_04";
+	specializes = c24_ambient_frag_base;
+	aspect:model 	= m_i_glb_frag-picker-04;
+	aspect:textures:0 = b_c_edm_pr-02;
+}
+[t:template,n:c24_ambient_frag_kill_bot_05]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag kill_bot_05";
+	specializes = c24_ambient_frag_base;
+	aspect:model 	= m_i_glb_frag-picker-05;
+	aspect:textures:0 = b_c_edm_pr-02;
+}
+[t:template,n:c24_ambient_frag_heater_01]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag heater_01";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-heater-01; }
+}
+[t:template,n:c24_ambient_frag_heater_02]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag heater_02";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-heater-02; }
+}
+[t:template,n:c24_ambient_frag_heater_03]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag heater_03";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-heater-03; }
+}
+[t:template,n:c24_ambient_frag_heater_04]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag heater_04";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-heater-04; }
+}
+[t:template,n:c24_ambient_frag_heater_05]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag heater_05";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-heater-05; }
+}
+[t:template,n:c24_ambient_frag_blaster_05]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag blaster_05";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-blaster-05; }
+}
+[t:template,n:c24_ambient_frag_proxo_01]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag proxo_01";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-proxo-01; }
+}
+[t:template,n:c24_ambient_frag_proxo_02]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag proxo_02";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-proxo-02; }
+}
+[t:template,n:c24_ambient_frag_proxo_03]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag proxo_03";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-proxo-03; }
+}
+[t:template,n:c24_ambient_frag_proxo_04]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag proxo_04";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-proxo-04; }
+}
+[t:template,n:c24_ambient_frag_proxo_05]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag proxo_05";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-proxo-05; }
+}
+[t:template,n:c24_ambient_frag_proxo_06]
+{
+	category_name = "outdoor";
+	doc = "c24 ambient frag proxo_06";
+	specializes = c24_ambient_frag_base;
+	[aspect] { model=m_i_glb_frag-proxo-06; }
+}
