@@ -833,7 +833,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes_global(0x00000025,40,40,40,"out:black");
+				action* = fade_nodes(0x00000025,40,40,40,"out:black");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(30.000000,4.000000,10.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1322,7 +1322,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes_global(0x00000025,40,40,40,"in");
+				action* = fade_nodes(0x00000025,40,40,40,"in");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
