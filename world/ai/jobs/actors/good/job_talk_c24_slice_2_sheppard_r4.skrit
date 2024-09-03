@@ -74,24 +74,24 @@ state Talk$
 
 		if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_hassat_completed_by_mayor" ) )
 		{
-            m_Go$.GetConversation.RSSelectConversation( "conv_r4_sheppard_hassat_quest_after_completion" );
+            m_Go$.GetConversation.RSSelectConversation( "conv_r4_shepherd_hassat_quest_after_completion" );
 		}
 		else if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_hassat_done" ) )
 		{
-            m_Go$.GetConversation.RSSelectConversation( "conv_r4_sheppard_hassat_quest_b4_completion" );
+            m_Go$.GetConversation.RSSelectConversation( "conv_r4_shepherd_hassat_quest_b4_completion" );
 		}
 		else if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_hassat_started_by_mayor" ) )
 		{
-            if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_sheppard_talked_to_after_hassat_quest_started" ) )
+            if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_shepherd_talked_to_after_hassat_quest_started" ) )
             {
                 // After the quest was completed
-                m_Go$.GetConversation.RSSelectConversation( "conv_r4_sheppard_hassat_quest_started_next" );
+                m_Go$.GetConversation.RSSelectConversation( "conv_r4_shepherd_hassat_quest_started_next" );
             }
             else
             {
                 // After the quest was completed
-                m_Go$.GetConversation.RSSelectConversation( "conv_r4_sheppard_hassat_quest_started_first" );
-                GameAuditor.GetDb.SetBool( "c24_slice2_r4_flag_sheppard_talked_to_after_hassat_quest_started", true );
+                m_Go$.GetConversation.RSSelectConversation( "conv_r4_shepherd_hassat_quest_started_first" );
+                GameAuditor.GetDb.SetBool( "c24_slice2_r4_flag_shepherd_talked_to_after_hassat_quest_started", true );
                 
                 scid quest_activated_trigger_scid$ = MakeScid(0x0240023D);
                 Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
@@ -101,7 +101,7 @@ state Talk$
 		else
 		{
             // Before quest
-            m_Go$.GetConversation.RSSelectConversation( "conv_r4_sheppard_b4_hassat_quest_started" );
+            m_Go$.GetConversation.RSSelectConversation( "conv_r4_shepherd_b4_hassat_quest_started" );
 		}
 
 		m_Go$.GetConversation.RSActivateDialogue();

@@ -1380,22 +1380,22 @@
 	  p position = -1.31918,0,0.705572,0xb4ae32b0;
 	}
 }
-[t:c24_slice_2_r4_sheppard,n:0x02400259]
+[t:c24_slice_2_r4_shepherd,n:0x02400259]
 {
 	[conversation]
 	{
 		[conversations]
 		{
-			* = conv_r4_sheppard_b4_hassat_quest_started;
-			* = conv_r4_sheppard_hassat_quest_after_completion;
-			* = conv_r4_sheppard_hassat_quest_b4_completion;
-			* = conv_r4_sheppard_hassat_quest_started_first;
-			* = conv_r4_sheppard_hassat_quest_started_next;
+			* = conv_r4_shepherd_b4_hassat_quest_started;
+			* = conv_r4_shepherd_hassat_quest_after_completion;
+			* = conv_r4_shepherd_hassat_quest_b4_completion;
+			* = conv_r4_shepherd_hassat_quest_started_first;
+			* = conv_r4_shepherd_hassat_quest_started_next;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_sheppard_r4.skrit;
+		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_shepherd_r4.skrit;
 	}
 	[placement]
 	{
