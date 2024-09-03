@@ -599,3 +599,54 @@
 		use_point_scids = 0x02400261;
 	}
 }
+[t:barrel_glb_with_lid,n:0x02401135]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.6132,12,0.130638,0xf7399379;
+	}
+}
+[t:barrel_ice_supplies_01,n:0x0240113e]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 2.43923,12,1.7127,0x5bbf5946;
+	}
+}
+[t:barrel_ice_supplies_01,n:0x0240113f]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.82772,12,2.17686,0x5bbf5946;
+	}
+}
+[t:barrel_ice_supplies_02,n:0x02401140]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  p position = 0.909824,12,2.50351,0x5bbf5946;
+	}
+}

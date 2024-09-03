@@ -232,3 +232,39 @@
 		use_point_scids = 0x0240103a;
 	}
 }
+[t:bw_g_c_s_m_r_avg,n:0x0240113c]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = 1.17655,13.122,-0.559265,0xf7399379;
+	}
+}
+[t:bw_g_c_s_l_c_low,n:0x02401146]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = 0.72546,12.8304,-0.983887,0xaad57a6c;
+	}
+}
+[t:bw_g_o_c_m_4_fun,n:0x0240114e]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.11155,13.1297,0.266487,0x9e7a6cee;
+	}
+}
