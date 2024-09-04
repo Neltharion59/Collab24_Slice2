@@ -286,6 +286,12 @@
 			}
 			[misc]
 			{
+				[all*]
+				{
+					il_main = DSX_backpack_empty;
+					max = 6;
+					min = 6;
+				}
                 [all*]
 				{
 					il_main = #spellbook/16-20;
@@ -322,7 +328,6 @@
 		[item_restock]
 		{
             book_glb_magic_01 = 1;
-			DSX_backpack_empty = 3;
 		}
 	}
 }
