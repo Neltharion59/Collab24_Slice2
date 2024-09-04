@@ -762,6 +762,151 @@
 }
 
 // R6
+
+[t:template,n:c24_slice2_r6_ctn_ice_crate_base]
+{
+	category_name = "container";
+	doc = "c24 slice2 r6 ctn ice crate base";
+	specializes = base_container_wood;
+	[attack]
+	{
+		damage_max = 34;
+		damage_min = 20;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 31;
+					min = 18;
+				}
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/12-21;
+					il_main = #armor/30-45;
+					il_main = #*/12-21;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/12-21;
+					il_main = #armor/-rare(1)/30-45;
+					il_main = #*/-rare(1)/12-21;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_crate;
+	}
+}
+[t:template,n:c24_slice2_r6_ctn_ice_crate_1]
+{
+	category_name = "container";
+	doc = "c24 slice2 r6 ctn ice crate 1";
+	specializes = c24_slice2_r6_ctn_ice_crate_base;
+	[aspect]
+	{
+		model = m_i_glb_crate-01;
+		[textures]
+		{
+			0 = b_i_ice_supplies-01;
+		}
+	}
+}
+[t:template,n:c24_slice2_r6_ctn_ice_crate_2]
+{
+	category_name = "container";
+	doc = "c24 slice2 r6 ctn ice crate 2";
+	specializes = c24_slice2_r6_ctn_ice_crate_base;
+	[aspect]
+	{
+		model = m_i_glb_crate;
+		[textures]
+		{
+			0 = b_i_ice_crate;
+		}
+	}
+}
+[t:template,n:c24_slice2_r6_ctn_ice_barrel]
+{
+	category_name = "container";
+	doc = "c24 slice2 r6 ctn ice barrel";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel;
+		[textures]
+		{
+			0 = b_i_ice_barrel;
+		}
+	}
+	[attack]
+	{
+		damage_max = 34;
+		damage_min = 20;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 31;
+					min = 18;
+				}
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/12-21;
+					il_main = #armor/30-45;
+					il_main = #*/12-21;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/12-21;
+					il_main = #armor/-rare(1)/30-45;
+					il_main = #*/-rare(1)/12-21;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_crate;
+	}
+}
 [t:template,n:c24_slice2_r6_ctn_bookcase]
 {
 	category_name =	"container";
