@@ -89,42 +89,51 @@ state Talk$
 	{
 		// $$$ read/write variables from the Game Auditor here, and bring up the appropriate dialogs...
 
-		if ( GameAuditor.GetDb.GetBool( "party_accept_0x2100228" ) )
+		if ( GameAuditor.GetDb.GetBool( "c24_s2_flag_l3_talked_to" ) )
 		{
-			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_accept_have_money" );
-			GameAuditor.GetDb.SetBool( "party_accept_0x2100228", false );
-		}
-		else if ( GameAuditor.GetDb.GetBool( "party_accept_no_money_0x2100228" ) )
-		{
-			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_accept_have_no_money" );
-			GameAuditor.GetDb.SetBool( "party_accept_no_money_0x2100228", false );
-			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x2100228", true );
-		}
-		else if ( GameAuditor.GetDb.GetBool( "party_decline_0x2100228" ) )
-		{
-			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_reject" );
-			GameAuditor.GetDb.SetBool( "party_decline_0x2100228", false );
-			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x2100228", true );
-		}
-		else if ( GameAuditor.GetDb.GetBool( "party_disband_0x2100228" ) )
-		{
-			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_disband" );
-			GameAuditor.GetDb.SetBool( "party_disband_0x2100228", false );
-			GameAuditor.GetDb.SetBool( "party_disbanded_0x2100228", true );
-		}
-		else if ( GameAuditor.GetDb.GetBool( "party_disbanded_0x2100228" ) )
-		{
-			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_disband_rejoin" );
-		}
-		else if ( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0x2100228" ) )
-		{
-			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_rejoin" );
-			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x2100228", false );
+			if ( GameAuditor.GetDb.GetBool( "party_accept_0x2100228" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_accept_have_money" );
+				GameAuditor.GetDb.SetBool( "party_accept_0x2100228", false );
+			}
+			else if ( GameAuditor.GetDb.GetBool( "party_accept_no_money_0x2100228" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_accept_have_no_money" );
+				GameAuditor.GetDb.SetBool( "party_accept_no_money_0x2100228", false );
+				GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x2100228", true );
+			}
+			else if ( GameAuditor.GetDb.GetBool( "party_decline_0x2100228" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_reject" );
+				GameAuditor.GetDb.SetBool( "party_decline_0x2100228", false );
+				GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x2100228", true );
+			}
+			else if ( GameAuditor.GetDb.GetBool( "party_disband_0x2100228" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_disband" );
+				GameAuditor.GetDb.SetBool( "party_disband_0x2100228", false );
+				GameAuditor.GetDb.SetBool( "party_disbanded_0x2100228", true );
+			}
+			else if ( GameAuditor.GetDb.GetBool( "party_disbanded_0x2100228" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_disband_rejoin" );
+			}
+			else if ( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0x2100228" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_rejoin" );
+				GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x2100228", false );
+			}
+			else
+			{
+				m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_join" );
+			}
 		}
 		else
 		{
-			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_join" );
-			
+			m_Go$.GetConversation.RSSelectConversation( "collab24_slice2_conversation_pm_l3_quest_start" );
+			GameAuditor.GetDb.SetBool( "c24_s2_flag_l3_talked_to", true );
+			GameAuditor.GetDb.SetBool( "c24_s2_flag_l3_talk_again", true );
+				
 			// Enable wishing pond
 			scid quest_trigger_scid$ = MakeScid(0x02100E99);
 			Go quest_trigger$ = GoDb.FindGoidByScid( quest_trigger_scid$ ).Go;
@@ -144,6 +153,15 @@ state Exiting$
 	event OnEnterState$
 	{
 		// $$$ close up any dialogs here...
+		if ( GameAuditor.GetDb.GetBool( "c24_s2_flag_l3_talk_again" ) )
+		{
+			GameAuditor.GetDb.SetBool( "c24_s2_flag_l3_talk_again", false );
+
+			// Make sure we talk again
+			scid quest_trigger_scid$ = MakeScid(0x02101AF3);
+			Go quest_trigger$ = GoDb.FindGoidByScid( quest_trigger_scid$ ).Go;
+			SendWorldMessage( WE_REQ_ACTIVATE, quest_trigger$.Goid, quest_trigger$.Goid );
+		}
 
 		// Send a PL_FACE reguest without a target so that they no longer
 		// continue to face the character they were talking to
