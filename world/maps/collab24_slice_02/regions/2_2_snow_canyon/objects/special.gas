@@ -1462,13 +1462,14 @@
 			{
 				action* = send_world_message("we_req_activate",0x023008AB,0f,"default","every",0);
 				action* = send_world_message("we_trigger_activate",0x023008AE,0f,"default","every",0);
-				action* = change_quest_state("c24_slice_2_quest_shrine_broom","active",3);
 				action* = send_world_message("we_req_die",0x0230085A,0f,"default","every",0);
 				action* = send_world_message("we_req_deactivate",0x0230085A,0f,"default","every",0);
 				action* = send_world_message("we_req_die",0x0230085C,0f,"default","every",0);
 				action* = send_world_message("we_req_deactivate",0x0230085C,0f,"default","every",0);
 				action* = send_world_message("we_req_die",0x0230085E,0f,"default","every",0);
 				action* = send_world_message("we_req_deactivate",0x0230085E,0f,"default","every",0);
+				action* = change_quest_state("c24_slice_2_quest_shrine_broom","active",2);
+				action* = change_quest_state("c24_slice_2_quest_shrine_broom","active",3), delay(0.15);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
@@ -1485,7 +1486,7 @@
 	}
 	[placement]
 	{
-	  p position = 1.11493,5.975,-2.45518,0x5f75e7ba;
+	  p position = 1.12517,5.975,-2.45592,0x5f75e7ba;
 	}
 }
 [t:trigger_generic,n:0x02300831]
