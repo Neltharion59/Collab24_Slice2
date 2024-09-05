@@ -1354,8 +1354,6 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x02300117,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x0230083E,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x0230083F,0f,"default","every",0);
 				action* = change_quest_state("c24_slice_2_quest_shrine_broom","active",1);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
@@ -1374,7 +1372,7 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,0;
-	  p position = 0.191162,-3.94989,-3.74236,0x93415d5f;
+	  p position = 0.191162,-3.94761,-3.74236,0x93415d5f;
 	}
 }
 [t:trigger_generic,n:0x0230012b]

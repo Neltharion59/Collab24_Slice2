@@ -256,7 +256,7 @@
 {
 	category_name = "1W_evil_d";
 	doc = "Bruhs Slice 2 R3 brom flyer";
-	specializes = actor_evil;
+	specializes = ice_mage_base;
 	[actor]
 	{
 		[skills]
@@ -274,19 +274,6 @@
 		max_life = 96;
 		mana = 1200;
 		max_mana = 1200;
-		model = m_c_edm_tr_pos_1;
-
-		force_no_render = true;
-		megamap_orient = true;
-		draw_shadow = false;
-		
-		[voice]
-		{
-			[die]			{ priority = high; * = s_e_die_swamp_witch; }
-			[hit_critical]	{ priority = low; * = s_e_hit_swamp_witch_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_swamp_witch_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_swamp_witch_SED; }
-		}
 	}
 	[attack]
 	{
@@ -294,71 +281,12 @@
 		damage_max = 15;
 		damage_min = 12;
 	}
-	[body]
-	{
-		avg_move_velocity = 0.000000;
-		[bone_translator]
-		{
-			body_anterior = bone01;
-			body_mid = bone01;
-			body_posterior = bone01;
-			kill_bone = eye3_base;
-			shield_bone = bone01;
-			weapon_bone = bone01;
-		}
-		[chore_dictionary]
-		{
-			chore_prefix = a_c_edm_tr_fs;
-			[chore_attack]
-			{
-				chore_stances = 0;
-				skrit = select_attack;
-				[anim_files] { 00=at; }
-			}
-			[chore_default]
-			{
-				chore_stances = 0;
-				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
-			}
-			[chore_die]
-			{
-				chore_stances = 0;
-				skrit = select_transition;
-				[anim_files] { 00=di; }
-			}
-			[chore_fidget]
-			{
-				chore_stances = 0;
-				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
-			}
-			[chore_magic]
-			{
-				chore_stances = 0;
-				skrit = select_attack;
-				[anim_files] { 00=at; }
-			}
-			[chore_walk]
-			{
-				chore_stances = 0;
-				skrit = select_walk;
-				[anim_files] { 00=ds; }
-			}
-		}
-	}
 	[common]
 	{
 		screen_name = "Vjaranna";
 		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 	}
 	[defend] { defense=40; }
-	[generator_in_object]
-	{
-		child_template_name = swamp_switch_skeleton;
-		spawn_event = WE_KILLED;
-		spawn_chance = 1.0;
-	}
     [inventory]
     {
         selected_active_location = il_active_primary_spell;
