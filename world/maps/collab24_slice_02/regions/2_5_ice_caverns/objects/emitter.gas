@@ -133,6 +133,18 @@
 	  p position = 5.4425,-5.48907,-5.59992,0xd39e4371;
 	}
 }
+[t:c24_emt_generic_act_deact,n:0x02600125]
+{
+	[c24_generic_emitter_act_deact]
+	{
+		other_effect = "invulnerability";
+	  x target = 0x0260005C;
+	}
+	[placement]
+	{
+	  p position = -1.8861,0.763417,1.66415,0xec75d486;
+	}
+}
 [t:emt_generic_act,n:0x02600039]
 {
 	[generic_emitter_act]

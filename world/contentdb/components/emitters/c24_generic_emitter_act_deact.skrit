@@ -239,7 +239,7 @@ state Deactivated$
 	{
         if ( active_script_id$ != 0 )
         {
-            SiegeFx.FinishScript( active_script_id$ );
+            SiegeFx.SStopScript ( active_script_id$ );
             active_script_id$ = null;
             SetState Finished$;
         }

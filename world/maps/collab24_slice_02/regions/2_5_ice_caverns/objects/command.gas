@@ -203,14 +203,6 @@
 	  p position = -3.49879,0.800637,2.1586,0x6b13cc69;
 	}
 }
-[t:cmd_auto_save,n:0x026000f4]
-{
-	[placement]
-	{
-	  q orientation = 0,-5.96046e-008,0,1;
-	  p position = 0.210171,-0.396142,-3.75926,0xc9274015;
-	}
-}
 [t:cmd_selection_toggle,n:0x02600129]
 {
 	[cmd_selection_toggle]
@@ -221,5 +213,13 @@
 	[placement]
 	{
 	  p position = 1.02225,-1.7,2.70137,0x4142e592;
+	}
+}
+[t:cmd_auto_save,n:0x026000f4]
+{
+	[placement]
+	{
+	  q orientation = 0,-5.96046e-008,0,1;
+	  p position = 0.210171,-0.396142,-3.75926,0xc9274015;
 	}
 }

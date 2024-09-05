@@ -352,7 +352,7 @@
 			{
 				single_shot = true;
 				action* = call_sfx_script("ice_mage_reveal");
-				condition* = receive_world_message("we_enemy_spotted");
+				condition* = receive_world_message("we_entered_world");
 			}
 		}
     }
