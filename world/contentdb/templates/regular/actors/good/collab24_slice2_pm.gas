@@ -37,9 +37,12 @@
 			es_weapon_hand = ss_un_gl_rusk;
 			es_shield_hand = #shield/-no_mod/5-10;
             es_head = he_ca_le_avg;
+			es_spellbook = book_glb_magic_01;
 		}
 		[other]
 		{
+            il_main = potion_health_small;
+            il_main = potion_health_small;
             il_main = potion_health_small;
             il_main = potion_health_small;
             il_main = potion_health_small;
@@ -89,17 +92,18 @@
 		{
 			es_chest = bd_ro_m_d_c_003;
 			es_feet = #boots/-no_mod/4-8;
+			es_spellbook = book_glb_magic_01;
 		}
 		[other]
 		{
-			il_active_primary_spell = spell_spark;
+			il_active_primary_spell = spell_flash;
 			il_active_secondary_spell = spell_healing_hands;
-			il_spell_3 = spell_resurrect;
-			il_spell_4 = spell_flash;
-			il_spell_5 = spell_zap;
-			il_spell_6 = spell_summon_dsx_giant_rat;
-			il_spell_7 = spell_purity;
-			il_spell_8 = spell_transmute;
+			il_main = spell_spark;
+			il_main = spell_resurrect;
+			il_main = spell_zap;
+			il_main = spell_summon_dsx_giant_rat;
+			il_main = spell_purity;
+			il_main = spell_transmute;
 			il_main = #staff/-no_mod/7-10;
             il_main = potion_health_small;
             il_main = potion_health_small;

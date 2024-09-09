@@ -456,7 +456,7 @@
 }
 [t:template,n:c24_sh_ice]
 {
-	doc = "c24 wpn Ice Shield";
+	doc = "c24 amr Ice Shield";
 	specializes = base_shield;
 	[aspect]
 	{
@@ -473,11 +473,11 @@
 	}
 	[defend]
 	{
-	  f defense = 12.000000;
+	  f defense = 4.000000;
 	}
 	[gui]
 	{
-		equip_requirements = strength:16;
+		equip_requirements = strength:12;
 		inventory_height = 3;
 		inventory_icon = b_gui_ig_i_a_shd_075;
 		inventory_width = 2;

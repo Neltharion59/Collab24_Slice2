@@ -82,3 +82,27 @@
 	  p position = 0.489755,0,-0.830124,0xd3f0f6ad;
 	}
 }
+[t:collab24_slice2_pm_l4,n:0x02c00021]
+{
+	[aspect]
+	{
+	  f max_life = 68.6;
+	  f max_mana = 80;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = join;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.158655,0,-3.39252,0xc549fda4;
+	}
+}
