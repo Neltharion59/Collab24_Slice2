@@ -272,18 +272,6 @@
 	  p position = -2.49223,0,3.37336,0xafe6d37c;
 	}
 }
-[t:cmd_selection_toggle,n:0x02400f34]
-{
-	[cmd_selection_toggle]
-	{
-	  x object_scid = 0x02400EEB;
-	  i start_state = 1;
-	}
-	[placement]
-	{
-	  p position = 2.01366,-3.15,2.47656,0xaf4c2545;
-	}
-}
 [t:cmd_selection_toggle,n:0x02400f35]
 {
 	[cmd_selection_toggle]
@@ -672,5 +660,18 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -0.851143,0,-1.66294,0x4b4d7225;
+	}
+}
+[t:cmd_selection_toggle,n:0x02400eeb]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x024004B4;
+	  i start_state = 1;
+	  b toggle_invincibility = true;
+	}
+	[placement]
+	{
+	  p position = 3.01419,-3.15,0.167227,0xaf4c2545;
 	}
 }

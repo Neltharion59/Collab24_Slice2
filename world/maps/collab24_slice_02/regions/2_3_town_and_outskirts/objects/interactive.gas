@@ -719,20 +719,20 @@
 		use_point_scids = 0x02401128,0x02401129;
 	}
 }
+[t:generator_door_breakable_peasant,n:0x024004b4]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,1.66939e-007;
+	  p position = 2.39686,-3.15,1.3442,0xaf4c2545;
+	}
+}
 [t:door_ice_peasant_right,n:0x02400eea]
 {
 	[placement]
 	{
-	  p position = 1.81056,-3.15,7.94443,0xaf4c2545;
+	  p position = 1.80647,-3.15,7.65575,0xaf4c2545;
 		use_point_scids = 0x02400ef3,0x02400ef4;
-	}
-}
-[t:door_grs_peasant_left,n:0x02400eeb]
-{
-	[placement]
-	{
-	  p position = 2.39221,-3.15,1.06524,0xaf4c2545;
-		use_point_scids = 0x02400ef1,0x02400ef2;
 	}
 }
 [t:door_ice_peasant_left,n:0x02400eec]
@@ -741,7 +741,7 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -3.5444,-5.15,-2.4045,0xaf4c2545;
-		use_point_scids = 0x02400eee,0x02400ef0;
+		use_point_scids = 0x02400eee,0x02400ef0,0x02400dc8;
 	}
 }
 [t:door_ice_peasant_right,n:0x02400eed]

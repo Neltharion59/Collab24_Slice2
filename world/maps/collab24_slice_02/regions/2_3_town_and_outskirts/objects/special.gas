@@ -2349,11 +2349,19 @@
 	  p position = 1.26793,-3.15,7.69652,0xaf4c2545;
 	}
 }
+[t:use_point,n:0x02400dc8]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -1.91324,-5.15,-2.80458,0xaf4c2545;
+	}
+}
 [t:use_point,n:0x02400eee]
 {
 	[placement]
 	{
-	  p position = -2.75671,-5.15,-0.97965,0xaf4c2545;
+	  p position = -2.74623,-5.15,-0.982431,0xaf4c2545;
 	}
 }
 [t:use_point,n:0x02400ef0]
@@ -2361,20 +2369,6 @@
 	[placement]
 	{
 	  p position = -4.75885,-5.09823,-0.89292,0xaf4c2545;
-	}
-}
-[t:use_point,n:0x02400ef1]
-{
-	[placement]
-	{
-	  p position = 3.12303,-3.15,0.0574684,0xaf4c2545;
-	}
-}
-[t:use_point,n:0x02400ef2]
-{
-	[placement]
-	{
-	  p position = 3.04959,-3.15,2.12207,0xaf4c2545;
 	}
 }
 [t:use_point,n:0x02400ef3]
@@ -2408,8 +2402,9 @@
 			[*]
 			{
 				action* = send_world_message("we_req_deactivate",0x02400F35,0f,"default","every",0);
-				action* = send_world_message("we_req_deactivate",0x02400F34,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x02400F37,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02400EEB,0f,"default","every",0), doc("enable door");
+				action* = send_world_message("we_req_activate",0x024004B4,0f,"default","every",0), delay(0.1), doc("open the door");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
@@ -2426,7 +2421,7 @@
 	}
 	[placement]
 	{
-	  p position = 1.91207,-5.15,-2.58574,0xaf4c2545;
+	  p position = 1.88487,-5.15,-2.68887,0xaf4c2545;
 	}
 }
 [t:trigger_generic,n:0x02400f38]
