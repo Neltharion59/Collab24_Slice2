@@ -800,18 +800,9 @@
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
-			address = 2_4_ice_fields:conversations:conv_collab24_slice2_r4_fae_lover_b4_quest_first;
-			description = Kill Aerthemees the Trapper;
+			description = The man seems very distracted. Try to get his attention by destroying the floating barrels. The zap spell on the house window might help.;
 		  b is_consumable = true;
 		  i order = 0;
-		  b required = true;
-			speaker = Thaelaen;
-		}
-		[*]
-		{
-			description = Collect the Arcane Trap;
-		  b is_consumable = true;
-		  i order = 1;
 		  b required = true;
 			speaker = ;
 		}
@@ -819,7 +810,32 @@
 		{
 			description = Speak with Thaelaen;
 		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			address = 2_4_ice_fields:conversations:conv_collab24_slice2_r4_fae_lover_b4_quest_first;
+			description = Kill Aerthemees the Trapper across the bridge;
+		  b is_consumable = true;
 		  i order = 2;
+		  b required = true;
+			speaker = Thaelaen;
+		}
+		[*]
+		{
+			description = Collect the Arcane Trap;
+		  b is_consumable = true;
+		  i order = 3;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Speak with Thaelaen;
+		  b is_consumable = true;
+		  i order = 4;
 		  b required = true;
 			speaker = ;
 		}
@@ -828,7 +844,7 @@
 			address = 2_4_ice_fields:conversations:conv_collab24_slice2_r4_fae_lover_ready_for_trap;
 			description = Wait for Nyahdal to Appear;
 		  b is_consumable = true;
-		  i order = 3;
+		  i order = 5;
 		  b required = true;
 			speaker = Thaelaen;
 		}
@@ -836,26 +852,9 @@
 		{
 			description = Drop the Arcane Trap Item Near Nyahdal;
 		  b is_consumable = true;
-		  i order = 4;
-		  b required = true;
-			speaker = ;
-		}
-		[*]
-		{
-			description = Speak with Thaelaen;
-		  b is_consumable = true;
-		  i order = 5;
-		  b required = true;
-			speaker = ;
-		}
-		[*]
-		{
-			address = 2_4_ice_fields:conversations:conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_first;
-			description = Destroy the Frost Vasp;
-		  b is_consumable = true;
 		  i order = 6;
 		  b required = true;
-			speaker = Thaelaen;
+			speaker = ;
 		}
 		[*]
 		{
@@ -867,11 +866,12 @@
 		}
 		[*]
 		{
-			description = To speak with Thaelen, you might have to destroy the barrels first;
+			address = 2_4_ice_fields:conversations:conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_first;
+			description = Destroy the Frost Vasp across the bridge;
 		  b is_consumable = true;
 		  i order = 8;
 		  b required = true;
-			speaker = ;
+			speaker = Thaelaen;
 		}
 		[*]
 		{
@@ -883,10 +883,26 @@
 		}
 		[*]
 		{
+			description = To speak with Thaelen, you might have to destroy the barrels first. Again.;
+		  b is_consumable = true;
+		  i order = 10;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
+			description = Speak with Thaelaen;
+		  b is_consumable = true;
+		  i order = 11;
+		  b required = true;
+			speaker = ;
+		}
+		[*]
+		{
 			address = 2_4_ice_fields:conversations:conv_collab24_slice2_r4_fae_lover_b4_quest_2_kill_vasp_first;
 			description = Thaelaen fell in love with the Fae who Gave him so much Trouble. There is nothing more you can do except for using the Fae's trading services.;
 		  b is_consumable = true;
-		  i order = 10;
+		  i order = 12;
 		  b required = true;
 			speaker = Thaelaen;
 		}
