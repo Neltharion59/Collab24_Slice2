@@ -82,6 +82,7 @@ state Talk$
             {
                 m_Go$.GetConversation.RSSelectConversation( "conv_c24_r4_fairy_princess_queen_killed_first" );
                 GameAuditor.GetDb.SetBool( "c24_slice2_flag_fairy_princess_queen_killed_talked_to", true );
+                DumpMain$; // drop quest reward
             }
         }
         else if ( GameAuditor.GetDb.GetBool( "c24_slice2_flag_gained_support_for_princess" ) )

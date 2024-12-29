@@ -84,6 +84,7 @@ state Talk$
                 // After the quest was completed
                 m_Go$.GetConversation.RSSelectConversation( "conv_r4_sommelier_cellar_quest_completed_first" );
                 GameAuditor.GetDb.SetBool( "c24_slice2_r4_flag_quest_cellar_completed_by_sommelier", true );
+				DumpMain$; // drop quest reward
             }
 		}
 		else if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_cellar_started_by_mayor" ) )

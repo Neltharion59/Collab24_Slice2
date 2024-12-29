@@ -132,6 +132,13 @@
         { 
             il_active_primary_spell = c24_r2_naldrun_spell_freak;
         }
+        [pcontent]
+        {
+			[all*]
+			{
+    	        il_main = c24_s2_reward_quest_heal_tree;
+			}
+        }
     }
 	[mind]
 	{
@@ -170,6 +177,16 @@
 	{
 		screen_name="Princess Glamoulla";
 	}
+    [inventory]
+    {
+        [pcontent]
+        {
+			[all*]
+			{
+    	        il_main = c24_s2_reward_quest_ice_tomb;
+			}
+        }
+    }
 }
 [t:template,n:c24_2_r4_npc_naldrun_in_love]
 {

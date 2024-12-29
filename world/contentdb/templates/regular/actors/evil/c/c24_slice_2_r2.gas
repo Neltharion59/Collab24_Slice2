@@ -44,11 +44,36 @@
     {
 		[pcontent]
 		{
-			[oneof*]
+			[all*]
 			{
-				il_main = #weapon/-rare(1)/17-25;
-				il_main = #armor/-rare(1)/15-56;
-				il_main = #*/-rare(1)/17-25;
+				[gold*]
+				{
+					max = 70;
+					min = 40;
+					min_pile = 10;
+					piles = 2 - 4;
+				}
+				[all*]
+				{
+					il_main = potion_health_small;
+					il_main = potion_mana_small;
+				}
+				[oneof*]
+				{
+					il_main = #armor/15-35;
+					il_main = #weapon/10-20;
+					il_main = #*/10-20;
+				}
+				[oneof*]
+				{
+					il_main = #armor/-mod(1)/15-35;
+					il_main = #weapon/-mod(1)/10-20;
+					il_main = #*/-mod(1)/10-20;
+
+					il_main = #armor/-rare(1)/15-35;
+					il_main = #weapon/-rare(1)/10-20;
+					il_main = #*/-rare(1)/10-20;
+				}
 			}
 		}
     }

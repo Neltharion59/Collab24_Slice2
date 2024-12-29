@@ -118,6 +118,8 @@ state Talk$
                 scid quest_activated_trigger_scid$ = MakeScid(0x02500A9A);
 				Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
 				SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
+				
+                DumpMain$; // drop quest reward
             }
         }
 		else

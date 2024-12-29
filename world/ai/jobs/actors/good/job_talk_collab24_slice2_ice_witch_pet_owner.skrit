@@ -81,6 +81,7 @@ state Talk$
 		{
             m_Go$.GetConversation.RSSelectConversation( "conv_r4_ice_witch_pet_quest_after_ortranc_revived" );
             GameAuditor.GetDb.SetBool( "flag_orthrac_quest_revived_orthrac_talked_to", true );
+			DumpMain$; // drop quest reward
 		}
         else if ( GameAuditor.GetDb.GetBool( "collab24_slice2_flag_witch_talked_to_after_pet_killed" ) &&  m_Target$.Go.Inventory.Contains( orthrac_scid$.go ))
 		{

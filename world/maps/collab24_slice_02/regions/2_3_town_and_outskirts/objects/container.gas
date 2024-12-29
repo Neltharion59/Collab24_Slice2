@@ -1,3 +1,19 @@
+[t:c24_slice2_r4_ctn_krug_quest_reward,n:0x024005b3]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  p position = -0.180948,-2.6293,-1.58931,0x6bf3e93e;
+		use_point_scids = 0x0240062a;
+	}
+}
 [t:cask_glb_ale,n:0x02400ead]
 {
 	[aspect]
@@ -648,5 +664,21 @@
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -2.23308,0,0.377853,0xb0976182;
 		use_point_scids = 0x02400261;
+	}
+}
+[t:c24_slice2_r4_ctn_smith_quest_reward,n:0x02401153]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  p position = -0.517135,-6.96822,-3.43203,0xaf4c2545;
+		use_point_scids = 0x02401154;
 	}
 }

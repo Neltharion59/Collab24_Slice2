@@ -288,6 +288,16 @@
 	[conversation]
 	{
 	}
+	[inventory]
+	{
+        [pcontent]
+        {
+			[all*]
+			{
+    	        il_main = c24_s2_reward_quest_shrine_broom;
+			}
+        }
+	}
 }
 [t:template,n:c24_slice_2_r3_master_miner]
 {
@@ -318,6 +328,10 @@
 			{
 				es_weapon_hand = pickaxe;
 			}
+			[all*]
+			{
+    	        il_main = c24_s2_reward_quest_vaarth_barricade;
+			}
 		}
 	}
 	[mind]
@@ -345,6 +359,16 @@
 	[conversation]
 	{
 	}
+	[inventory]
+	{
+        [pcontent]
+        {
+			[all*]
+			{
+    	        il_main = c24_s2_reward_quest_braak_barricade;
+			}
+        }
+	}
 }
 [t:template,n:c24_slice_2_r4_sommelier]
 {
@@ -365,6 +389,16 @@
 	}
 	[conversation]
 	{
+	}
+	[inventory]
+	{
+        [pcontent]
+        {
+			[all*]
+			{
+    	        il_main = c24_s2_reward_quest_krug_merchant_from_sommelier;
+			}
+        }
 	}
 }
 [t:template,n:c24_slice_2_r4_shepherd]
@@ -1160,5 +1194,15 @@
 	[mind]
 	{
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[inventory]
+	{
+        [pcontent]
+        {
+			[all*]
+			{
+    	        il_main = c24_s2_reward_quest_fae_lover;
+			}
+        }
 	}
 }

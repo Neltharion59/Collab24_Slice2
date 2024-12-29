@@ -82,6 +82,7 @@ state Talk$
             {
                 m_Go$.GetConversation.RSSelectConversation( "conv_collab24_slice2_r4_fae_lover_after_quest_first" );
                 GameAuditor.GetDb.SetBool( "c24_slice2_r4_flag_fae_lover_after_quest_talked_to", true );
+				DumpMain$; // drop quest reward
             }
         }
         else if ( GameAuditor.GetDb.GetBool( "c24_slice2_flag_fae_trapped" ) )

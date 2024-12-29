@@ -88,6 +88,11 @@ state Talk$
             {
                 m_Go$.GetConversation.RSSelectConversation( "conv_collab24_slice2_r3_smith_after_quest_first" );
                 GameAuditor.GetDb.SetBool( "c24_slice2_r3_flag_smith_after_quest_talked_to", true );
+
+				// Drop reward
+                scid quest_completed_trigger_scid$ = MakeScid(0x0240062C);
+                Go quest_completed_trigger$ = GoDb.FindGoidByScid( quest_completed_trigger_scid$ ).Go;
+                SendWorldMessage( WE_REQ_ACTIVATE, quest_completed_trigger$.Goid, quest_completed_trigger$.Goid );
             }
 		}
 		else

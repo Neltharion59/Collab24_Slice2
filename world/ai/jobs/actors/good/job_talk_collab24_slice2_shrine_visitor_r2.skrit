@@ -81,6 +81,7 @@ state Talk$
             {
                 m_Go$.GetConversation.RSSelectConversation( "conv_collab24_slice2_r2_shrine_visitor_after_quest_first" );
                 GameAuditor.GetDb.SetBool( "c24_slice2_r2_flag_shrine_visitor_after_quest_talked_to", true );
+				DumpMain$; // drop quest reward
             }
 		}
 		else

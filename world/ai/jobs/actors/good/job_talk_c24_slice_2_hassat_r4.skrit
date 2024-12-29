@@ -86,6 +86,7 @@ state Talk$
             {
                 m_Go$.GetConversation.RSSelectConversation( "conv_c24_r4_hassat_after_leopards_killed_first" );
                 GameAuditor.GetDb.SetBool( "c24_slice2_r4_flag_quest_hassat_done", true );
+				DumpMain$; // drop quest reward
             }
 		}
 		else if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_hassat_under_tower" ) )

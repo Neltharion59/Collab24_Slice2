@@ -82,6 +82,7 @@ state Talk$
             {
                 m_Go$.GetConversation.RSSelectConversation( "conv_giant_agg_killed_insect_first" );
 			    GameAuditor.GetDb.SetBool( "flag_giant_agg_after_quest_talked_to", true );
+				DumpMain$; // drop quest reward
             }
 		}
 		else if ( GameAuditor.GetDb.GetBool( "flag_giant_quest_barricade_smashed" ) )

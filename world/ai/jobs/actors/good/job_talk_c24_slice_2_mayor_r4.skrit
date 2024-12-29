@@ -82,6 +82,7 @@ state Talk$
 				SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
 
                 GameAuditor.GetDb.SetBool( "c24_slice2_r4_flag_gate_to_fae_opened", true );
+				DumpMain$; // drop quest reward
 			}
 		}
 		else if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_hassat_done" ) )

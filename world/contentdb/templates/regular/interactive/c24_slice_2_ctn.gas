@@ -134,6 +134,125 @@
 
 // PContent-Oriented
 
+// Quest rewards
+[t:template,n:c24_slice2_r4_ctn_krug_quest_reward]
+{
+	category_name = "container";
+	doc = "c24 slice2 r4 ctn chest krug quest reward";
+	specializes = base_chest;
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-02;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-02-open; }
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+            [gold*]
+            {
+                max = 152;
+                min = 101;
+            }
+            [oneof*]
+            {
+                il_main = potion_health_small;
+                il_main = potion_mana_small;
+            }
+            [oneof*]
+            {
+                il_main = #armor/15-35;
+                il_main = #weapon/10-20;
+                il_main = #*/10-20;
+			}
+            [oneof*]
+            {
+                il_main = #armor/-mod(1)/20-38;
+                il_main = #weapon/-mod(1)/12-22;
+                il_main = #*/-mod(1)/12-22;
+
+				il_main = #armor/-rare(1)/20-38;
+				il_main = #weapon/-rare(1)/12-22;
+				il_main = #*/-rare(1)/12-22;
+
+				min = 3;
+				max = 3;
+			}
+		}
+	}
+}
+
+[t:template,n:c24_slice2_r4_ctn_smith_quest_reward]
+{
+	category_name = "container";
+	doc = "c24 slice2 r4 ctn chest smith quest reward";
+	specializes = base_chest;
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-02;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-02-open; }
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+            [gold*]
+            {
+                max = 152;
+                min = 101;
+            }
+            [oneof*]
+            {
+                il_main = potion_health_small;
+                il_main = potion_mana_small;
+            }
+            [oneof*]
+            {
+                il_main = #armor/15-35;
+                il_main = #weapon/10-20;
+                il_main = #*/10-20;
+			}
+            [oneof*]
+            {
+                il_main = #armor/-mod(1)/20-38;
+                il_main = #weapon/-mod(1)/12-22;
+                il_main = #*/-mod(1)/12-22;
+
+				il_main = #armor/-rare(1)/20-38;
+				il_main = #weapon/-rare(1)/12-22;
+				il_main = #*/-rare(1)/12-22;
+
+				min = 3;
+				max = 3;
+			}
+		}
+	}
+}
+
 // R1
 [t:template,n:c24_slice2_r1_ctn_webbed_barrel_base]
 {
@@ -761,8 +880,8 @@
 	}
 }
 
-// R6
 
+// R6
 [t:template,n:c24_slice2_r6_ctn_ice_crate_base]
 {
 	category_name = "container";

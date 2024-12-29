@@ -81,6 +81,7 @@ state Talk$
             // To complete the quest
 			m_Go$.GetConversation.RSSelectConversation( "conv_c24_r3_fairy_finish_quest" );
             GameAuditor.GetDb.SetBool( "flag_fairy_tree_quest_finished_talked_to", true );
+			DumpMain$; // drop quest reward
 		}
 		else if ( GameAuditor.GetDb.GetBool( "flag_fairy_tree_quest_accepted" ) )
 		{

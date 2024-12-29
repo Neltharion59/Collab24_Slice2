@@ -85,6 +85,8 @@ state Talk$
 			scid quest_completed_trigger_scid$ = MakeScid(0x02B00037);
 			Go quest_completed_trigger$ = GoDb.FindGoidByScid( quest_completed_trigger_scid$ ).Go;
 			SendWorldMessage( WE_REQ_ACTIVATE, quest_completed_trigger$.Goid, quest_completed_trigger$.Goid );
+			
+			DumpMain$; // drop quest reward
 		}
 
 		m_Go$.GetConversation.RSActivateDialogue();
