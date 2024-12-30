@@ -1159,8 +1159,8 @@
 	{
 		ammo_attach_bone = weapon_grip;
 		ammo_template = ice_shard_06;
-		damage_max = 4;
-		damage_min = 3;
+		damage_max = 3;
+		damage_min = 2;
 	}
 	[common]
 	{
@@ -1212,8 +1212,8 @@
 	{
 		ammo_attach_bone = weapon_grip;
 		ammo_template = ice_shard_06;
-		damage_max = 37;
-		damage_min = 30;
+		damage_max = 31;
+		damage_min = 25;
 		
 		use_aiming_error = true;
 		aiming_error_range_x = 3.5;
@@ -1267,8 +1267,8 @@
 	specializes = base_spell_monster_nm;
 	[attack]
 	{
-		damage_max = 42;
-		damage_min = 38;
+		damage_max = 38;
+		damage_min = 34;
 	}
 	[common]
 	{
@@ -1366,7 +1366,7 @@
 				description = "raise magic damage";
 				duration = 7;
 				frequency = 0;
-				value = 5;
+				value = 4;
 			}
 			[*]
 			{
@@ -1374,7 +1374,7 @@
 				description = "raise magic damage";
 				duration = 7;
 				frequency = 0;
-				value = 5;
+				value = 4;
 			}
 		}
 	}
