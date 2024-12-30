@@ -58,7 +58,7 @@
 	{
 		activate_quest* = c24_slice_2_quest_pond,0;
 	  b quest_dialog = true;
-		screen_text = "Traveler, what a happy encounter! You managed to meet me before the Master of the pond bested you. He is powerful and fearsome, and posseses command over the element of water. He causes all sorts of mischief to unwary travelers. Althought it's usually their folly for dropping gold coins near his pond.\n\nMyself, I am a water being, so I was enthralled by his powers, forced to serve him. He had a minor skirmish with the giant brothers living in these caves, during which I managed to escape. Then I met Dahlia here, who offered me a job as her escort. Not having seen much in my life besides ponds and underground rivers, I was excited about the opportunity. However, soon after those undead bodies attacked us, I lost a couple of shovels, which she says I owe her money for. From mud to peddle, as they say.";
+		screen_text = "Traveler, what a happy encounter! You managed to meet me before my former master bested you. Mind you, to avoid confronting him, do not drop gold coins near his pond.";
 		scroll_rate = 6.5;
 	}
 }
@@ -67,7 +67,7 @@
 	[text*]
 	{
 		choice = shop;
-		screen_text = "Another traveler on their way to Frostfingers, eh? If you tallied a little less, you could have backed us against those zombies. My damned mercenary lost precious cargo along the way. Who will repay those high quality shovels to me, huh? Those creepy giants a bit ahead? You don't know hat I'm talking about? Nevermind. Would you like to make use of my services?";
+		screen_text = "Another traveler on their way to Frostfingers, eh? If you had tallied a little less, you could have backed us against those zombies. My damned mercenary lost precious cargo along the way. Who will repay those high quality shovels to me, huh?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -86,7 +86,7 @@
 	{
 		activate_quest* = c24_slice_2_quest_krug_merchant,0;
 	  b quest_dialog = true;
-		screen_text = "Greetings, traveler. Dartakk is the name. I can tell you're a decent sort because you did not run away when spoken to. You see, I am here to fulfill my dying father's wish. He grabbed me by my hand and said 'I want you to become merchant'. His was a little hard to hear. It is also quite possible that he said 'I become enchant'. He was dying of a witch's curse, you see. But that's another story. Anyway, a wish is a wish, and I decided to honor it. I set out for the town of Frostfingers, to learn how to do merchanting right. You see, a few moments ago, I tried to help this traveler pushing a cart across this bridge. However, he panicked, and pressed his mules harder to pull his cart. A little too harder, it seems. The mules misstepped and fell down onto the stalagmites along with the cart. The man looked at the scene in horror, and started to run. I understand it is hard to believe that such low price for Phrak bacon is suspicious, but I think he overreacted. I would like to set things right with him. He murmured something about being home soon to one of the mules before I approached them. Listen, would you mind dropping a good word for me? He probably lives nearby. I believe a third person might reason with him more successfully. I cannot become a merchant with such a debt with a potential customer.";
+		screen_text = "Greetings, traveler. Dartakk is the name. I can tell you're a decent sort because you did not run away when spoken to. You see, I am here to fulfill my dying father's wish. He grabbed me by my hand and said 'I want you to become merchant'. He was a little hard to hear. It is also quite possible that he said 'I become enchant'. He was dying of a witch's curse, you see. But that's another story.\n\nI tried to help this traveler pushing a cart across this bridge. However, the mules misstepped and fell down onto the stalagmites along with the cart. The man looked at the scene in horror, and started to run. Could you try to find him and tell him I am not to blame?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -143,7 +143,7 @@
 	{
 		activate_quest* = c24_slice_2_quest_giants,0;
 	  b quest_dialog = true;
-		screen_text = "Hello there, traveler. How is, eh...your travelling going? Yeah, your are right, I am terrible at holding a conversation. It has been some time since we have someone else besides goblins. They not quite the talkative ones.\n\nSee, I have a favor to ask for you. See, me and my brother have lived in this cavern for some time. We come from mating of a Cyclops and an Ice Giant, so we have no choice but to live in the wilderness on our own. Lately, this cave has been having a new inhabitant, an insect of sorts. My brother is of very peaceful nature, and is curious to see what will become of it. Myself, I see it as a threat. Even the local fauna has grown more aggressive. When was the last time you have seen a pack of rats attack an armed traveller? That being is not alright, and should be dealt with, regardless of what my brother thinks about it. It should be as easy as smashing this boulder to pieces, then the creature. However, my brother hid my club. Without it, neither can be done. Could you help? See if you can make him talk.";
+		screen_text = "Hello there, traveler. Have you noticed an unusual insect in these caves? It should be hiding right here. I want to eliminate it. It should be as easy as smashing this boulder to pieces, then the creature. However, my brother hid my club. Without it, neither can be done. Could you help? See if you can make him talk.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -169,7 +169,7 @@
 {
 	[text*]
 	{
-		screen_text = "Greetings, little one. What a lovely encounter. Out for a stroll, are you? Do you fancy the local plants and creatures? Most intriguing, this cave. See, the tiger grass is an ideal place for the rats to take shelter in. It is also delicious for them to chew on, I noticed. Unfortunately for the rats, the locals spiders evolved to conceal themselves in the grass quite aptly. I wonder how many of them really live here? Nevertheless, the spiders love to munch on the rats. Just as much as the rats love to munch on the spiders' eggs. Their tiny battlefields leave behind enough organic matter for the tiger grass to slurp and grow even further. More grass means more nutrition for rats, just as more rats mean more nutrition for the spiders. This constant cycle of growth is just unbelievable. I am thinking of writing a book about it. How would I name the phenomenon? Growthloop? Feastmutuality? Ecosystem? None of it sounds right. I need to contemplate on this further. I wonder how that new insect specimen fits into it. I even got into a fight with my brother over this...but that has been taken care of.";
+		screen_text = "Greetings, little one. What a lovely encounter. Out for a stroll, are you? Do you fancy the local plants and creatures?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -185,7 +185,7 @@
 {
 	[text*]
 	{
-		screen_text = "I am quite sure you have forgotten the knowledge of this cave I had bestowed upon you before, right? Most intriguing, this cave. See, the tiger grass is an ideal place for the rats to take shelter in. It is also delicious for them to chew on, I noticed. Unfortunately for the rats, the locals spiders evolved to conceal themselves in the grass quite aptly. I wonder how many of them really live here? Nevertheless, the spiders love to munch on the rats. Just as much as the rats love to munch on the spiders' eggs. Their tiny battlefields leave behind enough organic matter for the tiger grass to slurp and grow even further. More grass means more nutrition for rats, just as more rats mean more nutrition for the spiders. This constant cycle of growth is just unbelievable. I am thinking of writing a book about it. How would I name the phenomenon? Growthloop? Feastmutuality? Ecosystem? None of it sounds right. I need to contemplate on this further. It's a pity I will not get to see how the new insect specimen fits into it.";
+		screen_text = "I am quite sure you have forgotten the knowledge of this cave I had bestowed upon you before, right?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -203,7 +203,7 @@
 	{
 		activate_quest* = c24_slice_2_quest_kill_brother,0;
 	  b quest_dialog = true;
-		screen_text = "My brother may have mentioned that we come from mating of an Ice Giant and a Cyclops, right? Well, mixed breed such as we are doomed to living far away from our people. What my brother may not have mentioned is that we also have a third brother, Nutlech. While we inherited the cyclop intelligence from our mother, Nutlech was not that lucky. Growing up with him was tough, but we loved him nevertheless. At some point, his aggressivity became unbearable, and we chased him out. We hoped this was the last time we had to deal with him. But rumours reached us that he frequently harasses passersby, terrorizes wild game, and generally causes genuine mayhem. You have most surely noticed that I avoid violence when possible, but Nutlech needs to be stopped. The local humans do not deserve to have such threat in their neighbourhood. I ask you to find him and destroy him. No doubt he has made his home in some sort of cave nearby.";
+		screen_text = "My brother may have mentioned that we come from mating of an Ice Giant and a Cyclops, right? Well, our third brother, Nutlech, seems to have inherited all of their aggression. I hate to say it, but he needs to be stopped.";
 	  f scroll_rate = 10.000000;
 	}
 }

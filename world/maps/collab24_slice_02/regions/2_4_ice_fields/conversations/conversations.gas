@@ -32,7 +32,7 @@
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "Hello, traveler. You come from Frostfingers, right? Have you had the chance to meet my brother, the blacksmith? Yeah, that sounds like him.\n\nSee, he tried to teach some of his smithing arts, but I am cut from different cloth. I set off for the lands of the frost fae, to learn more about ice magic. Unfortunate timing, right? I ended up stuck in Thaelaen's hut here.\n\nListen, how about I join your cause? Any chance to learn more about ice magic is better than skulking around.";
+		screen_text = "Hello, traveler. You come from Frostfingers, right? Have you had the chance to meet my brother, the blacksmith? Yeah, that sounds like him. Myself, I am more of a scholar. Say, do you have room for a wizard companion?";
 		scroll_rate = 6.5;
 	}
 }
@@ -56,7 +56,7 @@
 	[text*]
 	{
 		choice = shop;
-		screen_text = "If it was not for your contraption, I may have never found the courage to open up to Thaelaen. Now our love blossoms like autumnal icicles.  That is the sole reason I forgive you your impudent actions instead of freezing your guts solid. Next time, I might not be that lenient. You'd do well to remember that. Anyway, I decided to get closer to his worlds by talking to people regularly. Running a shop is great opportunity for that. What would you like?";
+		screen_text = "If it was not for your contraption, I may have never found the courage to open up to Thaelaen. Now our love blossoms like autumnal icicles. May I help you to an item or two?";
 	}
 }
 [conv_c24_r4_fae_shop_next]
@@ -89,7 +89,7 @@
 	{
 		activate_quest* = c24_slice_2_quest_kill_fae_queen,0;
 	  b quest_dialog = true;
-		screen_text = "Oh, my grand curse-breaking hero is here. Have you spoken with that hag who froze me in the tomb? I hope she cried a lot after I took her...cooking recipes! Would you believe? The jealously guarded great tomes of hers are just some stupid cooking recipes. Bortusk stew here, roasted rat whiskers there...is that what humans really eat?\n\nAnyway, I am now forced to achieve my goals in the traditional way. Which means I must choose a champion of my cause. Would you guess who's that going to be?\n\nYou're right. My mother the queen is cowardly hiding at Isle of Rhea Yhanity, where she thought herself safe from the drake. To enter the Isle, you need one of her royal consort to summon the bridge for you. Most of them are hiding with her, but one that calls herself Zaireen should be still in these parts. She was not with her, as she was attending an injured tree of some sorts near the town of Frostfingers.\n\nSee if you can gain her trust. She must summon the bridge willingly, or it won't work.";
+		screen_text = "Oh, my grand curse-breaking hero is here. Have you spoken with that hag who froze me in the tomb? I hope she cried a lot after I took her...cooking recipes! Would you believe? I planned to use those spells to defeat my disgrased mother, Suvanne the Queen, and take her place. Instead, I shall sent you to defeat her. Do so, and you shall be rewarded greatly.";
 	}
 }
 [conv_c24_r4_fairy_princess_b4_quest_next]
@@ -156,7 +156,7 @@
 	{
 		activate_quest* = c24_slice_2_quest_kill_fae_queen,3;
 	  b quest_dialog = true;
-		screen_text = "You seek to champion Princess Glamoulla's cause? I am not fully convinced she would make a good queen. Thought it's true our queen cowardly fled to Isle of Rhea Yhanity when our realm needed a defender, a role you have taken upon yourself. Allright, if one as trustworthy as you seeks to put Princess Glamoulla on the throne, I have no objections. Very well, the Isle of Rhea Yhanity is now open to you.";
+		screen_text = "You seek to champion Princess Glamoulla's cause? It's true our queen cowardly fled to Isle of Rhea Yhanity when our realm needed a defender, a role you have taken upon yourself. Allright, if one as trustworthy as you seeks to put Princess Glamoulla on the throne, I have no objections. Very well, the Isle of Rhea Yhanity is now open to you.";
 	}
 }
 [conv_c24_r4_fairy_trees_asking_help_4_princess_next]
@@ -172,7 +172,7 @@
 	{
 		activate_quest* = c24_slice_2_quest_restore_ice_trees,0;
 	  b quest_dialog = true;
-		screen_text = "An elephant in a glass store, are you? I leave my eyes off you for a moment, and our icy grove is shattered to pieces. Destroying Phrymallix the dragon was a noble deed, no doubt, just as finding that healing scroll for Rethoros. But you should learn to clean your own mess.\n\nHere, take this spell. Cast it upon the icy stumps left after the destroyed trees. It will restore the trees to their former beauty. Come find me when all trees have been restored.";
+		screen_text = "An elephant in a glass store, are you? Destroying Phrymallix the dragon was a noble deed, no doubt. But you should learn to clean your own mess. Here, take this spell. Cast it upon the icy stumps left after the destroyed trees. It will restore the trees to their former beauty. Come find me when all trees have been restored.";
 	}
 }
 [conv_c24_r4_fairy_trees_b4_quest_next]
@@ -203,7 +203,7 @@
 		activate_quest* = c24_slice_2_quest_fae_lover,12;
 		complete_quest* = c24_slice_2_quest_fae_lover;
 	  b quest_dialog = true;
-		screen_text = "For the love of Azunai, after I fall in love with one friar, another one comes. Still, the whole effort was worth it. Yes, you heard me right.\n\nThe fae you trapped calls herself Nyahdal. All the mischief she inflicted on me...was just her way of getting my attention. After we talked for a while, I realized our feelings were mutual. Now we live together. She even decided to run a shop to get to know people better. Thank you, my friend. You have enriched lives of the both of us greatly.";
+		screen_text = "For the love of Azunai, after I fall in love with one friar, another one comes. Still, the whole effort was worth it. Yes, you heard me right.\n\nThe fae you trapped calls herself Nyahdal. All the mischief she inflicted on me...was just her way of getting my attention. I realized our feelings were mutual. Now we live together. You have enriched lives of the both of us greatly.";
 	}
 }
 [conv_collab24_slice2_r4_fae_lover_after_quest_next]

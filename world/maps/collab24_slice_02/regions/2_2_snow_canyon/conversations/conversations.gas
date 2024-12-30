@@ -13,7 +13,7 @@
 		activate_quest* = c24_slice_2_quest_vaarth_barricade,5;
 		complete_quest* = c24_slice_2_quest_vaarth_barricade;
 	  b quest_dialog = true;
-		screen_text = "Bloody hell, now that was a blast. There must have been some powder sprinkled among the rocks. The bloody va'arth have taken all my kegs, and now they're damaging the landscape with no discipline. Who ever heard of Va'arth activng like that? I smell a blasted goblin behind this.\n\nBut it's my fault for not storing it in a more secure place. I was prepared to remove them all by hand, but I must admit, this was easier. Too bad the blast scared my rams away. I assume they'll be raging in the woods right now. Thank you for your intervention. Now, let me get cleaned up.";
+		screen_text = "Bloody hell, now that was a blast. There must have been some powder sprinkled among the rocks. The bloody va'arth have taken all my kegs. I should have locked them better. Thank you for your intervention. Now, let me get cleaned up.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -58,7 +58,7 @@
 	{
 		activate_quest* = c24_slice_2_quest_heal_tree,2;
 	  b quest_dialog = true;
-		screen_text = "That was a hideous doing, stranger, killing nature's creatures. Yet, it served justice, for their crimes are not redeemable. They would hurt Rethoros, one of the flesh trees, and feast upon his tortured body. His flesh flowing out of the wound, with no ability to act against it, imagine his torture. Now, his screams of agony shall haunt these woods until I am able to recover my healing scroll. Hear my plea, stranger, find the scroll, and bring it to me, so that I may nourish his flesh. I shall try to ease his pain with my nourishing song untile then.";
+		screen_text = "That was a hideous doing, stranger, killing nature's creatures. Yet, it served justice, for their crimes are not redeemable. They would hurt Rethoros, one of the flesh trees, and feast upon his tortured body. Hear my plea, stranger, find the nourishing scroll that the Va'arth stole, and bring it to me, so that I may nourish his flesh. I shall try to ease his pain with my song until then.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -95,7 +95,7 @@
 	{
 		activate_quest* = c24_slice_2_quest_shrine_broom,0;
 	  b quest_dialog = true;
-		screen_text = "A visitor of the shrine? How fortunate. You seem able-bodied, I see. Good, good. Ehm...you see, the shrine has been bewitched by a witch. It's one of those odd elderly women of the town of Frostfingers who live in the wilderness. I haven't really heard of them being hostile, but this one certainly is. Not only she cast a curse upon the shrine, she also guards the access to it. For what purpose, I can only guess. But the shrine should be accessible to all visitors, if you know what I mean. She even made it difficult to travel. The furok must have been pretty stirred up by her passage. You better watch out around them.";
+		screen_text = "A visitor of the shrine? How fortunate. You seem able-bodied, I see. Good, good. Ehm...you see, the shrine has been bewitched by a witch of Frostfingers. Would help me lift her curse?";
 	  f scroll_rate = 10.000000;
 	}
 }
