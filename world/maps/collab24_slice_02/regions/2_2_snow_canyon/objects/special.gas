@@ -340,7 +340,7 @@
 		{
 			[*]
 			{
-				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",5);
+				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",4);
 				action* = send_world_message("we_req_activate",0x02300097,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x02300098,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x02300099,0f,"default","every",0);
@@ -354,6 +354,7 @@
 				action* = send_world_message("we_req_activate",0x0230085F,0f,"default","every",0), doc("dwarf charred texture");
 				action* = send_world_message("we_req_deactivate",0x023008AF,0f,"default","every",0), doc("make the rock damagable");
 				action* = send_world_message("we_req_activate",0x02300862,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0230084F,0f,"default","every",0), doc("set bool");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -382,7 +383,7 @@
 	}
 	[placement]
 	{
-	  p position = -0.669136,0,1.76125,0x440e9480;
+	  p position = -0.0519867,0,1.65203,0x440e9480;
 	}
 }
 [t:trigger_generic,n:0x02300094]
@@ -861,65 +862,6 @@
 	  p position = -1.43304,-17.85,-6.62009,0xbbb362a1;
 	}
 }
-[t:trigger_generic,n:0x02300089]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_trigger_activate",0x023001D2,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.66939e-007;
-	  p position = 1.61198,1.59504,2.56868,0x050a69f1;
-	}
-}
-[t:trigger_generic,n:0x023001d2]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",3);
-				action* = send_world_message("we_req_activate",0x023001D4,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(8.000000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.66939e-007;
-	  p position = -0.788788,2,2.14073,0x050a69f1;
-	}
-}
 [t:trigger_generic,n:0x02300005]
 {
 	[common]
@@ -949,13 +891,6 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -3.74327,0,1.09793,0x07e3d31d;
-	}
-}
-[t:trigger_generic,n:0x02300008]
-{
-	[placement]
-	{
-	  p position = -3.82641,0,1.45938,0x07e3d31d;
 	}
 }
 [t:trigger_generic,n:0x02300833]
@@ -993,11 +928,15 @@
 {
 	[common]
 	{
+		dev_instance_text = "ON KEG DROPPED";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",4);
+				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",0);
+				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",1);
+				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",2);
+				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",3);
 			  b can_self_destruct = true;
 				condition* = go_within_sphere(8.000000,0x02800003,"","on_first_enter");
 			  f delay = 0.000000;
@@ -1008,7 +947,7 @@
 			  f reset_duration = 0.000000;
 			  b single_player = true;
 			  b single_shot = true;
-			  b start_active = false;
+			  b start_active = true;
 			}
 			[*]
 			{
@@ -1029,47 +968,19 @@
 	}
 	[placement]
 	{
-	  p position = 2.28053,0,-0.131271,0xfabdd62c;
-	}
-}
-[t:trigger_generic,n:0x023001d4]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_trigger_activate",0x02300088,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.551384,0,-0.352386,0xfabdd62c;
+	  p position = 1.7531,0,-0.0731277,0xfabdd62c;
 	}
 }
 [t:trigger_generic,n:0x02300837]
 {
 	[common]
 	{
+		dev_instance_text = "STOP TRACKING DYNAMITE AFTER IT EXPLODED";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = send_world_message("we_req_delete",0x02300092,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x02300837,3f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -1086,7 +997,7 @@
 	}
 	[placement]
 	{
-	  p position = 1.51762,0,1.18397,0xfabdd62c;
+	  p position = 2.84387,0,-0.0813599,0xfabdd62c;
 	}
 }
 [t:trigger_generic,n:0x02300091]
@@ -1545,5 +1456,16 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -2.38263,0,-0.057106,0x03e2fdd2;
+	}
+}
+[t:set_bool,n:0x0230084f]
+{
+	[placement]
+	{
+	  p position = -1.6361,0,-0.900688,0x1bf90ff6;
+	}
+	[set_bool]
+	{
+		bool_variable = "c24_slice2_vaarth_keg_exploded";
 	}
 }

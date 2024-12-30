@@ -590,17 +590,9 @@
 		}
 		[*]
 		{
-			description = Search the Library for Something to Detonate the Keg;
-		  b is_consumable = true;
-		  i order = 2;
-		  b required = false;
-			speaker = ;
-		}
-		[*]
-		{
 			description = Drop the Keg Near the Barricade;
 		  b is_consumable = true;
-		  i order = 3;
+		  i order = 2;
 		  b required = true;
 			speaker = ;
 		}
@@ -608,7 +600,7 @@
 		{
 			description = Detonate the Keg by attacking it;
 		  b is_consumable = true;
-		  i order = 4;
+		  i order = 3;
 		  b required = true;
 			speaker = ;
 		}
@@ -616,7 +608,7 @@
 		{
 			description = Speak with the Dwarf;
 		  b is_consumable = true;
-		  i order = 5;
+		  i order = 4;
 		  b required = true;
 			speaker = ;
 		}
@@ -624,7 +616,7 @@
 		{
 			description = You Have Successfully Cleared the Road;
 		  b is_consumable = true;
-		  i order = 6;
+		  i order = 5;
 		  b required = true;
 			speaker = ;
 		}

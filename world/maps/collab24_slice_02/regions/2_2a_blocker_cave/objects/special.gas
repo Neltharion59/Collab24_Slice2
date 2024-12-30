@@ -126,35 +126,6 @@
 	  p position = -0.208788,0,-0.807564,0xc26a6125;
 	}
 }
-[t:trigger_generic,n:0x0280000c]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_deactivate",0x0280000B,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x0280000C,0f,"default","every",0), delay(5);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.249283,0,1.35075,0xc26a6125;
-	}
-}
 [t:trigger_generic,n:0x0280000e]
 {
 	[common]
@@ -164,8 +135,9 @@
 		{
 			[*]
 			{
+				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",0);
+				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",1);
 				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",2);
-				action* = send_world_message("we_req_activate",0x0280000C,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
@@ -183,37 +155,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 1.59165,0,1.29945,0xc26a6125;
-	}
-}
-[t:trigger_generic,n:0x0280002b]
-{
-	[common]
-	{
-		dev_instance_text = "STOP MONITORING THE SCROLL";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_delete",0x0280000B,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x0280002B,3f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.423255,0,0.419812,0xc26a6125;
+	  p position = 1.96283,0,1.83579,0xc26a6125;
 	}
 }
 [t:trigger_generic,n:0x0280000d]
@@ -225,6 +167,7 @@
 		{
 			[*]
 			{
+				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",0);
 				action* = change_quest_state("c24_slice_2_quest_vaarth_barricade","active",1);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(10.000000,5.200000,10.000000,"on_first_enter");
@@ -243,6 +186,6 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,-2.98023e-008;
-	  p position = 1.90268,0,-1.44658,0x59d0a909;
+	  p position = 1.98233,0,-1.1578,0x59d0a909;
 	}
 }
