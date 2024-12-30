@@ -233,6 +233,22 @@
 	  p position = 1.17965,-6,-1.96354,0x6f3ca58a;
 	}
 }
+[t:c24_slice2_r4_ctn_smith_quest_reward,n:0x02401153]
+{
+	[aspect]
+	{
+	  b is_selectable = false;
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[placement]
+	{
+	  p position = -0.517135,-6.96822,-3.43203,0xaf4c2545;
+		use_point_scids = 0x02401154;
+	}
+}
 [t:chest_csl_02,n:0x02400d75]
 {
 	[aspect]
@@ -664,21 +680,5 @@
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -2.23308,0,0.377853,0xb0976182;
 		use_point_scids = 0x02400261;
-	}
-}
-[t:c24_slice2_r4_ctn_smith_quest_reward,n:0x02401153]
-{
-	[aspect]
-	{
-	  b is_selectable = false;
-	}
-	[inventory]
-	{
-	  b drop_at_use_point = true;
-	}
-	[placement]
-	{
-	  p position = -0.517135,-6.96822,-3.43203,0xaf4c2545;
-		use_point_scids = 0x02401154;
 	}
 }

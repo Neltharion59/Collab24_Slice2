@@ -170,14 +170,6 @@
 	  p position = -5.22303,-3.91902,-5.54354,0x39a39464;
 	}
 }
-[t:c24_2_r1_spider,n:0x02100234]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.388149,0,0.921596;
-	  p position = 0.288525,-1.07247,-3.27501,0xda5403ec;
-	}
-}
 [t:c24_2_r1_spider,n:0x02101a7d]
 {
 	[placement]
@@ -413,14 +405,6 @@
 	  p position = -1.4591,-5.95127,-3.52039,0x763bb8be;
 	}
 }
-[t:c24_2_r1_spider,n:0x0210001f]
-{
-	[placement]
-	{
-	  q orientation = 0,0.432985,0,0.901401;
-	  p position = -0.19927,0,-0.628896,0x0eeba287;
-	}
-}
 [t:c24_2_r1_spider,n:0x02100235]
 {
 	[placement]
@@ -435,6 +419,14 @@
 	{
 	  q orientation = 0,9.55219e-008,0,1;
 	  p position = 3.34367,-4,-1.99748,0xa17b2e9a;
+	}
+}
+[t:c24_2_r1_spider,n:0x0210001f]
+{
+	[placement]
+	{
+	  q orientation = 0,0.432985,0,0.901401;
+	  p position = -0.19927,0,-0.628896,0x0eeba287;
 	}
 }
 [t:collab24_slice2_r0_butterfly,n:0x02101377]
@@ -464,6 +456,14 @@
 	{
 	  q orientation = 0,0.92388,0,-0.382683;
 	  p position = -3.95478,-2,-5.71268,0x55ab59c8;
+	}
+}
+[t:c24_2_r1_spider,n:0x02100233]
+{
+	[placement]
+	{
+	  q orientation = 0,0.999148,0,0.0412733;
+	  p position = 0.497251,1.95706,3.36222,0x7089816c;
 	}
 }
 [t:c24_2_r1_spider,n:0x0210002a]
@@ -644,14 +644,6 @@
 	  p position = 3.30468,-3.88439,0.541023,0x0d47580b;
 	}
 }
-[t:c24_2_r1_spider,n:0x02100233]
-{
-	[placement]
-	{
-	  q orientation = 0,0.999148,0,0.0412733;
-	  p position = 0.497251,1.95706,3.36222,0x7089816c;
-	}
-}
 [t:collab24_slice2_r0_butterfly,n:0x02101384]
 {
 	[mind]
@@ -663,6 +655,14 @@
 	{
 	  q orientation = 0,0.726135,0,0.687552;
 	  p position = -1.39134,7.9575,4.4803,0x0d47580b;
+	}
+}
+[t:c24_2_r1_spider,n:0x02100234]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.388149,0,0.921596;
+	  p position = 0.288525,-1.07247,-3.27501,0xda5403ec;
 	}
 }
 [t:collab24_slice2_r0_butterfly,n:0x02101310]
@@ -772,6 +772,10 @@
 			* = conv_giant_agg_started_quest;
 		}
 	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
 	[mind]
 	{
 		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_giant_agg.skrit;
@@ -780,6 +784,7 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 1.23211,0,-0.53347,0x825d8de7;
+		use_point_scids = 0x02101AF4;
 	}
 }
 [t:collab24_slice2_r0_butterfly,n:0x021013a3]

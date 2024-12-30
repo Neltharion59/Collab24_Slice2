@@ -40,6 +40,10 @@
 			* = conv_c24_r3_fairy_start_quest_next;
 		}
 	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
 	[mind]
 	{
 		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_fairy_tree.skrit;
@@ -48,6 +52,7 @@
 	{
 	  q orientation = 0,0.923879,0,0.382683;
 	  p position = -2.67687,0,3.43117,0x4b693d61;
+		use_point_scids = 0x02300851;
 	}
 }
 [t:c24_2_r3_kurgan_melee,n:0x023000e0]
@@ -235,9 +240,13 @@
 		[conversations]
 		{
 			* = conv_c24_r3_dwarf_miner_first;
-			* = conv_c24_r3_dwarf_miner_next;
 			* = conv_c24_r3_dwarf_miner_generic;
+			* = conv_c24_r3_dwarf_miner_next;
 		}
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
 	}
 	[mind]
 	{
@@ -247,6 +256,7 @@
 	{
 	  q orientation = 0,0.923879,0,0.382684;
 	  p position = -0.156189,-0.888166,-3.53062,0xe42c1d85;
+		use_point_scids = 0x02300852;
 	}
 }
 [t:c24_2_r3_packram_armored,n:0x02300860]
@@ -595,6 +605,7 @@
 	}
 	[inventory]
 	{
+	  b drop_at_use_point = true;
 		[other]
 		{
 			il_main = bo_bo_le_light;
@@ -608,6 +619,7 @@
 	{
 	  q orientation = 0,1,0,-6.55651e-007;
 	  p position = -1.75373,0,1.73637,0x40f016bd;
+		use_point_scids = 0x02300850;
 	}
 }
 [t:c24_2_r3_broom_flyer,n:0x02300118]

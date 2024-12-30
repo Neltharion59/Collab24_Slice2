@@ -375,6 +375,17 @@
 	  p position = -3.44673,0,1.00318,0x1bf90ff6;
 	}
 }
+[t:set_bool,n:0x0230084f]
+{
+	[placement]
+	{
+	  p position = -1.6361,0,-0.900688,0x1bf90ff6;
+	}
+	[set_bool]
+	{
+		bool_variable = "c24_slice2_vaarth_keg_exploded";
+	}
+}
 [t:blocking_object,n:0x023001d9]
 {
 	[aspect]
@@ -1458,14 +1469,26 @@
 	  p position = -2.38263,0,-0.057106,0x03e2fdd2;
 	}
 }
-[t:set_bool,n:0x0230084f]
+[t:use_point,n:0x02300850]
 {
 	[placement]
 	{
-	  p position = -1.6361,0,-0.900688,0x1bf90ff6;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.74915,0,0.705826,0x40f016bd;
 	}
-	[set_bool]
+}
+[t:use_point,n:0x02300851]
+{
+	[placement]
 	{
-		bool_variable = "c24_slice2_vaarth_keg_exploded";
+	  p position = -1.36249,0,2.79379,0x4b693d61;
+	}
+}
+[t:use_point,n:0x02300852]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.00261,-1.43456,-4.20935,0xe42c1d85;
 	}
 }

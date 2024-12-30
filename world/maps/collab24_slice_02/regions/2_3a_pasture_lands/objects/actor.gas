@@ -12,6 +12,10 @@
 			* = conv_c24_r4_hassat_start_before_summon_next;
 		}
 	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
 	[mind]
 	{
 		jat_talk = world\ai\jobs\actors\good\job_talk_c24_slice_2_hassat_r4.skrit;
@@ -20,5 +24,6 @@
 	{
 	  q orientation = 0,0.707107,0,-0.707107;
 	  p position = 0.506317,12,-0.221901,0xc8009592;
+		use_point_scids = 0x029002D5;
 	}
 }
