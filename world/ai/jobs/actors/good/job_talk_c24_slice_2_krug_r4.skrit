@@ -82,6 +82,11 @@ state Talk$
             {
                 m_Go$.GetConversation.RSSelectConversation( "conv_r4_krug_after_hassat_quest_first" );
                 GameAuditor.GetDb.SetBool( "c24_slice2_r4_flag_krug_talked_to_after_hassat_quest", true );
+
+				// spawn quest reward
+				scid quest_completed_trigger_scid$ = MakeScid(0x024005b3);
+                Go quest_completed_trigger$ = GoDb.FindGoidByScid( quest_completed_trigger_scid$ ).Go;
+                SendWorldMessage( WE_REQ_USE, quest_completed_trigger$.Goid, quest_completed_trigger$.Goid );
             }
 		}
 		else if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_quest_hassat_started_by_mayor" ) )

@@ -457,84 +457,6 @@
 	  p position = 1.69997,0,-0.842638,0xc8850d47;
 	}
 }
-[t:trigger_generic,n:0x02400ef1]
-{
-	[common]
-	{
-		dev_instance_text = "CHECK IF KRUG SHOULD BE FORCE TALKED TO";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02400F34,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(6.000000,"while_inside");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.109996,0,-0.807704,0xc8850d47;
-	}
-}
-[t:trigger_generic,n:0x02400ef2]
-{
-	[common]
-	{
-		dev_instance_text = "FORCE TALK TO KRUG";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_talk_begin",0x02400143,0f,"0x4003","every",0), doc("talk");
-				action* = send_world_message("we_req_use",0x024005B3,0f,"default","every",0), doc("spawn reward");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(6.000000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = false;
-			}
-		}
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 0.5,1,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 0.574606,0,-1.61999,0xc8850d47;
-	}
-}
-[t:check_quest,n:0x02400f34]
-{
-	[check_quest]
-	{
-		message_if_true = we_trigger_activate;
-		quest_name = "c24_slice_2_quest_krug_merchant";
-	  i quest_state = 21;
-	  x send_to_scid = 0x02400EF2;
-	}
-	[placement]
-	{
-	  p position = -0.459074,0,-1.7705,0xc8850d47;
-	}
-}
 [t:trigger_fade_nodes_global_box,n:0x024000ff]
 {
 	[common]
@@ -3431,6 +3353,13 @@
 	  p position = 1.29964,0,-1.73414,0x36d792c3;
 	}
 }
+[t:use_point,n:0x02401155]
+{
+	[placement]
+	{
+	  p position = 3.5235,-3.25,-0.0489807,0xe6f8965f;
+	}
+}
 [t:use_point,n:0x02400e7d]
 {
 	[placement]
@@ -4324,12 +4253,5 @@
 	{
 	  q orientation = 0,-1,0,-1.66939e-007;
 	  p position = -2.38926,12,-0.0602226,0xeca2332a;
-	}
-}
-[t:use_point,n:0x02401155]
-{
-	[placement]
-	{
-	  p position = 3.5235,-3.25,-0.0489807,0xe6f8965f;
 	}
 }
