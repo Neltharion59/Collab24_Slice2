@@ -16,18 +16,26 @@ set ds=%DungeonSiege%
 set tc=%TankCreator%
 
 :: pre-build checks
-pushd %gaspy%
-venv\Scripts\python -m build.pre_build_checks %map% --check standard --bits "%bits%"
-if %errorlevel% neq 0 pause
-popd
+setlocal EnableDelayedExpansion
+if not "%gaspy%"=="" (
+  pushd %gaspy%
+  venv\Scripts\python -m build.pre_build_checks %map% --check standard --bits "%bits%"
+  if !errorlevel! neq 0 pause
+  popd
+)
+endlocal
 
 :: Compile map file
 rmdir /S /Q "%tmp%\Bits"
 robocopy "%bits%\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /S
-pushd %gaspy%
-venv\Scripts\python -m build.fix_start_positions_required_levels %map% --dev-only-false --bits "%tmp%\Bits"
-if %errorlevel% neq 0 pause
-popd
+setlocal EnableDelayedExpansion
+if not "%gaspy%"=="" (
+  pushd %gaspy%
+  venv\Scripts\python -m build.fix_start_positions_required_levels %map% --dev-only-false --bits "%tmp%\Bits"
+  if !errorlevel! neq 0 pause
+  popd
+)
+endlocal
 "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsmap" -copyright "%copyright%" -title "%title%" -author "%author%"
 if %errorlevel% neq 0 pause
 
