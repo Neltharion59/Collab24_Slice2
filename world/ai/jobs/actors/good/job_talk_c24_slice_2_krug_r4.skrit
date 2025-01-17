@@ -93,7 +93,7 @@ state Talk$
 		{
 			m_Go$.GetConversation.RSSelectConversation( "conv_r4_krug_after_cellar_quest" );
 		}
-		else if ( GameAuditor.GetDb.GetBool( "c24_slice2_r4_flag_cart_was_dropped" ) )
+		else if ( GameAuditor.GetDb.GetBool( "c24_flag_r4_cart_was_dropped" ) )
 		{
 			m_Go$.GetConversation.RSSelectConversation( "conv_r4_krug_after_cart_is_dropped" );
 		}
