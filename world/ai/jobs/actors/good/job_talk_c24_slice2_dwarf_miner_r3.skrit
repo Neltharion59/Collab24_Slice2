@@ -85,9 +85,7 @@ state Talk$
 				GameAuditor.GetDb.SetBool( "c24_slice2_r1_flag_dwarf_talked_to", true );
 				DumpMain$; // drop quest reward
 
-				scid quest_activated_trigger_scid$ = MakeScid(0x02300096);
-				Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
-				SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
+				GameAuditor.GetDb.SetBool( "c24_slice2_r1_flag_dwarf_should_clean", true );
 			}
 		}
 		else
@@ -107,6 +105,14 @@ state Exiting$
 	event OnEnterState$
 	{
 		// $$$ close up any dialogs here...
+		if ( GameAuditor.GetDb.GetBool( "c24_slice2_r1_flag_dwarf_should_clean" ))
+		{
+			GameAuditor.GetDb.SetBool( "c24_slice2_r1_flag_dwarf_should_clean", false );
+			
+			scid quest_activated_trigger_scid$ = MakeScid(0x02300096);
+			Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
+			SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
+		}
 
 		// Send a PL_FACE reguest without a target so that they no longer
 		// continue to face the character they were talking to
