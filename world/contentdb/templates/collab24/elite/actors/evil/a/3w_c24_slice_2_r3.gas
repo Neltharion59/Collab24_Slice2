@@ -1,0 +1,651 @@
+[t:template,n:3W_c24_2_r3_vaarth_melee]
+{
+	category_name = "3W_evil_a";
+	doc = "3W_Bruhs Slice 2 R3 Va'arth Melee";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			dexterity = 18,  0;
+			intelligence = 9,  0;
+			melee = 81,  0;
+			strength = 36, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1124410;
+		life = 1509;
+		max_life = 1548;
+		mana = 284;
+		max_mana = 288;
+		model = m_c_eam_022_pos_1;
+		[textures]
+		{
+			0 = b_c_eam_022-snow;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_rac_vrthbshr_atk1;
+				* = s_e_ds2_rac_vrthbshr_atk2;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_rac_vrthbshr_die1;
+				* = s_e_ds2_rac_vrthbshr_die2;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_ds2_rac_vrthbshr_sgt;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_ds2_rac_vrthbshr_hit;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_ds2_rac_vrthbshr_hit;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_ds2_rac_vrthbshr_hit;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 403;
+		damage_min = 261;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine1;
+			shield_bone = Bip01_L_Hand;
+			weapon_bone = Bip01_R_Hand;
+		}
+		[weapon_scales]
+		{
+			as_single_melee = 3, 3, 3;
+			as_two_handed_melee = 2, 2, 2;
+			as_two_handed_sword = 2, 2, 2;
+			as_staff = 2, 2, 2;
+			as_bow_and_arrow = 2, 2, 2;
+			as_minigun = 2, 2, 2;
+			as_shield_only = 2, 2, 2;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_eam_022_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+				[anim_durations]
+				{
+					fs1 = 3.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 1;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		membership = monster;
+		screen_name = "Snow Va'arth Brute";
+	}
+	[defend]
+	{
+		defense = 859;
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				es_weapon_hand = c24_vaarth_club;
+			}
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.33;
+					max = 256684;
+					min = 155752;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #weapon/197-206;
+					il_main = #armor/341-386;
+					il_main = #*/194-203;
+					il_main = #nmagic/51-55;
+					il_main = #cmagic/51-55;
+				}
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/197-206;
+					il_main = #armor/-rare(1)/341-386;
+					il_main = #*/-rare(1)/194-203;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:3W_c24_2_r3_vaarth_ranged]
+{
+	category_name = "3W_evil_a";
+	doc = "3W_Bruhs Slice 2 R3 Va'arth Ranged";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			dexterity = 18,  0;
+			intelligence = 9,  0;
+			ranged = 80,  0;
+			strength = 36, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1124410;
+		life = 1484;
+		max_life = 1523;
+		mana = 362;
+		max_mana = 366;
+		model = m_c_eam_023_pos_1;
+		[textures]
+		{
+			0 = b_c_eam_022-snow;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_rac_vrthcnnr_atk1;
+				* = s_e_ds2_rac_vrthcnnr_atk2;
+				* = s_e_ds2_rac_vrthcnnr_atk3;
+			}
+			[break]
+			{
+				priority = high;
+				* = s_en_obj_monster_gib;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_rac_vrthcnnr_die1;
+				* = s_e_ds2_rac_vrthcnnr_die2;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_ds2_rac_vrthcnnr_sgt;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_ds2_rac_vrthcnnr_hit;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_ds2_rac_vrthcnnr_hit;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_ds2_rac_vrthcnnr_hit;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 382;
+		damage_min = 251;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine1;
+			shield_bone = Bip01_L_Hand;
+			weapon_bone = Bip01_R_Hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_eam_023_fs;
+			[chore_attack]
+			{
+				chore_stances = 7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+					02 = at-03;
+				}
+				[anim_durations]
+				{
+					fs7 = 2.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 7;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 7;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 7;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 7;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+					02 = at-03;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 7;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		membership = monster;
+		screen_name = "Snow Va'arth Bombardier";
+	}
+	[defend]
+	{
+		defense = 859;
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					es_weapon_hand = c24_vaarth_cannon;
+				}
+			}
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.33;
+					max = 256684;
+					min = 155752;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #weapon/197-206;
+					il_main = #armor/341-386;
+					il_main = #*/194-203;
+					il_main = #nmagic/51-55;
+					il_main = #cmagic/51-55;
+				}
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/197-206;
+					il_main = #armor/-rare(1)/341-386;
+					il_main = #*/-rare(1)/194-203;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:3W_c24_2_r3_vaarth_magic]
+{
+	category_name = "3W_evil_a";
+	doc = "3W_Bruhs Slice 2 R3 Va'arth Magic";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			dexterity = 18,  0;
+			intelligence = 9,  0;
+			nature_magic = 78,  0;
+			strength = 36, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1124410;
+		life = 1469;
+		max_life = 1508;
+		mana = 1943;
+		max_mana = 1947;
+		model = m_c_eam_024_pos_1;
+		[textures]
+		{
+			0 = b_c_eam_022-snow;
+		}
+		[voice]
+		{
+			[cast]
+			{
+				priority = high;
+				* = s_e_ds2_rac_vrthicrshr_mag;
+			}
+			[break]
+			{
+				priority = high;
+				* = s_en_obj_monster_gib;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_rac_vrthicrshr_die1;
+				* = s_e_ds2_rac_vrthicrshr_die2;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_ds2_rac_vrthicrshr_sgt;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_ds2_rac_vrthicrshr_hit;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_ds2_rac_vrthicrshr_hit;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_ds2_rac_vrthicrshr_hit;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 382;
+		damage_min = 251;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine1;
+			shield_bone = Bip01_L_Hand;
+			weapon_bone = Bip01_R_Hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_eam_024_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+				}
+				[anim_durations]
+				{
+					fs0 = 2.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+				}
+				[anim_durations]
+				{
+					fs0 = 2.000;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		membership = monster;
+		screen_name = "Snow Va'arth Avalancher";
+	}
+	[defend]
+	{
+		defense = 859;
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_PRIMARY_SPELL;
+		[other]
+		{
+			il_active_primary_spell = c24_r3_vaarth_spell_shock;
+			il_active_secondary_spell = c24_r3_vaarth_spell_ice_orb;
+			il_spell_1 = c24_r3_vaarth_spell_debuff;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.33;
+					max = 256684;
+					min = 155752;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #weapon/197-206;
+					il_main = #armor/341-386;
+					il_main = #*/194-203;
+					il_main = #nmagic/51-55;
+					il_main = #cmagic/51-55;
+				}
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/197-206;
+					il_main = #armor/-rare(1)/341-386;
+					il_main = #*/-rare(1)/194-203;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_cast = world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}

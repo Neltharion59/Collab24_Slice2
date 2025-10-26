@@ -1,0 +1,1202 @@
+[t:template,n:2W_c24_2_r1_spider]
+{
+	category_name = "2W_evil_d";
+	doc = "2W_Bruhs Slice 2 R1 spider_red_blck";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			dexterity = 11, 0;
+			intelligence = 5, 0;
+			melee = 48,  0;
+			strength = 23, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42563;
+		life = 830;
+		mana = 161;
+		max_life = 853;
+		max_mana = 163;
+		model = m_c_edm_sp_pos_1;
+		scale_base = 0.70;
+		[textures]
+		{
+			0 = b_c_edm_sp_c24_1;
+		}
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_e_die_spider;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_spider;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 244;
+		damage_min = 157;
+		reload_delay = 1;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.150000;
+		[bone_translator]
+		{
+			body_anterior = bone02;
+			body_mid = bone04;
+			body_posterior = bone04;
+			kill_bone = bone04;
+			shield_bone = bone01;
+			weapon_bone = bone02;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_sp_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Spider";
+	}
+	[defend]
+	{
+		defense = 533;
+	}
+	[mind]
+	{
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = spider_guts_black;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+		}
+	}
+}
+[t:template,n:2W_c24_2_r1_orthrac]
+{
+	category_name = "2W_evil_d";
+	doc = "2W_Bruhs Slice 2 R1 Orthrac";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 21, 0;
+			dexterity = 22, 0;
+			intelligence = 31, 0;
+			melee = 49, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42640;
+		life = 917;
+		max_life = 940;
+		mana = 237;
+		max_mana = 240;
+		model = m_c_edm_or_pos_1;
+		scale_base = 1.20;
+		[textures]
+		{
+			0 = b_c_edm_or-02;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_gen_orthrc_atk1;
+				* = s_e_ds2_gen_orthrc_atk2;
+				* = s_e_ds2_gen_orthrc_atk3;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_orthrc_die1;
+				* = s_e_ds2_gen_orthrc_die2;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_ds2_gen_orthrc_sgt;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_ds2_gen_orthrc_hit;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_ds2_gen_orthrc_hit;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_ds2_gen_orthrc_hit;
+			}
+			[move]
+			{
+				priority = low;
+				* = s_e_ds2_gen_orthrc_mve_lp;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 251;
+		damage_min = 163;
+	}
+	[body]
+	{
+		min_move_velocity = 2.5;
+		avg_move_velocity = 2.5;
+		max_move_velocity = 2.5;
+		[bone_translator]
+		{
+			body_anterior = bone_head1;
+			body_mid = bone_tail1;
+			body_posterior = bone_tail2;
+			kill_bone = bone_head1;
+			shield_bone = bone_lefthand1;
+			weapon_bone = bone_righthand1;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_or_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+					02 = at-03;
+				}
+				[anim_durations]
+				{
+					fs0 = 3.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					bcry = at-03;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 540;
+	}
+	[common]
+	{
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name = "Orthrac";
+	}
+	[mind]
+	{
+		sight_origin_height = 1;
+		actor_auto_fidgets = true;
+		melee_engage_range = 14;
+		personal_space_range = 0.4;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+[t:template,n:2W_c24_2_r1_rat]
+{
+	category_name = "2W_evil_d";
+	doc = "2W_Bruhs Slice 2 R1 Rat";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 14, 0;
+			intelligence = 2, 0;
+			dexterity = 11, 0;
+			melee = 47, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42541;
+		life = 800;
+		max_life = 823;
+		mana = 117;
+		material = teeth;
+		max_mana = 120;
+		model = m_c_edm_gr_pos_1;
+		scale_base = 0.50;
+		[voice]
+		{
+			[die]
+			{
+				* = s_e_die_rat;
+			}
+			[hit_critical]
+			{
+				* = s_e_hit_rat_SED;
+			}
+			[hit_glance]
+			{
+				* = s_e_hit_rat_SED;
+			}
+			[hit_solid]
+			{
+				* = s_e_hit_rat_SED;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 236;
+		damage_min = 151;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.000000;
+		max_move_velocity = 5;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_tail;
+			kill_bone = bip01_spine;
+			shield_bone = bip01_spine;
+			weapon_bone = bip01_head;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_gr_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Cave Rat";
+		membership = rat, monster;
+	}
+	[defend]
+	{
+		defense = 508;
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true;
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 					= 1.0;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social				= 0.8
+			&social_limit		= 2
+			&move_distance		= 3.00
+			&delay_min			= 7.0
+			&delay_max			= 17.0
+			&approach_dist		= 1.75
+			&friends			= "rat"
+			&still				= false;
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+		sight_origin_height = 1.5;
+	}
+	[physics]
+	{
+		break_effect = blood_mist;
+		break_sound = s_e_meat_explosion;
+		[break_particulate]
+		{
+			frag_glb_generic_01 = 1;
+			frag_glb_generic_02 = 1;
+			frag_glb_generic_03 = 1;
+			frag_glb_generic_04 = 1;
+			frag_glb_generic_05 = 1;
+			frag_glb_generic_06 = 1;
+			frag_glb_generic_07 = 1;
+			frag_glb_generic_08 = 1;
+		}
+	}
+	[water_effects]
+	{
+	}
+}
+[t:template,n:2W_c24_2_r1_water_elemental_mangler]
+{
+	category_name = "2W_evil_d";
+	doc = "2W_Bruhs Slice 2 R1 Water Elemental Mangler";
+	specializes = 2W_dsx_angler_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 40, 0;
+			intelligence = 6, 0;
+			dexterity = 9, 0;
+			melee = 50, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42571;
+		life = 837;
+		max_life = 860;
+		mana = 271;
+		max_mana = 273;
+		model = m_c_edm_mn_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_mele;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				* = s_e_attack_water_elemental_SED;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_water_elemental;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_water_elemental;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_elemental_water_SED;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 243;
+		damage_min = 158;
+	}
+	[common]
+	{
+		screen_name = "Water Elemental Minion";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+	}
+	[defend]
+	{
+		defense = 533;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_mana_medium;
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party	= true;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = collab24_slice2_water_explosion;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+		}
+	}
+}
+[t:template,n:2W_c24_2_r1_water_elemental_larch]
+{
+	category_name = "2W_evil_d";
+	doc = "2W_Bruhs Slice 2 R1 Water Elemental Larch";
+	specializes = 2W_dsx_elemental_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 59, 0;
+			intelligence = 10, 0;
+			dexterity = 14, 0;
+			melee = 50, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42585;
+		life = 924;
+		max_life = 947;
+		mana = 371;
+		max_mana = 373;
+		model = m_c_edm_we;
+		[textures]
+		{
+			0 = b_c_edm_we-static;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				* = s_e_attack_water_elemental_SED;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_water_elemental;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_water_elemental;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_elemental_water_SED;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 250;
+		damage_min = 165;
+	}
+	[body]
+	{
+		avg_move_velocity = 2.5;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[weapon_scales]
+		{
+			as_single_melee = 1.5, 1.5, 1.5;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_la_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = mg;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Water Elemental";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+	}
+	[defend]
+	{
+		defense = 546;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_mana_medium;
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party	= false;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = collab24_slice2_water_explosion;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+		}
+	}
+}
+[t:template,n:2W_c24_2_r1_voadyk]
+{
+	category_name = "2W_evil_d";
+	doc = "2W_collab24 Slice 2 R1 voadyk";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 28, 0;
+			intelligence = 15, 0;
+			dexterity = 20, 0;
+			nature_magic = 48, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42599;
+		life = 848;
+		max_life = 871;
+		mana = 144;
+		max_mana = 147;
+		model = m_c_xeam_005_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_we-static;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_gen_x_bss_vdyk_atk1;
+				* = s_e_ds2_gen_x_bss_vdyk_atk2;
+				* = s_e_ds2_gen_x_bss_vdyk_atk3;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_x_bss_vdyk_die;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_ds2_gen_x_bss_vdyk_sgt;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_ds2_gen_x_bss_vdyk_hit;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_ds2_gen_x_bss_vdyk_hit;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_ds2_gen_x_bss_vdyk_hit;
+			}
+			[move]
+			{
+				priority = low;
+				* = s_e_ds2_gen_x_bss_vdyk_mve_lp;
+			}
+			[revive]
+			{
+				priority = low;
+				* = s_e_ds2_gen_x_bss_vdyk_revive;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 256;
+		damage_min = 170;
+		reload_delay = 0.1;
+	}
+	[body]
+	{
+		min_move_velocity = 3.0;
+		avg_move_velocity = 3.5;
+		max_move_velocity = 4.0;
+		terrain_movement_permissions = lf_mist | lf_dirt;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_neck;
+			shield_bone = bip01_L_hand;
+			weapon_bone = bip01_neck;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_xeam_005_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+					02 = at-03;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.500;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+					02 = at-03;
+				}
+				[anim_durations]
+				{
+					fs0 = 2.000;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					res1 = a_c_xeam_005_fs0_rsct;
+					atk1 = a_c_xeam_005_fs0_at;
+					atk2 = a_c_xeam_005_fs0_at-02;
+					atk3 = a_c_xeam_005_fs0_at-03;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name = "Minor Aquatic Deity";
+	}
+	[defend]
+	{
+		defense = 559;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r1_voadyk_spell_water_splash;
+			il_active_secondary_spell = c24_r1_voadyk_spell_watershot_single;
+		}
+		[pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_mana_medium;
+			}
+		}
+	}
+	[mind]
+	{
+		jat_cast = world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+	[physics]
+	{
+		break_effect = collab24_slice2_water_explosion;
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+		}
+	}
+}
+[t:template,n:2W_c24_2_r1_mercrus_base]
+{
+	category_name = "2W_evil_d";
+	doc = "2W_collab24 Slice 2 R1 mercrus";
+	specializes = actor_evil;
+	[aspect]
+	{
+		model = m_c_edm_034_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_034;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_gen_mercrs_atk1;
+				* = s_e_ds2_gen_mercrs_atk2;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_mercrs_die1;
+				* = s_e_ds2_gen_mercrs_die2;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_ds2_gen_mercrs_sgt;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_ds2_gen_mercrs_hit;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_ds2_gen_mercrs_hit;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_ds2_gen_mercrs_hit;
+			}
+			[move]
+			{
+				priority = low;
+				* = s_e_ds2_gen_mercrs_mve_lp;
+			}
+		}
+	}
+	[body]
+	{
+		min_move_velocity = 4.5;
+		avg_move_velocity = 4.7;
+		max_move_velocity = 5.0;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_neck;
+			shield_bone = bip01_L_hand;
+			weapon_bone = bip01_R_hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_034_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+				[anim_durations]
+				{
+					fs0 = 2.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.000;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		membership = monster;
+		screen_name = "Mercrus";
+	}
+	[mind]
+	{
+		melee_engage_range = 17;
+		personal_space_range = 1.4;
+		ranged_engage_range = 17.0;
+		sight_range = 17.0;
+	}
+}
+[t:template,n:2W_c24_2_r1_mercrus]
+{
+	category_name = "2W_evil_d";
+	doc = "2W_collab24 slice2 Mercrus";
+	specializes = 2W_c24_2_r1_mercrus_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 21, 0;
+			dexterity = 17, 0;
+			intelligence = 13, 0;
+			nature_magic = 49, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42604;
+		life = 897;
+		max_life = 920;
+		mana = 271;
+		max_mana = 273;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 243;
+		damage_min = 157;
+	}
+	[common]
+	{
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+	}
+	[defend]
+	{
+		defense = 559;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r1_mercrus_spell_watershot_sequence;
+			il_active_secondary_spell = c24_r1_mercrus_spell_watershot_multi;
+			il_spell_1 = c24_r1_mercrus_spell_debuff;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 61669;
+					min = 34655;
+					min_pile = 10;
+					piles = 2 - 4;
+				}
+				[all*]
+				{
+					il_main = potion_health_medium;
+					il_main = potion_mana_medium;
+				}
+				[oneof*]
+				{
+					il_main = #armor/219-249;
+					il_main = #weapon/125-136;
+					il_main = #*/124-135;
+				}
+				[oneof*]
+				{
+					il_main = #armor/-mod(1)/219-249;
+					il_main = #weapon/-mod(1)/125-136;
+					il_main = #*/-mod(1)/124-135;
+					il_main = #armor/-rare(1)/219-249;
+					il_main = #weapon/-rare(1)/125-136;
+					il_main = #*/-rare(1)/124-135;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_cast = world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+	}
+}

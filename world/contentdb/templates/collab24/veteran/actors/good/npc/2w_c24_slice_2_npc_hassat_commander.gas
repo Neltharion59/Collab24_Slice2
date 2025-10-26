@@ -1,0 +1,177 @@
+[t:template,n:2W_c24_slice02_npc_hassat]
+{
+	category_name = "2W_townsperson";
+	doc = "2W_c24 slice2 npc hassat commander";
+	specializes = actor_evil;
+	[actor]
+	{
+		alignment = aa_good;
+		[skills]
+		{
+			strength = 76, 0;
+			intelligence = 50, 0;
+			dexterity = 64, 0;
+			ranged = 53, 0;
+		}
+	}
+	[aspect]
+	{
+		model = m_c_eam_HC;
+		is_invincible = true;
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_e_die_tiger_SED;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_tiger_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_tiger_SED;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = .5;
+		damage_max = 289;
+		damage_min = 198;
+	}
+	[body]
+	{
+		min_move_velocity = 1.5;
+		avg_move_velocity = 3.500;
+		[bone_translator]
+		{
+			body_anterior = Bip01_Head;
+			body_mid = Bip01_Spine2;
+			body_posterior = Bip01_Pelvis;
+			kill_bone = Bip01_Spine2;
+			shield_bone = shield_grip;
+			weapon_bone = Weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_eam_hassat_commander_fs;
+			[chore_attack]
+			{
+				chore_stances = 5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					0mid = at-02;
+					high = at-03;
+					qffg = dff;
+				}
+				[anim_durations]
+				{
+					fs5 = 2;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 5;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 5;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 5;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 5;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Leotharn";
+		membership = hassat,monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			}
+		}
+	}
+	[conversation]
+	{
+	}
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[defend]
+	{
+		defense = 609;
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				es_shield_hand = c24_frthwnd_thrown;
+			}
+			[all*]
+			{
+				il_main = c24_s2_reward_quest_krug_merchant_from_hassat;
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+		com_range = 14.0;
+		melee_engage_range = 14.0;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}

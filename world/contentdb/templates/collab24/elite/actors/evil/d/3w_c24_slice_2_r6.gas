@@ -1,0 +1,882 @@
+[t:template,n:3W_c24_2_r6_ice_elemental_base]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R6 Ice Elemental";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 23, 0;
+			dexterity = 6, 0;
+			intelligence = 15, 0;
+			nature_magic = 80, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1125443;
+		life = 1528;
+		max_life = 1566;
+		mana = 4578;
+		max_mana = 4582;
+		material = ice;
+		model = m_c_edm_062_pos_1;
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_gen_ice_elem_atk1;
+				* = s_e_ds2_gen_ice_elem_atk2;
+			}
+			[cast]
+			{
+				priority = high;
+				* = s_e_ds2_gen_ice_elem_atk1;
+				* = s_e_ds2_gen_ice_elem_atk2;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_ice_elem_die1;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_ds2_gen_ice_elem_sgt;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_ds2_gen_ice_elem_hit;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_ds2_gen_ice_elem_hit;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_ds2_gen_ice_elem_hit;
+			}
+			[move]
+			{
+				priority = low;
+				* = s_e_ds2_gen_ice_elem_move;
+			}
+		}
+	}
+	[attack]
+	{
+		area_damage_radius = 4.25;
+		attack_range = 0.5;
+		damage_max = 434;
+		damage_min = 300;
+	}
+	[body]
+	{
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = Bip01_torso;
+			body_posterior = Bip01_torso;
+			kill_bone = Bip01_torso;
+			shield_bone = Bip01_HandL;
+			weapon_bone = Bip01_HandR;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_062_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+				[anim_durations]
+				{
+					fs0 = 0.7500;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name = "Ice Elemental";
+	}
+	[defend]
+	{
+		defense = 875;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r6_ice_elemental_spell_ice_mage_balls;
+			il_active_secondary_spell = c24_r6_ice_elemental_spell_dragon_fire;
+			il_spell_1 = c24_r6_ice_elemental_spell_fire_ring;
+		}
+	}
+	[mind]
+	{
+		actor_auto_switches_to_magic = true;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		jat_cast = world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+		melee_engage_range = 14.0;
+		personal_space_range = 0.1;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = c24_slice_02_effect_ice_element_explosion;
+		break_sound = s_e_die_ice_warrior;
+		damage_all = true;
+		explode_when_killed = true;
+		explosion_magnitude = 4.25;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_ice_01 = 2;
+			frag_glb_ice_02 = 1;
+			frag_glb_ice_03 = 3;
+			frag_glb_ice_04 = 1;
+			frag_glb_ice_05 = 2;
+			frag_glb_ice_06 = 1;
+			frag_glb_ice_07 = 1;
+			frag_glb_ice_08 = 3;
+		}
+	}
+}
+[t:template,n:3W_c24_2_r6_ice_elemental]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R6 Ice Elemental";
+	specializes = 3W_c24_2_r6_ice_elemental_base;
+}
+[t:template,n:3W_c24_2_r6_ice_elemental_from_skull]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R6 Ice Elemental from skull";
+	specializes = 3W_c24_2_r6_ice_elemental_base;
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0260005A,0f,"default","every",0), doc("");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_exploded",0,"on_first_message"), doc("[*converted to one-shot*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[mind]
+	{
+		melee_engage_range = 28.0;
+		personal_space_range = 0.1;
+		ranged_engage_range = 28.0;
+		sight_range = 28.0;
+	}
+}
+[t:template,n:3W_c24_slice_2_r6_shard_ice_base]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R6 shard ice base";
+	specializes = actor_evil;
+	[aspect]
+	{
+		model = m_c_edm_sd_pos_1;
+		material = ice;
+		[voice]
+		{
+			[cast]
+			{
+				* = s_e_attack_shard;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_shard_small;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_gargoyle;
+			}
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 3.3;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_sd_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+					01 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		actor_auto_fidgets = false;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		melee_engage_range = 10;
+		personal_space_range = 0.5;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+		sight_origin_height = 1.5;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		explosion_magnitude = 1.0;
+		gib_gore_good = true;
+	}
+}
+[t:template,n:3W_c24_slice_2_r6_shard_ice]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R6 shard ice";
+	specializes = 3W_c24_slice_2_r6_shard_ice_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 39, 0;
+			intelligence = 8, 0;
+			dexterity = 12, 0;
+			nature_magic = 80,  0;
+		}
+	}
+	[aspect]
+	{
+		scale_base = 0.15;
+		[textures]
+		{
+			0 = b_c_edm_iw;
+		}
+		experience_value = 1125271;
+		life = 1462;
+		max_life = 1501;
+		mana = 577;
+		max_mana = 581;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 442;
+		damage_min = 296;
+	}
+	[common]
+	{
+		screen_name = "Ice Shard";
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("ice_mage_reveal");
+				condition* = receive_world_message("we_entered_world");
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 897;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r6_ice_shard_spell_shard;
+		}
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			c24_frag_glb_gr_shard_ice_sm_01 = 1;
+			c24_frag_glb_gr_shard_ice_sm_02 = 1;
+			c24_frag_glb_gr_shard_ice_sm_03 = 2;
+			c24_frag_glb_gr_shard_ice_sm_04 = 3;
+			c24_frag_glb_gr_shard_ice_sm_05 = 3;
+		}
+	}
+}
+[t:template,n:3W_c24_slice_2_r6_ice_mage_boss]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R6 ice mage boss";
+	specializes = 3W_ice_mage_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 23, 0;
+			intelligence = 47, 0;
+			dexterity = 12, 0;
+			nature_magic = 82,  0;
+		}
+	}
+	[aspect]
+	{
+		material = ice;
+		experience_value = 1128456;
+		life = 1690;
+		max_life = 1728;
+		mana = 27514;
+		max_mana = 27518;
+		[textures]
+		{
+			0 = b_c_edm_img-02;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 468;
+		damage_min = 324;
+	}
+	[common]
+	{
+		screen_name = "Caatharia the Unmelting";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 890;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 257083;
+					min = 156144;
+					piles = 2 - 4;
+					min_pile = 24;
+				}
+				[oneof*]
+				{
+					il_main = potion_mana_super;
+					il_main = potion_health_super;
+					il_main = potion_rejuvenation_super;
+				}
+				[all*]
+				{
+					il_main = #cmagic/49-60;
+					il_main = #nmagic/49-60;
+					il_main = #spellbook/193-199;
+				}
+				[oneof*]
+				{
+					min = 2;
+					max = 2;
+					il_main = #weapon/-mod(1)/199-209;
+					il_main = #armor/-mod(1)/341-396;
+					il_main = #weapon/-rare(1)/199-209;
+					il_main = #armor/-rare(1)/341-396;
+					il_main = #*/-rare(1)/196-207;
+				}
+			}
+		}
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r6_ice_mage_spell_ice_lance;
+			il_spell_1 = c24_r6_ice_mage_spell_shared_pain;
+			il_spell_2 = c24_r6_ice_mage_spell_ice_orb;
+			il_spell_3 = c24_r6_ice_mage_spell_turret;
+			il_spell_4 = c24_r6_ice_mage_spell_killing_fist;
+			il_spell_5 = c24_r6_ice_mage_spell_snowstorm;
+			il_spell_6 = c24_r6_ice_mage_spell_summon;
+		}
+	}
+	[mind]
+	{
+		jat_cast = world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+		movement_orders = mo_hold;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		explosion_magnitude = 1.75;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_ice_01 = 2;
+			frag_glb_ice_02 = 1;
+			frag_glb_ice_03 = 3;
+			frag_glb_ice_04 = 1;
+			frag_glb_ice_05 = 2;
+			frag_glb_ice_06 = 1;
+			frag_glb_ice_07 = 1;
+			frag_glb_ice_08 = 3;
+		}
+	}
+}
+[t:template,n:3W_c24_2_r6_ice_fly_base]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice62 R6 ice fly";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 43, 0;
+			intelligence = 4, 0;
+			dexterity = 14, 0;
+			melee = 82,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 0;
+		life = 1359;
+		max_life = 1398;
+		mana = 215;
+		max_mana = 220;
+		model = m_c_edm_if_pos_1;
+		material = ice;
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_e_die_ice_warrior;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 411;
+		damage_min = 275;
+	}
+	[body]
+	{
+		avg_move_velocity = 4.080000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_if_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dsf;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = fl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Ice Fly";
+		membership = monster,immune_freeze;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("ice_fly");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 875;
+	}
+	[mind]
+	{
+		personal_space_range = 0.5;
+		melee_engage_range = 14.0;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = ice_explosion;
+		explode_when_killed = true;
+		gib_gore_good = true;
+	}
+}
+[t:template,n:3W_c24_2_r6_ice_fly]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice62 R6 ice fly";
+	specializes = 3W_c24_2_r6_ice_fly_base;
+}
+[t:template,n:3W_c24_2_r6_ice_fly_summon]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice62 R6 ice fly";
+	specializes = 3W_c24_2_r6_ice_fly_base;
+	[self_destruct]
+	{
+		delete_time = 20.0;
+		explode = true;
+	}
+}
+[t:template,n:3W_c24_2_r6_unguis]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice62 R6 unguis";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 66, 0;
+			intelligence = 4, 0;
+			dexterity = 36, 0;
+			melee = 84,  0;
+		}
+	}
+	[aspect]
+	{
+		draw_shadow = false;
+		experience_value = 1123032;
+		life = 1453;
+		max_life = 1492;
+		max_mana = 239;
+		mana = 235;
+		model = m_c_edm_ug_pos_1;
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_e_die_unguis;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_unguis_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_unguis_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_unguis_SED;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 3;
+		damage_max = 422;
+		damage_min = 285;
+	}
+	[body]
+	{
+		avg_move_velocity = 0;
+		[bone_translator]
+		{
+			body_anterior = bone20;
+			body_mid = bone13;
+			body_posterior = bone04;
+			kill_bone = bone09;
+			shield_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			initial_chore = chore_none;
+			chore_prefix = a_c_edm_ug_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = ds;
+					wake = rv;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Tentacle";
+		membership = monster,immune_freeze;
+	}
+	[defend]
+	{
+		defense = 875;
+	}
+	[mind]
+	{
+		jat_die = world\ai\jobs\actors\evil\job_die_delete.skrit;
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible 							= true;
+		jat_flee_from_object = jat_none;
+		jat_guard = jat_none;
+		jat_move = jat_none;
+		jat_patrol = jat_none;
+		actor_auto_fidgets = false;
+		movement_orders = mo_hold;
+		melee_engage_range = 3.0;
+		personal_space_range = 0.7;
+		on_enemy_entered_ocz_attack = true;
+		sight_origin_height = 2.5;
+		melee_engage_range = 3;
+		ranged_engage_range = 3.0;
+		sight_range = 3.0;
+		inner_comfort_zone_range = 3.0;
+		outer_comfort_zone_range = 3.0;
+		com_range = 3.0;
+	}
+}

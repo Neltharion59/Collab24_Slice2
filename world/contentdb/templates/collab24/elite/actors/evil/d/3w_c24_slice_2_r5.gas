@@ -1,0 +1,1251 @@
+[t:template,n:3W_c24_2_r4_lertisk]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R4 lertisk";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			dexterity = 102,  0;
+			intelligence = 36,  0;
+			melee = 82,  0;
+			strength = 36, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1125529;
+		life = 1406;
+		max_life = 1445;
+		mana = 245;
+		max_mana = 249;
+		model = m_c_edm_041_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_041-02;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_gen_lrtsk_atk1;
+				* = s_e_ds2_gen_lrtsk_atk2;
+				* = s_e_ds2_gen_lrtsk_atk3;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_lrtsk_die1;
+				* = s_e_ds2_gen_lrtsk_die2;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_ds2_gen_lrtsk_sgt;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_ds2_gen_lrtsk_hit;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_ds2_gen_lrtsk_hit;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_ds2_gen_lrtsk_hit;
+			}
+			[move]
+			{
+				priority = low;
+				* = s_e_ds2_gen_lrtsk_mve_lp;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 396;
+		damage_min = 261;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine1;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_head;
+			shield_bone = bip01_L_hand;
+			weapon_bone = bip01_R_hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_041_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+					02 = at-03;
+				}
+				[anim_durations]
+				{
+					fs0 = 2.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		membership = monster;
+		screen_name = "Armored Lertisk";
+	}
+	[defend]
+	{
+		defense = 878;
+	}
+	[mind]
+	{
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:3W_c24_2_r5_naldrun_base]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R5 Naldrun Base";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 29, 0;
+			dexterity = 36, 0;
+			intelligence = 25, 0;
+			nature_magic = 79, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1124410;
+		life = 1367;
+		max_life = 1406;
+		mana = 552;
+		max_mana = 556;
+		mana_recovery_unit = 1;
+		mana_recovery_period = 8;
+		model = m_c_edm_054_pos_1;
+		[voice]
+		{
+			[cast]
+			{
+				priority = high;
+				* = s_e_ds2_gen_naldrn_atk;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_naldrn_die1;
+				* = s_e_ds2_gen_naldrn_die2;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_ds2_gen_naldrn_hit;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_ds2_gen_naldrn_hit;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_ds2_gen_naldrn_hit;
+			}
+			[move]
+			{
+				priority = low;
+				* = s_e_ds2_gen_naldrn_mve_lp;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 391;
+		damage_min = 254;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine1;
+			shield_bone = Bip01_L_Hand;
+			weapon_bone = Bip01_Spine1;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_054_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+				}
+				[anim_durations]
+				{
+					fs0 = 2.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dsf;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+				}
+				[anim_durations]
+				{
+					fs0 = 2.000;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					eat1 = a_c_edm_054_fs0_eat;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = fl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		membership = krug, party_krug_shaman, party_krug_scout_boss, monster;
+		screen_name = "Naldrun";
+	}
+	[defend]
+	{
+		defense = 875;
+	}
+	[mind]
+	{
+		com_channels = dyn_party, krug;
+		com_range = 13.0;
+		on_enemy_spotted_alert_friends = true;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		 = true
+			&party_template					 = "party_krug_shaman";
+		actor_life_ratio_low_threshold = 0.60;
+		flee_count = 9999;
+		flee_distance = 8;
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:3W_c24_2_r5_naldrun_01_dmg]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R5 Naldrun 01 Dmg";
+	specializes = 3W_c24_2_r5_naldrun_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_edm_054_fae_v01;
+		}
+	}
+	[common]
+	{
+		screen_name = "Frost Fae Ravager";
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r5_naldrun_spell_iceshard;
+			il_active_secondary_spell = c24_r5_naldrun_spell_ice_orb;
+			il_spell_1 = c24_r5_naldrun_spell_iceshard_2;
+			il_spell_2 = c24_r5_naldrun_spell_respite;
+			il_spell_3 = c24_r5_naldrun_spell_run;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.15;
+					max = 256708;
+					min = 155708;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = potion_rejuvenation_large;
+				}
+				[oneof*]
+				{
+					chance = 0.10;
+					il_main = #weapon/199-209;
+					il_main = #armor/341-396;
+					il_main = #*/196-207;
+				}
+				[oneof*]
+				{
+					chance = 0.04;
+					il_main = #ring/179-185;
+					il_main = #amulet/179-185;
+					il_main = #spellbook/193-199;
+					il_main = #weapon/-mod(1)/199-209;
+					il_main = #armor/-mod(1)/341-396;
+					il_main = #weapon/-rare(1)/199-209;
+					il_main = #armor/-rare(1)/341-396;
+					il_main = #*/-rare(1)/196-207;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_cast = world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:3W_c24_2_r5_naldrun_02_trickster]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R5 Naldrun 02 Trickster";
+	specializes = 3W_c24_2_r5_naldrun_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_edm_054_fae_v02;
+		}
+	}
+	[common]
+	{
+		screen_name = "Frost Fae Enchanter";
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r5_naldrun_spell_rip_mana;
+			il_active_secondary_spell = c24_r5_naldrun_spell_ice_orb;
+			il_spell_1 = c24_r5_naldrun_spell_buff_magic_dmg;
+			il_spell_2 = c24_r5_naldrun_spell_buff_dodge;
+			il_spell_3 = c24_r5_naldrun_spell_buff_block_magic;
+			il_spell_4 = c24_r5_naldrun_spell_respite;
+			il_spell_5 = c24_r5_naldrun_spell_mana_shield_mass;
+			il_spell_6 = c24_r5_naldrun_spell_iceshard_2;
+			il_spell_7 = c24_r5_naldrun_spell_run;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.15;
+					max = 256708;
+					min = 155708;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = potion_rejuvenation_large;
+				}
+				[oneof*]
+				{
+					chance = 0.10;
+					il_main = #weapon/199-209;
+					il_main = #armor/341-396;
+					il_main = #*/196-207;
+				}
+				[oneof*]
+				{
+					chance = 0.04;
+					il_main = #ring/179-185;
+					il_main = #amulet/179-185;
+					il_main = #spellbook/193-199;
+					il_main = #weapon/-mod(1)/199-209;
+					il_main = #armor/-mod(1)/341-396;
+					il_main = #weapon/-rare(1)/199-209;
+					il_main = #armor/-rare(1)/341-396;
+					il_main = #*/-rare(1)/196-207;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_cast = world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:3W_c24_2_r5_naldrun_03_healer]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R5 naldrun 03 Healer";
+	specializes = 3W_c24_2_r5_naldrun_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_edm_054_fae_v03;
+		}
+	}
+	[common]
+	{
+		screen_name = "Frost Fae Nourisher";
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r5_naldrun_spell_rip_mana;
+			il_active_secondary_spell = c24_r5_naldrun_spell_healing_wind;
+			il_spell_1 = c24_r5_naldrun_spell_ressurect;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.15;
+					max = 256708;
+					min = 155708;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = potion_rejuvenation_large;
+				}
+				[oneof*]
+				{
+					chance = 0.10;
+					il_main = #weapon/199-209;
+					il_main = #armor/341-396;
+					il_main = #*/196-207;
+				}
+				[oneof*]
+				{
+					chance = 0.04;
+					il_main = #ring/179-185;
+					il_main = #amulet/179-185;
+					il_main = #spellbook/193-199;
+					il_main = #weapon/-mod(1)/199-209;
+					il_main = #armor/-mod(1)/341-396;
+					il_main = #weapon/-rare(1)/199-209;
+					il_main = #armor/-rare(1)/341-396;
+					il_main = #*/-rare(1)/196-207;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		actor_auto_reanimates_friends = true;
+		actor_auto_heals_others_life = true;
+		actor_auto_heals_self_life = true;
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:3W_c24_2_r5_naldrun_boss_01_trapper]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R5 Naldrun Boss 01 Trapper";
+	specializes = 3W_c24_2_r5_naldrun_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 29, 0;
+			dexterity = 36, 0;
+			intelligence = 25, 0;
+			nature_magic = 80, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1125873;
+		life = 1441;
+		max_life = 1480;
+		[textures]
+		{
+			0 = b_c_edm_054_fae_v04;
+		}
+	}
+	[common]
+	{
+		screen_name = "Aerthemees the Trapper";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r5_naldrun_trapper_spell_shock;
+			il_active_secondary_spell = c24_r5_naldrun_trapper_spell_ice_orb;
+			il_spell_1 = c24_r5_naldrun_spell_respite;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 256805;
+					min = 155937;
+				}
+				[oneof*]
+				{
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = potion_rejuvenation_large;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/199-209;
+					il_main = #armor/341-396;
+					il_main = #*/196-207;
+				}
+				[oneof*]
+				{
+					chance = 0.04;
+					il_main = #ring/179-185;
+					il_main = #amulet/179-185;
+					il_main = #spellbook/193-199;
+					il_main = #weapon/-mod(1)/199-209;
+					il_main = #armor/-mod(1)/341-396;
+					il_main = #weapon/-rare(1)/199-209;
+					il_main = #armor/-rare(1)/341-396;
+					il_main = #*/-rare(1)/196-207;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_cast = world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:3W_c24_2_r5_fairy_queen_base]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R5 Fairy Queen Base";
+	specializes = actor_evil;
+	[aspect]
+	{
+		model = m_c_xedm_093_pos_1;
+		[textures]
+		{
+			0 = b_c_xedm_093;
+		}
+		[voice]
+		{
+			[voice]
+			{
+				[die]
+				{
+					priority = low;
+					* = s_e_ds2_rac_x_bnd_dryd_mag_die;
+				}
+				[enemy_spotted]
+				{
+					priority = high;
+					* = s_e_ds2_rac_x_bnd_dryd_mag_sgt;
+				}
+				[hit_critical]
+				{
+					priority = low;
+					* = s_e_ds2_rac_x_bnd_dryd_mag_hit;
+				}
+				[hit_glance]
+				{
+					priority = low;
+					* = s_e_ds2_rac_x_bnd_dryd_mag_hit;
+				}
+				[hit_solid]
+				{
+					priority = low;
+					* = s_e_ds2_rac_x_bnd_dryd_mag_hit;
+				}
+				[move]
+				{
+					priority = low;
+					* = s_e_ds2_rac_x_bnd_dryd_mag_mve_lp;
+				}
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 391;
+		damage_min = 254;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine01;
+			body_posterior = bip01_spine;
+			kill_bone = bip01_spine02;
+			shield_bone = bip01_L_Hand;
+			weapon_bone = bip01_head;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_xedm_093_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					01 = mg-02;
+					02 = mg-03;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					01 = mg-02;
+					02 = mg-03;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.2500;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		membership = krug, party_krug_shaman, party_krug_scout_boss, monster;
+		screen_name = "Fae Queen";
+	}
+	[defend]
+	{
+		defense = 817;
+	}
+	[mind]
+	{
+		com_channels = dyn_party, krug;
+		com_range = 13.0;
+		on_enemy_spotted_alert_friends = true;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		 = true
+			&party_template					 = "party_krug_shaman";
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:3W_c24_2_r5_fairy_queen_boss]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R5 Fairy Queen Boss";
+	specializes = 3W_c24_2_r5_fairy_queen_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 29, 0;
+			dexterity = 46, 0;
+			intelligence = 32, 0;
+			nature_magic = 81, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1125873;
+		life = 1684;
+		max_life = 1723;
+		mana = 674;
+		max_mana = 678;
+		mana_recovery_unit = 1;
+		mana_recovery_period = 6;
+		[textures]
+		{
+			0 = b_c_xedm_093_fae_queen;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 391;
+		damage_min = 254;
+	}
+	[common]
+	{
+		screen_name = "Suvanne the Fae Queen";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+	}
+	[defend]
+	{
+		defense = 890;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r5_fairy_queen_spell_multishard;
+			il_active_secondary_spell = c24_r5_naldrun_spell_ice_orb;
+			il_spell_1 = c24_r5_naldrun_spell_respite;
+			il_spell_2 = c24_r5_fairy_queen_spell_rip_mana;
+			il_spell_3 = c24_r5_fairy_queen_spell_mana_shield;
+			il_spell_4 = c24_r5_fairy_queen_spell_mana_debuff;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 257002;
+					min = 156035;
+					piles = 2 - 4;
+					min_pile = 25;
+				}
+				[oneof*]
+				{
+					il_main = c24_ring_frost_eye;
+				}
+				[oneof*]
+				{
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = potion_rejuvenation_large;
+				}
+				[oneof*]
+				{
+					min = 2;
+					max = 2;
+					il_main = #ring/179-185;
+					il_main = #amulet/179-185;
+					il_main = #spellbook/193-199;
+					il_main = #weapon/-mod(1)/199-209;
+					il_main = #armor/-mod(1)/341-396;
+					il_main = #weapon/-rare(1)/199-209;
+					il_main = #armor/-rare(1)/341-396;
+					il_main = #*/-rare(1)/196-207;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_cast = world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:3W_c24_2_r5_vasp]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R5 vasp";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 27, 0;
+			dexterity = 16, 0;
+			intelligence = 11, 0;
+			nature_magic = 80, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1125012;
+		life = 1484;
+		max_life = 1523;
+		mana = 245;
+		max_mana = 249;
+		model = m_c_edm_ma_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_iw;
+		}
+		[voice]
+		{
+			[cast]
+			{
+				priority = high;
+				* = s_e_ds2_gen_vasp_atk1;
+				* = s_e_ds2_gen_vasp_atk2;
+				* = s_e_ds2_gen_vasp_atk3;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_vasp_die1;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_ds2_gen_vasp_sgt;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_ds2_gen_vasp_hit;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_ds2_gen_vasp_hit;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_ds2_gen_vasp_hit;
+			}
+			[move]
+			{
+				priority = low;
+				* = s_e_ds2_gen_vasp_mve_lp;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 391;
+		damage_min = 254;
+	}
+	[body]
+	{
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine1;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = bip01_L_hand;
+			weapon_bone = bip01_head;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_ma_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+					02 = mg-03;
+				}
+				[anim_durations]
+				{
+					fs0 = 3.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+					02 = mg-03;
+				}
+				[anim_durations]
+				{
+					fs0 = 2.000;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = fl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Frost Vasp";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+	}
+	[defend]
+	{
+		defense = 905;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r5_vasp_spell_spark_multi;
+			il_active_secondary_spell = c24_r5_vasp_spell_spark_orb;
+		}
+	}
+	[mind]
+	{
+		jat_cast = world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+	[physics]
+	{
+		break_effect = ice_explosion;
+		explode_when_killed = true;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			c24_frag_glb_gr_shard_ice_sm_01 = 1;
+			c24_frag_glb_gr_shard_ice_sm_02 = 1;
+			c24_frag_glb_gr_shard_ice_sm_03 = 2;
+			c24_frag_glb_gr_shard_ice_sm_04 = 3;
+			c24_frag_glb_gr_shard_ice_sm_05 = 3;
+		}
+	}
+}
+[t:template,n:3W_c24_2_r5_dragon_boss]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R5 dragon boss";
+	specializes = 3W_base_drake;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 239, 0;
+			dexterity = 32, 0;
+			intelligence = 22, 0;
+			nature_magic = 81, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1126304;
+		life = 1883;
+		max_life = 1921;
+		mana = 6042;
+		max_mana = 6046;
+		model = m_c_edm_dk_pos_1;
+		draw_shadow = false;
+		[textures]
+		{
+			0 = b_c_edm_dk-03;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 391;
+		damage_min = 254;
+	}
+	[common]
+	{
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name = "Phrymallix the Youthful Dragon";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("drake_wing");
+				condition* = receive_world_message("we_anim_sfx",2);
+			}
+			[*]
+			{
+				action* = call_sfx_script("drake_scream_white");
+				condition* = receive_world_message("we_anim_sfx",3);
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 965;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r5_dragon_spell_fireball;
+			il_active_secondary_spell = c24_r5_dragon_spell_breath;
+			il_spell_1 = c24_r5_dragon_spell_run;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 257002;
+					min = 156035;
+					piles = 2 - 4;
+					min_pile = 25;
+				}
+				[oneof*]
+				{
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = potion_rejuvenation_large;
+				}
+				[oneof*]
+				{
+					min = 3;
+					max = 3;
+					il_main = #weapon/-mod(1)/199-209;
+					il_main = #armor/-mod(1)/341-396;
+					il_main = #weapon/-rare(1)/199-209;
+					il_main = #armor/-rare(1)/341-396;
+					il_main = #*/-rare(1)/196-207;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		actor_life_ratio_low_threshold = .33;
+		on_life_ratio_low_flee = true;
+		on_engaged_lost_consciousness_abort_attack = true;
+		on_engaged_fled_abort_attack = false;
+		flee_count = 9999;
+		flee_distance = 13;
+		job_travel_distance_limit = 50;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		jat_cast = world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true
+			&rand_target					= true;
+		on_enemy_entered_icz_switch_to_melee = false;
+		melee_engage_range = 20.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 20.0;
+		sight_range = 20.0;
+		actor_auto_fidgets = false;
+	}
+}

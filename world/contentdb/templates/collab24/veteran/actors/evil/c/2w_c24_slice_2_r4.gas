@@ -1,0 +1,282 @@
+[t:template,n:2W_c24_2_r4_braak_melee]
+{
+	category_name = "2W_evil_c";
+	doc = "2W_Bruhs Slice 2 R4 braak melee";
+	specializes = 2W_base_braak;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 28, 0;
+			intelligence = 11, 0;
+			dexterity = 19, 0;
+			melee = 51,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42626;
+		life = 849;
+		max_life = 872;
+		mana = 137;
+		max_mana = 140;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 257;
+		damage_min = 171;
+	}
+	[common]
+	{
+		screen_name = "Braak";
+		membership = party_braak_boss, monster;
+	}
+	[defend]
+	{
+		defense = 589;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.33;
+					max = 61566;
+					min = 34536;
+				}
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+				[oneof*]
+				{
+					chance = 0.40;
+					il_main = #weapon/122-133;
+					il_main = #armor/208-246;
+					il_main = #*/121-132;
+					il_main = #spell/32-37;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/122-133;
+					il_main = #armor/-rare(1)/208-246;
+					il_main = #*/-rare(1)/121-132;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+	}
+}
+[t:template,n:2W_c24_2_r4_braak_melee_boss_01]
+{
+	category_name = "2W_evil_c";
+	doc = "2W_Bruhs Slice 2 R4 braak melee boss 01";
+	specializes = 2W_base_braak;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 29, 0;
+			intelligence = 13, 0;
+			dexterity = 19, 0;
+			melee = 53,  0;
+		}
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_ecm_bk-03;
+		}
+		experience_value = 42668;
+		life = 879;
+		max_life = 902;
+		mana = 237;
+		max_mana = 240;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 261;
+		damage_min = 175;
+	}
+	[common]
+	{
+		screen_name = "Pitiful Braak";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 660;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 61648;
+					min = 34655;
+					piles = 2 - 3;
+					min_pile = 11;
+				}
+				[oneof*]
+				{
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-mod(1)/122-133;
+					il_main = #armor/-mod(1)/208-246;
+					min = 2;
+					max = 2;
+				}
+				[oneof*]
+				{
+					chance = 0.09;
+					il_main = #weapon/-rare(1)/122-133;
+					il_main = #armor/-rare(1)/208-246;
+					il_main = #*/-rare(1)/121-132;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social				= 0.75
+			&friend_template 	= false
+			&friends			= party_braak_boss
+			&still				= false;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&party_template						= "party_braak_boss";
+	}
+}
+[t:template,n:2W_c24_2_r4_braak_magic]
+{
+	category_name = "2W_evil_c";
+	doc = "2W_Bruhs Slice 2 R4 braak magic";
+	specializes = 2W_base_braak;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 23, 0;
+			intelligence = 13, 0;
+			dexterity = 17, 0;
+			nature_magic = 49,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42626;
+		life = 833;
+		max_life = 856;
+		mana = 1438;
+		max_mana = 1441;
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_e_die_braak;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_braak;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 261;
+		damage_min = 172;
+	}
+	[common]
+	{
+		screen_name = "Braak Hurler";
+	}
+	[defend]
+	{
+		defense = 579;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r4_braak_spell_boulder;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.33;
+					max = 61566;
+					min = 34536;
+				}
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+				[oneof*]
+				{
+					chance = 0.40;
+					il_main = #weapon/122-133;
+					il_main = #armor/208-246;
+					il_main = #*/121-132;
+					il_main = #spell/32-37;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/122-133;
+					il_main = #armor/-rare(1)/208-246;
+					il_main = #*/-rare(1)/121-132;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.5
+			&meander						= false
+			&still							= false;
+	}
+}

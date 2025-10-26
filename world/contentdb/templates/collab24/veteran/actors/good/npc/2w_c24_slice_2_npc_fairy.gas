@@ -1,0 +1,408 @@
+[t:template,n:2W_c24_slice2_npc_naldrun_base]
+{
+	category_name = "2W_evil_d";
+	doc = "2W_C24 Slice2 Npc Naldrun Base";
+	specializes = npc;
+	[aspect]
+	{
+		model = m_c_edm_054_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_054-04;
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine1;
+			shield_bone = Bip01_L_Hand;
+			weapon_bone = Bip01_Spine1;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_054_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+				}
+				[anim_durations]
+				{
+					fs0 = 2.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dsf;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+				}
+				[anim_durations]
+				{
+					fs0 = 2.000;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					eat1 = a_c_edm_054_fs0_eat;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = fl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Naldrun";
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:2W_c24_2_r3_npc_naldrun_tree]
+{
+	category_name = "2W_evil_d";
+	doc = "2W_c24 npc naldrun r3 friend of tree";
+	specializes = 2W_c24_2_r5_naldrun_base;
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[aspect]
+	{
+		is_invincible = true;
+		[textures]
+		{
+			0 = b_c_edm_054_fae_v06;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 243;
+		damage_min = 157;
+	}
+	[common]
+	{
+		screen_name = "Zaireen";
+	}
+	[conversation]
+	{
+	}
+	[defend]
+	{
+		defense = 498;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r2_naldrun_spell_freak;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				il_main = c24_s2_reward_quest_heal_tree;
+			}
+		}
+	}
+	[mind]
+	{
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		movement_orders = mo_hold;
+		disposition_orders = ad_offensive;
+		jat_cast = world\ai\jobs\common\job_cast.skrit;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:2W_c24_2_r3_npc_naldrun_princess]
+{
+	category_name = "2W_evil_d";
+	doc = "2W_c24 npc naldrun r3 princess";
+	specializes = 2W_c24_slice2_npc_naldrun_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_edm_054_fae_v05;
+		}
+	}
+	[common]
+	{
+		screen_name = "Princess Glamoulla";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				il_main = c24_s2_reward_quest_ice_tomb;
+			}
+		}
+	}
+}
+[t:template,n:2W_c24_2_r4_npc_naldrun_in_love]
+{
+	category_name = "2W_evil_d";
+	doc = "2W_c24 npc naldrun r3 princess";
+	specializes = 2W_c24_slice2_npc_naldrun_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_edm_054_fae_v07;
+		}
+	}
+	[common]
+	{
+		screen_name = "Nyahdal";
+	}
+}
+[t:template,n:2W_c24_2_r4_npc_naldrun_in_love_store]
+{
+	category_name = "2W_evil_d";
+	doc = "2W_c24 npc naldrun r3 princess";
+	specializes = 2W_c24_slice2_npc_naldrun_base;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_fae_shop;
+	}
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		[textures]
+		{
+			0 = b_c_edm_054_fae_v07;
+		}
+	}
+	[common]
+	{
+		screen_name = "Nyahdal";
+	}
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			[armor]
+			{
+				[all*]
+				{
+					il_main = #body,ro/219-295;
+					max = 15;
+					min = 15;
+				}
+				[all*]
+				{
+					il_main = #body/211-278;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #gloves/211-278;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #helm/211-278;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #boots/211-278;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #body/-mod(1)/197-241;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #gloves/-mod(1)/197-241;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #helm/-mod(1)/197-241;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #boots/-mod(1)/197-241;
+					max = 3;
+					min = 3;
+				}
+			}
+			[shields]
+			{
+				[all*]
+				{
+					il_main = #shield/211-278;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #shield/-mod(1)/197-241;
+					max = 3;
+					min = 3;
+				}
+			}
+			[weapons]
+			{
+				[all*]
+				{
+					il_main = #melee/120-152;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #ranged/120-152;
+					max = 10;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #melee/-mod(1)/115-136;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #ranged/-mod(1)/115-136;
+					max = 3;
+					min = 3;
+				}
+			}
+			[magic]
+			{
+				[all*]
+				{
+					il_main = #spell/37-41;
+					max = 15;
+					min = 15;
+				}
+				[all*]
+				{
+					il_main = #spell/33-36;
+					max = 15;
+					min = 15;
+				}
+				[all*]
+				{
+					il_main = #spell/28-32;
+					max = 10;
+					min = 10;
+				}
+			}
+			[misc]
+			{
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 3;
+					min = 3;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+		[item_restock]
+		{
+			potion_health_small = 15;
+			potion_mana_small = 15;
+			potion_rejuvenation_small = 4;
+			scroll_resurrect = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_zap = 2;
+			spell_fireshot = 2;
+		}
+	}
+}

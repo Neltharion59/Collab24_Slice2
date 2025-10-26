@@ -1,0 +1,159 @@
+[t:template,n:2W_c24_2_giant_good_base]
+{
+	doc = "2W_c24 npc giant base";
+	specializes = npc;
+	[aspect]
+	{
+		life = 1371;
+		max_life = 1393;
+		model = m_c_ecm_cy_pos_1;
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_e_die_cyclops;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_cyclops_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_cyclops_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_cyclops_SED;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 278;
+		damage_min = 167;
+		reload_delay = 0;
+	}
+	[body]
+	{
+		avg_move_velocity = 1.550000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine1;
+			body_posterior = bip01_spine1;
+			kill_bone = bip01_spine1;
+			shield_bone = bip01_l_hand;
+			weapon_bone = bip01_r_hand;
+		}
+		[weapon_scales]
+		{
+			as_single_melee = 1.7, 1.7, 1.7;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_ecm_cy_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+		}
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:2W_c24_2_giant_good_1]
+{
+	doc = "2W_c24 npc Giant Brother Pacifist";
+	specializes = 2W_c24_2_giant_good_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_ecm_cy_c24_good_01;
+		}
+	}
+	[common]
+	{
+		screen_name = "Notatakk";
+	}
+}
+[t:template,n:2W_c24_2_giant_good_2]
+{
+	doc = "2W_c24 npc Giant Brother Aggresive";
+	specializes = 2W_c24_2_giant_good_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_ecm_cy_c24_good_02;
+		}
+	}
+	[common]
+	{
+		screen_name = "Maashner";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				il_main = c24_s2_reward_quest_giants;
+			}
+		}
+	}
+}

@@ -1,0 +1,1089 @@
+[t:template,n:3W_c24_2_r3_snow_boar]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R3 snow_boar";
+	specializes = 3W_base_boar;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 25, 0;
+			intelligence = 4, 0;
+			dexterity = 16, 0;
+			melee = 81, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1123893;
+		life = 1443;
+		max_life = 1481;
+		mana = 245;
+		max_mana = 249;
+		model = m_c_edm_hb_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_hb-02;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 386;
+		damage_min = 251;
+	}
+	[common]
+	{
+		screen_name = "Snow Boar";
+	}
+	[defend]
+	{
+		defense = 867;
+	}
+	[mind]
+	{
+		melee_engage_range = 12;
+		personal_space_range = 0.7;
+		ranged_engage_range = 12.0;
+		sight_range = 12.0;
+	}
+}
+[t:template,n:3W_c24_2_r3_furok]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R3 furok";
+	specializes = 3W_base_furok;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 25, 0;
+			intelligence = 4, 0;
+			dexterity = 16, 0;
+			melee = 80, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1124238;
+		life = 1469;
+		max_life = 1508;
+		mana = 255;
+		max_mana = 259;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 391;
+		damage_min = 256;
+	}
+	[common]
+	{
+		screen_name = "Furok";
+		membership = party_furok_boss, monster;
+	}
+	[defend]
+	{
+		defense = 840;
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					chance = 0.10;
+					il_main = #weapon/194-204;
+					il_main = #armor/338-377;
+					il_main = #*/192-201;
+					il_main = #nmagic/49-55;
+					il_main = #cmagic/49-55;
+				}
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
+				}
+			}
+		}
+	}
+}
+[t:template,n:3W_c24_2_r3_furok_slasher]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R3 furok slasher";
+	specializes = 3W_base_furok;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 25, 0;
+			intelligence = 4, 0;
+			dexterity = 16, 0;
+			melee = 81, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1124324;
+		life = 1500;
+		max_life = 1539;
+		mana = 255;
+		max_mana = 259;
+		[textures]
+		{
+			0 = b_c_edm_fr-02;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 392;
+		damage_min = 258;
+	}
+	[common]
+	{
+		screen_name = "Furok Slasher";
+	}
+	[defend]
+	{
+		defense = 840;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					chance = 0.12;
+					il_main = #weapon/194-204;
+					il_main = #armor/338-377;
+					il_main = #*/192-201;
+					il_main = #nmagic/49-55;
+					il_main = #cmagic/49-55;
+				}
+				[oneof*]
+				{
+					chance = 0.33;
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
+				}
+			}
+		}
+	}
+}
+[t:template,n:3W_c24_2_r3_furok_boss_01]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R3 furok boss";
+	specializes = 3W_base_furok;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 25, 0;
+			intelligence = 4, 0;
+			dexterity = 16, 0;
+			melee = 83, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1124582;
+		life = 1520;
+		max_life = 1558;
+		mana = 255;
+		max_mana = 259;
+		[textures]
+		{
+			0 = b_c_edm_fr-03;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 399;
+		damage_min = 264;
+	}
+	[common]
+	{
+		screen_name = "Grizzly Furok";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 840;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #weapon/-mod(1)/194-204;
+					il_main = #armor/-mod(1)/338-377;
+				}
+				[oneof*]
+				{
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
+					min = 2;
+					max = 2;
+				}
+				[gold*]
+				{
+					max = 256769;
+					min = 155730;
+					min_pile = 5;
+					piles = 2 - 3;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social				= 0.9
+			&friend_template	= false
+			&friends			= party_furok_boss
+			&still				= false;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&party_template						= "party_furok_boss";
+	}
+}
+[t:template,n:3W_c24_2_r3_broom_flyer]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R3 brom flyer";
+	specializes = 3W_ice_mage_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 29, 0;
+			dexterity = 28, 0;
+			intelligence = 9, 0;
+			nature_magic = 78, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1125443;
+		life = 1461;
+		max_life = 1500;
+		mana = 6042;
+		max_mana = 6046;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 391;
+		damage_min = 254;
+	}
+	[common]
+	{
+		screen_name = "Vjaranna";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+	}
+	[defend]
+	{
+		defense = 875;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r3_broom_flyer_spell_chubby_rain;
+			il_active_secondary_spell = c24_r3_broom_flyer_spell_snowstorm;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 256801;
+					min = 155817;
+					piles = 3 - 5;
+					min_pile = 11;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-mod(1)/194-204;
+					il_main = #armor/-mod(1)/338-377;
+					il_main = #weapon/-rare(1)/194-204;
+					il_main = #armor/-rare(1)/338-377;
+					il_main = #*/-rare(1)/192-201;
+					min = 1;
+					max = 2;
+				}
+				[all*]
+				{
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+				[all*]
+				{
+					il_main = #nmagic/49-55;
+					il_main = #cmagic/49-55;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_melee = false;
+		actor_weapon_preference = WP_MAGIC;
+		jat_cast = world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true;
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
+			?no_turn			= true;
+		jat_flee_from_object = jat_none;
+		jat_guard = jat_none;
+		jat_move = jat_none;
+		jat_patrol = jat_none;
+		movement_orders = mo_hold;
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:3W_c24_2_r3_kurgan_base]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R3 Kurgan Base";
+	specializes = actor_evil;
+	[aspect]
+	{
+		model = m_c_edm_014_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_014-02;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_gen_kurgn_atk1;
+				* = s_e_ds2_gen_kurgn_atk1;
+				* = s_e_ds2_gen_kurgn_atk1;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_kurgn_die1;
+				* = s_e_ds2_gen_kurgn_die2;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_ds2_gen_kurgn_sgt;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_ds2_gen_kurgn_hit;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_ds2_gen_kurgn_hit;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_ds2_gen_kurgn_hit;
+			}
+			[move]
+			{
+				priority = low;
+				* = s_e_ds2_gen_kurgn_mve_lp;
+			}
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 3.650000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine1;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine;
+			shield_bone = bip01_L_hand;
+			weapon_bone = bip01_r_hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_014_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+					02 = at-03;
+				}
+				[anim_durations]
+				{
+					fs0 = 2.000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+					01 = di-02;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					lvup = lu;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		membership = monster;
+		screen_name = "Snow Kurgan";
+	}
+	[defend]
+	{
+		defense = 817;
+	}
+	[mind]
+	{
+		melee_engage_range = 16.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 16.0;
+		sight_range = 16.0;
+	}
+}
+[t:template,n:3W_c24_2_r3_kurgan_melee]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R3 Kurgan Melee";
+	specializes = 3W_c24_2_r3_kurgan_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 34, 0;
+			intelligence = 36, 0;
+			dexterity = 24, 0;
+			melee = 81,0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1124410;
+		life = 1406;
+		max_life = 1445;
+		mana = 235;
+		max_mana = 239;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 398;
+		damage_min = 262;
+	}
+	[common]
+	{
+		membership = monster, party_wolf_gray_boss;
+		screen_name = "Snow Kurgan";
+	}
+	[defend]
+	{
+		defense = 859;
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true
+			&actor_creates_own_party	= true
+			&party_template				= "party_wolf_gray_boss";
+		melee_engage_range = 12.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 12.0;
+		sight_range = 12.0;
+		flee_count = 9999;
+	}
+}
+[t:template,n:3W_c24_2_r3_kurgan_melee_boss_01]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_Bruhs Slice 2 R3 Kurgan Melee Boss 01";
+	specializes = 3W_c24_2_r3_kurgan_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 39, 0;
+			intelligence = 71, 0;
+			dexterity = 28, 0;
+			melee = 83, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1124926;
+		life = 1469;
+		max_life = 1508;
+		mana = 245;
+		max_mana = 249;
+		scale_base = 1.3;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 406;
+		damage_min = 267;
+	}
+	[common]
+	{
+		screen_name = "Alpha Snow Kurgan";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 882;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 256845;
+					min = 155828;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&form_party_on_friend_entered_OCZ	= true
+			&form_party_on_friend_entered_ICZ	= true
+			&party_template						= "party_wolf_gray_boss";
+		melee_engage_range = 12.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 12.0;
+		sight_range = 12.0;
+		flee_count = 9999;
+	}
+}
+[t:template,n:3W_c24_2_r3_ice_pillar]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_c24 Slice2 R3 ice_pillar";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 34, 0;
+			intelligence = 15, 0;
+			dexterity = 22, 0;
+			nature_magic = 78, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1124582;
+		force_no_render = true;
+		force_no_render_click = true;
+		life = 1418;
+		max_life = 1457;
+		mana = 406;
+		max_mana = 410;
+		megamap_icon = b_gui_ig_mnu_eyes_whelnar;
+		megamap_orient = true;
+		draw_shadow = false;
+		model = m_c_edm_tr_pos_1;
+		scale_base = 1;
+		material = ice;
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_e_die_shard_small;
+			}
+		}
+	}
+	[attack]
+	{
+		area_damage_radius = 4.25;
+		attack_range = 0.5;
+		damage_max = 408;
+		damage_min = 267;
+	}
+	[body]
+	{
+		avg_move_velocity = 0.000000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = eye3_base;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_tr_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dsf;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		forced_expiration_class = immediate;
+		auto_expiration_class = immediate;
+		screen_name = "Frost Shard";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("collab24_slice2_effect_ice_pillar");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 890;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = c24_r3_ice_pillar_spell_ice_storm;
+		}
+	}
+	[mind]
+	{
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		jat_flee_from_object = jat_none;
+		jat_guard = jat_none;
+		jat_move = jat_none;
+		jat_patrol = jat_none;
+		on_enemy_entered_icz_switch_to_melee = false;
+		actor_auto_fidgets = false;
+		movement_orders = mo_hold;
+		inner_comfort_zone_range = 1.9;
+		melee_engage_range = 2.0;
+		personal_space_range = 1.5;
+		ranged_engage_range = 20.0;
+		sight_range = 20.0;
+	}
+	[physics]
+	{
+		break_effect = c24_slice_02_effect_ice_element_explosion;
+		explode_when_killed = true;
+		explosion_magnitude = 4.25;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			c24_frag_glb_gr_shard_ice_sm_01 = 1;
+			c24_frag_glb_gr_shard_ice_sm_02 = 1;
+			c24_frag_glb_gr_shard_ice_sm_03 = 2;
+			c24_frag_glb_gr_shard_ice_sm_04 = 3;
+			c24_frag_glb_gr_shard_ice_sm_05 = 3;
+		}
+	}
+}
+[t:template,n:3W_c24_2_r3_packram_base]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_c24 Slice2 R3 packram base";
+	specializes = actor_evil;
+	[aspect]
+	{
+		model = m_c_na_pr_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_pkrm01;
+			1 = b_c_edm_pkloot;
+		}
+		[voice]
+		{
+			[attack]
+			{
+				priority = high;
+				* = s_e_ds2_gen_packram_atk1;
+				* = s_e_ds2_gen_packram_atk2;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_ds2_gen_packram_die;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_ds2_gen_packram_sgt;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_ds2_gen_packram_hit;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_ds2_gen_packram_hit;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_ds2_gen_packram_hit;
+			}
+			[move]
+			{
+				priority = low;
+				* = s_e_ds2_gen_kohlbeast_mve_lp;
+			}
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 4.000000;
+		[bone_translator]
+		{
+			body_anterior = BoneSpine06;
+			body_mid = BoneChest;
+			body_posterior = BoneSpine01;
+			kill_bone = BoneSpine01;
+			shield_bone = BoneNeckDangles02;
+			weapon_bone = BoneHead01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_na_pr_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at-03;
+				}
+				[anim_durations]
+				{
+					fs0 = 1.0000;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					eat1 = a_c_na_pr_fs0_eat;
+					gtup = a_c_na_pr_fs0_gu;
+					lvup = a_c_na_pr_fs0_lu;
+					res1 = a_c_na_pr_fs0_rsrct;
+					powr = a_c_na_pr_fs0_at-02;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = wl;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		melee_engage_range = 18;
+		personal_space_range = 0.7;
+		ranged_engage_range = 18.0;
+		sight_range = 18.0;
+	}
+}
+[t:template,n:3W_c24_2_r3_packram_cargo]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_c24 Slice2 R3 packram cargo";
+	specializes = 3W_c24_2_r3_packram_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 29, 0;
+			dexterity = 18, 0;
+			intelligence = 12, 0;
+			melee = 80, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1123979;
+		life = 1390;
+		max_life = 1429;
+		mana = 206;
+		max_mana = 210;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 396;
+		damage_min = 261;
+	}
+	[common]
+	{
+		membership = monster;
+		screen_name = "Pack Ram";
+	}
+	[defend]
+	{
+		defense = 859;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					il_main = #weapon/194-208;
+					il_main = #armor/338-384;
+					il_main = #*/192-206;
+					min = 2;
+					max = 3;
+				}
+				[oneof*]
+				{
+					chance = 0.12;
+					il_main = #weapon/-rare(1)/194-208;
+					il_main = #armor/-rare(1)/338-384;
+					il_main = #*/-rare(1)/192-206;
+				}
+			}
+		}
+	}
+}
+[t:template,n:3W_c24_2_r3_packram_armored]
+{
+	category_name = "3W_evil_d";
+	doc = "3W_c24 Slice2 R3 packram armored";
+	specializes = 3W_c24_2_r3_packram_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 45, 0;
+			dexterity = 18, 0;
+			intelligence = 12, 0;
+			melee = 81, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1124496;
+		life = 1413;
+		max_life = 1451;
+		mana = 201;
+		max_mana = 205;
+		[textures]
+		{
+			0 = b_c_edm_pkrm01_armored;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 403;
+		damage_min = 267;
+	}
+	[common]
+	{
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name = "Armored Pack Ram";
+	}
+	[defend]
+	{
+		defense = 897;
+	}
+}

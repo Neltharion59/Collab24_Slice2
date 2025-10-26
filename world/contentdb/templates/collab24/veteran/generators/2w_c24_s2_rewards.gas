@@ -1,0 +1,450 @@
+[t:template,n:2W_c24_s2_reward_quest_giants]
+{
+	specializes = inventory;
+	doc = "c24 s2 reward quest giants";
+	category_name = "2w_generator";
+	[aspect]
+	{
+		is_visible = false;
+		force_no_render = true;
+		is_selectable = false;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+	}
+	[generator_multiple_mp]
+	{
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_health_medium;
+				il_main = potion_mana_medium;
+			}
+			[oneof*]
+			{
+				il_main = #armor/219-249;
+				il_main = #weapon/125-136;
+				il_main = #*/124-135;
+			}
+			[oneof*]
+			{
+				il_main = #armor/-mod(1)/219-249;
+				il_main = #weapon/-mod(1)/125-136;
+				il_main = #*/-mod(1)/124-135;
+				il_main = #armor/-rare(1)/219-249;
+				il_main = #weapon/-rare(1)/125-136;
+				il_main = #*/-rare(1)/124-135;
+			}
+		}
+	}
+}
+[t:template,n:2W_c24_s2_reward_quest_shrine_broom]
+{
+	specializes = inventory;
+	doc = "c24 s2 reward quest shrine_broom";
+	category_name = "2w_generator";
+	[aspect]
+	{
+		is_visible = false;
+		force_no_render = true;
+		is_selectable = false;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+	}
+	[generator_multiple_mp]
+	{
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_health_medium;
+				il_main = potion_mana_medium;
+			}
+			[oneof*]
+			{
+				il_main = #armor/219-249;
+				il_main = #weapon/125-136;
+				il_main = #*/124-135;
+			}
+			[oneof*]
+			{
+				il_main = #armor/-mod(1)/219-249;
+				il_main = #weapon/-mod(1)/125-136;
+				il_main = #*/-mod(1)/124-135;
+				il_main = #armor/-rare(1)/219-249;
+				il_main = #weapon/-rare(1)/125-136;
+				il_main = #*/-rare(1)/124-135;
+			}
+		}
+	}
+}
+[t:template,n:2W_c24_s2_reward_quest_dead_orthranc]
+{
+	specializes = inventory;
+	doc = "c24 s2 reward quest dead orthranc";
+	category_name = "2w_generator";
+	[aspect]
+	{
+		is_visible = false;
+		force_no_render = true;
+		is_selectable = false;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+	}
+	[generator_multiple_mp]
+	{
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_health_medium;
+				il_main = potion_mana_medium;
+			}
+			[oneof*]
+			{
+				il_main = #armor/234-263;
+				il_main = #weapon/131-141;
+				il_main = #*/129-140;
+			}
+			[oneof*]
+			{
+				il_main = #armor/-mod(1)/234-263;
+				il_main = #weapon/-mod(1)/131-141;
+				il_main = #*/-mod(1)/129-140;
+				il_main = #armor/-rare(1)/234-263;
+				il_main = #weapon/-rare(1)/131-141;
+				il_main = #*/-rare(1)/129-140;
+			}
+		}
+	}
+}
+[t:template,n:2W_c24_s2_reward_quest_heal_tree]
+{
+	specializes = inventory;
+	doc = "c24 s2 reward quest heal_tree";
+	category_name = "2w_generator";
+	[aspect]
+	{
+		is_visible = false;
+		force_no_render = true;
+		is_selectable = false;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+	}
+	[generator_multiple_mp]
+	{
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_health_medium;
+				il_main = potion_mana_medium;
+			}
+			[oneof*]
+			{
+				il_main = #armor/219-249;
+				il_main = #weapon/125-136;
+				il_main = #*/124-135;
+			}
+			[oneof*]
+			{
+				il_main = #armor/-mod(1)/226-253;
+				il_main = #weapon/-mod(1)/127-138;
+				il_main = #*/-mod(1)/126-137;
+				il_main = #armor/-rare(1)/226-253;
+				il_main = #weapon/-rare(1)/127-138;
+				il_main = #*/-rare(1)/126-137;
+			}
+		}
+	}
+}
+[t:template,n:2W_c24_s2_reward_quest_vaarth_barricade]
+{
+	specializes = inventory;
+	doc = "c24 s2 reward quest vaarth_barricade";
+	category_name = "2w_generator";
+	[aspect]
+	{
+		is_visible = false;
+		force_no_render = true;
+		is_selectable = false;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+	}
+	[generator_multiple_mp]
+	{
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_health_medium;
+				il_main = potion_mana_medium;
+			}
+			[oneof*]
+			{
+				il_main = #armor/219-249;
+				il_main = #weapon/125-136;
+				il_main = #*/124-135;
+			}
+			[oneof*]
+			{
+				il_main = #armor/-mod(1)/226-253;
+				il_main = #weapon/-mod(1)/127-138;
+				il_main = #*/-mod(1)/126-137;
+				il_main = #armor/-rare(1)/226-253;
+				il_main = #weapon/-rare(1)/127-138;
+				il_main = #*/-rare(1)/126-137;
+			}
+		}
+	}
+}
+[t:template,n:2W_c24_s2_reward_quest_krug_merchant_from_sommelier]
+{
+	specializes = inventory;
+	doc = "c24 s2 reward quest krug_merchant from sommelier";
+	category_name = "2w_generator";
+	[aspect]
+	{
+		is_visible = false;
+		force_no_render = true;
+		is_selectable = false;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+	}
+	[generator_multiple_mp]
+	{
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_health_medium;
+				il_main = potion_mana_medium;
+			}
+			[oneof*]
+			{
+				il_main = #armor/219-249;
+				il_main = #weapon/125-136;
+				il_main = #*/124-135;
+			}
+			[oneof*]
+			{
+				il_main = #armor/-mod(1)/226-253;
+				il_main = #weapon/-mod(1)/127-138;
+				il_main = #*/-mod(1)/126-137;
+				il_main = #armor/-rare(1)/226-253;
+				il_main = #weapon/-rare(1)/127-138;
+				il_main = #*/-rare(1)/126-137;
+			}
+		}
+	}
+}
+[t:template,n:2W_c24_s2_reward_quest_krug_merchant_from_hassat]
+{
+	specializes = inventory;
+	doc = "c24 s2 reward quest krug_merchant from hassat";
+	category_name = "2w_generator";
+	[aspect]
+	{
+		is_visible = false;
+		force_no_render = true;
+		is_selectable = false;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+	}
+	[generator_multiple_mp]
+	{
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_health_medium;
+				il_main = potion_mana_medium;
+			}
+			[oneof*]
+			{
+				il_main = #armor/219-249;
+				il_main = #weapon/125-136;
+				il_main = #*/124-135;
+			}
+			[oneof*]
+			{
+				il_main = #armor/-mod(1)/226-253;
+				il_main = #weapon/-mod(1)/127-138;
+				il_main = #*/-mod(1)/126-137;
+				il_main = #armor/-rare(1)/226-253;
+				il_main = #weapon/-rare(1)/127-138;
+				il_main = #*/-rare(1)/126-137;
+			}
+		}
+	}
+}
+[t:template,n:2W_c24_s2_reward_quest_braak_barricade]
+{
+	specializes = inventory;
+	doc = "c24 s2 reward quest braak barricade";
+	category_name = "2w_generator";
+	[aspect]
+	{
+		is_visible = false;
+		force_no_render = true;
+		is_selectable = false;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+	}
+	[generator_multiple_mp]
+	{
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_health_medium;
+				il_main = potion_mana_medium;
+			}
+			[oneof*]
+			{
+				il_main = #armor/234-263;
+				il_main = #weapon/131-141;
+				il_main = #*/129-140;
+			}
+			[oneof*]
+			{
+				il_main = #armor/-mod(1)/234-263;
+				il_main = #weapon/-mod(1)/131-141;
+				il_main = #*/-mod(1)/129-140;
+				il_main = #armor/-rare(1)/234-263;
+				il_main = #weapon/-rare(1)/131-141;
+				il_main = #*/-rare(1)/129-140;
+			}
+		}
+	}
+}
+[t:template,n:2W_c24_s2_reward_quest_ice_tomb]
+{
+	specializes = inventory;
+	doc = "c24 s2 reward quest ice_tomb";
+	category_name = "2w_generator";
+	[aspect]
+	{
+		is_visible = false;
+		force_no_render = true;
+		is_selectable = false;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+	}
+	[generator_multiple_mp]
+	{
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_health_medium;
+				il_main = potion_mana_medium;
+			}
+			[oneof*]
+			{
+				il_main = #armor/219-249;
+				il_main = #weapon/125-136;
+				il_main = #*/124-135;
+			}
+			[oneof*]
+			{
+				il_main = #armor/-mod(1)/226-253;
+				il_main = #weapon/-mod(1)/127-138;
+				il_main = #*/-mod(1)/126-137;
+				il_main = #armor/-rare(1)/226-253;
+				il_main = #weapon/-rare(1)/127-138;
+				il_main = #*/-rare(1)/126-137;
+			}
+		}
+	}
+}
+[t:template,n:2W_c24_s2_reward_quest_fae_lover]
+{
+	specializes = inventory;
+	doc = "c24 s2 reward quest fae_lover";
+	category_name = "2w_generator";
+	[aspect]
+	{
+		is_visible = false;
+		force_no_render = true;
+		is_selectable = false;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+	}
+	[generator_multiple_mp]
+	{
+	}
+	[inventory]
+	{
+		[delayed_pcontent]
+		{
+			[oneof*]
+			{
+				il_main = potion_health_medium;
+				il_main = potion_mana_medium;
+			}
+			[oneof*]
+			{
+				il_main = #armor/234-263;
+				il_main = #weapon/131-141;
+				il_main = #*/129-140;
+			}
+			[oneof*]
+			{
+				il_main = #armor/-mod(1)/234-263;
+				il_main = #weapon/-mod(1)/131-141;
+				il_main = #*/-mod(1)/129-140;
+				il_main = #armor/-rare(1)/234-263;
+				il_main = #weapon/-rare(1)/131-141;
+				il_main = #*/-rare(1)/129-140;
+			}
+		}
+	}
+}

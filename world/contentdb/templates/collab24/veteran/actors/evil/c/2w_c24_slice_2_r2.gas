@@ -1,0 +1,88 @@
+[t:template,n:2W_c24_2_r2_cyclops]
+{
+	category_name = "2W_evil_c";
+	doc = "2W_Bruhs Slice 2 R2 cyclops";
+	specializes = 2W_base_cyclops;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 28,0;
+			intelligence = 10,0;
+			dexterity = 14,0;
+			melee = 51,0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 42624;
+		life = 891;
+		max_life = 914;
+		mana = 164;
+		max_mana = 167;
+		scale_base = 1.60;
+		[textures]
+		{
+			0 = b_c_ecm_cy_c24_01;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 246;
+		damage_min = 160;
+		reload_delay = 0;
+	}
+	[common]
+	{
+		screen_name = "Nutlech";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+	}
+	[defend]
+	{
+		defense = 540;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 61669;
+					min = 34655;
+					min_pile = 10;
+					piles = 2 - 4;
+				}
+				[all*]
+				{
+					il_main = potion_health_medium;
+					il_main = potion_mana_medium;
+				}
+				[oneof*]
+				{
+					il_main = #armor/219-249;
+					il_main = #weapon/125-136;
+					il_main = #*/124-135;
+				}
+				[oneof*]
+				{
+					il_main = #armor/-mod(1)/219-249;
+					il_main = #weapon/-mod(1)/125-136;
+					il_main = #*/-mod(1)/124-135;
+					il_main = #armor/-rare(1)/219-249;
+					il_main = #weapon/-rare(1)/125-136;
+					il_main = #*/-rare(1)/124-135;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
