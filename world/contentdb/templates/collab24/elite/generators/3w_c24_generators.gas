@@ -1,0 +1,192 @@
+[t:template,n:3W_generator_base_breakable_wood]
+{
+	specializes = generator;
+	doc = "Base template for breakable wood generators.";
+	[aspect]
+	{
+		is_usable = false;
+		life_state = ls_alive_conscious;
+		is_collidable = TRUE;
+		life = 1337;
+		material = wood;
+		max_life = 1376;
+		[voice]
+		{
+			[die]
+			{
+					* = s_e_env_break_container_wood;
+			}
+		}
+		megamap_icon = <none>;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_wood_01 = 2;
+			frag_glb_wood_02 = 2;
+			frag_glb_wood_03 = 2;
+			frag_glb_wood_04 = 2;
+		}
+	}
+}
+[t:template,n:3W_c24_generator_ice_door]
+{
+	specializes = 3W_generator_base_breakable_wood;
+	doc = "c24 generator_ice_door";
+	category_name = "3w_generator";
+	[common]
+	{
+		rollover_display = false;
+		screen_name = "Ice Burrow";
+		rollover_life = false;
+	}
+	[aspect]
+	{
+		model = m_i_csl_door-dungeon-07;
+		material = ice;
+		scale_base = 2.0;
+		is_selectable = false;
+		does_block_path = true;
+		[textures]
+		{
+			0 = b_t_ic01_flr_stg-08x08-c;
+		}
+	}
+	[physics]
+	{
+		break_effect = ice_explosion;
+	}
+	[aspect]
+	{
+		life_state = LS_ALIVE_CONSCIOUS;
+		is_collidable = false;
+		life = 1610;
+		max_life = 1648;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_ice_01 = 3;
+			frag_glb_ice_02 = 3;
+			frag_glb_ice_03 = 3;
+			frag_glb_ice_04 = 3;
+			frag_glb_ice_05 = 3;
+		}
+	}
+	[gizmo]
+	{
+		model = m_i_glb_object-waypoint;
+		texture = ;
+		diffuse_color = 0.0, 1, 0.0;
+		use_diffuse_color = true;
+	}
+	[generator_breakable]
+	{
+	}
+}
+[t:template,n:3W_c24_generator_ice_door_large]
+{
+	specializes = 3W_generator_base_breakable_wood;
+	doc = "c24 generator_ice_door";
+	category_name = "3w_generator";
+	[common]
+	{
+		rollover_display = false;
+		screen_name = "Ice Burrow";
+		rollover_life = false;
+	}
+	[aspect]
+	{
+		model = m_i_csl_door-dungeon-07;
+		material = ice;
+		scale_base = 5.0;
+		is_selectable = false;
+		does_block_path = true;
+		[textures]
+		{
+			0 = b_t_ic01_flr_stg-08x08-c;
+		}
+	}
+	[physics]
+	{
+		break_effect = ice_explosion;
+	}
+	[aspect]
+	{
+		life_state = LS_ALIVE_CONSCIOUS;
+		is_collidable = false;
+		life = 1610;
+		max_life = 1648;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_ice_01 = 3;
+			frag_glb_ice_02 = 3;
+			frag_glb_ice_03 = 3;
+			frag_glb_ice_04 = 3;
+			frag_glb_ice_05 = 3;
+		}
+	}
+	[gizmo]
+	{
+		model = m_i_glb_object-waypoint;
+		texture = ;
+		diffuse_color = 0.0, 1, 0.0;
+		use_diffuse_color = true;
+	}
+	[generator_breakable]
+	{
+		spawn_range = 0;
+	}
+}
+[t:template,n:3W_collab24_slice2_r3_gen_metal_cage]
+{
+	specializes = 3W_generator_base_breakable_wood;
+	doc = "collab24 slice2 r3 generator metal cage";
+	category_name = "3w_generator";
+	[common]
+	{
+		rollover_display = false;
+		screen_name = "metal Cage";
+		rollover_life = false;
+	}
+	[aspect]
+	{
+		model = m_i_csl_cage-03;
+		material = metal;
+		is_selectable = false;
+		does_block_path = true;
+		life_state = LS_ALIVE_CONSCIOUS;
+		is_collidable = false;
+		is_invincible = true;
+		life = 1610;
+		max_life = 1648;
+	}
+	[physics]
+	{
+		break_sound = s_e_die_copter;
+		explode_when_killed = true;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_metal_01 = 5;
+			frag_glb_metal_03 = 4;
+			frag_glb_metal_05 = 5;
+			frag_glb_metal_06 = 8;
+		}
+	}
+	[gizmo]
+	{
+		model = m_i_glb_object-waypoint;
+		texture = ;
+		diffuse_color = 0.0, 1, 0.0;
+		use_diffuse_color = true;
+	}
+	[generator_breakable]
+	{
+	}
+}
