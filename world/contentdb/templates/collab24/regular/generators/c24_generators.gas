@@ -1,6 +1,35 @@
+[t:template,n:generator_base_breakable_wood]  // = base_breakable_wood, but derived from generator
+{
+	specializes = generator;
+
+	doc = "Base template for breakable wood generators.";
+	[aspect]
+	{
+		is_usable = false;
+		life_state = ls_alive_conscious;
+		is_collidable = TRUE;
+		life = 1;
+		material = wood;
+		max_life = 1;
+		voice:die:	* = s_e_env_break_container_wood;
+		megamap_icon = <none>;	
+	}
+	[physics]
+	{
+		//break_sound = s_e_IH_break_wood_solid;
+		[break_particulate]
+		{
+			frag_glb_wood_01 = 2;
+			frag_glb_wood_02 = 2;
+			frag_glb_wood_03 = 2;
+			frag_glb_wood_04 = 2;
+		}
+	}
+}
+
 [t:template,n:c24_generator_ice_door]
 {
-	specializes = base_breakable_wood;
+	specializes = generator_base_breakable_wood;
 	doc = "c24 generator_ice_door";
     category_name = "1w_generator";
     
@@ -56,7 +85,7 @@
 }
 [t:template,n:c24_generator_ice_door_large]
 {
-	specializes = base_breakable_wood;
+	specializes = generator_base_breakable_wood;
 	doc = "c24 generator_ice_door";
     category_name = "1w_generator";
 	[common]
@@ -111,7 +140,7 @@
 }
 [t:template,n:collab24_slice2_r3_gen_metal_cage]
 {
-	specializes = base_breakable_wood;
+	specializes = generator_base_breakable_wood;
 	doc = "collab24 slice2 r3 generator metal cage";
     category_name = "1w_generator";
     
