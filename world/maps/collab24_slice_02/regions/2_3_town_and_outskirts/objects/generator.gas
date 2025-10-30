@@ -1,3 +1,19 @@
+[t:c24_generator_ice_door,n:0x02400013]
+{
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r2_lertisk";
+	  x initial_command = 0x02400015;
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.01;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  p position = -0.183495,-3.8221,1.43835,0xf988a6f4;
+	}
+}
 [t:generator_generic,n:0x024000b0]
 {
 	[common]
@@ -30,6 +46,25 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = 0.0173264,-3.93822,-0.403931,0x879431f4;
+	}
+}
+[t:c24_generator_ice_door,n:0x024001d3]
+{
+	[aspect]
+	{
+	  b is_invincible = true;
+	}
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r4_lertisk";
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  p position = 0.121306,-6,2.23902,0xab739348;
 	}
 }
 [t:generator_generic,n:0x02401052]
@@ -172,6 +207,22 @@
 	  p position = -0.0768356,0,-1.11627,0x5a7b07a8;
 	}
 }
+[t:c24_generator_ice_door,n:0x02400179]
+{
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r2_lertisk";
+	  x initial_command = 0x0240017A;
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  p position = -0.117477,-3.83513,1.39199,0x048fac7a;
+	}
+}
 [t:generator_generic,n:0x02400175]
 {
 	[generator_basic]
@@ -182,6 +233,21 @@
 	{
 	  q orientation = 0,-0.92388,0,-0.382684;
 	  p position = 1.17024,3,-1.0255,0x87cc2f41;
+	}
+}
+[t:c24_generator_ice_door,n:0x02400177]
+{
+	[generator_breakable]
+	{
+		child_template_name = "c24_2_r2_lertisk";
+	  i max_alive_children = 1;
+	  i num_children_incubating = 1;
+	  f spawn_period = 0.1;
+	  f spawn_range = 0;
+	}
+	[placement]
+	{
+	  p position = -0.0123177,-3.8686,1.20848,0x4916bc52;
 	}
 }
 [t:generator_generic,n:0x024000ea]

@@ -1,18 +1,3 @@
-[t:c24_generator_ice_door,n:0x02500016]
-{
-	[generator_breakable]
-	{
-		child_template_name = "c24_2_r4_lertisk";
-	  i max_alive_children = 1;
-	  i num_children_incubating = 1;
-	  f spawn_period = 0.1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  p position = 0.165302,-3.89522,1.14647,0x2fe6fdfc;
-	}
-}
 [t:sign_ice_01,n:0x02500996]
 {
 	[common]
@@ -44,23 +29,6 @@
 	  q orientation = 0,0.707106,0,0.707107;
 	  p position = -1.72925,-1,3.99721,0x8dd61957;
 		use_point_scids = 0x02500975;
-	}
-}
-[t:c24_generator_ice_door,n:0x0250007a]
-{
-	[generator_breakable]
-	{
-		child_template_name = "c24_2_r4_lertisk";
-	  x initial_command = 0x0250007B;
-	  i max_alive_children = 1;
-	  i num_children_incubating = 1;
-	  f spawn_period = 0.1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-2.56942e-007,0,1;
-	  p position = 0.213364,-3.87949,1.29543,0x3ebcb3ad;
 	}
 }
 [t:sign_ice_01,n:0x02500990]
@@ -168,22 +136,6 @@
 		use_point_scids = 0x02500971;
 	}
 }
-[t:c24_generator_ice_door,n:0x02500076]
-{
-	[generator_breakable]
-	{
-		child_template_name = "c24_2_r4_lertisk";
-	  i max_alive_children = 1;
-	  i num_children_incubating = 1;
-	  f spawn_period = 0.1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-2.56942e-007,0,1;
-	  p position = -0.35469,-3.80381,1.42493,0xa7f9c26b;
-	}
-}
 [t:sign_ice_01,n:0x02500987]
 {
 	[common]
@@ -206,22 +158,6 @@
 	{
 	  q orientation = 0,-0.707106,0,0.707107;
 	  p position = -3.94828,0,1.46674,0xc4e4f6e1;
-	}
-}
-[t:c24_generator_ice_door,n:0x02500077]
-{
-	[generator_breakable]
-	{
-		child_template_name = "c24_2_r4_lertisk";
-	  i max_alive_children = 1;
-	  i num_children_incubating = 1;
-	  f spawn_period = 0.1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-2.56942e-007,0,1;
-	  p position = 0.0146828,-3.84487,1.34552,0xe0a823d7;
 	}
 }
 [t:sign_ice_01,n:0x02500984]
@@ -255,22 +191,6 @@
 	  q orientation = 0,0.923879,0,-0.382683;
 	  p position = -0.351791,-3.92069,-3.34566,0x3917b449;
 		use_point_scids = 0x0250044d;
-	}
-}
-[t:c24_generator_ice_door,n:0x02500075]
-{
-	[generator_breakable]
-	{
-		child_template_name = "c24_2_r4_lertisk";
-	  i max_alive_children = 1;
-	  i num_children_incubating = 1;
-	  f spawn_period = 0.1;
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-2.56942e-007,0,1;
-	  p position = -0.207291,-3.80059,1.55531,0xac95c88f;
 	}
 }
 [t:c24_2_r5_ice_tree_destroyable,n:0x02500a3c]
@@ -611,23 +531,6 @@
 	{
 	  q orientation = 0,-0.382684,0,0.923879;
 	  p position = -3.4552,0,1.47983,0xa6280a00;
-	}
-}
-[t:c24_generator_ice_door,n:0x02500052]
-{
-	[aspect]
-	{
-	  b is_invincible = true;
-	  f scale_multiplier = 2;
-	}
-	[generator_breakable]
-	{
-	  f spawn_range = 0;
-	}
-	[placement]
-	{
-	  q orientation = -5.55112e-017,6.46033e-009,2.61684e-016,1;
-	  p position = 0.586202,-11.9824,-3.32056,0x10299c2f;
 	}
 }
 [t:c24_2_r5_ice_tree_destroyable,n:0x02500a35]
