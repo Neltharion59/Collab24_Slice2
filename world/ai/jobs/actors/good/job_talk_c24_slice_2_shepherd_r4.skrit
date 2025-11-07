@@ -92,10 +92,6 @@ state Talk$
                 // After the quest was completed
                 m_Go$.GetConversation.RSSelectConversation( "conv_r4_shepherd_hassat_quest_started_first" );
                 GameAuditor.GetDb.SetBool( "c24_slice2_r4_flag_shepherd_talked_to_after_hassat_quest_started", true );
-                
-                scid quest_activated_trigger_scid$ = MakeScid(0x0240023D);
-                Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
-                SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
 		    }
 		}
 		else

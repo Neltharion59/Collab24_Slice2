@@ -170,12 +170,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "ON GATE TO PASTURELANDS ENABLED";
+		dev_instance_text = "CHECK IF GATE SHOULD BE ENABLED";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x024001D4,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02400EF1,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -193,7 +193,7 @@
 	[placement]
 	{
 	  q orientation = 0,2.98023e-008,0,1;
-	  p position = -1.2586,0,-0.235599,0xe548ae55;
+	  p position = -2.6505,-0.35,-1.12876,0x8062dc52;
 	}
 }
 [t:set_bool,n:0x02400149]
@@ -4253,5 +4253,19 @@
 	{
 	  q orientation = 0,-1,0,-1.66939e-007;
 	  p position = -2.38926,12,-0.0602226,0xeca2332a;
+	}
+}
+[t:check_quest,n:0x02400ef1]
+{
+	[check_quest]
+	{
+	  b check_state_greater_than = true;
+		quest_name = "c24_slice_2_quest_krug_merchant";
+	  i quest_state = 15;
+	  x send_to_scid = 0x024001D4;
+	}
+	[placement]
+	{
+	  p position = 0.317749,-0.35,-0.674317,0x8062dc52;
 	}
 }
