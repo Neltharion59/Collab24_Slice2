@@ -2031,7 +2031,7 @@
 	}
 	[placement]
 	{
-	  p position = -1.03202,0,-0.470062,0x825d8de7;
+	  p position = -1.17995,0,-0.966927,0x825d8de7;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x021013a4]
@@ -2043,6 +2043,19 @@
 	[placement]
 	{
 	  p position = 0.776014,0,1.28809,0x825d8de7;
+	}
+}
+[t:cmd_selection_toggle,n:0x02101af6]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x02100007;
+	  b toggle_invincibility = true;
+	  b toggle_selection = false;
+	}
+	[placement]
+	{
+	  p position = -0.0574303,1.98327,0.924423,0x52c95cda;
 	}
 }
 [t:cmd_selection_toggle,n:0x0210003e]

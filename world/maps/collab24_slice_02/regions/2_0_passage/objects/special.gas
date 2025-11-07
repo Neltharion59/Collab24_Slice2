@@ -548,8 +548,9 @@
 				action* = send_world_message("we_req_activate",0x0210000A,0.2f,"default","every",0);
 				action* = send_world_message("we_req_deactivate",0x0210003E,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x02100E9B,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02101AF6,0f,"default","every",0), doc("make the giant not selectable - to not interrupt him");
 			  b can_self_destruct = true;
-				condition* = go_within_sphere(5.000000,0x0210001D,"","on_first_enter");
+				condition* = go_within_bounding_box(5.000000,0.500000,2.000000,0x0210001D,"","on_first_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -557,14 +558,14 @@
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
-			  b single_shot = true;
+			  b single_shot = false;
 			  b start_active = false;
 			}
 		}
 	}
 	[placement]
 	{
-	  p position = -2.02468,0,0.35434,0x825d8de7;
+	  p position = -0.987949,0,-0.06987,0x825d8de7;
 	}
 }
 [t:trigger_generic,n:0x02101a96]
@@ -577,6 +578,7 @@
 			[*]
 			{
 				action* = send_world_message("we_trigger_deactivate",0x02101A73,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x02101AF7,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
@@ -593,7 +595,7 @@
 	}
 	[placement]
 	{
-	  p position = 2.98866,0,-0.664696,0x825d8de7;
+	  p position = 2.94352,0,-0.679131,0x825d8de7;
 	}
 }
 [t:trigger_generic,n:0x02101adf]
@@ -622,7 +624,14 @@
 	}
 	[placement]
 	{
-	  p position = -0.982483,9.53674e-007,0.881889,0x825d8de7;
+	  p position = -0.990803,0,0.820877,0x825d8de7;
+	}
+}
+[t:use_point,n:0x02101af4]
+{
+	[placement]
+	{
+	  p position = 0.480602,0,-0.588852,0x825d8de7;
 	}
 }
 [t:trigger_generic,n:0x0210002e]
@@ -1565,10 +1574,11 @@
 	  p position = -3.25615,3.78542,-5.8583,0x9e084e28;
 	}
 }
-[t:use_point,n:0x02101af4]
+[t:blocking_object,n:0x02101af7]
 {
 	[placement]
 	{
-	  p position = 0.480602,0,-0.588852,0x825d8de7;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.311188,2,0.737823,0x9ca568b4;
 	}
 }

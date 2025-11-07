@@ -99,9 +99,7 @@ state Talk$
             // 
 			m_Go$.GetConversation.RSSelectConversation( "conv_giant_agg_found_club" );
 
-			scid quest_activated_trigger_scid$ = MakeScid(0x02101ADF);
-			Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
-			SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
+			GameAuditor.GetDb.SetBool( "flag_make_giant_smash_rock", true );
 		}
 		else if ( GameAuditor.GetDb.GetBool( "flag_giant_quest_accepted" ) )
 		{
@@ -133,5 +131,14 @@ state Exiting$
 		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
 
 		m_Job$.MarkForDeletion();
+
+		if ( GameAuditor.GetDb.GetBool( "flag_make_giant_smash_rock" ) )
+		{
+			GameAuditor.GetDb.SetBool( "flag_make_giant_smash_rock", false );
+
+			scid quest_activated_trigger_scid$ = MakeScid(0x02101ADF);
+			Go quest_activated_trigger$ = GoDb.FindGoidByScid( quest_activated_trigger_scid$ ).Go;
+			SendWorldMessage( WE_REQ_ACTIVATE, quest_activated_trigger$.Goid, quest_activated_trigger$.Goid );
+		}
 	}
 }
