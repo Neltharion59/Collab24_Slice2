@@ -1,35 +1,3 @@
-[t:trigger_generic,n:0x02400146]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02400148,0f,"0x4005","go_within_sphere",0);
-				action* = send_world_message("we_req_activate",0x02400149,0f,"default","every",0);
-				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",9);
-				action* = send_world_message("we_req_deactivate",0x02400145,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = go_within_sphere(8.000000,0x00000000,"c24_2_r2_cart_caravan","on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = false;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,2.98023e-008,0,1;
-	  p position = 0.104597,0,-1.9299,0x0f3cfe26;
-	}
-}
 [t:trigger_change_mood_box,n:0x024001da]
 {
 	[common]
@@ -59,39 +27,6 @@
 	  p position = 0.39142,0,0.486043,0x0f3cfe26;
 	}
 }
-[t:trigger_generic,n:0x02400dab]
-{
-	[common]
-	{
-		dev_instance_text = "MP - simmulate cart dropped";
-	  b is_single_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02400149,0f,"default","every",0);
-				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",9);
-				action* = send_world_message("we_req_deactivate",0x02400145,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,2.98023e-008,0,1;
-	  p position = 1.31419,0,-1.96526,0x0f3cfe26;
-	}
-}
 [t:trigger_generic,n:0x02400de9]
 {
 	[common]
@@ -111,7 +46,8 @@
 				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",6), delay(0.06);
 				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",7), delay(0.07);
 				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",8), delay(0.08);
-				action* = send_world_message("we_req_activate",0x02400DAB,0f,"default","every",0), delay(0.09);
+				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",9), delay(0.09);
+				action* = send_world_message("we_req_activate",0x02400DAB,0f,"default","every",0), delay(0.1);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(12.500000,"on_unique_enter");
 			  f delay = 0.000000;
@@ -120,7 +56,7 @@
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
-			  b single_player = true;
+			  b single_player = false;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -129,7 +65,7 @@
 	[placement]
 	{
 	  q orientation = 0,8.9407e-008,0,1;
-	  p position = 1.20606,0,0.0600896,0x0f3cfe26;
+	  p position = 1.61053,0,-0.335815,0x0f3cfe26;
 	}
 }
 [t:trigger_generic,n:0x02400ee4]
@@ -166,42 +102,12 @@
 	  p position = -0.200773,0,0.221074,0x0f3cfe26;
 	}
 }
-[t:trigger_generic,n:0x0240023d]
-{
-	[common]
-	{
-		dev_instance_text = "CHECK IF GATE SHOULD BE ENABLED";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02400EF1,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,2.98023e-008,0,1;
-	  p position = -2.6505,-0.35,-1.12876,0x8062dc52;
-	}
-}
 [t:set_bool,n:0x02400149]
 {
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -2.69398,0,-1.25157,0x6bf3e93e;
+	  p position = -2.59048,0,-0.957266,0x6bf3e93e;
 	}
 	[set_bool]
 	{
@@ -238,6 +144,38 @@
 	  p position = -1.38872,0,0.268964,0x6bf3e93e;
 	}
 }
+[t:trigger_generic,n:0x02400146]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02400148,0f,"0x4005","go_within_sphere",0);
+				action* = send_world_message("we_req_activate",0x02400149,0f,"default","every",0);
+				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",9);
+				action* = send_world_message("we_req_deactivate",0x02400145,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = go_within_sphere(8.000000,0x00000000,"c24_2_r2_cart_caravan","on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.95069,0,-0.597536,0xcd4606b0;
+	}
+}
 [t:trigger_generic,n:0x0240024b]
 {
 	[common]
@@ -266,6 +204,39 @@
 	{
 	  q orientation = 0,1,0,5.96046e-008;
 	  p position = -2.49435,0,0.14984,0xcd4606b0;
+	}
+}
+[t:trigger_generic,n:0x02400dab]
+{
+	[common]
+	{
+		dev_instance_text = "MP - simmulate cart dropped";
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02400149,0f,"default","every",0);
+				action* = change_quest_state("c24_slice_2_quest_krug_merchant","active",9);
+				action* = send_world_message("we_req_deactivate",0x02400145,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.57457,0,1.30205,0xcd4606b0;
 	}
 }
 [t:trigger_fade_nodes_global_box,n:0x0240003a]
@@ -647,8 +618,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,2.98023e-008;
-	  p position = 0.197442,-6,-3.71876,0xbd8b00d2;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.76196,-0.35,-0.240669,0x93bd57e7;
 	}
 }
 [t:use_point,n:0x02400256]
@@ -1332,6 +1303,49 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 3.23564,-0.35,-0.522866,0x8062dc52;
+	}
+}
+[t:trigger_generic,n:0x0240023d]
+{
+	[common]
+	{
+		dev_instance_text = "CHECK IF GATE SHOULD BE ENABLED";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02400EF1,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(12.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = 0.0715561,-0.35,0.237965,0x8062dc52;
+	}
+}
+[t:check_quest,n:0x02400ef1]
+{
+	[check_quest]
+	{
+		quest_name = "c24_slice_2_quest_krug_merchant";
+	  i quest_state = 15;
+	  x send_to_scid = 0x024001D4;
+	}
+	[placement]
+	{
+	  p position = 0.317749,-0.35,-0.674317,0x8062dc52;
 	}
 }
 [t:use_point,n:0x0240112d]
@@ -4253,19 +4267,5 @@
 	{
 	  q orientation = 0,-1,0,-1.66939e-007;
 	  p position = -2.38926,12,-0.0602226,0xeca2332a;
-	}
-}
-[t:check_quest,n:0x02400ef1]
-{
-	[check_quest]
-	{
-	  b check_state_greater_than = true;
-		quest_name = "c24_slice_2_quest_krug_merchant";
-	  i quest_state = 15;
-	  x send_to_scid = 0x024001D4;
-	}
-	[placement]
-	{
-	  p position = 0.317749,-0.35,-0.674317,0x8062dc52;
 	}
 }
